@@ -1,14 +1,14 @@
-import "./Kombucha.sol";
+import "./AwardToken.sol";
 
-contract KombuchaProxy is KombuchaData {
+/*
+BallotMaster : 0xdc04977a2078c8ffdf086d618d1f961b6c546222
+AwardTokenMaster : 0xef55bfac4228981e850936aaf042951f7b146e41
+*/
+contract AwardTokenProxy is AwardTokenData {
     address internal proxied;
-    constructor(address _proxied, string _flavor, uint _fillAmount, uint _capacity) public {
+    constructor(address _proxied, address _ballotMaster) public {
         proxied = _proxied;
-        
-        require(_fillAmount <= _capacity && _capacity > 0);
-        flavor = _flavor;
-        fillAmount = _fillAmount;
-        capacity = _capacity;
+        ballotMaster = _ballotMaster;
     }
     
     function () public payable {

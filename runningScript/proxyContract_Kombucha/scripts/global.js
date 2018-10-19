@@ -1,9 +1,11 @@
 var global = {}
 
 global.log = function (type, msg) {
-    remix.getFile(global.logFile, function (error, content) {
-        remix.setFile(global.logFile, new Date() + " " + type + ' ' + msg + '\n' + content)
-    })
+    if (global.logFile) {
+        remix.getFile(global.logFile, function (error, content) {
+            remix.setFile(global.logFile, new Date() + " " + type + ' ' + msg + '\n' + content)
+        })    
+    }
     console.log(msg)    
 }
 

@@ -7,13 +7,12 @@ var local = {
     capacity: '150'
 }
    
-remix.getFile("localhost/KombuchaProxy.data.json", function (error, data) {
-    remix.getFile("localhost/KombuchaProxy.abi", function (error, abi) {
-        global.logFile = 'localhost/scripts/deploy.log'
-        global.deploy(
-            local.sender, 
-            JSON.parse(abi), 
-            JSON.parse(data).bytecode.object, 
-            [local.masterContract, local.flavor, local.fillAmount, local.capacity])
-    })
+remix.getFile("localhost/KombuchaProxy.json", function (error, metadata) {
+    metadata = JSON.parse(metadata)
+    global.logFile = 'localhost/scripts/deploy.log'
+    global.deploy(
+        local.sender, 
+        metadata.abi, 
+        metadata.data.bytecode.object, 
+        [local.masterContract, local.flavor, local.fillAmount, local.capacity])
 })

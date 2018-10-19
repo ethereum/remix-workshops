@@ -1,14 +1,13 @@
-import "./Kombucha.sol";
+import "./Ballot.sol";
 
-contract KombuchaProxy is KombuchaData {
+contract BallotProxy is BallotData {
     address internal proxied;
-    constructor(address _proxied, string _flavor, uint _fillAmount, uint _capacity) public {
+    constructor(address _proxied, uint duration) public {
         proxied = _proxied;
-        
-        require(_fillAmount <= _capacity && _capacity > 0);
-        flavor = _flavor;
-        fillAmount = _fillAmount;
-        capacity = _capacity;
+        chairperson = msg.sender;
+        _duration = duration;
+        _startTime = now;
+        _finishEarly = false;
     }
     
     function () public payable {
