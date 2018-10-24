@@ -51,3 +51,5 @@ global.deploy = function (sender, abi, bytecode, params) {
          global.error(e)
      }
 } 
+
+exports.register('global', global)
