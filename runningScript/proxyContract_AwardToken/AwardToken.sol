@@ -27,7 +27,7 @@ contract AwardToken is AwardTokenData {
     function startRound() onlyMinter public returns (bool) {
         // if this is the first minting then we should let this go immediately
         if (address(currBallot) == 0x0) {
-            BallotProxy currBallotProxy = new Ballot(ballotPeriod);
+            Ballot currBallotProxy = new Ballot(ballotPeriod);
             currBallot =  Ballot(currBallotProxy);
             newBallot(currBallot);
         } else {
