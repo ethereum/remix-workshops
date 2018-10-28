@@ -1,7 +1,7 @@
 pragma solidity ^0.4.0;
 
 import "./ERC20Mintable.sol";
-import "./BallotProxy.sol";
+import "./Ballot.sol";
 
 contract AwardTokenData is ERC20Mintable  {
     uint quantity = 100;
@@ -16,9 +16,7 @@ contract AwardTokenData is ERC20Mintable  {
 
 contract AwardToken is AwardTokenData {
     
-    function AwardToken (address _ballotMaster) {
-        ballotMaster = _ballotMaster;
-    }
+    function AwardToken () {}
     
     function getPreviousWinners() constant returns (address[]) {
       return prevWinners;
@@ -29,7 +27,7 @@ contract AwardToken is AwardTokenData {
     function startRound() onlyMinter public returns (bool) {
         // if this is the first minting then we should let this go immediately
         if (address(currBallot) == 0x0) {
-            BallotProxy currBallotProxy = new BallotProxy(ballotMaster, ballotPeriod);
+            BallotProxy currBallotProxy = new Ballot(ballotPeriod);
             currBallot =  Ballot(currBallotProxy);
             newBallot(currBallot);
         } else {
