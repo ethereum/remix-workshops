@@ -3,7 +3,7 @@ var local = {
     masterContract: '<address>'
 }
    
-remix.getFile("browser/AwardTokenProxy.json", function (error, metadata) {
+remix.getFile("github/ethereum/remix-workshops/runningScript/proxyContract_AwardToken/AwardTokenProxy.json", function (error, metadata) {
     metadata = JSON.parse(metadata)
     global.logFile = 'browser/deploy.log'
     global.deploy(
