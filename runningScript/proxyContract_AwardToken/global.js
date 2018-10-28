@@ -26,8 +26,7 @@ global.deploy = function (sender, abi, bytecode, params) {
         arguments: params
     }).send({
         from: sender,
-        gas: 1500000,
-        gasPrice: '30000000000000'
+        gas: 1500000
     }, function(error, transactionHash){ 
     })
     .on('error', function(error){ 
