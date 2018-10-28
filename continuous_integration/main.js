@@ -47,15 +47,15 @@ var runStaticAnalysis = (data) => {
 }
 
 var runTests = () => {
-    let web3 = new Web3()
+    let web3 = new Web3() // that allows running test under any other Web3 compatible network
     web3.setProvider(new Provider())
     remixTests.runTestFiles('./sample_test.sol', false, web3)
 }
 
-fs.readFile('sample.sol', 'utf8', function(err, contents) {
+fs.readFile('sample.sol', 'utf8', function(err, content) {
     var contract = {
-        'test.sol': {
-            content: contents
+        'sample.sol': {
+            content: content
         }
     }
     compiler.compile(contract, '') 
