@@ -2,7 +2,10 @@
 
 * beginners track
 * 3 parts
-* to get started, **download the pdf-s from this repository above ^^** or open the slides in the browser ([here](https://slides.com/ninabreznik/deck-11-13#/))
+
+### Geting started:
+* download the pdf-s from this repository above ^^** or open the slides in the browser ([here](https://slides.com/ninabreznik/deck-11-13#/))
+* open Remix ((http://remix-alpha.ethereum.org/)[http://remix-alpha.ethereum.org/#optimize=false])
 
 
 ### You will learn:
