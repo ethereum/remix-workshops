@@ -45,7 +45,7 @@ advanced ***
 - [Beginner track - part II: Interacting with deployed contracts](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part2/remix-basic-all-in-gist_part2.pdf) *
 - [testing AwardToken from Remix IDE / CLI](https://github.com/ethereum/remix-workshops/tree/master/unitTesting) **
 - testing AwardToken from EtherAtom **
-- testing SafeMath.sol ***
+- [testing SafeMath.sol](https://github.com/ethereum/remix-workshops/tree/master/unitTesting/SafeMath) ***
 - debugging with Remix IDE ***
    
 **part 3 [interaction with the contract API (frontend, web3 script)]**
