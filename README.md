@@ -37,7 +37,7 @@ advanced ***
 **part 1 [setting up and deploying, mining, deploy]**
   10 min talk
   30 min hacking time:
-- tour & loading files (only gist easy) *
+- [tour & loading files (only gist easy)](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part1/remix-basic-all-in-gist_part1.pdf) *
 - [tour & loading files (using npm module, github, & https)](https://github.com/ethereum/remix-workshops/tree/master/loading_via_npm_github_plugin) **
 - [deploy proxy contract](https://github.com/ethereum/remix-workshops/tree/master/proxyContractAwardToken) *** 
 - [deploy with libraries](https://github.com/ethereum/remix-workshops/tree/master/deployWithLibraries) **
