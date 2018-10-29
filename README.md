@@ -1,19 +1,16 @@
-# remix-workshops
+# Welcome to Devcon4 Remix workshop
 
-### Welcome to this devcon4 Remix workshop - 30/10/04.
+## Getting started:
 
-Please find here useful link:
-
- - Link to the Remix instance (alpha version) that we will be used during the workshop
+ - **Open Remix-alpha**
 https://remix-alpha.ethereum.org
 Alternatively you can clone https://github.com/ethereum/remix-ide and run `npm install && npm run build && npm run serve`
 
- - Link to the chat where you can post any question (now during this session but also afterward ;) )
+ - **Open support chat**
 https://gitter.im/ethereum/remix-workshop
-That said feel free to come to us "live" during the session, we are here to help out, answer question and chat with you ;) 
+We are here to help out and answer any question you might have.
 
- - And further link:
-Remix-IDE repository https://github.com/ethereum/remix-ide
+ - Additional links:
 Remix libraries repository https://github.com/ethereum/remix
 Remixd repository repository https://github.com/ethereum/remixd
 
