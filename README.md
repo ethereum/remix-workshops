@@ -8,7 +8,7 @@ Please find here useful link:
 https://remix-alpha.ethereum.org
 Alternatively you can clone https://github.com/ethereum/remix-ide and run `npm install && npm run build && npm run serve`
 
- - Link to the chat where you can post any question / chat (now during this session but also afterward ;) )
+ - Link to the chat where you can post any question or just chat with us (now during this session but also afterward ;) )
 https://gitter.im/ethereum/remix-workshop
 That said feel free to come to us "live" during the session, we are here to help out, answer question and chat with you ;) 
 
