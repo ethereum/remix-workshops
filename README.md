@@ -58,4 +58,5 @@ advanced ***
 - [continuous integration](https://github.com/ethereum/remix-workshops/tree/master/continuousIntegration) **
 - using pipeline **
 - [develop plugin for Remix and deploy to swarm](https://github.com/ethereum/remix-workshops/tree/master/simplePlugin) **
+- [using Oraclize API](https://medium.com/coinmonks/using-apis-in-your-ethereum-smart-contract-with-oraclize-95656434292e) ***
    
