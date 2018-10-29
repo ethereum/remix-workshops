@@ -38,7 +38,7 @@ advanced ***
   10 min talk
   30 min hacking time:
 - tour & loading files (only gist easy) *
-- tour & loading files (using npm module) *
+- [tour & loading files (using npm module, github, & https)](https://github.com/ethereum/remix-workshops/tree/master/loading_via_npm_github_plugin) *
 - [deploy proxy contract](https://github.com/ethereum/remix-workshops/tree/master/proxyContractAwardToken) *** 
 - [deploy with libraries](https://github.com/ethereum/remix-workshops/tree/master/deployWithLibraries) **
 - loading npm modules **
