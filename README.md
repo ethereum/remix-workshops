@@ -37,7 +37,7 @@ advanced ***
 **part 1 [setting up and deploying, mining, deploy]**
   10 min talk
   30 min hacking time:
-- tour & loading files (only gist easy) *
+- [tour & loading files (only gist easy)](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part1/remix-basic-all-in-gist_part1.pdf) *
 - [tour & loading files (using npm module, github, & https)](https://github.com/ethereum/remix-workshops/tree/master/loading_via_npm_github_plugin) **
 - [deploy proxy contract](https://github.com/ethereum/remix-workshops/tree/master/proxyContractAwardToken) *** 
 - [deploy with libraries](https://github.com/ethereum/remix-workshops/tree/master/deployWithLibraries) **
@@ -45,7 +45,7 @@ advanced ***
 **part 2 [interacting with run tab]**
   10 min talk
   30 min hacking time:
-- deploy AwardToken - using AtAddress on the Ballot contract *
+- [deploy AwardToken - using AtAddress on the Ballot contract](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part2/remix-basic-all-in-gist_part2.pdf) *
 - [testing AwardToken from Remix IDE / CLI](https://github.com/ethereum/remix-workshops/tree/master/unitTesting) **
 - testing AwardToken from EtherAtom **
 - testing SafeMath.sol ***
@@ -54,7 +54,7 @@ advanced ***
 **part 3 [interaction with the contract API (frontend, web3 script)]**
   10 min talk
   30 min hacking time:
-- using the frontend - adding a proposal *
+- [using the frontend - adding a proposal](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part3/remix-basic-all-in-gist_part3.pdf) *
 - running script ***
 - record transactions **
 - [continuous integration](https://github.com/ethereum/remix-workshops/tree/master/continuousIntegration) **
