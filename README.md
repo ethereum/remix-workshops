@@ -27,35 +27,38 @@ Each part consist of:
 Please find a PDF (as entry point) associated with each topic.
 
 Difficulty level:
-easy | 
-medium || 
-advanced |||
+
+easy *
+
+medium ** 
+
+advanced ***
 
 **part 1 [setting up and deploying, mining, deploy]**
   10 min talk
   30 min hacking time:
-- tour & loading files (only gist easy) |
-- tour & loading files (using npm module) |
-- [deploy proxy contract](https://github.com/ethereum/remix-workshops/tree/master/proxyContractAwardToken) ||| 
-- [deploy with libraries](https://github.com/ethereum/remix-workshops/tree/master/deployWithLibraries) ||
-- loading npm modules ||
+- tour & loading files (only gist easy) *
+- tour & loading files (using npm module) *
+- [deploy proxy contract](https://github.com/ethereum/remix-workshops/tree/master/proxyContractAwardToken) *** 
+- [deploy with libraries](https://github.com/ethereum/remix-workshops/tree/master/deployWithLibraries) **
+- loading npm modules **
   
 **part 2 [interacting with run tab]**
   10 min talk
   30 min hacking time:
-- deploy AwardToken - using AtAddress on the Ballot contract |
-- [testing AwardToken from Remix IDE / CLI](https://github.com/ethereum/remix-workshops/tree/master/unitTesting) ||
-- testing AwardToken from EtherAtom ||
-- testing SafeMath.sol |||
-- debugging with Remix IDE |||
+- deploy AwardToken - using AtAddress on the Ballot contract *
+- [testing AwardToken from Remix IDE / CLI](https://github.com/ethereum/remix-workshops/tree/master/unitTesting) **
+- testing AwardToken from EtherAtom **
+- testing SafeMath.sol ***
+- debugging with Remix IDE ***
    
 **part 3 [interaction with the contract API (frontend, web3 script)]**
   10 min talk
   30 min hacking time:
-- using the frontend - adding a proposal |
-- running script |||
-- record transactions ||
-- [continuous integration](https://github.com/ethereum/remix-workshops/tree/master/continuousIntegration) ||
-- using pipeline ||
-- [develop plugin for Remix and deploy to swarm](https://github.com/ethereum/remix-workshops/tree/master/simplePlugin) ||
+- using the frontend - adding a proposal *
+- running script ***
+- record transactions **
+- [continuous integration](https://github.com/ethereum/remix-workshops/tree/master/continuousIntegration) **
+- using pipeline **
+- [develop plugin for Remix and deploy to swarm](https://github.com/ethereum/remix-workshops/tree/master/simplePlugin) **
    
