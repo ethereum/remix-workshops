@@ -17,10 +17,14 @@ Remix-IDE repository https://github.com/ethereum/remix-ide
 Remix libraries repository https://github.com/ethereum/remix
 Remixd repository repository https://github.com/ethereum/remixd
 
+### Timeline
+
 Here is the timeline for today. The workshop is divided in 3 different parts. 
 Each part consist of:
-  - 10 min talk for a rough overview of what the part is about.
-  - 30 min of free coding, where you can hack on walkthrough tutorial (feel free to squeeze them) and grab us for any question of just for chatting ;)
+  - 10 min talk for a rough overview which cover the subject matter.
+  - 30 min of free coding, where you can hack on walkthrough tutorials (feel free to squeeze them ;) ) and grab us for any question of just for chatting ;)
+
+Please find a PDF (as entry point) associated with each topic.
 
 Difficulty level:
 easy | 
@@ -29,29 +33,29 @@ advanced |||
 
 **part 1 [setting up and deploying, mining, deploy]**
   10 min talk
-  30 hacking time
-      - tour & loading files (only gist easy) |
-      - tour & loading files (using npm module) |
-      - deploy proxy contract ||| 
-      - deploy with libraries ||
-      - loading npm modules ||
+  30 min hacking time:
+- tour & loading files (only gist easy) |
+- tour & loading files (using npm module) |
+- [deploy proxy contract](https://github.com/ethereum/remix-workshops/tree/master/proxyContractAwardToken) ||| 
+- [deploy with libraries](https://github.com/ethereum/remix-workshops/tree/master/deployWithLibraries) ||
+- loading npm modules ||
   
 **part 2 [interacting with run tab]**
   10 min talk
-  30 hacking time
-      - deploy AwardToken - using AtAddress on the Ballot contract |
-      - testing AwardToken from Remix IDE / CLI ||
-      - testing AwardToken from EtherAtom ||
-      - testing SafeMath.sol |||
-      - debugging with Remix IDE |||
+  30 min hacking time:
+- deploy AwardToken - using AtAddress on the Ballot contract |
+- [testing AwardToken from Remix IDE / CLI](https://github.com/ethereum/remix-workshops/tree/master/unitTesting) ||
+- testing AwardToken from EtherAtom ||
+- testing SafeMath.sol |||
+- debugging with Remix IDE |||
    
 **part 3 [interaction with the contract API (frontend, web3 script)]**
   10 min talk
-  30 hacking time
-      - using the frontend - adding a proposal |
-      - running script |||
-      - recorder ||
-      - continuous integration ||
-      - pipeline ||
-      - develop plugin for Remix and deploy to swarm ||
+  30 min hacking time:
+- using the frontend - adding a proposal |
+- running script |||
+- record transactions ||
+- [continuous integration](https://github.com/ethereum/remix-workshops/tree/master/continuousIntegration) ||
+- using pipeline ||
+- [develop plugin for Remix and deploy to swarm](https://github.com/ethereum/remix-workshops/tree/master/simplePlugin) ||
    
