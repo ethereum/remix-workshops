@@ -71,32 +71,35 @@ advanced (***)
 **PART I**
 
   10 min talk, 30 min hacking time:
-- [Beginner track - part I: Using Remix for writing, compiling and deploying a contract](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part1) *
-- [Adventures in the beginner track: loading files with using remixd / npm modules, github, & https](https://github.com/ethereum/remix-workshops/tree/master/loading_via_npm_github_plugin) **
-- [Deploying a proxy contract](https://github.com/ethereum/remix-workshops/tree/master/proxyContractAwardToken) *** 
-- [Deploying with libraries](https://github.com/ethereum/remix-workshops/tree/master/deployWithLibraries) **
+- [Beginner track - part I: Using Remix for writing, compiling and deploying a contract](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part1) (*)
+- [Adventures in the beginner track: loading files with using remixd / npm modules, github, & https](https://github.com/ethereum/remix-workshops/tree/master/loading_via_npm_github_plugin) (**)
+- [Deploying with libraries](https://github.com/ethereum/remix-workshops/tree/master/deployWithLibraries) (**)
+- [Deploying a proxy contract](https://github.com/ethereum/remix-workshops/tree/master/proxyContractAwardToken) (***) 
+  
   
 **PART II**
 
   10 min talk, 30 min hacking time:
-- [Beginner track - part II: Interacting with deployed contracts](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part2) *
-- [Multiple ways of loading files in Remix](https://github.com/ethereum/remix-workshops/tree/master/loading_via_npm_github_plugin)
-- [Testing AwardToken from Remix IDE / CLI](https://github.com/ethereum/remix-workshops/tree/master/unitTesting) **
-- Testing AwardToken from EtherAtom **
-- [Testing SafeMath.sol](https://github.com/ethereum/remix-workshops/tree/master/unitTesting/SafeMath) ***
-- [Debugging transactions with Remix IDE](https://github.com/ethereum/remix-workshops/tree/master/debuggingLiveTransactions) **
+- [Beginner track - part II: Interacting with deployed contracts](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part2) (*)
+- [Multiple ways of loading files in Remix](https://github.com/ethereum/remix-workshops/tree/master/loading_via_npm_github_plugin) (**)
+- [Testing AwardToken from Remix IDE / CLI](https://github.com/ethereum/remix-workshops/tree/master/unitTesting) (**)
+- Testing AwardToken from EtherAtom (**)
+- [Debugging transactions with Remix IDE](https://github.com/ethereum/remix-workshops/tree/master/debuggingLiveTransactions) (**)
+- [Testing SafeMath.sol](https://github.com/ethereum/remix-workshops/tree/master/unitTesting/SafeMath) (***)
+
    
 **PART III**
 
   10 min talk, 30 min hacking time:
-- [Beginner track - part III: Connecting contract with the frontend](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part3) *
-- Running scripts in the Remix terminal ***
-- Recording and replaying transactions **
-- [Continuous integration](https://github.com/ethereum/remix-workshops/tree/master/continuousIntegration) **
-- Using a Pipeline plugin for developing Solidity contracts **
-- [Developing a plugin for Remix and deploying it to swarm](https://github.com/ethereum/remix-workshops/tree/master/simplePlugin) **
+- [Beginner track - part III: Connecting contract with the frontend](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part3) (*)
+- Recording and replaying transactions (**)
+- [Continuous integration](https://github.com/ethereum/remix-workshops/tree/master/continuousIntegration) (**)
+- Using a Pipeline plugin for developing Solidity contracts (**)
+- [Developing a plugin for Remix and deploying it to swarm](https://github.com/ethereum/remix-workshops/tree/master/simplePlugin) (**)
+- Running scripts in the Remix terminal (***)
+
 
 Additional external workshops
 
-- [Using Oraclize plugin in Remix](https://medium.com/coinmonks/using-apis-in-your-ethereum-smart-contract-with-oraclize-95656434292e) ***
+- [Using Oraclize plugin in Remix](https://medium.com/coinmonks/using-apis-in-your-ethereum-smart-contract-with-oraclize-95656434292e) (***)
    
