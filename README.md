@@ -4,6 +4,7 @@
 
  - **Open Remix-alpha**
 https://remix-alpha.ethereum.org
+
 Alternatively you can clone https://github.com/ethereum/remix-ide and run `npm install && npm run build && npm run serve`
 
  - **Open support chat**
