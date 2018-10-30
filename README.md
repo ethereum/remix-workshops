@@ -1,6 +1,6 @@
 # Welcome to the Devcon4 Remix workshop
 
----
+
 ### Getting started:
 
  - **Open Remix-alpha**
@@ -21,6 +21,7 @@ Remix libraries repository https://github.com/ethereum/remix
 
 Remixd repository repository https://github.com/ethereum/remixd
 
+
 ---
 ### Timeline
 
@@ -31,24 +32,24 @@ Each part consist of:
  
   13:30 - 13:40 Welcome & introduction of the workshops
  
- ---
+ 
   
   13.40 - 13:50 Part I - introduction of the topics
   
   13:50 - 14:15 Hacking time
  
- ---
   
   14:15 - 14:25 Part II - introduction of the topics
   
   14:25 - 14:50 Hacking time
  
- ---
   
   14:50 - 15:00 Part III - introduction of the topics
   
-  15:00 - 15:25 Hacking time  
+  15:00 - 15:25 Hacking time 
+ 
 
+---
 ### Workshops and resources 
 
 Difficulty level:
