@@ -3,12 +3,16 @@
 ## Getting started:
 
  - **Open Remix-alpha**
+ 
 https://remix-alpha.ethereum.org
-alternatively you can clone https://github.com/ethereum/remix-ide and run `npm install && npm run build && npm run serve`
+
+Alternatively you can clone https://github.com/ethereum/remix-ide and run `npm install && npm run build && npm run serve`
 
  - **Open support chat**
+ 
 https://gitter.im/ethereum/remix-workshop
-we are here to help out and answer any question you might have.
+
+We are here to help out and answer any question you might have.
 
  - Additional links:
  
@@ -18,12 +22,23 @@ Remixd repository repository https://github.com/ethereum/remixd
 
 ### Timeline
 
-Here is the timeline for today. The workshop is divided in 3 different parts. 
+The workshop is divided in 3 parts.
 Each part consist of:
-  - 10 min talk for a rough overview which cover the subject matter.
-  - 30 min of free coding, where you can hack on walkthrough tutorials (feel free to squeeze them ;) ) and grab us for any question of just for chatting ;)
+  - 10 min talk with a rough overview of the topics for that part
+  - 30 min of free coding, where you can hack on walkthrough tutorials
+  
+  13:30 - 13:40 Welcome & introduction of the workshops
+  ---
+  13.40 - 13:50 Part I - introduction of the topics
+  13:50 - 14:15 Hacking time
+  ---
+  14:15 - 14:25 Part II - introduction of the topics
+  14:25 - 14:50 Hacking time
+  ---
+  14:50 - 15:00 Part III - introduction of the topics
+  15:00 - 15:25 Hacking time  
 
-Please find a PDF (as entry point) associated with each topic.
+### Workshops and resources 
 
 Difficulty level:
 
@@ -33,14 +48,14 @@ medium **
 
 advanced ***
 
-**part 1 [setting up and deploying, mining, deploy]**
+**PART I**
   10 min talk, 30 min hacking time:
 - [beginner track - part I: Using Remix for writing, compiling and deploying a contract](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part1) *
 - [adventures in the beginner track for the non newbie: loading files with using remixd / npm modules, github, & https](https://github.com/ethereum/remix-workshops/tree/master/loading_via_npm_github_plugin) **
 - [deploy proxy contract](https://github.com/ethereum/remix-workshops/tree/master/proxyContractAwardToken) *** 
 - [deploy with libraries](https://github.com/ethereum/remix-workshops/tree/master/deployWithLibraries) **
   
-**part 2 [interacting with run tab]**
+**PART II**
   10 min talk, 30 min hacking time:
 - [beginner track - part II: Interacting with deployed contracts](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part2) *
 - [multiple ways of loading files in Remix](https://github.com/ethereum/remix-workshops/tree/master/loading_via_npm_github_plugin)
@@ -49,7 +64,7 @@ advanced ***
 - [testing SafeMath.sol](https://github.com/ethereum/remix-workshops/tree/master/unitTesting/SafeMath) ***
 - [debugging transactions with Remix IDE](https://github.com/ethereum/remix-workshops/tree/master/debuggingLiveTransactions) **
    
-**part 3 [interaction with the contract API (frontend, web3 script)]**
+**PART III**
   10 min talk, 30 min hacking time:
 - [beginner track - part III: Connecting contract with the frontend](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part3) *
 - running script ***
