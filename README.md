@@ -30,22 +30,19 @@ Each part consist of:
   - 10 min talk with a rough overview of the topics for that part
   - 30 min of free coding, where you can hack on walkthrough tutorials
  
-  13:30 - 13:40 Welcome & introduction of the workshops
+  >13:30 - 13:40 Welcome & introduction of the workshops
  
  
   
-  13.40 - 13:50 Part I - introduction of the topics
-  
+  >13.40 - 13:50 Part I - introduction of the topics
   13:50 - 14:15 Hacking time
  
   
-  14:15 - 14:25 Part II - introduction of the topics
-  
+  >14:15 - 14:25 Part II - introduction of the topics
   14:25 - 14:50 Hacking time
  
   
-  14:50 - 15:00 Part III - introduction of the topics
-  
+  >14:50 - 15:00 Part III - introduction of the topics
   15:00 - 15:25 Hacking time 
  
 
