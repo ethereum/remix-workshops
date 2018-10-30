@@ -34,7 +34,7 @@ advanced ***
 **part 1 [setting up and deploying, mining, deploy]**
   10 min talk
   30 min hacking time:
-- [beginner track - part I: Using Remix for writing, compiling and deploying a contract](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part1/remix-basic-all-in-gist_part1.pdf) *
+- [beginner track - part I: Using Remix for writing, compiling and deploying a contract](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part1) *
 - [adventures in the beginner track for the non newbie: loading files with using remixd / npm modules, github, & https](https://github.com/ethereum/remix-workshops/tree/master/loading_via_npm_github_plugin) **
 - [deploy proxy contract](https://github.com/ethereum/remix-workshops/tree/master/proxyContractAwardToken) *** 
 - [deploy with libraries](https://github.com/ethereum/remix-workshops/tree/master/deployWithLibraries) **
@@ -42,7 +42,7 @@ advanced ***
 **part 2 [interacting with run tab]**
   10 min talk
   30 min hacking time:
-- [beginner track - part II: Interacting with deployed contracts](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part2/remix-basic-all-in-gist_part2.pdf) *
+- [beginner track - part II: Interacting with deployed contracts](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part2) *
 - [multiple ways of loading files in Remix](https://github.com/ethereum/remix-workshops/tree/master/loading_via_npm_github_plugin)
 - [testing AwardToken from Remix IDE / CLI](https://github.com/ethereum/remix-workshops/tree/master/unitTesting) **
 - testing AwardToken from EtherAtom **
@@ -52,7 +52,7 @@ advanced ***
 **part 3 [interaction with the contract API (frontend, web3 script)]**
   10 min talk
   30 min hacking time:
-- [beginner track - part III: Connecting contract with the frontend](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part3/remix-basic-all-in-gist_part3.pdf) *
+- [beginner track - part III: Connecting contract with the frontend](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part3) *
 - running script ***
 - record transactions **
 - [continuous integration](https://github.com/ethereum/remix-workshops/tree/master/continuousIntegration) **
