@@ -71,29 +71,30 @@ advanced ***
 **PART I**
 
   10 min talk, 30 min hacking time:
-- [beginner track - part I: Using Remix for writing, compiling and deploying a contract](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part1) *
-- [adventures in the beginner track for the non newbie: loading files with using remixd / npm modules, github, & https](https://github.com/ethereum/remix-workshops/tree/master/loading_via_npm_github_plugin) **
-- [deploy proxy contract](https://github.com/ethereum/remix-workshops/tree/master/proxyContractAwardToken) *** 
-- [deploy with libraries](https://github.com/ethereum/remix-workshops/tree/master/deployWithLibraries) **
+- [Beginner track - part I: Using Remix for writing, compiling and deploying a contract](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part1) *
+- [Adventures in the beginner track: loading files with using remixd / npm modules, github, & https](https://github.com/ethereum/remix-workshops/tree/master/loading_via_npm_github_plugin) **
+- [Deploying a proxy contract](https://github.com/ethereum/remix-workshops/tree/master/proxyContractAwardToken) *** 
+- [Deploying with libraries](https://github.com/ethereum/remix-workshops/tree/master/deployWithLibraries) **
   
 **PART II**
 
   10 min talk, 30 min hacking time:
-- [beginner track - part II: Interacting with deployed contracts](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part2) *
-- [multiple ways of loading files in Remix](https://github.com/ethereum/remix-workshops/tree/master/loading_via_npm_github_plugin)
-- [testing AwardToken from Remix IDE / CLI](https://github.com/ethereum/remix-workshops/tree/master/unitTesting) **
-- testing AwardToken from EtherAtom **
-- [testing SafeMath.sol](https://github.com/ethereum/remix-workshops/tree/master/unitTesting/SafeMath) ***
-- [debugging transactions with Remix IDE](https://github.com/ethereum/remix-workshops/tree/master/debuggingLiveTransactions) **
+- [Beginner track - part II: Interacting with deployed contracts](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part2) *
+- [Multiple ways of loading files in Remix](https://github.com/ethereum/remix-workshops/tree/master/loading_via_npm_github_plugin)
+- [Testing AwardToken from Remix IDE / CLI](https://github.com/ethereum/remix-workshops/tree/master/unitTesting) **
+- Testing AwardToken from EtherAtom **
+- [Testing SafeMath.sol](https://github.com/ethereum/remix-workshops/tree/master/unitTesting/SafeMath) ***
+- [Debugging transactions with Remix IDE](https://github.com/ethereum/remix-workshops/tree/master/debuggingLiveTransactions) **
    
 **PART III**
 
   10 min talk, 30 min hacking time:
-- [beginner track - part III: Connecting contract with the frontend](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part3) *
-- running script ***
-- record transactions **
-- [continuous integration](https://github.com/ethereum/remix-workshops/tree/master/continuousIntegration) **
-- using pipeline **
-- [develop plugin for Remix and deploy to swarm](https://github.com/ethereum/remix-workshops/tree/master/simplePlugin) **
-- [using Oraclize API (blog post)](https://medium.com/coinmonks/using-apis-in-your-ethereum-smart-contract-with-oraclize-95656434292e) ***
+- [Beginner track - part III: Connecting contract with the frontend](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part3) *
+- Running scripts in the Remix terminal ***
+- Recording and replaying transactions **
+- [Continuous integration](https://github.com/ethereum/remix-workshops/tree/master/continuousIntegration) **
+- Using a Pipeline plugin for developing Solidity contracts **
+- [Using Oraclize plugin in Remix](https://medium.com/coinmonks/using-apis-in-your-ethereum-smart-contract-with-oraclize-95656434292e) ***
+- [Developing a plugin for Remix and deploying it to swarm](https://github.com/ethereum/remix-workshops/tree/master/simplePlugin) **
+
    
