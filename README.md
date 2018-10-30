@@ -11,7 +11,9 @@ https://gitter.im/ethereum/remix-workshop
 We are here to help out and answer any question you might have.
 
  - Additional links:
+ 
 Remix libraries repository https://github.com/ethereum/remix
+
 Remixd repository repository https://github.com/ethereum/remixd
 
 ### Timeline
