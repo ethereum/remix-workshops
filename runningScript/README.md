@@ -1,4 +1,4 @@
-# Presentation (record and replay contract deplyment and interaction)
+# Presentation (how to script contract deployment and contract interaction)
 
 Deploy many contract instances of the same contract with different constructor inputs
 
