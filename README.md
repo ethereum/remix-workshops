@@ -60,13 +60,13 @@ Each part consist of:
 ---
 ### Workshops and resources 
 
-Difficulty level:
+Difficulty: 
 
-easy *
+easy (*) 
 
-medium ** 
+medium (**) 
 
-advanced ***
+advanced (***)
 
 **PART I**
 
@@ -94,7 +94,9 @@ advanced ***
 - Recording and replaying transactions **
 - [Continuous integration](https://github.com/ethereum/remix-workshops/tree/master/continuousIntegration) **
 - Using a Pipeline plugin for developing Solidity contracts **
-- [Using Oraclize plugin in Remix](https://medium.com/coinmonks/using-apis-in-your-ethereum-smart-contract-with-oraclize-95656434292e) ***
 - [Developing a plugin for Remix and deploying it to swarm](https://github.com/ethereum/remix-workshops/tree/master/simplePlugin) **
 
+Additional external workshops
+
+- [Using Oraclize plugin in Remix](https://medium.com/coinmonks/using-apis-in-your-ethereum-smart-contract-with-oraclize-95656434292e) ***
    
