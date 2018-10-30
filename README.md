@@ -58,7 +58,7 @@ Each part consist of:
  
 
 ---
-### Workshops and resources 
+### Workshops and links to pdf resources 
 
 Difficulty: 
 
