@@ -4,12 +4,11 @@
 
  - **Open Remix-alpha**
 https://remix-alpha.ethereum.org
-
-Alternatively you can clone https://github.com/ethereum/remix-ide and run `npm install && npm run build && npm run serve`
+alternatively you can clone https://github.com/ethereum/remix-ide and run `npm install && npm run build && npm run serve`
 
  - **Open support chat**
 https://gitter.im/ethereum/remix-workshop
-We are here to help out and answer any question you might have.
+we are here to help out and answer any question you might have.
 
  - Additional links:
  
