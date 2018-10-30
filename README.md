@@ -4,21 +4,21 @@
 ### Getting started:
 
 
-1. **Open Remix-alpha**
+**1. Open Remix-alpha**
  
 https://remix-alpha.ethereum.org
 
 Alternatively you can clone https://github.com/ethereum/remix-ide and run `npm install && npm run build && npm run serve`
 
 
-2. **Open support chat**
+**2. Open support chat**
  
 https://gitter.im/ethereum/remix-workshop
 
 We are here to help out and answer any question you might have.
 
  
- Additional links:
+ **Additional links**
  
 Remix libraries repository https://github.com/ethereum/remix
 
@@ -35,14 +35,14 @@ Each part consist of:
  
   >13:30 - 13:40 Welcome & introduction of the workshops
  
-  >13.40 - 13:50 Part I - introduction of the topics
-  >13:50 - 14:15 Hacking time
+  >Part I 13.40 - 13:50 Introduction of the topics
+  >| 13:50 - 14:15 Hacking time
   
-  >14:15 - 14:25 Part II - introduction of the topics
-  >14:25 - 14:50 Hacking time
+  >Part II 14:15 - 14:25 Introduction of the topics
+  >| 14:25 - 14:50 Hacking time
   
-  >14:50 - 15:00 Part III - introduction of the topics
-  >15:00 - 15:25 Hacking time 
+  >Part III 14:50 - 15:00 Introduction of the topics
+  >| 15:00 - 15:25 Hacking time 
  
 
 ---
