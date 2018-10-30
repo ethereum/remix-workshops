@@ -1,4 +1,5 @@
 pragma solidity ^0.4.24;
+import "remix_tests.sol";
 import "./SafeMath.sol";
 import "./SafeMathProxy.sol";
 
