@@ -1,4 +1,5 @@
 pragma solidity ^0.4.7;
+import "remix_tests.sol";
 import "./SimpleStorage.sol";
 
 contract SimpleStorageTest {
