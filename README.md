@@ -94,7 +94,7 @@ advanced (***)
 - [Beginner track - part III: Connecting contract with the frontend](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part3) (*)
 - [Recording and replaying transactions](https://github.com/ethereum/remix-workshops/tree/master/recorder) (**)
 - [Continuous integration](https://github.com/ethereum/remix-workshops/tree/master/continuousIntegration) (**)
-- Using a Pipeline plugin for developing Solidity contracts (**)
+- [Using a Pipeline plugin for developing Solidity contracts](https://drive.google.com/file/d/1E3cdp-9tDXjc-RYUtI2lUvHxowXV_4hR/view?usp=sharing) with [demo video](https://www.youtube.com/watch?v=gBizWYQRI7k) (**)
 - [Developing a plugin for Remix and deploying it to swarm](https://github.com/ethereum/remix-workshops/tree/master/simplePlugin) (**)
 - Running scripts in the Remix terminal [(batch deployment)](https://github.com/ethereum/remix-workshops/tree/master/runningScript/batchDeployment) [(proxy deployment)](https://github.com/ethereum/remix-workshops/tree/master/runningScript/deployProxyContract) (***)
 
