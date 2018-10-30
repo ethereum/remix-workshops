@@ -83,7 +83,7 @@ advanced (***)
 - [Beginner track - part II: Interacting with deployed contracts](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part2) (*)
 - [Multiple ways of loading files in Remix](https://github.com/ethereum/remix-workshops/tree/master/loading_via_npm_github_plugin) (**)
 - [Testing AwardToken from Remix IDE / CLI](https://github.com/ethereum/remix-workshops/tree/master/unitTesting) (**)
-- [EtherAtom (walkthrough slides + screencast)](https://raw.githubusercontent.com/ethereum/remix-workshops/master/atomEditorPlugin) (**)
+- [EtherAtom (walkthrough slides + screencast)](https://github.com/ethereum/remix-workshops/tree/master/atomEditorPlugin) (**)
 - [Debugging transactions with Remix IDE](https://github.com/ethereum/remix-workshops/tree/master/debuggingLiveTransactions) (**)
 - [Testing SafeMath.sol](https://github.com/ethereum/remix-workshops/tree/master/unitTesting/SafeMath) (***)
 
