@@ -96,7 +96,7 @@ advanced (***)
 - [Continuous integration](https://github.com/ethereum/remix-workshops/tree/master/continuousIntegration) (**)
 - Using a Pipeline plugin for developing Solidity contracts (**)
 - [Developing a plugin for Remix and deploying it to swarm](https://github.com/ethereum/remix-workshops/tree/master/simplePlugin) (**)
-- Running scripts in the Remix terminal (***)
+- Running scripts in the Remix terminal [workshop 1](https://github.com/ethereum/remix-workshops/tree/master/runningScript/deployProxyContract) [workshop 2](https://github.com/ethereum/remix-workshops/tree/master/runningScript/deployProxyContract) (***)
 
 
 Additional external workshops
