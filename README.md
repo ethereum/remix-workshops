@@ -92,7 +92,7 @@ advanced (***)
 
   10 min talk, 30 min hacking time:
 - [Beginner track - part III: Connecting contract with the frontend](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part3) (*)
-- Recording and replaying transactions (**)
+- [Recording and replaying transactions](https://github.com/ethereum/remix-workshops/tree/master/recorder) (**)
 - [Continuous integration](https://github.com/ethereum/remix-workshops/tree/master/continuousIntegration) (**)
 - Using a Pipeline plugin for developing Solidity contracts (**)
 - [Developing a plugin for Remix and deploying it to swarm](https://github.com/ethereum/remix-workshops/tree/master/simplePlugin) (**)
