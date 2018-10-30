@@ -1,6 +1,7 @@
-# Welcome to Devcon4 Remix workshop
+# Welcome to the Devcon4 Remix workshop
 
-## Getting started:
+---
+### Getting started:
 
  - **Open Remix-alpha**
  
@@ -20,22 +21,32 @@ Remix libraries repository https://github.com/ethereum/remix
 
 Remixd repository repository https://github.com/ethereum/remixd
 
+---
 ### Timeline
 
 The workshop is divided in 3 parts.
 Each part consist of:
   - 10 min talk with a rough overview of the topics for that part
   - 30 min of free coding, where you can hack on walkthrough tutorials
-  
+ 
   13:30 - 13:40 Welcome & introduction of the workshops
-  ---
+ 
+ ---
+  
   13.40 - 13:50 Part I - introduction of the topics
+  
   13:50 - 14:15 Hacking time
-  ---
+ 
+ ---
+  
   14:15 - 14:25 Part II - introduction of the topics
+  
   14:25 - 14:50 Hacking time
-  ---
+ 
+ ---
+  
   14:50 - 15:00 Part III - introduction of the topics
+  
   15:00 - 15:25 Hacking time  
 
 ### Workshops and resources 
@@ -49,6 +60,7 @@ medium **
 advanced ***
 
 **PART I**
+
   10 min talk, 30 min hacking time:
 - [beginner track - part I: Using Remix for writing, compiling and deploying a contract](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part1) *
 - [adventures in the beginner track for the non newbie: loading files with using remixd / npm modules, github, & https](https://github.com/ethereum/remix-workshops/tree/master/loading_via_npm_github_plugin) **
@@ -56,6 +68,7 @@ advanced ***
 - [deploy with libraries](https://github.com/ethereum/remix-workshops/tree/master/deployWithLibraries) **
   
 **PART II**
+
   10 min talk, 30 min hacking time:
 - [beginner track - part II: Interacting with deployed contracts](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part2) *
 - [multiple ways of loading files in Remix](https://github.com/ethereum/remix-workshops/tree/master/loading_via_npm_github_plugin)
@@ -65,6 +78,7 @@ advanced ***
 - [debugging transactions with Remix IDE](https://github.com/ethereum/remix-workshops/tree/master/debuggingLiveTransactions) **
    
 **PART III**
+
   10 min talk, 30 min hacking time:
 - [beginner track - part III: Connecting contract with the frontend](https://github.com/ethereum/remix-workshops/blob/master/basicDeployment/part3) *
 - running script ***
