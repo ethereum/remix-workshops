@@ -47,7 +47,7 @@ advanced ***
 - [testing AwardToken from Remix IDE / CLI](https://github.com/ethereum/remix-workshops/tree/master/unitTesting) **
 - testing AwardToken from EtherAtom **
 - [testing SafeMath.sol](https://github.com/ethereum/remix-workshops/tree/master/unitTesting/SafeMath) ***
-- debugging with Remix IDE ***
+- [debugging transactions with Remix IDE](https://github.com/ethereum/remix-workshops/tree/master/debuggingLiveTransactions) **
    
 **part 3 [interaction with the contract API (frontend, web3 script)]**
   10 min talk
