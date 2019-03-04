@@ -29,7 +29,11 @@ Remixd repository repository https://github.com/ethereum/remixd
 Github will block too many requests from the same location - unless you are signed into github and input a token.  This is only an issue during workshops - but because we are in a workshop, we need to do these steps:
 
     - In one browser window - go to remix.ethereum.org and go to the settings tab
-    - In another browser window go to: https://github.com/settings/tokens and create a new token and save it in Remix in the you just opened on the settings tab.
+    - In another browser window go to: 
+    
+    https://github.com/settings/tokens 
+    
+    and create a new token and save it in Remix in the you just opened on the settings tab.
 
 
 # Beginner
