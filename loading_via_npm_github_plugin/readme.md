@@ -1,18 +1,17 @@
-# A-Z of how to build a Dapp
+# Adventures in the beginner track: loading files with using remixd / npm modules, github, & https (**)
 
 * beginner track
 * to get started, **download the pdf from this repository above ^^**
 
 
 ### You will learn:
-* how to use Remix to write Solidity contracts
-* how to compile and deploy a contract to the Ethereum network
-* how to interact with the contract (send and receive data from it)
-* how to connect it to the web app (frontend)
+* loading files with github
+* loading files from a url
+* loading files with npm and getting at those files from inside Remix with remixd
 
 ### Get the GIST:
 * If you don't want to download the PDF - then copy the Remix command with the GIST here:
-remix.loadgist('add9633c2b0101f6fda0aadcfe350f60')
+remix.loadgist('21cad99396f8c78ecf229834f1b6eaeb')
 
 ### Support:
 If you get stuck or if you have any question, ping us on our support chat ([here](https://gitter.im/ethereum/remix-workshop))
