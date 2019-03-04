@@ -4,7 +4,7 @@ contract GenericProxy {
         proxied = _proxied;
     }
     
-    function () public payable {
+    function () external payable {
         address addr = proxied;
         assembly {
             let freememstart := mload(0x40)
