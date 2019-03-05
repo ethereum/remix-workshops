@@ -43,6 +43,12 @@ Each part consist of:
   - 15 min talk with a rough overview of what is Remix and how to use it.
   - 75 min of workshop with tutorials.
 
+We will be building a decentralized voting DApp
+
+http://bit.ly/remix-voting
+
+The current awardToken address is: 0xd02f9914561de257d90246cd312526426e5eb68d
+
   **Welcome**
 
   >12:45 - 13:00 Introduction of the team, the tool and the workshops
