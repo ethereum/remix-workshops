@@ -11,6 +11,8 @@ contract test3 {
     }
     
     function checkWinningProposal () public {
+        LibraryForTest testedLib = new LibraryForTest();
+        Assert.equal(testedLib.getFromLib(), uint(3), "the implemented library should return 3");
         Assert.equal(useSimpleLibrary.get(), uint(3), "the implemented library should return 3");
     }
 }
