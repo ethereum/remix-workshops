@@ -7,7 +7,7 @@ contract test3 {
    
     test useSimpleLibrary;
     function beforeAll () public {
-       useSimpleLibrary = new Ballot();
+       useSimpleLibrary = new test();
     }
     
     function checkWinningProposal () public {
