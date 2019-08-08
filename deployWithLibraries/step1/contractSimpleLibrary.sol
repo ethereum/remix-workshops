@@ -1,5 +1,5 @@
 contract test {
     function get () public {
-            // should call a librarie methods which returns `3`
+            // should call a library method which returns `3`
     }
 }
