@@ -24,10 +24,10 @@ Switch to the `Solidity compiler` module
 }
 ```
 
-This is basically what the compiler is returning.
- - `linkReferences` describe what are the libraries used by the contract.
- - `object` is the compiled contract (bytecode). this is what get deployed and saved onto the blockchain.
-the value `__$d42d70ba92b626965f4c69b39148e37a33$__` inside the bytecode is just a placeholder for the library address.
+This is basically what the compiler is returning:
+ - `linkReferences` describes what are the libraries used by the contract.
+ - `object` is the compiled contract (bytecode). This is what gets deployed and saved onto the blockchain.
+The value `__$d42d70ba92b626965f4c69b39148e37a33$__` inside the bytecode is just a placeholder for the library address.
 
-The metadata JSON from Remix IDE just tell the app to replace the given address in the place holder.
+The metadata JSON from Remix IDE just tells Remix to replace the given address in the placeholder.
 
