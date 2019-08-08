@@ -3,7 +3,7 @@
 Switch to the `Run transaction` module 
 ![Run transaction](https://github.com/ethereum/remix-workshops/raw/master/deployWithLibraries/step4/remix_runtransaction.png "Run Transaction")
 
- - Select the `sample` contract in the list of compiled contracts.
+ - Select the `test` contract in the list of compiled contracts.
  - Click on `Deploy`
  
  The terminal should output something like `creation of sample errored: <address> is not a valid address. Please check the provided address is valid.`
