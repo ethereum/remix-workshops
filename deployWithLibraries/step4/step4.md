@@ -7,7 +7,7 @@ Switch to the `Run transaction` module
  - Click on `Deploy`
  
  The terminal should output something like `creation of sample errored: <address> is not a valid address. Please check the provided address is valid.`
- That is expected: **We have set `autoDeployLib` to false so Remix expect to have an address and not just `<address>`**
+ That is expected: **We have set `autoDeployLib` to false so Remix expects to have an address and not just `<address>`**
 
 So we need first to deploy the library.
 
