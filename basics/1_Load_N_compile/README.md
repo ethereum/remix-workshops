@@ -10,6 +10,6 @@ Load a file from the files explorer.
 
 5. Click ballot.sol & the file should appear in the main panel in a tab.
 
-7. Click the solidity compiler icon ![file explorer icon](https://github.com/ethereum/remix-workshops/blob/master/basics/1_Load_N_compile/images/solidity.png "solidity compiler icon") - the solidity compiler icon.
+7. Click the solidity compiler icon ![solidity compiler icon](https://github.com/ethereum/remix-workshops/blob/master/basics/1_Load_N_compile/images/solidity.png "solidity compiler icon") - the solidity compiler icon.
 
 8. Click the compile button ![compile ballot](https://github.com/ethereum/remix-workshops/blob/master/basics/1_Load_N_compile/images/compile-ballot.png "compile ballot") and watch it compile.
