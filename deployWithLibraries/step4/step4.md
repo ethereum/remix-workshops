@@ -1,7 +1,7 @@
 # linking and deploying
 
 Switch to the `Run transaction` module 
-![Run transaction](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Run Transaction")
+![Run transaction](https://github.com/ethereum/remix-workshops/raw/master/deployWithLibraries/step4/remix_runtransaction.png "Run Transaction")
 
  - Select the `sample` contract in the list of compiled contracts.
  - Click on `Deploy`
@@ -13,13 +13,13 @@ So we need first to deploy the library.
 
   - Select the library `lib1` in the list of compiled contract and hit `deploy`
   - copy the address of the library
-  ![Run transaction](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Run Transaction")
+  ![Run transaction](https://github.com/ethereum/remix-workshops/raw/master/deployWithLibraries/step4/remix_deploy_lib.png "Run Transaction")
 
   - and paste it in the metadata JSON.
 
   - reselect the `sample` contract in the `Run transaction` module and hit deploy
   - Deploy should now be successful
 
-  
+
    
 

@@ -1,7 +1,7 @@
 # metadata JSON
 
 The generated JSON looks like:
-![contract.json](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "contract.json")
+![contract.json](https://github.com/ethereum/remix-workshops/raw/master/deployWithLibraries/step2/remix_metadata.png "contract.json")
 
 Let's use it.
 
