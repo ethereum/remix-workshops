@@ -16,7 +16,7 @@ This is what we are going to do now.
 
 Open the Solidity compiler ![Solidity Compiler](https://github.com/ethereum/remix-workshops/raw/master/deployWithLibraries/step2/remix_icon_solidity.png "Solidity Compiler") and compile `contractSimpleLibrary.sol`.
 Switch to the File Explorer ![File Explorer](https://github.com/ethereum/remix-workshops/raw/master/deployWithLibraries/step2/remix_file_explorer.png "File Explorer") and select the newly created JSON file. 
-It has the **same name** as the contract but with the extension `JSON`.
+It has the **same name** as the contract `test` but with the extension `JSON` - `test.json` and not `contractSimpleLibrary.json`.
 It looks like:
 
 ![contract.json](https://github.com/ethereum/remix-workshops/raw/master/deployWithLibraries/step2/remix_metadata.png "contract.json")
