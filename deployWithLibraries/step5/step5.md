@@ -1,10 +1,10 @@
-# under the hod
+# under the hood
 
 Switch to the `Solidity compiler` module 
-![Run transaction](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Run Transaction")
+![Solidity Compiler](https://github.com/ethereum/remix-workshops/raw/master/deployWithLibraries/step2/remix_icon_solidity.png "Solidity Compiler")
 
- - Select the `sample` contract in the list of compiled contracts.
- - click on `ByteCode`, it should paste te following to the clipboard:
+ - Select the `test` contract in the list of compiled contracts.
+ - click on `ByteCode`, it should copy the following to the clipboard:
 
  ```
  {
