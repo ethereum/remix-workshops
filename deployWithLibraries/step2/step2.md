@@ -3,7 +3,8 @@
 Before deploying a library, it is necessary to link it to the contract.
 
 You will find [there](https://solidity.readthedocs.io/en/v0.5.10/contracts.html?highlight=library#libraries) more information about Solidity libraries.
-In short, the address of the library that is being used **need** to be added to the compiled contract before deploying it.
+
+In short, the address of the library that is being used **needs** to be added to the compiled contract before deploying it.
 This is what we are going to do now.
 
  - First go to the settings page ![settings page](https://github.com/ethereum/remix-workshops/raw/master/deployWithLibraries/step2/remix_settings.png "Settings")
@@ -13,7 +14,7 @@ This is what we are going to do now.
 
 # Compile and generate metadata (JSON) file.
 
-Open the Solidity compiler ![Solidity Compiler](https://github.com/ethereum/remix-workshops/raw/master/deployWithLibraries/step2/remix_icon_solidity.png "Solidity Compiler") and compile.
+Open the Solidity compiler ![Solidity Compiler](https://github.com/ethereum/remix-workshops/raw/master/deployWithLibraries/step2/remix_icon_solidity.png "Solidity Compiler") and compile `contractSimpleLibrary.sol`.
 Switch to the File Explorer ![File Explorer](https://github.com/ethereum/remix-workshops/raw/master/deployWithLibraries/step2/remix_file_explorer.png "File Explorer") and select the newly created JSON file. 
 It has the **same name** as the contract but with the extension `JSON`.
 It looks like:
