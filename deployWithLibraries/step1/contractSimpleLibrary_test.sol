@@ -9,7 +9,7 @@ contract test3 {
        useSimpleLibrary = new test();
     }
     
-    function checkWinningProposal () public {
+    function useSimpleLibraryTest () public {
         Assert.equal(LibraryForTest.getFromLib(), uint(3), "the implemented library should return 3");
         Assert.equal(useSimpleLibrary.get(), uint(3), "the implemented library should return 3");
     }
