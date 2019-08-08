@@ -12,12 +12,12 @@ Switch to the `Run transaction` module
 So we need first to deploy the library.
 
   - Select the library `LibraryForTest` in the list of compiled contract and hit `deploy`
-  - copy the address of the library
+  - Click the clippboard icon to copy the address of the library.
   ![Run transaction](https://github.com/ethereum/remix-workshops/raw/master/deployWithLibraries/step4/remix_deploy_lib.png "Run Transaction")
 
-  - and paste it in the metadata JSON.
+  - Paste it in the metadata JSON.
 
-  - reselect the `sample` contract in the `Run transaction` module and hit deploy
+  - Reselect the `sample` contract in the `Run transaction` module and hit deploy
   - Deploy should now be successful
 
 
