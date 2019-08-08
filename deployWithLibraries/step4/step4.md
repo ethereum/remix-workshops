@@ -17,7 +17,7 @@ So we need first to deploy the library.
 
   - Paste it in the metadata JSON.
 
-  - Reselect the `sample` contract in the `Run transaction` module and hit deploy
+  - Reselect the `test` contract in the `Run transaction` module and hit deploy
   - Deploy should now be successful
 
 
