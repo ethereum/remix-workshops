@@ -7,15 +7,8 @@ contract test3 {
 
     SimpleStorage storageToTest;
     function beforeAll () public {
-       ballotToTest = new Ballot(2);
+       storageToTest = new SimpleStorage;
     }
 
-    function checkWinningProposal () public {
-        ballotToTest.vote(1);
-        Assert.equal(ballotToTest.winningProposal(), uint(1), "1 should be the winning proposal");
-    }
-
-    function checkWinninProposalWithReturnValue () public view returns (bool) {
-        return ballotToTest.winningProposal() == 1;
-    }
+    // Test State variable?
 }

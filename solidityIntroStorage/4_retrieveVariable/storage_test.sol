@@ -14,7 +14,7 @@ contract test3 {
         Assert.equal(storageToTest.set(3), uint(3), "TBD");
     }
 
-        function checkGetFunction () public {
+    function checkGetFunction () public {
         Assert.equal(storageToTest.get(3), uint(3), "TBD");
     }
 }
