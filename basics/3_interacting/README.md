@@ -1,6 +1,8 @@
 # Interacting with the functions in a deployed contract
 
+
 What are the functions in the deployed contract? What parameters do they take and how can you be sure you input the correct input types.  Does it cost gas to use a particular function?  And what happens when you click a function's **transact** button - which is to say what happens when you want to make a transaction through a function?
+
 
 1. Open up the contract by clicking the caret - so the caret points down.
 ![deploy contract](https://github.com/ethereum/remix-workshops/blob/master/basics/3_interacting/images/caret-deployed.png?raw=true "deployed contract")
