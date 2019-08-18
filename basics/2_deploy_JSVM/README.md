@@ -3,7 +3,7 @@
 ## Deploying a contract
 
 ### Problem Statment
-We've got a contract compiled - which is to say the solidity code has been transformed into little chunks of Ethereum Virtual Machine (EVM) bytecode.
+We've got a compiled contract  - which is to say the solidity code has been transformed into little chunks of Ethereum Virtual Machine (EVM) bytecode.
 
 Now we have to put that code on a blockchain (or on a simulation of a blockchain).  So how are we going to do that?
 
