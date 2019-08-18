@@ -1,6 +1,4 @@
-# The Basics
-
-## Deploy and interact with a contract deployed to a the Ropsten test net.
+# Deploying to a test net.
 
 ### Steps
 1. Download MetaMask. 
