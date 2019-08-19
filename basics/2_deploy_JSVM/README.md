@@ -5,6 +5,7 @@ We've got a compiled contract  - which is to say the solidity code has been tran
 Now we have to put that code on a blockchain (or on a simulation of a blockchain). 
 
 1. Click the Deploy and Run icon ![deploy & run icon](https://github.com/ethereum/remix-workshops/blob/master/basics/2_deploy_JSVM/images/run.png?raw=true "deploy & run icon").   But before you click it, make sure that ballot.sol is the active tab - which it should be if because you just compiled it.
+
 2. Select the **JavaScript VM** from the Environment pulldown.
 
 3. In the text box to the right of the Deploy button, the hint text says: **uint8 _numProposals**.  This means the constructor of the Ballot contract has a parameter **AND** that parameter is **AND** it is an integer that is an **uint8** **AND** the name of the variable **is _numProposals**.  So put a number in this text box.  You can click the caret to open up the interface so you have more room.  This is especially useful if a function has many input parameters.
