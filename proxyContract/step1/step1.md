@@ -2,7 +2,7 @@
 
 ## Why?
 
-This is a great method which is used mainly in library development. It helps to solve following problems.
+This is a great pattern which is used mainly in library development. It helps to solve following problems.
 - **Save gas cost at deployment time**
 The purpose of cost is to limit the amount of work that is needed to execute the transaction and to pay for this execution. It's tied with the size of it.
 The proxy contract is usefull when a lot of instances of the same contract required to be deployed.
