@@ -39,12 +39,5 @@ Github will block too many requests from the same location - unless you are sign
 ---
 ### For additional ressources and tutorial on other topics
 
-_See the list below_
-
-Difficulty:
-- easy (*)
-- medium (**)
-- advanced (***)
-
 #### Additional external workshops
 - [Using Oraclize plugin in Remix](https://medium.com/coinmonks/using-apis-in-your-ethereum-smart-contract-with-oraclize-95656434292e) (***)
