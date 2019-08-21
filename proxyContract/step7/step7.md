@@ -14,3 +14,6 @@ https://blog.openzeppelin.com/upgradeability-using-unstructured-storage/
 
 - Great blog post by Jack Tanner
 https://blog.indorse.io/ethereum-upgradeable-smart-contract-strategies-456350d0557c
+
+- Upgradeable Ethereum Smart Contracts
+https://medium.com/@daonomic/upgradeable-ethereum-smart-contracts-d036cb373d6
