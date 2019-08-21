@@ -12,6 +12,11 @@ contract ProxyContract {
         proxied = _proxied;
     }
     
+    /**
+     * Fallback function allowing to perform a delegatecall 
+     * to the given implementation. This function will return 
+     * whatever the implementation call returns
+     */
     function () external payable {
         address addr = proxied;
         assembly {
@@ -24,7 +29,6 @@ contract ProxyContract {
         }
     }    
 }
-
 
 contract LogicContract {
 
