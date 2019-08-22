@@ -9,7 +9,7 @@ Alternatively, you can click on `Solidity` from the `Home Page` environments sec
  - right of `Deploy`, please input any positive integer
  - click on `Deploy` for deploying it.
 
-Then let's debug it
+Now let's debug it
 
 
 
