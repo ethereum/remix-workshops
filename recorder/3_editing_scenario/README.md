@@ -12,3 +12,5 @@ Here's the first few lines of the scenario that I recorded.  The addresses on my
 ```
 
 So if you wanted to play this scenario in another testnet, you'd need to change these addresses to address that you have test ETH on so that you could pay for the transactions.  But other than swapping out the addresses, you can quickly run this on other nets.
+
+But in other use cases for the Recorder, you might change the parameters for the functions.
