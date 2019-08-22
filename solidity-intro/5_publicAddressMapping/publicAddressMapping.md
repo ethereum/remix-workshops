@@ -14,6 +14,6 @@ Mappings types allow you to create your own custom types, consisting of pairs of
 
 ## To Try
 
-In the new contract create a new variable of `address` type called "minter", and make it public.
+In **a new contract** create a new variable of `address` type called "minter", and make it public.
 
 Then create a new mapping that has one pair, an `address` that can accept a `uint` as a value. Make the mapping public and call it "balances".

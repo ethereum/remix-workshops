@@ -4,6 +4,6 @@ Contracts can emit events on the Blockchain that Ethereum clients such as web ap
 
 ## To Try
 
-Define an event called `Sent` that has 3 paramaters: two address types called `from` and `to`, and an unsigned integer called `amount`.
+Define an event called `Sent` that has 3 parameters: two address types called `from` and `to`, and an unsigned integer called `amount`.
 
 If you get stuck read the [event documentation](https://solidity.readthedocs.io/en/latest/contracts.html#events)  for more details.
