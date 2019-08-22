@@ -2,7 +2,7 @@
 
 ## The recorder is a furtively useful trick in Remix.
 
-The recorder is used for recording all the transactions in the Deploy & Run module and then playing them back in another context.
+The recorder is used for recording all the transactions in the Deploy & Run module and then playing them back in another context.  It really is the remix of Remix!
 
 Scenarios for the recorder:
 
