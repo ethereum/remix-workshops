@@ -32,8 +32,8 @@ contract ProxyContract {
 
 contract LogicContract {
 
-    function getNumber() public pure returns (uint)
+    function myNameIs() public pure returns (string)
     {
-        return 10;
+        return "Remix";
     }
 }
