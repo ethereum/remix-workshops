@@ -1,7 +1,7 @@
 # under the hood
 
 Switch to the `Solidity compiler` module 
-![Solidity Compiler](https://github.com/ethereum/remix-workshops/raw/master/deployWithLibrary/2_deploy_library/remix_icon_solidity.png "Solidity Compiler")
+![Solidity Compiler](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_deploy_library/remix_icon_solidity.png "Solidity Compiler")
 
  - Select the `test` contract in the list of compiled contracts.
  - click on `ByteCode`, it should copy the following to the clipboard:
