@@ -8,5 +8,7 @@ Here is a simple test:
 
  Remember that we are talking about the `CODECOPY` which extract the bytes which will be stored on chain ;)
 
- - In the `findTheOffset` contract and `offset` function, please return the value you have found. Replace the `hex"00"` by your finding ;)
+ - In the `findTheOffset` contract and `offset` function, please return the value you have found. Replace the `hex"00"` by your finding
+ 
+ Good Lack!
  
