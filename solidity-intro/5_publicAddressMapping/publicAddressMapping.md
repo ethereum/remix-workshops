@@ -17,3 +17,5 @@ Mappings types allow you to create your own custom types, consisting of pairs of
 In **a new contract** create a new variable of `address` type called "minter", and make it public.
 
 Then create a new mapping that has one pair, an `address` that can accept a `uint` as a value. Make the mapping public and call it "balances".
+Then for the sake of testing it, please write in `constructor` for this contract. In the constructor, use the `balances` state for assigning `1000` to the current `msg.sender`.
+
