@@ -19,6 +19,6 @@
 8. Switch to one of the addresses that you gave the right to vote and vote for proposal 3.  (Put **3** in the textbox next to the vote function).  And then switch the other address and vote for proposal 3.
 
 9. Open up the **Transactions recorded** section of the module - by clicking on the caret. Click the hard disk icon in the **Transactions recorded** section to save your steps.
-![recorder](https://github.com/ethereum/remix-workshops/blob/master/recorder/1_setup/images/recorder.png?raw=true "recorder")
+![recorder](https://github.com/ethereum/remix-workshops/blob/master/Recorder/1_setup/images/recorder.png?raw=true "recorder")
 
 10. You will get a modal window that tells you it wants to save a file called **scenario.json**.  Click OK.

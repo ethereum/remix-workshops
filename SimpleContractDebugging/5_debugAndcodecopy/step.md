@@ -1,7 +1,7 @@
 # Debug
 
 From the Remix terminal, identify the transaction that deployed the contract and click `Debug`
-You should get something like (https://raw.githubusercontent.com/ethereum/remix-workshops/master/simpleContractDebugging/5_debugAndcodecopy/debug_codecopy.png "debugger")
+You should get something like (https://raw.githubusercontent.com/ethereum/remix-workshops/master/SimpleContractDebugging/5_debugAndcodecopy/debug_codecopy.png "debugger")
 
 Let's move a bit further in the debug.
 
