@@ -10,7 +10,7 @@ Once you are in the `CODECOPY`, look at the top 2 items in stack:
 `1: 0x0000000000000000000000000000000000000000000000000000000000000053`
 `2: 0x0000000000000000000000000000000000000000000000000000000000000035`
 
-`CODECOPY` will consume these two item.
+`CODECOPY` will consume these two items.
 `0` is the offset where the code should be copied to the memory. In that example, the code is copied to the beginning of the memory
 `1` is the offset in calldata where to copy from
 `2` number of bytes to copy
@@ -18,7 +18,7 @@ Once you are in the `CODECOPY`, look at the top 2 items in stack:
 After CODECOPY being executed, the copied code should be:
 (1) => `0x6080604052600080fdfea165627a7a7230582058ab614283bec9a34501e6d23c7b8ef93cf0c99c7bfcf583e62ad7f909091d310029`
 
-Whereas the input data (the original bytecode) is
+Where the input data (the original bytecode) is
 (https://raw.githubusercontent.com/ethereum/remix-workshops/master/debuggingContract_deployAndStorage/6_checkCodecopy/remix_tx_terminal.png "remix terminal")
 
 (2) => `0x6080604052348015600f57600080fd5b50604051602080608883398101806040526020811015602d57600080fd5b8101908080519060200190929190505050806000819055505060358060536000396000f3fe6080604052600080fdfea165627a7a7230582058ab614283bec9a34501e6d23c7b8ef93cf0c99c7bfcf583e62ad7f909091d310029000000000000000000000000000000000000000000000000000000000000000c`
