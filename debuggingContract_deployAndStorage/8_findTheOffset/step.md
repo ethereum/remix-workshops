@@ -10,5 +10,5 @@ Here is a simple test:
 
  - In the `findTheOffset` contract and `offset` function, please return the value you have found. Replace the `hex"00"` by your finding
  
- Good Lack!
+ Good Luck!
  
