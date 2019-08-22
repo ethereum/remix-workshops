@@ -19,7 +19,7 @@ After CODECOPY being executed, the copied code should be:
 (1) => `0x6080604052600080fdfea165627a7a7230582058ab614283bec9a34501e6d23c7b8ef93cf0c99c7bfcf583e62ad7f909091d310029`
 
 Where the input data (the original bytecode) is
-(https://raw.githubusercontent.com/ethereum/remix-workshops/master/debuggingContract_deployAndStorage/6_checkCodecopy/remix_tx_terminal.png "remix terminal")
+(https://raw.githubusercontent.com/ethereum/remix-workshops/master/simpleContractDebugging/6_checkCodecopy/remix_tx_terminal.png "remix terminal")
 
 (2) => `0x6080604052348015600f57600080fd5b50604051602080608883398101806040526020811015602d57600080fd5b8101908080519060200190929190505050806000819055505060358060536000396000f3fe6080604052600080fdfea165627a7a7230582058ab614283bec9a34501e6d23c7b8ef93cf0c99c7bfcf583e62ad7f909091d310029000000000000000000000000000000000000000000000000000000000000000c`
 
