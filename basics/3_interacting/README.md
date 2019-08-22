@@ -10,7 +10,7 @@ What are the functions in the deployed contract? What parameters do they take an
 2. There are 4 functions in this contract.  
 ![deploy contract](https://github.com/ethereum/remix-workshops/blob/master/basics/3_interacting/images/deployed_open.png?raw=true "deployed contract")
 
-If this contract had imported other contracts then the functions of the imported contracts would be visible here too.
+  If this contract had imported other contracts then the functions of the imported contracts would be visible here too.
 
 3. Some of the contracts has a function with a blue buttons.  In this case, its a **view** function.  Blue buttoned functions are either  **pure** or **view** functions.  This means that they are just reading a property or are returning a value.  In other words, they aren't saving anything - so they are FREE (they don’t cost gas).  Functions with other colors - usually orange (depending on the theme) cost gas because they are saving information.  So they are creating a **transaction**.  
 
