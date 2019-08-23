@@ -5,10 +5,10 @@ What are the functions in the deployed contract? What parameters do they take an
 
 
 1. Open up the contract by clicking the caret - so the caret points down.
-![deploy contract](https://github.com/ethereum/remix-workshops/blob/master/basics/3_interacting/images/caret-deployed.png?raw=true "deployed contract")
+![deploy contract](https://github.com/ethereum/remix-workshops/blob/master/Basics/3_interacting/images/caret-deployed.png?raw=true "deployed contract")
 
 2. There are 4 functions in this contract.  
-![deploy contract](https://github.com/ethereum/remix-workshops/blob/master/basics/3_interacting/images/deployed_open.png?raw=true "deployed contract")
+![deploy contract](https://github.com/ethereum/remix-workshops/blob/master/Basics/3_interacting/images/deployed_open.png?raw=true "deployed contract")
 
   If this contract had imported other contracts then the functions of the imported contracts would be visible here too.
 
