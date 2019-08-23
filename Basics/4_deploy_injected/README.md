@@ -5,7 +5,7 @@
 
 2. Click the MetaMask icon in your browser. Sign in and choose a test network. 
 
-3. Get some test ETHER for that network. Searching for Rinkeby faucet or whatever test network you want to use followed by the work **faucet**.
+3. Get some test ETHER for that network. Searching for Goerly faucet or whatever test network you want to use followed by the work **faucet**. (Please do not reload the page)
 
 2. Go back to Remix. In the deploy plugin, in the **Environment** pulldown, choose **Injected Web3**.
 
