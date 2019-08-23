@@ -11,6 +11,6 @@ contract test3 {
     }
 
     function checkVariableCreated () public {
-        Assert.equal(storageToTest.storedData(), uint(3),"storedData should contain 3");
+        Assert.equal(storageToTest.storedData(), uint(0),"storedData created");
     }
-} 
+}
