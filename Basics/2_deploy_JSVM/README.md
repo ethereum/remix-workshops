@@ -12,6 +12,6 @@ Now we have to put that code on a blockchain (or on a simulation of a blockchain
 
 4. Click the Deploy button (or the transact button in the expanded view).
 
-5. You have deployed the contract to the JSVM - a simulated blockchain that is running inside of your browser window.  The JSVM is the simplest, fastest  and least realistic of test chains.  You can deploy to other test chains or to the mainnet. But to this you'd need to connect to another environment - like Injected Web3 or Web3 Provider.  When you use Injected Web3 - you need to have MetaMask installed.  
+5. You have deployed the contract to the JSVM - a simulated blockchain that is running inside of your browser window.  The JSVM is the simplest, fastest  and least realistic of test chains.  You can deploy to other test chains or to the mainnet. But to do this you'd need to connect to another environment - like Injected Web3 or Web3 Provider.  When you use Injected Web3 - you need to have MetaMask installed.  
 
 6. Install MetaMask. 
