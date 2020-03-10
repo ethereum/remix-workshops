@@ -1,0 +1,1 @@
+# import ERC20 from OpenZeppelin and deploy it

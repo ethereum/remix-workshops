@@ -1,0 +1,1 @@
+# inherit from the OpenZeppelin ERC20 and develop a custom ERC20
