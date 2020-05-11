@@ -6,7 +6,7 @@ Load a file from the files explorer.
 
 2. In the Environments section, click the **Solidity** button.  This button will activate a number of plugins - you’ll see them in the icon panel.
 
-1. In the icon panel, click ![file explorer icon](https://github.com/ethereum/remix-workshops/blob/master/Basics/1_Load_and_compile/images/files.png?raw=true "file explorer icon") - the file explorers icon.
+1. In the icon panel, click ![file explorer icon](images/files.png?raw=true) - the file explorers icon.
 
 5. Click ballot.sol & the file should appear in the main panel in a tab.
 
