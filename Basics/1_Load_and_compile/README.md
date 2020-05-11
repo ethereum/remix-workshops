@@ -1,6 +1,6 @@
 # Loading and Compiling
 
-Load a file from the files explorer.
+Load a file from the files explorer...
 
 1. Click the remix icon on the top of the icon panel
 ![Remix icon](https://github.com/ryestew/remix-workshops/blob/master/Basics/1_Load_and_compile/images/remix-logo.png?raw=true "Remix icon") to see the **Landing Page**.
