@@ -9,7 +9,7 @@ Load a file from the files explorer....another...basics5
 
 4. You can also activate plugins one at a time with the plugin manager (https://github.com/ryestew/remix-workshops/blob/master/Basics/1_Load_and_compile/images/plugin.png?raw=true "plugin manager icon").
 
-1. In the icon panel, click ![file explorer icon](https://github.com/ryestew/remix-workshops/blob/master/Basics/1_Load_and_compile/images/files1.png?raw=true "file explorer icon") - the file explorers icon.
+1. In the icon panel, click ![file explorer icon](https://github.com/ethereum/remix-workshops/blob/basics5/Basics/1_Load_and_compile/images/files1.png?raw=true "file explorer icon") - the file explorers icon.
 
 5. Click on ballot.sol or on 2_Owner.sol depending on which is visible.  The file will appear in the main panel in a tab.
 
