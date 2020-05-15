@@ -1,13 +1,13 @@
 # Loading and Compilinggg
 
-Load a file from the files explorer....another...basics5
+Load a file from the files explorer
 
 1. Click the remix icon on the top of the icon panel
-![Remix icon](https://github.com/ryestew/remix-workshops/blob/master/Basics/1_Load_and_compile/images/remix-logo.png?raw=true "Remix icon") to see the **Landing Page**.
+![Remix icon](https://github.com/ryestew/remix-workshops/blob/basics5/Basics/1_Load_and_compile/images/remix-logo.png?raw=true "Remix icon") to see the **Landing Page**.
 
 2. In the **Environments** section, click the **Solidity** button.  This button will activate a number of plugins - you’ll see them in the icon panel (if they haven't already been activated).
 
-4. You can also activate plugins one at a time with the plugin manager (https://github.com/ryestew/remix-workshops/blob/master/Basics/1_Load_and_compile/images/plugin.png?raw=true "plugin manager icon").
+4. You can also activate plugins one at a time with the plugin manager (https://github.com/ryestew/remix-workshops/blob/master/Basics/1_Load_and_compile/images/plugin1.png?raw=true "plugin manager icon").
 
 1. In the icon panel, click ![file explorer icon](https://github.com/ethereum/remix-workshops/blob/basics5/Basics/1_Load_and_compile/images/files1.png?raw=true "file explorer icon") - the file explorers icon.
 
