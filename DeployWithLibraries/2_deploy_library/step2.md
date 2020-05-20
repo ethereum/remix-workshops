@@ -1,22 +1,35 @@
 # Deploying Library
 
-Before deploying a library, it is necessary to link it to the contract.
+While the library from the previous chapter was in the same file a contract - but when the library and the contract get deployed separately and each will have their own address. In order to use a library, the calling contract must have the library's **address**.
 
-You will find [there](https://solidity.readthedocs.io/en/v0.5.10/contracts.html?highlight=library#libraries) more information about Solidity libraries.
+--------------
+Here in the <a href="https://solidity.readthedocs.io/en/latest/contracts.html?highlight=library#libraries" target="_blank">Solidity Docs</a> is more information about Solidity libraries.
+--------------
 
-In short, the address of the library that is being used **needs** to be added to the compiled contract before deploying it.
-This is what we are going to do now.
+We will deploy the library and the contract, but first we need to so some setup.
 
- - First go to the settings page ![settings page](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_deploy_library/remix_settings.png "Settings")
+When Remix sees that there is a linked library, by default, it will try to deploy the library before it deploys the contract.  In this example we don't want this behavior because we are mimicking the setup where a library has already been deployed.
+
+Also, when we deploy the contract, we need to tell Remix the ** linked library's address**... that is once we know it.
+
+Turning off the auto deployment of the library and inputting the library's address happens in the compiled contract's **metadata** AKA the `build artifact`.  This is a JSON file which we need to tell Remix to generate.
+
+
+ - Go to the settings module by clicking on the settings ![settings](https://github.com/ethereum/remix-workshops/raw/depWithLibs/DeployWithLibraries/2_deploy_library/settings.png "Settings") icon in the icon panel. ![settings module](https://github.com/ethereum/remix-workshops/raw/depWithLibs/DeployWithLibraries/2_deploy_library/remix_settings.png "Settings")
  - And check the first option `Generate contract metadata`. 
- - This tells the compiler to generate a JSON file containing important information about the compilation result.
- - Moreover, it can be used for linking libraries to a contract.
 
 # Compile and generate metadata (JSON) file.
 
-Open the Solidity compiler ![Solidity Compiler](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_deploy_library/remix_icon_solidity.png "Solidity Compiler") and compile `contractSimpleLibrary.sol`.
-Switch to the File Explorer ![File Explorer](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_deploy_library/remix_file_explorer.png "File Explorer") and select the newly created JSON file. 
-It has the **same name** as the contract `sample` but with the extension `JSON`: `sample.json` and not `contractSimpleLibrary.json`.
+1. Open the Solidity Compiler ![Solidity Compiler](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_deploy_library/remix_icon_solidity.png "Solidity Compiler")
+
+2. Compile `contractSimpleLibrary.sol`.
+
+3. Switch to the File Explorer ![File Explorer](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_deploy_library/remix_file_explorer.png "File Explorer") 
+
+4. Navigate to the newly create JSON files.  
+    - It should be in browser/.learneth/DeployWithLibraries/2_deploy_library/artifacts/   
+    
+5. Select the newly created JSON file created from the contract.  It has the **same name** as the contract `sample` but with the extension `JSON`: `sample.json` and not `contractSimpleLibrary.json`.
 It looks like:
 
 ![contract.json](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_deploy_library/remix_metadata.png "contract.json")

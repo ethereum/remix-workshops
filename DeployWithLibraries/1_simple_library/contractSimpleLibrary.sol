@@ -5,3 +5,5 @@ contract test {
             // should call a library method which returns `3`
     }
 }
+
+// Put the library here
