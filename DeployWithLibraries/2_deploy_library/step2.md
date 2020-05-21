@@ -1,10 +1,13 @@
 # Deploying Library
 
-While the library from the previous chapter was in the same file a contract - but when the library and the contract get deployed separately and each will have their own address. In order to use a library, the calling contract must have the library's **address**.
+The **library** from the previous chapter was in the same file as the **contract**. However, when each are deployed they will each have their own address. In order to use a library, the calling contract must have the library's **address**.  
+
+So we need to get the library's address into the contract.
 
 --------------
 Here in the <a href="https://solidity.readthedocs.io/en/latest/contracts.html?highlight=library#libraries" target="_blank">Solidity Docs</a> is more information about Solidity libraries.
---------------
+
+---------------------
 
 We will deploy the library and the contract, but first we need to so some setup.
 
@@ -13,7 +16,6 @@ When Remix sees that there is a linked library, by default, it will try to deplo
 Also, when we deploy the contract, we need to tell Remix the ** linked library's address**... that is once we know it.
 
 Turning off the auto deployment of the library and inputting the library's address happens in the compiled contract's **metadata** AKA the `build artifact`.  This is a JSON file which we need to tell Remix to generate.
-
 
  - Go to the settings module by clicking on the settings ![settings](https://github.com/ethereum/remix-workshops/raw/depWithLibs/DeployWithLibraries/2_deploy_library/settings.png "Settings") icon in the icon panel. ![settings module](https://github.com/ethereum/remix-workshops/raw/depWithLibs/DeployWithLibraries/2_deploy_library/remix_settings.png "Settings")
  - And check the first option `Generate contract metadata`. 
