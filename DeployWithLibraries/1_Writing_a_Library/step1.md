@@ -1,5 +1,7 @@
 A libraries looks like a **contract** but use the keyword `library` 
 
+A library typically is a collection of useful functions sitting out there on the blockchain that any contract can use.  Because the library is already deployed, it saves the deployment costs of the many contracts that use it.
+
 In the following contract:
  - Make a library with the name `LibraryForTest`. 
  

@@ -8,24 +8,24 @@ But it doesn't go in the contract's Solidity code.  It goes in the compiled cont
 
 So we need to tell Remix to generate the **metadata** and then we'll update that.
 
- - Go to the settings module by clicking on the settings ![settings](https://github.com/ethereum/remix-workshops/raw/depWithLibs3/DeployWithLibraries/2_deploy_library/settings.png "Settings") icon in the icon panel. 
+ - Go to the settings module by clicking on the settings ![settings](https://github.com/ethereum/remix-workshops/raw/depWithLibs3/DeployWithLibraries/2_Generate_Metadata/settings.png "Settings") icon in the icon panel. 
  
- ![settings module](https://github.com/ethereum/remix-workshops/raw/depWithLibs3/DeployWithLibraries/2_deploy_library/remix_settings.png "Settings")
+ ![settings module](https://github.com/ethereum/remix-workshops/raw/depWithLibs3/DeployWithLibraries/2_Generate_Metadata/remix_settings.png "Settings Module")
 
  - And check the first option `Generate contract metadata`. 
 
 # Compile and generate metadata (JSON) file.
 
-1. Open the Solidity Compiler ![Solidity Compiler](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_deploy_library/remix_icon_solidity.png "Solidity Compiler")
+1. Open the Solidity Compiler ![Solidity Compiler](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_Generate_Metadata/remix_icon_solidity.png "Solidity Compiler")
 
 2. Compile `2_contractSimpleLibrary.sol`.
 
-3. Switch to the File Explorer ![File Explorer](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_deploy_library/remix_file_explorer.png "File Explorer") 
+3. Switch to the File Explorer ![File Explorer](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_Generate_Metadata/remix_file_explorer.png "File Explorer") 
 
 4. Navigate to the newly create JSON files.  
     - It should be in the folder:
 
-**browser/.learneth/DeployWithLibraries/2_deploy_library/artifacts/**  
+**browser/.learneth/DeployWithLibraries/2_Generate_Metadata/artifacts/**  
     
 5. Select the newly created JSON file created from the contract.  It has the **same name** as the contract `sample` but with the extension **json**: `sample.json` (don't select the library's metadata `contractSimpleLibrary.json`).
 
