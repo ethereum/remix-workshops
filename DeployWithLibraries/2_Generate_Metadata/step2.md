@@ -8,9 +8,9 @@ But it doesn't go in the contract's Solidity code.  It goes in the compiled cont
 
 So we need to tell Remix to generate the **metadata** and then we'll update that.
 
- - Go to the settings module by clicking on the settings ![settings](https://github.com/ethereum/remix-workshops/raw/depWithLibs/DeployWithLibraries/2_deploy_library/settings.png "Settings") icon in the icon panel. 
+ - Go to the settings module by clicking on the settings ![settings](https://github.com/ethereum/remix-workshops/raw/depWithLibs3/DeployWithLibraries/2_deploy_library/settings.png "Settings") icon in the icon panel. 
  
- ![settings module](https://github.com/ethereum/remix-workshops/raw/depWithLibs/DeployWithLibraries/2_deploy_library/remix_settings.png "Settings")
+ ![settings module](https://github.com/ethereum/remix-workshops/raw/depWithLibs3/DeployWithLibraries/2_deploy_library/remix_settings.png "Settings")
 
  - And check the first option `Generate contract metadata`. 
 
