@@ -1,6 +1,6 @@
 # metadata JSON
 
-`Deploy` property in `sample.json` contains everything you need for telling Remix IDE the address of the library for a specific network.
+`Deploy` property in `sampleContract.json` contains everything you need for telling Remix IDE the address of the library for a specific network.
 
  - `<address>` contains the address of the library that is already deployed. You have to specify this address for each network.
  - `autoDeployLib` is a boolean and tells Remix IDE if it should autodeploy the library before deploying the contract.

@@ -1,12 +1,12 @@
 pragma solidity >=0.4.22 <0.6.0;
 
-library lib1 {
-    function doGenericStuff() public {
+contract sampleContract {
+    function get () public {
+        aLib.doStuff();
     }
 }
 
-contract sample {
-    function get () public {
-        lib1.doGenericStuff();
+library aLib {
+    function doStuff() public {
     }
 }
