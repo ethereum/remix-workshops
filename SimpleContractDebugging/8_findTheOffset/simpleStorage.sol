@@ -6,6 +6,6 @@ contract simpleStore {
 
 contract findTheOffset {
     function offset () public returns (bytes8) {
-        return bytes8(hex"43");
+        return bytes8(hex"00");
     }
 }
