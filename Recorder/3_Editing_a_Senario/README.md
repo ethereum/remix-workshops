@@ -13,9 +13,9 @@ Here's the first few lines of the scenario that I recorded.  The addresses on my
 
 So if you wanted to play this scenario in another testnet, you'd need to change these addresses to address that you have test ETH on so that you could pay for the transactions.  But other than swapping out the addresses, you can quickly run this on other nets.
 
-But in other use cases for the Recorder, you might change the parameters for the functions.
+And you might change the parameters for the functions.
 
-For example here is a bit of the scenario.json a bit further down where proposal 2 was voted for by on of the addresses:
+For example here is a bit of the scenario.json a bit further down where proposal 2 was voted for by one of the addresses:
 
 ```
 {
@@ -23,7 +23,7 @@ For example here is a bit of the scenario.json a bit further down where proposal
       "record": {
         "value": "0",
         "parameters": [
-          "2"
+          "1"
         ],
         "to": "created{1566428035436}",
         "abi": "0xc41589e7559804ea4a2080dad19d876a024ccb05117835447d72ce08c1d020ec",
@@ -35,4 +35,18 @@ For example here is a bit of the scenario.json a bit further down where proposal
     },
 ```
 
-If I want to vote for another proposal in the recorder's playback, I'd change the **paramters** array which now is [2] to [3].  (Or whatever I wanted the parameter(s) for this function to contain) 
+Let's edit this so that another proposal wins in the playback. 
+
+Change the **parameters** array which now is:
+```
+"parameters": [
+          "1"
+        ]
+```
+to:
+
+```
+"parameters": [
+          "2"
+        ]
+```
