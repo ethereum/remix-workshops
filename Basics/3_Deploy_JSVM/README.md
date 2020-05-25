@@ -2,9 +2,9 @@
 
 We've got a compiled contract  - which is to say the solidity code has been transformed into little chunks of Ethereum Virtual Machine (EVM) bytecode.
 
-Now we have to put that code on a blockchain (or on a simulation of a blockchain). 
+Now we have to put that code on a blockchain. 
 
-1. Click the Deploy and Run icon ![deploy & run icon](https://github.com/ethereum/remix-workshops/blob/master/Basics/2_deploy_JSVM/images/run.png?raw=true "deploy & run icon").   But before you click it, make sure that ballot.sol is the active tab - which it should be because you just compiled it.
+1. Click the Deploy and Run icon ![deploy & run icon](https://github.com/ethereum/remix-workshops/blob/master/Basics/2_deploy_JSVM/images/run.png?raw=true "deploy & run icon").   But before you click it, make sure that ballot.sol is the active tab in the **editor** - which it should be because you just compiled it.
 
 2. Select the **JavaScript VM** from the Environment pulldown.
 
