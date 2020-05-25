@@ -4,9 +4,15 @@ The **library** from the previous chapter was in the same file as the **contract
 
 In order to use a library, the calling contract must have the library's **address**.  
 
-But it doesn't go in the contract's Solidity code.  It goes in the compiled contract's `build artifact` AKA its **metadata**. 
+But the library's address is not directly specified in the solidity code. The calling contract's compiled bytecode contains a **placeholder** where library's **addresses** will go.
 
-So we need to tell Remix to generate the **metadata** and then we'll update that.
+At deployment of the **calling contract**, Remix will look in the contract's **metadata** for the library's address and will update the placeholder with the address.
+
+So before deploying a contract that calls a library, you need to generate the contract's metadata (AKA its **build artifact**) and then you need to input the library's address into the metadata file.
+
+A contract's metadata is generated at **compile time**. 
+
+Let's setup Remix to generate the **metadata file**.
 
  - Go to the settings module by clicking on the settings ![settings](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_Generate_Metadata/settings.png "Settings") icon in the icon panel. 
  
