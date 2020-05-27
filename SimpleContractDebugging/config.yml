@@ -1,4 +1,3 @@
- 
 --- 
 name: Debugging a simple contract
 summary: Some details about the CODECOPY opcode and how it is used by the EVM during contract creation.
