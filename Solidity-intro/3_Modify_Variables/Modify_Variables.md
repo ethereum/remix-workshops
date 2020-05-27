@@ -1,5 +1,3 @@
-# Modify a variable
-
 A Solidity `function` works in a similar way to functions in other programming languages, in that they accept parameters, process them, and return variables.
 
 To let a function in your contract be accessable from external contracts, you declare it as public using the `public` function modifier.

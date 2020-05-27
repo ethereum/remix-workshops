@@ -18,6 +18,6 @@ A constructor can only use the `public` or `internal` function modifiers.
 
 Solidity has a number of [global variables](https://solidity.readthedocs.io/en/latest/units-and-global-variables.html#special-variables-functions), but for this step we are interested in `msg.sender` that contains the external address source of the current function call.
 
-## To Try
+## Create a Constructor!
 
 Create a public constructor function that sets the `minter` state variable to the value of `msg.sender`.
