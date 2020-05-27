@@ -1,9 +1,9 @@
 # under the hood
 
 Switch to the `Solidity compiler` module 
-![Solidity Compiler](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_deploy_library/remix_icon_solidity.png "Solidity Compiler")
+![Solidity Compiler](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_Generate_Metadata/remix_icon_solidity.png "Solidity Compiler")
 
- - Select the `test` contract in the list of compiled contracts.
+ - Select the `sampleContract` contract in the list of compiled contracts.
  - click on `ByteCode`, it should copy the following to the clipboard:
 
  ```
@@ -28,5 +28,4 @@ This is basically what the compiler is returning:
  - `linkReferences` describes what are the libraries used by the contract.
  - `object` is the compiled contract (bytecode). This is what gets deployed and saved onto the blockchain. In this example, the value `__$d42d70ba92b626965f4c69b39148e37a33$__` inside the bytecode is just a placeholder for the library address. In your case, the placeholder will be between `__$` and `$__`.
 
-The metadata JSON from Remix IDE just tells Remix to replace the given address in the placeholder.
-
+The metadata JSON from Remix IDE tells Remix to replace the placeholder with the given address.
