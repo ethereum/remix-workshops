@@ -2,7 +2,7 @@
 
 Solidity uses state-reverting exceptions to handle errors. Such an exception undoes all changes made to the state in the current call (and all its sub-calls) and flags an error to the caller.
 
-There are three convenience functions available: `assert`, `require`, and `revert`, but for this step we focus on `require`, learn more about the other two in [the documentation](https://solidity.readthedocs.io/en/latest/control-structures.html#assert-and-require).
+There are three convenience functions available: `assert`, `require`, and `revert`, but for this step we focus on `require`, learn more about the other two in <a href="https://solidity.readthedocs.io/en/latest/control-structures.html#assert-and-require" target="_blank">the documentation</a>.
 
 The syntax for `require` is `require(<logicalCheck>, <optionalErrorMessage>)`, where you can use any conditional statements available in Solidity. For example, the code below requires `amount` to be greater than 0:
 
@@ -10,7 +10,7 @@ The syntax for `require` is `require(<logicalCheck>, <optionalErrorMessage>)`, w
 require(amount > 0);
 ```
 
-## To Try
+## Try it out!
 
 Create two new public functions, one called `mint` (that creates new coins in the creators accounts) and one called `send` (that sends coins to someone else). Give both functions two parameters: an address called `receiver`, and a `uint` called `amount`.
 
