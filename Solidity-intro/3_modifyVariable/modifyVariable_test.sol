@@ -6,11 +6,11 @@ contract test3 {
 
     SimpleStorage storageToTest;
     function beforeAll () public {
-       storageToTest = new SimpleStorage;
+       storageToTest = new SimpleStorage();
     }
 
     function checkSetFunction () public {
         storageToTest.set(12345);
-        Assert.equal(storageToTest.storedData()), uint(12345), "the contract should contain the function `set` which update the `storedData`");
+        Assert.equal(storageToTest.get()), uint(12345), "the contract should contain the function `set` which update the `storedData`");
     }
 }

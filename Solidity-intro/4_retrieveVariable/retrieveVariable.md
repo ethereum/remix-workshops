@@ -1,9 +1,13 @@
 # Retrieve a variable
 
-To retrieve the value of a variable from a contract you can use similar principles for functions as covered in the previous step. It's good practise to add the `view` function modifier that promises the function does not modify state.
+Let's review the getter function from the previous step:
 
-## To Try
+```
+   function get() public view returns (uint) {
+        return storedData;
+    }
+```
 
-Create a new function called `get` that other contracts can access that returns one variable of type `uint` and promises not to modify state.
+Note the use of the `view` modifier.  This promises that the function will not modify the state.  See more about **view** and **pure** functions <a href="https://solidity.readthedocs.io/en/latest/contracts.html?highlight=pure#functions" target="_blank"> here</a>.  
 
-Inside the function, return the state variable you created in step 2.
+Because they don't modify the state,  view and pure functions do not have a gas cost - which is to say they are FREE!

@@ -1,15 +1,16 @@
 pragma solidity >=0.4.0 <0.7.0;
+
 import "remix_tests.sol"; // this import is automatically injected by Remix.
 import "./publicAddressMapping.sol";
 
-contract test3 {
+contract test5 {
 
-    SimpleStorage storageToTest;
+    Coin coinToTest;
     function beforeAll () public {
-       storageToTest = new SimpleStorage();
+       coinToTest = new Coin();
     }
 
     function checkBalanceIsSet () public {
-        Assert.equal(storageToTest.balances(address(this)), uint(1000), "The balance should be set to 10000");
+        Assert.equal(coinToTest.balances(address(this)), uint(1000), "The balance should be set to 10000");
     }
 }

@@ -1,16 +1,15 @@
-pragma solidity >=0.4.0 <0.7.0;
-import "remix_tests.sol"; // this import is automatically injected by Remix.
+pragma solidity >=0.4.22 <0.7.0;
+import "remix_tests.sol";
 import "./variables.sol";
 
-contract test3 {
+contract MyTest {
+  SimpleStorage foo;
 
-    SimpleStorage storageToTest;
+  function beforeEach() public {
+    foo = new SimpleStorage();
+  }
 
-    function beforeAll () public {
-       storageToTest = new SimpleStorage();
-    }
-
-    function checkVariableCreated () public {
-        Assert.equal(storageToTest.storedData(), uint(3),"storedData should contain 3");
-    }
+  function initialValueShouldBe3() public returns (bool) {
+    return Assert.equal(foo.get(), 3, "initial value is not correct");
+  }
 }
