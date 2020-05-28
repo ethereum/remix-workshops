@@ -1,7 +1,8 @@
 --- 
-name: Basic use of web3.js
+name: The Whys and Hows of the Proxy Contract
 summary: This tutorial gives a short introduction of the web3.js library, querying the block number
-level: 1
+level: 4
 tags: 
   - Remix
-  - Web3
+  - Solidity
+  - Code Patterns

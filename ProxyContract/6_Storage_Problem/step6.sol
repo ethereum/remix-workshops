@@ -2,7 +2,6 @@ pragma solidity ^0.5.1;
 
 contract StorageContract {
     uint counter;
-    
 }
 
 contract ProxyContract is StorageContract {
