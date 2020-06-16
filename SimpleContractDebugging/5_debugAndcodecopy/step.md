@@ -1,12 +1,10 @@
 # Debug
 
 From the Remix terminal, identify the transaction that deployed the contract and click `Debug`
-You should get something like [debugger](https://raw.githubusercontent.com/ethereum/remix-workshops/master/SimpleContractDebugging/5_debugAndcodecopy/debug_codecopy.png)
-
-
-Let's move a bit further in the debug.
+You should get something like <a target="_blank" href="https://raw.githubusercontent.com/ethereum/remix-workshops/master/SimpleContractDebugging/5_debugAndcodecopy/debug_codecopy.png">this image.</a>
 
 In the gutter of the editor, put a breakpoint on the line `s = _o`, and click on `Jump to the next Breakpoint` (bottom right button).
-At this point we should be close to the `SSTORE` opcode which is the opcode for storing a value `_o` in the storage.
 
-Click on `Step into`, check the `SSTORE` but let's move further to the `CODECOPY`.
+Click on `Step into`, to move along the opcodes until you reach `SSTORE`. 
+
+`SSTORE` is the opcode for storing the value `_o` in the storage. Let's continue further to the `CODECOPY`.

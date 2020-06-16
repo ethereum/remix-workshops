@@ -1,6 +1,6 @@
 pragma solidity >=0.4.0 <0.6.0;
 import "remix_tests.sol"; // this import is automatically injected by Remix.
-import "./simpleStorage.sol";
+import "./noSoSimpleStorage.sol";
 
 contract test {
     findTheOffset t;
@@ -9,6 +9,6 @@ contract test {
     }
     
     function check() public {
-      Assert.equal(t.offset(), bytes8(hex"45"), "getNumber should return 'hex(45)'");
+      Assert.equal(t.offset(), bytes8(hex"45"), "offset should be around 40 - dig further...");
     }
 }
