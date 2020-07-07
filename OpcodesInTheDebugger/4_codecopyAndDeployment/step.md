@@ -10,4 +10,4 @@ Alternatively, you can click on `Solidity` from the `Home Page` **Environments**
  - In the textbox to the right of `Deploy`, input a positive integer.
  - Click on `Deploy`.
 
-Now let's debug it
+In the next step, we'll watch the deployment in the debugger.

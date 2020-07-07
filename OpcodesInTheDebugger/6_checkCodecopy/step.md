@@ -3,22 +3,37 @@
 We ultimately want to store the code in the blockchain. So the EVM need to tell the client (geth, parity) which code to store.
 
 
-`CODECOPY` is the first step: it copies the bytecode to memory, then the ethereum client will be able to consume it.
+`CODECOPY` is the first step: it copies the bytecode to memory, then the ethereum client will be able to consume it.  MUNCH!
 
-As stated in the general spec, at the end of the contract creation, the client (geth, parity) takes the targeted value by the opcode `RETURN` and *persists* it as being the deployed bytecode.
+And of course the client needs an opcode to tell it to consume and this is the `RETURN` opcode.
+
+**YANN**: is the RETURN in this paragraph the RETURN - 2 opcodes after COPYCODE?
+
+As stated in the general spec, at the end of the contract creation, the client (geth, parity) takes the targeted value by the opcode `RETURN` and **persists** it by making it part of the deployed bytecode.  
 
 Once you are in the `CODECOPY`, look at the top 3 items in stack:
+
+**YANN**: I get slightly different values here
 
 `0: 0x0000000000000000000000000000000000000000000000000000000000000000`
 `1: 0x0000000000000000000000000000000000000000000000000000000000000053`
 `2: 0x0000000000000000000000000000000000000000000000000000000000000035`
 
-`CODECOPY` will consume these three items.
+These are the parameters for `CODECOPY`.
+
 `0` is the offset where the code should be copied to the memory. In that example, the code is copied to the beginning of the memory
 `1` is the offset in calldata where to copy from
 `2` number of bytes to copy
 
-remember: *codecopy(t, f, s)* - copy **s** bytes from code at position **f** to mem at position **t**
+Remember: *codecopy(t, f, s)* - copy **s** bytes from code at position **f** to mem at position **t**
+
+**Yann:** I'm confused by the (1)=> 
+**Yann:** Where is (1) in the debugger?
+**Yann:** (2) is in calldata panel
+**Yann:** right after codecopy the memory panel looks bizarre - loads of ? - well they are there before it too.
+
+
+
 
 After `CODECOPY` is executed, the copied code should be:
 (1) => `0x6080604052600080fdfea165627a7a7230582058ab614283bec9a34501e6d23c7b8ef93cf0c99c7bfcf583e62ad7f909091d310029` in memory

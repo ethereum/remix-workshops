@@ -1,0 +1,9 @@
+--- 
+name: Opcodes in the Debugger
+summary: Using the Debugger to check out the opcode, CODECOPY, to see how it is used by the EVM during contract creation
+level: 3 
+tags: 
+  - Remix
+  - Debugging
+  - EVM
+  - Opcodes
