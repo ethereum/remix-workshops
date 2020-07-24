@@ -1,20 +1,18 @@
 # The Opcode RETURN
 
-When the bytecode has been extracted, the last step is to use `RETURN` to return it to the client. (Yann - well there are more steps after the RETURN - so it is not the last step - so we need to give a sentence summarizing what the rest of the opcodes are doing)
+At the end of the last chapter we had moved to one step after **CODECOPY** to see what happened in the memory.
 
-But first, the EVM needs to prepare the stack before calling `RETURN`.
+Now that CODECOPY has been executed, we are on the opcode `PUSH1 00`.  
 
-Move to the next debugging step: `PUSH1 00`
+`PUSH1 00` prepares the stack for the `RETURN` opcode.
+`RETURN` is the last part of this process.  It is where the code is returned to the client. 
 
-We are pushing `00` to the stack because this is the offset position of the contract bytecode in memory.
+We push `00` to the stack because this is the offset position of the contract bytecode in memory.
 
-Then comes the all important `RETURN` opcode.  
+Now we can call the all important `RETURN` opcode.  
 
 The **stack inspector** shows:
-(not quite for me but close)
 `0: 0x0000000000000000000000000000000000000000000000000000000000000000`
-`1: 0x0000000000000000000000000000000000000000000000000000000000000035`
+`1: 0x000000000000000000000000000000000000000000000000000000000000003e`
 
-Which is to say it returns to the client the bytecode starting `0x00` with length `0x35`.
-
-0x35 is 53 in decimal  - do we need to do this hex to decimal more for better understanding?
+Which is to say it returns to the client the bytecode starting `0x00` with length `0x3e`.
