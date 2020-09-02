@@ -1,5 +1,3 @@
-# Memory
-
 Before we start, just quick reminder:
 
 The runtime of the EVM has several kinds of memory:
