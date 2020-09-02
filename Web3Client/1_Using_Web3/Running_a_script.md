@@ -1,4 +1,4 @@
-# Querying the Blockchain
+## Querying the Blockchain
 
 In this tutorial, we'll run a script that queries the blockchain using a JavaScript library.  
 
@@ -10,12 +10,12 @@ Let's begin with a simple web3.js example, queryBlockNum.js.
 
 The script's call to web3.js is wrapped in a self-executing async function that contains a try/catch block. 
 
-We'll query the current blocknumber by doing:
+We'll query the current blocknumber with:
 `let blockNumber = await web3.eth.getBlockNumber()`
 
-Note that the object `web3` is injected by Remix. For more info on web3.js, check their docs, <a href="https://web3js.readthedocs.io/en/latest" target="_blank">https://web3js.readthedocs.io/en/latest</a>.
+Note that the object `web3` is injected by Remix. For more info on web3.js, check their docs, <a href="https://web3js.readthedocs.io/" target="_blank">https://web3js.readthedocs.io</a>.
 
-To use web3.js or ethers.js, you need to select the Injected Web3 or Web3 Provider environments in the **Deploy & Run** module.  Scripts don't currently work with the JSVM. **If you try you'll get an error.**
+To use web3.js or ethers.js, you need to select the **Injected Web3** or **Web3 Provider** environment in the **Deploy & Run** module.  Scripts don't currently work with the JSVM. **If you try, you'll get an error.**
 
 So for this example choose **Injected Web3** in the Deploy & Run module and have Metamask installed.
 
