@@ -1,5 +1,3 @@
-# under the hood
-
 Switch to the `Solidity compiler` module 
 ![Solidity Compiler](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_Generate_Metadata/remix_icon_solidity.png "Solidity Compiler")
 
