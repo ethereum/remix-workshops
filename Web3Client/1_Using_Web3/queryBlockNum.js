@@ -1,5 +1,8 @@
-var run = async () => {
+(async () => {
+  try {
     let blockNumber = await web3.eth.getBlockNumber()
     console.log('current block number : ', blockNumber)
-}
-run()
+  } catch (e) {
+    console.log(e.message)
+  }
+})()
