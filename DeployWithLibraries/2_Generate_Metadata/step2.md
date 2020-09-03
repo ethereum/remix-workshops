@@ -1,4 +1,4 @@
-# Deploying Library
+## Deploying Library
 
 The **library** from the previous chapter was in the same file as the **contract**. However, they won't be deployed together and will have different addresses.
 

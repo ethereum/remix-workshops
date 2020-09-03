@@ -12,7 +12,7 @@ So we need deploy the library to get its address.
 
   - Select the library `aLib` in the list of compiled contract and hit `deploy`
 
-    ![Choose aLib](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/4_Linking_and_Deploying/lib/contract_alib.png "Choose aLib")
+    ![Choose aLib](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/4_Linking_and_Deploying/images/contract_alib.png "Choose aLib")
 
   - Click the clipboard icon to copy the address of the library.
 
