@@ -1,5 +1,3 @@
-# Contract Deployment and CODECOPY
-
 Let's go back to our contract.
 Please make sure the `solidity compiler` and `Deploy & Run Transactions` are activated.
 

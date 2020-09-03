@@ -1,7 +1,4 @@
-# Debug
-
 From the Remix terminal, identify the transaction that deployed the contract and click `Debug`
-You should get something like <a target="_blank" href="https://raw.githubusercontent.com/ethereum/remix-workshops/master/SimpleContractDebugging/5_debugAndcodecopy/debug_codecopy.png">this image.</a>
 
 In the gutter of the editor, put a breakpoint on the line `s = _o`, and click on `Jump to the next Breakpoint` (bottom right button).
 
