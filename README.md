@@ -1,30 +1,24 @@
-# Welcome to the Remix workshop
+# This is a repo of tutorials to be used in the Remix's LearnEth Plugin
 
 
-### Getting started:
+### To use these tutorials:
 
 
 **1. Open Remix**
 
 https://remix.ethereum.org
 
-Alternatively you can clone https://github.com/ethereum/remix-ide and run `npm install && npm run build && npm run serve`
+**2. In the plugin manager activate LEARNETH**
 
+**3. Go to the Learneth plugin and these tutorials will load by default**
 
-**2. Open support chat**
-
+**4. For questions**
 https://gitter.im/ethereum/remix-workshop
 
 We are here to help out and answer any question you might have.
 
 
- **Additional links**
-
-Remix libraries repository https://github.com/ethereum/remix
-
-Remixd repository repository https://github.com/ethereum/remixd
-
-**3. Sign into Github**
+**5. You may need to sign into Github**
 
 Github will block too many requests from the same location - unless you are signed into github and input a token.  This is only an issue during workshops - but because we are in a workshop, we need to do these steps:
 
@@ -34,7 +28,6 @@ Github will block too many requests from the same location - unless you are sign
     https://github.com/settings/tokens 
     
     and create a new token and save it in Remix in the you just opened on the settings tab.
-
 
 ---
 ### For additional ressources and tutorial on other topics
