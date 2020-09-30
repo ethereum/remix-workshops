@@ -1,4 +1,5 @@
 --- 
+id: useofweb3js
 name: Basic use of web3.js
 summary: This tutorial gives a short introduction of the web3.js library, querying the block number
 level: 2
