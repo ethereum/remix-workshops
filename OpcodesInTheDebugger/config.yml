@@ -1,4 +1,5 @@
---- 
+---
+id: opcodesdebug
 name: Opcodes in the Debugger
 summary: Using the Debugger, we'll check out what the CODECOPY opcode does and how it is used by the EVM during contract creation.
 level: 3 
