@@ -1,8 +1,8 @@
 --- 
 id: proxycontract
-name: The Whys and Hows of the Proxy Contract
+name: All about Proxy Contracts
 summary: This tutorial gives a short introduction of the web3.js library, querying the block number
-level: 4
+level: 3
 tags: 
   - Remix
   - Solidity
