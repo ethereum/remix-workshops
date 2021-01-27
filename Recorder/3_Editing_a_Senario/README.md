@@ -23,7 +23,7 @@ For example here is a bit of the scenario.json a bit further down where proposal
       "record": {
         "value": "0",
         "parameters": [
-          "1"
+          "2"
         ],
         "to": "created{1566428035436}",
         "abi": "0xc41589e7559804ea4a2080dad19d876a024ccb05117835447d72ce08c1d020ec",
@@ -40,13 +40,13 @@ Let's edit this so that another proposal wins in the playback.
 Change the **parameters** array which now is:
 ```
 "parameters": [
-          "1"
+          "2"
         ]
 ```
 to:
 
 ```
 "parameters": [
-          "2"
+          "1"
         ]
 ```
