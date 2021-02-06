@@ -1,3 +1,3 @@
 
-contract contract {
+contract SimpleStorage {
 }
