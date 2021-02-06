@@ -1,7 +1,6 @@
-# Deploying to a test net.
+## Deploying to a public test net.
 
-### Steps
-1. Download MetaMask. 
+1. Download the browser plugin **MetaMask**. 
 
 2. Click the MetaMask icon in your browser. Sign in and choose a test network. 
 
@@ -15,3 +14,5 @@
     - And then, go to the **Deploy & Run** plugin and deploy to the network you've chosen in step 2.
 
 5. You'll see the MetaMask popup asking you to pay for the transactions.
+
+And with that you have finished this tutorial.  You now have experience with opening, compiling, deploying and interacting with Smart Contracts in Remix IDE.
