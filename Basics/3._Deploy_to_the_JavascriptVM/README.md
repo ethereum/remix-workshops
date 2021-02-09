@@ -2,7 +2,7 @@ In the previous chapter, we compiled a contract  - which is to say the solidity 
 
 Now we will put that code on a test blockchain. 
 
-1. Click the Deploy and Run icon ![deploy & run icon](https://github.com/ethereum/remix-workshops/blob/master/Basics/3_Deploy_JSVM/images/run.png?raw=true "deploy & run icon").  
+1. Click the Deploy and Run icon ![deploy & run icon](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/3._Deploy_to_the_JavascriptVM/images/run.png "deploy & run icon").  
 
 2. Select the **JavaScript VM** from the Environment pulldown. 
 
