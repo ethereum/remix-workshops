@@ -1,5 +1,3 @@
-# How it works?
-
 **EIP-7 DelegateCall** opcode allows a separate execution in another contract while maintaining the original execution context.
 
 All **message calls** from the user go through a **Proxy contract**. 

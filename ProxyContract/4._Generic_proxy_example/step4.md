@@ -1,5 +1,3 @@
-# A Basic Generic Proxy Example
-
 In the associated solidity file, **step4.sol**, there are 2 contracts - **ProxyContract** and **LogicContract**.
 
 To use this system, we first deploy the LogicContract.

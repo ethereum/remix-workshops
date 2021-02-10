@@ -1,6 +1,4 @@
-# Delegate call
-
-It's a special variant of a **message call**, which is identical to a message call apart from the fact that the code at the target address is executed in the context of the calling contract so **msg.sender** and **msg.value** do not change their values.
+**delegatecall** a special variant of a **message call**, which is identical to a message call apart from the fact that the code at the target address is executed in the context of the calling contract so **msg.sender** and **msg.value** do not change their values.
 
 This means that a contract can dynamically load code from a different address at runtime. 
 
