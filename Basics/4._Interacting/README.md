@@ -4,7 +4,7 @@ What are the functions in the deployed contract? What parameters does a function
 
 We will cover these questions in this chapter.
 
-1. Open up the contract by clicking the caret - so the caret points down.
+1. At the bottom of the Deploy and Run page, open up the contract by clicking the caret - so the caret points down.
 ![deploy contract](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/4._Interacting/images/instance.png "deployed contract")
 
 2. There are 2 functions in this contract.  Clicking the caret to the right of change Owner (outlined in red) will open up the inputs so that you can put in the parameters in separate input boxes.
