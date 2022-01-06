@@ -1,15 +1,15 @@
-# Proxy Contract AKS the Dispatcher
+# Proxy Contract AKA the Dispatcher
 
 ## Why?
 
-This is a great pattern which is used mainly in **library development**. 
+This is a great pattern that is used mainly in **library development**. 
 
 It helps in the following ways:
 
 - **Save gas cost at deployment time**
 The purpose of a high gas cost is to discourage the operations that cost a lot for their execution and to encourage optimized code.
 
-- Proxy contracts are useful when a lot of instances of the same contract required to be deployed because they reduce the duplications in the deployment.
+- Proxy contracts are useful when a lot of instances of the same contract need to be deployed because they reduce the duplications in the deployment.
 
 - **Avoid code repetition in the blockchain.**
 Heavy computations are expensive because every node will need to perform them, this is of course slowing the network.
