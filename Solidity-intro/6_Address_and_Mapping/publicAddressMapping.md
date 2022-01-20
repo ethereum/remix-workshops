@@ -10,7 +10,7 @@ So far you have only learned about integer types, Solidity has many more, includ
 
 ## Mapping types
 
-Mappings types allow you to create your own custom types, consisting of key/value pairs. Both the key and the value can be any type. The syntax looks like this `mapping (<key> => <value>) <modifiers> <mappingName>`.
+Mappings types allow you to create your own custom types, consisting of key/value pairs. Both the key and the value can be any type. The syntax looks like this `mapping (<key type> => <value type>) <modifiers> <mappingName>`.
 
 ## Let's make some!
 
