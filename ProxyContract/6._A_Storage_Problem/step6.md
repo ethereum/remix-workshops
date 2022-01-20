@@ -1,4 +1,4 @@
-# What if we have state variables?
+## What if we have state variables?
 
 Things are more complicated once we need to deal with state variables.  State variable are saved to **storage**.
 

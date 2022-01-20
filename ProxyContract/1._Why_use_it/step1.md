@@ -1,6 +1,4 @@
-# Proxy Contract AKS the Dispatcher
-
-## Why?
+## Proxy Contract AKA "the Dispatcher"
 
 This is a great pattern which is used mainly in **library development**. 
 
