@@ -13,7 +13,7 @@ To access this **mainnet** contract, we need to do some setup.
 4. Go to Deploy & Run and switch to **Injected Web3**.
 
 **Using Web3**
-In the script, queryContract.js, we need to instantiate a new instance of web3.eth.Contract object.  For this we need to grab the contract's ABI and its address.  The source code & ABI is available in etherscan because the contract's developer intentionally pubished it.
+In the script, queryContract.js, we need to instantiate a new instance of web3.eth.Contract object.  For this we need to grab the contract's ABI and its address.  The source code & ABI is available in etherscan because the contract's developer intentionally published it.
 
 In etherscan, we can see that its name is **TetherToken**.  Scrolling down to the TetherToken contract in the source code section of etherscan, we can see the state variables for the contract - the first of which is named **name**. 
 
