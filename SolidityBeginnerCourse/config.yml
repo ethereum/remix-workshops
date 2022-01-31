@@ -1,0 +1,46 @@
+--- 
+id: soliditybeginner
+name: Solidity para principiantes
+summary: Este curso de Solidity para principiantes se basa en los populares contratos https://solidity-by-example.org/. Desarrollados por la plataforma educativa p2p https://dacade.org.
+level: 1
+tags:
+  - Solidity
+steps:
+  - name: 1. Introducción
+    path: introduction
+  - name: 2. Syntaxis básica
+    path: basic-syntax
+  - name: 3. Tipos de Data primitivos
+    path: primitive-data-types
+  - name: 4. Variables
+    path: variables
+  - name: 5.1 Funciones - Leer y escribir en una variable de estado
+    path: functions-reading-and-writing
+  - name: 5.2 Funciones - Vista y puro
+    path: functions-view-and-pure
+  - name: 5.3 Functions - Modificadoras y Constructoras
+    path: functions-modifiers-and-constructors
+  - name: 5.4 Funciones - Inputs y Outputs
+    path: functions-inputs-and-outputs
+  - name: 6. Visibilidad
+    path: visibility
+  - name: 7.1 Flow de Control - If/Else
+    path: control-flow-if-else
+  - name: 7.2 Control Flow - Loops
+    path: control-flow-loops
+  - name: 8.1 Estructuras de Data - Colecciones (Arrays)
+    path: data-structures-arrays
+  - name: 8.2 Estructuras de Data - Mapeos
+    path: data-structures-mappings
+  - name: 8.3 Data Structures - Structs
+    path: data-structures-structs
+  - name: 8.4 Estructuras de Data - Enums
+    path: data-structures-enums
+  - name: 9. Localizaciones de Data
+    path: data-locations
+  - name: 10.1 Transacciones - Ether y Wei
+    path: transactions-ether-and-wei 
+  - name: 10.2 Transactions - Gas y Precios de Gas
+    path: transactions-gas-and-gas-price
+  - name: 10.3 Transacciones - Enviar Ether
+    path: transactions-sending-ether
