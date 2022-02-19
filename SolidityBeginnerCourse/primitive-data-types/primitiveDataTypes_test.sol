@@ -10,7 +10,7 @@ contract MyTest {
   }
   
   function checkNewAddr() public returns (bool) {
-    return Assert.notEqual(foo.newAddr(), address(0xb180Fc7dB413D965D0E6f8098F37e2df33a4347E), "Same address as in the contract.");
+    return Assert.notEqual(foo.newAddr(), address(0xCA35b7d915458EF540aDe6068dFe2F44E8fa733c), "Same address as in the contract.");
   }
 
   function checkNeg() public returns (bool) {

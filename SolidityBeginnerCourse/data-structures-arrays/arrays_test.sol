@@ -16,8 +16,9 @@ contract MyTest {
   }
   
   function checkFunction() public {
-    Assert.equal(foo.arr3(0), 0, "Value of first element should be 0.");
-    Assert.equal(foo.arr3(1), 1, "Value of first element should be 1.");
-    Assert.equal(foo.arr3(2), 2, "Value of first element should be 2.");
+    uint[3] memory arr = foo.getArr();
+    Assert.equal(arr[0], 0, "Value of first element should be 0.");
+    Assert.equal(arr[1], 1, "Value of first element should be 1.");
+    Assert.equal(arr[2], 2, "Value of first element should be 2.");
   }
 }

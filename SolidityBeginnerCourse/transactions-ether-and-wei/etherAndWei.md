@@ -16,6 +16,6 @@ Un `ether` es igual a 1,000,000,000,000,000,000 (10^18) `wei` (línea 11).
 
 ## ⭐️Misión
 1. Crear una `uint` pública (`public`) llamada `oneGWei` y ponla a un `gwei`.
-2. Crear una `uint` pública (`public`) llamada `isOneGWei` y ponla como el resultado de una operación de comparación entre 1 gwei y 10^9.
+2. Crear una `bool` pública (`public`) llamada `isOneGWei` y ponla como el resultado de una operación de comparación entre 1 gwei y 10^9.
 
 Consejo: Mire como esto está escrito para  `gwei` y `ether`  en el contrato.

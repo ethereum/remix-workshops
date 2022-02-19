@@ -27,7 +27,7 @@ En este contrato, el parámetro `_arr` (line 35) tiene la localización de data 
 
 Las misiones de  *memory* a *memory* crean referencias en ver de copias. Si cambiamos el valor en una variable, el valor de todas las demás variables que referencian la misma data serán cambiadas. 
 
-Si tuviésemos que crear un nuevo struct `myMemeStruct2` con la localización de data  *memory* en la `function f` (línea 12) y asignarle el valor de `myMemeStruct` (línea 19), cualquier cambio a `myMemeStruct2` cambiará también el valor de `myMemeStruct`.
+Si tuviésemos que crear un nuevo struct `myMemstruct2` con la localización de data  *memory* en la `function f` (línea 12) y asignarle el valor de `myMemstruct` (línea 19), cualquier cambio a `myMemstruct2` cambiará también el valor de `myMemstruct`.
 
 ### De almacén a almacén local.
 Las asignaciones del *storage* al *local storage* también crean referencias, no copias. 
@@ -37,15 +37,15 @@ Si cambiamos el valor de una variable local `myStruct` (línea 17), el valor de 
 ## Almacenaje y memoria/calldata
 Las asignaciones entre  *storage* y *memory* (or *calldata*) crean copias independientes, no referencias. 
 
-Si tuviéramos que crear un nuevo struct `myMemeStruct3` con la localización de data *memory* dentro de la función `function f` (línea 12) y asignarle el valor de `myStruct`, cambios en `myMemeStruct3` no afectarían los valores almacenados en el mapeo `myStructs` (línea 10).
+Si tuviéramos que crear un nuevo struct `myMemstruct3` con la localización de data *memory* dentro de la función `function f` (línea 12) y asignarle el valor de `myStruct`, cambios en `myMemstruct3` no afectarían los valores almacenados en el mapeo `myStructs` (línea 10).
 
 Como hemos dicho al principio, cuando creamos contratos hemos de tener en mente los gastos de gas. Por ello, necesitamos usar las localizaciones de data que requieren la menor cantidad posible de gas. 
 
 
 ## ⭐️ Misión
 1. Cambiar el valor del miembro `myStruct` llamado `foo`, en la función `function f`, a 4.
-2. Crear un nuevo struct `myMemeStruct2` con la localización de data *memory*dentro de `function f` y asígnale el valor de `myMemeStruct`. Cambia el valor del miembro `myMemeStruct2` llamado `foo` a 1.
-3. Crear un nuevo struct `myMemeStruct3`con la localización de data *memory* en la `function f` y asígnale el valor de `myStruct`.Cambia el valor del miembro `myMemeStruct3` llamado `foo` a 3.
+2. Crear un nuevo struct `myMemstruct2` con la localización de data *memory*dentro de `function f` y asígnale el valor de `myMemstruct`. Cambia el valor del miembro `myMemstruct2` llamado `foo` a 1.
+3. Crear un nuevo struct `myMemstruct3`con la localización de data *memory* en la `function f` y asígnale el valor de `myStruct`.Cambia el valor del miembro `myMemstruct3` llamado `foo` a 3.
 4. Dejar que la función f devuelva `myStruct`, `myMemStruct2` y `myMemStruct3`.
 
 Consejo: Asegúrese de crear los tipos de retorno correctos para la función  `f`.
