@@ -1,0 +1,22 @@
+--- 
+id: tokenCourse
+name: Curso de Solidity ERC20 Token 
+summary: Aprenda a crear tus propios tokens ERC20. Desarrollados por la plataforma educativa p2p https://dacade.org.
+level: 1
+tags: 
+  - Solidity
+  - Tokens
+  - ERC20
+steps:
+  - name: 1. Introducción
+    path: introduction
+  - name: 2. Interfaz
+    path: erc20-interface
+  - name: 3. Creación de Tokens
+    path: erc20-token-creation
+  - name: 4. Interacción
+    path: erc20-interaction
+  - name: 5. Despliegue del Testnet
+    path: erc20-testnet-deployment
+  - name: 6. Extensiones
+    path: erc20-extensions

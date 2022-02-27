@@ -1,4 +1,4 @@
-## Solidity para principiantes
+## Curso interactivo de Solidity
 
 Este curso de Solidity para principiantes se basa en los populares contratos https://solidity-by-example.org/. 
 
