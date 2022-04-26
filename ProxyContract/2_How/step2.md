@@ -6,7 +6,7 @@ All **message calls** from the user go through a **Proxy contract**.
 
 The **Proxy contract** then will redirect them to the **Logic contract**. 
 
-And when you need to **upgrade** the logic, you'll **just** deploy that - **HOWEVER** - the implementation of Proxy will rename the same. 
+And when you need to **upgrade** the logic, you'll **just** deploy that - **HOWEVER** - the implementation of Proxy will remain the same. 
 
 You'll only need to update the address of Logic contract in Proxy.
 
