@@ -8,7 +8,7 @@ contract Geometry is ERC721, Ownable {
     constructor() ERC721("Geometry", "GEO") {}
 
     function _baseURI() internal pure override returns (string memory) {
-        return "https://ipfs.io/ipfs/QmSw9o2dDbGSK8BGHB1yYZDCzBfAjKtv5DFebQadJUZb85/";
+        return "https://ipfs.io/ipfs/QmVrsYxXh5PzTfkKZr1MfUN6PotJj8VQkGQ3kGyBNVKtqp/";
     }
 
     function safeMint(address to, uint256 tokenId) public onlyOwner {

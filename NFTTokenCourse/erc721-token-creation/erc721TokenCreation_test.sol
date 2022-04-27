@@ -20,6 +20,6 @@ contract MyTest is Geometry {
 
     function checkMint() payable public returns (bool) {
         safeMint(acc0,0);
-        return Assert.equal(tokenURI(0), string("https://ipfs.io/ipfs/QmSw9o2dDbGSK8BGHB1yYZDCzBfAjKtv5DFebQadJUZb85/0"), "Wrong tokenURI");
+        return Assert.equal(tokenURI(0), string("https://ipfs.io/ipfs/QmVrsYxXh5PzTfkKZr1MfUN6PotJj8VQkGQ3kGyBNVKtqp/0"), "Wrong tokenURI");
     }
 }
