@@ -41,3 +41,4 @@ Instructions will be forthcoming...
 #### Additional external workshops
 - [Using Oraclize plugin in Remix](https://medium.com/coinmonks/using-apis-in-your-ethereum-smart-contract-with-oraclize-95656434292e)
 - [Verify Contracts on Remix with Sourcify by Rob Stupay](https://medium.com/remix-ide/verify-contracts-on-remix-with-sourcify-2912004d9c84)
+- [Remix Workshop Uses Decentralized Storage by Rob stupay](https://medium.com/remix-ide/intro-to-remix-workshop-c14733bdd60c)
