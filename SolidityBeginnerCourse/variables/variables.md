@@ -1,33 +1,27 @@
-La visibilidad es usada para controlar quién tiene acceso a las funciones y variables de estado. 
+Hay tres diferentes tipos de variables en Solidity: *Variables de Estado* (State Variables), *Variables Locales* (Local Variables) y *Variables Globales* (Global Variables).
 
-Hay cuatro tipos de visibilidad: : `external`, `public`, `internal`, y `private`
+## 1. Variables de Estado
 
-Estas regulan si las funciones y variables de estado pueden ser llamadas desde el interior de un contrato, desde contratos que derivan de un contrato (contratos hijos), u otros tipos de contratos y transacciones. 
+Las *Variables de Estado* se almacenan en *almacén* del contrato y por tanto en la blockchain. Están declaradas dentro del contrato pero fuera de la función. 
+Este contrato tiene dos variables de estado, el `texto` (string) (línea 6) y el uint `num` (línea 7).
 
-### private
-- Puede ser llamada dentro del contrato.
+## 2. Variables Locales
 
-### internal
-- Puede ser llamada dentro del contrato.
-- Puede ser llamada desde un contrato hijo.
+Las *Variables Locales* se almacenan en la *memoria* y sus valores son solamente accesibles en las funciones en las que están definidas. Las Variables Locales no se almacenan en la blockchain. En este contrato el  uint `i` (línea 11) es una variable local. 
 
-### public
-- Puede ser llamada dentro del contrato.
-- Puede ser llamada desde un contrato hijo.
-- Puede ser llamada desde otros contratos o transacciones.
+## 3. Variables Globales
+Las *Variables Globales* (Global Variables) también llamadas *Variables Especiales* (Special Variables) existen en el espacio de nombres global. No necesitan ser declaradas pero pueden ser accedidas desde dentro de su contrato. Variables Globales son usadas para tomar información sobre la blockchain, direcciones particulares, contratos y transacciones. 
 
-### external
-- Puede ser llamada desde otros contratos o transacciones.
-- Variables de estado no pueden ser externas. 
+En este ejemplo usamos `block.timestamp` (línea 14) para tener una estampa de tiempo cuando los bloques actuales fueron generados y `msg.sender` (línea 15) para saber qué dirección de la función en el contrato. 
 
+Una lista de todas las Variables Globales está disponible en <a href="https://docs.soliditylang.org/en/latest/cheatsheet.html?highlight=Variables#global-variables" target="_blank">documentación de Solidity</a>.
 
-En este ejemplo tenemos dos contratos, el contrato  `Base` (base) (línea 4) y el contrato `Child` (hijo) (línea 55), que hereda las funciones y variables de estado del contrato `Base`. 
+Puede ver más tutoriales en  <a href="https://www.youtube.com/watch?v=hl692-xJPUQ" target="_blank">Variables de Estado</a>, <a href="https://www.youtube.com/watch?v=5Gxzwn0SQDU" target="_blank">Variables Locales</a>, y<a href="https://www.youtube.com/watch?v=ryA86ZiSD-w" target="_blank">Variables Globales</a>.
 
-Cuando descomente el `testPrivateFunc` (líneas 58-60) recibirá un error porque el contrato hijo no tiene acceso a la función privada `privateFunc` del contrato  `Base`.
-
-Si compila y despliega los dos contratos, no será capaz de llamar a las funciones `privateFunc` e `internalFunc` directamente. Sólo será capaz de llamarlas vía `testPrivateFunc` y `testInternalFunc`.
-
-<a href="https://www.youtube.com/watch?v=NBzQVJ6OrrQ" target="_blank">Mire un vídeo con tutoriales sobre visibilidad</a>.
 
 ## ⭐️ Misión
-Crear una nueva función en el contrato `Child` llamada  `testInternalVar`, que devuelve los valores de todas las variables de estado del contrato `Base`, que pueden ser retornadas. 
+
+1. Crear una nueva variable de estado pública llamada `blockNumber`.
+2. Dentro de la función `doSomething()`,asigne el valor del actual número de bloques de la variable de estado `blockNumber`.
+
+Consejo: Mire en la sección de variables globales de la documentación de Solidity para encontrar cómo leer el actual número de bloques. 
