@@ -41,7 +41,7 @@ The function `getApproved` (line 103) returns the address `operator` of the acco
 The function `setApprovalForAll` (line 115) gives or removes the permission (`_approved`) to the account with the address `operator` to manage all tokens of the account calling the function.
 
 ### isApprovedForAll
-The function `getApproved` (line 103) returns the boolean true if the account with the address `operator` is approved to manage all tokens of the account with the address `owner`.
+The function `isApprovedForAll` (line 122) returns the boolean true if the account with the address `operator` is approved to manage all tokens of the account with the address `owner`.
 
 ## IERC721 Events
 ERC721 contracts must also emit the following events:
