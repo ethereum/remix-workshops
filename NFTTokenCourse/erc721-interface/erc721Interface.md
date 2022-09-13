@@ -10,7 +10,7 @@ The ERC721 standard is more complex than the ERC20 standard and it features opti
 This interface (line 11) is part of the open-source contract library provided by <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol" target="_blank">OpenZeppelin</a>.
 
 ## IERC721 Functions
-Contracts compliant with the ERC20 standard have to implement the following functions:
+Contracts compliant with the ERC721 standard have to implement the following functions:
 
 ### balanceOf
 The function `balanceOf` (line 30) returns the amount of tokens owned by the account with the address `owner`.
