@@ -8,10 +8,12 @@
 
 2. Go back to Remix. In  **Deploy & Run**, in the **Environment** pulldown, choose **Injected Provider**.
 
-3. See if you can deploy your compiled 2_Owner.sol to the test net that you have just chosen. If you see the 2_Owner.sol as a choice in the **CONTRACT** select box, click the **Deploy** button.  
-    - If you see nothing in this select box, you'll need to compile 2_Owner again.  And if you do need to compile 2_Owner.sol again,  make sure it is the active file in the **editor** and then go to the **Solidity Compiler** to compile it.  
+3. See if you can deploy your compiled 2_Owner.sol to the test net that you have just chosen. Make sure you see the 2_Owner.sol as a choice in the **CONTRACT** select box, then click the **Deploy** button.  
 
-    - And then, go to the **Deploy & Run** plugin and deploy to the network you've chosen in step 2.
+Troubleshooting:
+    - If the **CONTRACT** select box was empty, you'll need to compile 2_Owner again.  And if you do need to compile 2_Owner.sol again, make sure it is the active file in the **editor** and then go to the **Solidity Compiler** to compile it.  
+
+    - Then, come back to the **Deploy & Run** and deploy to the network you've chosen in step 2.
 
 5. You'll see the MetaMask popup asking you to pay for the transactions.
 

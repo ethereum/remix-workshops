@@ -39,7 +39,7 @@ The function `approve` (line 94) gives the account with the address `to` the per
 The function `getApproved` (line 103) returns the address of the account (return var `operator`) that is approved to manage the token with the id `tokenId`.
 
 ### setApprovalForAll
-The function `setApprovalForAll` (line 115) gives (or removes) the permission (`_approved`) to/from the account with the specified address (input param named `operator`) to manage all tokens of the account calling the function.
+The function `setApprovalForAll` (line 115) sets the permission (`_approved`) for the account with the specified address (input param - `operator`) to manage all tokens of the account calling the function.
 
 ### isApprovedForAll
 The function `getApproved` (line 103) returns the boolean true if the account with the address `operator` is approved to manage all tokens of the account with the address `owner`.

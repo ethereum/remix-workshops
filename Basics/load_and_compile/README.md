@@ -10,6 +10,8 @@
 8. Click the compile button. 
 ![compile 2_owner](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/2._Load_and_compile/images/compile2owner.png "compile 2_Owner") 
 
+9. Compiling can also be triggered by hitting **CTRL + S**. 
+
 The spinner will turn while the file is compiling.  
 
 **Note:** The spinner also turns when the compiler itself is loading.  To choose a **different version of Solidity**, go to the select box at the top of the plugin.
