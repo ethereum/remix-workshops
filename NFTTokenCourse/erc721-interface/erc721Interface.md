@@ -9,8 +9,8 @@ The ERC721 standard is more complex than the ERC20 standard and it features opti
 
 This interface (line 11) is part of the open-source contract library provided by <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol" target="_blank">OpenZeppelin</a>.
 
-## IERC721 Functions
-Contracts compliant with the ERC20 standard have to implement the following functions:
+## Basic IERC721 Functions
+Contracts compliant with the ERC721 standard have to implement the following functions:
 
 ### balanceOf
 The function `balanceOf` (line 30) returns the amount of tokens owned by the account with the address `owner`.
@@ -31,14 +31,15 @@ The function `transferFrom` (line 55) transfers the ownership of a token with th
 **It is recommended to use safeTransferFrom instead of transferFrom whenever possible.**
 The `transferFrom` function is not secure because it doesn’t check if the smart contract that is the recipient of the transfer has implemented the ERC721TokenReceiver interface and is capable of handling ERC721 tokens.
 
+## Advanced IERC721 Functions
 ### approve
 The function `approve` (line 94) gives the account with the address `to` the permission to manage the token with the id `tokenId` on behalf of the account calling the function.
 
 ### getApproved
-The function `getApproved` (line 103) returns the address `operator` of the account that is approved to manage the token with the id `tokenId`.
+The function `getApproved` (line 103) returns the address of the account (return var `operator`) that is approved to manage the token with the id `tokenId`.
 
 ### setApprovalForAll
-The function `setApprovalForAll` (line 115) gives or removes the permission (`_approved`) to the account with the address `operator` to manage all tokens of the account calling the function.
+The function `setApprovalForAll` (line 115) sets the permission (`_approved`) for the account with the specified address (input param - `operator`) to manage all tokens of the account calling the function.
 
 ### isApprovedForAll
 The function `getApproved` (line 103) returns the boolean true if the account with the address `operator` is approved to manage all tokens of the account with the address `owner`.
