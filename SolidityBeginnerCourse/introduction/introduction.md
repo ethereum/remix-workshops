@@ -27,5 +27,5 @@ Throughout this course, we will give you assignments to test and consolidate you
 
 Your first assignment is to:
 1. Compile this contract.
-2. Deploy it to the JavaScript VM.
+2. Deploy it to the Remix VM.
 3. Interact with your contract.
