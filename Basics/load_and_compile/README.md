@@ -3,7 +3,7 @@
 
 1. In the icon panel, click ![file explorer icon](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/load_and_compile/images/files1.png "file explorer icon") , the File Explorer's icon.
 
-5. Find **2_Owner.sol** which is in the contracts folder of a default workspace.  Click this file and it will appear in a tab in the main panel.
+5. Find **2_Owner.sol** in the contracts folder of a default workspace and click it. The file will appear in a tab in the main panel.
 
 7. In the icon panel, click the **Solidity Compiler** ![solidity compiler icon](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/load_and_compile/images/solidity1.png "solidity compiler icon"). The Solidity compiler should now be in the side panel.
 
