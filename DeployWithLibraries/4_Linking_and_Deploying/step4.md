@@ -1,7 +1,7 @@
 Switch to the `Deploy & Run` module 
 ![Run transaction](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/4_Linking_and_Deploying/images/remix_runtransaction.png "Run Transaction")
 
- - Select the JavaScript VM Environment and select the `sampleContract` contract in the list of compiled contracts.
+ - Select the Remix VM Environment and select the `sampleContract` contract in the list of compiled contracts.
 
  - Click on `Deploy`
  
