@@ -1,5 +1,5 @@
-## Solidity NFT Course
+## Solidity NFT 课程
 
-Learn how to create your own NFTs (non-fungible tokens).
+学习如何创建自己的NFT（非同质化代币）。
 
-Developed by the p2p learning platform https://dacade.org.
+由p2p学习平台https://dacade.org开发。

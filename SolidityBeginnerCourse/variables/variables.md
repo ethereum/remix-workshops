@@ -1,25 +1,23 @@
-There are three different types of variables in Solidity: *State Variables*, *Local Variables*, and *Global Variables*.
+在Solidity中有三种不同类型的变量：*状态变量*、*局部变量*和*全局变量*。
 
-## 1. State Variables
-*State Variables* are stored in the contract *storage* and thereby on the blockchain. They are declared inside the contract but outside the function.
-This contract has two state variables, the string `text`(line 6) and the uint `num` (line 7).
+## 1. 状态变量
+状态变量存储在合约存储器中，因此也存在于区块链上。它们声明在合约内、函数外。这个合约有两个状态变量，即字符串`text`（第6行）和无符号整数`num`（第7行）。
 
-## 2. Local Variables
-*Local Variables* are stored in the *memory* and their values are only accessible within the function they are defined in. Local Variables are not stored on the blockchain.
-In this contract, the uint `i` (line 11) is a local variable. 
+## 2. 局部变量
+局部变量存储在内存中，其值仅可在定义它们的函数内访问。局部变量不会被存储到区块链上。在这个合约中，无符号整数`i`（第11行）是一个局部变量。
 
-## 3. Global Variables
-*Global Variables*, also called *Special Variables*, exist in the global namespace. They don't need to be declared but can be accessed from within your contract.
-Global Variables are used to retrieve information about the blockchain, particular addresses, contracts, and transactions.
+## 3. 全局变量
+全局变量，也称为特殊变量，在全局命名空间中存在。它们不需要声明但可以从您的合约内访问。全局变量用于检索区块链、特定地址、合约和交易的信息。
 
-In this example, we use `block.timestamp` (line 14) to get a Unix timestamp of when the current block was generated and `msg.sender` (line 15) to get the caller of the contract function’s address.
+在本例中我们使用`block.timestamp`(第14行)来获取当前块生成时的Unix时间戳，并使用`msg.sender`(第15行)来获取调用者的地址。
 
-A list of all Global Variables is available in the <a href="https://docs.soliditylang.org/en/latest/cheatsheet.html?highlight=Variables#global-variables" target="_blank">Solidity documentation</a>.
+所有全局变量列表都可以在<a href="https://docs.soliditylang.org/en/latest/cheatsheet.html?highlight=Variables#global-variables" target="_blank">Solidity文档</a>中找到。
 
 Watch video tutorials on <a href="https://www.youtube.com/watch?v=hl692-xJPUQ" target="_blank">State Variables</a>, <a href="https://www.youtube.com/watch?v=5Gxzwn0SQDU" target="_blank">Local Variables</a>, and <a href="https://www.youtube.com/watch?v=ryA86ZiSD-w" target="_blank">Global Variables</a>.
+观看关于<a href="https://www.youtube.com/watch?v=hl692-xJPUQ" target="_blank">状态变量</a>, <a href="https://www.youtube.com/watch?v=5Gxzwn0SQDU" target="_blank">局部变量</a>, and <a href="https://www.youtube.com/watch?v=ryA86ZiSD-w" target="_blank">全局变量</a>的视频教程吧！
 
 ## ⭐️ Assignment
-1. Create a new public state variable called `blockNumber`.
-2. Inside the function `doSomething()`, assign the value of the current block number to the state variable `blockNumber`.
+1. 创建一个public类型的`状态变量`，命名为`blockNumber`。
+2. 在函数`doSomething()`内，将当前区块号的值赋给状态变量`blockNumber`。
 
-Tip: Look into the global variables section of the Solidity documentation to find out how to read the current block number.
+提示：查看Solidity文档中的全局变量部分以了解如何读取当前区块号。

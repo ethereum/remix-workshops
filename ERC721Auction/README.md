@@ -1,5 +1,5 @@
-## NFT Auction Contract
+## NFT拍卖合约
 
-Learn how to write an ERC721 (NFT) auction contract. 
+学习如何编写ERC721（NFT）拍卖合约。
 
-Developed by the p2p learning platform https://dacade.org.
+由p2p学习平台https://dacade.org开发。

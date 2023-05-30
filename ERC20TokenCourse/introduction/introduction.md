@@ -1,54 +1,50 @@
-In this section of the course, we will give you a theoretical introduction to blockchain-based tokens.
+在本课程的这部分中，我们将为您介绍基于区块链的代币理论。
 
-Blockchain tokens are a new technological building block created by blockchain technology (like websites were for the internet) that enables a decentralized, ownable internet (web3).
+区块链代币是由区块链技术创建的模块（就像网站对互联网），它实现了去中心化、主权独立的互联网（Web3）。
 
-### Introduction
-In the context of web3, tokens represent ownership. Tokens can represent ownership of anything: art, reputation, items in a video game, shares in a company, voting rights, or currencies.
+### 简介
+在Web3环境下，代币表示所有权。代币可以表示任何东西的所有权：艺术品、声誉、视频游戏中的物品、公司股份、投票权或货币等。
 
-The revolutionary innovation of blockchain technology is that it allows data to be stored publicly in an immutable (unchangeable) way.
-This new form of data storage allows us to keep track of ownership and enable truly ownable digital items for the first time.
+区块链技术所具备革命性创新之处在于它允许数据以不可变（无法更改）方式公开存储。这种新形式的数据存储方式使我们能够跟踪所有权并首次实现真正可拥有数字物品。
 
-Blockchain Technology was originally invented to keep track of the ownership of Bitcoin, a decentralized digital currency and fungible token.
+最初发明区块链技术是为了跟踪比特币的所有权（比特币是一种去中心化数字货币和同质化代币）。
 
-### Fungible and non-fungible tokens
-Assets like money: Bitcoin or a one-dollar bill, for example, are fungible. Fungible means that all assets are the same and are interchangeable. Assets like art, collectibles, or houses are non-fungible; they are all different and not interchangeable.   
+### 同质化和非同质化代币
+像钱这样的资产：比特币或一美元纸钞，例如都是同质化资产。同质意味着所有资产都相同且可以互换。而像艺术品、收藏品或房屋等资产则是非同质化的，它们都不同且不能互换。
 
-We can divide tokens into these two types: fungible tokens, where all tokens are the same, and non-fungible tokens (NFTs), where every token is unique.
+我们可以将代币分为这两种类型：同质化代币，其中所有代币都相同；以及非同质化代币（NFTs），其中每个代币都是独一无二的。
 
-### Token standard
-The behavior of a token is specified in its smart contract (token contract). The contract could, for example, include the functionality to transfer a token or check for its total supply.
+### 代币标准
+一个代币的行为是在其智能合约（代币合约）中指定的。该合约可以包括转移代币或检查其总供应量等功能。
 
-If everybody would create their own token contracts with different behavior and naming conventions, it would make it very hard for people to build contracts or applications that are able to interact with each other.
+如果每个人都创建自己具有不同行为和命名惯例的代币合约，那么人们将很难构建与其他人交互的合约或应用程序。
 
-The Ethereum community has developed token standards that define how a developer can create tokens that are interoperable (able to work with others) with other contracts, products, and services. Contracts developed under these standards need to include a certain set of functions and events.
+以太坊社区已经开发了代币标准，定义了开发者如何创建可与其他合约、产品和服务进行交互（即可互操作）的代币。根据这些标准开发的合约需要包括一定数量的函数和事件。
 
-The most popular token standards are the ERC20 for fungible tokens and the ERC721 for non-fungible tokens. In this course, we will learn how to create and interact with the ERC20 token standard in the following sections.
+最流行的代币标准是 ERC20 用于同质化代币和 ERC721 用于非同质化代币。在本课程中，我们将学习如何在以下章节中创建并与 ERC20 代币标准进行交互。
 
-If you want to learn more about NFTs and the ERC721 token standard, have a look at the Learneth NFT Course. 
+如果您想了解更多关于 NFT 和 ERC721 代币标准，请参阅 **Learneth NFT 课程** 。
 
-The ERC777 is a fungible token standard, like the ERC20, that includes more advanced features like hooks while remaining backward compatible with ERC20. Learn more about the ERC777 in its <a href="https://eips.ethereum.org/EIPS/eip-777" target="_blank">EIP (Ethereum improvement proposal)</a>.
+ERC777 是一种同质化代币标准，类似于 ERC20，在保持向后兼容性时包含更高级别特性，例如hooks。请通过其 <a href="https://eips.ethereum.org/EIPS/eip-777" target="_blank">EIP（以太坊改进提案）</a>了解有关 ERC777 的更多信息。
 
-The ERC1155 is a multi-token standard that allows a single contract to manage different types of tokens, such as fungible, non-fungible, or semi-fungible tokens.
-Learn more about the ERC1155 in its <a href="https://eips.ethereum.org/EIPS/eip-1155" target="_blank">EIP</a>.
+ERC1155 是一种多代币标准，允许单个合约管理不同类型的代币，例如可同质化、非同质化或半同质化代币。请通过其 <a href="https://eips.ethereum.org/EIPS/eip-1155" target="_blank">EIP</a> 了解有关 ERC1155 的更多信息。
 
-## ⭐️ Assignment
-For this assignment, we will test your knowledge via a short quiz.
-Assign the number of the best answer to the variables `question1` (line 5), 
-`question2` (line 6), `question3` (line 7) in the `Quiz` contract (line 4). 
+## ⭐️ 作业
+对于这个作业，我们将通过一个简短的测验来测试您的知识。在`Quiz`合约（第4行）中，将最佳答案的编号分配给变量`question1`（第5行），`question2`（第6行），`question3`（第7行）。
 
-### Question 1:
-Why are blockchain based tokens so revolutionary?
-1. Because people can now make investments anonymously. 
-2. Because they represent ownership in digital assets that can be owned and transferred.
-3. Because you can use tokens to make transactions without having to pay taxes.
+### 问题1：
+为什么基于区块链的代币如此具有革命性？
+1. 因为人们现在可以匿名投资。
+2. 因为它们代表了可拥有和转让的数字资产所有权。
+3. 因为你可以使用代币进行交易而无需支付税款。
 
-### Question 2:
-Why did the community create token standards?
-1. So that the community can control and approve the tokens that are created.
-2. In order to restrict the functionality of tokens to safe and non-malicious actions.
-3. So that the community can create tokens that are interoperable with other contracts, products, and services.
+### 问题2：
+社区为什么创建了代币标准？
+1. 以便社区可以控制和批准所创建的代币。
+2. 限制代币功能以进行安全和非恶意操作。
+3. 使社区能够创建与其他合约、产品和服务互通的代币。
 
 ### Question 3:
-If you would create a decentralised application for a baseball trading card game where each baseball player would be represented by a token, what token standard would you use to write the token contract?
+如果您要为棒球交易卡牌游戏创建一个去中心化应用程序，其中每个棒球选手都将由一个代币表示，那么您会使用哪种标准编写该代币合约？
 1. ERC20
 2. ERC721

@@ -1,11 +1,11 @@
-## Workspaces are for separating your projects
+## 工作区用于分离您的项目
 
-1. At the top of the File Explorer, click the **+** icon to make a new Workspace. 
+1. 在文件资源管理器顶部，单击**+**图标以创建新的工作区。
 
-2. Check out the different Workspace templates. 
+2. 查看不同的工作区模板。
 
-3. Workspace management tools are revealed when the hamburger menu (at the top right of the File Explorer) is clicked. 
+3. 当单击展开菜单（位于文件资源管理器右上角）时，会显示出工作区管理工具。
 
 ![hamburger](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/workspaces/images/workspace-man.png "hamburger")
 
-Notice that in this popup menu, you can clone a repo.  Managing a Git repo happens in the DGit plugin.  You can also create Github actions with the workflow choices.
+请注意，在此弹出菜单中，您可以克隆一个repo。Git repo的管理发生在 DGit 插件中。您还可以使用工作流程选项创建 Github 操作。

@@ -1,24 +1,24 @@
-In Solidity, we can define custom data types in the form of *structs*. Structs are a collection of variables that can consist of different data types.
+在Solidity中，我们可以使用结构体来自定义数据类型。结构体是由不同数据类型的变量组成的集合。
 
-### Defining structs
-We define a struct using the `struct` keyword and a name (line 5). Inside curly braces, we can define our struct’s members, which consist of the variable names and their data types.
+### 定义结构体
+我们使用`struct`关键字和名称（第5行）来定义一个结构体。在花括号内，我们可以定义结构体的成员，包括变量名和它们的数据类型。
 
-### Initializing structs
-There are different ways to initialize a struct.
+### 初始化结构体
+有不同的方法来初始化一个结构体。
 
-Positional parameters: We can provide the name of the struct and the values of its members as parameters in parentheses (line 16).
+位置参数：我们可以将该结构体的名称和其成员值作为参数提供给圆括号（第16行）。
 
-Key-value mapping: We provide the name of the struct and the keys and values as a mapping inside curly braces (line 19).
+键值映射：我们将该结构体的名称以及键和值作为映射提供给花括号（第19行）。
 
-Initialize and update a struct: We initialize an empty struct first and then update its member by assigning it a new value (line 23).
+初始化并更新一个结构体：首先我们要初始化一个空白的struct，然后通过赋予新值来更新其成员（第23行）。
 
-### Accessing structs
-To access a member of a struct we can use the dot operator (line 33). 
+### 访问结构体
+要访问struct中某个成员，我们可以使用点运算符（第33行）。
 
-### Updating structs
-To update a structs’ member we also use the dot operator and assign it a new value (lines 39 and 45).
+### 更新结构体
+要更新structs' 成员也需要使用点运算符，并分配新值 (39 和 45 行) 。
 
-<a href="https://www.youtube.com/watch?v=kYBHq7EmFBc" target="_blank">Watch a video tutorial on Structs</a>.
+<a href="https://www.youtube.com/watch?v=kYBHq7EmFBc" target="_blank">观看有关结构体的视频教程</a>。
 
-## ⭐️ Assignment
-Create a function `remove` that takes a `uint` as a parameter and deletes a struct member with the given index in the `todos` mapping.
+## ⭐️ 作业
+创建一个函数`remove`, 接受`uint`型参数，并删除`todos`中具有给定索引(index) 的 struct 成员。

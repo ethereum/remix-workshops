@@ -1,42 +1,42 @@
-# This is a repo of tutorials for the Remix's LearnEth Plugin
+# 这是 Remix 的 LearnEth 插件教程库
 
 
-### To use these tutorials:
+### 使用这些教程：
 
 
-**1. Open Remix**
+**1. 打开 Remix**
 
 https://remix.ethereum.org
 
-**2. In the plugin manager activate LEARNETH**
+**2. 在插件管理器中激活 LEARNETH**
 
-**3. Go to the Learneth plugin and these tutorials will load by default**
+**3. 转到 Learneth 插件，这些教程将默认加载**
 
-**4. For questions**
+**4. 如有问题，请访问**
 
 https://gitter.im/ethereum/remix-workshop
 
-We are here to help.
+我们会在那里提供帮助。
 
 
-**5. You may need to sign into Github**
+**5. 您可能需要登录 Github**
 
-Github will block too many requests from the same location - unless you are signed into github and input a token.  This is only an issue during workshops - but because we are in a workshop, we need to do these steps:
-
-    - In one browser window - go to remix.ethereum.org and go to the settings tab
-    - In another browser window go to: 
+Github 会阻止来自同一位置的太多请求 - 除非您已登录 github 并输入了token。 这只是在workshop期间才存在的问题 - 但因为我们正在进行workshop，所以我们需要执行以下步骤：
+```
+    - 在一个浏览器窗口中 - 转到 remix.ethereum.org 并转到设置选项卡
+    - 在另一个浏览器窗口中转到:
     
     https://github.com/settings/tokens 
     
-    and create a new token and save it in Remix in the you just opened on the settings tab.
+    并创建新token，并将其保存在刚打开的设置选项卡上的 Remix 中。
+```
+---
+### 为 LEARNETH 编写更多教程：
+即将发布说明...
 
 ---
-### To write more tutorials for LEARNETH:
-Instructions will be forthcoming...
 
----
+### 获取其他主题和教程的额外资源
 
-### For additional ressources and tutorial on other topics
-
-#### Additional external workshops
-- [Using Oraclize plugin in Remix](https://medium.com/coinmonks/using-apis-in-your-ethereum-smart-contract-with-oraclize-95656434292e)
+#### 其余的workshops
+- [在 Remix 中使用 Oraclize 插件](https://medium.com/coinmonks/using-apis-in-your-ethereum-smart-contract-with-oraclize-95656434292e)

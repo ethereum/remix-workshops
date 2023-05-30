@@ -1,17 +1,17 @@
-## Load a file from the Files Explorer
-**Proceedure**
+## 从文件浏览器中加载文件
+**步骤**
 
-1. In the icon panel, click ![file explorer icon](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/load_and_compile/images/files1.png "file explorer icon") , the File Explorer's icon.
+1. 在图标面板中，单击文件浏览器的图标![file explorer icon](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/load_and_compile/images/files1.png "file explorer icon")。
 
-5. Find **2_Owner.sol** in the contracts folder of a default workspace and click it. The file will appear in a tab in the main panel.
+2. 找到默认工作区的contracts文件夹中的**2_Owner.sol**并单击它。该文件将出现在主面板的一个选项卡中。
 
-7. In the icon panel, click the **Solidity Compiler** ![solidity compiler icon](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/load_and_compile/images/solidity1.png "solidity compiler icon"). The Solidity compiler should now be in the side panel.
+3. 在图标面板中，单击**Solidity**编译器![solidity compiler icon](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/load_and_compile/images/solidity1.png "solidity compiler icon")。Solidity编译器现在应该位于侧边栏中。
 
-8. Click the compile button. 
+4. 点击编译按钮。
 ![compile 2_owner](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/load_and_compile/images/compile2owner.png "compile 2_Owner") 
 
-9. Compiling can also be triggered by hitting **CTRL + S**. 
+5. 也可以通过按**CTRL + S**来触发编译过程。
 
-The spinner will turn while the file is compiling.  
+当文件正在编译时，旋转指示器会转动。
 
-**Note:** The spinner also turns when the compiler itself is loading.  To choose a **different version of Solidity**, go to the select box at the top of the plugin.
+**注意：**当编译器本身正在加载时，旋转指示器也会转动。要选择**不同版本的Solidity**，请前往插件顶部的下拉框。

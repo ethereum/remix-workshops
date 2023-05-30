@@ -1,1 +1,1 @@
-This workshop is about using the web3.js to interact with a contract and more generally to the blockchain.
+本次workshop将介绍如何使用web3.js与合约进行交互，以及更广泛地了解区块链。

@@ -1,8 +1,8 @@
-Switch to the `Solidity compiler` module 
+切换到`Solidity compiler`模块
 ![Solidity Compiler](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_Generate_Metadata/remix_icon_solidity.png "Solidity Compiler")
 
- - Select the `sampleContract` contract in the list of compiled contracts.
- - click on `ByteCode`, it should copy the following to the clipboard:
+ - 在已编译合约列表中选择`sampleContract`合约。
+ - 点击`ByteCode`，它应该将以下内容复制到剪贴板：
 
  ```
  {
@@ -22,8 +22,8 @@ Switch to the `Solidity compiler` module
 }
 ```
 
-This is basically what the compiler is returning:
- - `linkReferences` describes what are the libraries used by the contract.
- - `object` is the compiled contract (bytecode). This is what gets deployed and saved onto the blockchain. In this example, the value `__$d42d70ba92b626965f4c69b39148e37a33$__` inside the bytecode is just a placeholder for the library address. In your case, the placeholder will be between `__$` and `$__`.
+这基本上是编译器返回的内容：
+ - `linkReferences` 描述了合约使用的库。
+ - `object`是已编译的合约（字节码）。这是部署并保存到区块链上的内容。在此示例中，字节码内部的值 `__$d42d70ba92b626965f4c69b39148e37a33$__` 只是占位符，用于表示库地址。在您的情况下，占位符将介于 `__$` 和 `$__` 之间。
 
-The metadata JSON from Remix IDE tells Remix to replace the placeholder with the given address.
+来自 Remix IDE 的元数据 JSON 告诉 Remix 使用给定地址替换占位符。

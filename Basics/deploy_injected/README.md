@@ -1,15 +1,15 @@
-## Deploying to a public test net.
+## 部署到公共测试网络。
 
-1. Download the browser plugin **MetaMask**. 
+1. 下载浏览器插件**MetaMask**。
 
-2. Click the MetaMask icon in your browser. Sign in and choose a test network. 
+2. 在浏览器中点击MetaMask图标。登录并选择一个测试网络。
 
-3. Get some test ETH for that network. If, for example, you had selected Goerli Network then, search for `Goerli faucet` and you'll find a website where (after jumping through some hoops), you'll get some test ETH. 
+3. 获取该网络的一些测试ETH。例如，如果您选择了Goerli Network，则搜索`Goerli faucet`，您将找到一个网站，在那里（经过一些步骤后），您将获得一些测试ETH。
 
-2. Go back to Remix. In  **Deploy & Run**, in the **Environment** pulldown, choose **Injected Provider**.
+4. 返回Remix。在**Deploy＆Run**中，在**环境**下拉菜单中选择**Injected Provider**。
 
-3. Make sure you see the 2_Owner.sol as a choice in the **CONTRACT** select box, then click the **Deploy** button.  If the **CONTRACT** select box was empty, you'll need to compile 2_Owner again.  Make sure it is the active file in the **editor** and then go to the **Solidity Compiler** to compile it.  
+5. 确保你看到2_Owner.sol作为**CONTRACT** 选择框的选项，然后点击**Deploy**按钮。如果**CONTRACT** 选择框为空，则需要重新编译2_Owner。确保它是编辑器中的选中文件，然后转到**Solidity Compiler**进行编译。
 
-5. You'll see the MetaMask popup asking you to pay for the transactions.
+6. 您会看到MetaMask弹出窗口要求您支付交易费用。
 
-And with that you have finished this tutorial.  You now have experience with opening, compiling, deploying and interacting with Smart Contracts in Remix IDE.
+通过这个教程，你已经学会了如何打开、编译、部署和与Remix IDE中的智能合约进行交互。

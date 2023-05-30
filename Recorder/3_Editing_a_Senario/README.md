@@ -1,7 +1,6 @@
-# Editing a scenario
+# 编辑一个场景
 
-Here's the first few lines of the scenario that I recorded.  The addresses on my machine will be different from your's.
-
+这是我录制的场景的前几行。我的机器上的地址将与您的不同。
 ```
 {
     "accounts": {
@@ -11,12 +10,11 @@ Here's the first few lines of the scenario that I recorded.  The addresses on my
     }
 ```
 
-So if you wanted to play this scenario in another testnet, you'd need to change these addresses to address that you have test ETH on so that you could pay for the transactions.  But other than swapping out the addresses, you can quickly run this on other nets.
+如果您想在另一个测试网络中运行此场景，则需要将这些地址更改为您拥有测试ETH的地址，以便支付交易费用。但是除了更换地址之外，您可以快速在其他网络上运行它。
 
-And you might change the parameters for the functions.
+并且您可能会更改函数的参数。
 
-For example here is a bit of the scenario.json a bit further down where proposal 2 was voted for by one of the addresses:
-
+例如，这是scenario.json的一部分，提案2被其中一个地址投票支持：
 ```
 {
       "timestamp": 1566428184043,
@@ -35,9 +33,9 @@ For example here is a bit of the scenario.json a bit further down where proposal
     },
 ```
 
-Let's edit this so that another proposal wins in the playback. 
+让我们编辑一下，以便在回放中另一个提案获胜。
 
-Change the **parameters** array which now is:
+将参数数组更改为：
 ```
 "parameters": [
           "2"

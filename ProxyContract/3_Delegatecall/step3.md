@@ -1,9 +1,9 @@
 # Delegate call
 
-It's a special variant of a **message call**, which is identical to a message call apart from the fact that the code at the target address is executed in the context of the calling contract so **msg.sender** and **msg.value** do not change their values.
+它是**message call**的一种特殊变体，目标地址的代码使用调用合约的上下文执行，msg.sender和msg.value在目标合约中的值和调用合约的值一样。
 
-This means that a contract can dynamically load code from a different address at runtime. 
+这意味着一个合约可以在运行时从不同的地址动态加载代码。
 
-The storage, the current address and balance still refer to the calling contract, only the code is taken from the called address. 
+存储、当前地址和余额仍然指向调用合约，只有代码来自被调用地址。
 
-So when a **Proxy** delegates calls to the Logic contract, every storage modification will impact the storage of Logic contract.
+当代理将调用委托给逻辑合约时，每个存储修改都会影响逻辑合约的存储。

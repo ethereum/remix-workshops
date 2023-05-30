@@ -1,8 +1,8 @@
-Before we start, just quick reminder:
+在我们开始之前，快速提醒一下：
 
-The runtime of the EVM has several kinds of memory:
+EVM的运行时有几种内存类型：
 
- -  `calldata`: This is the input value given to the transaction.
- -  `stack`: Basically, this is a list of values, each value is limited in size (32 bytes).
- -  `memory`: Memory is used when the **type** of value getting stored is more complex like an array or a mapping. This memory is **temporary** and is **released** at the end of the execution.
- -  `storage`: This is a mapping, each value stored is **persisted** and saved on chain.
+- `calldata`：这是交易所提供的输入值。
+- `stack`: 基本上，这是一个值列表，每个值都有大小限制（32字节）。
+- `memory`：当要存储的值类型更复杂（如数组或映射）时使用内存。此内存是临时性的，并在执行结束时释放。
+- `storage`：这是一个映射，每个存储的值都被持久化并保存在链上。

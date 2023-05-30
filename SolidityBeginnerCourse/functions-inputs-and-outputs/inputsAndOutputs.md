@@ -1,33 +1,31 @@
-In this section, we will learn more about the inputs and outputs of functions. 
+在本节中，我们将学习更多关于函数的输入和输出。
 
-### Multiple named Outputs
-Functions can return multiple values that can be named and assigned to their name.
+### 多个命名输出
+函数可以返回多个值，并且这些值可以被命名并给这些名称赋值。
 
-The `returnMany` function (line 6) shows how to return multiple values.
-You will often return multiple values. It could be a function that collects outputs of various functions and returns them in a single function call for example. 
+`returnMany` 函数（第6行）展示了如何返回多个值。你经常会需要返回多个值。例如，可能是一个收集各种函数输出并在单个函数调用中返回它们的函数。
 
-The `named` function (line 19) shows how to name return values.
-Naming return values helps with the readability of your contracts. Named return values make it easier to keep track of the values and the order in which they are returned. You can also assign values to a name.
+`named` 函数（第19行）展示了如何为返回值命名。
+给返回值命名有助于提高合约的可读性。 命名的返回值可以更容易跟踪这些数值及其被返回的顺序。您还可以将数值分配到名称上。
 
-The `assigned` function (line 33) shows how to assign values to a name.
-When you assign values to a name you can omit (leave out) the return statement and return them individually.
+`assigned` 函数（第33行）展示了如何将数值分配到名称上。当您将数值分配到名称时，您可以省略 `return` 语句并逐一地进行分配。
 
-### Deconstructing Assignments
-You can use deconstructing assignments to unpack values into distinct variables.
+### 解构赋值
+您可以使用解构赋值来拆开不同变量中存储的数据。
 
-The `destructingAssigments` function (line 49) assigns the values of the `returnMany` function to the new local variables `i`, `b`, and `j` (line 60).
+`destructingAssigments` 函数（第49行）将 `returnMany` 函数的结果赋给新定义的局部变量 `i`、`b` 和 `j`（第60行）。
 
-### Input and Output restrictions
-There are a few restrictions and best practices for the input and output parameters of contract functions.
+### 输入和输出限制
+对于合约函数的输入和输出参数，有一些限制和最佳实践。
 
-"*[Mappings] cannot be used as parameters or return parameters of contract functions that are publicly visible.*" 
-From the <a href="https://docs.soliditylang.org/en/latest/types.html#mapping-types" target="_blank">Solidity documentation</a>.
+[Mappings] 不能用作公开可见的合约函数的传入参数或返回参数。
+来自<a href="https://docs.soliditylang.org/en/latest/types.html#mapping-types" target="_blank">Solidity 文档</a>.
 
-Arrays can be used as parameters, as shown in the function `arrayInput` (line 71). Arrays can also be used as return parameters as shown in the function `arrayOutput` (line 76).
+数组可以用作参数，如在函数`arrayInput`（第71行）中所示。数组也可以用作返回参数，如在函数`arrayOutput`（第76行）中所示。
 
-You have to be cautious with arrays of arbitrary size because of their gas consumption. While a function using very large arrays as inputs might fail when the gas costs are too high, a function using a smaller array might still be able to execute.
+由于燃气消耗有限制，您必须谨慎使用任意大小的数组。使用非常大的数组作为输入可能会导致燃气成本过高而失败，但使用较小的数组便能够执行。
 
 <a href="https://www.youtube.com/watch?v=je7dWT6bEZM" target="_blank">Watch a video tutorial on Function Outputs</a>.
 
-## ⭐️ Assignment
-Create a new function called `returnTwo` that returns the values `-2` and `true` without using a return statement.
+## ⭐️ 作业
+创建一个名为`returnTwo`的新函数，在不使用return语句的情况下返回值`-2`和`true`。
