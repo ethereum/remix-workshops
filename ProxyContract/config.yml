@@ -1,7 +1,7 @@
 --- 
 id: proxycontract
-name: All about Proxy Contracts
-summary: This tutorial gives a short introduction of the web3.js library, querying the block number
+name: 关于代理合约的一切
+summary: 介绍代理合约的原理，以及如何部署代理合约。
 level: 3
 tags: 
   - Remix

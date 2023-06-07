@@ -1,7 +1,7 @@
 ---
 id: opcodesdebug
-name: Opcodes in the Debugger
-summary: Using the Debugger, we'll check out what the CODECOPY opcode does and how it is used by the EVM during contract creation.
+name: 调试器中的操作码
+summary: 通过调试器，我们将检查CODECOPY操作码的作用以及在合约创建期间EVM如何使用它。
 level: 3 
 tags: 
   - Remix

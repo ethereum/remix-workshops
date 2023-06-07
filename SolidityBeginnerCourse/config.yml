@@ -1,46 +1,46 @@
 --- 
 id: soliditybeginner
-name: Solidity Beginner Course
-summary: Solidity Beginner Course based on the popular https://solidity-by-example.org/ contracts. Developed by the p2p learning platform https://dacade.org.
+name: Solidity初学者课程
+summary: 基于流行的 https://solidity-by-example.org/ 合约的 Solidity 初学者课程。由 p2p 学习平台 https://dacade.org 开发。
 level: 1
 tags: 
   - Solidity
 steps:
-  - name: 1. Introduction
+  - name: 1. 简介
     path: introduction
-  - name: 2. Basic Syntax
+  - name: 2. 基础语法
     path: basic-syntax
-  - name: 3. Primitive Data Types
+  - name: 3. 主要数据结构
     path: primitive-data-types
-  - name: 4. Variables
+  - name: 4. 变量
     path: variables
-  - name: 5.1 Functions - Reading and Writing to a State Variable
+  - name: 5.1 函数 - 读写状态变量
     path: functions-reading-and-writing
-  - name: 5.2 Functions - View and Pure
+  - name: 5.2 函数 - View 和 Pure
     path: functions-view-and-pure
-  - name: 5.3 Functions - Modifiers and Constructors
+  - name: 5.3 函数 - Modifiers 和 Constructors
     path: functions-modifiers-and-constructors
-  - name: 5.4 Functions - Inputs and Outputs
+  - name: 5.4 函数 - Inputs 和 Outputs
     path: functions-inputs-and-outputs
-  - name: 6. Visibility
+  - name: 6. 可见性
     path: visibility
-  - name: 7.1 Control Flow - If/Else
+  - name: 7.1 控制流 - If/Else
     path: control-flow-if-else
-  - name: 7.2 Control Flow - Loops
+  - name: 7.2 控制流 - Loops
     path: control-flow-loops
-  - name: 8.1 Data Structures - Arrays
+  - name: 8.1 数据结构 - Arrays
     path: data-structures-arrays
-  - name: 8.2 Data Structures - Mappings
+  - name: 8.2 数据结构 - Mappings
     path: data-structures-mappings
-  - name: 8.3 Data Structures - Structs
+  - name: 8.3 数据结构 - Structs
     path: data-structures-structs
-  - name: 8.4 Data Structures - Enums
+  - name: 8.4 数据结构 - Enums
     path: data-structures-enums
-  - name: 9. Data Locations
+  - name: 9. 数据存储位置
     path: data-locations
-  - name: 10.1 Transactions - Ether and Wei 
+  - name: 10.1 交易 - Ether 和 Wei 
     path: transactions-ether-and-wei 
-  - name: 10.2 Transactions - Gas and Gas Price 
+  - name: 10.2 交易 - Gas 和 Gas Price 
     path: transactions-gas-and-gas-price
-  - name: 10.3 Transactions - Sending Ether 
+  - name: 10.3 交易 - 发送 Ether 
     path: transactions-sending-ether

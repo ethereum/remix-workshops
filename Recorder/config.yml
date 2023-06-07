@@ -1,7 +1,7 @@
 --- 
 id: recorder
-name: Recorder
-summary: Save a set of actions and replay and replay and replay
+name: 录制器
+summary: 保存一组操作并重复播放、重复播放、重复播放
 level: 2
 tags: 
   - Remix
