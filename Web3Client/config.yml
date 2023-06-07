@@ -7,3 +7,8 @@ tags:
   - JS
   - Remix
   - Web3
+steps:
+  - name: 1. 使用Web3
+    path: 1_Using_Web3
+  - name: 2. 查询合约
+    path: 2_Querying_a_Contract

@@ -5,3 +5,12 @@ summary: 保存一组操作并重复播放、重复播放、重复播放
 level: 2
 tags: 
   - Remix
+steps:
+  - name: 1. 使用实例
+    path: 1_Usecases
+  - name: 2. 录制
+    path: 2_Record
+  - name: 3. 编辑一个场景
+    path: 3_Editing_a_Senario
+  - name: 4. 重放
+    path: 4_Play

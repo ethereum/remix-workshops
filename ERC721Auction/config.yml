@@ -8,9 +8,9 @@ tags:
   - Tokens
   - NFT
 steps:
-  - name: 合约设计
+  - name: 1. 合约设计
     path: auction-contract-setup
-  - name: Start和Bid函数
+  - name: 2. Start和Bid函数
     path: auction-start-bid
-  - name: Withdraw和End函数
+  - name: 3. Withdraw和End函数
     path: auction-withdraw-end

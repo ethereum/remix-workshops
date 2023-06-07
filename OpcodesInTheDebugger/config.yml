@@ -8,3 +8,20 @@ tags:
   - Debugging
   - EVM
   - Opcodes
+steps:
+  - name: 1. 简介
+    path: 1_intro
+  - name: 2. 存储
+    path: 2_memory
+  - name: 3. codecopy
+    path: 3_codecopy
+  - name: 4. 部署
+    path: 4_Deployment_and_CODECOPY
+  - name: 5. 调试器
+    path: 5_Debugger_and_CODECOPY
+  - name: 6. 存储数据
+    path: 6_Checking_CODECOPY
+  - name: 7. 字节码RETURN
+    path: 7_returnAndStore
+  - name: 8. 找到偏移量
+    path: 8_findTheOffset

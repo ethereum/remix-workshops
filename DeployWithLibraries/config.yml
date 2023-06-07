@@ -6,3 +6,14 @@ level: 3
 tags: 
   - Remix
   - Solidity
+steps:
+  - name: 1. 编写库合约
+    path: 1_Writing_a_Library
+  - name: 2. 生成元数据
+    path: 2_Generate_Metadata
+  - name: 3. 编辑元数据
+    path: 3_Edit_Metadata
+  - name: 4. 链接和部署
+    path: 4_Linking_and_Deploying
+  - name: 5. 底层原理
+    path: 5_Under_The_Hood

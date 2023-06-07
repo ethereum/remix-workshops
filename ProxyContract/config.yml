@@ -7,3 +7,18 @@ tags:
   - Remix
   - Solidity
   - Code Patterns
+steps:
+  - name: 1. 为什么要使用代理合约
+    path: 1_Why
+  - name: 2. 如何使用代理合约
+    path: 2_How
+  - name: 3. delegatecall
+    path: 3_Delegatecall
+  - name: 4. 通用代理示例
+    path: 4_Generic_proxy_example
+  - name: 5. 测试
+    path: 5_Test
+  - name: 6. 存储
+    path: 6_Storage_Problem
+  - name: 7. 更多信息
+    path: 7_links
