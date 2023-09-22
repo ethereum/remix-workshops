@@ -35,7 +35,7 @@ contract FunctionModifier {
     }
     
     modifier biggerThan0(uint y) {
-        require(y > 0, "Not bigger than x");
+        require(y > 0, "Not bigger than 0");
         _;
     }
     
