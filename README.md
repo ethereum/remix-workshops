@@ -12,18 +12,13 @@ https://remix.ethereum.org
 
 **3. Go to the Learneth plugin and these tutorials will load by default**
 
-**4. For questions**
+**4. You may need to sign into Github especially during an in-person workshop**
 
-https://gitter.im/ethereum/remix-workshop
+Github will block too many requests from the same location, unless you are signed into Github and have input your token.  Generally, this is only an issue during in person workshops, when there can be many requests from the same location. 
 
-We are here to help.
+To input your Github token:
 
-
-**5. You may need to sign into Github**
-
-Github will block too many requests from the same location - unless you are signed into github and input a token.  This is only an issue during workshops - but because we are in a workshop, we need to do these steps:
-
-    - In one browser window - go to remix.ethereum.org and go to the settings tab
+    - In one browser window - go to https://remix.ethereum.org and go to the settings tab
     - In another browser window go to: 
     
     https://github.com/settings/tokens 
@@ -31,12 +26,10 @@ Github will block too many requests from the same location - unless you are sign
     and create a new token and save it in Remix in the you just opened on the settings tab.
 
 ---
-### To write more tutorials for LEARNETH:
-Instructions will be forthcoming...
+### Write your own tutorials for LEARNETH:
+See this site for instructions:
+
+https://remix-learneth-plugin.readthedocs.io/en/latest/index.html#creating-tutorials
 
 ---
 
-### For additional ressources and tutorial on other topics
-
-#### Additional external workshops
-- [Using Oraclize plugin in Remix](https://medium.com/coinmonks/using-apis-in-your-ethereum-smart-contract-with-oraclize-95656434292e)
