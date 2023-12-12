@@ -1,4 +1,4 @@
-// tutorial.sol
+// introduction.sol
 
 // Multisig Wallet Contract
 contract MultisigWallet {
