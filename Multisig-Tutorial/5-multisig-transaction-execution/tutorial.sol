@@ -14,7 +14,7 @@ contract MultisigWallet {
         uint numConfirmations;
     }
 
-    mapping(uint => Transaction) public transactions;
+    Transaction[] public transactions;
     mapping(address => mapping(uint => bool)) public confirmations;
 
     event Deposit(address indexed sender, uint value, uint balance);
