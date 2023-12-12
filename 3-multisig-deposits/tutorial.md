@@ -8,12 +8,6 @@ In this section, you will delve into the process of depositing funds into the Mu
 ### The receive Function
 The `receive` function is a special function in Solidity that allows a contract to receive Ether when it is sent directly to the contract's address. In our Multisig Wallet contract, the `receive` function is used to handle incoming Ether transactions. Let's break down its key components:
 
-    ```solidity
-    function receive() external payable {
-        emit Deposit(msg.sender, msg.value, address(this).balance);
-    }
-    ```
-
 - **external:** This keyword indicates that the function can only be called from outside the contract.
 - **payable:** This keyword enables the function to receive Ether along with the call.
 - **msg.sender:** Refers to the address of the sender.
@@ -22,10 +16,6 @@ The `receive` function is a special function in Solidity that allows a contract 
 
 ### Emitting Events
 The `Deposit` event is emitted within the `receive` function, providing transparency and a way to track incoming deposits. The event includes details such as the sender's address, the deposited amount, and the updated balance of the Multisig Wallet.
-
-```solidity
-    event Deposit(address indexed sender, uint256 amount, uint256 balance);
-```
 
 - **indexed:** This keyword allows efficient filtering of events based on specific parameters.
 
