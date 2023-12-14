@@ -1,23 +1,25 @@
 # Section 3: Depositing Funds into the Multisig Wallet
 
-## Overview
+## 3.1 Overview
 In this section, you will delve into the process of depositing funds into the Multisig Wallet, gaining practical experience in managing the wallet's balance. We will explore the relevant contract code, understand how it works, and grasp the essential concepts for handling deposits in a Multisig setup.
 
-## Contract Code Explanation
+## 3.2 The Receive Function
+In Ethereum smart contracts, a fallback function is a function with no name that is executed when a contract receives Ether without calling any function. This function is marked with the receive keyword.
 
-### The receive Function
-The `receive` function is a special function in Solidity that allows a contract to receive Ether when it is sent directly to the contract's address. In our Multisig Wallet contract, the `receive` function is used to handle incoming Ether transactions. Let's break down its key components:
+In our multi-signature wallet, we have a fallback function designed to handle incoming Ether transactions(Line 43)
 
-- **external:** This keyword indicates that the function can only be called from outside the contract.
-- **payable:** This keyword enables the function to receive Ether along with the call.
-- **msg.sender:** Refers to the address of the sender.
-- **msg.value:** Represents the amount of Ether sent.
-- **address(this).balance:** Gives the current balance of the contract.
+- The receive function is marked as external and payable, indicating that it can receive Ether from external transactions.
+- It emits a Deposit event, providing information about the sender, the deposited amount (msg.value), and the current balance of the contract.
 
-### Emitting Events
-The `Deposit` event is emitted within the `receive` function, providing transparency and a way to track incoming deposits. The event includes details such as the sender's address, the deposited amount, and the updated balance of the Multisig Wallet.
+## 3.3 The Deposit Event
 
-- **indexed:** This keyword allows efficient filtering of events based on specific parameters.
+The Deposit event(Line 9) is emitted whenever Ether is deposited into the multi-signature wallet.
+It includes three parameters:
+- sender: The address that sent the Ether.
+- amount: The amount of Ether deposited.
+- balance: The updated balance of the contract after the deposit.
+
+The Deposit event provides transparency by logging key information on the blockchain. In the next section, we will explore the process of submitting and confirming transactions in our multi-signature wallet.
 
 ### Assignment: Deposit Ether
 

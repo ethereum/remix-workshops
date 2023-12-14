@@ -8,11 +8,6 @@ contract MultisigTutorial {
 
     event Deposit(address indexed sender, uint amount, uint balance);
 
-    modifier onlyOwner() {
-        require(isOwner[msg.sender], "not owner");
-        _;
-    }
-
     constructor(address[] memory _owners, uint _numConfirmationsRequired) {
         require(_owners.length > 0, "owners required");
         require(
