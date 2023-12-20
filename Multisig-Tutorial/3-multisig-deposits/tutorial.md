@@ -1,34 +1,30 @@
-# Section 3: Depositing Funds into the Multisig Wallet
+# Deposit
+In this section, we'll explore the `receive` function and the associated Deposit event. We'll examine how the `receive` function is used to deposit Ether into the multi-signature wallet and how the Deposit event provides transparency.
 
-## 3.1 Overview
-In this section, you will delve into the process of depositing funds into the Multisig Wallet, gaining practical experience in managing the wallet's balance. We will explore the relevant contract code, understand how it works, and grasp the essential concepts for handling deposits in a Multisig setup.
+## Deposit Event
+On line, 9 we have the Deposit event. The Deposit event is emitted whenever Ether is deposited into the multi-signature wallet. It includes three parameters:
+1. `sender`: The address that sent the Ether.
+2. `amount`: The amount of Ether deposited.
+3. `balance`: The updated balance of the contract after the deposit.
 
-## 3.2 The Receive Function
-In Ethereum smart contracts, a fallback function is a function with no name that is executed when a contract receives Ether without calling any function. This function is marked with the receive keyword.
+We can use the Deposit event to track the flow of Ether into the multi-signature wallet and maybe trigger other actions based on the event.
 
-In our multi-signature wallet, we have a fallback function designed to handle incoming Ether transactions(Line 43)
+## `receive` Function
+On line 43, we have the `receive` function. The `receive` function is a special function that is executed whenever Ether is sent to the contract. 
 
-- The receive function is marked as external and payable, indicating that it can receive Ether from external transactions.
-- It emits a Deposit event, providing information about the sender, the deposited amount (msg.value), and the current balance of the contract.
+The `receive` function is marked as `external` and `payable`. The `external` modifier means that the function can only be called from outside the contract. The `payable` modifier means that the function can receive Ether.
 
-## 3.3 The Deposit Event
+The `receive` function emits the Deposit event (Line 44) with the address of the sender, the amount of Ether sent, and the updated balance of the contract. It doesn't return anything.
 
-The Deposit event(Line 9) is emitted whenever Ether is deposited into the multi-signature wallet.
-It includes three parameters:
-- sender: The address that sent the Ether.
-- amount: The amount of Ether deposited.
-- balance: The updated balance of the contract after the deposit.
+To receive Ether, a contract must have a `receive`, `fallback`, or a function with the `payable` modifier. If none of these are present, the contract will reject any Ether sent to it. 
 
-The Deposit event provides transparency by logging key information on the blockchain. In the next section, we will explore the process of submitting and confirming transactions in our multi-signature wallet.
+## Conclusion
+In this section, we explored the `receive` function and the associated Deposit event. We examined how the `receive` function is used to deposit Ether into the multi-signature wallet and how the Deposit event provides transparency.
 
-### Assignment: Deposit Ether
-
-#### Objective
+## ⭐️ Assignment: Deposit Ether
 Deposit 2 Ether into the Multisig contract.
 
-#### Steps
-1. Use Remix or your preferred development environment to interact with the deployed Multisig contract.
-2. Utilize the `receive` function to deposit 2 Ether into the contract.
-3. Verify the emitted `Deposit` event to confirm a successful deposit.
-
-This assignment aims to reinforce your understanding of the deposit process. Ensure to check for the emitted event to validate the success of your deposit.
+1. Deploy the Multisig contract as in the previous assignment.
+2. Enter a Value of 2 Ether in the Value field and select Ether in the dropdown menu.
+3. At the bottom of your deployed contract in the "Low level interactions" section, click on the "Transact" button.
+4. On top of your deployed contract, it should now say "Balance: 2 Ether". 

@@ -1,71 +1,53 @@
-# Contract Structure and Initialization
+# Contract Initialization
+In this section, we'll explore the initialization process of the Multisig smart contract. We'll examine the constructor function and understand how it sets up the initial state of the contract.
 
-## Section 2: Contract Structure and Initialization
-
-## Section 2.1: Understanding the Code
-### 2.1.1 SPDX License and Pragma Statement
-Let's start our exploration of the Solidity code by examining the SPDX license and the pragma statement.
-
-#### SPDX License Identifier:
-The SPDX-License-Identifier (Line 1) is a standard way to declare the license under which the smart contract is released. In our case, it is MIT, indicating that the code is open source and can be freely used, modified, and distributed.
-
-#### Pragma Statement:
-The pragma statement (Line 2) defines the version of the Solidity compiler that should be used. In our contract, we specify that any compiler version equal to or greater than 0.8.20 and less than 0.9.0 should be used.
-
-```solidity
-pragma solidity ^0.8.20;
-```
-
-This ensures compatibility and prevents potential issues that may arise from using incompatible compiler versions.
-
-### 2.2 MultiSigWallet Contract Overview
-Now, let's take a look at the MultiSigWallet contract itself (Line 4).
-
+## Overview
 Our contract consists of events, state variables, modifiers, and functions that collectively create a multi-signature wallet. The events provide transparency by logging key activities on the blockchain, while modifiers ensure that only authorized users can execute certain functions.
 
 In the upcoming sections, we will break down each component of the contract, starting with the constructor function, which initializes the wallet with a list of owners and the required number of confirmations.
 
-### 2.3 Constructor Function
-The constructor function (Line 14) is executed only once during the deployment of the contract. It initializes essential parameters, ensuring the contract starts with the correct configuration.
-Let us break down the constructor function into smaller chunks and understand each part.
+At the top of the contract, we have the SPDX license identifier and the pragma statement (Lines 1 and 2). They are used to specify the license under which the contract is released and the compiler version to be used.
 
-- The constructor takes two parameters: an array of owner addresses (_owners) and the number of confirmations required for a transaction (_numConfirmationsRequired).
+## State Variables
+In Line 4, we have the MultisigWallet contract itself. At the beginning of the contract, we have three state variables.
 
-- It includes several require statements to ensure that the inputs are valid. For example:
+1. **`owners`:** An array containing the addresses of all owners of the multi-signature wallet (Line 5).
+2. **`isOwner`:** A mapping indicating whether an address is an owner (Line 6).
+3. **`numConfirmationsRequired`:** The number of confirmations required for a transaction (Line 7).
 
-    - There must be at least one owner.
-    - The number of required confirmations must be greater than zero and less than or equal to the number of owners.
-- The constructor then initializes the contract state by:
+The setup of array and mapping allows us to easily retrieve the list of owners and verify whether an address is an owner.
 
-    - Verifying the uniqueness of each owner.
-    - Assigning ownership status to each owner.
-    - Populating the owners array with the provided owner addresses.
-- Finally, it sets the numConfirmationsRequired variable with the specified value.
+## Modifiers
+Next, we have a modifier called `onlyOwner` (Line 9). Modifiers in Solidity are special keywords that can be used to amend the behavior of functions. In our case, the `onlyOwner` modifier ensures that only owners can execute a function. It does this by checking whether the address of the caller is an owner.
 
-### 2.4 State Variables
-Let's recap the key state variables used in the contract:
+## Constructor Function
+The `constructor` function (Line 14) is executed only once during the deployment of the contract. It initializes essential parameters, in this case, the list of owners and the required number of confirmations (Line 14).
 
+On lines 15 and 16, we have two `require` statements to ensure that the inputs are valid. In this case, we require that there must be at least one owner and that the number of required confirmations must be greater than zero and less than or equal to the number of owners.
 
-- **owners:** (Line 5) An array containing the addresses of all owners.
-- **isOwner:** Line 6) A mapping indicating whether an address is an owner.
-- **numConfirmationsRequired:** Line 7) The number of confirmations required for a transaction.
-  These variables play a crucial role in managing ownership, confirming transactions, and establishing the security rules of the multi-signature wallet.
+The constructor then initializes the contract state by verifying that is a functional Ethereum address (Line 25), ensuring that the owner is unique (Line 26), and populating the `owners` array with the provided owner addresses (Line 28).
 
-In the upcoming sections, we will explore how these variables interact with the functions of the contract.
+Finally, it sets the `numConfirmationsRequired` variable with the specified value (Line 32).
 
+## Functions
 
-### Task: Deploy a Multisig Wallet
+### `getOwners` Function
+The `getOwners` function (Line 36) allows users to retrieve the list of owners of the multi-signature wallet. It returns the `owners` array (Line 37).
 
-#### Objective
+### `getNumConfirmationsRequired` Function
+The `getNumConfirmationsRequired` function (Line 41) allows users to retrieve the number of confirmations required for a transaction. It returns the `numConfirmationsRequired` variable (Line 42).
+
+## Conclusion
+In this section, we explored the initialization process of the Multisig smart contract. We examined the constructor function and understood how it sets up the initial state of the contract.
+
+## ⭐️ Assignment: Deploy a Multisig Wallet
 Deploy a Multisig contract with three owners and require two confirmations for transaction execution.
 
-#### Steps
-1. Use Remix or your preferred development environment to deploy the Multisig contract.
-2. Initialize the contract with three Ethereum addresses as owners.
-3. Set `numConfirmationsRequired` to 2.
-4. Verify that the contract has been deployed successfully.
+1. Go to Deploy & Run Transactions in Remix.
+2. Expand the "Deploy" section.
+3. Under "_OWNERS", enter three an array of three addresses.
+4. Under "_NUM_CONFIRMATIONS_REQUIRED", enter the number of confirmations required for a transaction.
 
-#### Hints
-- Use the constructor function to initialize the contract with the required parameters.
-- Ensure that the owner addresses are valid and unique.
-- Use Remix's deployment feature to interact with the contract.
+**Hints:**
+- You can get addresses from the "ACCOUNTS" dropdown menu.
+- The array of addresses should be in the format: ["0x123...", "0x456...", "0x789..."].
