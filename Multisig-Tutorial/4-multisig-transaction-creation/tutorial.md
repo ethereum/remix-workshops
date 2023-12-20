@@ -1,79 +1,58 @@
-# Section 4: Submitting and Confirming Transactions
+# Submitting and Confirming Transactions
+In this section, we'll explore the process of submitting and confirming transactions. 
 
-## 4.1 Overview
-In this section, we will delve into the process of submitting transactions to the Multisig contract and obtaining confirmations from multiple owners. This step is crucial for executing actions within the Multisig setup. We'll explore the relevant contract code, understand how it works, and grasp the essential concepts for handling transactions in a Multisig setup.
+## Modifiers
+We have new modifiers in this iteration of the contract. Let's examine them one by one.
 
-## 4.2 The `submitTransaction` Function
-The `submitTransaction` function  (Line 78) allows an owner to initiate a transaction by providing the destination address, value, and optional data. This function is the starting point for any action within the Multisig contract. Let's break down its key components:
+1. **`txExists` modifier:** The `txExists` modifier (Line 13) ensures that the transaction exists. It does this by checking whether the transaction index is less than the length of the `transactions` array, that we'll explore later in this section.
+2. **`notExecuted` modifier:** The `notExecuted` modifier (Line 18) ensures that the transaction has not been executed. It does this by checking whether the `executed` variable of the transaction is false.
+3. **`notConfirmed` modifier:** The `notConfirmed` modifier (Line 23) ensures that the transaction has not been confirmed by the caller. It does this by checking whether the `isConfirmed` mapping of the transaction index and the caller's address is false.
 
-- The submitTransaction function takes three parameters:
+## Transaction Struct
+On line 28, we have a struct called `Transaction`. We store the struct members: `to`, `value`, `data`, `executed`, and `numConfirmations` in individual variables.
 
-    - _to: The destination address of the transaction.
-    - _value: The amount of Ether to be sent.
-    - _data: Additional data to include in the transaction.
+## Mapping of Confirmations
+On line 37, we have a mapping called `isConfirmed`. The mapping is used to track the confirmations of each transaction. It maps the transaction index to a mapping of owner addresses to a boolean value. The boolean value indicates whether the owner has confirmed the transaction.
 
+## Transactions Array
+On line 39, we have an array called `transactions`. The array is used to store all the transactions submitted to the multi-signature wallet.
 
-- The function is marked as public and is restricted to be called only by the owners of the multi-signature wallet (onlyOwner modifier(Line 8)). This introduces the concept of modifiers. 
-Modifiers are used to modify the behavior of functions in a declarative way. In our case, the onlyOwner modifier ensures that only owners can submit transactions. Let's examine its key components:
+## Events
+We have four new events in this iteration of the contract:
+1. **`SubmitTransaction` event:** This event is emitted whenever a transaction is submitted to the multi-signature wallet. 
+2. **`ConfirmTransaction` event:** This event is emitted whenever a transaction is confirmed by an owner.
+3. **`RevokeConfirmation` event:** This event is emitted whenever a transaction confirmation is revoked by an owner.
+4. **`ExecuteTransaction` event:** This event is emitted whenever a transaction is executed.
 
-    - It checks whether the sender is an owner by accessing the isOwner mapping (Line 9).
-    - The _; statement indicates that the rest of the code in the function should be executed only if the condition is met (Line 10).
+## `submitTransaction` Function
+The `submitTransaction` function (Line 78) allows users to submit a transaction to the multi-signature wallet. It takes three parameters: `to`, `value`, and `data`. The `to` parameter is the address of the recipient of the transaction. The `value` parameter is the amount of Ether to be sent. The `data` parameter is the data to be sent to the recipient. Only owners can submit transactions.
 
-- Back to the submitTransaction function, it then creates a new transaction object and appends it to the transactions array, initializing its properties:
-    - to: Destination address.
-    - value: Amount of Ether.
-    - data: Additional transaction data.
-    - executed: Initially set to false.
-    - numConfirmations: Initially set to 0.
+On line, 85 we create a new transaction struct and push it to the `transactions` array and emit the `SubmitTransaction` event. The `txIndex` variable is used to keep track of the transaction index.
 
-The function emits a SubmitTransaction event, providing information about the owner who submitted the transaction, the transaction index, destination address, Ether value, and additional data.
+## `confirmTransaction` Function
+The `confirmTransaction` function (Line 98) allows users to confirm a transaction. It takes one parameter: `txIndex`. 
+It has three modifiers: `onlyOwner`, `txExists`, and `notExecuted`. The `onlyOwner` modifier ensures that only owners can confirm transactions. The `txExists` modifier ensures that the transaction exists. The `notExecuted` modifier ensures that the transaction has not been executed.
 
-## 4.3 The `confirmTransaction` Function
+On line 101, we store the transaction in a local variable called `transaction`. We then increment the `numConfirmations` variable of the transaction and set the `isConfirmed` mapping of the transaction index and the caller's address to true. Finally, we emit the `ConfirmTransaction` event.
 
-The `confirmTransaction` function  (Line 98) allows owners to confirm transactions initiated by other owners. It plays a crucial role in achieving the required number of confirmations for transaction execution. Let's examine its key components:
+## `executeTransaction` Function
+The `executeTransaction` function (Line 108) allows users to execute a transaction. On line 113, we require that the number of confirmations of the transaction is greater than or equal to the required number of confirmations. We then set the `executed` variable of the transaction to true. Finally, we call the `call` function of the recipient address with the value and data of the transaction. If the transaction is successful, we emit the `ExecuteTransaction` event.
 
-- The confirmTransaction function takes one parameter: _txIndex, the index of the transaction to confirm.
+## `getTransactionCount` Function
+The `getTransactionCount` function (Line 132) allows users to retrieve the number of transactions in the multi-signature wallet. It returns the length of the `transactions` array.
 
-- It is marked as public and has three modifiers:
+## `getTransaction` Function
+The `getTransaction` function (Line 136) allows users to retrieve a transaction. It returns the transaction struct members that we explored earlier in this section.
 
-    - onlyOwner: Ensures that only owners can confirm transactions.
-    - txExists: Checks if the specified transaction index exists.
-    - notExecuted: Ensures that the transaction has not been executed.
-    - notConfirmed: Ensures that the owner has not already confirmed the transaction.
-- The function retrieves the specified transaction from the transactions array and increments the numConfirmations counter.
+## Conclusion
+In this section, we explored the process of submitting and confirming transactions. We examined the `submitTransaction`, `confirmTransaction`, and `executeTransaction` functions and understood how they work together to allow users to submit and confirm transactions.
 
-- It updates the isConfirmed mapping for the owner and the transaction index, indicating that the owner has confirmed this transaction.
+## ⭐️ Assignment: Submit and Confirm Transactions
+Submit and confirm a transaction to send 1 Ether to the first account in the "ACCOUNTS" dropdown menu.
 
-- The function emits a ConfirmTransaction event, providing information about the owner who confirmed the transaction and the transaction index.
-
-Finally we emit the `ConfirmTransaction` event (Line 105), which includes the address of the confirming owner and the transaction index.
-
-### Additional Functions
-
-The Multisig contract also includes two additional getter functions to retrieve the transaction details and confirmations. Let's examine them:
-
-#### The getTransactionCount Function
-The getTransactionCount function returns the total number of transactions in the Multisig wallet.
-
-#### The getTransaction Function
-The getTransaction function returns the details of a specific transaction. It takes the transaction index as a parameter and returns the transaction details as a tuple.
-
-#### The getOwners Function
-
-The getOwners function returns the list of owners in the Multisig wallet.
-
-### Assignment: Manage a Transaction
-
-#### Objective
-Submit a transaction, confirm it, and execute it.
-
-#### Steps
-1. Use Remix or your preferred development environment to interact with the deployed Multisig contract.
+1. Deploy the Multisig contract as in the previous assignment.
 2. Submit a transaction to any address with a value of 4 Ether and any data.
 3. Confirm the submitted transaction using the `confirmTransaction` function.
 4. Once the required confirmations are reached, execute the transaction using the `executeTransaction` function.
 5. Call the `getTransactionCount` function to verify that the transaction has been executed. The total count should have increased by one.
 6. Call the `getTransaction` function with the transaction index to verify that the transaction has been executed. The `executed` property should be set to `true`.
-
-This assignment aims to reinforce your understanding of the transaction lifecycle in a Multisig setup. Ensure to check for the emitted events to validate the success of each step.
-
