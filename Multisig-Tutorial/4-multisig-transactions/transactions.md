@@ -1,4 +1,3 @@
-# Submitting and Confirming Transactions
 In this section, we'll explore the process of submitting and confirming transactions. 
 
 ## Modifiers

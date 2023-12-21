@@ -31,7 +31,7 @@ Finally, it sets the `numConfirmationsRequired` variable with the specified valu
 ## getOwners Function
 The `getOwners` function (Line 36) allows users to retrieve the list of owners of the multi-signature wallet. It returns the `owners` array (Line 37).
 
-### `getNumConfirmationsRequired` Function
+## getNumConfirmationsRequired Function
 The `getNumConfirmationsRequired` function (Line 41) allows users to retrieve the number of confirmations required for a transaction. It returns the `numConfirmationsRequired` variable (Line 42).
 
 ## Conclusion

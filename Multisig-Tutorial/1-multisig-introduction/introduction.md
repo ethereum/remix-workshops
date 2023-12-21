@@ -11,6 +11,9 @@ In a multisig setup, each transaction must receive a predetermined number of app
 ## Why Use a Multisig Wallet?
 Multisig wallets are crucial for enhanced security in cryptocurrency transactions. They mitigate the risk of theft or loss of a single key. In business, they're used to ensure that funds can't be moved without consensus among stakeholders. For instance, in a company managing cryptocurrency assets, a multisig wallet might require the CFO, CEO, and a board member to all approve significant transactions, protecting against internal fraud or external hacks.
 
+## Conclusion
+In this section, we explored the fundamentals of Multisignature (Multisig) wallets. We learned that a multisig wallet requires multiple keys to authorize a cryptocurrency transaction and enhances security by mitigating the risk of theft or loss of a single key.
+
 ## ⭐️ Assignment: Multiple Choice Test
 
 ### 1. What is a Multisignature Wallet?

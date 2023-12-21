@@ -1,4 +1,3 @@
-# Revoking Confirmations
 In this section, we'll explore the process of revoking confirmations. This process is necessary when an owner changes their mind about a transaction and wants to stop it from being executed. This section will be pretty straightforward. 
 
 ## revokeConfirmation Event
