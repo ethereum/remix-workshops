@@ -1,4 +1,3 @@
-# Contract Initialization
 In this section, we'll explore the initialization process of the Multisig smart contract. We'll examine the constructor function and understand how it sets up the initial state of the contract.
 
 ## Overview
@@ -29,9 +28,7 @@ The constructor then initializes the contract state by verifying that is a funct
 
 Finally, it sets the `numConfirmationsRequired` variable with the specified value (Line 32).
 
-## Functions
-
-### `getOwners` Function
+## getOwners Function
 The `getOwners` function (Line 36) allows users to retrieve the list of owners of the multi-signature wallet. It returns the `owners` array (Line 37).
 
 ### `getNumConfirmationsRequired` Function

@@ -47,7 +47,6 @@ contract MultiSigTutorial {
         bytes data
     );
     event ConfirmTransaction(address indexed owner, uint indexed txIndex);
-    event RevokeConfirmation(address indexed owner, uint indexed txIndex);
     event ExecuteTransaction(address indexed owner, uint indexed txIndex);
 
     constructor(address[] memory _owners, uint _numConfirmationsRequired) {

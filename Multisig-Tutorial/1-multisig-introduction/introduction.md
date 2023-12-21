@@ -1,4 +1,3 @@
-# Introduction
 Welcome to the Multisignature Wallet course! In this section, we'll explore the fundamentals of Multisignature (Multisig) wallets and their significance in the Web3 ecosystem.
 
 ## What is a Multisignature Wallet?
@@ -25,6 +24,6 @@ Multisig wallets are crucial for enhanced security in cryptocurrency transaction
 1. By requiring a single private key for transactions.
 2. By distributing transaction approval across multiple owners.
 3. By storing transaction data on-chain.
-4. None of the above
+4. None of the above.
 
 Feel free to take your time and answer the questions above. Once you're ready, we'll move on to exploring the Multisig smart contract and understanding its structure.

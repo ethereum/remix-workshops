@@ -1,4 +1,3 @@
-# Deposit
 In this section, we'll explore the `receive` function and the associated Deposit event. We'll examine how the `receive` function is used to deposit Ether into the multi-signature wallet and how the Deposit event provides transparency.
 
 ## Deposit Event
@@ -9,7 +8,7 @@ On line, 9 we have the Deposit event. The Deposit event is emitted whenever Ethe
 
 We can use the Deposit event to track the flow of Ether into the multi-signature wallet and maybe trigger other actions based on the event.
 
-## `receive` Function
+## receive Function
 On line 43, we have the `receive` function. The `receive` function is a special function that is executed whenever Ether is sent to the contract. 
 
 The `receive` function is marked as `external` and `payable`. The `external` modifier means that the function can only be called from outside the contract. The `payable` modifier means that the function can receive Ether.

@@ -9,19 +9,16 @@ tags:
   - Multisig
 steps:
   - name: 1. Introduction
-    path: 1-introduction
+    path: 1-multisig-introduction
 
-  - name: 2. Initialize Multisig Contract
-    path: 2-contract-initialization
+  - name: 2. Initialize the Contract
+    path: 2-multisig-initialization
 
-  - name: 3. Multisig Contract Deposit
+  - name: 3. Deposits
     path: 3-multisig-deposits
 
-  - name: 4. Submitting and Confirming Transactions
-    path: 4-multisig-transaction-creation
+  - name: 4. Transactions
+    path: 4-multisig-transactions
 
-  - name: 5. Execute Transaction
-    path: 5-multisig-transaction-execution
-
-  - name: 6. Revoking Confirmation
-    path: 6-multisig-revoke
+  - name: 5. Revoking Confirmations
+    path: 5-multisig-revoke
