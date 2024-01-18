@@ -1,11 +1,10 @@
-In this section, we'll explore the initialization process of the Multisig smart contract. We'll examine the constructor function and understand how it sets up the initial state of the contract.
+In this section, we'll explore the **initialization process** of the Multisig smart contract. We'll examine the constructor function and review how it sets up the initial state of the contract.
+
+## Note
+From this section on in this tutorial, we will be building up a multisig contract. In subsequent sections, the contract will become increasingly complete.
 
 ## Overview
-Our contract consists of events, state variables, modifiers, and functions that collectively create a multi-signature wallet. The events provide transparency by logging key activities on the blockchain, while modifiers ensure that only authorized users can execute certain functions.
-
-In the upcoming sections, we will break down each component of the contract, starting with the constructor function, which initializes the wallet with a list of owners and the required number of confirmations.
-
-At the top of the contract, we have the SPDX license identifier and the pragma statement (Lines 1 and 2). They are used to specify the license under which the contract is released and the compiler version to be used.
+In this section, the contract consists of events, state variables, modifiers, and functions. **Events** provide transparency by logging specified activities on the blockchain, while **modifiers** ensure that only authorized users can execute certain functions.
 
 ## State Variables
 In Line 4, we have the MultisigWallet contract itself. At the beginning of the contract, we have three state variables.
@@ -17,14 +16,14 @@ In Line 4, we have the MultisigWallet contract itself. At the beginning of the c
 The setup of array and mapping allows us to easily retrieve the list of owners and verify whether an address is an owner.
 
 ## Modifiers
-Next, we have a modifier called `onlyOwner` (Line 9). Modifiers in Solidity are special keywords that can be used to amend the behavior of functions. In our case, the `onlyOwner` modifier ensures that only owners can execute a function. It does this by checking whether the address of the caller is an owner.
+Next, we have a modifier called `onlyOwner` (Line 9). Modifiers in Solidity are special keywords that can be used to amend the behavior of functions. In our case, the `onlyOwner` modifier ensures that only owners can execute a function. It does this by checking whether the address of the **caller** is an owner.
 
 ## Constructor Function
 The `constructor` function (Line 14) is executed only once during the deployment of the contract. It initializes essential parameters, in this case, the list of owners and the required number of confirmations (Line 14).
 
 On lines 15 and 16, we have two `require` statements to ensure that the inputs are valid. In this case, we require that there must be at least one owner and that the number of required confirmations must be greater than zero and less than or equal to the number of owners.
 
-The constructor then initializes the contract state by verifying that is a functional Ethereum address (Line 25), ensuring that the owner is unique (Line 26), and populating the `owners` array with the provided owner addresses (Line 28).
+The constructor then initializes the contract state by verifying that is not address(0) (Line 25) and that the owner is unique (Line 26).  Then it adds a key/ value pair to the isOwner mapping (Line 28), and then it populates the `owners` array with the provided owner addresses (Line 29).
 
 Finally, it sets the `numConfirmationsRequired` variable with the specified value (Line 32).
 
@@ -40,10 +39,11 @@ In this section, we explored the initialization process of the Multisig smart co
 ## ⭐️ Assignment: Deploy a Multisig Wallet
 Deploy a Multisig contract with three owners and require two confirmations for transaction execution.
 
-1. Go to Deploy & Run Transactions in Remix.
-2. Expand the "Deploy" section.
-3. Under "_OWNERS", enter three an array of three addresses.
-4. Under "_NUM_CONFIRMATIONS_REQUIRED", enter the number of confirmations required for a transaction.
+1. Compile contractInitialization.sol
+2. Go to Deploy & Run Transactions in Remix.
+3. Expand the "Deploy" section.
+4. Under "_OWNERS", enter three an array of three addresses.
+5. Under "_NUM_CONFIRMATIONS_REQUIRED", enter the number of confirmations required for a transaction.
 
 **Hints:**
 - You can get addresses from the "ACCOUNTS" dropdown menu.
