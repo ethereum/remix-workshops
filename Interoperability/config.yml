@@ -1,10 +1,9 @@
 ---
 id: interopCourse
-name: Web3 Interoperability
+name: Interoperability
 summary: Learn how to build interoperable smart contracts that can send messages and assets between different blockchains using Axelar technology.
 level: 2
 tags:
   - Solidity
-  - Tokens
   - Interoperability
   - Axelar
