@@ -32,10 +32,10 @@ Now with these params that were passed in, the `_execute()` function can send th
 
 Your challenge here is to finish off the `sendToMany()` function using the Axelar Gateway and Gas Service to trigger an interchain transaction.
 
-In the end you should be able to deploy this contract on two testnets, trigger the `sendToMany()` function and see the live transaction on <a href="https://testnet.axelarscan.io">Axelarscan (testnet) block explorer</a>.
+In the end you should be able to deploy this contract on two testnets, trigger the `sendToMany()` function and see the live transaction on <a href="https://testnet.axelarscan.io" target="_blank">Axelarscan (testnet) block explorer</a>.
 
 ### Testing Notes
 
-Note 1: The recommended ERC20 to use is `aUSDC` a wrapped version of the USDC token that can be obtained from <a href= "https://discord.com/channels/770814806105128977/1002423218772136056">this faucet</a>. When triggering the `sendToMany()` function simply pass in the symbol `aUSDC` to the fourth param.
+Note 1: The recommended ERC20 to use is `aUSDC` a wrapped version of the USDC token that can be obtained from <a href= "https://discord.com/channels/770814806105128977/1002423218772136056" target="_blank">this faucet</a>. When triggering the `sendToMany()` function simply pass in the symbol `aUSDC` to the fourth param.
 
 Note2: When triggering the `sendToMany()` function you must remember to `approve` your contract to spend `aUSDC` tokens on your behalf, otherwise `transferFrom()` on line49 will throw an error.
