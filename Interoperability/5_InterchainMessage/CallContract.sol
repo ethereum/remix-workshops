@@ -33,8 +33,8 @@ contract CallContract is AxelarExecutable {
     /**
      * @notice Send message from chain A to chain B
      * @dev message param is passed in as gmp message
-     * @param destinationChain name of the dest chain (ex. "Fantom")
-     * @param destinationAddress address on dest chain this tx is going to
+     * @param _destinationChain name of the dest chain (ex. "Fantom")
+     * @param _destinationAddress address on dest chain this tx is going to
      * @param _message message to be sent
      */
     function setRemoteValue(
@@ -47,12 +47,12 @@ contract CallContract is AxelarExecutable {
         bytes memory payload = abi.encode(_message);
         gasService.payNativeGasForContractCall{value: msg.value}(
             address(this),
-            destinationChain,
-            destinationAddress,
+            _destinationChain,
+            _destinationAddress,
             payload,
             msg.sender
         );
-        gateway.callContract(destinationChain, destinationAddress, payload);
+        gateway.callContract(_destinationChain, _destinationAddress, payload);
     }
 
     /**

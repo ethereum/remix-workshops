@@ -8,7 +8,8 @@ The first thing you will need to create in the `constructor` for the function. T
 
 When deploying the contract you will pass in the address of the `Gateway` and `GasService` for Ethereum Sepolia those addresses are `0xe432150cce91c13a887f7D836923d5597adD8E31` for the Gateway and `0xbE406F0189A0B4cf3A05C286473D23791Dd44Cc6` for the Gas Service.
 
-For the full list of relevant Axelar addresses [see here](https://docs.axelar.dev/resources/contract-addresses/testnet)
+For the full list of relevant Axelar addresses
+<a href="https://docs.axelar.dev/resources/contract-addresses/testnet">see here</a>
 
 ### Send Interchain Message
 
@@ -28,7 +29,7 @@ Now, with your message encoded you can begin to interact with the `GasService` a
 
 To pay for the entire interchain transaction you will trigger the function `payNativeGasForContractCall`, which is defined in the `GasService`.
 
-This function needs the parameters explained earlier in the [GasService](gas_service.md#payNativeGasForContractCallWithToken) section. The `sender` for this transaction will be this contract, which is `address(this)`. The `destinationChain` and ``destinationAddress` can simply be passed in from this functions parameters, the `payload` is the encoded \_message we wrote earlier. Finally, you need to specify what the refund address is, this can be the address that triggers this function, which you get by writing `msg.sender`.
+This function needs the parameters explained earlier in the GasService section. The `sender` for this transaction will be this contract, which is `address(this)`. The `destinationChain` and `destinationAddress` can simply be passed in from this functions parameters, the `payload` is the encoded \_message we wrote earlier. Finally, you need to specify what the refund address is, this can be the address that triggers this function, which you get by writing `msg.sender`.
 
 Once you trigger this function you will have successfully send a transaction from the source chain via Axelar to the destination chain! But there is still is one final step that needs to be complete.
 
@@ -52,4 +53,4 @@ Great! At this point you are now handling the interchain transaction on the dest
 
 To interact with this contract make sure you deploy it on at least two blockchains so that you can call `setRemoteValue()` from the one chain and then have the `_execute()` function automatically triggered on another chain. You will be able to query the `sourceChain` and `sourceAddress` variables on the destination chain to ensure that the interchain execution worked correctly.
 
-To view the full step by step of the interchain transaction checkout the [Axelarscan (testnet) block explorer](https://testnet.axelarscan.io/)
+To view the full step by step of the interchain transaction checkout the <a href="https://testnet.axelarscan.io">Axelarscan (testnet) block explorer</a>.
