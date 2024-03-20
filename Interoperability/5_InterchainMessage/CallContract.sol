@@ -38,8 +38,8 @@ contract CallContract is AxelarExecutable {
      * @param _message message to be sent
      */
     function setRemoteValue(
-        string calldata destinationChain,
-        string calldata destinationAddress,
+        string calldata _destinationChain,
+        string calldata _destinationAddress,
         string calldata _message
     ) external payable {
         require(msg.value > 0, "Gas payment is required");
