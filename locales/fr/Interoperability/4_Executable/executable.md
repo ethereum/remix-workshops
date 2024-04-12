@@ -1,5 +1,3 @@
-# Axelar Executable
-
 The Axelar executable contains relevant helper functions that will be automatically executed on the destination chain in correspondence to the relevant inbound transaction from the source chain.
 
 The following are the relevant functions you will need to use from Axelar Executable
