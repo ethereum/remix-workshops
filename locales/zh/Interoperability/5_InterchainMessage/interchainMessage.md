@@ -1,8 +1,6 @@
-## Interchain Message
-
 In this section we will create a contract that will send a "hello world" message between two blockchains.
 
-### Constructor
+## Constructor
 
 The first thing you will need to create in the `constructor` for the function. This will allow you to set the `Gateway` and `Gas Service` contracts we discussed in the previous sections.
 
@@ -10,7 +8,7 @@ When deploying the contract you will pass in the address of the `Gateway` and `G
 
 For the full list of relevant Axelar addresses <a href="https://docs.axelar.dev/resources/contract-addresses/testnet" target="_blank">see here</a>
 
-### Send Interchain Message
+## Send Interchain Message
 
 Now that the constructor has set the relevant Axelar addresses needed to trigger an interchain transaction you can move on to the `setRemoteValue()`, which will trigger this transaction.
 
