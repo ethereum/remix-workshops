@@ -10,7 +10,7 @@ import {IAxelarGasService} from "@axelar-network/axelar-gmp-sdk-solidity/contrac
  * @title Call Contract With Token
  * @notice Send a token along with an Axelar GMP message between two blockchains
  */
-contract CallContractWithToken is AxelarExecutable {
+contract CallContractWithTokenChallenge is AxelarExecutable {
     IAxelarGasService public immutable gasService;
 
     event Executed();
