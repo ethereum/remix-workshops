@@ -1,5 +1,3 @@
-## ⭐️ Interchain Token Transfer Assignment
-
 At this point we have gone over an example for how to send a general message between one blockchain to another. Now, lets implement a contract that sends a message and a token from one blockchain to another.
 
 ## Overview
@@ -28,7 +26,7 @@ It makes use of the following params:
 
 Now with these params that were passed in, the `_execute()` function can send the tokens that were sent to the appropriate receivers.
 
-### Challenge
+## Challenge
 
 Your challenge here is to finish off the `sendToMany()` function using the Axelar Gateway and Gas Service to trigger an interchain transaction.
 
