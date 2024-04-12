@@ -1,5 +1,3 @@
-## Further Reading
-
 Congratulations on making it to the end of the interoperability module! 🎉🎉
 
 To continue your learning journey of interoperability with Axelar. There are many useful resource available.
