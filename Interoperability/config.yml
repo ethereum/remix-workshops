@@ -8,13 +8,13 @@ tags:
   - Interoperability
   - Axelar
 steps:
-  - name: Introduction
+  - name: An Intro to Axelar
     path: 1_Intro
   - name: Axelar Gateway
     path: 2_Gateway
-  - name: Gas Service
+  - name: Axelar Gas Service
     path: 3_GasService
-  - name: Executables
+  - name: Axelar Executable
     path: 4_Executable
   - name: Interchain Messages
     path: 5_InterchainMessage
