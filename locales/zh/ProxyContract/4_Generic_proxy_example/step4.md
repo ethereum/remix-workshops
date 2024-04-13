@@ -4,7 +4,7 @@ In the associated solidity file, **step4.sol**, there are 2 contracts - **ProxyC
 
 To use this system, we first deploy the LogicContract.
 
-And then when we go to deploy the ProxyContract, we pass the LogicContract's address as an arguement of the ProxyContract's constructor.
+And then when we go to deploy the ProxyContract, we pass the LogicContract's address as an argument of the ProxyContract's constructor.
 
 The ProxyContract is deployed only once.
 
