@@ -1,4 +1,4 @@
-At this point we have gone over an example for how to send a general message between one blockchain to another. Now, lets implement a contract that sends a message and a token from one blockchain to another.
+At this point we have gone over an example for how to send a general message between one blockchain to another. Now, let's implement a contract that sends a message and a token from one blockchain to another.
 
 ## Overview
 
@@ -34,6 +34,6 @@ In the end you should be able to deploy this contract on two testnets, trigger t
 
 ### Testing Notes
 
-Note 1: The recommended ERC20 to use is `aUSDC` a wrapped version of the USDC token that can be obtained from <a href= "https://discord.com/channels/770814806105128977/1002423218772136056" target="_blank">this faucet</a>. When triggering the `sendToMany()` function simply pass in the symbol `aUSDC` to the fourth param.
+Note 1: The recommended ERC20 to use is `aUSDC` a wrapped version of the USDC token that can be obtained from <a href= "https://docs.axelar.dev/resources/rpc/resources" target="_blank">the discord faucet bot</a>. When triggering the `sendToMany()` function simply pass in the symbol `aUSDC` to the fourth param.
 
 Note2: When triggering the `sendToMany()` function you must remember to `approve` your contract to spend `aUSDC` tokens on your behalf, otherwise `transferFrom()` on line49 will throw an error.
