@@ -10,7 +10,7 @@
 
 Try clicking an icon in the **Icons Panel** to go to another plugin.  Click the **Solidity Compiler** icon and then the **Deploy & Run** icon.  Then come back **LearnEth**.
 
-In the **Main Panel** of Remix, make sure you see the **Home tab**.  The Home tab has lots of usefule links. To navigate to there, click the Remix icon ![Remix icon](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/remix-logo.png "Remix icon") on the top of the icon panel.
+In the **Main Panel** of Remix, make sure you see the **Home tab**.  The Home tab has lots of useful links. To navigate to there, click the Remix icon ![Remix icon](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/remix-logo.png "Remix icon") on the top of the icon panel.
 
 - In the **Featured Plugins** section of the **Home tab**, click the **Solidity** button.  This button will activate a number of plugins - you’ll see them in the icon panel.
 
