@@ -32,7 +32,7 @@ Once you trigger this function you will have successfully send a transaction fro
 
 ### Receive Message on Destination Chain
 
-On the destination chain the inbound interchain tranaction needs to be picked up and handled by the `AxelarExecutable`'s `_execute()` function.
+On the destination chain the inbound interchain transaction needs to be picked up and handled by the `AxelarExecutable`'s `_execute()` function.
 
 The `_execute()` function is defined in the `AxelarExecutable` contract so when defining this function you must remember to include the `override` keyword.
 
