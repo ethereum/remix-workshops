@@ -10,4 +10,6 @@ Now we will put that code on a test blockchain.
 
 4. You have deployed your compiled contract to the Remix VM - a simulated blockchain that is running inside of your browser window.  The Remix VM is simple, fast test chain.  It is not that realistic because you don't need to approve each transaction.
 
-You can also use Remix to deploy to other public EVM chains. But to do this you'd need to connect to different **environment** - like Injected Provider.  When you use Injected Provider - you need to have a browser wallet (like MetaMask or similar) installed.  We'll try deploying to a public network at the end of this tutorial.
+5. Check the terminal to see detail of this deployment transaction.
+
+You can also use Remix to deploy to other public EVM chains. To do this, you'll need to connect to a different **Environment** - like Injected Provider.  The Injected Provider connects Remix to browser wallet (like MetaMask or similar).  We'll try deploying to a public network at the end of this tutorial. But before we get there, we'll cover how to interact with a deployed contract's functions.
