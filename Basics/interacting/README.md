@@ -7,7 +7,7 @@
    
 ![deploy contract](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interacting/images/deployed_open2.png "deployed contract")
 
-If this contract had imported other contracts, then the functions of the imported contracts would also be visible here.
+If this contract had imported other contracts, then the functions of the imported contracts would also be visible here.  At some point, try playing with An ERC20 contract to see all its many functions.
 
 3. Functions with blue buttons are either  **pure** or **view** functions.  This means that they are just reading a property or are returning a value.  In other words, they aren't saving anything - so they are FREE (they don’t cost gas).  Functions with other colors - usually orange (depending on the Remix theme) cost gas because they are saving information.  They are creating a **transaction**.  
 
