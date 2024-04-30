@@ -2,6 +2,7 @@
 id: uniswapSwapCourse
 name: Uniswap Swap Course
 summary: Go through the Solidity code of the Uniswap V3 Swap contract. Developed by the p2p learning platform https://dacade.org.
+level: 2
 tags:
   - Solidity
   - Tokens
