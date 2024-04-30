@@ -1,8 +1,8 @@
-## Workspaces are for separating your projects
+## Workspaces help organize your separate projects.
 
 If this is your first time to Remix, a Workspace named **default_workspace** is loaded in the File Explorer.
 
-![](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/default_workspace2.png)
+![](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/default_workspace.png)
 
 The **default_workspace** has three Solidity (.sol) files in the contracts folder. Remix has a number of other tempates.  When you load a template, it goes into a Workspace.  To go between Workspaces, use the select box at the top of the File Explorer.
 
@@ -18,6 +18,6 @@ Let's create a new Workspace
 
 3. In the modal the comes up, choose one of the templates. 
 
-![hamburger](https://raw.githubusercontent.com/ethereum/remix-workshops/master/workspaces/images/popup.png)
+![hamburger](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/workspaces/images/popup.png)
 
-Notice that in this popup menu, you can clone a repo.  Managing a Git repo happens in the DGit plugin.  You can also create Github actions with the workflow choices.
+Notice that in this popup menu, you can clone a repo.  Managing a Git repo happens in the DGit plugin.  You can also create Github actions with the thre workflow choices in the popup menu.
