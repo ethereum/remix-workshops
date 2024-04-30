@@ -1,5 +1,4 @@
-## Load a file from the Files Explorer
-**Procedure**
+Let's load a file from the File Explorer into the Editor.
 
 1. In the icon panel, click ![file explorer icon](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/load_and_compile/images/files1.png "file explorer icon") , the File Explorer's icon.
 
