@@ -1,10 +1,10 @@
-## Load a file from the Files Explorer
-
-**Procedure**
+Let's load a file from the File Explorer into the Editor.
 
 1. In the icon panel, click ![file explorer icon](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/load_and_compile/images/files1.png "file explorer icon") , the File Explorer's icon.
 
 2. Make sure you are in the **default_workspace**.
+
+![default workspace](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/load_and_compile/images/default_workspace_open.png)
 
 3. Open the contracts folder and click on **2_Owner.sol** in the contracts folder. Click it. The file will appear in a tab in the main panel.
 
