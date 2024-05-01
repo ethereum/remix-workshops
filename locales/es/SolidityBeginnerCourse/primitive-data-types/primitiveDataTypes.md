@@ -1,33 +1,33 @@
-In this section, we will show you Solidity’s primitive data types, how to declare them, and their characteristics.
+En esta sección, vamos a enseñarle  los tipos de variables primitivas, como declararlas y sus características.
 
 ### bool
 
-You can declare data a boolean type by using the keyword ‘bool’. Booleans can either have the value `true` or `false`.
+Puede declarar data del tipo boolean usando la palabra clave ‘bool’. Booleans pueden tener el valor `verdadero` o `falso`
 
 ### uint
 
-We use  the keywords `uint` and `uint8` to `uint256` to declare an _unsigned integer type_ (they don’t have a sign, unlike -12, for example). Uints are integers that are positive or zero and range from 8 bits to 256 bits. The type `uint` is the same as `uint256`.
+Usamos las palabras clave `uint` y `uint8` hasta `uint256` para declarar un _tipo numérico no firmado_ (unsigned integer type) (no tienen un signo, al contrario que -12, por ejemplo). Uints son números (integers) positivos o cero y oscilan entre los 8 bits hasta los 256 bits. El tipo `uint` es el mismo que `uint256`.
 
 ### int
 
-We use the keywords `int` and `int8` to `int256` to declare an integer type. Integers can be positive, negative, or zero and range from 8 bits to 256 bits. The type `int` is the same as `int256`.
+Usamos las palabras clave  `int` e `int8` hasta `int256` para declarar un tipo numérico (integer). Los  Integers pueden ser positivos, negativos o cero y oscilar entre los 8 bits y los 256 bits. El tipo `int` es el mismo que `int256`.
 
-### address
+### address (dirección)
 
-Variables of the type `address` hold a 20-byte value, which is the size of an Ethereum address. There is also a special kind of Ethereum address, `address payable`, which can receive ether from the contract.
+Variables del tipo `address` tienen un valor de 20 bytes, que es el tamaño de una dirección de Ethereum. Hay también un tipo de dirección de Ethereum especial, `address payable`, que puede recibir Ether del contrato.
 
-All these data types have default values, as shown in the contract (line 29).
+Todos estos tipos de data tienen valores por defecto, como es mostrado en el contrato (línea 29).
 
-You can learn more about these data types as well as _Fixed Point Numbers_, _Byte Arrays_, _Strings_, and more in the <a href="https://docs.soliditylang.org/en/latest/types.html" target="_blank">Solidity documentation</a>.
+Puede aprender más sobre estos tipos de data, así como _Fixed Point Numbers_, _Byte Arrays_, _Strings_ y más en <a href="https://docs.soliditylang.org/en/latest/types.html" target="_blank">documentación de Solidity </a>.
 
-Later in the course, we will look at data structures like **Mappings**, **Arrays**, **Enums**, and **Structs**.
+Más adelante en el curso miraremos estructuras de data como  **Mappings**, **Arrays**, **Enums** y **Structs**.
 
-<a href="https://www.youtube.com/watch?v=8Tj-Th_S7NU" target="_blank">Watch a video tutorial on Primitive Data Types</a>.
+<a href="https://www.youtube.com/watch?v=8Tj-Th_S7NU" target="_blank">Puede ver un tutorial en video sobre tipos de data primitivos</a>.
 
-## ⭐️ Assignment
+## ⭐️ Misión
 
-1. Create a new variable `newAddr` that is a `public` `address` and give it a value that is not the same as the available variable `addr`.
-2. Create a `public` variable called `neg` that is a negative number, decide upon the type.
-3. Create a new variable, `newU` that has the smallest `uint` size type and the smallest `uint` value and is `public`.
+1. Crear una nueva variable `newAddr` que es una `public` `address` que le da un valor que no es el mismo que que la variable `addr` disponible.
+2. Crear una variable `public` llamada `neg`que es un número negativo, decidir sobre el tipo.
+3. Crear una nueva variable, `newU` que es el `uint` el tipo de tamaño más pequeño y de valor de `uint` más pequeño y es `public`.
 
-Tip: Look at the other address in the contract or search the internet for an Ethereum address.
+Consejo: Mire la otra dirección en el contrato o busca el internet para la dirección de Ethereum.
