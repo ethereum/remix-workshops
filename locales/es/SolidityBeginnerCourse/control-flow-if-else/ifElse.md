@@ -1,33 +1,34 @@
-Solidity supports different control flow statements that determine which parts of the contract will be executed. The conditional _If/Else statement_ enables contracts to make decisions depending on whether boolean conditions are either `true` or `false`.
+Solidity soporta declaraciones de flujos de control que determina qué partes del contrato van a ser ejecutadas. El condicional _declaraciones If/Else_ (If/Else statement) facilita contratos para tomar decisiones dependiendo de si las condiciones booleanas son verdaderas o falsas.
 
-Solidity differentiates between three different If/Else statements: `if`, `else`, and `else if`.
+Solidity diferencia entre tres diferentes declaraciones If/Else: `if`, `else`, and `else if`.
 
 ### if
 
-The `if` statement is the most basic statement that allows the contract to perform an action based on a boolean expression.
+La declaración `if` es la más básica que permite al contrato ejecutar una acción basada en una expresión booleana.
 
-In this contract’s `foo` function (line 5) the if statement (line 6) checks if `x` is smaller than `10`. If the statement is true, the function returns `0`.
+En la función `foo` de este contrato (línea 5) la declaración if (línea 6) mira si `x` es menor que  `10`. Si la declaración es verdad, la función devuelve `0`.
 
 ### else
 
-The `else` statement enables our contract to perform an action if conditions are not met.
+La declaración  `else` facilita que el contrato ejecute una acción si las condiciones no se cumplen.
 
-In this contract, the `foo` function uses the `else` statement (line 10) to return `2` if none of the other conditions are met.
+En este contrato, la función `foo` utiliza la declaración `else` (línea 10) para devolver `2` si ninguna de las otras condiciones se cumple.
 
 ### else if
 
-With the `else if` statement we can combine several conditions.
+Con la declaración `else if` podemos combinar diferentes condiciones.
 
-If the first condition (line 6) of the foo function is not met, but the condition of the `else if` statement (line 8) becomes true, the function returns `1`.
+Si la primera condición  (línea 6) de la función  foo no se cumple pero la condición de la declaración `else if`(línea 8) torna verdadera, la función devuelve `1`.
 
-<a href="https://www.youtube.com/watch?v=Ld8bFWXLSfs" target="_blank">Watch a video tutorial on the If/Else statement</a>.
+<a href="https://www.youtube.com/watch?v=Ld8bFWXLSfs" target="_blank">Mire un tutorial con vídeos sobre las declaraciones If/Else </a>.
 
-## ⭐️ Assignment
+## ⭐️ Misión
 
-Create a new function called `evenCheck` in the `IfElse` contract:
+Crear una función llamada  `evenCheck`  en el contrato  `IfElse`:
+Que toma un `uint` como argumento .
 
 - That takes in a `uint` as an argument.
-- The function returns `true` if the argument is even, and `false` if the argument is odd.
-- Use a ternery operator to return the result of the `evenCheck` function.
+- La función devuelve `verdadero` si el argumento es par y `falso`si el argumento es impar.
+- Usa un operador ternario para devolver el resultado de una función `evenCheck`.
 
-Tip: The modulo (%) operator produces the remainder of an integer division.
+Consejo: El operador de módulo (%) produce la diferencia de una división numérica.
