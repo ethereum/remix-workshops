@@ -1,33 +1,33 @@
-In Solidity _enums_ are custom data types consisting of a limited set of constant values. We use enums when our variables should only get assigned a value from a predefined set of values.
+En Solidity  los _enums_ son tipos de data customizados que consisten en un set limitado de valores constantes. Usamos enums cuando a nuestras variables se les asigna un valor de un set predeterminado de valores.
 
-In this contract, the state variable `status` can get assigned a value from the limited set of provided values of the enum `Status` representing the various states of a shipping status.
+En este contrato, a la variable de estado `status` se le puede asignar un valor desde el set limitado de valores del enum `Status`, que representa los varios estados de un estado de envío.
 
-### Defining enums
+### Definiendo enums
 
-We define an enum with the enum keyword, followed by the name of the custom type we want to create (line 6). Inside the curly braces, we define all available members of the enum.
+Definimos un enum con la palabra clave enum, seguida del nombre del tipo a medida que queremos crear (línea 6). Dentro de las llaves (curly braces) definimos todos los miembros del enum disponibles.
 
-### Initializing an enum variable
+### Inicializando una variable de enum
 
-We can initialize a new variable of an enum type by providing the name of the enum, the visibility, and the name of the variable (line 16). Upon its initialization, the variable will be assigned the value of the first member of the enum, in this case, Pending (line 7).
+Podemos inicializar una nueva variable de un tipo de enum proporcionando el nombre del enum, la visibilidad, y el nombre de la variable (línea 16). Tras su inicialización, a la variable se le asignará el valor del primer miembro del enum, en este caso, Pendiente (Pending) (línea 7).
 
-Even though enum members are named when you define them, they are stored as unsigned integers, not strings. They are numbered in the order that they were defined, the first member starting at 0. The initial value of status, in this case, is 0.
+A pesar de que los miembros de enum son nombrados cuando se definen, son almacenados como números (integers), no texto (strings). Son numerados en el orden en que son definidos, el primer miembro comenzando con 0. El valor inicial de estado, en este caso, es 0.
 
-### Accessing an enum value
+### Accediendo un valor de enum
 
-To access the enum value of a variable, we simply need to provide the name of the variable that is storing the value (line 25).
+Para acceder el valor de enum de una variable simplemente necesitamos proporcionar el nombre de variable que está almacenado en el valor (línea 25).
 
-### Updating an enum value
+### Actualizando un valor enum
 
-We can update the enum value of a variable by assigning it the `uint` representing the enum member (line 30). Shipped would be 1 in this example. Another way to update the value is using the dot operator by providing the name of the enum and its member (line 35).
+Podemos actualizar el valor enum de una variable asignándole en el `uint` representando el miembro de enum (línea 30). Enviado sería 1 en este ejemplo. Otra forma de actualizar el valor es usando el operador de punto proporcionando el nombre del enum y sus miembros (línea 35).
 
-### Removing an enum value
+### Eliminar un valor de enum
 
-We can use the delete operator to delete the enum value of the variable, which means as for arrays and mappings, to set the default value to 0.
+Podemos usar el operador delete para eliminar el valor enum de la variable, lo que significa respecto a las colecciones y mapeos que el valor inicial es 0.
 
-<a href="https://www.youtube.com/watch?v=yJbx07N15j0" target="_blank">Watch a video tutorial on Enums</a>.
+<a href="https://www.youtube.com/watch?v=yJbx07N15j0" target="_blank">Mira este vídeo con tutoriales sobre Enums</a>.
 
-## ⭐️ Assignment
+## ⭐️ Misión
 
-1. Define an enum type called `Size` with the members `S`, `M`, and `L`.
-2. Initialize the variable `sizes` of the enum type `Size`.
-3. Create a getter function `getSize()` that returns the value of the variable `sizes`.
+1. Definir un tipo de enum llamado `Size` con los miembros `S`, `M`, y `L`.
+2. Inicializar la variable `sizes` del tipo de enum `Size`.
+3. Crear una función getter `getSize()` que devuelve el valor de la variable `sizes`.
