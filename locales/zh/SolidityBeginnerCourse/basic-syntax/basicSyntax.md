@@ -1,26 +1,26 @@
-In this section, we will create our first _smart contract_. This contract only consists of a string that holds the value "Hello World!".
+In this section, we will create our first _smart contract_. 在本节中，我们将创建我们的第一个智能合约。该合约仅包含一个字符串，其中包含值"Hello World!"。
 
-In the first line, we should specify the license that we want to use. You can find a comprehensive list of licenses here: <a href="https://spdx.org/licenses/" target="_blank">https://spdx.org/licenses/</a>.
+In the first line, we should specify the license that we want to use. 在第一行中，我们应指定要使用的许可证。您可以在此处找到非常全的许可证列表：<a href="https://spdx.org/licenses/" target="_blank">https://spdx.org/licenses/</a>.
 
-Using the `pragma` keyword (line 3), we specify the Solidity version we want the compiler to use. In this case, it should be greater than or equal to `0.8.3` but less than 0.9.0.
+使用`pragma`关键字（第3行），我们指定Solidity版本，编译器应使用该版本。在这种情况下，它应大于或等于`0.8.3`但小于`0.9.0`。 In this case, it should be greater than or equal to `0.8.3` but less than 0.9.0.
 
-We define a contract with the keyword `contract` and give it a name, in this case, `HelloWorld` (line 5).
+我们用关键字`contract`定义了一个合约，并为其命名，在本例中为`HelloWorld`（第5行）。
 
-Inside our contract, we define a _state variable_ `greet` that holds the string `"Hello World!"` (line 6).
+在合约内部，我们定义了一个状态变量`greet`，其中包含字符串`"Hello World!"`（第6行）。
 
-Solidity is a _statically typed_ language, which means that you need to specify the type of the variable when you declare it. In this case, `greet` is a `string`.
+Solidity是一种静态类型语言，这意味着您需要在声明变量时指定变量类型。 在这种情况下，`greet`是一个`string`。 In this case, `greet` is a `string`.
 
-We also define the _visibility_ of the variable, which specifies from where you can access it. In this case, it's a `public` variable that you can access from inside and outside the contract.
+We also define the _visibility_ of the variable, which specifies from where you can access it. 我们还定义了变量的可见性，它指定从哪里可以访问它。 在这种情况下，它是`public`类型的变量，在合约内外都可以访问。
 
-Don't worry if you didn't understand some concepts like _visibility_, _data types_, or _state variables_. We will look into them in the following sections.
+如果您不理解可见性、数据类型或状态变量等概念，不要担心。我们将在接下来的章节中详细讲解. We will look into them in the following sections.
 
-To help you understand the code, we will link in all following sections to video tutorials from the <a href="https://www.youtube.com/channel/UCJWh7F3AFyQ_x01VKzr9eyA" target="_blank">creator</a> of the Solidity by Example contracts.
+为了帮助您理解代码，我们将所有后续章节链接到 Solidity 示例合约的<a href="https://www.youtube.com/channel/UCJWh7F3AFyQ_x01VKzr9eyA" target="_blank">创建者</a>制作的视频教程。
 
-<a href="https://www.youtube.com/watch?v=g_t0Td4Kr6M" target="_blank">Watch a video tutorial on Basic Syntax</a>.
+<a href="https://www.youtube.com/watch?v=g_t0Td4Kr6M" target="_blank">观看有关基本语法的视频教程。</a>.
 
-## ⭐️ Assignment
+## ⭐️ 作业
 
-1. Delete the HelloWorld contract and its content.
-2. Create a new contract named "MyContract".
-3. The contract should have a public state variable called "name" of the type string.
-4. Assign the value "Alice" to your new variable.
+1. 删除 HelloWorld 合约及其内容。
+2. 创建一个名为 "MyContract" 的新合约。
+3. 该合约应具有名为 "name" 的公共状态变量，类型为字符串。
+4. 将值 "Alice" 分配给您的新变量。
