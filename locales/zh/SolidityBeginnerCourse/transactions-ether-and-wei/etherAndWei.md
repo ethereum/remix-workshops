@@ -10,17 +10,17 @@ _Wei_ is the smallest subunit of _Ether_, named after the cryptographer [Wei Dai
 
 #### `gwei`
 
-One `gwei` (giga-wei) is equal to 1,000,000,000 (10^9) `wei`.
+1个GWei（千兆Wei）等于10^9 Wei。
 
 #### `ether`
 
 One `ether` is equal to 1,000,000,000,000,000,000 (10^18) `wei` (line 11).
 
-<a href="https://www.youtube.com/watch?v=ybPQsjssyNw" target="_blank">Watch a video tutorial on Ether and Wei</a>.
+<a href="https://www.youtube.com/watch?v=ybPQsjssyNw" target="_blank">观看有关Ether和Wei的视频教程。</a>.
 
-## ⭐️ Assignment
+## ⭐️ 作业
 
-1. Create a `public` `uint` called `oneGWei` and set it to 1 `gwei`.
-2. Create a `public` `bool` called `isOneGWei` and set it to the result of a comparison operation between 1 gwei and 10^9.
+1. 创建一个名为`oneGWei`的`public uint`，并将其设置为1 `gWei`。
+2. 创建一个名为`isOneGWei`的`public bool`，并将其设置为比较操作 1 GWei 和 10 ^ 9 的结果。
 
-Tip: Look at how this is written for `gwei` and `ether` in the contract.
+提示：查看合约中如何编写gwei和ether。
