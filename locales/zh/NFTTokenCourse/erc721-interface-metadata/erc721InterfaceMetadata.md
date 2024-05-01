@@ -1,22 +1,22 @@
-The metadata extension is optional. It allows us to add additional information to our ERC721 tokens. We can specify a name, a symbol, and an URI (Uniform Resource Identifier) that can point to a file where we can add even more information in the form of a JSON.
+The metadata extension is optional. It allows us to add additional information to our ERC721 tokens. 元数据扩展是可选的。它允许我们向ERC721代币添加附加信息。我们可以指定名称、符号和URI（统一资源标识符），该URI可以指向一个文件，在其中以JSON格式添加更多信息。
 
-## ERC721 Metadata Functions
+## ERC721元数据函数
 
 ### name
 
-The function `name` (line 16) returns the name of the token collection. A token collection means all tokens created with your ERC721 token contract implementation. Every token in this collection will have this name, regardless of their tokenId.
+函数`name`（第16行）返回代币集合的名称。代币集合是指使用您的ERC721代币合约实现的。无论其`tokenId`是什么，该集合中的每个代币都将具有此名称。 A token collection means all tokens created with your ERC721 token contract implementation. Every token in this collection will have this name, regardless of their tokenId.
 
 ### symbol
 
-The function `symbol` (line 21) returns the symbol of the token collection.
+函数`symbol`（第21行）返回代币集合的符号。
 
 ### tokenURI
 
-The function `tokenURI` (line 26) returns the URI for the token with the id `tokenId`. In this case it’s not the URI of the whole collection but of an individual token in the collection.
+函数`tokenURI`（第26行）返回id为`tokenId`的token的URI。在这种情况下，它不是整个集合而是集合中单个代币的URI。 In this case it’s not the URI of the whole collection but of an individual token in the collection.
 
 ## ERC721 Metadata JSON Schema
 
-The file that the tokenURI points to should conform to the Metadata JSON Schema as it is specified in the <a href="https://eips.ethereum.org/EIPS/eip-721#specification" target="_blank">EIP-721</a>.
+tokenURI指向的文件应符合<a href="https://eips.ethereum.org/EIPS/eip-721#specification" target="_blank">EIP-721</a>中指定的元数据JSON模式。
 
 ```
 {
@@ -39,6 +39,6 @@ The file that the tokenURI points to should conform to the Metadata JSON Schema 
 }
 ```
 
-The root element must be of the type object. This root object should have properties with the keys: name, description, and image that should be all of the type string.
+The root element must be of the type object. 根元素必须是对象类型。该根对象应具有以下键的属性：名称、描述和图像，这些属性都应为字符串类型。
 
-The ERC721 standard is pretty flexible, the tokenURI does not need to point to a JSON document and the JSON does not need to have all properties and often has additional properties.
+ERC721标准非常灵活，`tokenURI`不需要指向JSON文档，并且JSON不需要具有所有属性，通常还会有其他属性。
