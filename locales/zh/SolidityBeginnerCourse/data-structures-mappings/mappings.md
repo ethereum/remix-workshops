@@ -1,37 +1,37 @@
-In Solidity, _mappings_ are a collection of key types and corresponding value type pairs.
+在Solidity中，mapping是一组键类型和相应值类型对的集合。
 
-The biggest difference between a mapping and an array is that you can't iterate over mappings. If we don't know a key we won't be able to access its value. If we need to know all of our data or iterate over it, we should use an array.
+mapping与数组最大的区别在于映射无法迭代。如果我们不知道一个键，就无法访问其值。如果需要了解所有数据或迭代它们，则应使用数组。 If we don't know a key we won't be able to access its value. If we need to know all of our data or iterate over it, we should use an array.
 
 If we want to retrieve a value based on a known key we can use a mapping (e.g. addresses are often used as keys). Looking up values with a mapping is easier and cheaper than iterating over arrays. If arrays become too large, the gas cost of iterating over it could become too high and cause the transaction to fail.
 
-We could also store the keys of a mapping in an array that we can iterate over.
+我们还可以将映射的键存储在可迭代的数组中。
 
-### Creating mappings
+### 创建mappings
 
 Mappings are declared with the syntax `mapping(KeyType => ValueType) VariableName`.
-The key type can be any built-in value type or any contract, but not a reference type. The value type can be of any type.
+声明语法为`mapping(KeyType => ValueType) VariableName`。`KeyType`可以是任何内置值类型或任何合约，但不能是引用类型；`ValueType`可以是任何类型。 The value type can be of any type.
 
-In this contract, we are creating the public mapping `myMap` (line 6) that associates the key type `address` with the value type `uint`.
+在此合约中，我们创建公共mapping`myMap`(第6行)，将地址(address)作为 key 类型与`uint`作为value类型。
 
-### Accessing values
+### 访问value
 
-The syntax for interacting with key-value pairs of mappings is similar to that of arrays.
+与数组交互时操作 key-value 对象的语法类似于操作数组元素。要查找与特定 key 关联的 value 值，请提供 mapping 的名称和括号内包含该 key (第11行)。
 To find the value associated with a specific key, we provide the name of the mapping and the key in brackets (line 11).
 
-In contrast to arrays, we won't get an error if we try to access the value of a key whose value has not been set yet. When we create a mapping, every possible key is mapped to the default value 0.
+如果我们想要根据已知键检索值，可以使用mapping（例如address通常用作键）。使用mapping查找值比遍历数组更容易、更便宜。如果数组变得太大，则遍历它的gas成本可能会变得过高，并导致交易失败。 与数组不同，在试图访问未设置value值的key时不会出现错误。当创建一个新mapping时，每个可能的key都映射到默认值0。
 
-### Setting values
+### 设置values
 
-We set a new value for a key by providing the mapping’s name and key in brackets and assigning it a new value (line 16).
+我们可以通过提供 mapping 的名称，并在括号内包含该key，分配一个新value值(第16行)来为key设置新值。
 
-### Removing values
+### 删除values
 
-We can use the delete operator to delete a value associated with a key, which will set it to the default value of 0. As we have seen in the arrays section.
+我们可以使用delete运算符来删除与key关联的value值，这将将其设置为默认值0。正如在数组部分中所看到的那样。 As we have seen in the arrays section.
 
-<a href="https://www.youtube.com/watch?v=tO3vVMCOts8" target="_blank">Watch a video tutorial on Mappings</a>.
+<a href="https://www.youtube.com/watch?v=tO3vVMCOts8" target="_blank">观看有关Mapping的视频教程</a>。
 
-## ⭐️ Assignment
+## ⭐️ 作业
 
-1. Create a public mapping `balances` that associates the key type `address` with the value type `uint`.
-2. Change the functions `get` and `remove` to work with the mapping balances.
-3. Change the function `set` to create a new entry to the balances mapping, where the key is the address of the parameter and the value is the balance associated with the address of the parameter.
+1. 创建公共mapping`balances`，将`address`与`uint`作为键类型和值类型。
+2. 更改函数`get`和`remove`以使用mapping`balances`。
+3. 更改函数`set`，创建一个新条目到`balances`映射中，在其中key是参数地址，value是参数地址相关联的余额。
