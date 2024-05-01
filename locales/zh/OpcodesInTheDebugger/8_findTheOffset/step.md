@@ -1,18 +1,17 @@
-# Find the offset ;)
+# 找到偏移量 ;)
 
-And now for a slightly different example:
+现在来看一个稍微不同的例子：
 
-- Compile notSimpleStore.sol
-- Deploy the contract `notSoSimpleStore`
-- Make sure you have a successful deployment - if not check that you used **the correct input type** in the constructor.
-- Go to the Debugger by clicking the **debug** button at the (successful) creation transaction.
-- Find the value of the parameter of `CODECOPY` which represents the offset in calldata where to copy from.
+- 编译 notSimpleStore.sol
+- 部署合约 `notSoSimpleStore`
+- 确保您已成功部署 - 如果没有，请检查您在构造函数中使用了正确的输入类型。
+- 通过单击（成功）创建交易时的`Debug`按钮进入调试器。
+- 找到`CODECOPY`的参数值，该参数表示从 calldata 中要复制的偏移量位置。
 
-Remember: _codecopy(t, f, s)_ - copy **s** bytes from code at position **f** to memory at position **t**
+记住：_codecopy(t, f, s)_ - 从位置 **f** 处代码复制 **s** 字节到位置 **t** 处内存
 
-If you look in the **Stack**, you should see that the 2nd element is:
-0x0000000000000000000000000000000000000000000000000000000000000083
+如果您查看**Stack**，应该会看到第二个元素是：0x0000000000000000000000000000000000000083
 
-And this is the **f** of the input params of codecopy.
+这就是 codecopy 输入参数中 f 的值。
 
-### Hope you picked up a thing or 2 about how opcodes work!
+### 希望你学习了一些关于操作码如何工作的知识！
