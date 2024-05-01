@@ -1,3 +1,3 @@
-## Loading, Compiling, Deploying
+## 加载、编译、部署
 
-This beginner level tutorial introduces Remix's interface and concepts used in Ethereum.
+这个初学者级别的教程介绍了 Remix 的界面和以太坊中使用的概念。
