@@ -1,13 +1,13 @@
-# What if we have state variables?
+# 如果我们有状态变量怎么办？
 
-Things are more complicated once we need to deal with state variables.  State variable are saved to **storage**.
+当我们需要处理状态变量时，事情就会变得更加复杂。状态变量保存在**storage**中。  注意：静态状态变量（除了映射和动态数组类型之外的所有内容）从位置0开始连续地存储在storage中。如果可能，需要少于32字节的多个连续项将被打包到单个存储槽中。对于使用继承的合同，状态变量的排序由以最基础合约为起点的C3线性化顺序确定。
 
-`storage`: is a mapping; each value stored there is persisted and saved on chain.
+`storage`：是一种映射；其中每个值都被持久化并保存在链上。
 
 _Note: Statically-sized state variables (everything except mapping and dynamically-sized array types) are laid out contiguously in storage starting from position 0. Multiple, contiguous items that need less than 32 bytes are packed into a single storage slot if possible. For contracts that use inheritance, the ordering of state variables is determined by the C3-linearized order of contracts starting with the most base-ward contract_
 
-Once we execute **delegate call**, the storage of both contracts get **"merged"** into a single messy state.
+一旦执行**delegate call**，两个合约的存储空间就会“合并”成一个混乱的状态。
 
-We have to "tell" ProxyContract what the **state** of the **Logic contract** looks like.
+我们必须“告诉”ProxyContract逻辑合约的状态看起来是什么样子。
 
-The easiest way to do this is to create a separate contract - in this example - named **StorageContract** which will represent the **state** and which proxyContract will inherit from.
+最简单的方法是创建一个名为StorageContract 的独立合约代表该状态，并且proxyContract也将从它那里继承。
