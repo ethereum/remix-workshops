@@ -1,26 +1,27 @@
-In this section, we will create our first _smart contract_. This contract only consists of a string that holds the value "Hello World!".
+En esta sección, crearemos nuestro primer “contrato inteligente”. Este contrato consiste solamente en un texto (string) que contiene el valor “Hola Mundo!”
 
-In the first line, we should specify the license that we want to use. You can find a comprehensive list of licenses here: <a href="https://spdx.org/licenses/" target="_blank">https://spdx.org/licenses/</a>.
+En la primera línea, debemos especificar la licencia que queremos utilizar. Puedes encontrar una detallada lista de licencias aquí: <a href="https://spdx.org/licenses/" target="_blank">https://spdx.org/licenses/</a>.
 
-Using the `pragma` keyword (line 3), we specify the Solidity version we want the compiler to use. In this case, it should be greater than or equal to `0.8.3` but less than 0.9.0.
+Usando la clave `pragma` (línea 3), especificamos la versión de Solidity que queremos compilar para usar. En este caso, debería de ser mayor o igual a `0.8.3` pero menos de 0.9.0.
 
-We define a contract with the keyword `contract` and give it a name, in this case, `HelloWorld` (line 5).
+Definimos un contrato con la clave `contract` y le damos un nombre, en este caso  `HelloWorld`
+(línea 5).
 
-Inside our contract, we define a _state variable_ `greet` that holds the string `"Hello World!"` (line 6).
+En nuestro contrato definimos una _variable de estado_ (state variable) `greet` que contiene el texto (string) `¡Hola Mundo!"` (línea 6).
 
-Solidity is a _statically typed_ language, which means that you need to specify the type of the variable when you declare it. In this case, `greet` is a `string`.
+Solidity es un lenguaje _estadísticamente mecanografiado_, que significa que usted necesita especificar el tipo de variable cuando la declara. En este caso `greet` es un `string` (texto).
 
-We also define the _visibility_ of the variable, which specifies from where you can access it. In this case, it's a `public` variable that you can access from inside and outside the contract.
+También definiremos la “visibilidad” de la variable, que especifica desde dónde se puede acceder a ella. En este caso, es una variable `pública` a la que se puede acceder desde dentro y fuera del contrato.
 
-Don't worry if you didn't understand some concepts like _visibility_, _data types_, or _state variables_. We will look into them in the following sections.
+No se preocupe si no entiende algunos conceptos como el de _visibilidad_, _tipos de data_, o  _variables de estado_. Vamos a observarlas en las siguientes secciones.
 
-To help you understand the code, we will link in all following sections to video tutorials from the <a href="https://www.youtube.com/channel/UCJWh7F3AFyQ_x01VKzr9eyA" target="_blank">creator</a> of the Solidity by Example contracts.
+Para ayudarle a entender el código, vamos a vincular las siguientes secciones con tutoriales en vídeo <a href="https://www.youtube.com/channel/UCJWh7F3AFyQ_x01VKzr9eyA" target="_blank">creador</a>  de Solidity en los contratos de ejemplo.
 
-<a href="https://www.youtube.com/watch?v=g_t0Td4Kr6M" target="_blank">Watch a video tutorial on Basic Syntax</a>.
+<a href="https://www.youtube.com/watch?v=g_t0Td4Kr6M" target="_blank">Mire un tutorial sobre la sintaxis básica</a>.
 
-## ⭐️ Assignment
+## ⭐️ Misión
 
-1. Delete the HelloWorld contract and its content.
-2. Create a new contract named "MyContract".
-3. The contract should have a public state variable called "name" of the type string.
-4. Assign the value "Alice" to your new variable.
+1. Borre el contrato HelloWorld y su contenido.
+2. Cree un nuevo contrato llamado "MyContract".
+3. El contrato ha de tener una variable de estado pública llamada “nombre” (name) del tipo “string”.
+4. Asigne el valor “Alice” a tu nueva variable.
