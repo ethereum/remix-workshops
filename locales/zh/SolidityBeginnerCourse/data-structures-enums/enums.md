@@ -1,33 +1,33 @@
 In Solidity _enums_ are custom data types consisting of a limited set of constant values. We use enums when our variables should only get assigned a value from a predefined set of values.
 
-In this contract, the state variable `status` can get assigned a value from the limited set of provided values of the enum `Status` representing the various states of a shipping status.
+在这个合约中，状态变量`status`可以从表示转换状态的enum`Status`提供的有限值集合中分配一个值。
 
-### Defining enums
+### 定义枚举
 
-We define an enum with the enum keyword, followed by the name of the custom type we want to create (line 6). Inside the curly braces, we define all available members of the enum.
+我们使用enum关键字来定义一个枚举（第6行），后面跟着我们想要创建的自定义类型名称。在花括号内，我们定义了所有可用于该枚举类型的成员。 Inside the curly braces, we define all available members of the enum.
 
-### Initializing an enum variable
+### 初始化一个枚举变量
 
-We can initialize a new variable of an enum type by providing the name of the enum, the visibility, and the name of the variable (line 16). Upon its initialization, the variable will be assigned the value of the first member of the enum, in this case, Pending (line 7).
+通过提供enum名称、可见性和变量名称（第16行），我们可以初始化一个新的enum类型变量。在其初始化时，该变量将被赋予该枚举第一个成员Pending（第7行） 的值。 Upon its initialization, the variable will be assigned the value of the first member of the enum, in this case, Pending (line 7).
 
-Even though enum members are named when you define them, they are stored as unsigned integers, not strings. They are numbered in the order that they were defined, the first member starting at 0. The initial value of status, in this case, is 0.
+尽管当您定义它们时会为enum成员命名，但它们存储为无符号整数而不是字符串。它们按照它们被定义的顺序编号，并从0开始计数。 在本例中`status`的初始值为0. They are numbered in the order that they were defined, the first member starting at 0. The initial value of status, in this case, is 0.
 
-### Accessing an enum value
+### 访问 enum 值
 
-To access the enum value of a variable, we simply need to provide the name of the variable that is storing the value (line 25).
+要访问存储某个 enum 变量所代表之 enum 值, 我们只需要提供存储该值的变量名称即可 (第25行) 。
 
-### Updating an enum value
+### 更新 enum 值
 
-We can update the enum value of a variable by assigning it the `uint` representing the enum member (line 30). Shipped would be 1 in this example. Another way to update the value is using the dot operator by providing the name of the enum and its member (line 35).
+在Solidity中，枚举是由一组有限常量值组成的自定义数据类型。当我们的变量只能从预定义的一组值中分配时，我们使用枚举。 Shipped would be 1 in this example. 通过将`uint`分配给表示 enum 成员(例如，在此示例中Shipped 等于1)，可以更新变量的 enum 值（第30行）。更新值的另一种方法是使用点运算符，提供枚举名称及其成员 (第35行)。
 
-### Removing an enum value
+### 删除 enum 值
 
-We can use the delete operator to delete the enum value of the variable, which means as for arrays and mappings, to set the default value to 0.
+我们可以使用delete操作符来删除变量的enum值，这意味着与数组和映射一样将默认值设置为0。
 
-<a href="https://www.youtube.com/watch?v=yJbx07N15j0" target="_blank">Watch a video tutorial on Enums</a>.
+<a href="https://www.youtube.com/watch?v=yJbx07N15j0" target="_blank">观看有关 Enums 的视频教程。</a>
 
-## ⭐️ Assignment
+## ⭐️ 作业
 
-1. Define an enum type called `Size` with the members `S`, `M`, and `L`.
-2. Initialize the variable `sizes` of the enum type `Size`.
-3. Create a getter function `getSize()` that returns the value of the variable `sizes`.
+1. 定义一个名为`Size`的枚举类型，并包含成员`S`, `M`和`L`
+2. 初始化枚举类型`Size`的变量`sizes`。
+3. 创建一个getter函数`getSize()`，返回变量`sizes`的值。
