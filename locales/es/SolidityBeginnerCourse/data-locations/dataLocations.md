@@ -1,54 +1,54 @@
-The values of variables in Solidity can be stored in different data locations: _memory_, _storage_, and _calldata_.
+Los valores de variables en Solidity pueden almacenarse en diferentes localizaciones de data: _memoria_ (memory), _almacenamiento_ (storage) y _calldata_.
 
-As we have discussed before, variables of the value type store an independent copy of a value, while variables of the reference type (array, struct, mapping) only store the location (reference) of the value.
+Como hemos explicado antes, las variables de tipo de valor almacenan una copia independiente de un valor, mientras variables de tipo de referencia (array, struct, mapping), solo almacena la localización (reference).
 
-If we use a reference type in a function, we have to specify in which data location their values are stored. The price for the execution of the function is influenced by the data location; creating copies from reference types costs gas.
+Si usamos un tipo de referencia en una función, hemos de especificar en qué localización de data se almacenan sus valores. El precio por la ejecución de la función es influenciado por la localización del data; creando copias de tipos de referencia y costes de gas.
 
-### Storage
+### Almacenaje
 
-Values stored in _storage_ are stored permanently on the blockchain and, therefore, are expensive to use.
+Los valores almacenados en _storage_ son almacenados permanentemente en el blockchain y, por ello, el coste para su uso es alto.
 
-In this contract, the state variables `arr`, `map`, and `myStructs` (lines 5, 6, and 10) are stored in storage. State variables are always stored in storage.
+En este contrato, el estado de variables `arr`, `map` y `myStructs` (líneas 5, 6, and 10) se almacenan en el almacén (storage). Las variables de estado siempre se almacenan en el almacén (storage).
 
-### Memory
+### Memoria
 
-Values stored in _memory_ are only stored temporarily and are not on the blockchain. They only exist during the execution of an external function and are discarded afterward. They are cheaper to use than values stored in _storage_.
+Los valores almacenados en la memoria  _memory_ solo se almacenan temporalmente y no están en la blockchain. Solamente existen durante la ejecución externa y son descartados después. Son más asequibles que los valores almacenados en el almacén (_storage_).
 
-In this contract, the local variable `myMemstruct` (line 19), as well as the parameter `_arr` (line 31), are stored in memory. Function parameters need to have the data location _memory_ or _calldata_.
+En este contrato, la variable local `myMemstruct` (línea 19), así como el parámetro `_arr` (línea 31), se almacenan en la memoria. Los parámetros de una función necesitan tener la localización de data _memory_ o _calldata_.
 
 ### Calldata
 
-_Calldata_ stores function arguments. Like _memory_, _calldata_ is only stored temporarily during the execution of an external function. In contrast to values stored in _memory_, values stored in _calldata_ can not be changed. Calldata is the cheapest data location to use.
+_Calldata_ almacena los argumentos de las funciones. Como en _memory_, _calldata_ solamente se almacena temporalmente durante la ejecución de una función externa. En contraste con valores almacenados en _memory_, valores almacenados en _calldata_ no pueden cambiarse. Calldata es la localización de data más asequible.
 
-In this contract, the parameter `_arr` (line 35) has the data location _calldata_. If we wanted to assign a new value to the first element of the array `_arr`, we could do that in the `function g` (line 31) but not in the `function h` (line 35). This is because `_arr` in `function g `has the data location _memory_ and _function h_ has the data location `calldata`.
+En este contrato, el parámetro `_arr` (line 35) tiene la localización de data _calldata_. Si queremos asignar un nuevo valor al primer elemento de la colección `_arr`, podríamos hacerlo en la `function g` (línea 31) pero no en la `function h` (line 35). Esto es porque  `_arr` en la  `function g` tiene la localización de data  _memory_ y _function h_ tiene la localización de data `calldata`.
 
 ## Assignments
 
-### Memory to memory
+### De Memoria a memoria
 
-Assignments from _memory_ to _memory_ create references instead of copies. If you change the value in one variable, the value of all other variables that reference the same data will be changed.
+Las misiones de  _memory_ a _memory_ crean referencias en ver de copias. Si cambiamos el valor en una variable, el valor de todas las demás variables que referencian la misma data serán cambiadas.
 
-If we were to create a new struct `myMemStruct2` with the data location _memory_ inside the `function f` (line 12) and assign it the value of `myMemStruct` (line 19), any change to `myMemStruct2` would also change the value of `myMemStruct`.
+Si tuviésemos que crear un nuevo struct `myMemstruct2` con la localización de data  _memory_ en la `function f` (línea 12) y asignarle el valor de `myMemstruct` (línea 19), cualquier cambio a `myMemstruct2` cambiará también el valor de `myMemstruct`.
 
-### Storage to local storage
+### De almacén a almacén local.
 
-Assignments from _storage_ to _local storage_ also create references, not copies.
+Las asignaciones del _storage_ al _local storage_ también crean referencias, no copias.
 
-If we change the value of the local variable `myStruct` (line 17), the value of our state variable `myStructs` (line 10) changes as well.
+Si cambiamos el valor de una variable local `myStruct` (línea 17), el valor de nuestra variable de estado `myStructs` (línea 10) cambia también.
 
-## Storage and memory/calldata
+## Almacenaje y memoria/calldata
 
-Assignments between _storage_ and _memory_ (or _calldata_) create independent copies, not references.
+Las asignaciones entre  _storage_ y _memory_ (or _calldata_) crean copias independientes, no referencias.
 
-If we were to create a new struct `myMemStruct3` with the data location _memory_ inside the `function f` (line 12) and assign it the value of `myStruct`, changes in `myMemStruct3` would not affect the values stored in the mapping `myStructs` (line 10).
+Si tuviéramos que crear un nuevo struct `myMemstruct3` con la localización de data _memory_ dentro de la función `function f` (línea 12) y asignarle el valor de `myStruct`, cambios en `myMemstruct3` no afectarían los valores almacenados en el mapeo `myStructs` (línea 10).
 
-As we said in the beginning, when creating contracts we have to be mindful of gas costs. Therefore, we need to use data locations that require the lowest amount of gas possible.
+Como hemos dicho al principio, cuando creamos contratos hemos de tener en mente los gastos de gas. Por ello, necesitamos usar las localizaciones de data que requieren la menor cantidad posible de gas.
 
-## ⭐️ Assignment
+## ⭐️ Misión
 
-1. Change the value of the `myStruct` member `foo`, inside the `function f`, to 4.
-2. Create a new struct `myMemStruct2` with the data location _memory_ inside the `function f` and assign it the value of `myMemStruct`. Change the value of the `myMemStruct2` member `foo` to 1.
-3. Create a new struct `myMemStruct3` with the data location _memory_ inside the `function f` and assign it the value of `myStruct`. Change the value of the `myMemStruct3` member `foo` to 3.
-4. Let the function f return `myStruct`, `myMemStruct2`, and `myMemStruct3`.
+1. Cambiar el valor del miembro `myStruct` llamado `foo`, en la función `function f`, a 4.
+2. Crear un nuevo struct `myMemstruct2` con la localización de data _memory_dentro de `function f` y asígnale el valor de `myMemstruct`. Cambia el valor del miembro `myMemstruct2` llamado `foo` a 1.
+3. Crear un nuevo struct `myMemstruct3`con la localización de data _memory_ en la `function f` y asígnale el valor de `myStruct`.Cambia el valor del miembro `myMemstruct3` llamado `foo` a 3. Misiones
+4. Dejar que la función f devuelva `myStruct`, `myMemStruct2` y `myMemStruct3`.
 
-Tip: Make sure to create the correct return types for the function `f`.
+Consejo: Asegúrese de crear los tipos de retorno correctos para la función  `f`.
