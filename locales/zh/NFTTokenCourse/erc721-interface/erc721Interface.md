@@ -1,85 +1,85 @@
-ERC721 is a standard for token contracts that manage non-fungible tokens (NFTs) on the Ethereum blockchain.
+ERC721是以太坊区块链上管理非同质化代币（NFT）的标准合约。
 
 Each non-fungible token is unique and not interchangeable. NFTs can have different properties, behavior, or rights. Non-fungible tokens are used to represent ownership of unique digital and physical assets like art, collectibles, or real estate.
 
-If you want to know more about the ERC721 token standard, have a look at the specifications in its <a href="https://eips.ethereum.org/EIPS/eip-721" target="_blank">Ethereum improvement proposal</a>.
+如果您想了解更多关于ERC721令牌标准的信息，请查看其以<a href="https://eips.ethereum.org/EIPS/eip-721" target="_blank">以太坊改进提案</a>的规范。
 
-## Interface
+## 接口
 
-The ERC721 standard is more complex than the ERC20 standard and it features optional extensions. ERC721 compliant contracts must, at a minimum, implement the ERC721 and ERC165 interfaces, which we will look at in this section.
+ERC721标准比ERC20标准更复杂，并具有可选扩展功能。符合ERC721规范的合约必须至少实现本节中介绍的ERC721和ERC165接口。 ERC721 compliant contracts must, at a minimum, implement the ERC721 and ERC165 interfaces, which we will look at in this section.
 
-This interface (line 11) is part of the open-source contract library provided by <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol" target="_blank">OpenZeppelin</a>.
+此接口（第11行）是<a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol" target="_blank">OpenZeppelin</a>提供的开源合约库之一。
 
-## Basic IERC721 Functions
+## 基础IERC721函数
 
-Contracts compliant with the ERC721 standard have to implement the following functions:
+符合ERC721标准的合约必须实现以下函数：
 
 ### balanceOf
 
-The function `balanceOf` (line 30) returns the amount of tokens owned by the account with the address `owner`.
+函数`balanceOf`（第30行）返回地址`owner`拥有数量的token数量。
 
 ### ownerOf
 
-The function `ownerOf` (line 39) returns the address `owner` of the account that holds the token with the id `tokenId`.
+函数`ownerOf`（第39行）返回持有`tokenId`的账户地址。
 
 ### safeTransferFrom
 
-The function `safeTransferFrom` (line 55) transfers the ownership of a token with the id `tokenId` from the account with the address `from` to the account with the address `to`.
+函数`safeTransferFrom`（第55行）将`tokenId`的所属权从地址`from`拥有者转移到地址`to`拥有者名下.
 
-The function `safeTransferFrom` (line 137) is almost identical to the function `safeTransferFrom` (line 55) .The only difference is that this function has a non-empty payload `data`.
+该函数`safeTransferFrom`（第137行）与函数`safeTransferFrom`（第55行）几乎相同。唯一的区别是此函数具有非空有效负载数据。
 
-A smart contract must implement the ERC721TokenReceiver Interface if it is to receive a transfer. This will ensure that the contract can handle ERC721 token transfers and prevent the tokens from being locked in a contract that can’t.
+如果要接收转移，则智能合约必须实现 ERC721TokenReceiver 接口。这将确保该合约可以处理ERC721代币转移并防止代币被锁定在无法处理ERC721代币的合约中。 This will ensure that the contract can handle ERC721 token transfers and prevent the tokens from being locked in a contract that can’t.
 
 ### transferFrom
 
-The function `transferFrom` (line 55) transfers the ownership of a token with the id `tokenId` from the account with the address `from` to the account with the address `to`.
+函数`transferFrom`（第55行）将`tokenId`所属权从地址`from`拥有者转移到地址`to`拥有者名下.
 
-**It is recommended to use safeTransferFrom instead of transferFrom whenever possible.**
-The `transferFrom` function is not secure because it doesn’t check if the smart contract that is the recipient of the transfer has implemented the ERC721TokenReceiver interface and is capable of handling ERC721 tokens.
+**建议尽可能使用 safeTransferFrom 而不是 transferFrom。**
+`transferFrom`函数不安全，因为它不检查作为传输接收方的智能合约是否已实现`ERC721TokenReceiver`接口并且是否能够处理`ERC721`代币。
 
-## Advanced IERC721 Functions
+## 高级IERC721功能
 
 ### approve
 
-The function `approve` (line 94) gives the account with the address `to` the permission to manage the token with the id `tokenId` on behalf of the account calling the function.
+函数`approve`（第94行）授予地址`to`代表调用该函数的账户管理id为`tokenId`的权限。
 
 ### getApproved
 
-The function `getApproved` (line 103) returns the address of the account (return var `operator`) that is approved to manage the token with the id `tokenId`.
+函数`getApproved`（第103行）返回获得批准管理id为`tokenId`的token的操作者地址（return var `operator`）。
 
 ### setApprovalForAll
 
-The function `setApprovalForAll` (line 115) sets the permission (`_approved`) for the account with the specified address (input param - `operator`) to manage all tokens of the account calling the function.
+函数`setApprovalForAll`（第115行）设置指定地址（输入参数 - operator）拥有调用者账户持有的所有token的权限 (_approved) 。
 
 ### isApprovedForAll
 
-The function `getApproved` (line 103) returns the boolean true if the account with the address `operator` is approved to manage all tokens of the account with the address `owner`.
+如果地址`operator`的账户已获得管理拥有者`owner`持有的token权限，则函数`getApproved`（第103行）返回布尔值 true。
 
 ## IERC721 Events
 
-ERC721 contracts must also emit the following events:
+ERC721合约还必须发出以下事件：
 
 ### Transfer
 
-The `Transfer` event (line 15) must be emitted when the token with the id `tokenId` is transferred from the account with the address `from` to the account with the address  `to`.
+当id为`tokenId`的token从地址`from`转移到地址`to`时，必须发出`Transfer`事件（第15行）。
 
 ### Approval
 
-The `Approval` event (line 20) must be emitted when the account with the address `owner` approves the account with the address `spender` to manage the token with the id `tokenId` on its behalf.
+当具有地址`owner`的账户批准地址`spender`的账户代表其管理id为`tokenId`的token的权限时，必须发出`Approval`事件（第20行）。
 
 ### ApprovalForAll
 
-The `ApprovalForAll` event (line 25) must be emitted when the account with the address `owner` gives or removes the permission (`_approved`) of the account with the address `operator` to manage all its tokens.
+当拥有者`owner`授予或删除操作员，管理其所有token的权限时，必须发出`ApprovalForAll`事件（第25行）。
 
 ## IERC165
 
-In addition to the ERC721 interface, ERC721 compliant contracts must also implement the ERC165 interface.
+除了`ERC721`接口外，符合`ERC721`规范的合约还必须实现`ERC165`接口。
 
-With the implementation of the ERC165 interface, contracts can declare the support of specific interfaces. A contract that wants to interact with another contract can then query if the other contract supports this interface before making a transaction e.g. sending tokens to it that they might not support.
+通过实现ERC165接口，合约可以声明对特定接口的支持。想要与另一个合约交互的合约可以在进行交易之前查询该合约是否支持此接口，例如向其发送可能不支持的代币。 每个非同质化代币都是独一无二且不可互换的。NFT可以具有不同的属性、行为或权利。非同质化代币用于表示对唯一数字和实物资产（如艺术品、收藏品或房地产）的所有权。
 
-Our IERC721 interface here imports (line 6) and inherits (line 11) from the IERC165 interface.
+IERC721接口导入（第6行）并继承（第11行）了IERC165接口。
 
-This is how <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/introspection/IERC165.sol" target="_blank">OpenZeppelins implementation</a> of the ERC165 interface looks like:
+以下是<a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/introspection/IERC165.sol" target="_blank">OpenZeppelins实现</a>ERC165接口的方式：
 
 ```
 interface IERC165 {
@@ -87,14 +87,14 @@ interface IERC165 {
 }
 ```
 
-For example, the ERC165 identifier for the ERC721 interface as specified in the EIP721 is “0x80ac58cd”. Learn how to calculate an interface identifier and more about the ERC165 in its <a href="https://eips.ethereum.org/EIPS/eip-165" target="_blank">improvement proposal</a>.
+For example, the ERC165 identifier for the ERC721 interface as specified in the EIP721 is “0x80ac58cd”. 例如，在EIP721中指定的ERC721界面的ERC165标识符为“0x80ac58cd”。学习如何计算接口标识符以及有关<a href="https://eips.ethereum.org/EIPS/eip-165" target="_blank">改进提案</a>中ERC165更多信息。
 
-## Other interfaces
+## 其他接口
 
-The <a href="https://eips.ethereum.org/EIPS/eip-721#specification" target="_blank">IERC721TokenReceiver</a> interface must be implemented to accept safe transfers.
+必须实现<a href="https://eips.ethereum.org/EIPS/eip-721#specification" target="_blank">IERC721TokenReceiver</a>接口才能接受安全转移。
 
-There are two optional extensions for ERC721 contracts specified in the EIP721:
+在EIP721中指定了两个可选扩展名用于ERC721合约：
 
-IERC721Enumerable enables a contract to publish its full list of tokens and make them discoverable.
+IERC721Enumerable使合约能够发布其完整的代币列表并使用户可以发现它们。
 
-IERC721Metadata enables a contract to associate additional information to a token. We will have a more detailed look into this in the next section.
+IERC721Metadata使合约能够将附加信息与代币关联。我们将在下一节中更详细地了解这个功能。 We will have a more detailed look into this in the next section.
