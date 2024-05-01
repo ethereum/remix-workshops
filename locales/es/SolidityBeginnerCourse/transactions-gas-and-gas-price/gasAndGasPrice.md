@@ -1,29 +1,29 @@
-As we have seen in the previous section, executing code via transactions on the Ethereum Network costs transaction fees in the form of Ether. The amount of fees that have to be paid to execute a transaction depends on the amount of _gas_ that the execution of the transaction costs.
+Como hemos visto en la sección anterior, ejecutar código vía transacciones en la red Ethereum exige cargos en forma de Ether. La cantidad de la tarifa que ha de ser pagada para ejecutar una transacción depende de la cantidad de _gas_ que cueste la ejecución de la transacción.
 
 ### Gas
 
-_Gas_ is the unit that measures the amount of computational effort that is required to execute a specific operation on the Ethereum network.
+_Gas_ es la unidad que mide la cantidad de esfuerzo computacional que es requerido para ejecutar una operación concreta en la red  Ethereum.
 
-### Gas price
+### Precio del Gas
 
-The _gas_ that fuels Ethereum is sometimes compared to the gas that fuels a car. The amount of gas your car consumes is mostly the same, but the price you pay for gas depends on the market.
+El _gas_ que alimenta a Ethereum es a veces comparado con la gasolina que alimenta a un coche. La cantidad de gas que consume un coche es casi siempre la misma, pero el precio que se paga por el gas depende del mercado.
 
-Similarly, the amount of _gas_ that a transaction requires is always the same for the same computational work that is associated with it. However the price that the sender of the transaction is willing to pay for the _gas_ is up to them. Transactions with higher _gas prices_ are going through faster; transactions with very low _gas prices_ might not go through at all.
+Del mismo modo, la cantidad de gas que requiere una transacción es siempre la misma para el mismo trabajo computacional con el. Sin embargo, el precio que el emisor de la transacción quiere pagar por el gas depende de ellos. Transacciones con precios de gas más altos pasan más rápido; transacciones con precios de gas más bajos quizá nunca lleguen a pasar.
 
-When sending a transaction, the sender has to pay the _gas_ fee (gas_price \* gas) upon execution of the transaction. If _gas_ is left over after the execution is completed, the sender gets refunded.
+Cuando se envía una transacción, el emisor ha de pagar la tasa de gas (gas_price \* gas) cuando la transacción es ejecutada. Si el _gas_ sobra después de que la ejecución se complete, el emisor recibe el importe de vuelta.
 
-_Gas_ prices are denoted in gwei.
+_Gas_ es referido como gwei.
 
-### Gas limit
+### Límite de Gas
 
-When sending a transaction, the sender specifies the maximum amount of gas that they are willing to pay for. If they set the limit too low, their transaction can run out of _gas_ before being completed, reverting any changes being made. In this case, the _gas_ was consumed and can’t be refunded.
+Cuando se envía una transacción el emisor especifica la máxima cantidad de gas que está dispuesto a pagar por la transacción. Si el límite es demasiado bajo, la transacción puede quedarse sin gas antes de ser completada, revirtiendo cualquier cambio que se haya hecho. En este caso, el gas se consume y no podrá ser reembolsado.
 
-Learn more about _gas_ on <a href="https://ethereum.org/en/developers/docs/gas/" target="_blank">ethereum.org</a>.
+Aprenda más sobre _gas_ en <a href="https://ethereum.org/en/developers/docs/gas/" target="_blank">ethereum.org</a>.
 
-<a href="https://www.youtube.com/watch?v=oTS9uxU6cAM" target="_blank">Watch a video tutorial on Gas and Gas Price</a>.
+<a href="https://www.youtube.com/watch?v=oTS9uxU6cAM" target="_blank">Mire un vídeo con tutoriales sobre Gas y los precios del Gas</a>.
 
-## ⭐️ Assignment
+## ⭐️ Misión
 
-Create a new `public` state variable in the `Gas` contract called `cost` of the type `uint`. Store the value of the gas cost for deploying the contract in the new variable, including the cost for the value you are storing.
+Crear una nueva variable de estado `public` en el contrato de `Gas` llamado `cost` del tipo `uint`. Almacenar el valor del coste del gas para desplegar el contrato en una nueva variable, incluyendo el coste por el nuevo valor que se está almacenando.
 
-Tip: You can check in the Remix terminal the details of a transaction, including the gas cost. You can also use the Remix plugin _Gas Profiler_ to check for the gas cost of transactions.
+Consejo: Puede revisar en la terminal de Remix los detalles de una transacción incluyendo los costes de gas. También puede usar el plugin de Remix _Gas Profiler_  para buscar los costes de gas de las transacciones.
