@@ -1,12 +1,12 @@
-Solidity supports different control flow statements that determine which parts of the contract will be executed. The conditional _If/Else statement_ enables contracts to make decisions depending on whether boolean conditions are either `true` or `false`.
+Solidity supports different control flow statements that determine which parts of the contract will be executed. Solidity支持不同的控制流语句，确定合约的哪些部分将被执行。条件If/Else语句使合约能够根据布尔条件是`true`还是`false`来做出决策。
 
-Solidity differentiates between three different If/Else statements: `if`, `else`, and `else if`.
+Solidity区分三种不同的If/Else语句：`if`、`else`和`else if`。
 
 ### if
 
-The `if` statement is the most basic statement that allows the contract to perform an action based on a boolean expression.
+if语句是最基本的语句，允许合约根据布尔表达式执行操作。
 
-In this contract’s `foo` function (line 5) the if statement (line 6) checks if `x` is smaller than `10`. If the statement is true, the function returns `0`.
+在此合约的`foo`函数（第5行）中，if语句（第6行）检查`x`是否小于`10`。如果该语句为真，则函数返回`0`。 在此合约中，`foo`函数使用`else`语句（第10行）在未满足其他任何条件时返回`2`。
 
 ### else
 
@@ -16,18 +16,19 @@ In this contract, the `foo` function uses the `else` statement (line 10) to retu
 
 ### else if
 
-With the `else if` statement we can combine several conditions.
+使用`else if`语句可以组合多个条件。
 
-If the first condition (line 6) of the foo function is not met, but the condition of the `else if` statement (line 8) becomes true, the function returns `1`.
+如果foo函数的第一个条件（第6行）未被满足，但是`else if` 语句的条件（第8行）为真，函数将返回`1`。
 
-<a href="https://www.youtube.com/watch?v=Ld8bFWXLSfs" target="_blank">Watch a video tutorial on the If/Else statement</a>.
+<a href="https://www.youtube.com/watch?v=Ld8bFWXLSfs" target="_blank">观看有关If/Else表达式的视频教程</a>。
 
-## ⭐️ Assignment
+## ⭐️ 作业
 
 Create a new function called `evenCheck` in the `IfElse` contract:
+在`IfElse`合约中，创建一个名为`evenCheck`的新函数：
 
 - That takes in a `uint` as an argument.
-- The function returns `true` if the argument is even, and `false` if the argument is odd.
-- Use a ternery operator to return the result of the `evenCheck` function.
+- 如果参数为偶数，则函数返回 true ，否则返回 false。
+- 使用三元运算符返回 evenCheck 函数结果。
 
-Tip: The modulo (%) operator produces the remainder of an integer division.
+提示：模数（％）运算符产生整数除法的余数。
