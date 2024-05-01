@@ -1,23 +1,23 @@
-This section will give a short introduction to functions and teach you how to use them to read from and write to a state variable.
+Esta sección dará una breve introducción a funciones y enseñará cómo usarlas para leer y escribir sobre una variable de estado.
 
-As in other languages, we use functions in Solidity to create modular, reusable code. However, Solidity functions have some particularities.
+Como en otros lenguajes, usamos funciones en Solidity para crear código modular y reutilizable. Sin embargo, las funciones de Solidity tienen particularidades.
 
-Solidity functions can be split into two types:
+Las funciones de Solidity pueden dividirse en dos tipos:
 
-1. Functions that modify the state of the blockchain, like writing to a state variable. In this contract, the `set` function (line 9) changes the state variable `num`.
-2. Functions that don't modify the state of the blockchain. These functions are marked `view` or `pure`. For example, in this contract, the `get` function (line 14) marked `view` that only returns `num` does not change the state.
+1. Funciones que modifican el estado de la blockchain, como escribir a una variable de estado. In this contract, the `set` function (line 9) changes the state variable `num`.
+2. Funciones que no modifican el estado de la blockchain. Estas funciones están marcadas como `view` o `pure`. Por ejemplo, en este contrato, la función `get` (línea 14) marcada como `view` que solamente devuelve `num`.
 
-To define a function, use the `function` keyword followed by a unique name.
+Para definir una función, use la palabra clave `function`, seguida de un nombre único.
 
-If the function takes inputs like our `set` function (line 9), you must specify the parameter types and names. A common convention is to use an underscore as a prefix for the parameter name to distinguish them from state variables.
+Para definir una función que toma inputs como nuestra función `set` (línea 9), ha de especificar los tipos y nombres de los parámetros. Una convención común es usar el guión bajo como prefijo para los nombres de los parámetros para distinguirlos de las variables de estado.
 
-You can then set the visibility of a function and declare them `view` or `pure` as we do for the `get` function if they don't modify the state. Our `get` function also returns values, so we have to specify the return types. In this case, it's a `uint` since the state variable `num` that the function returns is a `uint`.
+Puede establecer la visibilidad de una función y declararla como `view` o `pure`, como lo hacemos para la función `get`, si no se modifica el estado. Nuestra función `get` también devuelve valores, así que debemos especificar los tipos de retorno. En este caso, es un `uint` porque la variable de estado `num` que devuelve la función es una `uint`.
 
-We will explore the particularities of Solidity functions in more detail in the following sections.
+Vamos a explorar las particularidades de las funciones de Solidity en más detalle en las siguientes secciones.
 
-<a href="https://www.youtube.com/watch?v=Mm6834AAY00" target="_blank">Watch a video tutorial on Functions</a>.
+<a href="https://www.youtube.com/watch?v=Mm6834AAY00" target="_blank">Mire un tutorial sobre funciones</a></a>.
 
-## ⭐️ Assignment
+## ⭐️ Misión
 
-1. Create a public state variable called `b` that is of type `bool` and initialize it to `true`.
-2. Create a public function called `get_b` that returns the value of `b`.
+1. 1.Crear una variable de estado público llamada `b`, que es del tipo`bool` e inicia con `true`.
+2. Crear una función pública llamada `get_b` que devuelva el valor de  `b`.
