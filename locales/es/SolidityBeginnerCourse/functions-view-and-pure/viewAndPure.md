@@ -1,44 +1,44 @@
-This section will look into the types of functions that don't modify the state of the blockchain: _view_ and _pure_ functions.
+Esta sección prestará atención a los tipos de funciones que no modifican el estado de la blockchain: funciones _view_ y _pure_
 
-### View Functions
+### Funciones View
 
-_View functions_ promise to not modify the state.
+Las funciones View prometen no modificar el estado
 
-"The following statements are considered modifying the state:
+“Las siguientes declaraciones se considera que modifican el estado”
 
-1. Writing to state variables.
-2. Emitting events.
-3. Creating other contracts.
-4. Using selfdestruct.
-5. Sending Ether via calls.
-6. Calling any function not marked view or pure.
-7. Using low-level calls.
-8. Using inline assembly that contains certain opcodes."
+1. Escribir a variables de estados.
+2. Emitir eventos.
+3. Crear otros contratos.
+4. Usar la auto desestructuración (self-destruct).
+5. Enviar Ether vía llamadas.
+6. Llamar cualquier función no marcada como view o pure.
+7. Usar llamadas de bajo nivel.
+8. Usando asambleas en línea que contienen determinados opcodes."
 
-From the <a href="https://docs.soliditylang.org/en/latest/contracts.html#view-functions" target="_blank">Solidity documentation</a>.
+De <a href="https://docs.soliditylang.org/en/latest/contracts.html#view-functions" target="_blank">documentación sobre Solidity</a>.
 
-You can declare a view function using the keyword `view`. In this contract, `addToX` (line 8) is a view function. This function takes the parameter `y` and returns the sum of the parameter and the state variable `x`. It reads `x` but does not modify it.
+Puede declarar una función vista (view) usando la palabra clave `view`. En este contrato, `addToX` (línea 8)  es una función vista. Esta función toma el parámetro `y` y devuelve la suma de los parámetros y de las variables de estado `x`. Lee `x` pero no lo modifica.
 
-### Pure functions
+### Funciones Pure
 
-_Pure functions_ promise to neither modify nor to read the state.
+Las _Pure functions_ prometen no modificar ni leer el estado.
 
-"In addition to the list of state modifying statements explained above, the following are considered reading from the state:
+“Además de la lista de  declaraciones de estados modificando explicadas anteriormente, las siguientes se considera que leen desde el estado:
 
-1. Reading from state variables.
-2. Accessing `address(this).balance` or `<address>.balance`.
-3. Accessing any of the members of block, tx, msg (with the exception of `msg.sig` and `msg.data`).
-4. Calling any function not marked pure.
-5. Using inline assembly that contains certain opcodes."
+1. Leyendo desde las variables de estado, .
+2. Accediendo `address(this).balance` o `<address>.balance`.
+3. Accediendo alguno de los miembros de un bloque, tx, mensaje (con la excepción de  `msg.sig` and `msg.data`)
+4. Llamando a cualquier función no marcada como pura.
+5. Usar asamblea en línea que contiene ciertos opcódigos."
 
-From the <a href="https://docs.soliditylang.org/en/latest/contracts.html#pure-functions" target="_blank">Solidity documentation</a>.
+De <a href="https://docs.soliditylang.org/en/latest/contracts.html#pure-functions" target="_blank">documentación de Solidity</a>.
 
-You can declare a pure function using the keyword `pure`. In this contract, `add` (line 13) is a pure function. This function takes the parameters `i` and `j`, and returns the sum of them. It neither reads nor modifies the state variable `x`.
+Puede declarar una función pura usando la palabra clave `pure`. En este contrato, `add` (línea 13) es una función pura. Esta función toma los parámetros `i` y `j`, y devuelve la suma de ellos. No lee ni modifica la variable de estado `x`.
 
-In Solidity development, you need to optimise your code for saving computation cost (gas cost). Declaring functions view and pure can save gas cost and make the code more readable and easier to maintain. Pure functions don't have any side effects and will always return the same result if you pass the same arguments.
+En el desarrollo de Solidity, necesita optimizar su código para ahorrar costes de computación (gas cost). Declarar funciones view y pure puede ahorrar mucho coste de gas y hacer el código más legible y fácil de mantener. Las funciones pure no tienen efectos secundarios y devolverán siempre el mismo resultado si se pasan los mismos argumentos.
 
-<a href="https://www.youtube.com/watch?v=vOmXqJ4Qzbc" target="_blank">Watch a video tutorial on View and Pure Functions</a>.
+<a href="https://www.youtube.com/watch?v=vOmXqJ4Qzbc" target="_blank">Mire un video con tutoriales sobre funciones View y Pure</a>.
 
-## ⭐️ Assignment
+## ⭐️ Misión
 
-Create a function called `addToX2` that takes the parameter `y` and updates the state variable `x` with the sum of the parameter and the state variable `x`.
+Crear una función llamada `addToX2`  que tome el parámetro `y`  y actualizar las variables de estado `x` con la suma de los parámetros y el estado de variable `x`.
