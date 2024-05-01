@@ -1,26 +1,26 @@
-_Ether_ (ETH) is a cryptocurrency. _Ether_ is also used to pay fees for using the Ethereum network, like making transactions in the form of sending _Ether_ to an address or interacting with an Ethereum application.
+_Ether_ (ETH) es una criptomoneda. _Ether_ es también usada para pagar honorarios por usar la red de ethereum, como haciendo transacciones en forma de envío de _Ether_  a una dirección o interactuando con una aplicación de Ethereum.
 
-### Ether Units
+### Unidades de Ether
 
-To specify a unit of _Ether_, we can add the suffixes `wei`, `gwei`, or `ether` to a literal number.
+Para especificar una unidad de _Ether_, podemos añadir los sufijos  `wei`, `gwei`, o `ether` a un número literal.
 
 #### `wei`
 
-_Wei_ is the smallest subunit of _Ether_, named after the cryptographer [Wei Dai](https://en.wikipedia.org/wiki/Wei_Dai). _Ether_ numbers without a suffix are treated as `wei` (line 7).
+_Wei_ es la subunidad más pequeña de _Ether_, nombrada en honor al criptógrafo [Wei Dai](https://en.wikipedia.org/wiki/Wei_Dai). Los números _Ether_ sin un sufijo son tratados como `wei` (línea 7).
 
 #### `gwei`
 
-One `gwei` (giga-wei) is equal to 1,000,000,000 (10^9) `wei`.
+Un `gwei` (giga-wei) es igual a 1,000,000,000 (10^9) `wei`.
 
 #### `ether`
 
-One `ether` is equal to 1,000,000,000,000,000,000 (10^18) `wei` (line 11).
+Un `ether` es igual a 1,000,000,000,000,000,000 (10^18) `wei` (línea 11).
 
-<a href="https://www.youtube.com/watch?v=ybPQsjssyNw" target="_blank">Watch a video tutorial on Ether and Wei</a>.
+<a href="https://www.youtube.com/watch?v=ybPQsjssyNw" target="_blank">Mire un video con tutoriales sobre Ether y Wei</a>.
 
-## ⭐️ Assignment
+## ⭐️Misión
 
-1. Create a `public` `uint` called `oneGWei` and set it to 1 `gwei`.
-2. Create a `public` `bool` called `isOneGWei` and set it to the result of a comparison operation between 1 gwei and 10^9.
+1. Crear una `uint` pública (`public`) llamada `oneGWei` y ponla a un `gwei`.
+2. Crear una `bool` pública (`public`) llamada `isOneGWei` y ponla como el resultado de una operación de comparación entre 1 gwei y 10^9.
 
-Tip: Look at how this is written for `gwei` and `ether` in the contract.
+Consejo: Mire como esto está escrito para  `gwei` y `ether`  en el contrato.
