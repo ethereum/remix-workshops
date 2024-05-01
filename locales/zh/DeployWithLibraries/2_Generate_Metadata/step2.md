@@ -1,38 +1,38 @@
-## Deploying Library
+## 部署库
 
-The **library** from the previous chapter was in the same file as the **contract**. However, they won't be deployed together and will have different addresses.
+上一章的**库**与**合约**在同一个文件中。但是它们不会一起部署，而且将拥有不同的地址。 However, they won't be deployed together and will have different addresses.
 
-In order to use a library, the calling contract must have the library's **address**.
+为了使用库，调用合约必须具有该库的地址。
 
 But the library's address is not directly specified in the solidity code. The calling contract's compiled bytecode contains a **placeholder** where library's **addresses** will go.
 
-At deployment of the **calling contract**, Remix will look in the contract's **metadata** for the library's address and will update the placeholder with the address.
+在部署调用合约时，Remix将查找合约元数据以获取库的地址，并更新占位符为该地址。
 
-So before deploying a contract that calls a library, you need to generate the contract's metadata (AKA its **build artifact**) and then you need to input the library's address into the metadata file.
+因此，在部署调用某个库的合约之前，您需要生成该合约的元数据文件，并将把使用到的相应库地址放到元数据文件中。
 
 A contract's metadata is generated at **compile time**.
 
-Let's setup Remix to generate the **metadata file**.
+让我们设置 Remix 来生成元数据文件吧！
 
-- Go to the settings module by clicking on the settings ![settings](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_Generate_Metadata/settings.png "Settings") icon in the icon panel.
+- 点击图标面板上方“设置”![settings](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_Generate_Metadata/settings.png "Settings")图标进入设置模块。
 
 ![settings module](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_Generate_Metadata/remix_settings.png "Settings Module")
 
-- And check the first option `Generate contract metadata`.
+- 选择第一个选项`Generate contract metadata`.
 
-# Compile and generate metadata (JSON) file.
+# 编译并生成元数据（JSON）文件。
 
-1. Open the Solidity Compiler ![Solidity Compiler](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_Generate_Metadata/remix_icon_solidity.png "Solidity Compiler")
+1. 打开Solidity编译器 ![Solidity Compiler](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_Generate_Metadata/remix_icon_solidity.png "Solidity Compiler")
 
-2. Compile `2_contractSimpleLibrary.sol`.
+2. 编译 `2_contractSimpleLibrary.sol`。
 
-3. Switch to the File Explorer ![File Explorer](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_Generate_Metadata/remix_file_explorer.png "File Explorer")
+3. 切换到文件浏览器 ![File Explorer](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_Generate_Metadata/remix_file_explorer.png "File Explorer")
 
-4. Navigate to the newly create JSON files.
-   - It should be in the folder:
+4. 导航到新创建的JSON文件。
+   - 它应该在以下文件夹中：
 
 **browser/.learneth/DeployWithLibraries/2_Generate_Metadata/artifacts/**
 
-5. Select the newly created JSON file created from the contract.  It has the **same name** as the contract `sample` but with the extension **json**: `sample.json` (don't select the library's metadata `contractSimpleLibrary.json`).
+5. 一个智能合约在编译时就已经生成了其对应的元数据信息。  选择合约新创建的JSON文件。它与示例合约具有相同的名称，但扩展名为**json**：`sample.json`（不要选择库的元数据`contractSimpleLibrary.json`）。
 
-In the next step we'll make some adjustments to the metadata file.
+在下一步中，我们将对元数据文件进行一些调整。
