@@ -1,86 +1,88 @@
-In this section, we will learn how a contract can send and receive Ether.
+En esta sección, aprenderemos cómo un contrato puede enviar y recibir Ether.
 
-### Sending Ether
+### Enviar Ether
 
-We have three different options to transfer Ether: `transfer()`, `send()` and `call()`.
+Tenemos tres opciones diferentes para transferir Ether: `transfer()`, `send()` y `call()`
 
-#### **transfer**
+#### **transferir**
 
 `<address payable>.transfer(uint256 amount)`
 
-- `transfer()` throws an exception on failure
-- Forwards a fixed 2300 gas stipend
+- `transfer()` hace una excepción si hay un fallo
+- Reenvía un estipendio fijo de 2300 gas
 
-An example of `transfer()` can be seen in the `SendEther` contract (line 35).
-**`Transfer()` is not recommended to be used anymore.**
+Un ejemplo de `transfer()` se puede ver en el contrato `SendEther` (línea 35)
+\*\* No se recomienda usar `Transfer()` más.\*\*
+Si se elimina la modificadora
 
-#### **send**
+#### **enviar**
 
 `<address payable>.send(uint256 amount) returns (bool)`
 
-- `send()` returns false on failure
-- Forwards a fixed 2300 gas stipend
+- `send()` devuelve falso o un fallo.
+- Reenvía un estipendio fijo de 2300 gas
 
-An example of `send()` can be seen in the `SendEther` contract (line 41).
-**`Send()` is not recommended to be used anymore.**
+Un ejemplo de `send()` puede verse en el contrato SendEther`(línea 41). ** No se recomienda usar `Send()\` más.\*\*
 
-#### **call**
+#### **llamar**
 
-`<address>.call(bytes memory) returns (bool, bytes memory)`
+`<address>.call(bytes memory) devuelve (bool, bytes memory)`
 
-- `call()` returns false on failure
-- Forwards the maximum amount of gas, but this is adjustable
+- `call()`  devuelve falso o un fallo
+- Devuelve un número máximo de gas, pero este es ajustable.
 
-An example of `call()` can be seen in the `SendEther` contract (line 48).
-`Call()` is currently recommended if you are transfering Ether.
+Un ejemplo de `call()` puede verse en el contrato `SendEther` (línea 48)
+`Call()` es recomendable actualmente si se quiere transferir Ether.
+Sino, el Ether sera denegada y el contrato lanzará una excepción.
 
-The reason `transfer()` and `send()` were introduced was to guard against _reentry attacks_ by limiting the forwarded gas to 2300, which would be insufficient to make a reentrant call that can modify storage.
+La razón por la que  `transfer()` y `send()` fueron introducidos fue cubrirse de los _reentry attacks_, limitando el gas reenviado hasta 2300, que sería insuficiente para hacer una llamada reentrante que pueda modificar el almacenaje.
 
-As we discussed in the last section, each operation on Ethereum has a specific cost associated with it. Certain operations have become more cost intensive over time, so the gas costs associated with them are also raised. When gas costs for operations are subject to change it is not good to use a hardcoded gas amount like transfer(), and send() do.
+Como hemos explicado en la sección anterior, cada operación en Ethereum tiene un coste específico asociado a ella. Ciertas operaciones se han hecho más costosas a lo largo del tiempo, asi que los costes de gas asociados con ellas también se han elevado. Cuando los costes por las operaciones están sujetos a cambios no conviene usar la cantidad de gas escrito a mano (hardcoded) como por ejemplo lo hacen transfer() o send().
 
-That’s why `call()` instead of `transfer()` is now recommended to send Ether.
+Esto es por lo que `call()` en lugar de `transfer()` es ahora recomendado para enviar Ether.
 
-Learn more about the subject in this <a href="https://consensys.net/diligence/blog/2019/09/stop-using-soliditys-transfer-now/" target="_blank">Consensys blog post</a>.
+Aprende más sobre la materia en <a href="https://consensys.net/diligence/blog/2019/09/stop-using-soliditys-transfer-now/" target="_blank">Blog post sobre Consensys</a>.
 
-### Reentrancy attack
+### Ataque de reentrada
 
-A _reentrancy attack_ occurs when a function makes an external call to an untrusted contract and the attacker uses the contract to make recursive calls back to the original function before it finishes its execution. Through this method, the attacker can drain funds and manipulate data in unintended ways.
+Un _ataque de reentrada_ (reentrancy attack) ocurre cuando una función crea una llamada externa a un contrato no confiable y el atacante usa el contrato para hacer llamadas recurrentes de vuelta a la función original antes de que finalice su ejecución. A través de este método, el atacante puede absorber fondos y manipular data de maneras no deseables.
 
-To guard against a _reentrancy attack_, all state changes should be made before calling an external contract. This is also called the <a href="https://docs.soliditylang.org/en/latest/security-considerations.html#re-entrancy" target="_blank">Checks-Effects-Interactions</a> pattern.
+Para protegerse de los ataques de reentrada, todos los cambios de estado han de hacerse antes de llamar a un contrato externo. Esto también es llamado el patrón <a href="https://docs.soliditylang.org/en/latest/security-considerations.html#re-entrancy" target="_blank">Checks-Effects-Interactions</a>
 
-Another way to prevent reentrancy is to use a _Reentrancy Guard_ that checks for such calls and rejects them. You can see an example of this in the contract in our modifier section or a more gas-efficient version on <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/security/ReentrancyGuard.sol" target="_blank">Open Zepplin</a>.
+Otra manera de protegerse de las reentradas es usar un _Guardia de Reentrada_ que chequea esas llamadas y las deniega. Puedes ver el ejemplo de esto en el contrato en la sección de modificaciones o una versión más eficiente con el gas en <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/security/ReentrancyGuard.sol" target="_blank">Open Zepplin</a>.
 
-### Receiving Ether
+### Recibir Ether
 
-If we want to enable a contract to receive Ether without a function being called, we need to create a `receive` function (line 22) or a `fallback` function (line 25); otherwise, the Ether will be rejected, and the contract will throw an exception.
+Si queremos habilitar un contrato para recibir Ether sin tener que llamar a una función, necesitamos  crear una función  `receive` (línea 22) o una función `fallback` (línea 25).
 
-The `receive` function is executed on calls with empty calldata (e.g. plain Ether transfers via send() or transfer()), while the fallback function is executed on calls with calldata. If no receive function exists but a fallback function does, calls with empty calldata will also use the fallback function.
+La función  `receive` se ejecuta con llamadas de calldata vacío (por ejemplo transferencias de Ether básicas vía send() o transfer()), mientras que la función fallback se ejecuta en llamadas con calldata. Si no existe ninguna función `receive`pero sí una función `fallback`, las llamadas con un calldata vacío también usarán la función fallback.
 
 ### Payable function modifier
 
-The `payable` function modifier allows a function to receive Ether.
+La función `payable`modificadora, habilita que las funciones puedan recibir Ether.
 
-The `receive` function (line 22) needs to be `payable`. If you delete the `payable` modifier you will get an error from the compiler. If you delete the `payable` modifier from the `fallback` function (line 25) it will compile, but it won’t be able to receive Ether.
-The functions `sendViaTransfer`, `sendViaSend`, and `sendViaCall` (lines 33, 38, and 45) also need to be `payable` in order to receive Ether.
+La función `receive` (línea 22) necesita ser  `payable` (pagable). Se borras el modificador  `payable` recibirás un error del compilador. Si borras el modificador  `payable` de la función `fallback` (línea 25) que compilará, pero no será capay de recibir Ether.
+Las funciones   `sendViaTransfer`, `sendViaSend` y `sendViaCall` (líneas 33, 38 y 45) también necesitan ser pagables para poder recibir Ether.
 
-### Payable address
+### Dirección pagable
 
-Solidity makes a distinction between two different flavors of the address data type: address and address payable.
+Solidity hace una distinción entre dos sabores diferentes del tipo de data de la dirección: dirección y dirección pagable.
 
-`address`: Holds a 20-byte value.
-`address payable`: Holds a 20-byte value and can receive Ether via its members: transfer and send.
+La función `receive` (línea 22) necesita ser `payable` (pagable).
+`address`: contiene un valor de 20-byte
+`address payable`: tiene un valor de 20-byte y puede recibir Ether via transferencias y envíos de sus miembros.
 
-If you change the parameter type for the functions `sendViaTransfer` and `sendViaSend` (line 33 and 38) from `payable address` to `address`, you won’t be able to use `transfer()` (line 35) or `send()` (line 41).
+Si se cambia el tipo de parámetros para las funciones `sendViaTransfer` y `sendViaSend` (línea 33 and 38) de`payable address` a `address`, no se podrá usar `transfer()` (línea 35) o `send()` (línea 41).
 
-<a href="https://www.youtube.com/watch?v=_5vGaqgzlG8" target="_blank">Watch a video tutorial on Sending Ether</a>.
+<a href="https://www.youtube.com/watch?v=_5vGaqgzlG8" target="_blank">Mire un vídeo con tutoriales sobre envío de Ether</a>.
 
-## ⭐️ Assignment
+## ⭐️ Misión
 
-Build a charity contract that receives Ether that can be withdrawn by a beneficiary.
+Crear un contrato caritativo que recibe Ether que puede ser retirado por un beneficiario.
 
-1. Create a contract called `Charity`.
-2. Add a public state variable called `owner` of the type address.
-3. Create a donate function that is public and payable without any parameters or function code.
-4. Create a withdraw function that is public and sends the total balance of the contract to the `owner` address.
+1. Crear un contrato llamado `Charity`.
+2. Añadir una variable de estado público llamada `owner` del tipo address.
+3. Crear una función donar que es pública y pagable sin ningún parámetro o código de función.
+4. Crear una función de retirada que es pública y envía el balance total de los contratos de la dirección `owner`.
 
-Tip: Test your contract by deploying it from one account and then sending Ether to it from another account. Then execute the withdraw function.
+Consejo: Pruebe su contrato desplegándolo desde una cuenta y después enviando Ether a ella desde otra cuenta. Después ejecute la función de retirada.
