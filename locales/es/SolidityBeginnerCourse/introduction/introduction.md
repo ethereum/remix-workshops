@@ -1,15 +1,16 @@
-Welcome to this interactive Solidity course for beginners.
+Bienvenido a este curso interactivo en Solidity para principiantes.
 
-In this first section, we will give you a short preview of the concepts we will cover in this course, look at an example smart contract, and show you how you can interact with this contract in the Remix IDE.
+En esta primera sección, daremos una breve introducción sobre los conceptos que cubrirá este curso, miraremos ejemplos de contratos inteligentes y le enseñaremos cómo puede interactuar con este contrato en el IDE Remix.
 
-This contract is a counter contract that has the functionality to increase, decrease, and return the state of a counter variable.
+Este contrato es un contrato contador cuya función es incrementar, decrementar y retornar el estado de una variable contadora.
 
-If we look at the top of the contract, we can see some information about the contract like the license (line 1), the Solidity version (line 2), as well as the keyword `contract` and it's name, `Counter` (line 4). We will cover these concepts in the next section about the **Basic Syntax**.
+Si miramos el principio de los contratos, podemos ver información sobre el contrato como la licencia (línea 1), la versión de Solidity (línea 2), así como la palabra clave `contract` y su nombre `Counter` (línea 4). Cubriremos estos conceptos en la próxima sección sobre la
+**Syntaxis Básica** (Basic Syntax).
 
-With `uint public count` (line 5) we declare a state variable of the type `uint` with the visibility `public`. We will cover these concepts in our sections about **Variables**, **Primitive Data Types**, and **Visibility**.
+Con `uint public count` (el contador público uint) (íinea 5), declaramos una variable de estado de tipo `uint` con la visibilidad `public`. Cubriremos estos conceptos en nuestra sección sobre **Variables**, **Tipos de data primitivos** (Primitive Data Types), y **Visibilidad** (Visibility).
 
-We then create a `get` function (line 8) that is defined with the `view` keyword and returns a `uint` type. Specifically, it returns the `count` variable. This contract has two more functions, an `inc` (line 13) and `dec` (line 18) function that increases or decreases our count variable.
-We will talk about these concepts in our sections about **Functions - Reading and Writing to a State Variable** and **Functions - View and pure**.
+Creamos la función `get` (línea 8) que se define con la palabra clave `view` y devuelve un tipo `uint`. Específicamente devuelve la variable `count`. Este contrato tiene dos funciones más, una función `inc` (línea 13) y`dec` (línea 18) que incrementa o decrementa las variables contables.
+Hablaremos de estos conceptos en nuestras secciones sobre **Funciones - Leyendo y escribiendo una variable de estado** (Functions - Reading and Writing to a State Variable) y **Funciones - Vista y pura** (Functions - View and pure).
 
 ## Compile and Deploy through Remix
 
@@ -19,14 +20,14 @@ We will talk about these concepts in our sections about **Functions - Reading an
 
 2. In the "Deploy & run transactions" module, we select our contract "Counter" in the contract input field and click on the "Deploy" button.
 
-3. We expand the token contract functions in the IDE, and test its `get`, `inc`, and `dec` functions.
+3. Interactuamos con el contrato y probamos sus funciones `get`, `inc`, y `dec`.
 
-## ⭐️ Assignment
+## ⭐️ Misión
 
-Throughout this course, we will give you assignments to test and consolidate your newly acquired knowledge.
+A través de este curso, le daremos una misión para probar y consolidar los conocimientos adquiridos.
 
-Your first assignment is to:
+Su primera misión es:
 
-1. Compile this contract.
+1. Compilar este contrato.
 2. Deploy it to the Remix VM.
-3. Interact with your contract.
+3. Interactuar con tu contrato.
