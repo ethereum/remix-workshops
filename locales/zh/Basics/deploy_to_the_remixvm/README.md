@@ -1,10 +1,10 @@
-In the previous chapter, we compiled a contract  - which is to say the Solidity code has been transformed into little chunks of Ethereum Virtual Machine (EVM) bytecode.
+在前一章中，我们编写了一个合约 - 也就是说Solidity代码已经被转换成了以太坊虚拟机（EVM）字节码片段。
 
-Now we will put that code on a test blockchain.
+现在我们将把该代码放到测试区块链上。
 
-1. Click the Deploy and Run icon ![deploy & run icon](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/deploy_to_the_remixvm/images/run.png "deploy & run icon").
+1. 点击“部署和运行”图标![deploy & run icon](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/deploy_to_the_remixvm/images/run.png "deploy & run icon")。
 
-2. Select one of the **Remix VM**s from the **Environment** pulldown.
+2. 从环境下拉菜单中选择**Remix VM**。
 
 3. Click the Deploy button (or the transact button in the expanded view).
 
