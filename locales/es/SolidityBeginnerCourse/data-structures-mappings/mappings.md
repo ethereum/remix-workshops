@@ -1,37 +1,37 @@
-In Solidity, _mappings_ are a collection of key types and corresponding value type pairs.
+En Solidity, _mapeos_ (mappings) son una colección de tipos de claves (keys) y correspondiendo con pares de tipo de valor.
 
-The biggest difference between a mapping and an array is that you can't iterate over mappings. If we don't know a key we won't be able to access its value. If we need to know all of our data or iterate over it, we should use an array.
+La mayor diferencia entre un mapeo y una colección es que no puedes iterar los mapeos. Si no sabemos la clave no seremos capaces de acceder su valor. Si necesitamos saber todo nuestro data e iterar sobre ello, debemos usar una colección.
 
-If we want to retrieve a value based on a known key we can use a mapping (e.g. addresses are often used as keys). Looking up values with a mapping is easier and cheaper than iterating over arrays. If arrays become too large, the gas cost of iterating over it could become too high and cause the transaction to fail.
+Si queremos recuperar un valor basado en una clave conocida podemos usar un mapeo (por ejemplo direcciones a menudo usadas como claves). Mirando a valores con un mapeo es fácil y más asequible que iterar las colecciones. Si las colecciones se vuelven demasiado largas, los costes de gas de iterar pueden volverse demasiado altos y causar que la transacción falle.
 
-We could also store the keys of a mapping in an array that we can iterate over.
+También podemos almacenar las claves de un mapeo en una colección que podrá ser iterada.
 
-### Creating mappings
+### Creando mapeos
 
-Mappings are declared with the syntax `mapping(KeyType => ValueType) VariableName`.
-The key type can be any built-in value type or any contract, but not a reference type. The value type can be of any type.
+Los mapeos son declarados con la sintaxis `mapping(KeyType => ValueType) VariableName`.
+El tipo key puede tener cualquier valor incorporado o cualquier contrato, pero no cualquier tipo de referencia. El tipo de valor puede ser de cualquier tipo.
 
-In this contract, we are creating the public mapping `myMap` (line 6) that associates the key type `address` with the value type `uint`.
+En este contrato, estamos creando el mapeado público `myMap` (línea 6), que asocia el tipo de key `address`  con el tipo de valor `uint`.
 
-### Accessing values
+### Accediendo valores
 
-The syntax for interacting with key-value pairs of mappings is similar to that of arrays.
-To find the value associated with a specific key, we provide the name of the mapping and the key in brackets (line 11).
+La sintaxis para interactuar con pares de valores-clave de los mapeados es similar a la de las colecciones.
+Para encontrar el valor asociado a una clave específica, proporcionamos el nombre del mapeado y la clave entre paréntesis (línea 11).
 
-In contrast to arrays, we won't get an error if we try to access the value of a key whose value has not been set yet. When we create a mapping, every possible key is mapped to the default value 0.
+En contraste con las colecciones, no recibiremos un error si intentamos acceder al valor de una clave cuyos valores no han sido aún establecidos. Si creamos un mapeado, todas las claves posibles son mapeadas hasta el valor por inicial 0.
 
-### Setting values
+### Establecer valores
 
-We set a new value for a key by providing the mapping’s name and key in brackets and assigning it a new value (line 16).
+Establecemos un nuevo valor para una clave, proporcionando el nombre del mapeo y llave entre paréntesis y asignando un nuevo valor (línea 16).
 
-### Removing values
+### Eliminar valores
 
-We can use the delete operator to delete a value associated with a key, which will set it to the default value of 0. As we have seen in the arrays section.
+Podemos usar el operador delete para eliminar un valor asociado a la clave, el cual reestablecerá el valor inicial de 0. Como lo hemos visto en la sección de colecciones.
 
-<a href="https://www.youtube.com/watch?v=tO3vVMCOts8" target="_blank">Watch a video tutorial on Mappings</a>.
+<a href="https://www.youtube.com/watch?v=tO3vVMCOts8" target="_blank">Mire un tutorial con vídeaos sobre mapeos</a>.
 
-## ⭐️ Assignment
+## ⭐️ Misión
 
-1. Create a public mapping `balances` that associates the key type `address` with the value type `uint`.
-2. Change the functions `get` and `remove` to work with the mapping balances.
-3. Change the function `set` to create a new entry to the balances mapping, where the key is the address of the parameter and the value is the balance associated with the address of the parameter.
+1. Crear un mapeo público `balances` que asocie el tipo de clave `address`con el tipo de valor `uint`.
+2. Cambiar las funciones `get` y`remove` para trabajar con los balances de mapeo.
+3. 3.Cambiar la función `set` para crear una nueva entrada a los mapeos de balance, en el que la clave es la dirección de los parámetros y el valor es balance asociado con la dirección del parámetro.
