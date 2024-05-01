@@ -1,7 +1,7 @@
-CODECOPY is one of the many opcodes run by the EVM. Check out the complete list of opcodes at <a href="https://ethervm.io/" target="_blank">https://ethervm.io/</a> .
+CODECOPY是EVM运行的众多操作码之一。请访问<a href="https://ethervm.io/" target="_blank">https://ethervm.io/</a>查看完整的操作码列表。 Check out the complete list of opcodes at <a href="https://ethervm.io/" target="_blank">https://ethervm.io/</a> .
 
-CODECOPY takes the **running code** (or part of it) and to copies it from the `calldata` to the `memory`.
+CODECOPY将正在运行的代码（或其中一部分）从`calldata`复制到`memory`中。
 
-The solidity implementation is: **codecopy(t, f, s)** - copy **s** bytes from code at position **f** to memory at position **t**.
+Solidity实现为：**codecopy(t，f，s)** - 从位置**f**处的代码复制**s**个字节到位置**t**处的内存中。
 
-Every contract deployment uses **CODECOPY**.
+每次合约部署都会使用CODECOPY。
