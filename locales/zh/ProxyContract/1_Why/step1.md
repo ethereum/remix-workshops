@@ -1,27 +1,27 @@
-# Proxy Contract AKA the Dispatcher
+# 代理合约，又称分发器
 
-## Why?
+## 为什么要使用它？
 
-This is a great pattern that is used mainly in **library development**.
+这是一个主要用于库开发的优秀模式。
 
 It helps in the following ways:
 
-- **Save gas cost at deployment time**
-  The purpose of a high gas cost is to discourage the operations that cost a lot for their execution and to encourage optimized code.
+- **在部署时节省燃气成本**
+  高昂的燃气成本目的是阻止执行成本高昂的操作，并鼓励优化代码。
 
-- Proxy contracts are useful when a lot of instances of the same contract need to be deployed because they reduce the duplications in the deployment.
+- 当需要部署许多相同合约实例时，代理合约非常有用，因为它们减少了部署中的重复性。
 
-- **Avoid code repetition in the blockchain.**
-  Heavy computations are expensive because every node will need to perform them, this is of course slowing the network.
+- **避免区块链中出现代码重复**
+  由于每个节点都需要执行大量计算，所以复杂计算很昂贵，这会拖慢网络速度。
 
-- **Develop upgradable(versioned) contracts**
-  When the contract is deployed, it’s immutable. By re-designing the code into different contracts, it is possible to allow logic upgrades while keeping the storage the same.
+- **开发可升级（版本化）合约**
+  当合约被部署后就不可变了。通过将代码重新设计为不同的合约形式，可以实现逻辑升级而保持存储不变。 它有以下几个好处：
 
-## Example of gas cost
+## 燃气成本示例
 
-Storing contract code at creation time can cost up to:
+创建时存储合约代码最多可能耗费：
 
 - 200 \* max_byte_code_length gas
 - 200 \* 24576 = 49152004915200 \* 10 gwei = 49152000 gwei = 0.049152 ether = 9 EUR
 
-see https://github.com/ethereum/EIPs/blob/master/EIPS/eip-170.md for more info on max_byte_code_length.
+更多关于max_byte_code_length信息，请参见 https://github.com/ethereum/EIPs/blob/master/EIPS/eip-170.md
