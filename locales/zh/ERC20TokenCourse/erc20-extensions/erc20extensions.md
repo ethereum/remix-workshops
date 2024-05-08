@@ -2,7 +2,7 @@ ERC20标准仅描述了合约所需和可选的功能，但您可以添加其他
 
 在本节中，我们使用OpenZeppelin扩展添加了燃烧和铸造代币的功能，以及暂停合约的能力。
 
-当然，您可以编写自己的ERC20代币合约实现或扩展并将其导入到您的合约中。但是OpenZeppelin合约已经通过安全专家审核，是添加所需功能的绝佳方式。 But OpenZeppelin contracts have been audited by security experts and are a great way to add desired functionality.
+当然，您可以编写自己的ERC20代币合约实现或扩展并将其导入到您的合约中。但是OpenZeppelin合约已经通过安全专家审核，是添加所需功能的绝佳方式。 但是OpenZeppelin合约已经通过安全专家审核，是添加所需功能的绝佳方式。
 
 ### Mintable
 
