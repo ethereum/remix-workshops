@@ -3,7 +3,7 @@ Welcome to the Multisignature Wallet course! In this section, we'll explore the 
 ## What is a Multisignature Wallet?
 A multisignature (multisig) wallet is a type of digital wallet that requires multiple keys to authorize a cryptocurrency transaction.
 
-Imagine a multisig wallet as a secure vault with multiple locks. To open the vault, each the keyholder must open their individual lock. This setup ensures that no single person can access the vault's contents without the others' consent.
+Imagine a multisig wallet as a secure vault with multiple locks. To open the vault, each keyholder must open their individual lock. This setup ensures that no single person can access the vault's contents without the others' consent.
 
 ## How Does a Multisig Wallet Work?
 In a multisig setup, each transaction must receive a predetermined number of approvals from a set group of individuals. For instance, in a 3-of-5 wallet configuration, there are five authorized addresses, but a transaction only goes through when at least three of them give their approval. When a transaction is initiated, it's presented as a **proposal** to the group. Each member who agrees to the transaction uses their private key to digitally sign it. 

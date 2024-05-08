@@ -2,7 +2,7 @@ In this section we will create a contract that will send a "hello world" message
 
 ## Constructor
 
-The first thing you will need to create in the `constructor` for the function. This will allow you to set the `Gateway` and `Gas Service` contracts we discussed in the previous sections.
+The first thing you will need to create is the `constructor` for the function. This will allow you to set the `Gateway` and `Gas Service` contracts we discussed in the previous sections.
 
 When deploying the contract you will pass in the address of the `Gateway` and `GasService` for Ethereum Sepolia those addresses are `0xe432150cce91c13a887f7D836923d5597adD8E31` for the Gateway and `0xbE406F0189A0B4cf3A05C286473D23791Dd44Cc6` for the Gas Service.
 
@@ -19,7 +19,7 @@ This function takes three parameters:
 2. `_destinationAddress`: The address on the destination chain the transaction will execute at
 3. `_message`: The message being passed to the destination chain
 
-First, you have a `require` statement which ensure that the `msg.value` contains a value. This `msg.value` will be used to pay the `GasService`. If no funds were sent, then the transaction should be reverted as the transaction cannot execute on the Axelar blockchain and destination chain without any gas.
+First, you have a `require` statement which ensures that the `msg.value` contains a value. This `msg.value` will be used to pay the `GasService`. If no funds were sent, then the transaction should be reverted as the transaction cannot execute on the Axelar blockchain and destination chain without any gas.
 
 Next, you encode the `_message` that was passed in. Notice that the `_message` is set as a `string` type. Axelar expects this message to be submitted as a `bytes` type so to convert the `string` to `bytes` you simply pass it through `abi.encode()`.
 
@@ -29,7 +29,7 @@ To pay for the entire interchain transaction you will trigger the function `payN
 
 This function needs the parameters explained earlier in the GasService section. The `sender` for this transaction will be this contract, which is `address(this)`. The `destinationChain` and `destinationAddress` can simply be passed in from this functions parameters, the `payload` is the encoded \_message we wrote earlier. Finally, you need to specify what the refund address is, this can be the address that triggers this function, which you get by writing `msg.sender`.
 
-Once you trigger this function you will have successfully send a transaction from the source chain via Axelar to the destination chain! But there is still is one final step that needs to be complete.
+Once you trigger this function you will have successfully sent a transaction from the source chain via Axelar to the destination chain! But there is still one final step that needs to be complete.
 
 ### Receive Message on Destination Chain
 
