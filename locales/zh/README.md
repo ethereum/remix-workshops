@@ -10,26 +10,26 @@ https://remix.ethereum.org
 
 **3. 前往 Learneth 插件， 这些教程将默认加载**
 
-**4. You may need to sign into Github especially during an in-person workshop**
+**4. 在教程使用期间，您可能需要登录Github**
 
-Github will block too many requests from the same location, unless you are signed into Github and have input your token.  Generally, this is only an issue during in person workshops, when there can be many requests from the same location.
+除非你已登录Github并输入你的 token ，否则Github会阻止来自同一位置的过多请求。  一般来说，这只是教程使用过程中会出现的问题，当来自同一地点的请求很多时，就会出现这种情况。
 
-To input your Github token:
+输入您的Github token：
 
 ```
-- In one browser window - go to https://remix.ethereum.org and go to the settings tab
-- In another browser window go to: 
+- 在一个浏览器窗口中 - 访问 https://remix.ethereum.org 并进入设置模块
+- 在另一个浏览器窗口中访问： 
 
 https://github.com/settings/tokens 
 
-and create a new token and save it in Remix in the you just opened on the settings tab.
+并创建一个新的 token ，并将其保存在你刚才打开的 Remix 的设置模块中。
 ```
 
 ---
 
-### Write your own tutorials for LEARNETH:
+### 为 LEARNETH 编写您自己的教程:
 
-See this site for instructions:
+在此站点查看编写说明：
 
 https://remix-learneth-plugin.readthedocs.io/en/latest/index.html#creating-tutorials
 
