@@ -26,4 +26,4 @@ Axelar 燃料服务是一个非常有用的工具，可用于支付链间交易�
 6. `amount`: 被发送的代币数量
 7. `refundAddress`：如果随此交易发送的燃气费过多，则应将任何退款发送到的地址。
 
-This function is nearly identical to the first top one the main different being that it is used for message + token transfer transactions as opposed to just interchain message transactions (aka GMP Transactions). As a result the GasService needs to also know the `symbol` and `amount` of the token that is being sent.
+这个函数与第一个前面的函数几乎完全相同，主要不同的是它用于消息+代币的传输交易，而不是仅仅用于跨链消息交易(又称GMP交易)。 因此，燃料服务也需要知道正在发送的代币的`symbol`和`amount`。
