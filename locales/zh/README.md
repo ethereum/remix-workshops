@@ -1,14 +1,14 @@
-# This is a repo of tutorials for the Remix's LearnEth Plugin
+# 这是一个关于 Remix 的 LearnEth 插件的教程仓库
 
-### To use these tutorials:
+### 如何使用这些教程：
 
-**1. Open Remix**
+**1. 打开 Remix**
 
 https://remix.ethereum.org
 
-**2. In the plugin manager activate LEARNETH**
+**2. 在插件管理器中激活 LEARNETH**
 
-**3. Go to the Learneth plugin and these tutorials will load by default**
+**3. 前往 Learneth 插件， 这些教程将默认加载**
 
 **4. You may need to sign into Github especially during an in-person workshop**
 
