@@ -1,5 +1,5 @@
-# Uniswap Swap Course
+# Uniswap 交换课程
 
-Review the code of the Uniswap V3 Swap contract for performing token swaps.
+查看用于执行代币交换的 Uniswap V3 交换合约的代码。
 
-Developed by the p2p learning platform https://dacade.org.
+由p2p学习平台 https://dacade.org 开发。
