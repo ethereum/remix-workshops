@@ -14,26 +14,26 @@
 
 在函数中，我们已经实现了 `require` 语句，以确保 gas 被发送
 
-We also have the basic ERC20 functionality to send the token from the calling wallet to this smart contract. The contract also calls the `approve` function to allows the Gateway to eventually transfer funds on its behalf.
+我们还具有基本的 ERC20 功能，可将代币从调用钱包发送到此智能合约。 该合约还调用`approve `功能，以允许网关最终代表其转移资金。
 
-Finally, the `_executeWithToken()` function is also implemented out of the box.
+最后，`_executeWithToken()`函数也是开箱即用的。
 
-It makes use of the following params:
+它使用以下参数：
 
-1. `_payload`: The incoming message from the source chain
-2. `_tokenSymbol`: The symbol of the token that was sent from the source chain
-3. `_amount`: The amount of the token that was sent from the source chain
+1. `_payload`: 源链中传入的消息
+2. `_tokenSymbol`: 从源链发来的代币符号
+3. `_amount`: 从源链发来的代币数量
 
-Now with these params that were passed in, the `_execute()` function can send the tokens that were sent to the appropriate receivers.
+现在，通过传入的这些参数，`_execute()`函数可以将已发送的代币发给合适的接收者。
 
-## Challenge
+## 挑战
 
-Your challenge here is to finish off the `sendToMany()` function using the Axelar Gateway and Gas Service to trigger an interchain transaction.
+这里您面临的挑战是使用 Axelar 网关和 Gas 服务完成`sendToMany()`函数以触发链间交易。
 
-In the end you should be able to deploy this contract on two testnets, trigger the `sendToMany()` function and see the live transaction on <a href="https://testnet.axelarscan.io" target="_blank">Axelarscan (testnet) block explorer</a>.
+最后，您应该能够在两个测试网上部署此合约，触发`sendToMany()`函数并在<a href="https://testnet.axelarscan.io" target="_blank">Axelarscan（测试网）区块浏览器</a>上查看实时交易。
 
-### Testing Notes
+### 测试备注
 
-Note 1: The recommended ERC20 to use is `aUSDC` a wrapped version of the USDC token that can be obtained from <a href= "https://docs.axelar.dev/resources/rpc/resources" target="_blank">the discord faucet bot</a>. When triggering the `sendToMany()` function simply pass in the symbol `aUSDC` to the fourth param.
+注 1：建议使用的 ERC20 是`aUSDC`，它是 USDC 代币的封装版本，可以从 <a href= "https://docs.axelar.dev/resources/rpc/resources" target="_blank">discord faucet bot</a> 获取。 触发`sendToMany()`函数时，只需将符号`aUSDC`传递给第四个参数即可。
 
-Note2: When triggering the `sendToMany()` function you must remember to `approve` your contract to spend `aUSDC` tokens on your behalf, otherwise `transferFrom()` on line49 will throw an error.
+注2：当触发`sendToMany()`函数时，您必须记住`approve`您的合约以代表您花费`aUSDC`代币，否则第49行的`transferFrom()`将抛出错误。
