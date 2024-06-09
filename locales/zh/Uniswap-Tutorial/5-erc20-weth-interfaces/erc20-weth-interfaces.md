@@ -1,52 +1,52 @@
-In this section, we'll explore the `IERC20` interface, a standard interface for interacting with ERC-20 tokens and the `IWETH` interface, a standard interface for interacting with wrapped Ether (WETH). Understanding these interfaces is crucial as it is used in the Uniswap V3 Swap contract to handle token transfers and approvals.
+在本节中，我们将探讨`IERC20`接口（用于与 ERC-20 代币交互的标准接口）和`IWETH`接口（用于与包装以太币`WETH`交互的标准接口）。 了解这些接口至关重要，因为它在 Uniswap V3 交换合约中用于处理代币传输和批准。
 
-You can find a "Solidity ERC20 Token Course" for beginners in LearnEth to understand the ERC20 token standard in more detail.
+您可以在 LearnEth 中找到针对初学者的“Solidity ERC20 代币课程”，以更详细地了解 ERC20 代币标准。
 
-## IERC20 Interface
+## IERC20 接口
 
-On line 80, we define the `IERC20` interface. This interface defines a standard set of functions that ERC-20 tokens must implement. Let's examine the key functions within this interface:
+在第 80行上，我们定义了 `IERC20` 接口。 该接口定义了 ERC-20 代币必须实现的一组标准功能。 让我们查看一下该接口中的关键函数：
 
 ### 1. totalSupply
 
-On line 81, we define the `totalSupply` function. This function returns the total supply of the token.
+在第81行上，我们定义了 `totalSupply` 函数。 此函数返回代币的总供应量。
 
 ### 2. balanceOf
 
-On line 83, we define the `balanceOf` function. This function returns the balance of the specified address.
+在第83行上，我们定义了 `balanceOf ` 函数。 此函数返回指定地址的余额。
 
 ### 3. transfer
 
-On line 85, we define the `transfer` function. This function transfers tokens from the sender to the specified recipient.
+在第85行上，我们定义了 `transfer ` 函数。 该函数将代币从发送者转移到指定的接收者。
 
 ### 4. allowance
 
-On line 87, we define the `allowance` function. This function returns the amount of tokens that the spender is allowed to spend on behalf of the owner.
+在第87行上，我们定义了 `allowance ` 函数。 此函数返回允许花费者代表所有者花费的代币数量。
 
 ### 5. approve
 
-On line 89, we define the `approve` function. When called, this function approves a spender to spend the specified amount of tokens on behalf of the sender.
+在第89行上，我们定义了 `approve ` 函数。 调用时，此函数会批准花费者代表发送者花费指定数量的代币。
 
 ### 6. transferFrom
 
-On line 91, we define the `transferFrom` function. This function transfers tokens from the specified sender to the recipient. The function can only be called by the spender if the spender is allowed to spend the specified amount of tokens on behalf of the sender.
+在第91行上，我们定义了 `transferFrom ` 函数。 此函数将代币从指定的发送者传输到接收者。 仅当允许花费者代表发送者花费指定数量的代币时，该函数才能由花费者调用。
 
 ### 7. Events
 
-On lines 102-103, we define the `Transfer` and `Approval` events. These events are emitted when the `transfer` and `approve` functions are called, respectively.
+在第102-103行中，我们定义了`Transfer`和`Approval`事件。 这些事件分别在调用 `transfer` 和 `approve` 函数时发生。
 
-## IWETH Interface
+## IWETH 接口
 
-On line 106, we define the `IWETH` interface. This interface extends the `IERC20` interface and defines two additional functions:
+在第 106行上，我们定义了 `IWETH ` 接口。 这个接口扩展了 `IERC20` 接口，并定义了两个额外的函数：
 
 ### 1. deposit
 
-On line 107, we define the `deposit` function. This function deposits ETH into the contract and returns the equivalent amount of WETH. This function is used to wrap ETH into WETH.
-We need to wrap ETH into WETH because the Uniswap V3 Swap contract only supports ERC-20 tokens.
+在第107行上，我们定义了 `deposit ` 函数。 该函数将 ETH 存入合约并返回等值的 WETH。 该函数用于将ETH包装成WETH。
+我们需要将 ETH 包装成 WETH，因为 Uniswap V3 交换合约仅支持 ERC-20 代币。
 
 ### 2. withdraw
 
-On line 109, we define the `withdraw` function. This function withdraws the specified amount of WETH from the contract and returns the equivalent amount of ETH. This function is used to unwrap WETH into ETH.
+在第109行上，我们定义了 `withdraw ` 函数。 该函数从合约中提取指定数量的WETH并返回等值数量的ETH。 该函数用于将 WETH 解包为 ETH。
 
-## Conclusion
+## 结论
 
-In this tutorial, we explored the Uniswap V3 Swap contract.  To get a full sense of how Uniswap works, try making some swaps on the <a href="https://app.uniswap.org/" target="_blank">Uniswap DApp</a> and go to the <a href="https://docs.uniswap.org/" target="_blank">Uniswap docs</a>.
+在本教程中，我们探索了 Uniswap V3 交换合约。  要全面了解 Uniswap 的工作原理，请尝试在 <a href="https://app.uniswap.org/" target="_blank">Uniswap DApp</a> 上进行一些交换，并访问<a href="https://docs.uniswap.org/" target="_blank">Uniswap 文档</a>。
