@@ -1,30 +1,30 @@
-In this section, we'll delve into the `swapExactInputMultiHop` function in the `UniswapV3SwapExamples` contract. This function enables more complex token swaps by allowing users to specify a custom path through multiple liquidity pools.
+在本节中，我们将深入研究 `UniswapV3SwapExamples` 合约中的 `swapExactInputMultiHop` 函数。 此函数允许用户通过多个流动资金池指定一个自定义路径，从而执行更复杂的代币互换。
 
-If for example, a user wants to swap token A for token D, but there is no direct liquidity pool for A and D, the user can specify a path through multiple tokens. For example, the user can swap A for B, then B for C, and finally C for D. This is of course automatically done by the Uniswap V3 Swap contract.
+例如，如果用户想要将代币A交换为代币D，但A和D没有直接的流动性池，则用户可以指定通过多个代币的路径。 例如，用户可以将 A 交换为 B，然后将 B 交换为 C，最后将 C 交换为 D。这当然是由 Uniswap V3 交换合约自动完成的。
 
-### Parameters and Return Value
+### 参数和返回值
 
-On line 32, we define a function called `swapExactInputMultiHop`. This function executes a multi-hop swap. It takes the following parameters:
+在第32行，我们定义了一个叫做`swapExactInputMultiHop `的函数。 该函数执行多跳交换。 它需要以下参数：
 
-- **`bytes calldata path`**: Encoded information about the swap path (i.e., which tokens to swap through).
-- **`address tokenIn`**: The address of the token being sent.
-- **`uint amountIn`**: The amount of the input token being sent.
+- **`bytes calldata path`**: 有关交换路径的编码信息（即通过哪些代币进行交换）。
+- **`address tokenIn`**: 正在发送的代币的地址。
+- **`uint amountIn`**: 发送的输入代币的数量。
 
-It returns a `uint` called `amountOut`, which is the amount of the output token that was received.
+它返回一个叫做`amountOut`的`uint`, 即收到的输出代币的数量。
 
-### Function Body
+### 函数体
 
-In the function body, we first transfer the input token from the sender to our contract, line 38.
-Then, we approve the Uniswap Swap router to spend the input token on our behalf, line 41.
+在函数体中，我们首先将输入代币从发送者传输到我们的合约，第 38 行。
+然后，我们批准 Uniswap 交换路由器代表我们使用输入的代币，第 41 行。
 
-On line 43, we create an instance of the `ExactInputParams` struct, line 73. This struct contains the parameters that are required for our `exactInput` function on line 81, which will execute the multi-hop swap.
+在第 43 行，我们创建了第 73 行的`ExactInputParams`结构体实例 该结构体包含第 81 行的 `exactInput `函数所需的参数，该函数将执行多跳交换。
 
-We set the parameters of the struct as follows:
+我们设置结构体的参数如下：
 
-- **`path`**: We set this to the `path` parameter of our function.
-- **`recipient`**: We set this to the sender of the transaction.
-- **`deadline`**: We set this to the current timestamp. We do this because we want the transaction to be processed as soon as possible.
-- **`amountIn`**: We set this to the `amountIn` parameter of our function.
-- **`amountOutMinimum`**: We set this to 0 because we do not want to specify a minimum amount of the output token that we are willing to accept.
+- **`path `**：我们将其设置为函数的`path `参数。
+- **\`recipient**：我们将其设置为交易发送人。
+- **\`deadline**：我们将其设置为当前的时间戳。 我们这样做是因为我们希望尽快处理交易。
+- **`amountIn `**：我们将其设置为函数的`amountIn `参数。
+- **`amountOutMinimum`**: 我们将其设置为 0，因为我们不想指定我们愿意接受的输出代币的最小数量。
 
-On line 53, we execute the multi-hop swap by calling the `exactInput` function. This function returns the amount of the output token that was received.
+在第 53 行，我们通过调用`exactInput`函数执行多跳交换。 此函数返回收到的输出代币的数量。
