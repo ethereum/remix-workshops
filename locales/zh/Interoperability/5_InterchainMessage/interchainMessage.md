@@ -32,22 +32,22 @@
 
 ### 在目标链上接收消息
 
-On the destination chain the inbound interchain transaction needs to be picked up and handled by the `AxelarExecutable`'s `_execute()` function.
+在目标链上，需要通过`AxelarExecutable`的`_execute()`来提取和处理进来的链际交易。
 
-The `_execute()` function is defined in the `AxelarExecutable` contract so when defining this function you must remember to include the `override` keyword.
+`_execute()` 函数是在 `AxelarExecutable` 合约中定义的，因此在定义这个函数时，你必须记住要包含`override`关键字。
 
-This function takes three parameters.
+此函数需要三个参数。
 
-1. `_sourceChain`: The blockchain which the transaction has originated from
-2. `_sourceAddress`: The address on the source chain which the transaction has been sent from
-3. `_payload`: The message that has been sent from the source chain
+1. `_sourceChain`：交易源自的区块链
+2. `_sourceAddress`: 被发送的这条交易所在源链上的地址
+3. `_payload`: 从源链发送的消息
 
-The first thing that needs to be done in this contract is to get access to your `message` that was sent. Recall, before sending the message it was sent through `abi.encode()` to convert the message from type `string` to type `bytes`. To convert your message back from type `bytes` to type `string` simply pass the `_payload` to the function `abi.decode()` and specify that you want the `_payload` decoded to type `string`. This will return the message as a string.
+在此合约中需要做的第一件事是访问您发送的`message `。 回想一下，在发送信息之前，我们通过 `abi.encode()` 将信息从`string`类型转换为`bytes`类型。 要将消息从`bytes`类型转换回`string`类型，只需将`_payload`传递给函数`abi.decode()`，并指定您希望将`_payload`解码为`string`类型。 这将会把消息作为字符串返回。
 
-Now that you have your message as a type string you can set the `sourceChain` and `sourceAddress` storage variables as `_sourceChain` and `_sourceAddress` to have an easy reference to the data that was passed in. You can also emit the `Executed` event with the `sourceAddress` and `message` event that you just decoded.
+现在您已将消息设置为字符串类型，您可以将`sourceChain`和`sourceAddress`存储变量设置为`_sourceChain`和`_sourceAddress`，以便引用传入的数据。 您还可以使用刚刚解码的`sourceAddress`和`message`事件发出`Executed`事件。
 
-Great! At this point you are now handling the interchain transaction on the destination chain.
+太棒了！ 此刻，您正在处理目标链上的跨链交易。
 
-To interact with this contract make sure you deploy it on at least two blockchains so that you can call `setRemoteValue()` from the one chain and then have the `_execute()` function automatically triggered on another chain. You will be able to query the `sourceChain` and `sourceAddress` variables on the destination chain to ensure that the interchain execution worked correctly.
+要与此合约交互，请确保将其部署在至少两个区块链上，以便您可以从一条链调用`setRemoteValue()`，然后在另一条链上自动触发`_execute()`函数。 您将能够查询目标链上的`sourceChain`和`sourceAddress`变量，以确保链间执行正常工作。
 
-To view the full step by step of the interchain transaction checkout the <a href="https://testnet.axelarscan.io" target="_blank">Axelarscan (testnet) block explorer</a>.
+要查看链间交易的完整步骤，请查看<a href="https://testnet.axelarscan.io" target="_blank">Axelarscan（测试网）区块浏览器</a>。
