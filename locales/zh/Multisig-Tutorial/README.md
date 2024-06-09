@@ -1,5 +1,5 @@
-## MultiSig Wallet
+## 多签钱包
 
-Learn how to write a MultiSig Wallet smart contract on Ethereum.
+了解如何在以太坊上编写多重签名钱包智能合约。
 
-Developed by the p2p learning platform https://dacade.org.
+由p2p学习平台 https://dacade.org 开发。
