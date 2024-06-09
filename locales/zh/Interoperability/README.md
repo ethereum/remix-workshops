@@ -1,3 +1,3 @@
-## Interoperability Between Blockchains
+## 区块链之间的互操作性
 
-Learn how to build interoperable smart contracts that can send messages and assets between different blockchains using Axelar technology.
+了解如何构建可互操作的智能合约，以便使用 Axelar 技术在不同区块链之间发送消息和资产。
