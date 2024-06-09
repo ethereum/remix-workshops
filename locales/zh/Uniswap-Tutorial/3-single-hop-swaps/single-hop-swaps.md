@@ -1,36 +1,36 @@
-Single-hop swaps allow users to exchange one token for another directly within a liquidity pool. In this section, we will learn how to use the Uniswap V3 Swap contract to execute single-hop swaps.
+单跳交换允许用户直接在流动性池内将一种代币交换为另一种代币。 在本节中，我们将学习如何使用 Uniswap V3 交换合约执行单跳交换。
 
-## Function Parameters
+## 函数参数
 
-On line 8, we define a function called `swapExactInputSingleHop`. This function executes a single-hop swap. It takes the following parameters:
+在第8行，我们定义了一个叫做`swapExactInputSingleHop `的函数。 该函数执行单跳交换。 它需要以下参数：
 
-- **`address tokenIn`**: The address of the token being sent.
-- **`address tokenOut`**: The address of the token being received.
-- **`uint24 poolFee`**: The fee associated with the swap.
-- **`uint amountIn`**: The amount of the input token being sent.
+- **`address tokenIn`**: 正在发送的代币的地址。
+- **`address tokenOut`**: 接收到的代币的地址。
+- **`uint24 poolFee`**: 交换费用
+- **`uint amountIn`**: 发送的输入代币的数量。
 
-It returns a `uint` called `amountOut`, which is the amount of the output token that was received.
+它返回一个叫做`amountOut`的`uint`, 即收到的输出代币的数量。
 
-## Function Body
+## 函数体
 
-In the function body, we first transfer the input token from the sender to our contract, line 14.
-Then, we approve the Uniswap Swap contract to spend the input token on our behalf, line 15.
+在函数体中，我们首先将输入代币从发送者传输到我们的合约，第 14 行。
+然后，我们批准 Uniswap 交换合约代表我们花费输入代币，第 15 行。
 
-On line 17, we create an instance of the `ExactInputSingleParams` struct. This struct contains the parameters that are required for our `exactInputSingle` function on line 45, which will execute the single-hop swap. We repeat `ISwapRouter.ExactInputSingleParams` two times on that line because we are making an instance of a struct that is defined in an interface.
+在第17行上，我们创建了一个 `ExactInputSingleParams` 结构体实例。 该结构体包含第 45 行的 `exactInputSingle`函数所需的参数，该函数将执行单跳交换。 我们在该行上重复`ISwapRouter.ExactInputSingleParams`两次，因为我们正在创建在接口中定义的结构体实例。
 
-## Parameters of the ExactInputSingleParams Struct
+## ExactInputSingleParams 结构体参数
 
-We set the parameters of the struct as follows:
+我们设置结构体的参数如下：
 
-- **`tokenIn`**: We set this to the `tokenIn` parameter of our function.
-- **`tokenOut`**: We set this to the `tokenOut` parameter of our function.
-- **`fee`**: We set this to the `poolFee` parameter of our function.
-- **`recipient`**: We set this to the sender of the transaction.
-- **`deadline`**: We set this to the current timestamp. We do this because we want the transaction to be processed as soon as possible.
-- **`amountIn`**: We set this to the `amountIn` parameter of our function.
-- **`amountOutMinimum`**: We set this to 0 because we do not want to specify a minimum amount of the output token that we are willing to accept.
-- **`sqrtPriceLimitX96`**: We set this to 0 because we do not want to specify a limit on the price.
+- **`tokenIn`**：我们将其设置为函数的`tokenIn`参数。
+- **`tokenOut`**：我们将其设置为函数的`tokenOut`参数。
+- **`fee`**：我们将其设置为函数的`poolFee `参数。
+- **\`recipient**：我们将其设置为交易发送人。
+- **\`deadline**：我们将其设置为当前的时间戳。 我们这样做是因为我们希望尽快处理交易。
+- **`amountIn `**：我们将其设置为函数的`amountIn `参数。
+- **`amountOutMinimum`**: 我们将其设置为 0，因为我们不想指定我们愿意接受的输出代币的最小数量。
+- **`sqrtPriceLimitX96`**: 我们将其设置为 0，因为我们不想指定价格限制。
 
-## Executing the Single-hop Swap
+## 执行单跳交换
 
-On line 29, we assign the output of the `exactInputSingle` function to the `amountOut` variable. This function executes the single-hop swap and returns the amount of the output token that was received.
+在第29行中，我们将`extractInputSingle`函数的输出分配给`amountOut`变量。 该函数执行单跳交换并返回收到的输出代币的数量。
