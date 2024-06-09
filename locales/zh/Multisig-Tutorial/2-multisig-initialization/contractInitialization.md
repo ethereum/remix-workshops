@@ -26,35 +26,35 @@
 
 `constructor` 函数（第 14 行）在合约部署期间仅执行一次。 它初始化基本参数，在本例中为所有者列表和所需的确认数量（第 14 行）。
 
-在第 15 行和第 16 行，我们有两个`require`语句来确保输入有效。 In this case, we require that there must be at least one owner and that the number of required confirmations must be greater than zero and less than or equal to the number of owners.
+在第 15 行和第 16 行，我们有两个`require`语句来确保输入有效。 在这种情况下，我们要求必须至少有一个所有者，并且所需确认的数量必须大于零且小于或等于所有者的数量。
 
-The constructor then initializes the contract state by verifying that is not address(0) (Line 25) and that the owner is unique (Line 26).  Then it adds a key/ value pair to the isOwner mapping (Line 28), and then it populates the `owners` array with the provided owner addresses (Line 29).
+然后，构造函数通过验证不是 address(0)（第 25 行）并且所有者是唯一的（第 26 行）来初始化合约状态。  然后它向 isOwner 映射添加一个键/值对（第 28 行），然后用提供的所有者地址填充`owners`数组（第 29 行）。
 
-Finally, it sets the `numConfirmationsRequired` variable with the specified value (Line 32).
+最后，它会将 `numConfirmationsRequired` 变量设置为指定值（第 32 行）。
 
-## getOwners Function
+## getOwners 函数
 
-The `getOwners` function (Line 36) allows users to retrieve the list of owners of the multi-signature wallet. It returns the `owners` array (Line 37).
+`getOwners` 函数（第 36 行）允许用户检索多重签名钱包的所有者列表。 它返回 `owners` 数组（第 37 行）。
 
-## getNumConfirmationsRequired Function
+## getNumConfirmationsRequired 函数
 
-The `getNumConfirmationsRequired` function (Line 41) allows users to retrieve the number of confirmations required for a transaction. It returns the `numConfirmationsRequired` variable (Line 42).
+`getNumConfirmationsRequired` 函数（第 41 行）允许用户检索交易所需的确认数量。 它会返回 `numConfirmationsRequired` 变量（第 42 行）。
 
-## Conclusion
+## 结论
 
-In this section, we explored the initialization process of the Multisig smart contract. We examined the constructor function and understood how it sets up the initial state of the contract.
+在本节中，我们探讨了多重签名智能合约的初始化过程。 我们检查了构造函数并了解它如何设置合约的初始状态。
 
-## ⭐️ Assignment: Deploy a Multisig Wallet
+## ⭐ 作业: 部署一个多签钱包
 
-Deploy a Multisig contract with three owners and require two confirmations for transaction execution.
+部署一个具有三个所有者并需要两次确认才能执行交易的多重签名合约。
 
-1. Compile contractInitialization.sol
-2. Go to Deploy & Run Transactions in Remix.
-3. Expand the "Deploy" section.
-4. Under "_OWNERS", enter three an array of three addresses.
-5. Under "_NUM_CONFIRMATIONS_REQUIRED", enter the number of confirmations required for a transaction.
+1. 编译 contractInitialization.sol
+2. 进入 Remix 的 Deploy & Run Transactions 模块。
+3. 展开 "Deploy" 部分。
+4. 在"_OWNERS"下，输入三个地址的数组。
+5. 在"_NUM_CONFIRMATIONS_REQUIRED"下，输入交易所需的确认数量。
 
-**Hints:**
+**提示:**
 
-- You can get addresses from the "ACCOUNTS" dropdown menu.
-- The array of addresses should be in the format: ["0x123...", "0x456...", "0x789..."].
+- 您可以从"ACCOUNTS"下拉菜单中获取地址。
+- 地址数组的格式应该是：["0x123...", "0x456...", "0x789..."]。
