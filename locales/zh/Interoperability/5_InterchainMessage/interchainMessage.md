@@ -1,36 +1,36 @@
-In this section we will create a contract that will send a "hello world" message between two blockchains.
+在本节中，我们将创建一个合约，在两个区块链之间发送"hello world"消息。
 
-## Constructor
+## 构造函数
 
-The first thing you will need to create in the `constructor` for the function. This will allow you to set the `Gateway` and `Gas Service` contracts we discussed in the previous sections.
+首先需要为合约创建构造函数。 这样就可以设置前几节讨论过的 "网关" 和 "燃气服务" 合约。
 
-When deploying the contract you will pass in the address of the `Gateway` and `GasService` for Ethereum Sepolia those addresses are `0xe432150cce91c13a887f7D836923d5597adD8E31` for the Gateway and `0xbE406F0189A0B4cf3A05C286473D23791Dd44Cc6` for the Gas Service.
+部署合约时，你需要输入以太坊 Sepolia 的 `Gateway` 和 `GasService` 的地址，Gateway 是 `0xe43250cce91cce91c13a887f7D836923d5597adD8E31` ，GasService 是 `0xbE406F0189A0B4cf3A05C286473D23791Dd44Cc6`。
 
-For the full list of relevant Axelar addresses <a href="https://docs.axelar.dev/resources/contract-addresses/testnet" target="_blank">see here</a>
+关于相关的 Axelar 地址的完整列表 <a href="https://docs.axelar.dev/resources/contract-addresses/testnet" target="_blank">查看这里</a>
 
-## Send Interchain Message
+## 发送链际消息
 
-Now that the constructor has set the relevant Axelar addresses needed to trigger an interchain transaction you can move on to the `setRemoteValue()`, which will trigger this transaction.
+现在构造函数已经设置了触发链间交易所需的相关 Axelar 地址，您可以继续执行`setRemoteValue()`，这将触发此交易。
 
-This function takes three parameters:
+此函数需要三个参数：
 
-1. `_destinationChain`: The chain which the transaction is going to
-2. `_destinationAddress`: The address on the destination chain the transaction will execute at
-3. `_message`: The message being passed to the destination chain
+1. `_destinationChain`: 交易将要前往的链
+2. `_destinationAddress`：交易将在目标链上执行的地址
+3. `_message`：传递到目标链的消息
 
-First, you have a `require` statement which ensure that the `msg.value` contains a value. This `msg.value` will be used to pay the `GasService`. If no funds were sent, then the transaction should be reverted as the transaction cannot execute on the Axelar blockchain and destination chain without any gas.
+首先，你得有一个 `require` 语句，确保`msg.value` 包含一个值。 此 `msg.value` 将用于支付 `GasService` 。 如果没有发送资金，则应撤销交易，因为在没有任何 gas 的情况下，交易无法在 Axelar 区块链和目标链上执行。
 
-Next, you encode the `_message` that was passed in. Notice that the `_message` is set as a `string` type. Axelar expects this message to be submitted as a `bytes` type so to convert the `string` to `bytes` you simply pass it through `abi.encode()`.
+接下来，你需要对传入的 `_message` 进行编码。 请注意，`_message`已设置为`string`类型。 Axelar 希望此消息以 `bytes` 类型提交，要将`string` 转换为 `bytes` ，您只需通过 `abi.encode()` 传递。
 
-Now, with your message encoded you can begin to interact with the `GasService` and the `Gateway`
+现在，你可以用你的消息编码开始与 `GasService` 和 `Gateway ` 交互。
 
-To pay for the entire interchain transaction you will trigger the function `payNativeGasForContractCall`, which is defined in the `GasService`.
+要支付整个跨链交易，您将触发`payNativeGasForContractCall`的函数，这个函数在`GasService`中被定义。
 
-This function needs the parameters explained earlier in the GasService section. The `sender` for this transaction will be this contract, which is `address(this)`. The `destinationChain` and `destinationAddress` can simply be passed in from this functions parameters, the `payload` is the encoded \_message we wrote earlier. Finally, you need to specify what the refund address is, this can be the address that triggers this function, which you get by writing `msg.sender`.
+该函数需要前面 GasService 部分中解释的参数。 此交易的 `sender` 就是该合约，也就是 `address(this)` 。 `destinationChain` 和 `destinationAddress` 可以从这个函数参数中传递，`payload` 是我们先前所写的 \_message 的编码。 最后，您需要指定退款地址，这可以是触发此函数的地址，您可以写入`msg.sender`。
 
-Once you trigger this function you will have successfully send a transaction from the source chain via Axelar to the destination chain! But there is still is one final step that needs to be complete.
+一旦您触发此函数，您将成功地通过Axelar从源链向目标链发送一笔交易！ 但仍有最后一步需要完成。
 
-### Receive Message on Destination Chain
+### 在目标链上接收消息
 
 On the destination chain the inbound interchain transaction needs to be picked up and handled by the `AxelarExecutable`'s `_execute()` function.
 
