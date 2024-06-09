@@ -15,13 +15,13 @@ Axelar 可执行文件包含相关的辅助函数，这些函数将根据源链�
 
 ## \_executeWithoken()
 
-This function handles the execution on the destination chain for a message being sent with a fungible token. It takes six relevant parameters:
+此函数处理被发送到目标链上带有可替代代币的消息交易。 它需要六个相关参数：
 
-1. `commandId`: A unique transaction id on the Axelar chain.
-2. `sourceChain`: The blockchain which the transaction has been sent from
-3. `sourceAddress`: The address from the source chain that the transaction has been sent from
-4. `payload`: The message that is being sent
-5. `tokenSymbol`: The symbol of the token being sent
-6. `amount`: The amount of that token that is being sent
+1. `commandId`: Axelar 链上唯一的交易ID。
+2. `sourceChain`: 被发送的这条交易所在的源链
+3. `sourceAddress`: 被发送的这条交易所在源链上的地址
+4. `payload`: 发送的信息
+5. `tokenSymbol `：正在发送的代币的符号
+6. `amount`: 被发送的代币数量
 
-The first four parameters are identical to that of the `_execute()` function. The final two parameters of `tokenSymbol` and `amount` are in reference to the token that is being sent along with the message. It allows you on the destination chain to interact with the token accordingly, for example transferring it to another receiving address. The `commandId` will not be used during the rest of this module.
+前四个参数与 `_execute()` 函数相同。 最后两个参数`tokenSymbol` 和 `amount` 与随信息发送的代币有关。 它允许您在目标链上与代币进行交互，例如将其转移到另一个接收地址。 此模块的其余部分不会使用 `commandId` 。
