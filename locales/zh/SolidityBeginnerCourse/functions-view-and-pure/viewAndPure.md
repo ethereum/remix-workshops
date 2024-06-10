@@ -17,11 +17,11 @@ view函数不修改状态。
 
 来自 <a href="https://docs.soliditylang.org/en/latest/contracts.html#view-functions" target="_blank">Solidity文档</a>.
 
-You can declare a view function using the keyword `view`. 您可以使用关键字`view`声明函数。在此合约中，`addToX`（第8行）是一个`view`函数。该功能接受参数`y`并返回参数和状态变量`x`的总和。它读取`x`但不会修改它。 您可以使用关键字`pure`声明pure函数。在此合约中，`add`（第13行）是一个pure函数。该函数接受参数`i`和`j`，并返回它们的总和。它既不读取也不修改状态变量`x`。 It reads `x` but does not modify it.
+您可以使用关键字`view`声明函数。 您可以使用关键字`view`声明函数。在此合约中，`addToX`（第8行）是一个`view`函数。该功能接受参数`y`并返回参数和状态变量`x`的总和。它读取`x`但不会修改它。 您可以使用关键字`pure`声明pure函数。在此合约中，`add`（第13行）是一个pure函数。该函数接受参数`i`和`j`，并返回它们的总和。它既不读取也不修改状态变量`x`。 它读取`x`但不会修改它。
 
 ### Pure函数
 
-_Pure functions_ promise to neither modify nor to read the state.
+_Pure 函数_ 既不修改也不读取状态。
 
 除了上面解释过的一系列改变状态的语句外，还有以下内容被认为是读取状态：
 
@@ -33,9 +33,9 @@ _Pure functions_ promise to neither modify nor to read the state.
 
 来自 <a href="https://docs.soliditylang.org/en/latest/contracts.html#pure-functions" target="_blank">Solidity文档</a>.
 
-You can declare a pure function using the keyword `pure`. In this contract, `add` (line 13) is a pure function. This function takes the parameters `i` and `j`, and returns the sum of them. pure函数承诺既不修改也不读取状态变量。
+您可以使用关键字`pure`声明纯函数。 在此合约中，`add`（第 13 行）是一个纯函数。 该函数接受参数`i`和`j`，并返回它们的总和。 pure函数承诺既不修改也不读取状态变量。
 
-In Solidity development, you need to optimise your code for saving computation cost (gas cost). Declaring functions view and pure can save gas cost and make the code more readable and easier to maintain. Pure functions don't have any side effects and will always return the same result if you pass the same arguments.
+在Solidity开发中，您需要优化代码以节省计算成本（gas成本）。 声明函数 view 和 pure 可以节省 Gas 成本，并使代码更具可读性和更易于维护。 纯函数没有任何副作用，并且如果传递相同的参数，将始终返回相同的结果。
 
 <a href="https://www.youtube.com/watch?v=vOmXqJ4Qzbc" target="_blank">观看有关view和pure函数的视频教程</a>
 
