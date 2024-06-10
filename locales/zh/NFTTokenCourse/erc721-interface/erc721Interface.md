@@ -1,12 +1,12 @@
 ERC721是以太坊区块链上管理非同质化代币（NFT）的标准合约。
 
-Each non-fungible token is unique and not interchangeable. NFTs can have different properties, behavior, or rights. Non-fungible tokens are used to represent ownership of unique digital and physical assets like art, collectibles, or real estate.
+每个非同质化代币都是独一无二且不可互换的。 NFT可以具有不同的属性、行为或权利。 非同质化代币用于表示对唯一数字和实物资产（如艺术品、收藏品或房地产）的所有权。
 
 如果您想了解更多关于ERC721令牌标准的信息，请查看其以<a href="https://eips.ethereum.org/EIPS/eip-721" target="_blank">以太坊改进提案</a>的规范。
 
 ## 接口
 
-ERC721标准比ERC20标准更复杂，并具有可选扩展功能。符合ERC721规范的合约必须至少实现本节中介绍的ERC721和ERC165接口。 ERC721 compliant contracts must, at a minimum, implement the ERC721 and ERC165 interfaces, which we will look at in this section.
+ERC721标准比ERC20标准更复杂，并具有可选扩展功能。符合ERC721规范的合约必须至少实现本节中介绍的ERC721和ERC165接口。 符合ERC721规范的合约必须至少实现本节中介绍的ERC721和ERC165接口。
 
 此接口（第11行）是<a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol" target="_blank">OpenZeppelin</a>提供的开源合约库之一。
 
@@ -28,7 +28,7 @@ ERC721标准比ERC20标准更复杂，并具有可选扩展功能。符合ERC721
 
 该函数`safeTransferFrom`（第137行）与函数`safeTransferFrom`（第55行）几乎相同。唯一的区别是此函数具有非空有效负载数据。
 
-如果要接收转移，则智能合约必须实现 ERC721TokenReceiver 接口。这将确保该合约可以处理ERC721代币转移并防止代币被锁定在无法处理ERC721代币的合约中。 This will ensure that the contract can handle ERC721 token transfers and prevent the tokens from being locked in a contract that can’t.
+如果要接收转移，则智能合约必须实现 ERC721TokenReceiver 接口。这将确保该合约可以处理ERC721代币转移并防止代币被锁定在无法处理ERC721代币的合约中。 这将确保该合约可以处理ERC721代币转移并防止代币被锁定在无法处理ERC721代币的合约中。
 
 ### transferFrom
 
@@ -87,7 +87,7 @@ interface IERC165 {
 }
 ```
 
-For example, the ERC165 identifier for the ERC721 interface as specified in the EIP721 is “0x80ac58cd”. 例如，在EIP721中指定的ERC721界面的ERC165标识符为“0x80ac58cd”。学习如何计算接口标识符以及有关<a href="https://eips.ethereum.org/EIPS/eip-165" target="_blank">改进提案</a>中ERC165更多信息。
+例如，在EIP721中指定的ERC721界面的ERC165标识符为“0x80ac58cd”。 例如，在EIP721中指定的ERC721界面的ERC165标识符为“0x80ac58cd”。学习如何计算接口标识符以及有关<a href="https://eips.ethereum.org/EIPS/eip-165" target="_blank">改进提案</a>中ERC165更多信息。
 
 ## 其他接口
 
