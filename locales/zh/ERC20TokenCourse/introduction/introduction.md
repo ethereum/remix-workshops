@@ -4,26 +4,26 @@
 
 ### 简介
 
-In the context of web3, tokens represent ownership. 在Web3环境下，代币表示所有权。代币可以表示任何东西的所有权：艺术品、声誉、视频游戏中的物品、公司股份、投票权或货币等。
+在Web3环境下，代币表示所有权。 在Web3环境下，代币表示所有权。代币可以表示任何东西的所有权：艺术品、声誉、视频游戏中的物品、公司股份、投票权或货币等。
 
 区块链技术所具备革命性创新之处在于它允许数据以不可变（无法更改）方式公开存储。这种新形式的数据存储方式使我们能够跟踪所有权并首次实现真正可拥有数字物品。
-This new form of data storage allows us to keep track of ownership and enable truly ownable digital items for the first time.
+这种新形式的数据存储方式使我们能够跟踪所有权并首次实现真正可拥有数字物品。
 
 最初发明区块链技术是为了跟踪比特币的所有权（比特币是一种去中心化数字货币和同质化代币）。
 
-### Fungible and non-fungible tokens
+### 同质化和非同质化代币
 
-Assets like money: Bitcoin or a one-dollar bill, for example, are fungible. Fungible means that all assets are the same and are interchangeable. 像钱这样的资产：比特币或一美元纸钞，例如都是同质化资产。同质意味着所有资产都相同且可以互换。而像艺术品、收藏品或房屋等资产则是非同质化的，它们都不同且不能互换。
+像钱这样的资产：例如，比特币或一美元纸钞，都是同质化的。 同质意味着所有资产都相同且可以互换。 像钱这样的资产：比特币或一美元纸钞，例如都是同质化资产。同质意味着所有资产都相同且可以互换。而像艺术品、收藏品或房屋等资产则是非同质化的，它们都不同且不能互换。
 
 我们可以将代币分为这两种类型：同质化代币，其中所有代币都相同；以及非同质化代币（NFTs），其中每个代币都是独一无二的。
 
 ### 代币标准
 
-The behavior of a token is specified in its smart contract (token contract). The contract could, for example, include the functionality to transfer a token or check for its total supply.
+一个代币的行为是在其智能合约（代币合约）中指定的。 该合约可以包括转移代币或检查其总供应量等功能。
 
 如果每个人都创建自己具有不同行为和命名惯例的代币合约，那么人们将很难构建与其他人交互的合约或应用程序。
 
-The Ethereum community has developed token standards that define how a developer can create tokens that are interoperable (able to work with others) with other contracts, products, and services. Contracts developed under these standards need to include a certain set of functions and events.
+以太坊社区已经开发了代币标准，定义了开发者如何创建可与其他合约、产品和服务进行交互（即可互操作）的代币。 根据这些标准开发的合约需要包括一定数量的函数和事件。
 
 最流行的代币标准是 ERC20 用于同质化代币和 ERC721 用于非同质化代币。在本课程中，我们将学习如何在以下章节中创建并与 ERC20 代币标准进行交互。 以太坊社区已经开发了代币标准，定义了开发者如何创建可与其他合约、产品和服务进行交互（即可互操作）的代币。根据这些标准开发的合约需要包括一定数量的函数和事件。
 
@@ -36,7 +36,7 @@ ERC1155 是一种多代币标准，允许单个合约管理不同类型的代币
 
 ## ⭐️ 作业
 
-For this assignment, we will test your knowledge via a short quiz.
+对于这个作业，我们将通过一个简短的测验来测试您的知识。
 对于这个作业，我们将通过一个简短的测验来测试您的知识。在`Quiz`合约（第4行）中，将最佳答案的编号分配给变量`question1`（第5行），`question2`（第6行），`question3`（第7行）。
 
 ### 问题1：
