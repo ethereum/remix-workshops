@@ -1,8 +1,8 @@
 在Solidity中，mapping是一组键类型和相应值类型对的集合。
 
-mapping与数组最大的区别在于映射无法迭代。如果我们不知道一个键，就无法访问其值。如果需要了解所有数据或迭代它们，则应使用数组。 If we don't know a key we won't be able to access its value. If we need to know all of our data or iterate over it, we should use an array.
+mapping与数组最大的区别在于映射无法迭代。如果我们不知道一个键，就无法访问其值。如果需要了解所有数据或迭代它们，则应使用数组。 如果我们不知道一个键，就无法访问其值。 如果需要了解所有数据或迭代它们，则应使用数组。
 
-If we want to retrieve a value based on a known key we can use a mapping (e.g. addresses are often used as keys). Looking up values with a mapping is easier and cheaper than iterating over arrays. If arrays become too large, the gas cost of iterating over it could become too high and cause the transaction to fail.
+如果我们想根据已知的键检索值，我们可以使用映射（例如，地址通常用作键）。 使用映射查找值比迭代数组更容易、更便宜。 If arrays become too large, the gas cost of iterating over it could become too high and cause the transaction to fail.
 
 我们还可以将映射的键存储在可迭代的数组中。
 
