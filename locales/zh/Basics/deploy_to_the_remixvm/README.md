@@ -6,10 +6,10 @@
 
 2. 从环境下拉菜单中选择**Remix VM**。
 
-3. Click the Deploy button (or the transact button in the expanded view).
+3. 单击 Deploy 按钮（或展开视图中的 transact 按钮）。
 
-4. You have deployed your compiled contract to the Remix VM - a simulated blockchain that is running inside of your browser window.  The Remix VM is simple, fast test chain.  It is not that realistic because you don't need to approve each transaction.
+4. 您已将编译后的合约部署到 Remix VM - 一个在浏览器窗口内运行的模拟区块链。  Remix VM 是简单、快速的测试链。  这不太现实，因为您不需要批准每笔交易。
 
-5. Check the terminal to see detail of this deployment transaction.
+5. 检查终端以查看此部署交易的详细信息。
 
-You can also use Remix to deploy to other public EVM chains. To do this, you'll need to connect to a different **Environment** - like Injected Provider.  The Injected Provider connects Remix to browser wallet (like MetaMask or similar).  We'll try deploying to a public network at the end of this tutorial. But before we get there, we'll cover how to interact with a deployed contract's functions.
+您也可以使用 Remix 部署到其他公共EVM 链。 为此，您需要连接到不同的**环境** - 例如 Injected Provider 。  Injected Provider 将 Remix 连接到浏览器钱包（如 MetaMask 或类似的）。  我们将在本教程结束时尝试部署到公共网络。 但在此之前，我们将介绍如何与已部署合约的函数进行交互。
