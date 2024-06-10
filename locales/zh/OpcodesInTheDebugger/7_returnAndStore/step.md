@@ -5,7 +5,7 @@
 现在CODECOPY已经执行完毕，我们处于操作码`PUSH1 00`。
 
 `PUSH1 00`为`RETURN`操作码准备了堆栈。`RETURN`是这个过程的最后部分。它将代码返回给客户端。
-`RETURN` is the last part of this process.  It is where the code is returned to the client.
+`RETURN`是这个过程的最后部分。  它将代码返回给客户端。
 
 我们将`00`推入堆栈，因为这是合约字节码在内存中的偏移位置。
 
