@@ -1,8 +1,8 @@
-In Solidity, we can define custom data types in the form of _structs_. 在Solidity中，我们可以使用结构体来自定义数据类型。结构体是由不同数据类型的变量组成的集合。
+在Solidity中，我们可以使用 _结构体_ 来自定义数据类型。 在Solidity中，我们可以使用结构体来自定义数据类型。结构体是由不同数据类型的变量组成的集合。
 
 ### 定义结构体
 
-我们使用`struct`关键字和名称（第5行）来定义一个结构体。在花括号内，我们可以定义结构体的成员，包括变量名和它们的数据类型。 Inside curly braces, we can define our struct’s members, which consist of the variable names and their data types.
+我们使用`struct`关键字和名称（第5行）来定义一个结构体。在花括号内，我们可以定义结构体的成员，包括变量名和它们的数据类型。 在花括号内，我们可以定义结构体的成员，包括变量名和它们的数据类型。
 
 ### 初始化结构体
 
