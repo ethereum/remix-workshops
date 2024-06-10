@@ -1,4 +1,4 @@
-Solidity supports different control flow statements that determine which parts of the contract will be executed. Solidity支持不同的控制流语句，确定合约的哪些部分将被执行。条件If/Else语句使合约能够根据布尔条件是`true`还是`false`来做出决策。
+Solidity支持不同的控制流语句，确定合约的哪些部分将被执行。 Solidity支持不同的控制流语句，确定合约的哪些部分将被执行。条件If/Else语句使合约能够根据布尔条件是`true`还是`false`来做出决策。
 
 Solidity区分三种不同的If/Else语句：`if`、`else`和`else if`。
 
@@ -27,7 +27,7 @@ In this contract, the `foo` function uses the `else` statement (line 10) to retu
 Create a new function called `evenCheck` in the `IfElse` contract:
 在`IfElse`合约中，创建一个名为`evenCheck`的新函数：
 
-- That takes in a `uint` as an argument.
+- 它接受一个`uint`作为参数。
 - 如果参数为偶数，则函数返回 true ，否则返回 false。
 - 使用三元运算符返回 evenCheck 函数结果。
 
