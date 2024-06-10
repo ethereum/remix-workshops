@@ -1,4 +1,4 @@
-Let's go back to our contract.
+我们回到我们的合约。
 让我们回到合约上。请确保激活了`Solidity compiler`和`Deploy＆Run Transactions`。
 
 或者，您可以从`主页` **Environments** 部分单击`Solidity`。
