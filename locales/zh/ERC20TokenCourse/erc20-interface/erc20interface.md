@@ -1,12 +1,12 @@
 ERC20（Ethereum Request for Comments 20）是管理以太坊区块链上同质化代币的标准合约。
 
-Fungible tokens are all equal to each other and have the same value, behavior, and rights. Fungible tokens are often used as a medium of exchange, like the currencies ETH or BTC. However, they can also have other use cases like voting rights or reputation.
+同质化代币彼此相等，具有相同的价值、行为和权利。 同质化代币通常用作交换媒介，如ETH或BTC等货币。 但它们也可以有其他用途，例如投票权或声誉。
 
 如果您想了解更多关于ERC20代币标准的信息，请查看其以<a href="https://eips.ethereum.org/EIPS/eip-20" target="_blank">太坊改进提案</a>中的规范说明。
 
 ## 接口
 
-To get an overview of the required functionality of an ERC20 token contract, we will look at an interface that interacts with an ERC20 contract.
+为了获得与ERC20代币合约交互所需功能的概述，我们查看一个与ERC20合约交互的接口。
 为了获得与ERC20代币合约交互所需功能的概述，我们查看一个与ERC20合约交互的接口。该接口（第9行）是<a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.4.0/contracts/token/ERC20/IERC20.sol" target="_blank">OpenZeppelin</a>提供的开源合约库的一部分。
 
 ## ERC20 函数
@@ -37,7 +37,7 @@ To get an overview of the required functionality of an ERC20 token contract, we 
 ### transferFrom
 
 函数`transferFrom`（第63行）以发送方地址`sender`名义向接收方地址`recipient`转移一定数量的代币。此功能必须触发`Transfer`事件。
-This function **must** emit a `Transfer` event.
+此功能**必须**触发`Transfer`事件。
 
 ## ERC20 Events
 
@@ -45,7 +45,7 @@ ERC20合约还必须发出两个事件：
 
 ### Transfer
 
-The `Transfer` (line 71) event must be emitted when `value` amount of tokens are transferred from the account with the address `indexed from` to `indexed to`. 当从`indexed from`帐户向`indexed to`帐户转移`value`数量的代币时，必须发出`Transfer`（第71行）事件。参数`from`和`to`是`indexed`，允许我们使用这些参数作为过滤器搜索这些事件。
+当从`indexed from`帐户向`indexed to`帐户转移`value`数量的代币时，必须发出`Transfer`（第71行）事件。 当从`indexed from`帐户向`indexed to`帐户转移`value`数量的代币时，必须发出`Transfer`（第71行）事件。参数`from`和`to`是`indexed`，允许我们使用这些参数作为过滤器搜索这些事件。
 
 ### Approval
 
@@ -73,4 +73,4 @@ The `Transfer` (line 71) event must be emitted when `value` amount of tokens are
 
 返回代币使用的小数位数。
 
-You may want to use decimals to make your token divisible into arbitrary amounts like 1.5 ETH when displayed. The EVM (Ethereum virtual machine) only supports integer numbers. 您可能想要使用小数点将您的代币分成任意金额，例如1.5 ETH。EVM（以太坊虚拟机）只支持整数。这就是为什么ERC20标准建议实现指定代币具有多少小数位功能。18个小数位是行业标准。 18 decimal places is the industry standard.
+您可能想要使用小数点将您的代币分成任意金额，例如1.5 ETH。 EVM（以太坊虚拟机）只支持整数。 您可能想要使用小数点将您的代币分成任意金额，例如1.5 ETH。EVM（以太坊虚拟机）只支持整数。这就是为什么ERC20标准建议实现指定代币具有多少小数位功能。18个小数位是行业标准。 18个小数位是行业标准。
