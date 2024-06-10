@@ -1,10 +1,10 @@
-The metadata extension is optional. It allows us to add additional information to our ERC721 tokens. 元数据扩展是可选的。它允许我们向ERC721代币添加附加信息。我们可以指定名称、符号和URI（统一资源标识符），该URI可以指向一个文件，在其中以JSON格式添加更多信息。
+元数据扩展是可选的。 它允许我们向ERC721代币添加附加信息。 元数据扩展是可选的。它允许我们向ERC721代币添加附加信息。我们可以指定名称、符号和URI（统一资源标识符），该URI可以指向一个文件，在其中以JSON格式添加更多信息。
 
 ## ERC721元数据函数
 
 ### name
 
-函数`name`（第16行）返回代币集合的名称。代币集合是指使用您的ERC721代币合约实现的。无论其`tokenId`是什么，该集合中的每个代币都将具有此名称。 A token collection means all tokens created with your ERC721 token contract implementation. Every token in this collection will have this name, regardless of their tokenId.
+函数`name`（第16行）返回代币集合的名称。代币集合是指使用您的ERC721代币合约实现的。无论其`tokenId`是什么，该集合中的每个代币都将具有此名称。 代币集合是指使用您的ERC721代币合约实现的。 无论其 tokenId 是什么，该集合中的每个代币都将具有此名称。
 
 ### symbol
 
@@ -12,7 +12,7 @@ The metadata extension is optional. It allows us to add additional information t
 
 ### tokenURI
 
-函数`tokenURI`（第26行）返回id为`tokenId`的token的URI。在这种情况下，它不是整个集合而是集合中单个代币的URI。 In this case it’s not the URI of the whole collection but of an individual token in the collection.
+函数`tokenURI`（第26行）返回id为`tokenId`的token的URI。在这种情况下，它不是整个集合而是集合中单个代币的URI。 在这种情况下，它不是整个集合而是集合中单个代币的URI。
 
 ## ERC721 Metadata JSON Schema
 
@@ -39,6 +39,6 @@ tokenURI指向的文件应符合<a href="https://eips.ethereum.org/EIPS/eip-721#
 }
 ```
 
-The root element must be of the type object. 根元素必须是对象类型。该根对象应具有以下键的属性：名称、描述和图像，这些属性都应为字符串类型。
+根元素必须是对象类型。 根元素必须是对象类型。该根对象应具有以下键的属性：名称、描述和图像，这些属性都应为字符串类型。
 
 ERC721标准非常灵活，`tokenURI`不需要指向JSON文档，并且JSON不需要具有所有属性，通常还会有其他属性。
