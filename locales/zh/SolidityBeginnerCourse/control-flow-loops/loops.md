@@ -4,12 +4,12 @@ Solidity区分三种类型的循环：`for`、`while`和`do while`循环。
 
 ### for
 
-通常情况下，如果您知道要执行某个代码块的次数，则使用`for`循环（第7行）。在solidity中，您应该指定此数量以避免交易用尽gas，并且如果迭代次数过多则失败。 In solidity, you should specify this amount to avoid transactions running out of gas and failing if the amount of iterations is too high.
+通常情况下，如果您知道要执行某个代码块的次数，则使用`for`循环（第7行）。在solidity中，您应该指定此数量以避免交易用尽gas，并且如果迭代次数过多则失败。 在solidity中，您应该指定此数量以避免交易用尽gas，并且如果迭代次数过多则失败。
 
 ### while
 
 如果您不知道要执行代码的次数但想基于条件退出循环，则可以使用`while`循环（第20行）。在Solidity中很少使用循环，因为如果没有限制可能发生太多次迭代，则交易可能会用尽gas并且失败。
-Loops are seldom used in Solidity since transactions might run out of gas and fail if there is no limit to the number of iterations that can occur.
+在Solidity中很少使用循环，因为如果没有限制可能发生太多次迭代，则交易可能会用尽gas并且失败。
 
 ### do while
 
@@ -17,11 +17,11 @@ Loops are seldom used in Solidity since transactions might run out of gas and fa
 
 ### continue
 
-The `continue` statement is used to skip the remaining code block and start the next iteration of the loop. `continue`语句用于跳过剩余的代码块并开始下一个迭代。在这个合约中，`continue`语句（第10行）将防止第二个if语句（第12行）被执行。
+`continue` 语句用于跳过剩余的代码块并开始下一个迭代。 `continue`语句用于跳过剩余的代码块并开始下一个迭代。在这个合约中，`continue`语句（第10行）将防止第二个if语句（第12行）被执行。
 
 ### break
 
-The `break` statement is used to exit a loop. `break`语句用于退出一个循环。 在这个合约中，`break`语句（第14行）将导致`for`循环在进行了6次迭代后终止.
+`break`语句用于退出一个循环。 `break`语句用于退出一个循环。 在这个合约中，`break`语句（第14行）将导致`for`循环在进行了6次迭代后终止.
 
 <a href="https://www.youtube.com/watch?v=SB705OK3bUg" target="_blank">观看有关循环声明的视频教程</a>.
 
