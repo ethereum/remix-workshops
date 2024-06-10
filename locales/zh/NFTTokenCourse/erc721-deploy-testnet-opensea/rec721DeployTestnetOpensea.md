@@ -14,13 +14,13 @@
 
 **2.1** 将您的Metamask从“Ethereum Mainnetwork”切换到“Rinkeby Test Network”。
 
-**2.2** Go to <a href="https://faucet.paradigm.xyz/" 
-target="_blank">https://faucet.paradigm.xyz/</a>, enter the address of your account and claim testnet ETH.
-You could also use other ropsten faucets like <a href="https://faucet.paradigm.xyz/" target="_blank">https://faucet.paradigm.xyz/</a> or <a href="https://app.mycrypto.com/faucet" target="_blank">https://app.mycrypto.com/faucet</a>. Have a look at the faucets listed on <a href="https://ethereum.org/en/developers/docs/networks/#testnet-faucets" target="_blank">ethereum.org</a> to learn more.
+**2.2** 前往<a href="https://faucet.paradigm.xyz/" 
+target="_blank">https://faucet.paradigm.xyz/</a>，输入您账户地址，并领取testnet ETH。
+您也可以使用其他ropsten水龙头，如<a href="https://faucet.paradigm.xyz/" target="_blank">https://faucet.paradigm.xyz/</a> 或 <a href="https://app.mycrypto.com/faucet" target="_blank">https://app.mycrypto.com/faucet</a> 。 查看 <a href="https://ethereum.org/en/developers/docs/networks/#testnet-faucets" target="_blank">ethereum.org</a> 上列出的水龙头以了解更多信息。
 
 ### 3. 合约部署
 
-**3.1** 在Remix IDE 的“DEPLOY＆RUN TRANSACTIONS”模块下，在“ENVIRONMENT”下选择“Injected Web3”。然后它应该要求您连接您的账户，请确认。然后你应该在“Injected Web3”下看到Rinkeby网络标志。 It should then ask you to connect your account, which you should confirm. Then you should see the Rinkeby network badge under "Injected Web3".
+**3.1** 在Remix IDE 的“DEPLOY＆RUN TRANSACTIONS”模块下，在“ENVIRONMENT”下选择“Injected Web3”。然后它应该要求您连接您的账户，请确认。然后你应该在“Injected Web3”下看到Rinkeby网络标志。 然后它应该要求您连接您的账户，请确认。 然后你应该在“Injected Web3”下看到Rinkeby网络标志。
 
 **3.2** 部署您的代币合约并在Metamask中确认交易。
 
@@ -30,11 +30,11 @@ You could also use other ropsten faucets like <a href="https://faucet.paradigm.x
 
 **4.1** 在 IDE 中展开您的合约，以便您可以看到函数按钮。
 
-**4.2** Expand the input fields next to the safeMint button. Enter the Ethereum address of the account that is connected to Remix in the “to:” input field. Enter “0” in the input field "tokenID:". Click on transact.
+**4.2** 展开 safeMint 按钮旁边的输入字段。 在“to:”输入字段中输入与 Remix 连接的以太坊地址。 在“tokenID:”输入字段中输入“0”。 点击交易。
 
-**4.3** 在 Metamask 中单击资产，然后单击“导入代币”链接，并粘贴您合约的地址到该输入框中。您可以将小数位设置为 0。 You can set decimals to 0.
+**4.3** 在 Metamask 中单击资产，然后单击“导入代币”链接，并粘贴您合约的地址到该输入框中。您可以将小数位设置为 0。 您可以将小数位设置为 0。
 
-现在，在 Metamask 的 “资产” 视图中应该能看到您代币合约符号（例如 GEO）的名称。你应该有其中一个代币了。 You should have one of these tokens.
+现在，在 Metamask 的 “资产” 视图中应该能看到您代币合约符号（例如 GEO）的名称。你应该有其中一个代币了。 你应该有其中一个代币了。
 
 ### 5. 在 OpenSea 上查看您的 NFT
 
@@ -45,6 +45,6 @@ target="_blank">https://testnets.opensea.io/</a> **2.2** 前往<a href="https://
 **5.1** 前往 <a href="https://testnets.opensea.io/login" 
 target="_blank">https://testnets.opensea.io/login</a>.
 
-**4.2** 展开`safeMint`按钮旁边的输入字段。在“to:”输入字段中输入与 Remix 连接的以太坊地址。在“tokenID:”输入字段中输入“0”。点击交易。 **5.2** 连接你的 Metamask 钱包。你会被重定向到 OpenSea 上你账户下面名为<a href="https://testnets.opensea.io/account" target="_blank">https://testnets.opensea.io/account</a>的视图，在那里你应该能够看到自己铸造出来NFT。当你点击它时，你应该能够看到名称、描述和属性下面也创建好了。 You should see the image of your NFT; when you click on it, you should see the name, description, and under properties, also the attributes that you created.
+**4.2** 展开`safeMint`按钮旁边的输入字段。在“to:”输入字段中输入与 Remix 连接的以太坊地址。在“tokenID:”输入字段中输入“0”。点击交易。 **5.2** 连接你的 Metamask 钱包。你会被重定向到 OpenSea 上你账户下面名为<a href="https://testnets.opensea.io/account" target="_blank">https://testnets.opensea.io/account</a>的视图，在那里你应该能够看到自己铸造出来NFT。当你点击它时，你应该能够看到名称、描述和属性下面也创建好了。 您应该看到您的 NFT 的图像；当您单击它时，您应该会看到名称、描述，并在属性下看到您创建的属性。
 
 如果您已经成功完成了这门课程并熟悉Solidity开发的基础知识，我们鼓励您通过Learneth资源学习如何创建自己的NFT拍卖合约，继续您的学习之旅。
