@@ -8,8 +8,8 @@
 - 在**图标面板**中切换插件。
 - 要使一个面板变大，请拖动其边框。
 
-尝试单击**图标面板**中的图标以转到另一个插件。单击**Solidity编译器**图标，然后单击**部署和运行**图标。然后回到**LearnEth**。 Then click the **Deploy & Run** icon ![](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/deploy-run.png).  Then come back to **LearnEth** by clicking this icon ![](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/learneth.png).
+尝试点击 **图标面板** 中的 **Solidity Compiler** 图标 ![](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/solidity-icon.png) 。 然后点击 **Deploy & Run** 图标 ![](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/deploy-run.png).  然后点击这个图标 ![](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/learneth.png)  回到 **LearnEth** 。
 
-In the **Main Panel** of Remix, make sure you see the **Home** tab.  The **Home** tab has lots of useful links. 在**Remix主面板**上，确保您看到**Home选项卡**。 Home选项卡有很多有用的链接。要导航到那里，请单击顶部的Remix图标![Remix icon](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/remix-logo.png "Remix icon")。
+在Remix**主面板**上，确保您看到**Home**选项卡。  **Home**选项卡有很多有用的链接。 要导航到那里，请单击 **主面板** 中的 **Home** 选项卡或单击这个 Remix 图标 ![Remix icon](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/remix-logo.png "Remix icon")。
 
-- 在**Home选项卡**的**Featured Plugins**部分，单击**Solidity**按钮。此按钮将激活许多插件-您将在**图标面板**中看到它们。  通过进入**Plugin Manager**查看整个插件列表。![plugin manager](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/plugin1.png "Plugin Manager icon")
+- 查看 **插件管理器** 中的所有插件。  点击 Remix 左下角的这个图标 ![plugin manager](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/plugin1.png "Plugin Manager icon") 。
