@@ -1,4 +1,4 @@
-CODECOPY是EVM运行的众多操作码之一。请访问<a href="https://ethervm.io/" target="_blank">https://ethervm.io/</a>查看完整的操作码列表。 Check out the complete list of opcodes at <a href="https://ethervm.io/" target="_blank">https://ethervm.io/</a> .
+CODECOPY是EVM运行的众多操作码之一。请访问<a href="https://ethervm.io/" target="_blank">https://ethervm.io/</a>查看完整的操作码列表。 请访问<a href="https://ethervm.io/" target="_blank">https://ethervm.io/</a>查看完整的操作码列表。
 
 CODECOPY将正在运行的代码（或其中一部分）从`calldata`复制到`memory`中。
 
