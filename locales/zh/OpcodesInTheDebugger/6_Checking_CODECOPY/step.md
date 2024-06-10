@@ -1,8 +1,8 @@
-The goal here is to store the code in the blockchain. The EVM needs to tell the client (geth, parity) which what part of the **Call Data** to store.   In this step, we are saving the contract MINUS its constructor (because that gets inplmented only 1 time) and MINUS the input parameter does not need to be stored.
+这里的目标是将代码存储在区块链中。 EVM 需要告诉客户端（geth、parity）要存储 **Call Data** 的哪一部分。   在这一步中，我们保存的是合约，不包括其构造函数（因为构造函数只被添加一次），也不包括不需要保存的输入参数。
 
-`CODECOPY`是第一步：它将字节码复制到内存中，然后以太坊客户端就能够使用它。咀嚼！  MUNCH!
+`CODECOPY`是第一步：它将字节码复制到内存中，然后以太坊客户端就能够使用它。咀嚼！  咀嚼！
 
-But wait... 但是...在客户端可以处理字节码之前，它需要一个指令 - 一个操作码来告诉它进行处理。`RETURN`就是这个操作码！ `RETURN` is this opcode!
+但是，等等… 但是...在客户端可以处理字节码之前，它需要一个指令 - 一个操作码来告诉它进行处理。`RETURN`就是这个操作码！ `RETURN` 就是这个操作码！
 
 根据通用规范，在合约创建的结尾处，客户端（geth、parity）通过操作码`RETURN`获取目标值，并通过使其成为部署的字节码的一部分而将其持久化。
 
@@ -12,20 +12,20 @@ But wait... 但是...在客户端可以处理字节码之前，它需要一个�
 `1: 0x0000000000000000000000000000000000000000000000000000000000000055`
 `2: 0x000000000000000000000000000000000000000000000000000000000000003e`
 
-_在您的Stack中，1和2可能略有不同。这种差异可能是由于不同的编译器版本造成的。_  The difference may be due to a different compiler version.\*
+_在您的Stack中，1和2可能略有不同。这种差异可能是由于不同的编译器版本造成的。_  这种差异可能是由于不同的编译器版本造成的。\*
 
 **这些是`CODECOPY`的参数。**
 
 记住：_codecopy(t, f, s)_ - 将来自位置**f**处代码的**s**个字节复制到位置**t**处内存
 
-`0x0`、`0x10`等是位置。下一个数字是该位置的字节码。然后跟着问号和看似随机的字母和数字。这是Remix尝试将其转换为字符串。 In this example, ( all zeros) the code is copied to the beginning of the memory. `0` 是应将复制代码放置在内存中的偏移量。在此示例中（全零），该代码被复制到内存开头。（t）
+`0x0`、`0x10`等是位置。下一个数字是该位置的字节码。然后跟着问号和看似随机的字母和数字。这是Remix尝试将其转换为字符串。 在此示例中，（全零）代码被复制到内存的开头。 `0` 是应将复制代码放置在内存中的偏移量。在此示例中（全零），该代码被复制到内存开头。（t）
 `1` 是要从其中进行复制的**calldata**中的偏移量（**f**）
 `2` 要复制的字节数 - (**s**)
 
 执行`CODECOPY`后（单击“step into”按钮），所复制的代码应为：
-`0x6080604052600080fdfea265627a7a7231582029bb0975555a15a155e2cf28e025c8d492f0613bfb5cbf96399f6dbd4ea6fc9164736f6c63430005110032` 在内存中。**我将把这个值称为(X)。**  **I'll refer to this value as (X)**.
+`0x6080604052600080fdfea265627a7a7231582029bb0975555a15a155e2cf28e025c8d492f0613bfb5cbf96399f6dbd4ea6fc9164736f6c63430005110032` 在内存中。**我将把这个值称为(X)。**  **我将把这个值称为(X)**。
 
-Let's look at the debugger's **Memory** panel.
+让我们来看一下调试器的**内存**面板。
 让我们来看一下调试器的内存面板。我上面给出的0x数字并不是您在内存面板中看到的内容 - 您将会看到：
 0x0: 6080604052600080fdfea265627a7a72 ????R??????ebzzr
 0x10: 31582029bb0975555a15a155e2cf28e0 1X ?? uUZ??U????
@@ -38,7 +38,7 @@ Let's look at the debugger's **Memory** panel.
 0x80: 00000000000000000000000000000000 ????????????????
 0x90: 00000000000000000000000000000002 ????????????????
 
-The `0x0`, `0x10`, etc is the position. The next number is the bytecode for that position.  This is followed by question marks and seemingly random letters & numbers.  This is **Remix**'s attempt to convert this into a string.
+`0x0`, `0x10`, 等是其位置。 接下来的数字是该位置的字节码。  接下来是问号和看似随机的字母和数字。  这是 **Remix** 尝试将其转换为字符串。
 
 因此，如果我们将前四个字节码部分粘合在一起，我们会得到：
 **0x6080604052600080fdfea265627a7a7231582029bb0975555a15a155e2cf28e0a6fc9164736f6c63430005110032**
