@@ -1,6 +1,6 @@
 _Ether_ (ETH) is a cryptocurrency. _Ether_ is also used to pay fees for using the Ethereum network, like making transactions in the form of sending _Ether_ to an address or interacting with an Ethereum application.
 
-### Ether Units
+### 以太币单位
 
 To specify a unit of _Ether_, we can add the suffixes `wei`, `gwei`, or `ether` to a literal number.
 
