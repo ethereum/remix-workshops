@@ -97,4 +97,4 @@ interface IERC165 {
 
 IERC721Enumerable使合约能够发布其完整的代币列表并使用户可以发现它们。
 
-IERC721Metadata使合约能够将附加信息与代币关联。我们将在下一节中更详细地了解这个功能。 We will have a more detailed look into this in the next section.
+IERC721Metadata使合约能够将附加信息与代币关联。我们将在下一节中更详细地了解这个功能。 我们将在下一节中更详细地了解这个功能。
