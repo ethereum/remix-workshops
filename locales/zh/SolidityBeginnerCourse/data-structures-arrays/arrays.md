@@ -1,10 +1,10 @@
 在接下来的章节中，我们将探讨在Solidity中可以用于组织和存储数据的数据结构。
 
-`Arrays`、`mappings`和`structs`都是引用类型。与值类型（例如_booleans_ 或者 _integers_）不同，引用类型不直接存储其值。相反，它们存储该值被存储的位置。多个引用类型变量可能引用同一位置，并且一个变量的更改会影响其他变量，因此需要小心处理。 Unlike _value types_ (e.g. _booleans_ or _integers_) reference types don't store their value directly. Instead, they store the location where the value is being stored. Multiple reference type variables could reference the same location, and a change in one variable would affect the others, therefore they need to be handled carefully.
+`Arrays`、`mappings`和`structs`都是引用类型。与值类型（例如_booleans_ 或者 _integers_）不同，引用类型不直接存储其值。相反，它们存储该值被存储的位置。多个引用类型变量可能引用同一位置，并且一个变量的更改会影响其他变量，因此需要小心处理。 与 _值类型_（例如 _booleans_ 或者 _integers_）不同，引用类型不直接存储其值。 相反，它们存储该值被存储的位置。 多个引用类型变量可能引用同一位置，并且一个变量的更改会影响其他变量，因此需要小心处理。
 
 在Solidity中，数组是一个列表，存储按数字索引排序的相同类型的值。
 
-There are two types of arrays, compile-time _fixed-size_ and _dynamic arrays_. For fixed-size arrays, we need to declare the size of the array before it is compiled. The size of dynamic arrays can be changed after the contract has been compiled.
+有两种类型的数组，编译时 _固定大小_ 和 _动态数组_ 。 对于固定大小的数组，我们需要在编译之前声明数组的大小。 动态数组的大小可以在合约编译后更改。
 
 ### 声明数组
 
@@ -14,7 +14,7 @@ There are two types of arrays, compile-time _fixed-size_ and _dynamic arrays_. F
 
 ### 初始化数组
 
-我们可以一次性初始化所有元素（第7行），也可以逐个初始化新元素（arr [0] = 1;）。如果我们声明一个数组，则自动使用默认值0初始化其元素（第9行）。 If we declare an array, we automatically initialize its elements with the default value 0 (line 9).
+我们可以一次性初始化所有元素（第7行），也可以逐个初始化新元素（arr [0] = 1;）。如果我们声明一个数组，则自动使用默认值0初始化其元素（第9行）。 如果我们声明一个数组，则自动使用默认值0初始化其元素（第9行）。
 
 ### 访问数组元素
 
@@ -29,8 +29,8 @@ There are two types of arrays, compile-time _fixed-size_ and _dynamic arrays_. F
 使用`pop()`成员函数，我们删除动态数组的最后一个元素（第31行）。
 
 我们可以使用`delete`运算符从数组中删除具有特定索引的元素（第42行）。当我们使用`delete`运算符删除一个元素时，所有其他元素保持不变，这意味着数组的长度将保持不变。这将在我们的数组中产生间隙。如果数组顺序不重要，则可以将该数组的最后一个元素移动到已删除元素所在位置（第46行），或者使用`mapping`。如果需要从数据结构中删除元素，则`mapping`可能是更好的选择。
-When we remove an element with the `delete` operator all other elements stay the same, which means that the length of the array will stay the same. This will create a gap in our array.
-If the order of the array is not important, then we can move the last element of the array to the place of the deleted element (line 46), or use a mapping. A mapping might be a better choice if we plan to remove elements in our data structure.
+当我们使用`delete`运算符删除一个元素时，所有其他元素保持不变，这意味着数组的长度将保持不变。 这将在我们的数组中产生间隙。
+如果数组顺序不重要，则可以将该数组的最后一个元素移动到已删除元素所在位置（第46行），或者使用`mapping`。 如果需要从数据结构中删除元素，则 mapping 可能是更好的选择。
 
 ### 数组长度
 
@@ -40,5 +40,5 @@ If the order of the array is not important, then we can move the last element of
 
 ## ⭐️ 作业
 
-1. 用值0、1、2初始化名为arr3 的公共固定大小数组。使其大小尽可能小。 Make the size as small as possible.
+1. 用值0、1、2初始化名为arr3 的公共固定大小数组。使其大小尽可能小。 使其大小尽可能小。
 2. 更改`getArr()`函数以返回`arr3`的值。
