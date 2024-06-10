@@ -1,11 +1,11 @@
-在本合约教程中，我们将学习如何创建一个ERC721（NFT）拍卖合约。我们建议您在开始本教程之前先完成Learneth的“Solidity NFT课程”。
-We recommend to you, to do the Learneth "Solidity NFT Course" before starting this tutorial.
+在本合约教程中，我们将学习如何创建一个ERC721（NFT）拍卖合约。
+我们建议您在开始本教程之前先完成Learneth的“Solidity NFT课程”。
 
-In the following sections, we will create a contract that will enable a seller to auction an NFT to the highest bidder. This contract was created by the <a href="https://solidity-by-example.org/app/english-auction/" target="_blank">Solidity by Example</a> project. In this first section, we will create an interface, the necessary state variables, and the constructor.
+在接下来的几节中，我们将创建一个合约，使卖家能够向出价最高者拍卖NFT。 该合约由 <a href="https://solidity-by-example.org/app/english-auction/" target="_blank">Solidity by Examples</a> 项目创建。 在第一部分中，我们将创建一个接口、必要的状态变量和构造函数。
 
 ### 接口
 
-我们为ERC721代币创建了接口（第5行），因为我们的合约需要与它进行交互。我们需要`safeTransferFrom`方法（第5行）和`transferFrom`方法（第11行）。 We will need the `safeTransferFrom` (line 5),  and` transferFrom` (line 11) methods.
+我们为ERC721代币创建了接口（第5行），因为我们的合约需要与它进行交互。 我们需要`safeTransferFrom`方法（第5行）和`transferFrom`方法（第11行）。
 
 ### EnglishAuction
 
@@ -13,8 +13,8 @@ In the following sections, we will create a contract that will enable a seller t
 
 接下来，我们将创建存储所有关于链上拍卖所需信息的状态变量。
 
-We create two state variables for the NFT we want to auction. In the variable `nft` (line 24) we store a representation of the NFT contract, that will allow us to call its functions by combining the interface IERC721 and the address of the NFT contract.
-对于想要拍卖的NFT，我们创建了两个状态变量。`nft`变量（24行）， 我们存储了NFT合约, 这样就可以通过组合IERC721接口和NFT合约地址调用其函数。`nftId`(25 行)中，我们存储即将被拍卖的NFT合约中的特定Token ID 。
+对于想要拍卖的NFT，我们创建了两个状态变量。 `nft`变量（24行）， 我们存储了NFT合约，这样就可以通过组合IERC721接口和NFT合约地址调用其函数。
+`nftId`(25 行) 中，我们存储即将被拍卖的NFT合约中的特定 token id 。
 
 接下来，我们需要一个变量来存储拍卖NFT的人的地址，即卖家（27行）。我们希望在拍卖结束时，NFT合约将竞拍所得发送给卖家，因此使用了可支付地址。
 在接下来的几节中，我们将创建一个合约，使卖家能够向出价最高者拍卖NFT。这个合约是由<a href="https://solidity-by-example.org/app/english-auction/" target="_blank">Solidity by Example</a>项目创建的。在第一部分中，我们将创建一个接口、必要的状态变量和构造函数。
