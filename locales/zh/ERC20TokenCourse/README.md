@@ -1,5 +1,5 @@
-## Interactive Solidity Token Course
+## 交互式 Solidity 代币课程
 
-Learn to understand and create ERC20 tokens.
+了解并创建 ERC20 代币。
 
-Developed by the p2p learning platform https://dacade.org.
+由p2p学习平台 https://dacade.org 开发。
