@@ -28,7 +28,7 @@
 
 当你取消注释`testPrivateFunc`（第58-60行），你会得到一个错误，因为子合约没有访问来自`Base`合约的`privateFunc` private 函数。
 
-If you compile and deploy the two contracts, you will not be able to call the functions `privateFunc` and `internalFunc` directly. 如果您编译并部署这两个合约，则无法直接调用函数`privateFunc`和`internalFunc`。您只能通过`testPrivateFunc`和`testInternalFunc`来调用它们。
+如果您编译并部署这两个合约，则无法直接调用函数`privateFunc`和`internalFunc`。 如果您编译并部署这两个合约，则无法直接调用函数`privateFunc`和`internalFunc`。您只能通过`testPrivateFunc`和`testInternalFunc`来调用它们。
 
 <a href="https://www.youtube.com/watch?v=NBzQVJ6OrrQ" target="_blank">观看关于可见性的视频教程</a>。
 
