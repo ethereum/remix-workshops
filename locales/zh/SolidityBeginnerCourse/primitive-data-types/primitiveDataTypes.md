@@ -2,19 +2,19 @@
 
 ### bool
 
-您可以使用关键字‘bool’声明布尔类型的数据。布尔值只能为`true`或`false`。 Booleans can either have the value `true` or `false`.
+您可以使用关键字‘bool’声明布尔类型的数据。布尔值只能为`true`或`false`。 布尔值只能为`true`或`false`。
 
 ### uint
 
-我们使用关键字`uint`和`uint8`到`uint256`来声明无符号整数类型（与-12不同，它们没有符号）。Uints是正整数或零，并且范围从8 bits到256 bits。 `uint`类型与`uint256`相同。 Uints are integers that are positive or zero and range from 8 bits to 256 bits. The type `uint` is the same as `uint256`.
+我们使用关键字`uint`和`uint8`到`uint256`来声明无符号整数类型（与-12不同，它们没有符号）。Uints是正整数或零，并且范围从8 bits到256 bits。 `uint`类型与`uint256`相同。 Uints是正整数或零，并且范围从8 bits到256 bits。 `uint`类型与`uint256`相同。
 
 ### int
 
-我们使用关键字`int`和`int8`到`int256`来声明整数类型。整数可以是正、负或零，并且范围从8 bits到256 bits。 `int`类型与`int256`相同。 Integers can be positive, negative, or zero and range from 8 bits to 256 bits. The type `int` is the same as `int256`.
+我们使用关键字`int`和`int8`到`int256`来声明整数类型。整数可以是正、负或零，并且范围从8 bits到256 bits。 `int`类型与`int256`相同。 整数可以是正、负或零，并且范围从8 bits到256 bits。 `int`类型与`int256`相同。
 
 ### address
 
-`address`类型变量保存20个字节的值，这是以太坊地址的大小。还有一种特殊的以太坊地址——可支付地址（address payable），可以从合约接收ether。 There is also a special kind of Ethereum address, `address payable`, which can receive ether from the contract.
+`address`类型变量保存20个字节的值，这是以太坊地址的大小。还有一种特殊的以太坊地址——可支付地址（address payable），可以从合约接收ether。 还有一种特殊的以太坊地址——可支付地址（address payable），可以从合约接收ether。
 
 所有这些数据类型都有默认值，在合约中显示（第29行）。
 
