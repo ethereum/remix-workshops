@@ -25,6 +25,6 @@
 这基本上是编译器返回的内容：
 
 - `linkReferences` 描述了合约使用的库。
-- `object` is the compiled contract (bytecode). This is what gets deployed and saved onto the blockchain. In this example, the value `__$d42d70ba92b626965f4c69b39148e37a33$__` inside the bytecode is just a placeholder for the library address. In your case, the placeholder will be between `__$` and `$__`.
+- `object` 是编译后的合约（字节码）。 这就是部署并保存到区块链上的内容。 在此示例中，字节码内的值`__$d42d70ba92b626965f4c69b39148e37a33$__`只是库地址的占位符。 对你来说，占位符将位于`__$`和`$__`之间。
 
 来自 Remix IDE 的元数据 JSON 告诉 Remix 使用给定地址替换占位符。
