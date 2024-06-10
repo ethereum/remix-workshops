@@ -4,4 +4,4 @@
 
 点击`Step into`，沿着操作码移动，直到达到`SSTORE`。
 
-`SSTORE`是将值`_o`存储在存储器中的操作码。让我们进一步进行`CODECOPY`。 Let's continue further to the `CODECOPY`.
+`SSTORE`是将值`_o`存储在存储器中的操作码。让我们进一步进行`CODECOPY`。 让我们继续讨论 `CODECOPY` 。
