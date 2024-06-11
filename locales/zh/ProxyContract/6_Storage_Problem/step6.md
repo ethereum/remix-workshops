@@ -4,7 +4,7 @@
 
 `storage`：是一种映射；其中每个值都被持久化并保存在链上。
 
-_Note: Statically-sized state variables (everything except mapping and dynamically-sized array types) are laid out contiguously in storage starting from position 0. Multiple, contiguous items that need less than 32 bytes are packed into a single storage slot if possible. For contracts that use inheritance, the ordering of state variables is determined by the C3-linearized order of contracts starting with the most base-ward contract_
+_注意：静态状态变量（除了映射和动态数组类型之外的所有内容）从位置0开始连续地存储在storage中。 如果可能，需要少于32字节的多个连续项将被打包到单个存储槽中。 对于使用继承的合约，状态变量的顺序由合约的 C3 线性顺序决定，从最基础的 ward 合约开始_
 
 一旦执行**delegate call**，两个合约的存储空间就会“合并”成一个混乱的状态。
 
