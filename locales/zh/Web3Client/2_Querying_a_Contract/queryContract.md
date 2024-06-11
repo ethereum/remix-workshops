@@ -14,9 +14,9 @@
 4. 转到Deploy＆Run并切换到**Injected Web3**。
 
 **使用Web3**
-在脚本`queryContract.js`中，我们需要实例化web3.eth.Contract对象。为此，我们需要获取合约的ABI和地址。源代码和ABI可在etherscan中找到，因为合约开发人员有意发布了它们。  For this we need to grab the contract's ABI and its address.  The source code & ABI is available in etherscan because the contract's developer intentionally published it.
+在脚本`queryContract.js`中，我们需要实例化web3.eth.Contract对象。为此，我们需要获取合约的ABI和地址。源代码和ABI可在etherscan中找到，因为合约开发人员有意发布了它们。  为此，我们需要获取合约的ABI和地址。  源代码和ABI可在etherscan中找到，因为合约开发人员有意发布了它们。
 
-In etherscan, we can see that its name is **TetherToken**.  在etherscan中，可以看到它的名称为**TetherToken**。向下滚动至etherscan源代码部分中的TetherToken合约，则可以查看该合约的状态变量 - 其中第一个命名为**name**。
+在 etherscan 中，可以看到它的名称为 **TetherToken**。  在etherscan中，可以看到它的名称为**TetherToken**。向下滚动至etherscan源代码部分中的TetherToken合约，则可以查看该合约的状态变量 - 其中第一个命名为**name**。
 
 有一些语法技巧可用于返回状态变量值。
 
