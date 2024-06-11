@@ -4,9 +4,9 @@
 
 所有用户发起的消息调用都经过代理合约。
 
-The **Proxy contract** then will redirect them to the **Logic contract**.
+然后，**代理合约**会将它们重定向到**逻辑合约**。
 
-And when you need to **upgrade** the logic, you'll **just** deploy that - **HOWEVER** - the implementation of Proxy will remain the same.
+当您需要**升级**逻辑时，您**只需**部署该逻辑 - **但是** - 代理的实现将保持不变。
 
 您只需要在代理合约中更新逻辑合约地址即可。
 
