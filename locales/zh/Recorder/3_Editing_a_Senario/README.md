@@ -1,6 +1,6 @@
 # 编辑一个场景
 
-Here's the first few lines of the scenario that I recorded.  The addresses on my machine will be different from your's.
+这是我录制的场景的前几行。  我这儿的地址与您的不同。
 
 ```
 {
@@ -11,7 +11,7 @@ Here's the first few lines of the scenario that I recorded.  The addresses on my
     }
 ```
 
-如果您想在另一个测试网络中运行此场景，则需要将这些地址更改为您拥有测试ETH的地址，以便支付交易费用。但是除了更换地址之外，您可以快速在其他网络上运行它。  But other than swapping out the addresses, you can quickly run this on other nets.
+如果您想在另一个测试网络中运行此场景，则需要将这些地址更改为您拥有测试ETH的地址，以便支付交易费用。但是除了更换地址之外，您可以快速在其他网络上运行它。  但是除了更换地址之外，您可以快速在其他网络上运行它。
 
 并且您可能会更改函数的参数。
 
