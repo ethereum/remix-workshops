@@ -3,7 +3,7 @@
 - ERC DelegateProxy
   https://github.com/ethereum/EIPs/pull/897
 
-- The joint post by Zeppelin Solutions and Aragon.
+- Zeppelin Solutions和Aragon的联合发布的文章
   Zeppelin Solutions和Aragon的联合文章
   https://blog.openzeppelin.com/proxy-libraries-in-solidity-79fbe4b970fd/
 
