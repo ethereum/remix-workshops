@@ -1,18 +1,18 @@
-A token standard tells us what functionality the contract needs to comply with it. How this functionality is implemented is up to the developers. In this contract, we will use an ERC20 token contract implementation from OpenZeppelin (line 4). In this case, we import version 4.4.0 of the OpenZeppelin contracts.
+Un estándar de autentificador nos dice qué funcionalidad necesita el contrato para cumplirlo. La manera en que se implementa esta funcionalidad depende de los desarrolladores. En este contrato, utilizaremos una implementación de un contrato ERC20 autentificador de OpenZeppelin (línea 4). En este caso, importamos la versión 4.4.0 de los contratos de OpenZeppelin.
 
-Have a look at their nicely documented <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol" target="_blank">ERC20 contract</a> to have a better understanding of how an implementation might look. Apart from the functionality specified in the ERC20 standard, this contract provides additional functionality.
+Echa un vistazo a su muy bien documentado contrato <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol" target="_blank">ERC20 contract</a> para tener una mejor comprensión de cómo podría verse una implementación. Aparte de la funcionalidad especificada en el estándar ERC20, este contrato proporciona funcionalidad adicional.
 
-We will create our own contract called MyToken (line 6), which inherits the functionality from the OpenZepplin ERC20 token contract implementation that we imported (line 4).
+Vamos a crear nuestro propio contrato llamado MyToken (línea 6), que hereda la funcionalidad desde la implementación del contrato de autentificadores ERC20 de OpenZepplin que importamos (línea 4).
 
-This contract implements the optional functions `name()` and `symbol()` of the ERC20 Token standard and has a constructor where their values can be set during the deployment of the contract (line 7).
-In this case, we are going to use the default values. We will call our token the same as the contract `"MyToken"` and make `"MTK"` its symbol.
+Este contrato implementa las funciones opcionales `name()` y `symbol()` del estándar de autentificadores ERC20 y tiene un constructor donde sus valores pueden establecerse durante el despliegue del contrato (línea 7).
+En este caso, vamos a usar los valores por defecto. Llamaremos a nuestra ficha igual que el contrato `"MyToken"` y haremos de \`"MTK" su símbolo.
 
-Next, we make use of the inherited `_mint` function (line 8) that allows us to create tokens upon deployment of the contract. Inside the parameters, we specify the address of the account that receives the tokens and the amount of tokens that are created.
-In this case, the account that deploys the contract will receive the tokens and we set the amount to 1000000 to the power of `decimals()`. The optional function `decimals()` of the ERC20 token standard is implemented and set to the default value of 18. This will create 1000000 tokens that will have 18 decimal places.
+A continuación, hacemos uso de la función `_mint` heredada (línea 8) que nos permite crear autentificadores en el despligue del contrato. Dentro de los parámetros especificamos la dirección de la cuenta que recibe los autentificadores y la cantidad de autentificadores que son creados.
+En este caso, la cuenta que despliega el contrato recibirá los autentificadores y establecemos la cantidad a 1000000 a la potencia de `decimals()`. La función opcional `decimals()` del estándar de autentificador ERC20 es implementada y establecida al valor por defecto de 18. Esto creará 1000000 autentificadores que tendrán 18 decimales.
 
-## ⭐️ Assignment
+## ⭐ Tarea
 
-1. Rename your contract to `EduCoin`.
-2. Rename your token to `EduCoin`.
-3. Change the symbol of your token to `EDC`.
-4. Change the amount of tokens that will be minted from 1000000 to 1000.
+1. Renombra tu contrato a `EduCoin`.
+2. Renombra tu autentificador a `EduCoin`.
+3. Cambia el símbolo de tu autentificador a `EDC`.
+4. Cambia la cantidad de autentificadores que serán acuñados de 1000000 a 1000.
