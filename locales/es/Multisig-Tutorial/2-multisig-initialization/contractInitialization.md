@@ -1,60 +1,60 @@
-In this section, we'll explore the **initialization process** of the Multisig smart contract. We'll examine the constructor function and review how it sets up the initial state of the contract.
+En esta sección, exploraremos el **proceso de inicialización** del contrato inteligente multifirma. Examinaremos la función constructora y repasaremos cómo se configura el estado inicial del contrato.
 
-## Note
+## Nota
 
-From this section on in this tutorial, we will be building up a multisig contract. In subsequent sections, the contract will become increasingly complete.
+A partir de esta sección en este tutorial, iremos construyendo un contrato multifirma. En las secciones posteriores, el contrato se completará cada vez más.
 
-## Overview
+## General
 
-In this section, the contract consists of events, state variables, modifiers, and functions. **Events** provide transparency by logging specified activities on the blockchain, while **modifiers** ensure that only authorized users can execute certain functions.
+En esta sección, el contrato consiste en eventos, variables de estado, modificadores y funciones. **Eventos** proporcionan transparencia al registrar las actividades especificadas en la cadena de bloques, mientras que **modificadores** se aseguran de que sólo los usuarios autorizados puedan ejecutar ciertas funciones.
 
-## State Variables
+## Variables de la escena
 
-In Line 4, we have the MultisigWallet contract itself. At the beginning of the contract, we have three state variables.
+En la línea 4, tenemos el contrato MultisigWallet propiamente dicho. Al principio del contrato, tenemos tres variables estatales.
 
-1. **`owners`:** An array containing the addresses of all owners of the multi-signature wallet (Line 5).
-2. **`isOwner`:** A mapping indicating whether an address is an owner (Line 6).
-3. **`numConfirmationsRequired`:** The number of confirmations required for a transaction (Line 7).
+1. **`owners`:** Una matriz que contiene las direcciones de todos los propietarios de la cartera multifirma (línea 5).
+2. **`isOwner`:** Un mapeo que indica si una dirección es un propietario (Linea 6).
+3. **`numConfirmationsRequired`:** El número de confirmaciones requeridas para una transacción (Linea 7).
 
-The setup of array and mapping allows us to easily retrieve the list of owners and verify whether an address is an owner.
+La configuración de mapeo y mapeo nos permite recuperar fácilmente la lista de propietarios y verificar si una dirección es propietaria.
 
-## Modifiers
+## Modificadores
 
-Next, we have a modifier called `onlyOwner` (Line 9). Modifiers in Solidity are special keywords that can be used to amend the behavior of functions. In our case, the `onlyOwner` modifier ensures that only owners can execute a function. It does this by checking whether the address of the **caller** is an owner.
+A continuación, tenemos un modificador llamado `onlyOwner` (línea 9). Los modificadores en Solidity son palabras clave especiales que pueden ser usadas para enmendar el comportamiento de las funciones. En nuestro caso, el modificador `onlyOwner` asegura que sólo los propietarios pueden ejecutar una función. Esto lo hace comprobando si la dirección del **llamador** es un propietario.
 
-## Constructor Function
+## Función Constructor
 
-The `constructor` function (Line 14) is executed only once during the deployment of the contract. It initializes essential parameters, in this case, the list of owners and the required number of confirmations (Line 14).
+La función `constructor` (Line 14) se ejecuta sólo una vez durante el despliegue del contrato. Inicializa parámetros esenciales, en este caso, la lista de propietarios y el número requerido de confirmaciones (Línea 14).
 
-On lines 15 and 16, we have two `require` statements to ensure that the inputs are valid. In this case, we require that there must be at least one owner and that the number of required confirmations must be greater than zero and less than or equal to the number of owners.
+En las líneas 15 y 16, tenemos dos sentencias `require` para asegurar que las entradas sean válidas. En este caso exigimos que haya al menos un propietario y que el número de confirmaciones requeridas sea mayor que cero y menor o igual que el número de propietarios.
 
-The constructor then initializes the contract state by verifying that is not address(0) (Line 25) and that the owner is unique (Line 26).  Then it adds a key/ value pair to the isOwner mapping (Line 28), and then it populates the `owners` array with the provided owner addresses (Line 29).
+El constructor entonces inicializa el estado del contrato verificando que no es address(0) (Línea 25) y que el propietario es único (Línea 26).  Luego añade un par clave/valor al mapeo isOwner (línea 28), y luego rellena la matriz `owners` con las direcciones del propietario proporcionadas (Linea 29).
 
-Finally, it sets the `numConfirmationsRequired` variable with the specified value (Line 32).
+Por último, establece la variable `numConfirmationsRequired` con el valor especificado (línea 32).
 
-## getOwners Function
+## función getOwners
 
-The `getOwners` function (Line 36) allows users to retrieve the list of owners of the multi-signature wallet. It returns the `owners` array (Line 37).
+La función `getOwners` (línea 36) permite a los usuarios recuperar la lista de propietarios de la cartera multifirma. Devuelve el conjunto `owners` (Línea 37).
 
-## getNumConfirmationsRequired Function
+## función getNumConfirmationsRequired
 
-The `getNumConfirmationsRequired` function (Line 41) allows users to retrieve the number of confirmations required for a transaction. It returns the `numConfirmationsRequired` variable (Line 42).
+La función `getNumConfirmationsRequired` (línea 41) permite a los usuarios recuperar el número de confirmaciones necesarias para una transacción. Devuelve la variable `numConfirmationsRequired` (Línea 42).
 
-## Conclusion
+## Conclusión
 
-In this section, we explored the initialization process of the Multisig smart contract. We examined the constructor function and understood how it sets up the initial state of the contract.
+En esta sección, exploramos el proceso de inicialización del contrato inteligente Multisig. Examinamos la función del constructor y entendimos cómo establece el estado inicial del contrato.
 
-## ⭐️ Assignment: Deploy a Multisig Wallet
+## ⭐ Tarea: Desplegar una cartera multifirma
 
-Deploy a Multisig contract with three owners and require two confirmations for transaction execution.
+Implemente un contrato Multifirma con tres propietarios y requiera dos confirmaciones para la ejecución de la transacción.
 
-1. Compile contractInitialization.sol
-2. Go to Deploy & Run Transactions in Remix.
-3. Expand the "Deploy" section.
-4. Under "_OWNERS", enter three an array of three addresses.
-5. Under "_NUM_CONFIRMATIONS_REQUIRED", enter the number of confirmations required for a transaction.
+1. Compilar contractInitialization.sol
+2. Ir a Desplegar y Correr transacciones en Remix.
+3. Expandir la sección "Desplegar".
+4. Bajo "_OWNERS", introduzca tres, un arreglo de tres direcciones.
+5. Bajo "_NUM_CONFIRMATIONS_REQUIRED", introduzca el número de confirmaciones requeridas para una transacción.
 
-**Hints:**
+**Sugerencias:**
 
-- You can get addresses from the "ACCOUNTS" dropdown menu.
-- The array of addresses should be in the format: ["0x123...", "0x456...", "0x789..."].
+- Puede obtener direcciones del menú desplegable "CUENTAS".
+- El conjunto de direcciones debe estar en el formato: ["0x123...", "0x456...", "0x789..."].
