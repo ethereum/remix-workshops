@@ -1,12 +1,12 @@
-¡Bienvenido al Curso de Cartera Multifirma! En esta sección, exploraremos los fundamentos de las carteras multifirma (Multisig) y repasaremos un contrato de cartera multisig.
+¡Bienvenido al curso de Monedero Multifirma! En esta sección, exploraremos los fundamentos de las billeteras Multifirma (Multisig) y pasaremos por un contrato de monedero multisig.
 
-## ¿Qué es una Cartera Multifirma?
+## ¿Qué es una cartera multifirma?
 
-Una cartera multifirma (multisig) es un tipo de cartera digital que requiere múltiples llaves para autorizar una transacción de criptomonedas.
+Una cartera multifirma (multifirma) es un tipo de cartera digital que requiere varias claves para autorizar una transacción de criptomonedas.
 
-Imagine una cartera multisig (multifirma) como una bóveda de seguridad con múltiples cerraduras. Para abrir la bóveda, cada una de las personas, propietarias de la cartera, deben abrir sus cerraduras de forma individual. Esta configuración garantiza que ninguna persona pueda acceder al contenido de la bóveda sin el consentimiento de las demás.
+Imagina una cartera multifirma como una bóveda segura con múltiples bloqueos. Para abrir la bóveda, cada uno de los teclados debe abrir su bloqueo individual. Esta configuración asegura que ninguna persona puede acceder a los contenidos de la bóveda sin el consentimiento de los demás.
 
-## ¿Cómo funciona una Cartera Multifirma (Multisig)?
+## ¿Cómo funciona una Cartera Multifirma Multisig?
 
 En una configuración multifirma, cada transacción debe recibir un número predeterminado de aprobaciones de un grupo determinado de personas. Por ejemplo, en una configuración de cartera 3-de-5, hay cinco direcciones autorizadas, pero una transacción solo se realiza cuando al menos tres de ellas dan su aprobación. Cuando se inicia una transacción, se presenta como una **propuesta** al grupo. Cada miembro que está de acuerdo con la transacción, utiliza su clave privada para firmarla digitalmente.
 
