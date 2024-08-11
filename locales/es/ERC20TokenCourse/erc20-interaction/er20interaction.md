@@ -1,49 +1,49 @@
-In this section, we will deploy a contract in our browser and test its functionality.
+En esta sección, desplegaremos un contrato en nuestro navegador y probaremos su funcionalidad.
 
-### 1. Deploy the contract
+### 1. Despliegue del contrato
 
-**1.1** Compile your EduCoin contract in the "Solidity compiler" module of the Remix IDE.
+**1.1** Compila tu contrato de EduCoin en el módulo "Compilador de Solidity" del IDE Remix.
 
-**1.2** In the "Deploy & run transactions" module, select your contract "EduCoin" in the contract input field and click on the "Deploy" button. Always make sure to select the correct contract in the contract selector input field.
+**1.2** En el módulo "Desplegar y correr transacciones", seleccione su contrato "EduCoin" en el campo de entrada del contrato y haga clic en el botón "Desplegar". Asegúrate siempre de seleccionar el contrato correcto en el campo de entrada del selector del contrato.
 
-**GIF** Compile and deploy: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_compileAndDeploy.gif?raw=true" alt="Compile and deploy contract" width="300"/>
+**GIF** Compila y despliega: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_compileAndDeploy.gif?raw=true" alt="Compile and deploy contract" width="300"/>
 
-### 2. Test the functions
+### 2. Probar las funciones
 
-Expand the token contract functions in the IDE.
+Expandir las funciones del contrato de autentificadores en el IDE.
 
-#### 2.1 Decimals
+#### 2.1 decimales
 
-Click on the "decimals" button to call the decimals() function.
-It should return "18".
+Haz clic en el botón "decimales" para llamar a la función decimals().
+Te debería devolver "18".
 
-#### 2.2 Name
+#### 2.2 Nombre
 
-Click on the "name" button to call the name() function.
-It should return "EduCoin".
+Haz clic en el botón "nombre" para llamar a la función name().
+Te debería devolver "EduCoin".
 
-#### 2.3 Symbol
+#### 2.3 Símbolos
 
-Click on the "symbol" button to call the symbol() function.
-It should return "EDC".
+Haga clic en el botón "símbolo" para llamar a la función symbol().
+Te debería devolver "EduCoin".
 
-#### 2.4 Total supply
+#### 2,4 Suministro total
 
-Click on the "totalSupply" button to call the totalSupply() function.
-It should return 1000000000000000000000 (1000\*10\*\*18).
+Haga clic en el botón "totalSupply" para llamar a la función totalSupply().
+Te debería devolver 1000000000000000000 (1000\*10\*\*18).
 
-**GIF** Test decimals, name, symbol, and totalSupply functions: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_test_functions.gif?raw=true" alt="Test transfer function" width="300"/>
+**GIF** Prueba los decimales, el nombre, el símbolo y las funciones de totalSupply: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_test_functions.gif?raw=true" alt="Test transfer function" width="300"/>
 
-#### 2.5 Balance of
+#### 2.5 Balance de
 
-**2.5.1** Go to the "ACCOUNT" section in the sidebar and copy the displayed address by using the copy icon next to it.
+**2.5.1** Ve a la sección "CUENTA" en la barra lateral y copia la dirección mostrada usando el icono de copia junto a ella.
 
-**2.5.2** Paste the address in the input field next to the "balanceOf" function button and click on the button.
-It should return 1000000000000000000000 (1000\*10\*\*18).
+**2.5.2** Pega la dirección en el campo de entrada junto al botón "balanceOf" y hacer clic en el botón.
+Te debería devolver 1000000000000000000000000000 (1000\*10\*\*18).
 
-**GIF** Test balanceOf function: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_balanceOf.gif?raw=true" alt="Test transfer function" width="300"/>
+**GIF** Prueba la función balanceOf: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_balanceOf.gif?raw=true" alt="Test transfer function" width="300"/>
 
-#### 2.6 Transfer
+#### 2,6 Transferencia
 
 We will transfer EduCoin from one account to a second account.
 
