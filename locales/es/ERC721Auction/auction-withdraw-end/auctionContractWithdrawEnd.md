@@ -1,16 +1,16 @@
-In this section, we will finish the contract, create a function to withdraw the bids that an account has made, and create a function to end the auction.
+En esta sección, terminaremos el contrato, crear una función para retirar las ofertas que una cuenta ha hecho, y crear una función para terminar la subasta.
 
-### Withdraw
+### Retirar
 
-We create a local variable `bal` (balance) that stores the total value of bids that the function caller has made (line 75) since their last withdrawal. We can assign this value to `bal` by accessing the bids mapping using the address of the function caller as the key.
+Creamos una variable local `bal` (balance) que almacena el valor total de las ofertas que el llamador de función ha realizado (línea 75) desde su último retiro. Podemos asignar este valor a `bal` accediendo al mapeo de pujas usando la dirección del llamador de función como clave.
 
-Next, we set the value of the address of the function caller to 0 in the bids mapping because they will withdraw the total value of their bids (line 76).
+A continuación, establecemos el valor de la dirección de la llamada a la función a 0 en el mapeo de las pujas porque retirarán el valor total de sus ofertas (línea 76).
 
-Now we transfer that amount of ETH from the contract to the function caller and emit the `Withdraw` event (line 79).
+Ahora transferimos esa cantidad de ETH desde el contrato al llamador de función y emitimos el evento `Withdraw` (línea 79).
 
-### End
+### Finalizar
 
-Before the function caller can execute this function and end the auction, we need to check if certain conditions are met. The auction needs to have started (line 83), the end date of the auction needs to have been reached (line 84), and the auction must not have ended already (line 85).
+Antes de que la llamador de la función pueda ejecutar esta función y terminar la subasta, tenemos que comprobar si se cumplen ciertas condiciones. La subasta necesita haber comenzado (línea 83), la fecha final de la subasta debe haber sido alcanzada (línea 84), y la subasta no debe de haber terminado ya (línea 85).
 
 Once the auction has ended, we set the state variable `ended` to `true` (line 87).
 
