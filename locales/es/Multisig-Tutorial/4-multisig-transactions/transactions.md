@@ -1,73 +1,73 @@
-In this section, we'll explore the process of submitting and confirming transactions.
+En esta sección, exploraremos el proceso de envío y confirmación de transacciones.
 
-## Modifiers
+## Modificadores
 
-We have new modifiers in this iteration of the contract. Let's examine them one by one.
+Tenemos nuevos modificadores en esta iteración del contrato. Examinémoslos uno por uno.
 
-1. **`txExists` modifier:** (Line 13) ensures that the transaction exists. It does this by checking whether the transaction index is less than the length of the `transactions` array. We'll go into more about in this modifier later in this section.
-2. **`notExecuted` modifier:** (Line 18) ensures that the transaction has not been executed. It does this by checking whether the `executed` variable of the transaction is false.
-3. **`notConfirmed` modifier:** (Line 23) ensures that the transaction has not been confirmed by the caller. It does this by checking whether the `isConfirmed` mapping of the transaction index and the caller's address is false.
+1. **Modificador `txExists`:** (Línea 13) asegura que la transacción exista. Para ello, comprueba si el índice de transacciones es menor que la longitud de la matriz `transacciones`. Hablaremos más sobre este modificador más adelante en esta sección.
+2. **Modificador `notExecuted`:** (Línea 18) asegura que la transacción no haya sido ejecutada. Hace esto verificando si la variable `executed` de la transacción es falsa.
+3. **`notConfirmed` modificador:** (línea 23) asegura que la transacción no ha sido confirmada por la persona que llama. Hace esto comprobando si el mapeo `isConfirmed` del índice de transacción y la dirección de la persona que llama es falso.
 
-## Transaction Struct
+## Estructura de la Transacción
 
-On line 28, we have a struct called `Transaction`. We store the struct members: `to`, `value`, `data`, `executed`, and `numConfirmations` in individual variables.
+En línea 28, tenemos una estructura llamada `Transaction`. Almacenamos a los miembros de la estructura: `to`, `value`, `data`, `executed`, y `numConfirmations` en variables individuales.
 
-## Mapping of Confirmations
+## Mapeo de confirmaciones
 
-On line 37, we have a mapping called `isConfirmed`. This mapping is used to keep track of the confirmations of each transaction. It maps the transaction's index to a mapping of an owner addresse to a boolean value. The boolean value indicates whether this owner has confirmed the transaction.
+On line 37, we have a mapping called `isConfirmed`. Este mapeo se utiliza para hacer un seguimiento de las confirmaciones de cada transacción. Asigna el índice de la transacción a un mapeo de una dirección de propietario a un valor booleano. El valor booleano indica si este dueño ha confirmado la transacción.
 
-## Transactions Array
+## Conjunti de transacciones
 
-On line 39, we have an array called `transactions`. The array is used to store all the transactions submitted to the multi-signature wallet.
+En la línea 39, tenemos un arreglo llamado `transacciones`. El conjunto se utiliza para almacenar todas las transacciones enviadas a la cartera multifirma.
 
-## Events
+## Eventos
 
-We have four new events in this iteration of the contract:
+Tenemos cuatro nuevos eventos en esta iteración del contrato:
 
-1. **`SubmitTransaction` event:** emitted whenever a transaction is submitted to the multi-signature wallet.
-2. **`ConfirmTransaction` event:** emitted whenever a transaction is confirmed by an owner.
-3. **`RevokeConfirmation` event:** emitted whenever a transaction confirmation is revoked by an owner.
-4. **`ExecuteTransaction` event:** emitted whenever a transaction is executed.
+1. **Evento `SubmitTransaction`:** emitido cada vez que se envía una transacción a la cartera multifirma.
+2. **Evento `ConfirmTransaction`:** emitido daca vez que una transacción es confirmada por un propietario.
+3. **`RevokeConfirmation` evento:** emitido cada vez que una confirmación de transacción es revocada por un propietario.
+4. **evento `ExecuteTransaction`:** emitido cada vez que se ejecuta una transacción.
 
-## submitTransaction Function
+## función submitTransaction
 
-The `submitTransaction` function (Line 78) allows users to submit a transaction to the multi-sig wallet. It takes three parameters: `to`, `value`, and `data`. The `to` parameter is the address of the recipient of the transaction. The `value` parameter is the amount of Ether to be sent. The `data` parameter is the data to be sent to the recipient. Only owners can submit transactions.
+La función `submitTransaction` (Línea 78) permite a los usuarios enviar una transacción a la billetera multi-sig. Se toman tres parámetros: `to`, `value`, y `data`. El parámetro `to` es la dirección del destinatario de la transacción. El parámetro `value` es la cantidad de Ether a ser enviado. El parámetro `data` es los datos que se enviarán al destinatario. Sólo los propietarios pueden enviar transacciones.
 
-On line, 85 we create a new transaction struct and push it to the `transactions` array and emit the `SubmitTransaction` event. The `txIndex` variable is used to keep track of the transaction index.
+En línea, 85 creamos una nueva estructura de transacción y la empujamos al cojunto `transactions` y emitemos el evento `SubmitTransaction`. La variable `txIndex` se utiliza para hacer un seguimiento del índice de transacción.
 
-## confirmTransaction Function
+## función confirmTransaction
 
-The `confirmTransaction` function (Line 98) allows users to confirm a transaction. It takes one parameter: `txIndex`.
-It has three modifiers: `onlyOwner`, `txExists`, and `notExecuted`. The `onlyOwner` modifier ensures that only owners can confirm transactions. The `txExists` modifier ensures that the transaction exists. The `notExecuted` modifier ensures that the transaction has not been executed.
+La función `confirmTransaction` (Línea 98) permite a los usuarios confirmar una transacción. Se toma un parámetro: `txIndex`.
+Tiene tres modificadores: `onlyOwner`, `txExists` y `notExecuted`. El modificador `onlyOwner` asegura que sólo los propietarios pueden confirmar las transacciones. El modificador `txExists` asegura que la transacción existe. El modificador `notExecuted` asegura que la transacción no ha sido ejecutada.
 
-On line 101, we store the transaction in a local variable called `transaction`. We then increment the `numConfirmations` variable of the transaction and set the `isConfirmed` mapping of the transaction index and the caller's address to true. Finally, we emit the `ConfirmTransaction` event.
+En la línea 101, guardamos la transacción en una variable local llamada `transaction`. Luego incrementamos la variable `numConfirmations` de la transacción y establecemos el mapeo `isConfirmed` del índice de transacción y la dirección de la persona que llama a verdadera. Finalmente, emitimos el evento `ConfirmTransaction`.
 
-## executeTransaction Function
+## función executeTransaction
 
-The `executeTransaction` function (Line 108) allows users to execute a transaction. On line 113, we require that the number of confirmations of the transaction is greater than or equal to the required number of confirmations. We then set the `executed` variable of the transaction to true. Finally, send the funds using the `call` function.  This is the `call` of the recipient address with the value and data of the transaction. If the transaction is successful, we emit the `ExecuteTransaction` event.
+La función `executeTransaction` (Line 108) permite a los usuarios ejecutar una transacción. En la línea 113, requerimos que el número de confirmaciones de la transacción sea mayor o igual al número requerido de confirmaciones. Luego establecemos la variable `executed` de la transacción como verdadera. Finalmente, envía los fondos usando la función `call`.  Esta es la `call` de la dirección del destinatario con el valor y los datos de la transacción. Si la transacción tiene éxito, emitimos el evento `ExecuteTransaction`.
 
-## getTransactionCount Function
+## función getTransactionCount
 
-The `getTransactionCount` function (Line 132) allows users to retrieve the number of transactions in the multi-signature wallet. It returns the length of the `transactions` array.
+La función `getTransactionCount` (Línea 132) permite a los usuarios recuperar el número de transacciones en la cartera multifirma. Devuelve la longitud del conjunto `transactions`.
 
-## getTransaction Function
+## función getTransaction
 
-The `getTransaction` function (Line 136) allows users to retrieve a transaction. It returns the transaction struct members that we explored earlier in this section.
+La función `confirmTransaction` (Línea 136) permite a los usuarios confirmar una transacción. Devuelve los miembros de la estructura de transacciones que exploramos anteriormente en esta sección.
 
-## Conclusion
+## Cierre
 
-In this section, we explored the process of submitting, confirming, and executing transactions. We examined the `submitTransaction`, `confirmTransaction`, and `executeTransaction` functions and understood how they work together to allow multiple users to submit and confirm transactions.
+En esta sección, sondeamos el proceso de envío, confirmación y ejecución de transacciones. Examinamos las funciones "enviar transacción", "confirmar transacción" y "ejecutar transacción" y entendimos cómo trabajan juntas para permitir que varios usuarios envíen y confirmen transacciones.
 
-## ⭐️ Assignment: Make a Transaction
+## Asignación: Realizar una transacción
 
-Submit, confirm, and execute a transaction to send 2 Ether to the first account in the "ACCOUNTS" dropdown menu.
+Envíe, confirme y ejecute una transacción para enviar 2 Ether a la primera cuenta del menú desplegable "CUENTAS".
 
-1. Deploy the Multisig contract as in the previous assignment. Make sure that the required number of confirmations is 2.
-2. Fund the multisig from any address by sending 4 Ether as you did in the previous assignment.
-3. Try sending 2 Ether to the first account in the "ACCOUNTS" dropdown menu.  Once you have submitted this transaction (with submitTransaction), click on `getTransactionCount` and should see one transaction or you can click on `getTransaction`, insert 0 as the transaction index and see the transaction you just submitted.
-4. Now you can click on `confirmTransaction` and insert 0 as the transaction index. If you click on `getTransaction` again, you should see that the transaction has been confirmed once.
-5. Switch to the second owner account and confirm the transaction again. If you click on `getTransaction` again, you should see that the transaction has been confirmed twice.
-6. The last step is to execute the transaction. Click on `executeTransaction` and insert 0 as the transaction index. If you click on `getTransaction` again, you should see that the transaction has been executed. You can also check the balance of the first account in the "ACCOUNTS" dropdown menu. It should now be 2 Ether higher and the balance of the multi-signature wallet should be 2 Ether lower.
+1. Despliegue el contrato Multifirma (Multisig) como en la tarea anterior. Asegúrese de que el número requerido de confirmaciones es 2.
+2. Financia el multifirma desde cualquier dirección enviando a 4 Ether como hiciste en la asignación anterior.
+3. Intenta enviar 2 Ether a la primera cuenta en el menú desplegable "ACUNTS".  Una vez que haya enviado esta transacción (con la transacción), haz clic en `getTransactionCount` y debería ver una transacción o puede hacer clic en `getTransaction`, insertar 0 como el índice de transacción y ver la transacción que acaba de enviar.
+4. Ahora puedes hacer clic en `confirmTransaction` e insertar 0 como el índice de transacción. Si haces clic en `getTransaction` de nuevo, deberías ver que la transacción ha sido confirmada una vez.
+5. Cambiar a la segunda cuenta de propietario y confirma la transacción de nuevo. Si vuelves a hacer clic en `getTransaction`, deberías ver que la transacción se ha confirmado dos veces.
+6. El ultimo paso es ejecutar la transacción. Haz clic en `executeTransaction` e inserte 0 como índice de la transacción. Si vuelves a hacer clic en `getTransaction`, deberías ver que la transacción se ha confirmado dos veces. También puede comprobar el balance de la primera cuenta en el menú desplegable "CUENTAS". Ahora debería tener 2 Ether más y el saldo de la cartera multifirma debería tener 2 Ether menos.
 
-**Hint:**
-If you submit a transaction make sure that the value is in Wei and that the _data field is correctly filled in. E.g. it could look like this: "0x5B38Da6a701c568545dCfcB03FcB875f56beddC4, 2000000000000000000, 0x" for 2 Ether.
+**Pista:**
+Si envías una transacción, asegúrese de que el valor está en Wei y de que el campo _data está correctamente rellenado. Por ejemplo, podría verse así: "0x5B38Da6a701c568545dCfcB03FcB875f56beddC4, 20000000000000000, 0x" para 2 Ether.
