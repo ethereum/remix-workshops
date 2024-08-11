@@ -1,13 +1,13 @@
-# How it works?
+# ¿Cómo funciona?
 
-**EIP-7 DelegateCall** opcode allows a separate execution in another contract while maintaining the original execution context.
+**EIP-7 DelegateCall** opcode permite una ejecución separada en otro contrato mientras se mantiene el contexto de ejecución original.
 
-All **message calls** from the user go through a **Proxy contract**.
+Todas las **llamadas de mensajes** del usuario pasan por un **contrato de proxy**.
 
-The **Proxy contract** then will redirect them to the **Logic contract**.
+El **contrato de proxy** los redirigirá al **contrato lógico**.
 
-And when you need to **upgrade** the logic, you'll **just** deploy that - **HOWEVER** - the implementation of Proxy will remain the same.
+Y cuando necesites **actualizar** la lógica, **solo** implementarás que - **SIN EMBARGO** - la implementación de Proxy seguirá siendo la misma.
 
-You'll only need to update the address of Logic contract in Proxy.
+Solo tendrás que actualizar la dirección del contrato de Logic en Proxy.
 
-The Proxy Contract uses **Delegate calls** and **Solidity assembly** because without it, it's impossible to return any value from **delegatecall**.
+El contrato de proxy utiliza **llamadas de delegado** y **ensamblaje de solidez** porque sin él, es imposible devolver cualquier valor de **delegatecall**.
