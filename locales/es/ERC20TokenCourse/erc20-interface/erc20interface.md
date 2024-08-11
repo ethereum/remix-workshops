@@ -1,76 +1,76 @@
-ERC20 (Ethereum Request for Comments 20) is a standard for token contracts that manages fungible tokens on the Ethereum blockchain.
+ERC20 (Ethereum Request for Comments 20) es un estándar para contratos de autentificador que administran autentifiadores fungibles en la cadena de bloques Ethereum.
 
-Fungible tokens are all equal to each other and have the same value, behavior, and rights. Fungible tokens are often used as a medium of exchange, like the currencies ETH or BTC. However, they can also have other use cases like voting rights or reputation.
+Los autentificadores funcionales son todos iguales entre ellos y tienen el mismo valor, comportamiento y derechos. Las autentificadores fungibles se utilizan a menudo como un medio de cambio, como las monedas ETH o BTC. Sin embargo, también pueden tener otros casos de uso como derecho de voto o reputación.
 
-If you want to know more about the ERC20 token standard, have a look at the specifications in its <a href="https://eips.ethereum.org/EIPS/eip-20" target="_blank">Ethereum improvement proposal</a>.
+Si quieres saber más sobre el estándar de autentificadores ERC20, échale un vistazo a las especificaciones en su <a href="https://eips.ethereum.org/EIPS/eip-20" target="_blank">Ethereum improvement proposal</a>.
 
-## Interface
+## Interfaz
 
-To get an overview of the required functionality of an ERC20 token contract, we will look at an interface that interacts with an ERC20 contract.
-This interface (line 9) is part of the open-source contract library provided by <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.4.0/contracts/token/ERC20/IERC20.sol" target="_blank">OpenZeppelin</a>.
+Para obtener una visión general de la funcionalidad requerida de un contrato de auntentificadores ERC20, examinaremos una interfaz que interactúa con un contrato ERC20.
+Esta interfaz (línea 9) forma parte de la libería de contratos de código abierto proporcionada por <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.4.0/contracts/token/ERC20/IERC20.sol" target="_blank">OpenZeppelin</a>.
 
-## ERC20 Functions
+## Funciones de ERC20
 
-Contracts compliant with the ERC20 standard must implement the following six functions:
+Los contratos compatibles con la norma ERC20 deben implementar las siguientes seis funciones:
 
-### totalSupply
+### suministroTotal
 
-The function `totalSupply` (line 13) returns the total amount of tokens available.
+La función `totalSupply` (línea 13) devuelve la cantidad total de autentificadores disponibles.
 
-### balanceOf
+### balanceDe
 
-The function `balanceOf` (line 18) returns the amount of tokens owned by the account with the address `account`.
+La función `balanceOf` (línea 18) devuelve la cantidad de auntentificador propiedad de la cuenta con la dirección `cuenta`.
 
-### transfer
+### transferir
 
-The function `transfer` (line 27) transfers `amount` of tokens to the address `recipient`.
-This function **must** emit (produce) a `Transfer` event (see below) and **should** throw an exception when the sender doesn't have enough tokens to make the transfer.
+La función `transfer` (línea 27) transfiere `amount` de autentificadores a la dirección `recipient`.
+Esta función **debe** emitir (producir) un evento `Transfer` (ver abajo) y **debería** lanzar una excepción cuando el remitente no tiene suficientes autentificadores para hacer la transferencia.
 
-### approve
+### aprobar
 
-The function `approve` (line 52) creates an allowance for the address `spender` to transfer `amount` of tokens on behalf of the account calling the function.
+La función `approve` (línea 52) crea una asignación para que la dirección `spender` transfiera `amount` de autentificadores en nombre de la cuenta llamando a la función.
 
-### allowance
+### permiso
 
-The function `allowance` (line 36) returns the amount of tokens that the address `spender` is allowed to spend on behalf of the account with the address `owner`.
+La función `allowance` (línea 36) devuelve la cantidad de autentificadores que la dirección `spender` tiene permitido gastar en nombre de la cuenta con la dirección `owner`.
 
-### transferFrom
+### transferirDesde
 
-The function `transferFrom` (line 63) transfers `amount` of tokens on behalf of the address `sender` to the address `recipient`.
-This function **must** emit a `Transfer` event.
+La función `transferFrom` (línea 63) transfiere `amount` de autentificadores en nombre de la dirección `sender` a la dirección `recipient`.
+Esta función **debe** emitir un evento `Transfer`.
 
-## ERC20 Events
+## Eventos ERC20
 
-ERC20 contracts must also emit two events:
+Los contratos ERC20 deben emitir también dos eventos:
 
-### Transfer
+### Transferencia
 
-The `Transfer` (line 71) event must be emitted when `value` amount of tokens are transferred from the account with the address `indexed from` to `indexed to`. The parameters `from` and `to` are `indexed` allowing us to search for these events using the indexed parameters as filters.
+El evento `Transfer` (línea 71) debe emitirse cuando `value` cantidad de autentificadores son transferidos desde la cuenta con la dirección `indexed from` a `indexed to`. Los parámetros `from` y `to` son `indexed` que nos permiten buscar estos eventos usando los parámetros indexados como filtros.
 
-### Approval
+### Aprobaciones
 
-The `Approval` (line 77)  event must be emitted when the account `indexed owner` approves the account `indexed spender` to transfer `value` amount of tokens on its behalf.
+El evento `Approval` (línea 77) debe ser emitido cuando la cuenta `indexed owner` aprueba la cuenta `indexed spender` para transferir la cantidad de auntentificadores `value` en su nombre.
 
-## ERC20 Optional functions
+## Funciones opcionales de ERC20
 
-In addition to the mandatory functions and events, there are also three optional functions specified in the ERC20 standard that are not implemented in this interface:
+Además de las funciones obligatorias y eventos, también hay tres funciones opcionales especificadas en el estándar ERC20 que no se implementan en esta interfaz:
 
-### name
+### nombre
 
 `function name() external view returns (string);`
 
-Returns the name of the token.
+Devuelve el nombre del autentificador.
 
-### symbol
+### símbolos
 
 `function symbol() external view returns (string);`
 
-Returns the symbol of the token.
+Devuelve el símbolo del autentificador.
 
-### decimals
+### decimales
 
 `function decimals() external view returns (uint8);`
 
-Returns the number of decimal places the token uses.
+Devuelve el número de decimales que utiliza el autentificador.
 
-You may want to use decimals to make your token divisible into arbitrary amounts like 1.5 ETH when displayed. The EVM (Ethereum virtual machine) only supports integer numbers. That's why the ERC20 standard suggests to implement the decimal functionality that specifies how many decimal places a token has. 18 decimal places is the industry standard.
+Puedes que quieras usar decimales para hacer tus autentificador divisible en cantidades arbitrarias como 1.5 ETH cuando se muestre. El EVM (Ethereum virtual machine) sólo admite números enteros. Es por eso que el estándar ERC20 sugiere implementar la funcionalidad decimal que especifica cuántos decimales tiene un autentificador. 18 decimales es la norma de la industria.
