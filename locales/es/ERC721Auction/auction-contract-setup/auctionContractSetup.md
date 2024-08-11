@@ -41,6 +41,6 @@ Utilizaremos la parte de asignación de las siguientes secciones para darle inst
 
 1. Desplegar un contrato de NFT. Puedes utilizar el contrato de NFT que creamos en nuestra sección "3.3 ERC721 - Creación de Token".
 
-2. Deploy this EnglishAuction contract. Use the address of the NFT contract as an argument for the `_nft` parameter, 0 for `_nftId`, and 1 for `_startingBid`.
+2. Despliegue de este contrato EnglishAuction. Usa la dirección del contrato de NFT como argumento para el parámetro `_nft`, 0 para `_nftId` y 1 para `_startingBid`.
 
-3. After deploying your contract, test if contract functions like `nft`, `nftId`, and `started` work as expected.
+3. Después de desplegar tu contrato, prueba si las funciones del contrato como `nft`, `nftId` y `started` funcionan como se esperaba.
