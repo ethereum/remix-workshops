@@ -1,3 +1,3 @@
-**Libraries** are deployed contracts that do not store state and are used by other contracts to decrease their size and thus their deployment costs.
+Las **Librerías** son contratos desplegados que no almacenan estado y que son utilizados por otros contratos para reducir su tamaño, y por lo tanto sus costos de implementación.
 
-Learn to work with **Libraries** in Remix - you won't need to whisper.
+Aprende a trabajar con **Librerías** en Remix - no necesitarás susurrar.
