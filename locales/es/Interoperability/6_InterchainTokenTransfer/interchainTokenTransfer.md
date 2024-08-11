@@ -1,8 +1,8 @@
-At this point we have gone over an example for how to send a general message between one blockchain to another. Now, let's implement a contract that sends a message and a token from one blockchain to another.
+En este punto hemos pasado por un ejemplo para enviar un mensaje general entre una cadena de bloque a otra. Ahora, vamos a implementar un contrato que envía un mensaje y un token de un cadena de bloque a otro.
 
-## Overview
+## General
 
-This contract should seem largely familiar. Much like the previous section the `constructor` receives the `Gateway` and `Gas Service` addresses.
+Este contrato debería parecer bastante familiar. Al igual que la sección anterior, el `constructor` recibe las direcciones `Gateway` y `Gas Service`.
 
 It then has a function that will be called from the source chain called `sendToMany` that takes in parameters similar to the previous section.
 
