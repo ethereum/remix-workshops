@@ -1,14 +1,14 @@
-In this section, we'll explore the process of revoking confirmations. This process is necessary when an owner changes their mind about a transaction and wants to stop it from being executed. This section will be pretty straightforward.
+In this section, we'll explore the process of revoking confirmations. Este proceso es necesario cuando un propietario cambia de opinión sobre una transacción y quiere impedir que se ejecute. Esta transacción será bastante simple.
 
-## revokeConfirmation Event
+## Evento revokeConfirmation
 
-On line 14, we have added the `RevokeConfirmation` event. This event is emitted whenever a transaction confirmation is revoked by an owner.
+En la línea 14, hemos añadido el evento `RevokeConfirmation`. Este evento se emite cada vez que un propietario revoca la confirmación de una transacción.
 
-## revokeConfirmation Function
+## Función revokeConfirmation
 
-On line 129, we have added the `revokeConfirmation` function. It allows users to revoke a transaction confirmation.
+En la línea 129, hemos añadido la función `revokeConfirmation`. Esta permite a los usuarios revocar la confirmación de una transacción.
 
-`revokeConfirmation` takes one parameter: `txIndex`. It has three modifiers: `onlyOwner`, `txExists`, and `notExecuted`.
+`revokeconfirmation` toma un parámetro: `txIndex`. Tiene tres modificadores: `onlyOwner`, `txExists` y `notExecuted`.
 
 On line 134, we require that the transaction has been confirmed by the caller. This ensures that an owner who has confirmed the transaction can only revoke their own confirmation.
 We then decrement the `numConfirmations` variable of the transaction and set the `isConfirmed` mapping of the transaction index and the caller's address to false. Finally, we emit the `RevokeConfirmation` event.
