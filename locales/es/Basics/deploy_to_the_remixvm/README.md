@@ -1,15 +1,15 @@
-In the previous chapter, we compiled a contract  - which is to say the Solidity code has been transformed into little chunks of Ethereum Virtual Machine (EVM) bytecode.
+En el capítulo anterior, compilamos un contrato, que es decir, el código de Solidity se ha transformado en pequeños trozos de código de bytes de Ethereum Virtual Machine (EVM).
 
-Now we will put that code on a test blockchain.
+Ahora pondremos ese código en una cadena de bloques de prueba.
 
-1. Click the Deploy and Run icon ![deploy & run icon](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/deploy_to_the_remixvm/images/run.png "deploy & run icon").
+1. Haz clic en el icono Desplegar y Correr![deploy & run icon](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/deploy_to_the_remixvm/images/run.png "icono desplegar y correr").
 
-2. Select one of the **Remix VM**s from the **Environment** pulldown.
+2. Seleccione uno de los **Remix VM** en el menú desplegable **Entorno**.
 
-3. Click the Deploy button (or the transact button in the expanded view).
+3. Haga clic en el botón Desplegar (o el botón de transacción en la vista expandida).
 
-4. You have deployed your compiled contract to the Remix VM - a simulated blockchain that is running inside of your browser window.  The Remix VM is simple, fast test chain.  It is not that realistic because you don't need to approve each transaction.
+4. Has desplegado tu contrato compilado en la máquina virtual Remix - una cadena de bloque simulada que se está ejecutando dentro de la ventana de su navegador.  La MV Remix es una cadena de pruebas simple y rápida.  No es tan realista porque usted no necesita aprobar cada transacción.
 
-5. Check the terminal to see detail of this deployment transaction.
+5. Comprueba la terminal para ver los detalles de esta transacción de implementación.
 
-You can also use Remix to deploy to other public EVM chains. To do this, you'll need to connect to a different **Environment** - like Injected Provider.  The Injected Provider connects Remix to browser wallet (like MetaMask or similar).  We'll try deploying to a public network at the end of this tutorial. But before we get there, we'll cover how to interact with a deployed contract's functions.
+También puede usar Remix para desplegar en otras cadenas de EVM públicas. Para hacer esto, necesitarás conectarte a un **entorno** diferente - como Inyected Provider.  El Injected Provider conecta Remix a la cartera del navegador (como MetaMask o similar).  Intentaremos desplegar a una red pública al final de este tutorial. Pero antes de que lleguemos, cubriremos cómo interactuar con las funciones de un contrato desplegado.
