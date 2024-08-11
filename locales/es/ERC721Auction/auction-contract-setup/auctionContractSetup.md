@@ -1,45 +1,45 @@
-In this contract tutorial, we will learn how to create an ERC721 (NFT) auction contract.
-We recommend to you, to do the Learneth "Solidity NFT Course" before starting this tutorial.
+En este tutorial de contrato, aprenderemos cómo crear un contrato de subasta ERC721 (NFT).
+Te recomendamos que hagas el curso Learneth "Solidity NFT Course" antes de comenzar este tutorial.
 
-In the following sections, we will create a contract that will enable a seller to auction an NFT to the highest bidder. This contract was created by the <a href="https://solidity-by-example.org/app/english-auction/" target="_blank">Solidity by Example</a> project. In this first section, we will create an interface, the necessary state variables, and the constructor.
+En las siguientes secciones, crearemos un contrato que permitirá al vendedor subastar un NFT a la mayor oferta. Este contrato fue creado por el proyecto <a href="https://solidity-by-example.org/app/english-auction/" target="_blank">Solidity by Example</a>. En esta primera sección, crearemos una interfaz, las variables de estado necesarias y el constructor.
 
-### Interface
+### Interfaz
 
-We create the interface (line 5) for the ERC721 token since our contract will need to interact with it. We will need the `safeTransferFrom` (line 5),  and` transferFrom` (line 11) methods.
+Creamos la interfaz (línea 5) para el autentificador ERC721 ya que nuestro contrato tendrá que interactuar con él. Necesitaremos los métodos `safeTransferFrom` (línea 5), y` transferFrom` (línea 11).
 
 ### EnglishAuction
 
-We create the four events `Start`, `Bid`, `Withdraw`, `End` (line 19-22) so we can log important interactions.
+Creamos los cuatro eventos `Start`, `Bid`, `Withdraw`, `End` (línea 19-22) para poder registrar interacciones importantes.
 
-Next, we will create the state variables that store all the necessary information about our auction on-chain.
+A continuación, crearemos las variables de estado que almacenarán toda la información necesaria sobre nuestra subasta en cadena.
 
-We create two state variables for the NFT we want to auction. In the variable `nft` (line 24) we store a representation of the NFT contract, that will allow us to call its functions by combining the interface IERC721 and the address of the NFT contract.
-In `nftId` (line 25), we store the specific token id in our NFT contract that will be auctioned.
+Creamos dos variables de estado para el NFT que queremos subastar. En la variable `nft` (línea 24) guardamos una representación del contrato NFT, que nos permitirá llamar a sus funciones combinando la interfaz IERC721 con la dirección del contrato NFT.
+En `nftId` (línea 25), almacenamos el identificador de autentificador específico en nuestro contrato NFT que se subastará.
 
-Next, we need a variable to store the address of the person that is auctioning off the NFT, the `seller` (line 27).
-We want our NFT contract to send the seller the proceeds of the auction when it is finished, that’s why use `address payable`.
+A continuación, necesitamos una variable para almacenar la dirección de la persona que subasta del NFT, el `seller` (línea 27).
+Queremos que nuestro contrato NFT envíe al vendedor los ingresos de la subasta cuando haya terminado, por eso utiliza `address payable`.
 
-We create a state variable `endAt` (line 28) where we will store the end date of the auction.
-We also create the two booleans, `started` (line 29) and `ended` (line 30), that keep track of whether the auction has started or ended.
+Creamos una variable de estado `endAt` (línea 28) donde almacenaremos la fecha de fin de la subasta.
+También creamos los dos booleanos, `started` (línea 29) y `ended` (línea 30), que hacen un seguimiento de si la subasta ha comenzado o terminado.
 
-We create a variable `highestBidder` (line 32) where we will store the address of the highest bidder. We will send the highest bidder the NFT once the auction has ended.
+Creamos una variable `highestBidder` (línea 32) donde almacenaremos la dirección de la mayor oferta. Enviaremos la oferta más alta el NFT una vez que la subasta haya terminado.
 
-Finally, we need a uint `highestBid` (line 33) to store the highest bid and a mapping `bids` (line 34), where we can store the total value of bids that an account has made before withdrawing; more on this in the next section.
+Por último, necesitamos un uint `highestBid` (línea 33) para almacenar la oferta más alta y un mapeo de `bids` (línea 34), donde podemos almacenar el valor total de las ofertas que una cuenta ha realizado antes de retirarse; más sobre esto en la próxima sección.
 
 ### Constructor
 
-When the auctioneer deploys the contract, they need to provide a few arguments:
-the address of the contract of the NFT they want to auction `_nft` (line 37), the token id of the NFT they want to auction `_nftId` (line 38), and a starting price that must be overbid to place the first bid in the auction,`_startingBid` (line 39).
+Cuando el subastador despliegue el contrato, necesitan proveer algunos argumentos:
+la dirección del contrato del NFT que quieren subastar `_nft` (línea 37), el id del token del NFT que quieren subastar `_nftId` (línea 38), y un precio inicial que debe ser sobrepujada para hacer la primera oferta en la subasta,`_startingBid` (línea 39).
 
-Once deployed, the state variables `nft` (line 41), `nftId` (line 42), `highestBid` (line 45) will be assigned the values from the arguments. The address of the `seller` that deployed the contract will be automatically read out via msg.sender and stored in the state variable `seller` (line 44).
+Una vez desplegadas, las variables de estado `nft` (línea 41), `nftId` (línea 42), `highestBid` (línea 45) serán asignadas a los valores de los argumentos. La dirección del 'sellerr' que desplegó el contrato será automáticamente leída a través de msg.sender y almacenada en la variable de estado 'seller' (línea 44).
 
-In the next section, we will enable the auctioneer to start the auction and bidders to place their bids.
+En la siguiente sección, vamos a permitir que el subastador inicie la subasta y los licitadores hagan sus ofertas.
 
-## ⭐️ Assignment
+## ⭐ Tarea
 
-We will use the assignment part of the following sections to give you instructions on testing your contract in the Remix VM environment of Remix.
+Utilizaremos la parte de asignación de las siguientes secciones para darle instrucciones sobre la prueba de su contrato en el entorno de Remix VM.
 
-1. Deploy an NFT contract. You can use the NFT contract that we created in our "3.3 ERC721 - Token Creation" section.
+1. Desplegar un contrato de NFT. Puedes utilizar el contrato de NFT que creamos en nuestra sección "3.3 ERC721 - Creación de Token".
 
 2. Deploy this EnglishAuction contract. Use the address of the NFT contract as an argument for the `_nft` parameter, 0 for `_nftId`, and 1 for `_startingBid`.
 
