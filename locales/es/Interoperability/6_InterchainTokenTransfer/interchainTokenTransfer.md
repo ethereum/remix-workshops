@@ -4,36 +4,36 @@ En este punto hemos pasado por un ejemplo para enviar un mensaje general entre u
 
 Este contrato debería parecer bastante familiar. Al igual que la sección anterior, el `constructor` recibe las direcciones `Gateway` y `Gas Service`.
 
-It then has a function that will be called from the source chain called `sendToMany` that takes in parameters similar to the previous section.
+Posteriormente tiene una función que será llamada desde la cadena fuente llamada `sendToMany` que toma parámetros similares a la sección anterior.
 
-1. `_destinationChain`: The chain the transaction is sending to
-2. `_destinationAddress`: The address on the destination chain your transaction is sending to
-3. `_destinationAddresses`: The message that you will be sending along with your token transfer. In this example the message is a list of receiving addresses for the token transfer.
-4. `_symbol`: The symbol of the token address being sent
-5. `_amount`: The amount of the token being sent
+1. `_destinationChain`: La cadena a la que la transacción está enviando
+2. `_destinationAddress`: La dirección en la cadena de destino en la que se ejecutará esta transacción
+3. `_destinationAddresses`: El mensaje que enviarás junto a tu transferencia de token. En este ejemplo, el mensaje es una lista de direcciones receptoras para la transferencia de token.
+4. `_symbol`: El símbolo de la dirección del token siendo enviado
+5. "amount": La cantidad del token siendo enviado
 
-In the function we already have the `require` statement implemented to ensure gas is sent
+En la función ya tenemos la instrucción `require` implementada para asegurar que el gas sea enviado
 
-We also have the basic ERC20 functionality to send the token from the calling wallet to this smart contract. The contract also calls the `approve` function to allows the Gateway to eventually transfer funds on its behalf.
+También tenemos la funcionalidad básica ERC20 para enviar el token desde la cartera de llamadas a este contrato inteligente. El contrato también llama a la función 'approve' para permitir que la puerta de enlace finalmente transfiera fondos en su nombre.
 
-Finally, the `_executeWithToken()` function is also implemented out of the box.
+Finalmente, la función `_executeWithToken()` también se implementa desde la caja.
 
-It makes use of the following params:
+Utiliza los siguientes parámetros:
 
-1. `_payload`: The incoming message from the source chain
-2. `_tokenSymbol`: The symbol of the token that was sent from the source chain
-3. `_amount`: The amount of the token that was sent from the source chain
+1. `_payload`: El mensaje entrante de la cadena fuente
+2. `_tokenSymbol`: El símbolo del token que fue enviado desde la cadena origen
+3. `_amount`: La cantidad del token que fue enviado desde la cadena origen
 
-Now with these params that were passed in, the `_execute()` function can send the tokens that were sent to the appropriate receivers.
+Ahora con estos parámetros pasados, la función `_execute()` puede enviar los tokens que fueron enviados a los receptores apropiados.
 
-## Challenge
+## Desafio
 
-Your challenge here is to finish off the `sendToMany()` function using the Axelar Gateway and Gas Service to trigger an interchain transaction.
+Tu desafío aquí es terminar la función `sendToMany()` usando el servicio Axelar Puerta de Enlace y el servicio Gas para desencadenar una transacción de intercadena.
 
-In the end you should be able to deploy this contract on two testnets, trigger the `sendToMany()` function and see the live transaction on <a href="https://testnet.axelarscan.io" target="_blank">Axelarscan (testnet) block explorer</a>.
+Al final debería ser capaz de implementar este contrato en dos redes de pruebas, activa la función `sendToMany()` y ve la transacción en vivo en <a href="https://testnet.axelarscan.io" target="_blank">Axelarscan (testnet) block explorer</a>.
 
-### Testing Notes
+### Probando Notas
 
-Note 1: The recommended ERC20 to use is `aUSDC` a wrapped version of the USDC token that can be obtained from <a href= "https://docs.axelar.dev/resources/rpc/resources" target="_blank">the discord faucet bot</a>. When triggering the `sendToMany()` function simply pass in the symbol `aUSDC` to the fourth param.
+Nota 1: El ERC20 recomendado para usar es `aUSDC` una versión envuelta del token USDC que puede obtenerse de <a href= "https://docs.axelar.dev/resources/rpc/resources" target="_blank">the discord faucet bot</a>. Al activar la función `sendToMany()` simplemente pasa el símbolo `aUSDC` al cuarto parámetro.
 
-Note2: When triggering the `sendToMany()` function you must remember to `approve` your contract to spend `aUSDC` tokens on your behalf, otherwise `transferFrom()` on line49 will throw an error.
+Nota2: Al activar la función `sendToMany()` debes recordar `approve` tu contrato para gastar los tokens `aUSDC` en tu nombre, de lo contrario `transferFrom()` en la línea 49 arrojará un error.
