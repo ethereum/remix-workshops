@@ -1,5 +1,5 @@
-## Interactive Solidity Token Course
+## Curso interactivo de autentificadores de Solidity
 
-Learn to understand and create ERC20 tokens.
+Aprende a entender y crear autentificadores de ERC20.
 
-Developed by the p2p learning platform https://dacade.org.
+Desarrollado por la plataforma de aprendizaje p2p https://dacade.org.
