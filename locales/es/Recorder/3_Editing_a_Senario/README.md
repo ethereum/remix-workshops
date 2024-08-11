@@ -1,21 +1,25 @@
-# Editing a scenario
+# Editando un escenario
 
-Here's the first few lines of the scenario that I recorded.  The addresses on my machine will be different from your's.
+Aquí están las primeras líneas del escenario que grabé.  Las direcciones de mi máquina serán diferentes a las tuyas.
 
 ```
 {
-    "accounts": {
-    "account{0}": "0xca35b7d915458ef540ade6068dfe2f44e8fa733c",
-    "account{4}": "0xdd870fa1b7c4700f2bd7f44238821c26f7392148",
-    "account{3}": "0x583031d1113ad414f02576bd6afabfb302140225"
-    }
+"Cuentas": {
+
+"Cuenta{0}": "0xca35b7d915458ef540ade6068dfe2f44e8fa733c",
+
+"Cuenta{4}": "0xdd870fa1b7c4700f2bd7f44238821c26f7392148",
+
+"Cuenta{3}": "0x583031d1113ad414f02576bd6afabfb302140225"
+
+}
 ```
 
-So if you wanted to play this scenario in another testnet, you'd need to change these addresses to address that you have test ETH on so that you could pay for the transactions.  But other than swapping out the addresses, you can quickly run this on other nets.
+Así que si querías jugar a este escenario en otra testnet, tendrías que cambiar estas direcciones a la dirección en la que has probado ETH para poder pagar las transacciones.  Pero aparte de intercambiar las direcciones, puedes ejecutar esto rápidamente en otras redes.
 
-And you might change the parameters for the functions.
+Y podrías cambiar los parámetros de las funciones.
 
-For example here is a bit of the scenario.json a bit further down where proposal 2 was voted for by one of the addresses:
+Por ejemplo, aquí hay un poco del scenario.json un poco más abajo, donde la propuesta 2 fue votada por una de las direcciones:
 
 ```
 {
@@ -35,7 +39,7 @@ For example here is a bit of the scenario.json a bit further down where proposal
     },
 ```
 
-Let's edit this so that another proposal wins in the playback.
+Editemos esto para que otra propuesta gane en la reproducción.
 
 Change the **parameters** array which now is:
 
