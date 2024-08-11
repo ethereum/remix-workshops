@@ -1,8 +1,8 @@
-Welcome to the Multisignature Wallet course! In this section, we'll explore the fundamentals of Multisignature (Multisig) wallets and we'll go through a multisig wallet contract.
+¡Bienvenido al Curso de Cartera Multifirma! En esta sección, exploraremos los fundamentos de las carteras multifirma (Multisig) y repasaremos un contrato de cartera multisig.
 
-## What is a Multisignature Wallet?
+## ¿Qué es una Cartera Multifirma?
 
-A multisignature (multisig) wallet is a type of digital wallet that requires multiple keys to authorize a cryptocurrency transaction.
+Una cartera multifirma (multisig) es un tipo de cartera digital que requiere múltiples llaves para autorizar una transacción de criptomonedas.
 
 Imagine a multisig wallet as a secure vault with multiple locks. To open the vault, each the keyholder must open their individual lock. This setup ensures that no single person can access the vault's contents without the others' consent.
 
