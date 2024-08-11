@@ -1,18 +1,18 @@
 En esta sección, exploraremos a la función `receive` y el evento Deposit asociado. Examinaremos cómo se utiliza la función 'receptor' para depositar a Ether en la cartera multifirma y cómo el evento Deposite proporciona transparencia.
 
-## Evento Depósito
+## Evento Deposit
 
-En la línea 9 tenemos el evento de Depósito. El evento Depósito se emite cada vez que Ether se deposita en la cartera multifirma. Incluye tres parámetros:
+En la línea 9 tenemos el evento Deposit. El evento Deposit se emite cada vez que se deposita Ether en la cartera multifirma. Incluye tres parámetros:
 
 1. `sender`: La dirección que envió el Éter.
 2. `amount`: La cantidad de Ether depositada.
-3. `balance`: El balance actualizado del contrato después del depósito.
+3. `balance`: El saldo actualizado del contrato después del depósito.
 
-Podemos usar el evento Depósito para rastrear el flujo de Ether hacia la cartera multifirma y tal vez disparar otras acciones basadas en el evento.
+Podemos usar el evento Deposit para rastrear el flujo de Ether hacia la cartera multifirma y tal vez activar otras acciones basadas en el evento.
 
-## función Recibir
+## Función receive
 
-En la línea 43, tenemos la función "receive". La función `receive` es una función especial que se ejecuta cada vez que Ether se envía al contrato.
+En la línea 43, tenemos la función `receive`. La función `receive` es una función especial que se ejecuta cada vez que Ether se envía al contrato.
 
 La función `receive` se marca como `external` y `payable`. El modificador `external` significa que la función sólo puede llamarse desde fuera del contrato. El modificador `payable` significa que la función puede recibir Ether.
 
