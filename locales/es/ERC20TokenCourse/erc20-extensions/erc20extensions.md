@@ -1,18 +1,18 @@
-The ERC20 standard only describes the required and optional functionality that your contract needs, but you can add additional functionality.
+El estándar ERC20 sólo describe la funcionalidad requerida y opcional que necesita tu contrato, pero puedes añadir una funcionalidad adicional.
 
-In this section, we added the functionality to burn and mint tokens, as well as the ability to pause the contract, by using OpenZeppelin extensions.
+En esta sección, añadimos la funcionalidad de quemar y acuñar autentificadores, así como la capacidad de pausar el contrato, usando las extensiones de OpenZeppelin.
 
-Of course, you can write your own ERC20 token contract implementation or extensions and import them into your contract. But OpenZeppelin contracts have been audited by security experts and are a great way to add desired functionality.
+Por supuesto, puedes escribir tu propia implementación o extensión del contrato ERC20 e importarlos en tu contrato. Pero los contratos de OpenZeppelin han sido auditados por expertos en seguridad y son una excelente manera de añadir la funcionalidad deseada.
 
-### Mintable
+### Acuñable
 
-The mint function allows the creator of the contract to mint (create) additional tokens after the contract has been deployed (line 22). As input parameters, the function needs the address that the tokens will be minted to, and the amount of tokens that should be minted.
+La función cuña permite que el creador del contrato acuñe (fichas adicionales) después de que el contrato haya sido desplegado (línea 22). Como parámetros de entrada, la función necesita la dirección a la que serán acuñados los autentificadores y la cantidad de autentificadores que deben ser acuñados.
 
-We don't have to import `mint()` from another contract since the mint function is already part of the <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol" target="_blank">ERC20 contract</a> implementation of OpenZeppelin. We import `Ownable` (line 7) which is a contract module that provides a basic access control mechanism that allows an owner to have exclusive access to specific functions. In this contract, we add the inherited `onlyOwner` modifier to the `mint` function (line 22) and restrict access to this function to the "owner".
+No tenemos que importar `mint()` de otro contrato ya que la función de la cuña ya es parte del contrato <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol" target="_blank">ERC20</a> implementación de OpenZeppelin. Importamos `Ownable` (línea 7) que es un módulo de contrato que proporciona un mecanismo de control de acceso básico que permite a un propietario tener acceso exclusivo a funciones específicas. En este contrato, añadimos el modificador heredado `onlyOwner` a la función `mint` (línea 22) y restringimos el acceso a esta función al "propietario".
 
-The contract will inherit additional functions like owner(), transferOwnership() and renounceOwnership() to manage access, from the <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol" target="_blank">Ownable contract</a>.
+El contrato heredará funciones adicionales como propietario(), transferOwnership() y renunciará a Ownership() para administrar el acceso, desde el <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol" target="_blank">Ownable contract</a>.
 
-### Burnable
+### Quemable
 
 By importing the "ERC20Burnable" (line 5) and inheriting its functions (line 9) our contract allows token holders to destroy their tokens as well as the tokens in their allowance.
 For more information, have a look at the <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/extensions/ERC20Burnable.sol" target="_blank">ERC20Burnable contract</a>.
