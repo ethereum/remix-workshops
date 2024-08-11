@@ -6,7 +6,7 @@ Tenemos nuevos modificadores en esta iteración del contrato. Examinémoslos uno
 
 1. **Modificador `txExists`:** (Línea 13) asegura que la transacción exista. Para ello, comprueba si el índice de transacciones es menor que la longitud de la matriz `transacciones`. Hablaremos más sobre este modificador más adelante en esta sección.
 2. **Modificador `notExecuted`:** (Línea 18) asegura que la transacción no haya sido ejecutada. Hace esto verificando si la variable `executed` de la transacción es falsa.
-3. **`notConfirmed` modificador:** (línea 23) asegura que la transacción no ha sido confirmada por la persona que llama. Hace esto comprobando si el mapeo `isConfirmed` del índice de transacción y la dirección de la persona que llama es falso.
+3. **Modificador `notConfirmed`:** (línea 23) asegura que la transacción no ha sido confirmada por el invocaaador. Hace esto comprobando si el mapeo `isConfirmed` del índice de transacción y la dirección de la persona que llama es falso.
 
 ## Estructura de la Transacción
 
