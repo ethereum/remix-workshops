@@ -21,24 +21,24 @@ Ahora, queremos alojar estas imágenes en algún lugar para poder señalarlas en
 
 Primero necesitas una cuenta en Pinata. Vaya a <a href="https://app.pinata.cloud/register" target="_blank">Pinata.cloud</a> y cree una cuenta. En Pinata puedes subir hasta 1 GB de datos de forma gratuita.
 
-Once you have signed up, you should be in the Pin Manager view.
+Una vez que te hayas registrado, deberías estar en la vista del Administrador de Pines.
 
 <img src="https://i.imgur.com/yKpD65m.png" alt="Pin Manager Pinata" width="300"/>
 
-### Upload Images to IPFS
+### Subir imágenes a IPFS
 
-Click on the upload button and upload the folder with your images.
-Once you've uploaded your folder, you should see the name of your folder and the CID (content identifier) associated with it. If the content in the folder changes, the CID will also change.
+Haz clic en el botón de carga y sube la carpeta con tus imágenes.
+Una vez que haya cargado su carpeta, debería ver el nombre de su carpeta y el CID (identificador de contenido) asociado a ella. Si el contenido de la carpeta cambia, el CID también cambiará.
 
-To access your folder on IPFS, enter this address "https://ipfs.io/ipfs/" and add your CID. For our current example, you can access your folder by using: <a href="https://ipfs.io/ipfs/QmTJok2tju9zstjtAqESdZxTiUiFCBAyApHiDVj4maV75P" target="_blank">
+Para acceder a su carpeta en IPFS, introduzca esta dirección "https://ipfs.io/ipfs/" y agregue su CID. Para nuestro ejemplo actual, puede acceder a su carpeta utilizando: <a href="https://ipfs.io/ipfs/QmTJok2tju9zstjtAqESdZxTiUiFCBAyApHiDVj4maV75P" target="_blank">
 https://ipfs.io/ipfs/QmTJok2tju9zstjtAqESdZxTiUiFCBAyApHiDVj4maV75P </a>
 
-You can access a specific image by using: <a href="https://ipfs.io/ipfs/QmTJok2tju9zstjtAqESdZxTiUiFCBAyApHiDVj4maV75P/geo_1.png" target="_blank">
+Puede acceder a una imagen específica usando: <a href="https://ipfs.io/ipfs/QmTJok2tju9zstjtAqESdZxTiUiFCBAyApHiDVj4maV75P/geo_1.png" target="_blank">
 https://ipfs.io/ipfs/QmTJok2tju9zstjtAqESdZxTiUiFCBAyApHiDVj4maV75P/geo_1.png </a>
 
-### Create JSON files
+### Crear archivos JSON
 
-We create another folder where we store three JSON files.
+Creamos otra carpeta donde almacenamos tres archivos JSON.
 
 ```
 geo-json
