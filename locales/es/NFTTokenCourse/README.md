@@ -1,5 +1,5 @@
-## Solidity NFT Course
+## Curso de Solidity NFT
 
-Learn how to create your own NFTs (non-fungible tokens).
+Aprende a crear tus propios NFT (tokens no fungibles).
 
-Developed by the p2p learning platform https://dacade.org.
+Desarrollado por la plataforma de aprendizaje p2p https://dacade.org.
