@@ -1,20 +1,20 @@
-Let's load a file from the File Explorer into the Editor.
+Vamos a cargar un archivo del Explorador de archivos en el editor.
 
-1. In the icon panel, click ![file explorer icon](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/load_and_compile/images/files1.png "file explorer icon") , the File Explorer's icon.
+1. En el panel de iconos, haz clic en ![file explorer icon](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/load_and_compile/images/files1.png "file explorer icon") , el icono del Explorador de archivos.
 
-2. Make sure you are in the **default_workspace**.
+2. Asegúrate de estar en el **espacio de trabajo por defecto**.
 
 ![default workspace](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/load_and_compile/images/default_workspace_open.png)
 
-3. Open the contracts folder and click on **2_Owner.sol** in the contracts folder. Click it. The file will appear in a tab in the main panel.
+3. Abre la carpeta de contratos y haga clic en **2_Owner.sol** en la carpeta contratos. Haz clic en él. El archivo aparecerá en una pestaña del panel principal.
 
-4. In the icon panel, click the **Solidity Compiler** ![solidity compiler icon](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/load_and_compile/images/solidity1.png "solidity compiler icon"). The Solidity compiler should now be in the side panel.
+4. En el panel de iconos, haz clic en el **Compilador de Solidity** ![solidity compiler icon](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/load_and_compile/images/solidity1.png "solidity compiler icon""). Ahora el compilador de Solidity debería estar en el panel lateral.
 
-5. Click the compile button.
+5. Haga clic en el botón de compilación.
    ![compile 2\_owner](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/load_and_compile/images/compile2owner.png "compile 2_Owner")
 
-6. Compiling can also be triggered by hitting **CTRL + S**.
+6. También se puede activar la compilación pulsando **CTRL + S**.
 
-The spinner will turn while the file is compiling.
+El hilandero girará mientras el archivo se está compilando.
 
-**Note:** The spinner also turns when the compiler itself is loading.  To choose a **different version of Solidity**, go to the select box at the top of the plugin.
+**Nota:** El hilandero también gira cuando el compilador mismo se está cargando.  Para elegir una **versión diferente de Solidity**, ve a la casilla de selección en la parte superior del complemento.
