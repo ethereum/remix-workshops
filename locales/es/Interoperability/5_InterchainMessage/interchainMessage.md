@@ -1,53 +1,53 @@
-In this section we will create a contract that will send a "hello world" message between two blockchains.
+En esta sección crearemos un contrato que enviará un mensaje de "Hola mundo" entre dos cadenas de bloque.
 
 ## Constructor
 
-The first thing you will need to create in the `constructor` for the function. This will allow you to set the `Gateway` and `Gas Service` contracts we discussed in the previous sections.
+Lo primero que necesitarás para crear en el `constructor` para la función. Esto te permitirá establecer los contratos `Gateway` y `Gas Service` que hemos discutido en las secciones anteriores.
 
-When deploying the contract you will pass in the address of the `Gateway` and `GasService` for Ethereum Sepolia those addresses are `0xe432150cce91c13a887f7D836923d5597adD8E31` for the Gateway and `0xbE406F0189A0B4cf3A05C286473D23791Dd44Cc6` for the Gas Service.
+Al desplegar el contrato pasarás en la dirección de la `Gateway` y `GasService` para Ethereum Sepolia esas direcciones son `0xe432150cce91c13a887f7D836923d5597adD8E31` para la Puerta de Enlace y `0xbE406F0189A0B4cf3A05C286473D23791D44Cc6` para el Servicio de Gas.
 
-For the full list of relevant Axelar addresses <a href="https://docs.axelar.dev/resources/contract-addresses/testnet" target="_blank">see here</a>
+Para la lista completa de direcciones Axelar relevantes <a href="https://docs.axelar.dev/resources/contract-addresses/testnet" target="_blank">see here</a>
 
-## Send Interchain Message
+## Enviar Mensaje Intercadena
 
-Now that the constructor has set the relevant Axelar addresses needed to trigger an interchain transaction you can move on to the `setRemoteValue()`, which will trigger this transaction.
+Ahora que el constructor ha establecido las direcciones Axelar relevantes necesarias para desencadenar una transacción de intercadena, puedes pasar a `setRemoteValue()`, que desencadenará esta transacción.
 
-This function takes three parameters:
+Esta función requiere tres parámetros:
 
-1. `_destinationChain`: The chain which the transaction is going to
-2. `_destinationAddress`: The address on the destination chain the transaction will execute at
-3. `_message`: The message being passed to the destination chain
+1. `_destinationChain`: La cadena a la que va a ir la transacción
+2. `_destinationAddress`: La dirección en la cadena de destino en la que se ejecutará esta transacción
+3. `_message`: El mensaje siendo pasado a la cadena de destino
 
-First, you have a `require` statement which ensure that the `msg.value` contains a value. This `msg.value` will be used to pay the `GasService`. If no funds were sent, then the transaction should be reverted as the transaction cannot execute on the Axelar blockchain and destination chain without any gas.
+Primero, tienes una sentencia `require` que asegura que el `msg.value` contenga un valor. Este `msg.value` será usado para pagar el `GasService`. Si no se han enviado fondos, entonces la transacción debe ser revertida ya que la transacción no puede ejecutarse en la cadena de bloques Axelar y de destino sin ningún gas.
 
-Next, you encode the `_message` that was passed in. Notice that the `_message` is set as a `string` type. Axelar expects this message to be submitted as a `bytes` type so to convert the `string` to `bytes` you simply pass it through `abi.encode()`.
+Después, codificas el `_message` que fue pasado. Observa que el `_message` se establece como un tipo de `string`. Axelar espera que este mensaje se envíe como un tipo `bytes` para convertir la `string` a `bytes` simplemente pasarla a través de `abi.encode()`.
 
-Now, with your message encoded you can begin to interact with the `GasService` and the `Gateway`
+Ahora, con tu mensaje codificado puedes comenzar a interactuar con el `GasService` y la `Gateway`
 
-To pay for the entire interchain transaction you will trigger the function `payNativeGasForContractCall`, which is defined in the `GasService`.
+Para pagar toda la transacción intercadena activarás la función `payNativeGasForContractCall`, que se define en el `GasService`.
 
-This function needs the parameters explained earlier in the GasService section. The `sender` for this transaction will be this contract, which is `address(this)`. The `destinationChain` and `destinationAddress` can simply be passed in from this functions parameters, the `payload` is the encoded \_message we wrote earlier. Finally, you need to specify what the refund address is, this can be the address that triggers this function, which you get by writing `msg.sender`.
+Esta función necesita los parámetros explicados anteriormente en la sección GasService. El `sender` para esta transacción será este contrato, que es `address(this)`. El `destinationChain` y `destinationAddress` simplemente pueden pasarse desde estos parámetros de funciones, el `payload` es el \_message codificado que escribimos antes. Por último, necesita especificar cuál es la dirección de reembolso, esta puede ser la dirección que activa esta función, que se obtiene escribiendo `msg.sender`.
 
-Once you trigger this function you will have successfully send a transaction from the source chain via Axelar to the destination chain! But there is still is one final step that needs to be complete.
+Una vez que actives esta función, ¡habrás enviado con éxito una transacción desde la cadena origen a través de Axelar a la cadena de destino! Pero todavía hay un último paso que necesita ser completado.
 
-### Receive Message on Destination Chain
+### Recibir mensajes en la cadena de destino
 
-On the destination chain the inbound interchain transaction needs to be picked up and handled by the `AxelarExecutable`'s `_execute()` function.
+En la cadena de destino la transacción de intercadena entrante necesita ser recogida y manejada por la función `_execute()` de `AxelarExecutable`.
 
-The `_execute()` function is defined in the `AxelarExecutable` contract so when defining this function you must remember to include the `override` keyword.
+La función `_execute()` se define en el contrato `AxelarExecutable`, así que al definir esta función debes recordar incluir la palabra clave `override`.
 
-This function takes three parameters.
+Esta función toma tres parámetros.
 
-1. `_sourceChain`: The blockchain which the transaction has originated from
-2. `_sourceAddress`: The address on the source chain which the transaction has been sent from
-3. `_payload`: The message that has been sent from the source chain
+1. `_sourceChain`: La cadena de bloque de la que procede la transacción
+2. `_sourceAddress`: La dirección en la cadena de origen desde la que se ha enviado la transacción
+3. `_payload`: El mensaje que ha sido enviado desde la cadena origen
 
-The first thing that needs to be done in this contract is to get access to your `message` that was sent. Recall, before sending the message it was sent through `abi.encode()` to convert the message from type `string` to type `bytes`. To convert your message back from type `bytes` to type `string` simply pass the `_payload` to the function `abi.decode()` and specify that you want the `_payload` decoded to type `string`. This will return the message as a string.
+Lo primero que hay que hacer en este contrato es obtener acceso a tu `message` que fue enviado. Recuerda, antes de enviar el mensaje que fue enviado a través de `abi.encode()` para convertir el mensaje de tipo `string` para escribir `bytes`. Para convertir tu mensaje de regreso de escribe `bytes` para escribir `string` simplemente pasa el `_payload` a la función `abi. ecode()` y especifica que quieres que el `_payload` decodificado para escribir `string`. Esto devolverá el mensaje como cadena.
 
-Now that you have your message as a type string you can set the `sourceChain` and `sourceAddress` storage variables as `_sourceChain` and `_sourceAddress` to have an easy reference to the data that was passed in. You can also emit the `Executed` event with the `sourceAddress` and `message` event that you just decoded.
+Ahora que tienes tu mensaje como una cadena de tipo puedes establecer las variables de almacenamiento `sourceChain` y `sourceAddress` como `_sourceChain` y `_sourceAddress` para tener una referencia fácil a los datos que fueron pasados. También puedes emitir el evento `Executed` con el evento `sourceAddres` y `message` que acabas de decodificar.
 
-Great! At this point you are now handling the interchain transaction on the destination chain.
+¡Excelente! En este punto ahora está manejando la transacción intercadena en la cadena de destino.
 
-To interact with this contract make sure you deploy it on at least two blockchains so that you can call `setRemoteValue()` from the one chain and then have the `_execute()` function automatically triggered on another chain. You will be able to query the `sourceChain` and `sourceAddress` variables on the destination chain to ensure that the interchain execution worked correctly.
+Para interactuar con este contrato, asegúrate de desplegarlo en al menos dos cadenas de bloques para que puedas llamar a `setRemoteValue()` desde una cadena y luego tener la función `_execute()` activada automáticamente en otra cadena. Podrás consultar las variables `sourceChain` y `sourceAddress` en la cadena de destino para asegurar que la ejecución de la intercadena funcionó correctamente.
 
-To view the full step by step of the interchain transaction checkout the <a href="https://testnet.axelarscan.io" target="_blank">Axelarscan (testnet) block explorer</a>.
+Para ver el paso a paso completo de la compra de transacciones de la intercadena, el <a href="https://testnet.axelarscan.io" target="_blank">Axelarscan (testnet) block explorer</a>.
