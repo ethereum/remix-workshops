@@ -14,20 +14,20 @@ El contrato heredará funciones adicionales como propietario(), transferOwnershi
 
 ### Quemable
 
-By importing the "ERC20Burnable" (line 5) and inheriting its functions (line 9) our contract allows token holders to destroy their tokens as well as the tokens in their allowance.
-For more information, have a look at the <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/extensions/ERC20Burnable.sol" target="_blank">ERC20Burnable contract</a>.
+Importando el "ERC20Burnable" (línea 5) y heredando sus funciones (línea 9) nuestro contrato permite a los poseedores de autentificadores destruir sus autentificadores así como los autentificadores en su permiso.
+Para más información, échale un vistazo al <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/extensions/ERC20Burnable.sol" target="_blank">contrato ERC20Burnable</a>.
 
-### Pausable
+### En pausa
 
-With the "Pausable" contract module (line 6 and 9) the owner is able to pause (line 14) and unpause (line 18) the contract. In the pause state, tokens can't be transferred, which can be helpful in emergency scenarios.
-For more information, have a look at the <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/security/Pausable.sol" target="_blank">Pausable contract</a>.
+Con el módulo "En pausa" (línea 6 y 9) el propietario puede pausar (línea 14) y desactivar (línea 18) el contrato. En el estado pausa, los autentificadores no se pueden transferir, lo que puede ser útil en escenarios de emergencia.
+Para más información, échale un vistazo al <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/security/Pausable.sol" target="_blank">Pausable contrac</a>.
 
-Have a look at the OpenZeppelins <a href="https://docs.openzeppelin.com/contracts/4.x/wizard" target="_blank">Contract Wizard</a>, which allows you to easily add additional functionality.
+Échale un vistazo a OpenZeppelins <a href="https://docs.openzeppelin.com/contracts/4.x/wizard" target="_blank">Contract Wizard</a>, el cual permite añadir fácilmente funciones adicionales.
 
-If you successfully completed this course, try the Learneth NFT Course as the next step in your journey.
+Si completaste exitosamente este curso, prueba el curso Learneth NFT como siguiente paso en tu recorrido.
 
-## ⭐️ Assignment
+## ⭐ Tarea
 
-1. Try to mint tokens to an account after deployment. Call `totalSupply()` and `balanceOf()` to confirm the correct execution.
-2. Burn tokens and then call `totalSupply()` and `balanceOf()` to confirm the correct execution.
-3. Test the pause function by pausing the contract using the owner account and trying to make a transfer with a second account. The transaction should not be able to be executed and will throw the exception: "Pausable: paused".
+1. Intenta acuñar autentificadores a una cuenta después del despliegue. Llama a `totalSupply()` y `balanceOf()` para confirmar la ejecución correcta.
+2. Quema autentificadores y luego llama a `totalSupply()` y `balanceOf()` para confirmar la ejecución correcta.
+3. Prueba la función de pausa pausando el contrato utilizando la cuenta del propietario e intentando hacer una transferencia a una segunda cuenta. La transacción no debe ser capaz de ser ejecutada y arrojará la excepción: "En pausa: pausado".
