@@ -1,27 +1,25 @@
-# Proxy Contract AKA the Dispatcher
+# Contrato de proxy, también conocido como el despachador
 
-## Why?
+## ¿Por qué?
 
-This is a great pattern that is used mainly in **library development**.
+Este es un gran patrón que se utiliza principalmente en **desarrollo de bibliotecas**.
 
-It helps in the following ways:
+Ayuda de las siguientes maneras:
 
-- **Save gas cost at deployment time**
-  The purpose of a high gas cost is to discourage the operations that cost a lot for their execution and to encourage optimized code.
+- **Ahorre costos de gas en el momento de la implementación**El propósito de un alto costo de gas es desalentar las operaciones que cuestan mucho para su ejecución y fomentar un código optimizado.
 
-- Proxy contracts are useful when a lot of instances of the same contract need to be deployed because they reduce the duplications in the deployment.
+- Los contratos de proxy son útiles cuando es necesario implementar muchas instancias del mismo contrato porque reducen las duplicaciones en la implementación.
 
-- **Avoid code repetition in the blockchain.**
-  Heavy computations are expensive because every node will need to perform them, this is of course slowing the network.
+- \*\*Evite la repetición de código en la cadena de bloques. \*\*Los cálculos pesados son caros porque cada nodo tendrá que realizarlos, esto, por supuesto, ralentiza la red.
 
-- **Develop upgradable(versioned) contracts**
-  When the contract is deployed, it’s immutable. By re-designing the code into different contracts, it is possible to allow logic upgrades while keeping the storage the same.
+- **Desarrollar contratos actualizables (versionados)**
+  Cuando se implementa el contrato, es inmutable. Al rediseñar el código en diferentes contratos, es posible permitir actualizaciones lógicas mientras se mantiene el almacenamiento igual.
 
-## Example of gas cost
+## Ejemplo de costo de gas
 
-Storing contract code at creation time can cost up to:
+Almacenar el código de contrato en el momento de la creación puede costar hasta:
 
 - 200 \* max_byte_code_length gas
 - 200 \* 24576 = 49152004915200 \* 10 gwei = 49152000 gwei = 0.049152 ether = 9 EUR
 
-see https://github.com/ethereum/EIPs/blob/master/EIPS/eip-170.md for more info on max_byte_code_length.
+vea https://github.com/ethereum/EIPs/blob/master/EIPS/eip-170.md Para obtener más información sobremax_byte_code_length.
