@@ -1,10 +1,10 @@
-## Remix is composed of four panels.
+## Remix está compuesto por cuatro paneles.
 
-![Remix layout](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/a-layout1c.png "Remix layout")
+![Remix layout](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/a-layout1c.png "Diseño de Remix")
 
-- Most plugins appear in the **Side Panel**.
-- Editing code happens in tabs in the **Main Panel**.
-- The results of transactions and other actions are visible in the **Terminal**.
+- La mayoría de los complementos aparecen en el **Panel Lateral**.
+- La edición de código ocurre en pestañas del **Panel Principal**.
+- Los resultados de las transacciones y otras acciones son visibles en la **Terminal**.
 - Switching between plugins happens in the **Icons Panel**.
 - To make a panel larger, drag its border.
 
