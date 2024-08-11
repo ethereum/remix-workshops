@@ -1,23 +1,23 @@
-## Workspaces help organize your separate projects.
+## Los espacios de trabajo ayudan a organizar sus proyectos independientes.
 
-If this is your first time to Remix, a Workspace named **default_workspace** is loaded in the File Explorer.
+Si esta es su primera vez en Remix, se carga un espacio de trabajo llamado **espacio_de_trabajo_por_defecto** en el Explorador de archivos.
 
-![](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/default_workspace.png)
+![default workspace](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/default_workspace.png)
 
-The **default_workspace** has three Solidity (.sol) files in the contracts folder. Remix has a number of other tempates.  When you load a template, it goes into a Workspace.  To go between Workspaces, use the select box at the top of the File Explorer.
+El **espacio_de_trabajo_por_defecto** tiene tres archivos Solidity (.sol) en la carpeta contractuales. Remix tiene una serie de otras plantillas.  Cuando se carga una plantilla, entra en un espacio de trabajo.  Para ir entre espacios de trabajo, usa el cuadro de selección en la parte superior del Explorador de archivos.
 
 ![](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/select-box.png)
 
-But Workspaces are not only for templates.  When cloning a repo into Remix, the files will be put into a Workspace.
+Pero los espacios de trabajo no son sólo para plantillas.  Al clonar un repositorio en Remix, los archivos serán colocados en un espacio de trabajo.
 
-Let's create a new Workspace
+Vamos a crear un nuevo área de trabajo
 
-1. At the top of the File Explorer, click the hamburger icon (the 3 horizontal lines). Read through the commands and tools in this menu.
+1. En la parte superior del Explorador de archivos, haz clic en el icono de hamburguesa (las 3 líneas horizontales). Lee atentamente los comandos y las herramientas de este menú.
 
-2. Select **+ Create** (the first choice).
+2. Selecciona **+ Crear** (la primera elección).
 
-3. In the modal the comes up, choose one of the templates.
+3. En la modal que aparece, elige una de las plantillas.
 
 ![hamburger](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/workspaces/images/popup.png)
 
-Notice that in this popup menu, you can clone a repo.  Managing a Git repo happens in the DGit plugin.  You can also create Github actions with the thre workflow choices in the popup menu.
+Ten en cuenta que en este menú emergente, puedes clonar un repositorio.  La gestión de un repositorio de Git ocurre en el complemento de DGit.  También puedes crear acciones de Github con las opciones del flujo de trabajo en el menú emergente.
