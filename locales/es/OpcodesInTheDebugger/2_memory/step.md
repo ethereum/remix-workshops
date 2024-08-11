@@ -1,8 +1,8 @@
-Before we start, just quick reminder:
+Antes de empezar, solo un recordatorio rápido:
 
-The runtime of the EVM has several kinds of memory:
+El tiempo de ejecución de la EVM tiene varios tipos de memoria:
 
-- `calldata`: This is the input value given to the transaction.
-- `stack`: Basically, this is a list of values, each value is limited in size (32 bytes).
-- `memory`: Memory is used when the **type** of value getting stored is more complex like an array or a mapping. This memory is **temporary** and is **released** at the end of the execution.
-- `storage`: This is a mapping, each value stored is **persisted** and saved on chain.
+- `calldata`: Este es el valor de entrada dado a la transacción.
+- `pila`: Básicamente, esta es una lista de valores, cada valor tiene un tamaño limitado (32 bytes).
+- `memoria`: La memoria se utiliza cuando el **tipo** de valor almacenado es más complejo, como una matriz o una asignación. Esta memoria es **temporal** y se **libera** al final de la ejecución.
+- `almacenamiento`: Este es un mapeo, cada valor almacenado se **persiste** y se guarda en cadena.
