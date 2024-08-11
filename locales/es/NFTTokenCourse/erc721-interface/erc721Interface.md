@@ -53,48 +53,48 @@ The function `setApprovalForAll` (line 115) sets the permission (`_approved`) fo
 
 ### isApprovedForAll
 
-The function `getApproved` (line 103) returns the boolean true if the account with the address `operator` is approved to manage all tokens of the account with the address `owner`.
+La función "getApproved" (línea 103) devuelve el booleano verdadero si la cuenta con la dirección "operador" está aprobada para administrar todos los tokens de la cuenta con la dirección "propietario".
 
-## IERC721 Events
+## Eventos IERC721
 
-ERC721 contracts must also emit the following events:
+Los contratos ERC721 también deben emitir los siguientes eventos:
 
-### Transfer
+### Transferir
 
-The `Transfer` event (line 15) must be emitted when the token with the id `tokenId` is transferred from the account with the address `from` to the account with the address  `to`.
+El evento "Transferencia" (línea 15) debe emitirse cuando el token con el id `tokenId` se transfiere desde la cuenta con la dirección `from` a la cuenta con la dirección `to`.
 
-### Approval
+### Aprobación
 
-The `Approval` event (line 20) must be emitted when the account with the address `owner` approves the account with the address `spender` to manage the token with the id `tokenId` on its behalf.
+El evento "Aprobación" (línea 20) debe emitirse cuando la cuenta con la dirección "propietario" aprueba la cuenta con la dirección "propisador" para administrar el token con el id "tokenId" en su nombre.
 
-### ApprovalForAll
+### Aprobación para todos
 
-The `ApprovalForAll` event (line 25) must be emitted when the account with the address `owner` gives or removes the permission (`_approved`) of the account with the address `operator` to manage all its tokens.
+El evento `ApprovalForAll` (línea 25) debe emitirse cuando la cuenta con la dirección "propietario" da o elimina el permiso (`_aprobado`) de la cuenta con la dirección "operador" para administrar todos sus tokens.
 
 ## IERC165
 
-In addition to the ERC721 interface, ERC721 compliant contracts must also implement the ERC165 interface.
+Además de la interfaz ERC721, los contratos que cumplen con ERC721 también deben implementar la interfaz ERC165.
 
-With the implementation of the ERC165 interface, contracts can declare the support of specific interfaces. A contract that wants to interact with another contract can then query if the other contract supports this interface before making a transaction e.g. sending tokens to it that they might not support.
+Con la implementación de la interfaz ERC165, los contratos pueden declarar el soporte de interfaces específicas. Un contrato que quiere interactuar con otro contrato puede preguntar si el otro contrato es compatible con esta interfaz antes de realizar una transacción, por ejemplo, enviarle tokens que podrían no admitir.
 
-Our IERC721 interface here imports (line 6) and inherits (line 11) from the IERC165 interface.
+Nuestra interfaz IERC721 aquí importa (línea 6) y hereda (línea 11) de la interfaz IERC165.
 
-This is how <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/introspection/IERC165.sol" target="_blank">OpenZeppelins implementation</a> of the ERC165 interface looks like:
+Así es como se ve la implementación de <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/introspection/IERC165.sol" target="_blank">OpenZeppelins</a> de la interfaz ERC165:
 
 ```
-interface IERC165 {
+interfaz IERC165 {
     function supportsInterface(bytes4 interfaceId) external view returns (bool);
 }
 ```
 
-For example, the ERC165 identifier for the ERC721 interface as specified in the EIP721 is “0x80ac58cd”. Learn how to calculate an interface identifier and more about the ERC165 in its <a href="https://eips.ethereum.org/EIPS/eip-165" target="_blank">improvement proposal</a>.
+Por ejemplo, el identificador ERC165 para la interfaz ERC721 como se especifica en el EIP721 es "0x80ac58cd". Aprenda a calcular un identificador de interfaz y más sobre el ERC165 en su <a href="https://eips.ethereum.org/EIPS/eip-165" target="_blank">propuesta de mejora</a>.
 
-## Other interfaces
+## Otras interfaces
 
-The <a href="https://eips.ethereum.org/EIPS/eip-721#specification" target="_blank">IERC721TokenReceiver</a> interface must be implemented to accept safe transfers.
+La interfaz <a href="https://eips.ethereum.org/EIPS/eip-721#specification" target="_blank">IERC721TokenReceiver</a> debe implementarse para aceptar transferencias seguras.
 
-There are two optional extensions for ERC721 contracts specified in the EIP721:
+Hay dos extensiones opcionales para los contratos ERC721 especificadas en el EIP721:
 
-IERC721Enumerable enables a contract to publish its full list of tokens and make them discoverable.
+IERC721Enumerable permite a un contrato publicar su lista completa de tokens y hacerlos detectables.
 
-IERC721Metadata enables a contract to associate additional information to a token. We will have a more detailed look into this in the next section.
+IERC721Metadata permite a un contrato asociar información adicional a un token. Tendremos un vistazo más detallado a esto en la siguiente sección.
