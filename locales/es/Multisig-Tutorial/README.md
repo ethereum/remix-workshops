@@ -1,5 +1,5 @@
-## MultiSig Wallet
+## Billetera multifirma
 
-Learn how to write a MultiSig Wallet smart contract on Ethereum.
+Aprende a escribir un contrato inteligente de MultiSig Wallet en Ethereum.
 
-Developed by the p2p learning platform https://dacade.org.
+Desarrollado por la plataforma de aprendizaje p2p https://dacade.org.
