@@ -5,8 +5,8 @@ La propiedad `Deploy` en `sampleContract.json` contiene todo lo que necesitas pa
 
 Básicamente si `autoDeployLib` es **verdadero**, el `<address>` no será utilizado y Remix desplegará automáticamente la librería antes de desplegar el contrato.
 
-For the purpose of this demo - we are mimicking a situation where the library has already been deployed because this is a more common situation.
+Para el propósito de esta demostración - estamos imitando una situación en la que la librería ya ha sido desplegada porque esta es una situación más común.
 
-So set `autoDeploy` to **false**, for the `VM:-` entry.
+Así que establece `autoDeploy` a **falso**, para la entrada `VM:-`.
 
-Move to next Step.
+Ir al siguiente paso.
