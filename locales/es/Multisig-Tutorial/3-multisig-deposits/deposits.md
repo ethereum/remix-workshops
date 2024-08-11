@@ -1,34 +1,34 @@
-In this section, we'll explore the `receive` function and the associated Deposit event. We'll examine how the `receive` function is used to deposit Ether into the multi-signature wallet and how the Deposit event provides transparency.
+En esta sección, exploraremos a la función `receive` y el evento Deposit asociado. Examinaremos cómo se utiliza la función 'receptor' para depositar a Ether en la cartera multifirma y cómo el evento Deposite proporciona transparencia.
 
-## Deposit Event
+## Evento Depósito
 
-On line, 9 we have the Deposit event. The Deposit event is emitted whenever Ether is deposited into the multi-signature wallet. It includes three parameters:
+En la línea 9 tenemos el evento de Depósito. El evento Depósito se emite cada vez que Ether se deposita en la cartera multifirma. Incluye tres parámetros:
 
-1. `sender`: The address that sent the Ether.
-2. `amount`: The amount of Ether deposited.
-3. `balance`: The updated balance of the contract after the deposit.
+1. `sender`: La dirección que envió el Éter.
+2. `amount`: La cantidad de Ether depositada.
+3. `balance`: El balance actualizado del contrato después del depósito.
 
-We can use the Deposit event to track the flow of Ether into the multi-signature wallet and maybe trigger other actions based on the event.
+Podemos usar el evento Depósito para rastrear el flujo de Ether hacia la cartera multifirma y tal vez disparar otras acciones basadas en el evento.
 
-## receive Function
+## función Recibir
 
-On line 43, we have the `receive` function. The `receive` function is a special function that is executed whenever Ether is sent to the contract.
+En la línea 43, tenemos la función "receive". La función `receive` es una función especial que se ejecuta cada vez que Ether se envía al contrato.
 
-The `receive` function is marked as `external` and `payable`. The `external` modifier means that the function can only be called from outside the contract. The `payable` modifier means that the function can receive Ether.
+La función `receive` se marca como `external` y `payable`. El modificador `external` significa que la función sólo puede llamarse desde fuera del contrato. El modificador `payable` significa que la función puede recibir Ether.
 
-The `receive` function emits the Deposit event (Line 44) with the address of the sender, the amount of Ether sent, and the updated balance of the contract. It doesn't return anything.
+La función 'receive' emite el evento Depósito (Línea 44) con la dirección del remitente, la cantidad de Ether enviada, y el balance actualizado del contrato. Esto no devuelve nada.
 
-To receive Ether, a contract must have a `receive`, `fallback`, or a function with the `payable` modifier. If none of these are present, the contract will reject any Ether sent to it.
+Para recibir a Ether, un contrato debe tener un `receptive`, `fallback`, o una función con el modificador `payable`. Si ninguno de ellos está presente, el contrato rechazará cualquier Ether que te sea enviado.
 
-## Conclusion
+## Conclusión
 
-In this section, we explored the `receive` function and the associated Deposit event. We examined how the `receive` function is used to deposit Ether into the multi-signature wallet and how the Deposit event provides transparency.
+En esta sección, exploramos la función `receive` y el evento asociado al depósito. Hemos examinado cómo se utiliza la función 'receive' para depositar a Ether en la cartera multifirma y cómo el evento Depósito proporciona transparencia.
 
-## ⭐️ Assignment: Deposit Ether
+## ⭐ Tarea: Depósito Ether
 
-Deposit 2 Ether into the Multisig contract.
+Deposite 2 Ether en el contrato Multisig.
 
-1. Deploy the Multisig contract as in the previous assignment.
-2. Enter a Value of 2 Ether in the Value field and select Ether in the dropdown menu.
-3. At the bottom of your deployed contract in the "Low level interactions" section, click on the "Transact" button.
-4. On top of your deployed contract, it should now say "Balance: 2 Ether".
+1. Despliega el contrato Multisig como en la tarea anterior.
+2. Introduce un valor de 2 Ether en el campo Valor y seleccione Ether en el menú desplegable.
+3. En la parte inferior de su contrato desplegado en la sección de "Interacciones de nivel bajo", haga clic en el botón "Transacción".
+4. Además de su contrato desplegado, ahora debe decir "Balance: 2 Ether".
