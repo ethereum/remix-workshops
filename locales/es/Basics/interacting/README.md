@@ -1,17 +1,17 @@
-## Accessing functions in a deployed contract
+## Acceder a las funciones en un contrato desplegado
 
-1. When a contract has been successfully deployed, it will appear at the bottom of the Deploy and Run plugin. Open up the contract by clicking the caret - so the caret points down.
-   ![deploy contract](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interacting/images/instance.png "deployed contract")
+1. Cuando un contrato se ha desplegado con éxito, aparecerá en la parte inferior del plugin Desplegar y Ejecutar. Abre el contrato haciendo clic en el cursor - para que el cursor apunte hacia abajo.
+   ![desplegar contrato](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interacting/images/instance.png "contrato desplegado")
 
-2. There are 2 functions in this contract.  To input the parameters individually, clicking the caret to the right of changeOwner (outlined in red below). In the expanded view, each parameter has its own input box.
+2. Hay dos funciones en este contrato.  Para introducir los parámetros individualmente, haciendo clic en el cursor a la derecha del changeOwner (descrito en rojo abajo). En la vista ampliada, cada parámetro tiene su propia casilla de entrada.
 
-![deploy contract](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interacting/images/deployed_open2.png "deployed contract")
+![Desplegar contrato](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interacting/images/deployed_open2.png "contrato desplegado")
 
-If this contract had imported other contracts, then the functions of the imported contracts would also be visible here.  At some point, try playing with An ERC20 contract to see all its many functions.
+Si este contrato hubiera importado otros contratos, las funciones de los contratos importados también serían visibles aquí.  En algún momento, trate de jugar con un contrato ERC20 para ver todas sus funciones.
 
-3. Functions with blue buttons are either  **pure** or **view** functions.  This means that they are just reading a property or are returning a value.  In other words, they aren't saving anything - so they are FREE (they don’t cost gas).  Functions with other colors - usually orange (depending on the Remix theme) cost gas because they are saving information.  They are creating a **transaction**.
+3. Las funciones con botones azul son funciones **puras** o **vistas**.  Esto significa que simplemente están leyendo una propiedad o que están devolviendo un valor.  En otras palabras, no están ahorrando nada - así que son GRATIS (no cuestan gas).  Funciones con otros colores - generalmente naranja (dependiendo del tema de Remix) cuestan gas porque están ahorrando información.  Están creando una **transacción**.
 
-4. 2_Owner.sol does not have a **payable** function.  If it did, the button's color would be red.  Payable functions allow you to send Ether to the function.  To send ETH with a payable function, you put the amount you want to send in the **value** field towards the top of the Deploy & Run module.
+4. 2_Owner.sol no tiene una función **de pago**.  If it did, the button's color would be red.  Payable functions allow you to send Ether to the function.  To send ETH with a payable function, you put the amount you want to send in the **value** field towards the top of the Deploy & Run module.
 
 5. In the Remix VM, you don't need to approve a transaction.  When using a more realistic test environment or when using the mainnet - you will need to approve the transactions for them to go through. Approving a transaction costs gas.
 
