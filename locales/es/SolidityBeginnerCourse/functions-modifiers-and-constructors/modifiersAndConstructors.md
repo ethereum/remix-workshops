@@ -24,9 +24,9 @@ The `validAddress` modifier (line 28) has a parameter of type `address` and chec
 
 ### Constructor
 
-A constructor function is executed upon the creation of a contract. You can use it to run contract initialization code. The constructor can have parameters and is especially useful when you don't know certain initialization values before the deployment of the contract.
+Una función de constructor se ejecuta tras la creación de un contrato. Puedes usarlo para ejecutar el código de inicialización del contrato. El constructor puede tener parámetros y es especialmente útil cuando no se conocen ciertos valores de inicialización antes de la implementación del contrato.
 
-You declare a constructor using the `constructor` keyword. The constructor in this contract (line 11) sets the initial value of the owner variable upon the creation of the contract.
+Declaras un constructor usando la palabra clave `constructor`. The constructor in this contract (line 11) sets the initial value of the owner variable upon the creation of the contract.
 
 <a href="https://www.youtube.com/watch?v=b6FBWsz7VaI" target="_blank">Watch a video tutorial on Function Modifiers</a>.
 
