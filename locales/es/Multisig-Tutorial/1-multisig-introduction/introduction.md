@@ -38,4 +38,4 @@ En esta sección, aprendimos que una cartera multifirma (multisig) requiere múl
 3. Al almacenar los datos de las transacciones en la cadena.
 4. Ninguna de las anteriores.
 
-Tómese su tiempo y responda a las preguntas anteriores. Una vez que esté dispuesto, pasaremos a explorar el contrato inteligente Multifirma (Mutisig) y daremos a entender su estructura.
+Tómese su tiempo y responda a las preguntas anteriores. Una vez que esté dispuesto, pasaremos a explorar el contrato inteligente Multifirma (Multisig) y daremos a entender su estructura.
