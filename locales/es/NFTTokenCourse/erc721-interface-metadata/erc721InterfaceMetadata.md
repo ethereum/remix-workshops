@@ -1,10 +1,10 @@
-The metadata extension is optional. It allows us to add additional information to our ERC721 tokens. We can specify a name, a symbol, and an URI (Uniform Resource Identifier) that can point to a file where we can add even more information in the form of a JSON.
+La extensión de metadatos es opcional. Nos permite añadir información adicional a nuestros tokens ERC721. Podemos especificar un nombre, un símbolo y un URI (Identificador Uniforme de Recursos) que puede apuntar a un archivo donde podemos agregar aún más información en forma de JSON.
 
-## ERC721 Metadata Functions
+## Funciones de metadatos ERC721
 
-### name
+### nombre
 
-The function `name` (line 16) returns the name of the token collection. A token collection means all tokens created with your ERC721 token contract implementation. Every token in this collection will have this name, regardless of their tokenId.
+La función "nombre" (línea 16) devuelve el nombre de la colección de tokens. Una colección de tokens significa todos los tokens creados con la implementación de su contrato de tokens ERC721. Every token in this collection will have this name, regardless of their tokenId.
 
 ### symbol
 
