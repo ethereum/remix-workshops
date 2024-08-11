@@ -38,20 +38,16 @@ The 0x number I gave above is not what you will see in the **Memory** panel -wha
 0x80: 00000000000000000000000000000000 ????????????????
 0x90: 00000000000000000000000000000002 ????????????????
 
-The `0x0`, `0x10`, etc is the position. The next number is the bytecode for that position.  This is followed by question marks and seemingly random letters & numbers.  This is **Remix**'s attempt to convert this into a string.
+The `0x0`, `0x10`, etc is the position. The next number is the bytecode for that position.  A esto le siguen signos de interrogación y letras y números aparentemente aleatorios.  Este es el intento de **Remix** de convertir esto en una cadena.
 
-So if we glue the first four sections of bytecode together, we'll get:
-**0x6080604052600080fdfea265627a7a7231582029bb0975555a15a155e2cf28e0a6fc9164736f6c63430005110032**  The last section - `0x90` has 2 which is what I input for the constructors parameter.
+Así que si pegamos las primeras cuatro secciones del código de bytes, obtendremos:**0x6080604052600080fdfea265627a7a7231582029bb0975555a15a155e2cf28e0a6fc9164736f6c63430005110032** La última sección - `0x90` tiene 2, que es lo que ingreso para el parámetro de constructores.
 
-The input data from the **Call Data** panel is:
-`0x6080604052348015600f57600080fd5b506040516093380380609383398181016040526020811015602f57600080fd5b81019080805190602001909291905050508060008190555050603e8060556000396000f3fe6080604052600080fdfea265627a7a7231582029bb0975555a15a155e2cf28e025c8d492f0613bfb5cbf96399f6dbd4ea6fc9164736f6c634300051100320000000000000000000000000000000000000000000000000000000000000002`
-**I'll refer to this value as (Y).**
+Los datos de entrada del panel **Datos de llamada** son:`0x6080604052348015600f57600080fd5b50604051609338038060938398181016040526020811015602f57600080fd5b81019080805190602001909291905050508060008190555050603e8060556000396000f3fe6080604052600080fdfea265627a7a723158029bb097555a15a155e2cf28e025c8d492f0613bf5cbf96399f6dbd4ea6fc9164736f6c6343000511003200000000000000000000000000000000000000000000000002`\*\*Me referiré a este valor como (Y). \*\*
 
-This shows us that `(X)` is a subset of the original calldata `(Y)`:
+Esto nos muestra que `(X)` es un subconjunto de los datos de llamada originales `(Y)`:
 
-`(X)` is calldata without the input parameter `0000000000000000000000000000000000000000000000000000000000000002` (we don't need to store this)
-and without the constructor code `6080604052348015600f57600080fd5b506040516093380380609383398181016040526020811015602f57600080fd5b81019080805190602001909291905050508060008190555050603e8060556000396000f3fe` which should be executed only 1 time.
+`(X)` son datos de llamada sin el parámetro de entrada `000000000000000000000000000000000000000000000000000000000002` (no necesitamos almacenar esto)Y sin el código de constructor `6080604052348015600f5760080fd5b506040516093380380609383398181016040526020811015602f57600080fd5b81019080805190602001909291905050508060008190555050603e8060556000396000f3fe` que debe ejecutarse solo 1 vez.
 
-So `CODECOPY` extracts the bytecode from the calldata and copies it to the memory.
+Así que `CODECOPY` extrae el código de bytes de los datos de llamada y lo copia en la memoria.
 
-Let's move to the next step.
+Vamos al siguiente paso.
