@@ -1,18 +1,17 @@
-# Find the offset ;)
+# Encuentra la compensación ;)
 
-And now for a slightly different example:
+Y ahora por un ejemplo ligeramente diferente:
 
-- Compile notSimpleStore.sol
-- Deploy the contract `notSoSimpleStore`
-- Make sure you have a successful deployment - if not check that you used **the correct input type** in the constructor.
-- Go to the Debugger by clicking the **debug** button at the (successful) creation transaction.
-- Find the value of the parameter of `CODECOPY` which represents the offset in calldata where to copy from.
+- Compila notSimpleStore.sol
+- Implementar el contrato `notSoSimpleStore`
+- Asegúrese de tener una implementación exitosa; si no, compruebe que utilizó **el tipo de entrada correcto** en el constructor.
+- Vaya al depurador haciendo clic en el botón **depurar** en la transacción de creación (exitosa).
+- Encuentre el valor del parámetro de `CODECOPY` que representa el desplazamiento en los datos de llamada desde donde copiar.
 
-Remember: _codecopy(t, f, s)_ - copy **s** bytes from code at position **f** to memory at position **t**
+Recuerde: _codecopy(t, f, s)_ - copie **s** bytes del código en la posición **f** a la memoria en la posición **t**
 
-If you look in the **Stack**, you should see that the 2nd element is:
-0x0000000000000000000000000000000000000000000000000000000000000083
+Si miras en la **pila**, deberías ver que el segundo elemento es:0x00000000000000000000000000000000000000000000000000000000000000083
 
-And this is the **f** of the input params of codecopy.
+Y este es el **f** de los parámetros de entrada de codecopy.
 
-### Hope you picked up a thing or 2 about how opcodes work!
+### ¡Espero que hayas aprendido una cosa o 2 sobre cómo funcionan los códigos de operación!
