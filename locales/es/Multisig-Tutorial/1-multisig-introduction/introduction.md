@@ -24,18 +24,18 @@ En esta sección, aprendimos que una cartera multifirma (multisig) requiere múl
 
 ## Asignación: Prueba de Elección Múltiple
 
-### 1. What is a Multisignature Wallet?
+### 1. ¿Qué es una Cartera Multifirma?
 
-1. A digital wallet that requires a single signature for transactions.
-2. A digital wallet that requires multiple signatures for transactions.
-3. A physical wallet used for storing cryptocurrency.
-4. A wallet that can only hold multiple types of cryptocurrencies.
+1. Una cartera digital que requiere una única firma para las transacciones.
+2. Una cartera digital que requiere múltiples firmas para las transacciones.
+3. Una cartera física utilizada para almacenar criptomonedas.
+4. Una cartera que solo puede contener varios tipos de criptomonedas.
 
-### 2) How does a Multisignature Wallet enhance security?
+### 2) ¿Cómo mejora la seguridad una Cartera Multifirma?
 
-1. By requiring a single private key for transactions.
-2. By distributing transaction approval across multiple owners.
-3. By storing transaction data on-chain.
-4. None of the above.
+1. Al exigir una única clave privada para las transacciones.
+2. Al distribuir la aprobación de las transacciones entre varios propietarios.
+3. Al almacenar los datos de las transacciones en la cadena.
+4. Ninguna de las anteriores.
 
-Feel free to take your time and answer the questions above. Once you're ready, we'll move on to exploring the Multisig smart contract and understanding its structure.
+Tómese su tiempo y responda a las preguntas anteriores. Una vez que esté dispuesto, pasaremos a explorar el contrato inteligente Multifirma (Mutisig) y daremos a entender su estructura.
