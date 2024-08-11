@@ -1,25 +1,24 @@
-Switch to the `Deploy & Run` module
-![Run transaction](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/4_Linking_and_Deploying/images/remix_runtransaction.png "Run Transaction")
+Cambia al módulo `Deploy & Run`
+![Run transaction](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/4_Linking_and_Deploying/images/remix_runtransaction.png "Run transaction")
 
-- Select the Remix VM Environment and select the `sampleContract` contract in the list of compiled contracts.
+- Seleccione el entorno VM Remix y seleccione el contrato `sampleContract` en la lista de contratos compilados.
 
-- Click on `Deploy`
+- Haz clic en `Desplegar`
 
-The terminal should output something like `creation of sample errored: <address> is not a valid address. Please check the provided address is valid.`
-That is expected: **We have set `autoDeployLib` to false, so Remix expects to have an address and not just `<address>`**
+La terminal debe de devolver algo como `creación de ejemplo error: <address> no es una dirección válida. Por favor, compruebe que la dirección proporcionada es válida. `That is expected: **We have set `autoDeployLib` to false, so Remix expects to have an address and not just `<address>`**
 
-So we need deploy the library to get its address.
+Por lo tanto, necesitamos desplegar la librería para obtener su dirección.
 
-- Select the library `aLib` in the list of compiled contract and hit `deploy`
+- Selecciona la librería `aLib` en la lista de contrato compilado y presiona `deploy`
 
   ![Choose aLib](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/4_Linking_and_Deploying/images/contract_alib.png "Choose aLib")
 
-- Click the clipboard icon to copy the address of the library.
+- Haz clic en el icono del portapapeles para copiar la dirección de la librería.
 
   ![Copy lib1](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/4_Linking_and_Deploying/images/alib_copy.png "Copy")
 
-- Paste it into the **contract sample's** metadata JSON.
+- Pégalo en los metadatos JSON de la **muestra de contrato**.
 
-- Reselect the `sampleContract` contract in the `Run transaction` module and hit deploy.
+- Reelige el contrato `sampleContract` en el módulo `Run transaction` y presiona desplegar.
 
-- Deploy should now be successful.
+- El despliegue ahora debería ser exitoso.
