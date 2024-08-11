@@ -4,25 +4,25 @@
 
 Una cartera multifirma (multisig) es un tipo de cartera digital que requiere múltiples llaves para autorizar una transacción de criptomonedas.
 
-Imagine a multisig wallet as a secure vault with multiple locks. To open the vault, each the keyholder must open their individual lock. This setup ensures that no single person can access the vault's contents without the others' consent.
+Imagine una cartera multisig (multifirma) como una bóveda de seguridad con múltiples cerraduras. Para abrir la bóveda, cada una de las personas, propietarias de la cartera, deben abrir sus cerraduras de forma individual. Esta configuración garantiza que ninguna persona pueda acceder al contenido de la bóveda sin el consentimiento de las demás.
 
-## How Does a Multisig Wallet Work?
+## ¿Cómo funciona una Cartera Multifirma (Multisig)?
 
-In a multisig setup, each transaction must receive a predetermined number of approvals from a set group of individuals. For instance, in a 3-of-5 wallet configuration, there are five authorized addresses, but a transaction only goes through when at least three of them give their approval. When a transaction is initiated, it's presented as a **proposal** to the group. Each member who agrees to the transaction uses their private key to digitally sign it.
+En una configuración multifirma, cada transacción debe recibir un número predeterminado de aprobaciones de un grupo determinado de personas. Por ejemplo, en una configuración de cartera 3-de-5, hay cinco direcciones autorizadas, pero una transacción solo se realiza cuando al menos tres de ellas dan su aprobación. Cuando se inicia una transacción, se presenta como una **propuesta** al grupo. Cada miembro que está de acuerdo con la transacción, utiliza su clave privada para firmarla digitalmente.
 
-These **digital signatures** are unique and are generated based on the combination of the transaction data and the private key.
+Estas **firmas digitales** son únicas y se generan a partir de la combinación de los datos de la transacción y la clave privada.
 
-When the required number of signatures is reached, the transaction is broadcasted to the blockchain for execution.
+Cuando se alcanza el número necesario de firmas, la transacción se transmite a la cadena de bloques para su ejecución.
 
-## Why Use a Multisig Wallet?
+## ¿Por qué utilizar una Cartera Multifirma?
 
-Multisig wallets are crucial for enhanced security in cryptocurrency transactions. They mitigate the risk of theft or loss of a single key. In business, they're used to ensure that funds can't be moved without consensus among stakeholders. For instance, in a company managing cryptocurrency assets, a multisig wallet might require the CFO, CEO, and a board member to all approve significant transactions, protecting against internal fraud or external hacks.
+Las carteras multifirma son cruciales para mejorar la seguridad en las transacciones de criptomonedas. Mitigan el riesgo de robo o pérdida de una sola clave. En las empresas, las carteras multifirma, se utilizan para garantizar que los fondos no puedan moverse sin el consenso de las partes interesadas. Por ejemplo, en una empresa que gestiona activos en criptomoneda, una cartera multifirma podría requerir que el director financiero, el director general y un miembro de consejo de administración aprueben todas las transacciones importantes, protegiendo así contra el fraude interno o los hackeos externos.
 
-## Conclusion
+## Conclusión
 
-In this section, we learned that a multisig wallet requires multiple keys to authorize a proposed cryptocurrency transaction and that a multisigs mitigates the risk of theft or loss of a single key.
+En esta sección, aprendimos que una cartera multifirma (multisig) requiere múltiples claves (llaves) para autorizar una transacción de criptomoneda propuesta y que una multifirma mitiga el riesgo de robo o pérdida de una sola clave (llave).
 
-## ⭐️ Assignment: Multiple Choice Test
+## Asignación: Prueba de Elección Múltiple
 
 ### 1. What is a Multisignature Wallet?
 
