@@ -1,4 +1,4 @@
-In this section, we'll explore the process of revoking confirmations. Este proceso es necesario cuando un propietario cambia de opinión sobre una transacción y quiere impedir que se ejecute. Esta transacción será bastante simple.
+En esta sección, exploraremos el proceso de revocación de confirmaciones. Este proceso es necesario cuando un propietario cambia de opinión sobre una transacción y quiere impedir que se ejecute. Esta transacción será bastante simple.
 
 ## Evento revokeConfirmation
 
@@ -10,21 +10,21 @@ En la línea 129, hemos añadido la función `revokeConfirmation`. Esta permite 
 
 `revokeconfirmation` toma un parámetro: `txIndex`. Tiene tres modificadores: `onlyOwner`, `txExists` y `notExecuted`.
 
-On line 134, we require that the transaction has been confirmed by the caller. This ensures that an owner who has confirmed the transaction can only revoke their own confirmation.
-We then decrement the `numConfirmations` variable of the transaction and set the `isConfirmed` mapping of the transaction index and the caller's address to false. Finally, we emit the `RevokeConfirmation` event.
+En la línea 134, requerimos que la transacción haya sido confirmada por la persona que llama. Esto garantiza que un propietario que haya confirmado la transacción solo pueda revocar su propia confirmación.
+Luego decrementamos la variable "numConfirmations" de la transacción y establecemos la asignación "isConfirmed" del índice de transacciones y la dirección de la persona que llama en false. Finalmente, emitimos el evento "RevokeConfirmation".
 
-## Conclusion
+## Conclusión
 
-In this section, we explored the process of revoking confirmations. We examined the `revokeConfirmation` function and understood how it works to allow users to revoke confirmations.
+En esta sección, exploramos el proceso de revocación de confirmaciones. Examinamos la función "revokeConfirmation" y entendimos cómo funciona para permitir a los usuarios revocar las confirmaciones.
 
-## ⭐️ Assignment: Revoke a Confirmation
+## ⭐️ Asignación: Revocar una confirmación
 
-Confirm and revoke a transaction to send 2 Ether to the first account in the "ACCOUNTS" dropdown menu.
+Confirme y revoque una transacción para enviar 2 Ether a la primera cuenta en el menú desplegable "CUENTAS".
 
-1. As in the previous assignment, deploy the Multisig contract, send the contract some Ether, and then  submit a transaction to the first account in the "ACCOUNTS" dropdown menu with a value of 2 Ether.
-2. Confirm the transaction twice as in the previous assignment.
-3. Revoke the transaction by clicking on `revokeConfirmation` and inserting 0 as the transaction index. If you click on `getTransaction` again, you should see that the transaction has been confirmed once.
+1. Al igual que en la asignación anterior, implemente el contrato Multisig, envíe al contrato un poco de Ether y luego envíe una transacción a la primera cuenta en el menú desplegable "CUENTAS" con un valor de 2 Ether.
+2. Confirme la transacción el doble que en la asignación anterior.
+3. Revoque la transacción haciendo clic en "revocar confirmación" e insertando 0 como índice de transacción. Si vuelve a hacer clic en "getTransaction", debería ver que la transacción se ha confirmado una vez.
 
-## Final Conclusion
+## Conclusión final
 
-In this tutorial, we explored the process of creating a multi-signature wallet. We learned how to initialize the contract, deposit Ether, submit, confirm, and revoke transactions. We also learned how to execute transactions and retrieve information about the multi-signature wallet.
+En este tutorial, exploraremos el proceso de creación de una cartera multifirma. Aprendimos a iniciar el contrato, depositar Ether, enviar, confirmar y revocar transacciones. También aprendimos a ejecutar transacciones y recuperar información sobre la cartera multifirma.
