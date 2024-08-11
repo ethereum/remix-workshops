@@ -1,41 +1,41 @@
-In this section, we will use Metamask (an Ethereum wallet) to deploy our contract to a testnet of the Ethereum blockchain. This testnet behaves very similarly to the real blockchain (mainnet), but does not require real ETH to pay for transactions.
+En esta sección, utilizaremos Metamask (una cartera de Ethereum) para desplegar nuestro contrato en una red de pruebas de la cadena de bloques Ethereum. Esta red de pruebas se comporta de manera muy similar a la cadena de bloques real (mainnet), pero no requiere ETH real para pagar las transacciones.
 
-### 1. Install Metamask
+### 1. Instalar MetaMask
 
-**1.1** Go to <a href="https://metamask.io/" target="_blank">metamask.io</a>.
+**1.1** Ve a <a href="https://metamask.io/" target="_blank">metamask.io</a>.
 
-**1.2** Click on the download button, then click on install for your browser (e.g. Chrome) and add the extension to your browser.
+**1.2** Haz clic en el botón de descarga, luego haga clic en instalar para tu navegador (por ejemplo, Chrome) y agregue la extensión a su navegador.
 
-**1.3** Create a wallet as described.
+**1.3** Crear una cartera como se describió.
 
-### 2. Get testnet token
+### 2. Obtener el autentificador de testnet
 
-In order to make transactions on the testnet we need Ethereum testnet tokens, which you can receive from something called a _faucet_.
+Para realizar transacciones en la red de pruebas necesitamos autentificadores de Ethereum testnet, por lo cual puedes recibir de algo llamado _grifo_.
 
-**2.1** Switch your Metamask network by clicking on the "Ethereum Mainnetwork" drop down and selecting "Ropsten Test Network". If you don’t see any test networks, click on the "Show/hide" link and enable "Show test networks" in the settings.
+**2.1** Cambia tu red Metamask haciendo clic en el menú desplegable "Ethereum Redprincipal" y seleccionando "Red de pruebas Ropsten". Si no ves ninguna red de pruebas, haga clic en el enlace "Mostrar/ocultar" y activa "Mostrar redes de prueba" en la configuración.
 
-**2.2** Go to <a href="https://faucet.ropsten.be/" target="_blank">https://faucet.ropsten.be/</a>, enter the address of your account, and claim testnet ETH. You could also use other ropsten faucets like <a href="https://faucet.paradigm.xyz/" target="_blank">https://faucet.paradigm.xyz/</a> or <a href="https://app.mycrypto.com/faucet" target="_blank">https://app.mycrypto.com/faucet</a>. Have a look at the faucets listed on <a href="https://ethereum.org/en/developers/docs/networks/#testnet-faucets" target="_blank">ethereum.org</a> to learn more.
+**2.2** Ve a <a href="https://faucet.ropsten.be/" target="_blank">https://faucet.ropsten.be/</a>, introduce la dirección de tu cuenta y reclama el ETH de testnet. También puede usar otros grifos de ropsteno como <a href="https://faucet.paradigm.xyz/" target="_blank">https://faucet.paradigm.xyz/</a> o <a href="https://app.mycrypto.com/faucet" target="_blank">https://app.mycrypto.com/faucet</a>. Echa un vistazo a los grifos listados en <a href="https://ethereum.org/en/developers/docs/networks/#testnet-faucets" target="_blank">ethereum.org</a> para saber más.
 
-### 3. Deployment
+### 3. Despliegue
 
-Make sure the EduCoin contract is compiled.
+Asegúratede que el contrato de EduCoin está compilado.
 
-**3.1.** In the "DEPLOY & RUN TRANSACTIONS" module of the Remix IDE under "ENVIRONMENT" select "Injected Web3". It will ask you to connect your account which you should confirm.
+**3.1.** En el módulo "DESPLEGAR & CORRER TRANSACCIONES" del IDE Remix bajo "ENTORNO" seleccione "Web3 inyectada". Te pedirá que conectes tu cuenta la cual deberías confirmarla.
 
-**3.2** Deploy the EduCoin contract and confirm the transaction in Metamask.
+**3.2** Despliega el contrato de EduCoin y confirma la transacción en Metamask.
 
-**3.3** Your contract should appear in the "Deployed Contracts" section. Copy the contract address.
+**3.3** Tu contrato debería aparecer en la sección "Contratos Desplegados". Copia la dirección del contrato.
 
-**3.4** In Metamask, click on assets, then click on the "Import tokens" link, and paste the address of your contract in the input field.
+**3.4** En Metamask, haz clic en activos, luego haz clic en el enlace "Importar autentificadores" y pega la dirección de tu contrato en el campo de entrada.
 
-You should now see a balance of 1000 EDC in your wallet.
+Ahora debería ver un saldo de 1000 EDC en tu cartera.
 
-### 4. Make a transaction
+### 4. Realizar una transacción
 
-**4.1** Click on the identicon (visual representation of your address) in the Metamask wallet and create a second account (Account 2).
+**4.1** Haz clic en el identificador (representación visual de tu dirección) en el monedero Metamask y crea una segunda cuenta (Cuenta 2).
 
-**4.2** Copy the address of Account 2.
+**4.2** Copia la dirección de la Cuenta 2.
 
-**4.3** Switch to the first account (Account 1) and send 250 EDC to Account 2. Check the balances of Account 1 and Account 2. You might need to add the token address again for Account 2 to import the tokens and you will need testeth if you want to make a transaction with this account.
+**4.3** Cambia a la primera cuenta (Cuenta 1) y envía 250 EDC a la Cuenta 2. Consulte los balances de la Cuenta 1 y la Cuenta 2. Puede que necesites agregar la dirección del autenticador de nuevo para la Cuenta 2 para importar los autenticadires y necesitarás testeth si deseas realizar una transacción con esta cuenta.
 
-You can also see your account balances if you look at the contract in Remix and call the `balanceOf` function using the addresses of Account 1 and Account 2.
+También puedes ver los saldos de tu cuenta si observas el contrato en Remix y llamas a la función `balanceOf` usando las direcciones de la Cuenta 1 y la Cuenta 2.
