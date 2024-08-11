@@ -36,7 +36,7 @@ Aprenda más sobre  ERC1155 en su  <a href="https://eips.ethereum.org/EIPS/eip-1
 
 ## ⭐️ Misión
 
-For this assignment, we will test your knowledge via a short quiz.
+Para esta tarea, podremos a prueba sus conocimientos mediante un breve cuestionario.
 Para esta misión vamos a poner a prueba sus conocimientos con este breve cuestionario:
 Asigne el número de la respuesta correcta a las variables `question1` (línea 5),
 `question2` (línea 6), `question3` (línea 7) en el contrato `Quiz` (línea 4).
