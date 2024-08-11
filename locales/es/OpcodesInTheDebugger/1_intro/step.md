@@ -1,5 +1,5 @@
-This workshop aims to give a better understanding about how a contract get deployed.
-`SimpleStore` is a very basic contract.
-It has a very simple constructor - which just uses the first parameter `_o` and saves it to `s`.
+Este taller tiene como objetivo dar una mejor comprensión de cómo se implementa un contrato.
+"SimpleStore" es un contrato muy básico.
+Tiene un constructor muy simple, que solo utiliza el primer parámetro `_o` y lo guarda en `s`.
 
-Using the debugger, we'll try to see, what the opcode `CODECOPY` does.
+Usando el depurador, trataremos de ver qué hace el opcode `CODECOPY`.
