@@ -4,61 +4,60 @@ Blockchain tokens are a new technological building block created by blockchain t
 
 ### Introduction
 
-In the context of web3, tokens represent ownership. Tokens can represent ownership of anything: art, reputation, items in a video game, shares in a company, voting rights, or currencies.
+In the context of web3, tokens represent ownership. Los tokens pueden representar la propiedad de cualquier cosa: arte, reputación, artículos en un videojuego, acciones de una empresa, derechos de voto o monedas.
 
-The revolutionary innovation of blockchain technology is that it allows data to be stored publicly in an immutable (unchangeable) way.
-This new form of data storage allows us to keep track of ownership and enable truly ownable digital items for the first time.
+La innovación revolucionaria de la tecnología blockchain es que permite que los datos se almacenen públicamente de una manera inmutable (inmutable).
+Esta nueva forma de almacenamiento de datos nos permite realizar un seguimiento de la propiedad y habilitar artículos digitales verdaderamente propietarios por primera vez.
 
-Blockchain Technology was originally invented to keep track of the ownership of Bitcoin, a decentralized digital currency and fungible token.
+La tecnología Blockchain se inventó originalmente para realizar un seguimiento de la propiedad de Bitcoin, una moneda digital descentralizada y un token fungible.
 
-### Fungible and non-fungible tokens
+### Tokens fungibles y no fungibles
 
-Assets like money: Bitcoin or a one-dollar bill, for example, are fungible. Fungible means that all assets are the same and are interchangeable. Assets like art, collectibles, or houses are non-fungible; they are all different and not interchangeable.
+Activos como el dinero: Bitcoin o un billete de un dólar, por ejemplo, son fungibles. Fungible significa que todos los activos son iguales y son intercambiables. Los activos como el arte, los coleccionables o las casas no son fungibles; todos son diferentes y no son intercambiables.
 
-We can divide tokens into these two types: fungible tokens, where all tokens are the same, and non-fungible tokens (NFTs), where every token is unique.
+Podemos dividir los tokens en estos dos tipos: tokens fungibles, donde todos los tokens son iguales, y tokens no fungibles (NFT), donde cada token es único.
 
-### Token standard
+### Estándar de tokens
 
-The behavior of a token is specified in its smart contract (token contract). The contract could, for example, include the functionality to transfer a token or check for its total supply.
+El comportamiento de un token se especifica en su contrato inteligente (contrato de token). El contrato podría, por ejemplo, incluir la funcionalidad de transferir un token o comprobar su suministro total.
 
-If everybody would create their own token contracts with different behavior and naming conventions, it would make it very hard for people to build contracts or applications that are able to interact with each other.
+Si todo el mundo creara sus propios contratos simbólicos con diferentes convenciones de comportamiento y nomenclatura, sería muy difícil para las personas crear contratos o aplicaciones que sean capaces de interactuar entre sí.
 
-The Ethereum community has developed token standards that define how a developer can create tokens that are interoperable (able to work with others) with other contracts, products, and services. Contracts developed under these standards need to include a certain set of functions and events.
+La comunidad de Ethereum ha desarrollado estándares de tokens que definen cómo un desarrollador puede crear tokens que son interoperables (capaces de trabajar con otros) con otros contratos, productos y servicios. Los contratos desarrollados bajo estos estándares deben incluir un cierto conjunto de funciones y eventos.
 
-The most popular token standards are the ERC20 for fungible tokens and the ERC721 for non-fungible tokens. In this course, we will learn how to create and interact with NFTs, tokens created with the ERC721 token standard.
+Los estándares de tokens más populares son el ERC20 para tokens fungibles y el ERC721 para tokens no fungibles. En este curso, aprenderemos a crear e interactuar con NFT, tokens creados con el estándar de tokens ERC721.
 
-If you want to learn more about fungible tokens and the ERC20 token standard, have a look at the Learneth ERC20 Token Course.
+Si quieres aprender más sobre los tokens fungibles y el estándar de tokens ERC20, echa un vistazo al curso de tokens Learneth ERC20.
 
-The ERC777 is a fungible token standard, like the ERC20, that includes more advanced features like hooks while remaining backward compatible with ERC20. Learn more about the ERC777 in its <a href="https://eips.ethereum.org/EIPS/eip-777" target="_blank">EIP (Ethereum improvement proposal)</a>.
+El ERC777 es un estándar de token fungible, como el ERC20, que incluye características más avanzadas como ganchos, a la vez que sigue siendo compatible con ERC20. Obtenga más información sobre el ERC777 en su <a href="https://eips.ethereum.org/EIPS/eip-777" target="_blank">EIP (Propuesta de mejora de Ethereum)</a>.
 
-The ERC1155 is a multi-token standard that allows a single contract to manage different types of tokens, such as fungible, non-fungible, or semi-fungible tokens.
-Learn more about the ERC1155 in its <a href="https://eips.ethereum.org/EIPS/eip-1155" target="_blank">EIP</a>.
+El ERC1155 es un estándar multitoken que permite a un solo contrato gestionar diferentes tipos de tokens, como tokens fungibles, no fungibles o semifungibles.
+Obtenga más información sobre el ERC1155 en su <a href="https://eips.ethereum.org/EIPS/eip-1155" target="_blank">EIP</a>.
 
-## ⭐️ Assignment
+## ⭐️ Asignación
 
-For this assignment, we will test your knowledge via a short quiz.
-Assign the number of the best answer to the variables `question1` (line 5),
-`question2` (line 6), `question3` (line 7) in the `Quiz` contract (line 4).
+Para esta tarea, probaremos sus conocimientos a través de un breve cuestionario.
+Asigne el número de la mejor respuesta a las variables "pregunta 1" (línea 5),`question2` (línea 6), `question3` (línea 7) en el contrato `Quiz` (línea 4).
 
-### Question 1:
+### Pregunta 1:
 
-Why are blockchain-based tokens so revolutionary?
+¿Por qué los tokens basados en blockchain son tan revolucionarios?
 
-1. Because people can now make investments anonymously.
-2. Because they represent ownership in digital assets that can be owned and transferred.
-3. Because you can use tokens to make transactions without having to pay taxes.
+1. Porque la gente ahora puede hacer inversiones de forma anónima.
+2. Porque representan la propiedad de activos digitales que se pueden poseer y transferir.
+3. Porque puedes usar tokens para hacer transacciones sin tener que pagar impuestos.
 
-### Question 2:
+### Pregunta 2:
 
-Why did the community create token standards?
+¿Por qué la comunidad creó estándares de tokens?
 
-1. So that the community can control and approve the tokens that are created.
-2. In order to restrict the functionality of tokens to safe and non-malicious actions.
-3. So that the community can create tokens that are interoperable with other contracts, products, and services.
+1. Para que la comunidad pueda controlar y aprobar los tokens que se crean.
+2. Con el fin de restringir la funcionalidad de los tokens a acciones seguras y no maliciosas.
+3. Para que la comunidad pueda crear tokens que sean interoperables con otros contratos, productos y servicios.
 
-### Question 3:
+### Pregunta 3:
 
-If you would create a decentralised application for a baseball trading card game where each baseball player would be represented by a token, what token standard would you use to write the token contract?
+Si crearas una aplicación descentralizada para un juego de cartas coleccionables de béisbol en el que cada jugador de béisbol estaría representado por un token, ¿qué estándar de token usarías para escribir el contrato de token?
 
 1. ERC20
 2. ERC721
