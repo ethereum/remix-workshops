@@ -1,5 +1,5 @@
-As the web3 world grows, there there will be more blockchains. Unless the chains can communicate with one another, the ecosystem will become increasingly fragmented.
+A medida que el mundo de web3 crece, habrá más cadenas bloques. A menos que las cadenas puedan comunicarse entre ellas, el ecosistema se fragmentará cada vez más.
 
-The Axelar network enables protocols to have cross-chain functionality between any two blockchains.
+La red Axelar permite a los protocolos tener funcionalidad de cadena cruzada entre dos cadenas de bloque cualesquiera.
 
-Building a protocol that is interoperable between ecosystems is essential for growth.
+Construir un protocolo que sea interoperable entre ecosistemas es esencial para el crecimiento.
