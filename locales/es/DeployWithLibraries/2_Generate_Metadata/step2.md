@@ -1,38 +1,38 @@
-## Deploying Library
+## Desplegando la Biblioteca
 
-The **library** from the previous chapter was in the same file as the **contract**. However, they won't be deployed together and will have different addresses.
+La **biblioteca** del capítulo anterior se encontraba en el mismo archivo que el **contrato**. Sin embargo, no serán desplegadas juntas y tendrán direcciones diferentes.
 
-In order to use a library, the calling contract must have the library's **address**.
+Para poder utilizar una biblioteca, el contrato de llamada debe tener la **dirección** de la biblioteca.
 
-But the library's address is not directly specified in the solidity code. The calling contract's compiled bytecode contains a **placeholder** where library's **addresses** will go.
+Pero la dirección de la biblioteca no se especifica directamente en el código de solidity. El bytecode compilado del contrato de llamada contiene un **marcador de posición** donde irán las **direcciones** de la biblioteca.
 
-At deployment of the **calling contract**, Remix will look in the contract's **metadata** for the library's address and will update the placeholder with the address.
+Durante el despliegue el **contrato de llamada**, Remix buscará en los **metadatos** del contrato la dirección de la biblioteca y actualizará el marcador de posición con la dirección.
 
-So before deploying a contract that calls a library, you need to generate the contract's metadata (AKA its **build artifact**) and then you need to input the library's address into the metadata file.
+Así que antes de desplegar un contrato que llama una biblioteca, necesitas generar los metadatos del contrato (también conocido como su **artefacto de construcción**) y entonces necesitas introducir la dirección de la biblioteca en el archivo de metadatos.
 
-A contract's metadata is generated at **compile time**.
+Los metadatos de un contrato se generan en el **tiempo de compilación**.
 
-Let's setup Remix to generate the **metadata file**.
+Vamos a configurar Remix para generar el **archivo de metadatos**.
 
-- Go to the settings module by clicking on the settings ![settings](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_Generate_Metadata/settings.png "Settings") icon in the icon panel.
+- ¡Ve al módulo de configuración haciendo clic en la configuración![settings](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_Generate_Metadata/settings.png "Settings" icon) en el panel del icono.
 
 ![settings module](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_Generate_Metadata/remix_settings.png "Settings Module")
 
-- And check the first option `Generate contract metadata`.
+- Y marca la primera opción `Generate contract metadata`.
 
-# Compile and generate metadata (JSON) file.
+# Compila y genera metadatos (JSON).
 
-1. Open the Solidity Compiler ![Solidity Compiler](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_Generate_Metadata/remix_icon_solidity.png "Solidity Compiler")
+1. Abre el Compilador de Solidity ![Solidity Compiler](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_Generate_Metadata/remix_icon_solidity.png "Solidity Compiler")
 
-2. Compile `2_contractSimpleLibrary.sol`.
+2. Compila `2_contractSimpleLibrary.sol`.
 
-3. Switch to the File Explorer ![File Explorer](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_Generate_Metadata/remix_file_explorer.png "File Explorer")
+3. Cambia al Explorador de Archivos ![File Explorer](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_Generate_Metadata/remix_file_explorer.png "File Explorer")
 
-4. Navigate to the newly create JSON files.
-   - It should be in the folder:
+4. Navega hasta los archivos JSON recién creados.
+   - Debería estar en la carpeta:
 
-**browser/.learneth/DeployWithLibraries/2_Generate_Metadata/artifacts/**
+**browser/.learneth/DeployWithLibraries/2_Generate_Metadata/artifact/**
 
-5. Select the newly created JSON file created from the contract.  It has the **same name** as the contract `sample` but with the extension **json**: `sample.json` (don't select the library's metadata `contractSimpleLibrary.json`).
+5. Selecciona el nuevo archivo JSON creado del contrato.  Tiene el **mismo nombre** que el contrato `sample` pero con la extensión **json**: `sample.json` (no seleccione el metadato de la librería `contractSimpleLibrary.json`).
 
-In the next step we'll make some adjustments to the metadata file.
+En el siguiente paso haremos algunos ajustes en el archivo de metadatos.
