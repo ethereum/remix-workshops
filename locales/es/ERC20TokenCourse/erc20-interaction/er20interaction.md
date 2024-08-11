@@ -45,43 +45,43 @@ Te debería devolver 1000000000000000000000000000 (1000\*10\*\*18).
 
 #### 2,6 Transferencia
 
-We will transfer EduCoin from one account to a second account.
+Transfiriremos EduCoin de una cuenta a otra cuenta.
 
-**2.6.1** Go to the "ACCOUNT" section in the sidebar and click on the displayed address. This should open a dropdown. Select the second address displayed and copy its address (account 2).
+**2.6.1** Ve a la sección "CUENTA" en la barra lateral y haz clic en la dirección mostrada. Esto debería abrir un menú desplegable. Selecciona la segunda dirección que aparece y copie su dirección (cuenta 2).
 
-**2.6.2** Open the dropdown and select the first account again (account 1), because this is the account that we want to use to make the transfer.
+\*\*2,6. \*\* Abre el menú desplegable y selecciona de nuevo la primera cuenta (cuenta 1), porque esta es la cuenta que queremos usar para hacer la transferencia.
 
-**2.6.3** Paste the address in the input field next to the "transfer" function button, input the number 500000000000000000000, and click on the button.
+**2.6.3** Pega la dirección en el campo de entrada junto al botón "transferir", ingrese el número 500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 y haz clic.
 
-**2.6.4** If you check the balances for account 1 and account 2, they should both return the amount 500000000000000000000.
+**2.6.4** Si revisas los balances de la cuenta 1 y de la cuenta 2, ambos devolverían la cantidad 500000000000000000000000000.
 
-**GIF** Test transfer function: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_transfer.gif?raw=true" alt="Test transfer function" width="300"/>
+**GIF** Prueba de la función transferir: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_transfer.gif?raw=true" alt="Test transfer function" width="300"/>
 
-#### 2.7 Approve
+#### 2.7 Aprobar
 
-We will now allow account 1 to spend tokens on behalf of account 2.
+Ahora permitiremos que la cuenta 1 gaste autentificadores en nombre de la cuenta 2.
 
-**2.7.1** Go to the "Account" section, copy the address of account 1, then set it to account 2 again.
+**2.7.1** Ve a la sección "Cuenta", copia la dirección de la cuenta 1 y luego vuelve a establecerla en la cuenta 2.
 
-**2.7.2** In the approve function, enter the address of account 1 as the input for spender and set the amount to 250000000000000000000.
+**2.7.2** En la función de aprobación, introduce la dirección de la cuenta 1 como la entrada para el gasto y establece la cantidad a 2500000000000000000000000000000000000.
 
-**GIF** Test approve function: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_approve.gif?raw=true" alt="Test approve function" width="300"/>
+**GIF** Prueba de la función aprobar: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_approve.gif?raw=true" alt="Test approve function" width="300"/>
 
-#### 2.8 Allowance
+#### 2,8 Permiso
 
-Next to the "allowance" button enter the address of account 2 as the owner and account 1 as the spender; click on the button.
-It should return 1000000000000000000000.
+Al lado del botón de "ayuda" introduzca la dirección de la cuenta 2 como propietario y la cuenta 1 como pender; haga clic en el botón.
+Te debería devolver 000000000000000000000.
 
-**GIF** Test allowance function: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_allowance.gif?raw=true" alt="Test allowance function" width="300"/>
+**GIF** Prueba de la función permiso. <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_allowance.gif?raw=true" alt="Test allowance function" width="300"/>
 
-#### 2.9 TransferFrom
+#### 2.9 TransferirDesde
 
-Now account 1 will transfer 250000000000000000000 tokens from account 2 to its own account.
+Ahora la cuenta 1 transferirá 250000000000000000000000000000000 autentificadores de la cuenta 2 a su propia cuenta.
 
-**2.9.1** Select account 1 in the "ACCOUNT" section.
+**2.9.1** Seleccione la cuenta 1 en la sección "CUENTA".
 
-**2.9.2** Next to the "transferFrom" button enter the address of account 2 as the sender and account 1 as the recipient, enter 250000000000000000000 as the amount and click on the button.
+\*\*2,9. \*\* Junto al botón "transferDesde" introduce la dirección de la cuenta 2 como remitente y la cuenta 1 como destinatario, introduce 250000000000000000000000000 como la cantidad y haga clic en el botón.
 
-**2.9.3** Check the balances of accounts 2 and 1, they should return 250000000000000000000 and 750000000000000000000.
+**2.9.3** Compruebe los balances de las cuentas 2 y 1, deberían devolver 25000000000000000000000 y 75000000000000000000000.
 
-**GIF** Test transferFrom function: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_transferFrom.gif?raw=true" alt="Test transferFrom function" width="300"/>
+**GIF** Prueba de la funcion TransferirDesde: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_transferFrom.gif?raw=true" alt="Test transferFrom function" width="300"/>
