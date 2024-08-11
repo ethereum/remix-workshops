@@ -1,12 +1,12 @@
-In this section, we will create our metadata and store it in a decentralized way.
+En esta sección, crearemos nuestros metadatos y los almacenaremos de forma descentralizada.
 
-IPFS ( InterPlanetary File System) is a peer-to-peer network for storing files in a distributed way. Pinata.cloud is a pinning service that allows users to easily host files on the IPFS network.
+IPFS (InterPlanetary File System) es una red de igual a igual para almacenar archivos de forma distribuida. Pinata.cloud es un servicio de fijación que permite a los usuarios alojar fácilmente archivos en la red IPFS.
 
-We want to host our images and the JSON files with their metadata on IPFS.
+Queremos alojar nuestras imágenes y los archivos JSON con sus metadatos en IPFS.
 
-### Create Image Folder
+### Crear carpeta de imágenes
 
-In this example, we will create metadata for three tokens. As you can see below, we create three images that we stored in a folder.
+En este ejemplo, crearemos metadatos para tres tokens. Como puedes ver a continuación, creamos tres imágenes que almacenamos en una carpeta.
 
 ```
 geo-img
@@ -15,11 +15,11 @@ geo-img
 ├── geo_3.png
 ```
 
-### Register on Pinata
+### Regístrate en Pinata
 
-Now, we want to host these images somewhere so we can point to them in the metadata of our tokens. Let's do it in a decentralized way and use Pinata to host them on IPFS.
+Ahora, queremos alojar estas imágenes en algún lugar para poder señalarlas en los metadatos de nuestros tokens. Hagámoslo de forma descentralizada y usemos Pinata para alojarlos en IPFS.
 
-First you need an account on Pinata. Go to <a href="https://app.pinata.cloud/register" target="_blank">Pinata.cloud</a> and create an account. On Pinata you can upload up to 1 GB of data for free.
+Primero necesitas una cuenta en Pinata. Vaya a <a href="https://app.pinata.cloud/register" target="_blank">Pinata.cloud</a> y cree una cuenta. En Pinata puedes subir hasta 1 GB de datos de forma gratuita.
 
 Once you have signed up, you should be in the Pin Manager view.
 
