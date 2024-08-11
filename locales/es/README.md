@@ -10,26 +10,27 @@ https://remix.ethereum.org
 
 **3. Go to the Learneth plugin and these tutorials will load by default**
 
-**4. You may need to sign into Github especially during an in-person workshop**
+**4. Es posible que tengas que iniciar sesión en Github, especialmente durante un taller en persona**
 
-Github will block too many requests from the same location, unless you are signed into Github and have input your token.  Generally, this is only an issue during in person workshops, when there can be many requests from the same location.
+Github bloqueará demasiadas solicitudes desde la misma ubicación, a menos que haya iniciado sesión en Github y haya introducido su token.  En general, esto solo es un problema durante los talleres en persona, cuando puede haber muchas solicitudes desde el mismo lugar.
 
-To input your Github token:
+Para introducir tu token de Github:
 
 ```
-- In one browser window - go to https://remix.ethereum.org and go to the settings tab
-- In another browser window go to: 
+- En una ventana del navegador, vaya a https://remix.ethereum.org y vaya a la pestaña de configuración
 
-https://github.com/settings/tokens 
+- En otra ventana del navegador, vaya a:
 
-and create a new token and save it in Remix in the you just opened on the settings tab.
+Https://github.com/settings/tokens
+
+Y crea un nuevo token y guárdalo en Remix en el que acabas de abrir en la pestaña de configuración.
 ```
 
 ---
 
-### Write your own tutorials for LEARNETH:
+### Escribe tus propios tutoriales para LEARNETH:
 
-See this site for instructions:
+Consulte este sitio para obtener instrucciones:
 
 https://remix-learneth-plugin.readthedocs.io/en/latest/index.html#creating-tutorials
 
