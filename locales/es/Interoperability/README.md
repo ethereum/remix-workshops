@@ -1,3 +1,3 @@
-## Interoperability Between Blockchains
+## Interoperabilidad entre las cadenas de bloques
 
-Learn how to build interoperable smart contracts that can send messages and assets between different blockchains using Axelar technology.
+Aprende cómo construir contratos inteligentes interoperables que pueden enviar mensajes y activos entre diferentes blockchains usando tecnología Axelli.
