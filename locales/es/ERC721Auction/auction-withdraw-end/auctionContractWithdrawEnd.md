@@ -12,34 +12,34 @@ Ahora transferimos esa cantidad de ETH desde el contrato al llamador de función
 
 Antes de que la llamador de la función pueda ejecutar esta función y terminar la subasta, tenemos que comprobar si se cumplen ciertas condiciones. La subasta necesita haber comenzado (línea 83), la fecha final de la subasta debe haber sido alcanzada (línea 84), y la subasta no debe de haber terminado ya (línea 85).
 
-Once the auction has ended, we set the state variable `ended` to `true` (line 87).
+Una vez que la subasta ha terminado, establecemos la variable de estado `ended` a `true` (línea 87).
 
-We check if anybody participated in the auction and bid on the NFT (line 88).
+Comprobamos si alguien participó en la subasta y pujó en el NFT (línea 88).
 
-If there was a bid, we transfer the NFT from the contract to the highest bidder (line 89) and transfer the ETH that was sent from the highest bidder to the contract, now to the address of the auctioneer, the seller of the NFT (line 90).
+Si había una oferta, transferimos el NFT del contrato a la oferta más alta (línea 89) y transferimos el ETH que fue enviado de la oferta más alta al contrato, ahora a la dirección del subastador, el vendedor de la NFT (línea 90).
 
-If nobody bids on the NFT, we send the NFT back to the auctioneer (line 92).
+Si nadie puja en el NFT, le devolvemos el NFT a la subastador (línea 92).
 
-Finally, we emit the `End` event (line 95).
+Finalmente, emitimos el evento `End` (línea 95).
 
-## ⭐️ Assignment
+## ⭐ Tarea
 
-1. Deploy an NFT contract. You can use the NFT contract that we created in our Learneth "Solidity NFT Course".
+1. Despliega un contrato de NFT. Puedes utilizar el contrato NFT que hemos creado en nuestro curso Learneth "Solidity NFT Course".
 
-2. Mint yourself an NFT with the tokenId 0.
+2. Conéctate a ti mismo un NFT con el token 0.
 
-3. For testing purposes, change the value that is assigned to the `endAt` state variable (line 54) from `7 days` to `5 minutes`.
+3. Para propósitos de prueba, cambia el valor asignado a la variable de estado `endAt` (línea 54) de `7 days` a `5 minutes`.
 
-4. Deploy this EnglishAuction contract. Use the address of the NFT contract as an argument for the `_nft` parameter, 0 for `_nftId`, and 1 for `_startingBid`.
+4. Despliega este contrato EnglishAuctio. Usa la dirección del contrato NFT como argumento para el parámetro `_nft`, 0 para `_nftId` y 1 para `_startingBid`.
 
-5. Call the `approve` function of your NFT contract with the address of the auction contract as an argument for the `to` parameter, and 0 for the `tokenId`.
+5. Llama a la función `approve` de tu contrato NFT con la dirección del contrato de subasta como argumento para el parámetro `to`, y 0 para el `tokenId`.
 
-6. Call the `start` function of your auction contract.
+6. Llama a la función `start` de tu contrato de subasta.
 
-7. Bid 2 Ether using account 1, and 3 Ether using account 2. If you call the `highestBidder` function, it should now return the address of account 2.
+7. Puja 2 Ether utilizando la cuenta 1, y 3 Ether usando la cuenta 2. Si llama a la función `highestBidder`, ahora debería devolver la dirección de la cuenta 2.
 
-8. Call the `withdraw` function with account 1. In the balance of account 1, you should see the 2 Ether minus some transaction fees.
+8. Llama a la función `retirar` con la cuenta 1. En el balance de la cuenta 1, debería ver el 2 Ether menos algunas comisiones de transacción.
 
-9. After 5 minutes have passed, call the `end` function. Then, call the `ended` function which should return `true`.
+9. Después de pasar 5 minutos, llama a la función 'end'. Luego, llama a la función `ended` la cual debería devolver `true`.
 
-In the NFT contract, if you call the `ownerOf` function with the tokenId 0, it should return the address of account 2. If you look at the balance of account 1 it should have increased by 3 Ether minus some transaction fees.
+En el contrato de NFT, si llamas a la función `ownerOf` con el tokenid 0, debería devolver la dirección de la cuenta 2. Si observas el balance de la cuenta 1, debería haber aumentado en 3 Ether menos algunas tasas de transacción.
