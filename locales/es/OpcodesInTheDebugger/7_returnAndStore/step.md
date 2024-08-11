@@ -1,18 +1,16 @@
-# The Opcode RETURN
+# El Opcode RETURN
 
-At the end of the last chapter we had moved to one step after **CODECOPY** to see what happened in the memory.
+Al final del último capítulo, habíamos pasado a un paso después de **CODECOPY** para ver lo que sucedió en la memoria.
 
-Now that CODECOPY has been executed, we are on the opcode `PUSH1 00`.
+Ahora que se ha ejecutado CODECOPY, estamos en el código de operación `PUSH1 00`.
 
-`PUSH1 00` prepares the stack for the `RETURN` opcode.
-`RETURN` is the last part of this process.  It is where the code is returned to the client.
+`PUSH1 00` prepara la pila para el código de operación `RETURN`.
+"RETORNO" es la última parte de este proceso.  Es donde se devuelve el código al cliente.
 
-We push `00` to the stack because this is the offset position of the contract bytecode in memory.
+Empujamos `00` a la pila porque esta es la posición de desplazamiento del código de bytes del contrato en la memoria.
 
-Now we can call the all important `RETURN` opcode.
+Ahora podemos llamar al código de operación "RETURN" más importante.
 
-The **stack inspector** shows:
-`0: 0x0000000000000000000000000000000000000000000000000000000000000000`
-`1: 0x000000000000000000000000000000000000000000000000000000000000003e`
+El **inspector de pila** muestra:`0: 0x0000000000000000000000000000000000000000000000000000000000000000``1: 0x000000000000000000000000000000000000000000000000000000000000000003e`
 
-Which is to say it returns to the client the bytecode starting `0x00` with length `0x3e`.
+Es decir, devuelve al cliente el código de bytes que comienza `0x00` con la longitud `0x3e`.
