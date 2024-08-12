@@ -1,8 +1,8 @@
-The `visibility` specifier is used to control who has access to functions and state variables.
+El especificador de "visibilidad" se utiliza para controlar quién tiene acceso a funciones y variables de estado.
 
-There are four types of visibilities: `external`, `public`, `internal`, and `private`.
+Hay cuatro tipos de visibilidades: "externa", "público", "interno" y "privado".
 
-They regulate if functions and state variables can be called from inside the contract, from contracts that derive from the contract (child contracts), or from other contracts and transactions.
+Regulan si las funciones y las variables de estado se pueden llamar desde el interior del contrato, de los contratos que se derivan del contrato (contratos infantiles) o de otros contratos y transacciones.
 
 ### privado
 
