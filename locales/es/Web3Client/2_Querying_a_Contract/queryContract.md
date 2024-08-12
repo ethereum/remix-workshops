@@ -1,15 +1,15 @@
-Now that we know how to query simple data, let's try a more complex query.
+Ahora que sabemos cómo consultar datos simples, intentemos una consulta más compleja.
 
-This is a contract deployed to the mainnet - at this address: <a href="https://etherscan.io/address/0xdac17f958d2ee523a2206206994597c13d831ec7#code" target="_blank">https://etherscan.io/address/0xdac17f958d2ee523a2206206994597c13d831ec7#code</a>
+Este es un contrato desplegado en la red principal - en esta dirección: <a href="https://etherscan.io/address/0xdac17f958d2ee523a2206206994597c13d831ec7#code" target="_blank">https://etherscan.io/address/0xdac17f958d2ee523a2206206994597c13d831ec7#code</a>
 
-We are going to query the contract to find the name of it's token.
+Vamos a consultar el contrato para encontrar el nombre de su token.
 
-The **name** variable is a state variable of the contract.
+La variable **nombre** es una variable de estado del contrato.
 
-To access this **mainnet** contract, we need to do some setup.
+Para acceder a este contrato **mainnet**, tenemos que hacer algo de configuración.
 
-1. Switch to the mainnet in metamask.
-2. You'll probably need to refresh Remix.
+1. Cambie a la red principal en metamask.
+2. Probablemente tendrás que actualizar Remix.
 3. As a result of the refresh, you may need to reload this tutorial too.
 4. Go to Deploy & Run and switch to **Injected Web3**.
 
