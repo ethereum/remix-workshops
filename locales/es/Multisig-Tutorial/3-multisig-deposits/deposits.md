@@ -16,19 +16,19 @@ En la línea 43, tenemos la función `receive`. La función `receive` es una fun
 
 La función `receive` se marca como `external` y `payable`. El modificador `external` significa que la función sólo puede llamarse desde fuera del contrato. El modificador `payable` significa que la función puede recibir Ether.
 
-La función 'receive' emite el evento Depósito (Línea 44) con la dirección del remitente, la cantidad de Ether enviada, y el balance actualizado del contrato. Esto no devuelve nada.
+La función 'receive' emite el evento Deposit (Línea 44) con la dirección del emisor, la cantidad de Ether enviada y el saldo actualizado del contrato. Esta no devuelve nada.
 
-Para recibir a Ether, un contrato debe tener un `receptive`, `fallback`, o una función con el modificador `payable`. Si ninguno de ellos está presente, el contrato rechazará cualquier Ether que te sea enviado.
+Para recibir a Ether, un contrato debe tener un `receive`, `fallback` o una función con el modificador `payable`. Si ninguno de ellos está presente, el contrato rechazará cualquier Ether que se le envíe.
 
 ## Conclusión
 
-En esta sección, exploramos la función `receive` y el evento asociado al depósito. Hemos examinado cómo se utiliza la función 'receive' para depositar a Ether en la cartera multifirma y cómo el evento Depósito proporciona transparencia.
+En esta sección, exploramos la función `receive` y el evento Deposit asociado. Examinamos cómo se utiliza la función 'receive' para depositar a Ether en la cartera multifirma y cómo el evento Deposit proporciona transparencia.
 
-## ⭐ Tarea: Depósito Ether
+## Asignación: Depositar Ether
 
-Deposite 2 Ether en el contrato Multisig.
+Deposite 2 Ether en el contrato Multifirma (Multisig).
 
-1. Despliega el contrato Multisig como en la tarea anterior.
-2. Introduce un valor de 2 Ether en el campo Valor y seleccione Ether en el menú desplegable.
-3. En la parte inferior de su contrato desplegado en la sección de "Interacciones de nivel bajo", haga clic en el botón "Transacción".
-4. Además de su contrato desplegado, ahora debe decir "Balance: 2 Ether".
+1. Despliegue el contrato Multifirma como en la asignación anterior.
+2. Introduzca un valor de 2 Ether en el campo Valor y seleccione Ether en el menú desplegable.
+3. En la parte inferior de su contrato desplegado, en la sección de "Interacciones de bajo nivel", haga clic en el botón "Transact".
+4. En la parte superior de su contrato desplegado, ahora debería decir "Balance: 2 Ether".
