@@ -1,11 +1,11 @@
-The entire UniswapSwapExamples contract will only be presented in section 5 of this tutorial.  Before then, we'll build up blocks of code.
+Todo el contrato de UniswapSwapExamples solo se presentará en la sección 5 de este tutorial.  Antes de eso, construiremos bloques de código.
 
-This section explores the `ISwapRouter` interface, which defines the functions that can be called on the Uniswap Swap contract.
+Esta sección explora la interfaz "ISwapRouter", que define las funciones que se pueden llamar en el contrato de intercambio de Uniswap.
 
-Single-hop swaps allow users to exchange one token for another directly within a liquidity pool.
-Multi-hop swaps allow users to exchange one token for another by routing through multiple tokens.
+Los swaps de un solo salto permiten a los usuarios intercambiar un token por otro directamente dentro de un fondo de liquidez.
+Los intercambios de varios saltos permiten a los usuarios intercambiar un token por otro mediante el enrutamiento a través de múltiples tokens.
 
-Interfaces in Solidity specify functions that must be included in a contract that inherits them.  Son útiles para declarar qué funciones son compatibles y permiten una integración e interacción más fáciles entre los diferentes contratos.
+Las interfaces en Solidity especifican funciones que deben incluirse en un contrato que las herede.  Son útiles para declarar qué funciones son compatibles y permiten una integración e interacción más fáciles entre los diferentes contratos.
 
 Las estructuras se utilizan para definir tipos de datos personalizados.
 
