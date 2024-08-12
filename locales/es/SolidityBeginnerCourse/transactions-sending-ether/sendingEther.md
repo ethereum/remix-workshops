@@ -17,7 +17,7 @@ Si se elimina la modificadora
 
 #### **enviar**
 
-`<address payable>.send(uint256 amount) returns (bool)`
+`<address payable>.send(uint256 amount) regresa (bool)`
 
 - `send()` devuelve falso o un fallo.
 - Reenvía un estipendio fijo de 2300 gas
@@ -57,7 +57,7 @@ Si queremos habilitar un contrato para recibir Ether sin tener que llamar a una 
 
 La función  `receive` se ejecuta con llamadas de calldata vacío (por ejemplo transferencias de Ether básicas vía send() o transfer()), mientras que la función fallback se ejecuta en llamadas con calldata. Si no existe ninguna función `receive`pero sí una función `fallback`, las llamadas con un calldata vacío también usarán la función fallback.
 
-### Payable function modifier
+### Función de pago modificar
 
 La función `payable`modificadora, habilita que las funciones puedan recibir Ether.
 
