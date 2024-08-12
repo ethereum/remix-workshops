@@ -6,17 +6,17 @@ En Solidity las colecciones (arrays) almacenan listas ordenadas de valores del m
 
 Hay dos tipos de colecciones, de _tamaño-fijo_ (fixed-size) compila-tiempo y _colecciones dinámicas_ (dynamic arrays). Para las colecciones de tamaño fijo necesitamos declarar la talla de las colecciones antes de que se compile. El tamaño de las colecciones dinámicas puede ser cambiado después de que el contrato se haya compilado.
 
-### Declaring arrays
+### Declaraciones de matrices
 
 Declaramos una colección de tamaño fijo proporcionando su tipo, el tamaño de la colección (como un número entre corchetes), visibilidad y nombre (línea 9).
 
 Declaramos una colección dinámica de la misma manera. No obstante, no proporcionamos el tamaño de la colección y dejamos los corchetes vacíos (línea 6).
 
-### Initializing arrays
+### Inicialización de matrices
 
 Podemos inicializar los elementos de una colección todos a la vez (línea 7), o inicializar nuevos elementos uno por uno (arr[0] = 1;). Si declaramos una colección, automáticamente inicializamos sus elementos con el valor inicial 0 (línea 9).
 
-### Accessing array elements
+### Acceso a los elementos de la matriz
 
 Accedemos elementos dentro de una colección proporcionando el nombre de la colección y el índice de los paréntesis (línea 12).
 
@@ -32,11 +32,11 @@ Podemos usar el operador `delete` para eliminar un elemento con un índice espec
 Cuando eliminamos el elemento con el operador `delete` todos los demás elementos permanecen iguales, lo que significa que la extensión de la colección permanece igual. Esto creará un espacio en nuestra colección.
 Si el orden de la colección no es importante, entonces podemos mover el último elemento de la colección al lugar del elemento eliminado (línea 46) o usar un mapeo. Un mapeo puede ser una mejor opción si planeamos eliminar elementos en nuestra estructura de datos.
 
-### Array length
+### Longitud de la matriz
 
 Usando el miembro de extensión, podemos leer el número de elementos que están almacenados en una colección (línea 35)
 
-<a href="https://www.youtube.com/watch?v=vTxxCbwMPwo" target="_blank">Watch a video tutorial on Arrays</a>.
+<a href="https://www.youtube.com/watch?v=vTxxCbwMPwo" target="_blank">Mira un vídeo tutorial sobre matrices</a>.
 
 ## ⭐️ Misión
 
