@@ -28,9 +28,9 @@ Estapuemos los parámetros de la estructura de la siguiente manera:
 - **`destinatario`**: Lo establecemos en el remitente de la transacción.
 - **`fecha límite`**: Estamos esto en la marca de tiempo actual. Hacemos esto porque queremos que la transacción se procese lo antes posible.
 - **`amountIn`**: Establecimos esto en el parámetro `amountIn` de nuestra función.
-- **`amountOutMinimum`**: We set this to 0 because we do not want to specify a minimum amount of the output token that we are willing to accept.
-- **`sqrtPriceLimitX96`**: We set this to 0 because we do not want to specify a limit on the price.
+- **`amountOutMinimum`**: Establemos esto en 0 porque no queremos especificar una cantidad mínima del token de salida que estamos dispuestos a aceptar.
+- **`sqrtPriceLimitX96`**: Establecemos esto en 0 porque no queremos especificar un límite en el precio.
 
-## Executing the Single-hop Swap
+## Ejecución del intercambio de un solo salto
 
-On line 29, we assign the output of the `exactInputSingle` function to the `amountOut` variable. This function executes the single-hop swap and returns the amount of the output token that was received.
+En la línea 29, asignamos la salida de la función "exactInputSingle" a la variable "mountOut". Esta función ejecuta el intercambio de un solo salto y devuelve la cantidad del token de salida que se recibió.
