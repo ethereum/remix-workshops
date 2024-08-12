@@ -4,41 +4,58 @@ La extensión de metadatos es opcional. Nos permite añadir información adicion
 
 ### nombre
 
-La función "nombre" (línea 16) devuelve el nombre de la colección de tokens. Una colección de tokens significa todos los tokens creados con la implementación de su contrato de tokens ERC721. Every token in this collection will have this name, regardless of their tokenId.
+La función "nombre" (línea 16) devuelve el nombre de la colección de tokens. Una colección de tokens significa todos los tokens creados con la implementación de su contrato de tokens ERC721. Cada token de esta colección tendrá este nombre, independientemente de su tokenId.
 
-### symbol
+### símbolo
 
-The function `symbol` (line 21) returns the symbol of the token collection.
+La función "símbolo" (línea 21) devuelve el símbolo de la colección de tokens.
 
 ### tokenURI
 
-The function `tokenURI` (line 26) returns the URI for the token with the id `tokenId`. In this case it’s not the URI of the whole collection but of an individual token in the collection.
+La función `tokenURI` (línea 26) devuelve el URI del token con el id `tokenId`. En este caso, no es el URI de toda la colección, sino de un token individual en la colección.
 
-## ERC721 Metadata JSON Schema
+## Esquema JSON de metadatos ERC721
 
-The file that the tokenURI points to should conform to the Metadata JSON Schema as it is specified in the <a href="https://eips.ethereum.org/EIPS/eip-721#specification" target="_blank">EIP-721</a>.
+El archivo al que apunta el tokenURI debe ajustarse al esquema JSON de metadatos tal y como se especifica en el <a href="https://eips.ethereum.org/EIPS/eip-721#specification" target="_blank">EIP-721</a>.
 
 ```
 {
-    "title": "Asset Metadata",
-    "type": "object",
-    "properties": {
-        "name": {
-            "type": "string",
-            "description": "Identifies the asset to which this NFT represents"
-        },
-        "description": {
-            "type": "string",
-            "description": "Describes the asset to which this NFT represents"
-        },
-        "image": {
-            "type": "string",
-            "description": "A URI pointing to a resource with mime type image/* representing the asset to which this NFT represents. Consider making any images at a width between 320 and 1080 pixels and aspect ratio between 1.91:1 and 4:5 inclusive."
-        }
-    }
+
+"Título": "Metadatos de activos",
+
+"Tipo": "objeto",
+
+"Propiedades": {
+
+"Nombre": {
+
+"Tipo": "cadena",
+
+"Descripción": "Identifica el activo al que representa este NFT"
+
+},
+
+"Descripción": {
+
+"Tipo": "cadena",
+
+"Descripción": "Describe el activo al que representa este NFT"
+
+},
+
+"Imagen": {
+
+"Tipo": "cadena",
+
+"Descripción": "Un URI que apunta a un recurso con una imagen de tipo mimo/* que representa el activo al que representa este NFT. Considere la posibilidad de hacer cualquier imagen con un ancho entre 320 y 1080 píxeles y una relación de aspecto entre 1,91:1 y 4:5 inclusive".
+
+}
+
+}
+
 }
 ```
 
-The root element must be of the type object. This root object should have properties with the keys: name, description, and image that should be all of the type string.
+El elemento raíz debe ser del tipo de objeto. Este objeto raíz debe tener propiedades con las claves: nombre, descripción e imagen que deben ser toda la cadena de tipo.
 
-The ERC721 standard is pretty flexible, the tokenURI does not need to point to a JSON document and the JSON does not need to have all properties and often has additional properties.
+El estándar ERC721 es bastante flexible, el tokenURI no necesita apuntar a un documento JSON y el JSON no necesita tener todas las propiedades y a menudo tiene propiedades adicionales.
