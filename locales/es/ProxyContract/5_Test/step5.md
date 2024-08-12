@@ -1,6 +1,6 @@
-# Let's test what we've learned
+# Vamos a probar lo que hemos aprendido
 
-- Write a contract named "LogicContract" which implements a public function named "getNumber" which returns 10
-- Write a proxy contract named "ProxyContract". This ProxyContract should take an address of LogicContract as a first parameter.
+- Escribe un contrato llamado "LogicContract" que implementa una función pública llamada "getNumber" que devuelve 10
+- Escriba un contrato de representación llamado "ProxyContract". Este ProxyContract debería tomar una dirección de LogicContract como primer parámetro.
 
-Good Luck!
+¡Buena suerte!
