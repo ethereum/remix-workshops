@@ -1,55 +1,55 @@
-ERC721 is a standard for token contracts that manage non-fungible tokens (NFTs) on the Ethereum blockchain.
+ERC721 es un estándar para los contratos de tokens que gestionan tokens no fungibles (NFT) en la cadena de bloques de Ethereum.
 
-Each non-fungible token is unique and not interchangeable. NFTs can have different properties, behavior, or rights. Non-fungible tokens are used to represent ownership of unique digital and physical assets like art, collectibles, or real estate.
+Cada token no fungible es único y no es intercambiable. Los NFT pueden tener diferentes propiedades, comportamientos o derechos. Los tokens no fungibles se utilizan para representar la propiedad de activos digitales y físicos únicos como arte, objetos de colección o bienes raíces.
 
-If you want to know more about the ERC721 token standard, have a look at the specifications in its <a href="https://eips.ethereum.org/EIPS/eip-721" target="_blank">Ethereum improvement proposal</a>.
+Si desea saber más sobre el estándar de tokens ERC721, eche un vistazo a las especificaciones en su <a href="https://eips.ethereum.org/EIPS/eip-721" target="_blank">Propuesta de mejora de Ethereum</a>.
 
-## Interface
+## Interfaz
 
-The ERC721 standard is more complex than the ERC20 standard and it features optional extensions. ERC721 compliant contracts must, at a minimum, implement the ERC721 and ERC165 interfaces, which we will look at in this section.
+El estándar ERC721 es más complejo que el estándar ERC20 y cuenta con extensiones opcionales. Los contratos que cumplen con ERC721 deben, como mínimo, implementar las interfaces ERC721 y ERC165, que examinaremos en esta sección.
 
-This interface (line 11) is part of the open-source contract library provided by <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol" target="_blank">OpenZeppelin</a>.
+Esta interfaz (línea 11) forma parte de la biblioteca de contratos de código abierto proporcionada por <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol" target="_blank">OpenZeppelin</a>.
 
-## Basic IERC721 Functions
+## Funciones básicas de IERC721
 
-Contracts compliant with the ERC721 standard have to implement the following functions:
+Los contratos que cumplen con el estándar ERC721 tienen que implementar las siguientes funciones:
 
 ### balanceOf
 
-The function `balanceOf` (line 30) returns the amount of tokens owned by the account with the address `owner`.
+La función "balanceOf" (línea 30) devuelve la cantidad de tokens propiedad de la cuenta con la dirección "propietario".
 
 ### ownerOf
 
-The function `ownerOf` (line 39) returns the address `owner` of the account that holds the token with the id `tokenId`.
+La función `ownerOf` (línea 39) devuelve la dirección `owner` de la cuenta que contiene el token con el id `tokenId`.
 
 ### safeTransferFrom
 
-The function `safeTransferFrom` (line 55) transfers the ownership of a token with the id `tokenId` from the account with the address `from` to the account with the address `to`.
+La función `safeTransferFrom` (línea 55) transfiere la propiedad de un token con el id `tokenId` desde la cuenta con la dirección `from` a la cuenta con la dirección `to`.
 
-The function `safeTransferFrom` (line 137) is almost identical to the function `safeTransferFrom` (line 55) .The only difference is that this function has a non-empty payload `data`.
+La función `safeTransferFrom` (línea 137) es casi idéntica a la función `safeTransferFrom` (línea 55). La única diferencia es que esta función tiene un "datos" de carga útil no vacía.
 
-A smart contract must implement the ERC721TokenReceiver Interface if it is to receive a transfer. This will ensure that the contract can handle ERC721 token transfers and prevent the tokens from being locked in a contract that can’t.
+Un contrato inteligente debe implementar la interfaz ERC721TokenReceiver si va a recibir una transferencia. Esto garantizará que el contrato pueda manejar las transferencias de tokens ERC721 y evitar que los tokens se bloqueen en un contrato que no puede.
 
 ### transferFrom
 
-The function `transferFrom` (line 55) transfers the ownership of a token with the id `tokenId` from the account with the address `from` to the account with the address `to`.
+La función `transferFrom` (línea 55) transfiere la propiedad de un token con el id `tokenId` de la cuenta con la dirección `from` a la cuenta con la dirección `to`.
 
-**It is recommended to use safeTransferFrom instead of transferFrom whenever possible.**
-The `transferFrom` function is not secure because it doesn’t check if the smart contract that is the recipient of the transfer has implemented the ERC721TokenReceiver interface and is capable of handling ERC721 tokens.
+\*\*Se recomienda usar safeTransferFrom en lugar de transferFrom siempre que sea posible. \*\*
+La función "transferFrom" no es segura porque no comprueba si el contrato inteligente que es el destinatario de la transferencia ha implementado la interfaz ERC721TokenReceiver y es capaz de manejar los tokens ERC721.
 
-## Advanced IERC721 Functions
+## Funciones avanzadas de IERC721
 
 ### approve
 
-The function `approve` (line 94) gives the account with the address `to` the permission to manage the token with the id `tokenId` on behalf of the account calling the function.
+La función "approve" (línea 94) le da a la cuenta con la dirección "a" el permiso para administrar el token con el id "tokenId" en nombre de la cuenta que llama a la función.
 
 ### getApproved
 
-The function `getApproved` (line 103) returns the address of the account (return var `operator`) that is approved to manage the token with the id `tokenId`.
+La función `getApproved` (línea 103) devuelve la dirección de la cuenta (return var `operator`) que está aprobada para administrar el token con el id `tokenId`.
 
 ### setApprovalForAll
 
-The function `setApprovalForAll` (line 115) sets the permission (`_approved`) for the account with the specified address (input param - `operator`) to manage all tokens of the account calling the function.
+La función `setApprovalForAll` (línea 115) establece el permiso (`_approved`) para la cuenta con la dirección especificada (input param - `operator`) para administrar todos los tokens de la cuenta que llama a la función.
 
 ### isApprovedForAll
 
