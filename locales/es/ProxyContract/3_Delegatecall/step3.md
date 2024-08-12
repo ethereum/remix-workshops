@@ -1,9 +1,9 @@
-# Delegate call
+# Llamada de delegados
 
-It's a special variant of a **message call**, which is identical to a message call apart from the fact that the code at the target address is executed in the context of the calling contract so **msg.sender** and **msg.value** do not change their values.
+Es una variante especial de una **llamada de mensaje**, que es idéntica a una llamada de mensaje, aparte del hecho de que el código en la dirección de destino se ejecuta en el contexto del contrato de llamada, por lo que **msg.sender** y **msg.value** no cambian sus valores.
 
-This means that a contract can dynamically load code from a different address at runtime.
+Esto significa que un contrato puede cargar dinámicamente código desde una dirección diferente en tiempo de ejecución.
 
-The storage, the current address and balance still refer to the calling contract, only the code is taken from the called address.
+El almacenamiento, la dirección actual y el saldo todavía se refieren al contrato de llamada, solo el código se toma de la dirección llamada.
 
-So when a **Proxy** delegates calls to the Logic contract, every storage modification will impact the storage of Logic contract.
+Por lo tanto, cuando un **Proxy** delega llamadas al contrato de Logic, cada modificación de almacenamiento afectará al almacenamiento del contrato de Logic.
