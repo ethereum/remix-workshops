@@ -1,7 +1,7 @@
-From the Remix terminal, identify the transaction that deployed the contract and click `Debug`
+Desde la terminal Remix, identifique la transacción que implementó el contrato y haga clic en "Depurar"
 
-In the gutter of the editor, put a breakpoint on the line `s = _o`, and click on `Jump to the next Breakpoint` (bottom right button).
+En el canalón del editor, ponga un punto de interrupción en la línea `s = _o`, y haga clic en `Saltar al siguiente punto de interrupción` (botón inferior derecho).
 
-Click on `Step into`, to move along the opcodes until you reach `SSTORE`.
+Haga clic en "Entrar en", para moverse a lo largo de los códigos de operación hasta llegar a "SSTORE".
 
-`SSTORE` is the opcode for storing the value `_o` in the storage. Let's continue further to the `CODECOPY`.
+`SSTORE` es el código de operación para almacenar el valor `_o` en el almacenamiento. Sigamos con el `CODECOPY`.
