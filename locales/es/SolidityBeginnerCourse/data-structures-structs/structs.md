@@ -4,7 +4,7 @@ En Solidity podemos definir los tipos de data a medida en forma de _structs_. St
 
 Definimos struct usando la palabra clave `struct` y un nombre (línea 5). Dentro de unas llaves (curly braces), podemos definir los miembros de nuestros structs, que consisten en los nombres de las variables y sus tipos de data.
 
-### Initializing structs
+### Inicialización de estructuras
 
 Hay diferentes maneras de inicializar un struct.
 
