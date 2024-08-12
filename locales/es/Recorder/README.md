@@ -1,3 +1,3 @@
-## Get yourself Remixing!
+## ¡Ponte a Remixear!
 
-The recorder is used for recording a set of transactions in the Deploy & Run module, editing their parameters and then playing them back in another context.  It really is the remix of Remix!
+La grabadora se utiliza para grabar un conjunto de transacciones en el módulo Deploy & Run, editar sus parámetros y luego reproducirlos en otro contexto.  ¡Realmente es el remix de Remix!
