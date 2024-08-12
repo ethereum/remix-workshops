@@ -41,7 +41,7 @@ Por ejemplo, aquí hay un poco del scenario.json un poco más abajo, donde la pr
 
 Editemos esto para que otra propuesta gane en la reproducción.
 
-Change the **parameters** array which now is:
+Cambia la matriz de **parámetros** que ahora es:
 
 ```
 "parameters": [
@@ -49,7 +49,7 @@ Change the **parameters** array which now is:
         ]
 ```
 
-to:
+para:
 
 ```
 "parameters": [
