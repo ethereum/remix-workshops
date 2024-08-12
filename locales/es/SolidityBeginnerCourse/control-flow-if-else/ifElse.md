@@ -27,7 +27,7 @@ Si la primera condición  (línea 6) de la función  foo no se cumple pero la co
 Crear una función llamada  `evenCheck`  en el contrato  `IfElse`:
 Que toma un `uint` como argumento .
 
-- That takes in a `uint` as an argument.
+- Eso toma un "uint" como argumento.
 - La función devuelve `verdadero` si el argumento es par y `falso`si el argumento es impar.
 - Usa un operador ternario para devolver el resultado de una función `evenCheck`.
 
