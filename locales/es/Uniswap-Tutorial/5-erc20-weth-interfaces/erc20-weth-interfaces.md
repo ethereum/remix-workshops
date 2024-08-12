@@ -28,25 +28,25 @@ On line 89, we define the `approve` function. When called, this function approve
 
 ### 6. transferFrom
 
-On line 91, we define the `transferFrom` function. This function transfers tokens from the specified sender to the recipient. The function can only be called by the spender if the spender is allowed to spend the specified amount of tokens on behalf of the sender.
+En la línea 91, definimos la función "transferFrom". Esta función transfiere tokens del remitente especificado al destinatario. El gastador solo puede llamar a la función si al gastador se le permite gastar la cantidad especificada de tokens en nombre del remitente.
 
-### 7. Events
+### 7. Eventos
 
-On lines 102-103, we define the `Transfer` and `Approval` events. These events are emitted when the `transfer` and `approve` functions are called, respectively.
+En las líneas 102-103, definimos los eventos de "Transferencia" y "Aprobación". Estos eventos se emiten cuando se llaman a las funciones "transferir" y "aprobar", respectivamente.
 
 ## IWETH Interface
 
-On line 106, we define the `IWETH` interface. This interface extends the `IERC20` interface and defines two additional functions:
+En la línea 106, definimos la interfaz "IWETH". Esta interfaz amplía la interfaz "IERC20" y define dos funciones adicionales:
 
 ### 1. deposit
 
-On line 107, we define the `deposit` function. This function deposits ETH into the contract and returns the equivalent amount of WETH. This function is used to wrap ETH into WETH.
-We need to wrap ETH into WETH because the Uniswap V3 Swap contract only supports ERC-20 tokens.
+En la línea 107, definimos la función "depósito". Esta función deposita ETH en el contrato y devuelve la cantidad equivalente de WETH. Esta función se utiliza para envolver ETH en WETH.
+Necesitamos envolver ETH en WETH porque el contrato Uniswap V3 Swap solo admite tokens ERC-20.
 
-### 2. withdraw
+### 2. retirar
 
-On line 109, we define the `withdraw` function. This function withdraws the specified amount of WETH from the contract and returns the equivalent amount of ETH. This function is used to unwrap WETH into ETH.
+En la línea 109, definimos la función "retirar". Esta función retira la cantidad especificada de WETH del contrato y devuelve la cantidad equivalente de ETH. Esta función se utiliza para desenvolver WETH en ETH.
 
-## Conclusion
+## Conclusión
 
-In this tutorial, we explored the Uniswap V3 Swap contract.  To get a full sense of how Uniswap works, try making some swaps on the <a href="https://app.uniswap.org/" target="_blank">Uniswap DApp</a> and go to the <a href="https://docs.uniswap.org/" target="_blank">Uniswap docs</a>.
+En este tutorial, exploramos el contrato de intercambio V3 de Uniswap.  Para tener una idea completa de cómo funciona Uniswap, intente hacer algunos intercambios en el <a href="https://app.uniswap.org/" target="_blank">Uniswap DApp</a> y vaya a los <a href="https://docs.uniswap.org/" target="_blank">documentos de Uniswap</a>.
