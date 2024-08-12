@@ -48,9 +48,9 @@ geo-json
 ```
 
 Dentro de los archivos JSON, crea los metadatos para los tokens, como el nombre, la descripción y la imagen.
-For the image URL, we are going to use the URL of our images on IPFS. You can add additional data if you like; in this example, we added some unique attributes for each token.
+Para la URL de la imagen, vamos a usar la URL de nuestras imágenes en IPFS. Puede agregar datos adicionales si lo desea; en este ejemplo, hemos añadido algunos atributos únicos para cada token.
 
-This is how the JSON for the first token could look:
+Así es como podría verse el JSON para el primer token:
 
 ```
 {
@@ -66,7 +66,7 @@ This is how the JSON for the first token could look:
 }
 ```
 
-This is how the JSON for the second token could look:
+Así es como podría verse el JSON para el segundo token:
 
 ```
 {
@@ -81,21 +81,21 @@ This is how the JSON for the second token could look:
 }
 ```
 
-As shown above, the folder in this example is called "geo-json". Inside this folder, we have three JSON files.
-The first JSON file is called "0", the second JSON file is called "1", and the third JSON file is called "2".
+Como se muestra arriba, la carpeta de este ejemplo se llama "geo-json". Dentro de esta carpeta, tenemos tres archivos JSON.
+El primer archivo JSON se llama "0", el segundo archivo JSON se llama "1" y el tercer archivo JSON se llama "2".
 
-Make sure that your JSON files don't have a file ending and are named like their corresponding tokenIds.
-In the pin manager on pinata.cloud, click on the upload button and upload the folder with your JSON files.
+Asegúrese de que sus archivos JSON no tengan un final de archivo y tengan el nombre de sus tokensIds correspondientes.
+En el administrador de pines de pinata.cloud, haga clic en el botón de carga y cargue la carpeta con sus archivos JSON.
 
-To access your folder on IPFS, enter this address "https://ipfs.io/ipfs/" and add your CID.
-For our current example, you can access your folder by using: <a href="https://ipfs.io/ipfs/QmVrsYxXh5PzTfkKZr1MfUN6PotJj8VQkGQ3kGyBNVKtqp" target="_blank">
-https://ipfs.io/ipfs/QmVrsYxXh5PzTfkKZr1MfUN6PotJj8VQkGQ3kGyBNVKtqp </a>
-This will become our baseURI.
+Para acceder a su carpeta en IPFS, introduzca esta dirección "https://ipfs.io/ipfs/" y agregue su CID.
+Para nuestro ejemplo actual, puede acceder a su carpeta utilizando:<a href="https://ipfs.io/ipfs/QmVrsYxXh5PzTfkKZr1MfUN6PotJj8VQkGQ3kGyBNVKtqp" target="_blank">
+https://ipfs.io/ipfs/QmVrsYxXh5PzTfkKZr1MfUN6PotJj8VQkGQ3kGyBNVKtqp
+</a>Esto se convertirá en nuestra Uri base.
 
-You can access a specific JSON file then by just adding a slash and the tokenId by using: <a href="https://ipfs.io/ipfs/QmVrsYxXh5PzTfkKZr1MfUN6PotJj8VQkGQ3kGyBNVKtqp/0" target="_blank">
+Puede acceder a un archivo JSON específico simplemente agregando una barra diagonal y el tokenId usando: <a href="https://ipfs.io/ipfs/QmVrsYxXh5PzTfkKZr1MfUN6PotJj8VQkGQ3kGyBNVKtqp/0" target="_blank">
 https://ipfs.io/ipfs/QmVrsYxXh5PzTfkKZr1MfUN6PotJj8VQkGQ3kGyBNVKtqp/0 </a>
 
-In the contract, replace the baseURI with your own baseURI. In this example, the baseURI consists of the URL
+En el contrato, reemplace el baseURI con su propio baseURI. En este ejemplo, la URI base consiste en la URL
 "https://ipfs.io/ipfs/", the CID containing the JSON files, and a slash at the end "/".
 
-An individual tokenURI will now be created for each token by adding the tokenId to the baseURI — exactly what we did manually in the example above to access the JSON file.
+Ahora se creará un tokenURI individual para cada token agregando el tokenId a la baseURI, exactamente lo que hicimos manualmente en el ejemplo anterior para acceder al archivo JSON.
