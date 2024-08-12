@@ -8,40 +8,40 @@ Uniswap es un intercambio descentralizado de criptomonedas. Permite a los usuari
 
 ## ¿Cómo funciona Uniswap?
 
-En lugar de utilizar un libro de pedidos como un intercambio centralizado tradicional, Uniswap utiliza un modelo de creador de mercado automatizado (AMM). En Uniswap, el AMM es un contrato inteligente que tiene reservas de tokens (Liquidity Pool). Users can trade between tokens in the Liquidity Pool. The price of each token is determined by the ratio of the reserves.
+En lugar de utilizar un libro de pedidos como un intercambio centralizado tradicional, Uniswap utiliza un modelo de creador de mercado automatizado (AMM). En Uniswap, el AMM es un contrato inteligente que tiene reservas de tokens (Liquidity Pool). Los usuarios pueden comerciar entre tokens en el grupo de liquidez. El precio de cada token está determinado por la proporción de las reservas.
 
-### Step-by-step example of a Uniswap trade
+### Ejemplo paso a paso de una operación Uniswap
 
-1. Alice wants to trade 1 ETH for DAI.
-2. Alice sends 1 ETH to the Uniswap smart contract.
-3. The Uniswap smart contract calculates the amount of DAI that Alice should receive based on the current exchange rate.
-4. The Uniswap smart contract sends the DAI to Alice.
-5. The Uniswap smart contract adds the 1 ETH to its reserves.
-6. The Uniswap smart contract recalculates the exchange rate based on the new reserves.
+1. Alice quiere comerciar con 1 ETH para DAI.
+2. Alice envía 1 ETH al contrato inteligente de Uniswap.
+3. El contrato inteligente de Uniswap calcula la cantidad de DAI que Alice debería recibir en función del tipo de cambio actual.
+4. El contrato inteligente de Uniswap envía el DAI a Alice.
+5. El contrato inteligente de Uniswap añade el 1 ETH a sus reservas.
+6. El contrato inteligente de Uniswap vuelve a calcular el tipo de cambio en función de las nuevas reservas.
 
-The tokens in the Liquidity Pool are provided by Liquidity Providers. When a Liquidity Provider deposits tokens into a Liquidity Pool, they receive Liquidity Provider Tokens in return. Liquidity Provider Tokens represent a user's share of a Liquidity Pool.
+Los tokens en el grupo de liquidez son proporcionados por los proveedores de liquidez. Cuando un proveedor de liquidez deposita tokens en un grupo de liquidez, recibe tokens de proveedor de liquidez a cambio. Los tokens de proveedor de liquidez representan la participación de un usuario en un grupo de liquidez.
 
-Users of Uniswap pay a fee for each trade. The fee is paid to the Liquidity Providers in the form of additional Liquidity Provider Tokens.
+Los usuarios de Uniswap pagan una tarifa por cada operación. La tarifa se paga a los proveedores de liquidez en forma de tokens adicionales para proveedores de liquidez.
 
-## Uniswap Swap Contract
+## Contrato de intercambio de Uniswap
 
-The Uniswap Swap contract allows users to swap tokens using Uniswap V3. It can do single-hop swaps, which allow users to exchange one token for another directly. It can also do multi-hop swaps, which means that users can exchange one token for another by routing through multiple tokens. Routing in this context means that the swap contract will exchange the token for another token, then exchange that token for another token, and so on until it reaches the desired token.
+El contrato de intercambio de Uniswap permite a los usuarios intercambiar tokens utilizando Uniswap V3. Puede hacer intercambios de un solo salto, que permiten a los usuarios intercambiar un token por otro directamente. También puede hacer intercambios de varios saltos, lo que significa que los usuarios pueden intercambiar un token por otro mediante el enrutamiento a través de múltiples tokens. El enrutamiento en este contexto significa que el contrato de intercambio cambiará el token por otro token, luego cambiará ese token por otro token, y así sucesimente hasta que alcance el token deseado.
 
-## Conclusion
+## Conclusiones
 
-In this section, we learned about Uniswap, how it works, and how we are going to use it to swap tokens.
+En esta sección, aprendimos sobre Uniswap, cómo funciona y cómo lo vamos a usar para intercambiar tokens.
 
-## ⭐️ Assignment: Multiple Choice Test
+## ⭐️ Asignación: Prueba de opción múltiple
 
-### 1. What is Uniswap?
+### 1. ¿Qué es Uniswap?
 
-1. A centralized exchange protocol.
-2. A decentralized exchange protocol that uses an order book.
-3. A decentralized exchange protocol that uses an automated market maker (AMM) model.
-4. A decentralized exchange protocol that uses an order book and an automated market maker (AMM) model.
+1. Un protocolo de intercambio centralizado.
+2. Un protocolo de intercambio descentralizado que utiliza un libro de pedidos.
+3. Un protocolo de intercambio descentralizado que utiliza un modelo de creador de mercado automatizado (AMM).
+4. Un protocolo de intercambio descentralizado que utiliza un libro de pedidos y un modelo de creador de mercado automatizado (AMM).
 
-### 2) How does Uniswap determine the price of a token?
+### 2) ¿Cómo determina Uniswap el precio de un token?
 
-1. The price of a token is determined by the ratio of the reserves.
-2. The price of a token is determined by the ratio of the reserves and the number of trades.
-3. The price of a token is determined by the ratio of the reserves and the number of Liquidity Providers.
+1. El precio de un token está determinado por la proporción de las reservas.
+2. El precio de un token está determinado por la proporción de las reservas y el número de operaciones.
+3. El precio de un token está determinado por la proporción de las reservas y el número de proveedores de liquidez.
