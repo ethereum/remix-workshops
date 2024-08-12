@@ -1,10 +1,10 @@
-In this section of the course, we will give you a theoretical introduction to blockchain-based tokens.
+En esta sección del curso, te daremos una introducción teórica a los tokens basados en blockchain.
 
-Blockchain tokens are a new technological building block created by blockchain technology (like websites were for the internet) that enables a decentralized, ownable internet (web3).
+Los tokens de cadena de bloques son un nuevo bloque tecnológico creado por la tecnología de cadena de bloques (como los sitios web eran para Internet) que permite un Internet descentralizado y propietario (web3).
 
-### Introduction
+### Introducción
 
-In the context of web3, tokens represent ownership. Los tokens pueden representar la propiedad de cualquier cosa: arte, reputación, artículos en un videojuego, acciones de una empresa, derechos de voto o monedas.
+En el contexto de web3, los tokens representan la propiedad. Los tokens pueden representar la propiedad de cualquier cosa: arte, reputación, artículos en un videojuego, acciones de una empresa, derechos de voto o monedas.
 
 La innovación revolucionaria de la tecnología blockchain es que permite que los datos se almacenen públicamente de una manera inmutable (inmutable).
 Esta nueva forma de almacenamiento de datos nos permite realizar un seguimiento de la propiedad y habilitar artículos digitales verdaderamente propietarios por primera vez.
