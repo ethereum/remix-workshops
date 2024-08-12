@@ -47,7 +47,7 @@ geo-json
 ├── 2
 ```
 
-Inside the JSON files, create the metadata for the tokens, like name, description, and image.
+Dentro de los archivos JSON, crea los metadatos para los tokens, como el nombre, la descripción y la imagen.
 For the image URL, we are going to use the URL of our images on IPFS. You can add additional data if you like; in this example, we added some unique attributes for each token.
 
 This is how the JSON for the first token could look:
