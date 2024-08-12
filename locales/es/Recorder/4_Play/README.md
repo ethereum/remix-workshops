@@ -1,8 +1,8 @@
-# Playing a scenario
+# Reproduciendo un escenario
 
-1. Click the play icon to the right of the floppy disk icon to play the steps you did.
+1. Haz clic en el icono de reproducción a la derecha del icono del disquete para reproducir los pasos que hiciste.
 
-2. You'll see another instance of the contract deployed. Open it up.
+2. Verás otra instancia del contrato desplegada. Ábrelo.
 
-3. Click the winningProposal function and you should see now that proposal 1 won.
-   It should print out: **0: uint256: winningProposal_ 1**
+3. Haz clic en la función de propuesta ganadora y deberías ver ahora que la propuesta 1 ganó.
+   Debería imprimirse: **0: uint256: winningProposal_ 1**
