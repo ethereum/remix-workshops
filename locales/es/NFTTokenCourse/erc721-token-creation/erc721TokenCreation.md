@@ -1,35 +1,35 @@
-In this contract, we use an ERC721 token contract implementation from OpenZeppelin (line 4).
+En este contrato, utilizamos una implementación de contrato de token ERC721 de OpenZeppelin (línea 4).
 
-Have a look at their implementation of a <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol" target="_blank">ERC721 contract</a>. Apart from the functionality specified in the ERC721 standard, the contract provides additional functions which we will see in a bit.
+Eche un vistazo a su implementación de un contrato <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol" target="_blank">ERC721</a>. Además de la funcionalidad especificada en el estándar ERC721, el contrato proporciona funciones adicionales que veremos en un momento.
 
 ## myToken
 
-We create our own contract called MyToken (line 7), which inherits (line 7) the functionality from the OpenZepplin `ERC721` token contract implementation and `Ownable` that we imported (line 4). If you don't remember the Ownable contract module, have a look at the ERC20 extensions section.
+Creamos nuestro propio contrato llamado MyToken (línea 7), que hereda (línea 7) la funcionalidad de la implementación del contrato de tokens OpenZepplin `ERC721` y "Ownable\` que importamos (línea 4). Si no recuerdas el módulo de contrato propietario, eche un vistazo a la sección de extensiones de ERC20.
 
-This ERC721 implementation makes use of the IERC721Metadata extension that is specified in the EIP. Our contract inherits the functions `name()` and `symbol()`
-and has a constructor that allows their values to be set during the deployment of the contract (line 8).
-In this case, we are going to use the default values. We name our token the same as the contract `"MyToken"` and make `"MTK"` its symbol.
+Esta implementación de ERC721 hace uso de la extensión de metadatos IERC721 que se especifica en el EIP. Nuestro contrato hereda las funciones `name()` y `symbol()`
+Y tiene un constructor que permite establecer sus valores durante el despliegue del contrato (línea 8).
+En este caso, vamos a usar los valores predeterminados. Nombramos nuestro token igual que el contrato "MyToken"\` y hacemos de "MTK" su símbolo.
 
 ### Base URI
 
-With an ERC721 contract, we are able to mint various tokens, each with its own tokenId. As we saw in the IERC721Metadata interface, each token can have its own `tokenURI`, which typically points to a JSON file to store metadata like name, description, and image link.
-If a contract mints multiple tokens, ERC721 implementations often use the same URI as a base (`baseURI`) for all tokens and only differentiate them by adding their unique `tokenId` at the end via concatenation. In the next part, we will see what this looks like in practice.
+Con un contrato ERC721, podemos acuñar varios tokens, cada uno con su propio tokenId. Como vimos en la interfaz de metadatos IERC721, cada token puede tener su propio "tokenURI", que normalmente apunta a un archivo JSON para almacenar metadatos como el nombre, la descripción y el enlace de la imagen.
+Si un contrato acuña varios tokens, las implementaciones de ERC721 a menudo utilizan el mismo URI como base (`baseURI`) para todos los tokens y solo los diferencian agregando su `tokenId` único al final a través de la concatenación. En la siguiente parte, veremos cómo se ve esto en la práctica.
 
-In this example, we are storing our data on IPFS — more on that in the next section. Our baseURI is <a href="https://ipfs.io/ipfs/QmUYLUKwqX6CaZxeiYGwmAYeEkeTsV4cHNZJmCesuu3xKy/" target="_blank">https://ipfs.io/ipfs/QmUYLUKwqX6CaZxeiYGwmAYeEkeTsV4cHNZJmCesuu3xKy/</a> (line 11).
-Through concatenation the tokenURI for the token with the id 0 would be <a href="https://ipfs.io/ipfs/QmUYLUKwqX6CaZxeiYGwmAYeEkeTsV4cHNZJmCesuu3xKy/0" target="_blank">https://ipfs.io/ipfs/QmUYLUKwqX6CaZxeiYGwmAYeEkeTsV4cHNZJmCesuu3xKy/0</a> , the tokenURI for the token with the id 1 would be <a href="https://ipfs.io/ipfs/QmUYLUKwqX6CaZxeiYGwmAYeEkeTsV4cHNZJmCesuu3xKy/1" target="_blank">https://ipfs.io/ipfs/QmUYLUKwqX6CaZxeiYGwmAYeEkeTsV4cHNZJmCesuu3xKy/1</a>, and so on.
+En este ejemplo, estamos almacenando nuestros datos en IPFS; más sobre eso en la siguiente sección. Nuestra Uri base es <a href="https://ipfs.io/ipfs/QmUYLUKwqX6CaZxeiYGwmAYeEkeTsV4cHNZJmCesuu3xKy/" target="_blank">https://ipfs.io/ipfs/QmUYLUKwqX6CaZxeiYGwmAYeEkeTsV4cHNZJmCesuu3xKy/</a> (línea 11).
+A través de la concatenación, el tokenURI para el token con la identificación 0 sería <a href="https://ipfs.io/ipfs/QmUYLUKwqX6CaZxeiYGwmAYeEkeTsV4cHNZJmCesuu3xKy/0" target="_blank">https://ipfs.io/ipfs/QmUYLUKwqX6CaZxeiYGwmAYeEkeTsV4cHNZJmCesuu3xKy/0</a> , el tokenURI para el token con la identificación 1 sería <a href="https://ipfs.io/ipfs/QmUYLUKwqX6CaZxeiYGwmAYeEkeTsV4cHNZJmCesuu3xKy/1" target="_blank">https://ipfs.io/ipfs/QmUYLUKwqX6CaZxeiYGwmAYeEkeTsV4cHNZJmCesuu3xKy/1</a>, y así sucesivamente.
 
-When using IPFS and you run into "504 Gateway Time-out" errors, you might have to wait and retry until the data is available.
+Al usar IPFS y se topa con errores de "504 Gateway Time-out", es posible que tenga que esperar y volver a intentarlo hasta que los datos estén disponibles.
 
 ### safeMint
 
-With the safeMint function (line 14) we enable the owner to create new tokens with a dedicated token id after contract deployment.
-The safeMint function is part of the ERC721 implementation of OpenZeppelin and lets us safely mint a token with the id `tokenId` to the account with the address `to`. For access control, we use the `onlyOwner` modifier from the Ownable access control contract module that we imported (line 5).
+Con la función safeMint (línea 14) permitimos al propietario crear nuevos tokens con un Id de token dedicado después de la implementación del contrato.
+La función safeMint es parte de la implementación ERC721 de OpenZeppelin y nos permite acuñar de forma segura un token con el id `tokenId` a la cuenta con la dirección `to`. Para el control de acceso, utilizamos el modificador "onlyOwner" del módulo de contrato de control de acceso propietario que importamos (línea 5).
 
-In the next section, we will see how we can create and host the metadata for our NFTs.
+En la siguiente sección, veremos cómo podemos crear y alojar los metadatos para nuestros NFT.
 
-## ⭐️ Assignment
+## ⭐️ Asignación
 
-1. Rename your contract to `Geometry`.
-2. Rename your token to `Geometry`.
-3. Change the symbol of your token to `GEO`.
-4. Change the `_baseURI` to <a href="https://ipfs.io/ipfs/QmVrsYxXh5PzTfkKZr1MfUN6PotJj8VQkGQ3kGyBNVKtqp/" target="_blank">https://ipfs.io/ipfs/QmVrsYxXh5PzTfkKZr1MfUN6PotJj8VQkGQ3kGyBNVKtqp/</a>.
+1. Renombra tu contrato a "Geometry".
+2. Campie el nombre de su token a "Geometry".
+3. Cambia el símbolo de tu token a `GEO`.
+4. Cambie el `_baseURI` a <a href="https://ipfs.io/ipfs/QmVrsYxXh5PzTfkKZr1MfUN6PotJj8VQkGQ3kGyBNVKtqp/" target="_blank">https://ipfs.io/ipfs/QmVrsYxXh5PzTfkKZr1MfUN6PotJj8VQkGQ3kGyBNVKtqp/</a>.
