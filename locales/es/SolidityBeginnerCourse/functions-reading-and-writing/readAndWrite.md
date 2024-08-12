@@ -4,7 +4,7 @@ Como en otros lenguajes, usamos funciones en Solidity para crear código modular
 
 Las funciones de Solidity pueden dividirse en dos tipos:
 
-1. Funciones que modifican el estado de la blockchain, como escribir a una variable de estado. In this contract, the `set` function (line 9) changes the state variable `num`.
+1. Funciones que modifican el estado de la blockchain, como escribir a una variable de estado. En este contrato, la función `set` (línea 9) cambia la variable de estado `num`.
 2. Funciones que no modifican el estado de la blockchain. Estas funciones están marcadas como `view` o `pure`. Por ejemplo, en este contrato, la función `get` (línea 14) marcada como `view` que solamente devuelve `num`.
 
 Para definir una función, use la palabra clave `function`, seguida de un nombre único.
