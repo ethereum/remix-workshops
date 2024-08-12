@@ -1,5 +1,5 @@
-# Uniswap Swap Course
+# Curso de intercambio de uniswap
 
-Review the code of the Uniswap V3 Swap contract for performing token swaps.
+Revise el código del contrato Uniswap V3 Swap para realizar permutas de tokens.
 
-Developed by the p2p learning platform https://dacade.org.
+Desarrollado por la plataforma de aprendizaje p2p https://dacade.org.
