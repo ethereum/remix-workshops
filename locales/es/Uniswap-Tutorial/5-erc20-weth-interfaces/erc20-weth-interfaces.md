@@ -1,30 +1,30 @@
-In this section, we'll explore the `IERC20` interface, a standard interface for interacting with ERC-20 tokens and the `IWETH` interface, a standard interface for interacting with wrapped Ether (WETH). Understanding these interfaces is crucial as it is used in the Uniswap V3 Swap contract to handle token transfers and approvals.
+En esta sección, exploraremos la interfaz `IERC20`, una interfaz estándar para interactuar con los tokens ERC-20 y la interfaz `IWETH`, una interfaz estándar para interactuar con Ether envuelto (WETH). Comprender estas interfaces es crucial, ya que se utiliza en el contrato Uniswap V3 Swap para manejar las transferencias y aprobaciones de tokens.
 
-You can find a "Solidity ERC20 Token Course" for beginners in LearnEth to understand the ERC20 token standard in more detail.
+Puedes encontrar un "Curso de tokens ERC20 de solidez" para principiantes en LearnEth para entender el estándar de tokens ERC20 con más detalle.
 
-## IERC20 Interface
+## Interfaz IERC20
 
-On line 80, we define the `IERC20` interface. This interface defines a standard set of functions that ERC-20 tokens must implement. Let's examine the key functions within this interface:
+En la línea 80, definimos la interfaz `IERC20`. Esta interfaz define un conjunto estándar de funciones que los tokens ERC-20 deben implementar. Examinemos las funciones clave dentro de esta interfaz:
 
 ### 1. totalSupply
 
-On line 81, we define the `totalSupply` function. This function returns the total supply of the token.
+En la línea 81, definimos la función "totalSupply". Esta función devuelve el suministro total del token.
 
 ### 2. balanceOf
 
-On line 83, we define the `balanceOf` function. This function returns the balance of the specified address.
+En la línea 83, definimos la función `balanceOf`. Esta función devuelve el saldo de la dirección especificada.
 
 ### 3. transfer
 
-On line 85, we define the `transfer` function. This function transfers tokens from the sender to the specified recipient.
+En la línea 85, definimos la función de "transferencia". Esta función transfiere tokens del remitente al destinatario especificado.
 
 ### 4. allowance
 
-On line 87, we define the `allowance` function. This function returns the amount of tokens that the spender is allowed to spend on behalf of the owner.
+En la línea 87, definimos la función "subsidia". Esta función devuelve la cantidad de fichas que el gastante puede gastar en nombre del propietario.
 
 ### 5. approve
 
-On line 89, we define the `approve` function. When called, this function approves a spender to spend the specified amount of tokens on behalf of the sender.
+En la línea 89, definimos la función "aprobar". Cuando se llama, esta función aprueba que un gastante gaste la cantidad especificada de tokens en nombre del remitente.
 
 ### 6. transferFrom
 
