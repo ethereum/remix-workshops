@@ -1,33 +1,33 @@
-Single-hop swaps allow users to exchange one token for another directly within a liquidity pool. In this section, we will learn how to use the Uniswap V3 Swap contract to execute single-hop swaps.
+Los swaps de un solo salto permiten a los usuarios intercambiar un token por otro directamente dentro de un fondo de liquidez. En esta sección, aprenderemos a usar el contrato de intercambio V3 de Uniswap para ejecutar swaps de un solo salto.
 
-## Function Parameters
+## Parámetros de función
 
-On line 8, we define a function called `swapExactInputSingleHop`. This function executes a single-hop swap. It takes the following parameters:
+En la línea 8, definimos una función llamada "swapExactInputSingleHop". Esta función ejecuta un intercambio de un solo salto. Toma los siguientes parámetros:
 
-- **`address tokenIn`**: The address of the token being sent.
-- **`address tokenOut`**: The address of the token being received.
-- **`uint24 poolFee`**: The fee associated with the swap.
-- **`uint amountIn`**: The amount of the input token being sent.
+- **`dirección tokenIn`**: La dirección del token que se está enviando.
+- **`address tokenOut`**: La dirección del token que se recibe.
+- **`uint24 poolFee`**: La tarifa asociada con el intercambio.
+- **`uint amountIn`**: La cantidad del token de entrada que se envía.
 
-It returns a `uint` called `amountOut`, which is the amount of the output token that was received.
+Devuelve un `uint` llamado `amountOut`, que es la cantidad del token de salida que se recibió.
 
-## Function Body
+## Cuerpo de función
 
-In the function body, we first transfer the input token from the sender to our contract, line 14.
-Then, we approve the Uniswap Swap contract to spend the input token on our behalf, line 15.
+En el cuerpo de la función, primero transferimos el token de entrada del remitente a nuestro contrato, línea 14.
+Luego, aprobamos el contrato de intercambio de Uniswap para gastar el token de entrada en nuestro nombre, línea 15.
 
-On line 17, we create an instance of the `ExactInputSingleParams` struct. This struct contains the parameters that are required for our `exactInputSingle` function on line 45, which will execute the single-hop swap. We repeat `ISwapRouter.ExactInputSingleParams` two times on that line because we are making an instance of a struct that is defined in an interface.
+En la línea 17, creamos una instancia de la estructura "ExactInputSingleParams". Esta estructura contiene los parámetros que se requieren para nuestra función "exactInputSingle" en la línea 45, que ejecutará el intercambio de un solo salto. Repetimos `ISwapRouter.ExactInputSingleParams` dos veces en esa línea porque estamos haciendo una instancia de una estructura que está definida en una interfaz.
 
-## Parameters of the ExactInputSingleParams Struct
+## Parámetros de la estructura ExactInputSingleParams
 
-We set the parameters of the struct as follows:
+Estapuemos los parámetros de la estructura de la siguiente manera:
 
-- **`tokenIn`**: We set this to the `tokenIn` parameter of our function.
-- **`tokenOut`**: We set this to the `tokenOut` parameter of our function.
-- **`fee`**: We set this to the `poolFee` parameter of our function.
-- **`recipient`**: We set this to the sender of the transaction.
-- **`deadline`**: We set this to the current timestamp. We do this because we want the transaction to be processed as soon as possible.
-- **`amountIn`**: We set this to the `amountIn` parameter of our function.
+- **`tokenIn`**: Establamos esto en el parámetro `tokenIn` de nuestra función.
+- **`tokenOut`**: Establamos esto en el parámetro `tokenOut` de nuestra función.
+- **`tarifa`**: Establamos esto en el parámetro `poolFee` de nuestra función.
+- **`destinatario`**: Lo establecemos en el remitente de la transacción.
+- **`fecha límite`**: Estamos esto en la marca de tiempo actual. Hacemos esto porque queremos que la transacción se procese lo antes posible.
+- **`amountIn`**: Establecimos esto en el parámetro `amountIn` de nuestra función.
 - **`amountOutMinimum`**: We set this to 0 because we do not want to specify a minimum amount of the output token that we are willing to accept.
 - **`sqrtPriceLimitX96`**: We set this to 0 because we do not want to specify a limit on the price.
 
