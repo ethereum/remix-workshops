@@ -1,14 +1,14 @@
-# This is a repo of tutorials for the Remix's LearnEth Plugin
+# Este es un repositorio de tutoriales para el complemento LearnEth de Remix
 
-### To use these tutorials:
+### Para usar estos tutoriales:
 
-**1. Open Remix**
+**1. Abra Remix**
 
 https://remix.ethereum.org
 
-**2. In the plugin manager activate LEARNETH**
+**2. En el administrador de complementos, activa LEARNETH**
 
-**3. Go to the Learneth plugin and these tutorials will load by default**
+**3. Ve al complemento Learneth y estos tutoriales se cargarán de forma predeterminada**
 
 **4. Es posible que tengas que iniciar sesión en Github, especialmente durante un taller en persona**
 
