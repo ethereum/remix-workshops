@@ -1,14 +1,14 @@
-In this tutorial, we'll explore the Uniswap V3 Swap contract to learn about how single-hop and multi-hop swaps work.
+En este tutorial, exploraremos el contrato Uniswap V3 Swap para aprender sobre cómo funcionan los swaps de un solo salto y varios saltos.
 
-But first, some Uniswap fundamentals.
+Pero primero, algunos fundamentos de Uniswap.
 
-## What is Uniswap?
+## ¿Qué es Uniswap?
 
-Uniswap is a decentralized cryptocurrency exchange. It allows users to exchange tokens without the need for a centralized intermediary. Uniswap is a key player in the decentralized finance (DeFi) space.
+Uniswap es un intercambio descentralizado de criptomonedas. Permite a los usuarios intercambiar tokens sin necesidad de un intermediario centralizado. Uniswap es un jugador clave en el espacio de las finanzas descentralizadas (DeFi).
 
-## How does Uniswap work?
+## ¿Cómo funciona Uniswap?
 
-Instead of using an order book like a traditional centralized exchange, Uniswap uses an automated market maker (AMM) model. In Uniswap, the AMM is a smart contract that holds reserves of tokens (Liquidity Pool). Users can trade between tokens in the Liquidity Pool. The price of each token is determined by the ratio of the reserves.
+En lugar de utilizar un libro de pedidos como un intercambio centralizado tradicional, Uniswap utiliza un modelo de creador de mercado automatizado (AMM). En Uniswap, el AMM es un contrato inteligente que tiene reservas de tokens (Liquidity Pool). Users can trade between tokens in the Liquidity Pool. The price of each token is determined by the ratio of the reserves.
 
 ### Step-by-step example of a Uniswap trade
 
