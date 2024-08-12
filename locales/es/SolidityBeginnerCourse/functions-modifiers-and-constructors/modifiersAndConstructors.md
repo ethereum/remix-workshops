@@ -26,14 +26,14 @@ El modificador "dirección válida" (línea 28) tiene un parámetro de tipo "dir
 
 Una función de constructor se ejecuta tras la creación de un contrato. Puedes usarlo para ejecutar el código de inicialización del contrato. El constructor puede tener parámetros y es especialmente útil cuando no se conocen ciertos valores de inicialización antes de la implementación del contrato.
 
-Declaras un constructor usando la palabra clave `constructor`. The constructor in this contract (line 11) sets the initial value of the owner variable upon the creation of the contract.
+Declaras un constructor usando la palabra clave `constructor`. El constructor de este contrato (línea 11) establece el valor inicial de la variable propietario en el momento de la creación del contrato.
 
-<a href="https://www.youtube.com/watch?v=b6FBWsz7VaI" target="_blank">Watch a video tutorial on Function Modifiers</a>.
+<a href="https://www.youtube.com/watch?v=b6FBWsz7VaI" target="_blank">Mira un vídeo tutorial sobre modificadores de funciones</a>.
 
-## ⭐️ Assignment
+## ⭐️ Asignación
 
-1. Create a new function, `increaseX` in the contract. The function should take an input parameter of type `uint` and increase the value of the variable `x` by the value of the input parameter.
-2. Make sure that x can only be increased.
-3. The body of the function `increaseX` should be empty.
+1. Crea una nueva función, "increaseX" en el contrato. La función debe tomar un parámetro de entrada de tipo `uint` y aumentar el valor de la variable `x` en el valor del parámetro de entrada.
+2. Asegúrese de que x solo se pueda aumentar.
+3. El cuerpo de la función "increaseX" debe estar vacío.
 
-Tip: Use modifiers.
+Consejo: Utilice modificadores.
