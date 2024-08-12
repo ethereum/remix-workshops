@@ -1,11 +1,11 @@
-Let's go back to our contract.
-Please make sure the `solidity compiler` and `Deploy & Run Transactions` are activated.
+Volvamos a nuestro contrato.
+Por favor, asegúrese de que el "compilador de Solidity" y "Despliegue y ejecute de transacciones" estén activados.
 
-Alternatively, you can click on `Solidity` from the `Home Page` **Environments** section.
+Alternativamente, puede hacer clic en `Solidity` en la sección `Página de inicio` **Entornos**.
 
-- Compile the contract from the `solidity compiler`.
-- Go to the `Deploy & Run Transactions` and make sure `SimpleStore` is selected contract.
-- In the textbox to the right of `Deploy`, input a positive integer.
-- Click on `Deploy`.
+- Compilar el contrato desde el "compilador de solidity".
+- Vaya a `Deploy & Run Transactions` y asegúrese de que `SimpleStore` esté seleccionado el contrato.
+- En el cuadro de texto a la derecha de "Desplegar", introduzca un entero positivo.
+- Haga clic en `Desplegar`.
 
-In the next step, we'll watch the deployment in the debugger.
+En el siguiente paso, veremos el despliegue en el depurador.
