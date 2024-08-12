@@ -4,27 +4,27 @@ Si, por ejemplo, un usuario quiere cambiar el token A por el token D, pero no ha
 
 ### Parámetros y valor de devolución
 
-On line 32, we define a function called `swapExactInputMultiHop`. This function executes a multi-hop swap. It takes the following parameters:
+En la línea 32, definimos una función llamada `swapExactInputMultiHop`. Esta función ejecuta un intercambio de varios saltos. Toma los siguientes parámetros:
 
-- **`bytes calldata path`**: Encoded information about the swap path (i.e., which tokens to swap through).
-- **`address tokenIn`**: The address of the token being sent.
-- **`uint amountIn`**: The amount of the input token being sent.
+- **`ruta de datos de llamada de bytes`**: información codificada sobre la ruta de intercambio (es decir, a través de qué tokens intercambiar).
+- **`address tokenIn`**: La dirección del token que se está enviando.
+- **`uint amountIn`**: La cantidad del token de entrada que se envía.
 
-It returns a `uint` called `amountOut`, which is the amount of the output token that was received.
+Devuelve un `uint` llamado `amountOut`, que es la cantidad del token de salida que se recibió.
 
-### Function Body
+### Cuerpo de función
 
-In the function body, we first transfer the input token from the sender to our contract, line 38.
-Then, we approve the Uniswap Swap router to spend the input token on our behalf, line 41.
+En el cuerpo de la función, primero transferimos el token de entrada del remitente a nuestro contrato, línea 38.
+Luego, aprobamos el enrutador Uniswap Swap para gastar el token de entrada en nuestro nombre, línea 41.
 
-On line 43, we create an instance of the `ExactInputParams` struct, line 73. This struct contains the parameters that are required for our `exactInput` function on line 81, which will execute the multi-hop swap.
+En la línea 43, creamos una instancia de la estructura "ExactInputParams", línea 73. Esta estructura contiene los parámetros necesarios para nuestra función "exactInput" en la línea 81, que ejecutará el intercambio de varios saltos.
 
-We set the parameters of the struct as follows:
+Estapuemos los parámetros de la estructura de la siguiente manera:
 
-- **`path`**: We set this to the `path` parameter of our function.
-- **`recipient`**: We set this to the sender of the transaction.
-- **`deadline`**: We set this to the current timestamp. We do this because we want the transaction to be processed as soon as possible.
-- **`amountIn`**: We set this to the `amountIn` parameter of our function.
-- **`amountOutMinimum`**: We set this to 0 because we do not want to specify a minimum amount of the output token that we are willing to accept.
+- **`ruta`**: Establamos esto en el parámetro `ruta` de nuestra función.
+- **`destinatario`**: Lo establecemos en el remitente de la transacción.
+- **`fecha límite`**: Estamos esto en la marca de tiempo actual. Hacemos esto porque queremos que la transacción se procese lo antes posible.
+- **`amountIn`**: Establecimos esto en el parámetro `amountIn` de nuestra función.
+- **`amountOutMinimum`**: Establemos esto en 0 porque no queremos especificar una cantidad mínima del token de salida que estamos dispuestos a aceptar.
 
-On line 53, we execute the multi-hop swap by calling the `exactInput` function. This function returns the amount of the output token that was received.
+En la línea 53, ejecutamos el intercambio de varios saltos llamando a la función "exactInput". Esta función devuelve la cantidad del token de salida que se recibió.
