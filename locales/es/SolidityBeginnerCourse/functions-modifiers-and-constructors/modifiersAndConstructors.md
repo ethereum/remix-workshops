@@ -1,26 +1,26 @@
-In this section, we will learn how to modify the behavior of a function and how to run contract initialization code.
+En esta sección, aprenderemos cómo modificar el comportamiento de una función y cómo ejecutar el código de inicialización del contrato.
 
-### Function Modifier
+### Función Modificar
 
-_Function Modifiers_ are used to change the behavior of a function. For example, they often check for a condition prior to executing a function to restrict access or validate inputs.
+_Los modificadores de función_ se utilizan para cambiar el comportamiento de una función. Por ejemplo, a menudo comprueban una condición antes de ejecutar una función para restringir el acceso o validar las entradas.
 
-This first part of this contract is about changing ownership of a contract. Ownership in this contract is expressed by the value of the state variable `owner` that is of the type `address` (line 7).
+Esta primera parte de este contrato trata de cambiar la propiedad de un contrato. La propiedad de este contrato se expresa por el valor de la variable de estado "propietario" que es del tipo "dirección" (línea 7).
 
-The function `changeOwner` (line 33) can change this ownership. It takes an input parameter of the type `address` and assigns its value to the state variable `owner`.
+La función "cambio de propietario" (línea 33) puede cambiar esta propiedad. Toma un parámetro de entrada del tipo "dirección" y asigna su valor a la variable de estado "propietario".
 
-However, this function cannot simply be executed under all conditions; it has two modifiers, `onlyOwner` and `validAddress`.
+Sin embargo, esta función no se puede ejecutar simplemente en todas las condiciones; tiene dos modificadores, "onlyOwner" y "validAddress".
 
-Let's look at `onlyOwner` first (line 18).
-Function modifiers are defined with the `modifier` keyword and a unique name; they can also have parameters.
+Echemos un vistazo a "onlyOwner" primero (línea 18).
+Los modificadores de funciones se definen con la palabra clave "modificador" y un nombre único; también pueden tener parámetros.
 
-The underscore `_` (line 23) is used inside modifiers to represent the rest of the code that will be executed in the body of the modified function.
-The code you place before the underscore in the modifier will be executed before the code in the body of the modified function. The code after the underscore will be executed after the code in the body of the modified function.
+El guión bajo `_` (línea 23) se utiliza dentro de los modificadores para representar el resto del código que se ejecutará en el cuerpo de la función modificada.
+El código que coloque antes del guión bajo en el modificador se ejecutará antes del código en el cuerpo de la función modificada. El código después del guión bajo se ejecutará después del código en el cuerpo de la función modificada.
 
-In this case, the `require` function (line 19) checks if the address executing the contract is the same as the value stored in the variable `owner`. If it is, the rest of the code will be executed, otherwise it will throw an error.
+En este caso, la función "requiere" (línea 19) comprueba si la dirección que ejecuta el contrato es la misma que el valor almacenado en la variable "propietario". Si lo es, el resto del código se ejecutará, de lo contrario se generará un error.
 
-You can learn more about `assert` and `require` in the <a href="https://docs.soliditylang.org/en/latest/control-structures.html#error-handling-assert-require-revert-and-exceptions" target="_blank">Solidity documentation</a>, they are used to check for conditions and throw errors if they are not met.
+Puede obtener más información sobre "afirmar" y "requerir" en la <a href="https://docs.soliditylang.org/en/latest/control-structures.html#error-handling-assert-require-revert-and-exceptions" target="_blank">documentación de solidity</a>, se utilizan para comprobar las condiciones y lanzar errores si no se cumplen.
 
-The `validAddress` modifier (line 28) has a parameter of type `address` and checks if the provided address is valid. If it is, it continues to execute the code.
+El modificador "dirección válida" (línea 28) tiene un parámetro de tipo "dirección" y comprueba si la dirección proporcionada es válida. Si lo es, continúa ejecutando el código.
 
 ### Constructor
 
