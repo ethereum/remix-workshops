@@ -6,15 +6,15 @@ Tenemos nuevos modificadores en esta iteración del contrato. Examinémoslos uno
 
 1. **Modificador `txExists`:** (Línea 13) asegura que la transacción exista. Para ello, comprueba si el índice de transacciones es menor que la longitud de la matriz `transacciones`. Hablaremos más sobre este modificador más adelante en esta sección.
 2. **Modificador `notExecuted`:** (Línea 18) asegura que la transacción no haya sido ejecutada. Hace esto verificando si la variable `executed` de la transacción es falsa.
-3. **Modificador `notConfirmed`:** (línea 23) asegura que la transacción no ha sido confirmada por el invocaaador. Hace esto comprobando si el mapeo `isConfirmed` del índice de transacción y la dirección de la persona que llama es falso.
+3. **Modificador `notConfirmed`:** (línea 23) asegura que la transacción no ha sido confirmada por el invocaaador. Hace esto comprobando si el mapeo `isConfirmed` del índice de transacción y la dirección del invocador es falso.
 
 ## Estructura de la Transacción
 
-En línea 28, tenemos una estructura llamada `Transaction`. Almacenamos a los miembros de la estructura: `to`, `value`, `data`, `executed`, y `numConfirmations` en variables individuales.
+En línea 28, tenemos una estructura llamada `Transaction`. Almacenamos a los miembros de la estructura: `to`, `value`, `data`, `executed` y `numConfirmations` en variables individuales.
 
-## Mapeo de confirmaciones
+## Mapeo de Confirmaciones
 
-On line 37, we have a mapping called `isConfirmed`. Este mapeo se utiliza para hacer un seguimiento de las confirmaciones de cada transacción. Asigna el índice de la transacción a un mapeo de una dirección de propietario a un valor booleano. El valor booleano indica si este dueño ha confirmado la transacción.
+En la línea 37, tenemos un mapeo llamado `isConfirmed`. Este mapeo se utiliza para hacer un seguimiento de las confirmaciones de cada transacción. Asigna el índice de la transacción a un mapeo de una dirección de propietario a un valor booleano. El valor booleano indica si este dueño ha confirmado la transacción.
 
 ## Conjunti de transacciones
 
