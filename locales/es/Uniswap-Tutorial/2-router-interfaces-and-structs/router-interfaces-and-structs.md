@@ -25,17 +25,17 @@ En la línea 25, definimos una estructura llamada "ExactInputSingleParams". Esta
 - **`address tokenOut`**: La dirección del token que se recibe.
 - **`tarifa uint24`**: La tarifa asociada con el intercambio.
 - **`destinatario de la dirección`**: La dirección que recibirá el token de salida.
-- **`uint deadline`**: A timestamp by which the transaction must be processed, for time-limiting the swap.
-- **`uint amountIn`**: The amount of the input token being sent.
-- **`uint amountOutMinimum`**: The minimum amount of the output token that the sender is willing to accept, to protect against unfavorable price movements.
-- **`uint160 sqrtPriceLimitX96`**: A limit on the price, represented in a specific format, to prevent the swap from occurring at unfavorable prices.
+- **`uint deadline`**: Una marca de tiempo con la que se debe procesar la transacción, para limitar el tiempo de la operación.
+- **`uint amountIn`**: La cantidad del token de entrada que se envía.
+- **`uint amountOutMinimum`**: La cantidad mínima del token de salida que el remitente está dispuesto a aceptar, para proteger contra los movimientos de precios desfavorables.
+- **`uint160 sqrtPriceLimitX96`**: Un límite en el precio, representado en un formato específico, para evitar que el intercambio se produzca a precios desfavorables.
 
 ## exactInput
 
-On line 25, we define a struct called `ExactInputParams`. This struct defines the parameters that are required for our `exactInput` function on line 33. This function will execute a multi-hop swap. The struct has the following parameters:
+En la línea 25, definimos una estructura llamada "ExactInputParams". Esta estructura define los parámetros necesarios para nuestra función "exactInput" en la línea 33. Esta función ejecutará un intercambio de varios saltos. La estructura tiene los siguientes parámetros:
 
-- **`bytes path`**: Encoded information about the swap path (i.e., which tokens to swap through).
-- **`address recipient`**: The address receiving the output tokens.
-- **`uint deadline`**: Similar to above, a timestamp by which the transaction must be processed.
-- **`uint amountIn`**: The amount of the input token.
-- **`uint amountOutMinimum`**: The minimum amount of the output token the sender expects to receive.
+- **`ruta de bytes`**: Información codificada sobre la ruta de intercambio (es decir, a través de qué tokens intercambiar).
+- **`receptor de la dirección`**: La dirección que recibe los tokens de salida.
+- **`fecha límite`**: Similar a la anterior, una marca de tiempo con la que se debe procesar la transacción.
+- **`uint amountIn`**: La cantidad del token de entrada.
+- **`uint amountOutMinimum`**: La cantidad mínima del token de salida que el remitente espera recibir.
