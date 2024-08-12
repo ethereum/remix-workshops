@@ -1,33 +1,33 @@
-The goal here is to store the code in the blockchain. The EVM needs to tell the client (geth, parity) which what part of the **Call Data** to store.   In this step, we are saving the contract MINUS its constructor (because that gets inplmented only 1 time) and MINUS the input parameter does not need to be stored.
+El objetivo aquí es almacenar el código en la cadena de bloques. El EVM necesita decirle al cliente (geth, paridad) qué parte de los **datos de llamada** almacenar.   En este paso, estamos guardando el contrato MINUS su constructor (porque eso se inplmente solo 1 vez) y MINUS el parámetro de entrada no necesita ser almacenado.
 
-`CODECOPY` is the first step: it copies the bytecode to memory, then the ethereum client will be able to consume it.  MUNCH!
+`CODECOPY` es el primer paso: copia el código de bytes a la memoria, luego el cliente de ethereum podrá consumirlo.  MUNCH!
 
-But wait... before the client can **MUNCH**  bytecode, it needs an instruction - an opcode to tell it to MUNCH. `RETURN` is this opcode!
+Pero espera... antes de que el cliente pueda **MUNCH** bytecode, necesita una instrucción: un opcode para decirle a MUNCH. ¡`RETURN` es este código!
 
-As stated in the general spec, at the end of the contract creation, the client (geth, parity) takes the targeted value by the opcode `RETURN` and **persists** it by making it part of the deployed bytecode.
+Como se indica en la especificación general, al final de la creación del contrato, el cliente (geth, paridad) toma el valor objetivo por el código de operación `RETURN` y **lo persiste** haciéndolo parte del código de bytes desplegado.
 
-Once you are in the `CODECOPY`, look at the top 3 items in the **Stack**:
+Una vez que estés en el `CODECOPY`, mira los 3 elementos principales de la **pila**:
 
 `0: 0x0000000000000000000000000000000000000000000000000000000000000000`
 `1: 0x0000000000000000000000000000000000000000000000000000000000000055`
 `2: 0x000000000000000000000000000000000000000000000000000000000000003e`
 
-_In your Stack - `1` & `2` may be slightly different.  The difference may be due to a different compiler version._
+\*En tu pila, `1` y `2` pueden ser ligeramente diferentes.  La diferencia puede deberse a una versión de compilador diferente. \*
 
-**These are the parameters for `CODECOPY`.**
+\*\*Estos son los parámetros para `CODECOPY`. \*\*
 
-Remember: _codecopy(t, f, s)_ - copy **s** bytes from code at position **f** to memory at position **t**
+Recuerde: _codecopy(t, f, s)_ - copie **s** bytes del código en la posición **f** a la memoria en la posición **t**
 
-`0` is the offset where the copied code should be placed in the **memory**. In this example, ( all zeros) the code is copied to the beginning of the memory. (**t**)
-`1` is the offset in **calldata** where to copy from (**f**)
-`2` number of bytes to copy - (**s**)
+`0` es el desplazamiento en el que el código copiado debe colocarse en la **memoria**. En este ejemplo, (todos los ceros) el código se copia al principio de la memoria. (**T**)
+`1` es el desplazamiento en **calldata** desde donde copiar (**f**)
+`2` número de bytes para copiar - (**s**)
 
-After `CODECOPY` is executed, (click the _step into_ button) the copied code should be:
-`0x6080604052600080fdfea265627a7a7231582029bb0975555a15a155e2cf28e025c8d492f0613bfb5cbf96399f6dbd4ea6fc9164736f6c63430005110032` in memory.  **I'll refer to this value as (X)**.
+Después de ejecutar `CODECOPY`, (haga clic en el botón _entrar en_) el código copiado debe ser:
+`0x6080604052600080fdfea265627a7a7231582029bb0975555a15a155e2cf28e025c8d492f0613bfb5cbf96399f6dbd4ea6fc9164736f6c63430005110032` en memoria.  **Me referiré a este valor como (X)**.
 
-Let's look at the debugger's **Memory** panel.
-The 0x number I gave above is not what you will see in the **Memory** panel -what you will see is this:
-0x0: 6080604052600080fdfea265627a7a72 ????R??????ebzzr
+Echemos un vistazo al panel **Memoria** del depurador.
+El número 0x que di arriba no es lo que verás en el panel **Memoria** - lo que verás es esto:
+0x0: 6080604052600080fdfea265627a7a72 ???? R?????? Ebzzr
 0x10: 31582029bb0975555a15a155e2cf28e0 1X ?? uUZ??U????
 0x20: 25c8d492f0613bfb5cbf96399f6dbd4e ?????a?????9?m?N
 0x30: a6fc9164736f6c634300051100320000 ???dsolcC????2??
@@ -38,7 +38,7 @@ The 0x number I gave above is not what you will see in the **Memory** panel -wha
 0x80: 00000000000000000000000000000000 ????????????????
 0x90: 00000000000000000000000000000002 ????????????????
 
-The `0x0`, `0x10`, etc is the position. The next number is the bytecode for that position.  A esto le siguen signos de interrogación y letras y números aparentemente aleatorios.  Este es el intento de **Remix** de convertir esto en una cadena.
+El `0x0`, `0x10`, etc. es la posición. El siguiente número es el código de bytes para esa posición.  A esto le siguen signos de interrogación y letras y números aparentemente aleatorios.  Este es el intento de **Remix** de convertir esto en una cadena.
 
 Así que si pegamos las primeras cuatro secciones del código de bytes, obtendremos:**0x6080604052600080fdfea265627a7a7231582029bb0975555a15a155e2cf28e0a6fc9164736f6c63430005110032** La última sección - `0x90` tiene 2, que es lo que ingreso para el parámetro de constructores.
 
