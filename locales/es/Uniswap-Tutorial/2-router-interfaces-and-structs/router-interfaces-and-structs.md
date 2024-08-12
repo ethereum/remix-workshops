@@ -5,26 +5,26 @@ This section explores the `ISwapRouter` interface, which defines the functions t
 Single-hop swaps allow users to exchange one token for another directly within a liquidity pool.
 Multi-hop swaps allow users to exchange one token for another by routing through multiple tokens.
 
-Interfaces in Solidity specify functions that must be included in a contract that inherits them.  They are useful for declaring what functions be supported and allow for easier integration and interaction between different contracts.
+Interfaces in Solidity specify functions that must be included in a contract that inherits them.  Son útiles para declarar qué funciones son compatibles y permiten una integración e interacción más fáciles entre los diferentes contratos.
 
-Structs are used to define custom data types.
+Las estructuras se utilizan para definir tipos de datos personalizados.
 
-## ISwapRouter Interface
+## ISwapRouter Interfaz
 
-The ISwapRouter interface defines the functions that can be called on the Uniswap Swap contract. We will need to use this interface to interact with the Uniswap Swap contract and execute swaps.
+La interfaz ISwapRouter define las funciones que se pueden llamar en el contrato de intercambio de Uniswap. Tendremos que usar esta interfaz para interactuar con el contrato de intercambio de Uniswap y ejecutar swaps.
 
-On line 5, we define a constant variable called `router` that is of type `ISwapRouter`. We set the value of this variable to the interface instance of a smart contract that is deployed at the address `0xE592427A0AEce92De3Edee1F18E0157C05861564`. This is the address of the Uniswap V3 Swap contract on the Ethereum mainnet.
+En la línea 5, definimos una variable constante llamada `router` que es del tipo `ISwapRouter`. Establecemos el valor de esta variable en la instancia de interfaz de un contrato inteligente que se implementa en la dirección `0xE592427A0AEce92De3Edee1F18E0157C05861564`. Esta es la dirección del contrato Uniswap V3 Swap en la red principal de Ethereum.
 
-On line 9, we define an interface called `ISwapRouter`. This interface defines two functions: `exactInputSingle` and `exactInput`.
+En la línea 9, definimos una interfaz llamada "ISwapRouter". Esta interfaz define dos funciones: `exactInputSingle` y `exactInput`.
 
 ## exactInputSingle
 
-On line 25, we define a struct called `ExactInputSingleParams`. This struct defines the parameters that are required for our exactInputSingle function on line 21, which will execute a single-hop swap. The struct has the following parameters:
+En la línea 25, definimos una estructura llamada "ExactInputSingleParams". Esta estructura define los parámetros que se requieren para nuestra función exactInputSingle en la línea 21, que ejecutará un intercambio de un solo salto. La estructura tiene los siguientes parámetros:
 
-- **`address tokenIn`**: The address of the token being sent.
-- **`address tokenOut`**: The address of the token being received.
-- **`uint24 fee`**: The fee associated with the swap.
-- **`address recipient`**: The address that will receive the output token.
+- **`dirección tokenIn`**: La dirección del token que se está enviando.
+- **`address tokenOut`**: La dirección del token que se recibe.
+- **`tarifa uint24`**: La tarifa asociada con el intercambio.
+- **`destinatario de la dirección`**: La dirección que recibirá el token de salida.
 - **`uint deadline`**: A timestamp by which the transaction must be processed, for time-limiting the swap.
 - **`uint amountIn`**: The amount of the input token being sent.
 - **`uint amountOutMinimum`**: The minimum amount of the output token that the sender is willing to accept, to protect against unfavorable price movements.
