@@ -1,19 +1,18 @@
-# Check out some links for more info
+# Echa un vistazo a algunos enlaces para obtener más información
 
-- ERC DelegateProxy
-  https://github.com/ethereum/EIPs/pull/897
+- Proxy de delegado de ERChttps://github.com/ethereum/EIPs/pull/897
 
-- The joint post by Zeppelin Solutions and Aragon.
+- La publicación conjunta de Zeppelin Solutions y Aragon.
   https://blog.openzeppelin.com/proxy-libraries-in-solidity-79fbe4b970fd/
 
-- Proxy Patterns by OpenZeppelin
-  https://blog.openzeppelin.com/proxy-patterns/
+- Patrones de proxy de OpenZeppelin
+  Https://blog.openzeppelin.com/proxy-patterns/
 
-- The most mature implementation of Proxy pattern is The Unstructure Storage pattern that is released as part of ZeppelinOS
+- La implementación más madura del patrón Proxy es el patrón de almacenamiento no estructurado que se lanza como parte de ZeppelinOS
   https://blog.openzeppelin.com/upgradeability-using-unstructured-storage/
 
-- Great blog post by Jack Tanner
+- Gran publicación de blog de Jack Tanner
   https://blog.indorse.io/ethereum-upgradeable-smart-contract-strategies-456350d0557c
 
-- Upgradeable Ethereum Smart Contracts
+- Contratos inteligentes de Ethereum actualizables
   https://medium.com/@daonomic/upgradeable-ethereum-smart-contracts-d036cb373d6
