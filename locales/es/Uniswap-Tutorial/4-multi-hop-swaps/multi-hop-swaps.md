@@ -1,8 +1,8 @@
-In this section, we'll delve into the `swapExactInputMultiHop` function in the `UniswapV3SwapExamples` contract. This function enables more complex token swaps by allowing users to specify a custom path through multiple liquidity pools.
+En esta sección, profundizaremos en la función `swapExactInputMultiHop` en el contrato `UniswapV3SwapExamples`. Esta función permite intercambios de tokens más complejos al permitir a los usuarios especificar una ruta personalizada a través de múltiples grupos de liquidez.
 
-If for example, a user wants to swap token A for token D, but there is no direct liquidity pool for A and D, the user can specify a path through multiple tokens. For example, the user can swap A for B, then B for C, and finally C for D. This is of course automatically done by the Uniswap V3 Swap contract.
+Si, por ejemplo, un usuario quiere cambiar el token A por el token D, pero no hay un fondo de liquidez directo para A y D, el usuario puede especificar una ruta a través de varios tokens. Por ejemplo, el usuario puede cambiar A por B, luego B por C y, finalmente, C por D. Por supuesto, esto se hace automáticamente mediante el contrato de intercambio V3 de Uniswap.
 
-### Parameters and Return Value
+### Parámetros y valor de devolución
 
 On line 32, we define a function called `swapExactInputMultiHop`. This function executes a multi-hop swap. It takes the following parameters:
 
