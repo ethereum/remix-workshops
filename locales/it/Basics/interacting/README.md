@@ -1,7 +1,7 @@
 ## Accessing functions in a deployed contract
 
 1. When a contract has been successfully deployed, it will appear at the bottom of the Deploy and Run plugin. Open up the contract by clicking the caret - so the caret points down.
-   ![deploy contract](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interacting/images/instance.png "deployed contract")
+   ![distribuisci il contratto](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interacting/images/instance.png "contratto distribuito")
 
 2. There are 2 functions in this contract.  To input the parameters individually, clicking the caret to the right of changeOwner (outlined in red below). In the expanded view, each parameter has its own input box.
 
