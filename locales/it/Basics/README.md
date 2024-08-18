@@ -1,3 +1,3 @@
-## Loading, Compiling, Deploying
+## Caricare, Compilare, Distribuire
 
 This beginner level tutorial introduces Remix's interface and concepts used in Ethereum.
