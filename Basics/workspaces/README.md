@@ -1,23 +1,23 @@
-## Workspaces help organize your separate projects.
+## 工作区用于分离您的项目
 
-If this is your first time to Remix, a Workspace named **default_workspace** is loaded in the File Explorer.
+如果您是第一次使用 Remix，文件资源管理器中会加载一个名为**default_workspace**的工作区。
 
-![](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/default_workspace.png)
+在文件资源管理器顶部，单击\*\*+\*\*图标以创建新的工作区。
 
-The **default_workspace** has three Solidity (.sol) files in the contracts folder. Remix has a number of other tempates.  When you load a template, it goes into a Workspace.  To go between Workspaces, use the select box at the top of the File Explorer.
+**default_workspace** 的contracts 文件夹中有三个Solidity (.sol) 文件。 Remix 还有许多其他模板。  当您加载模板时，它会进入工作区。  要在工作区之间切换，请使用文件资源管理器顶部的选择框。
 
-![](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/select-box.png)
+当单击展开菜单（位于文件资源管理器右上角）时，会显示出工作区管理工具。
 
-But Workspaces are not only for templates.  When cloning a repo into Remix, the files will be put into a Workspace. 
+但工作区不仅仅适用于模板。  将克隆仓库到 Remix 时，文件将被放入工作区中。
 
-Let's create a new Workspace
+让我们创建一个新的工作区
 
-1. At the top of the File Explorer, click the hamburger icon (the 3 horizontal lines). Read through the commands and tools in this menu. 
+1. 在文件资源管理器顶部，单击汉堡包图标（3 条水平线）。 仔细阅读此菜单中的命令和工具。
 
-2. Select **+ Create** (the first choice).
+2. 选择 **+ 创建** (第一个选项)。
 
-3. In the modal the comes up, choose one of the templates. 
+3. 在弹出的对话框中，选择其中一个模板。
 
-![hamburger](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/workspaces/images/popup.png)
+![hamburger](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/workspaces/images/workspace-man.png "hamburger")
 
-Notice that in this popup menu, you can clone a repo.  Managing a Git repo happens in the DGit plugin.  You can also create Github actions with the thre workflow choices in the popup menu.
+请注意，在此弹出菜单中，您可以克隆一个repo。  请注意，在此弹出菜单中，您可以克隆一个repo。Git repo的管理发生在 DGit 插件中。您还可以使用工作流程选项创建 Github 操作。  您还可以使用弹出菜单中的三个工作流程选项创建 Github actions。

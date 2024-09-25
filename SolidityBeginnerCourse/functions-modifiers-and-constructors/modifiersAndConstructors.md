@@ -1,36 +1,39 @@
-In this section, we will learn how to modify the behavior of a function and how to run contract initialization code. 
+在本节中，我们将学习如何修改函数的行为以及如何运行合约初始化代码。
 
-### Function Modifier
-*Function Modifiers* are used to change the behavior of a function. For example, they often check for a condition prior to executing a function to restrict access or validate inputs.
+### 函数修饰符
 
-This first part of this contract is about changing ownership of a contract. Ownership in this contract is expressed by the value of the state variable `owner` that is of the type `address` (line 7).
+_函数修饰符_ 用于更改函数的行为。 例如，他们经常在执行限制访问或验证输入的函数之前检查条件。
+
+这个合约的第一部分是关于更改合约所有权。该合约中的所有权由类型为`address`（第7行）的状态变量`owner`表示。 `changeOwner`函数（第33行）可以更改此所有权。它接受一个`address`类型的输入参数，并将其值分配给状态变量`owner`。
 
 The function `changeOwner` (line 33) can change this ownership. It takes an input parameter of the type `address` and assigns its value to the state variable `owner`.
 
 However, this function cannot simply be executed under all conditions; it has two modifiers, `onlyOwner` and `validAddress`.
 
-Let's look at `onlyOwner` first (line 18). 
-Function modifiers are defined with the `modifier` keyword and a unique name; they can also have parameters. 
+让我们先来看看`onlyOwner` (第18行)。
+函数修饰符是用`modifier`关键字和唯一的名称定义的；它们也可以有参数。
 
-The underscore `_` (line 23) is used inside modifiers to represent the rest of the code that will be executed in the body of the modified function.
-The code you place before the underscore in the modifier will be executed before the code in the body of the modified function. The code after the underscore will be executed after the code in the body of the modified function.
+下划线 `_`（第 23 行）在修饰符内部使用，表示将在修改后的函数体内执行的其余代码。
+您放置在修饰符中下划线之前的代码将在被修饰函数主体中的代码之前执行。 下划线后面的代码将在被修饰函数体中的代码之后执行。
 
-In this case, the `require` function (line 19) checks if the address executing the contract is the same as the value stored in the variable `owner`. If it is, the rest of the code will be executed, otherwise it will throw an error. 
+在这种情况下，`require`函数（第19行）检查正在执行合约的地址是否与存储在变量`owner`中的值相同。如果相同，则会继续执行其余部分，否则会抛出错误。 如果相同，则会继续执行其余部分，否则会抛出错误。
 
-You can learn more about `assert` and `require` in the <a href="https://docs.soliditylang.org/en/latest/control-structures.html#error-handling-assert-require-revert-and-exceptions" target="_blank">Solidity documentation</a>, they are used to check for conditions and throw errors if they are not met. 
+您可以通过 <a href="https://docs.soliditylang.org/en/latest/control-structures.html#error-handling-assert-require-revert-and-exceptions" target="_blank">Solidity文档</a>了解更多关于`assert`和`require`的信息，它们用于检查条件并在不满足时抛出错误。
 
-The `validAddress` modifier (line 28) has a parameter of type `address` and checks if the provided address is valid. If it is, it continues to execute the code.
+`validAddress` 修饰符（第28行）具有`address`类型的参数，并检查提供的地址是否有效。如果有效，则继续执行代码。 如果有效，则继续执行代码。
 
-### Constructor
-A constructor function is executed upon the creation of a contract. You can use it to run contract initialization code. The constructor can have parameters and is especially useful when you don't know certain initialization values before the deployment of the contract. 
+### 构造函数
 
-You declare a constructor using the `constructor` keyword. The constructor in this contract (line 11) sets the initial value of the owner variable upon the creation of the contract.
+函数修饰符用于改变函数的行为。例如，它们经常在执行函数之前检查条件以限制访问或验证输入。 您可以使用它来运行合约初始化代码。 构造函数是在合约创建时执行的。您可以使用它来运行合约初始化代码。构造函数可以有参数，在部署合约之前不知道某些初始化值时特别有用。
 
-<a href="https://www.youtube.com/watch?v=b6FBWsz7VaI" target="_blank">Watch a video tutorial on Function Modifiers</a>.
+您可以使用`constructor`关键字声明一个构造函数。 您可以使用`constructor`关键字声明一个构造函数。该合约中的构造函数（第11行）设置了在创建合约时 `owner` 变量的初始值。
 
-## ⭐️ Assignment
-1. Create a new function, `increaseX` in the contract. The function should take an input parameter of type `uint` and increase the value of the variable `x` by the value of the input parameter.
-2. Make sure that x can only be increased.
-3. The body of the function `increaseX` should be empty.
+<a href="https://www.youtube.com/watch?v=b6FBWsz7VaI" target="_blank">观看关于函数修饰符的视频教程</a>.
 
-Tip: Use modifiers.
+## ⭐️ 作业
+
+1. 在该合约中创建一个名为 `increaseX` 的新函数。 在该合约中创建一个名为 `increaseX` 的新函数。该函数应接受 `uint` 类型的输入参数，并将变量 `x` 的值增加输入参数的值。
+2. 确保只能增加 x 的值。
+3. `increaseX`函数体应为空。
+
+提示：使用修饰符。

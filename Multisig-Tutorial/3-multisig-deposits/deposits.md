@@ -1,29 +1,34 @@
-In this section, we'll explore the `receive` function and the associated Deposit event. We'll examine how the `receive` function is used to deposit Ether into the multi-signature wallet and how the Deposit event provides transparency.
+在本节中，我们将探讨`receive`函数和相关的存款事件。 我们将研究如何使用`receive `函数将以太币存入多重签名钱包，以及存款事件如何提供透明度。
 
-## Deposit Event
-On line, 9 we have the Deposit event. The Deposit event is emitted whenever Ether is deposited into the multi-signature wallet. It includes three parameters:
-1. `sender`: The address that sent the Ether.
-2. `amount`: The amount of Ether deposited.
-3. `balance`: The updated balance of the contract after the deposit.
+## 存款事件
 
-We can use the Deposit event to track the flow of Ether into the multi-signature wallet and maybe trigger other actions based on the event.
+在第 9 行，我们有存款事件。 每当以太币存入多重签名钱包时，就会发出存款事件。 它包括三个参数：
 
-## receive Function
-On line 43, we have the `receive` function. The `receive` function is a special function that is executed whenever Ether is sent to the contract. 
+1. `sender`：发送以太币的地址。
+2. `amount`：存入的以太币数量。
+3. `balance`：入金后合约更新后的余额。
 
-The `receive` function is marked as `external` and `payable`. The `external` modifier means that the function can only be called from outside the contract. The `payable` modifier means that the function can receive Ether.
+我们可以使用存款事件来跟踪进入多重签名钱包的以太币流量，并可能根据该事件触发其他操作。
 
-The `receive` function emits the Deposit event (Line 44) with the address of the sender, the amount of Ether sent, and the updated balance of the contract. It doesn't return anything.
+## receive 函数
 
-To receive Ether, a contract must have a `receive`, `fallback`, or a function with the `payable` modifier. If none of these are present, the contract will reject any Ether sent to it. 
+第 43 行，我们有`receive`函数。 `receive`函数是一个特殊函数，每当以太币发送到合约时就会执行。
 
-## Conclusion
-In this section, we explored the `receive` function and the associated Deposit event. We examined how the `receive` function is used to deposit Ether into the multi-signature wallet and how the Deposit event provides transparency.
+`receive`函数被标记为`external`和`payable`。 `external`修饰符意味着该函数只能从合约外部调用。 `payable`修饰符意味着该函数可以接收以太币。
 
-## ⭐️ Assignment: Deposit Ether
-Deposit 2 Ether into the Multisig contract.
+`receive`函数发出 Deposit 事件（第 44 行），其中包含发送者的地址、发送的以太币数量以及更新后的合约余额。 它不返回任何内容。
 
-1. Deploy the Multisig contract as in the previous assignment.
-2. Enter a Value of 2 Ether in the Value field and select Ether in the dropdown menu.
-3. At the bottom of your deployed contract in the "Low level interactions" section, click on the "Transact" button.
-4. On top of your deployed contract, it should now say "Balance: 2 Ether". 
+要接收以太币，合约必须具有`receive`、`fallback`或带有`payable`修饰符的函数。 如果这些都不存在，合约将拒绝发送给它的任何以太币。
+
+## 结论
+
+在本节中，我们探讨了`receive函数和相关的存款事件。 我们研究了如何使用`receive\`函数将以太币存入多重签名钱包，以及存款事件如何提供透明度。
+
+## ⭐ 作业: 存入以太币
+
+将 2 个以太币存入多重签名合约。
+
+1. 按照之前的任务部署多重签名合约。
+2. 在值字段中输入 2 Ether 的值，然后在下拉菜单中选择 Ether。
+3. 在已部署合约底部的”低级交互”部分中，单击“交易”按钮。
+4. 在您部署的合约之上，现在应该显示“余额：2 以太币”。

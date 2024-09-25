@@ -1,18 +1,18 @@
-# The Opcode RETURN
+# 字节码RETURN
 
-At the end of the last chapter we had moved to one step after **CODECOPY** to see what happened in the memory.
+在上一章的结尾，我们已经移动到**CODECOPY**之后的一个步骤，以查看内存中发生了什么。
 
-Now that CODECOPY has been executed, we are on the opcode `PUSH1 00`.  
+现在CODECOPY已经执行完毕，我们处于操作码`PUSH1 00`。
 
-`PUSH1 00` prepares the stack for the `RETURN` opcode.
-`RETURN` is the last part of this process.  It is where the code is returned to the client. 
+`PUSH1 00`为`RETURN`操作码准备了堆栈。`RETURN`是这个过程的最后部分。它将代码返回给客户端。
+`RETURN`是这个过程的最后部分。  它将代码返回给客户端。
 
-We push `00` to the stack because this is the offset position of the contract bytecode in memory.
+我们将`00`推入堆栈，因为这是合约字节码在内存中的偏移位置。
 
-Now we can call the all important `RETURN` opcode.  
+现在我们可以调用非常重要的`RETURN`操作码了。
 
-The **stack inspector** shows:
+**stack inspector** 显示:
 `0: 0x0000000000000000000000000000000000000000000000000000000000000000`
 `1: 0x000000000000000000000000000000000000000000000000000000000000003e`
 
-Which is to say it returns to the client the bytecode starting `0x00` with length `0x3e`.
+也就是说它把从`0x00`开始长度为`0x3e`的字节码返回给客户端。

@@ -1,32 +1,37 @@
-The `visibility` specifier is used to control who has access to functions and state variables.
+可见性修饰符用于控制谁可以访问函数和状态变量。
 
-There are four types of visibilities: `external`, `public`, `internal`, and `private`. 
+有四种类型的可见性：`external`、`public`、`internal`和`private`。
 
-They regulate if functions and state variables can be called from inside the contract, from contracts that derive from the contract (child contracts), or from other contracts and transactions.
+它们规定了函数和状态变量是否可以在合约内部调用，从继承自该合约的合约（子合约）中调用，或者从其他合约和交易中调用。
 
 ### private
-- Can be called from inside the contract
+
+- 可以在当前合约内部被调用
 
 ### internal
-- Can be called from inside the contract
-- Can be called from a child contract
+
+- 可以在当前合约内部被调用
+- 可以从子合约调用
 
 ### public
-- Can be called from inside the contract
-- Can be called from a child contract
-- Can be called from other contracts or transactions
+
+- 只能在当前合约内部被调用
+- 可以在子合约中被调用
+- 可以从其他合约或交易中调用
 
 ### external
-- Can be called from other contracts or transactions
-- State variables can not be `external`
 
-In this example, we have two contracts, the `Base` contract (line 4) and the `Child` contract (line 55) which inherits the functions and state variables from the `Base` contract.
+- 可以从其他合约或交易中调用
+- 状态变量不能是`external`
 
-When you uncomment the `testPrivateFunc` (lines 58-60) you get an error because the child contract doesn’t have access to the private function `privateFunc` from the `Base` contract.
+在这个例子中，我们有两个合约，`Base`合约（第4行）和继承了`Base`合约函数和状态变量的`Child`合约（第55行）。
 
-If you compile and deploy the two contracts, you will not be able to call the functions `privateFunc` and `internalFunc` directly. You will only be able to call them via `testPrivateFunc` and `testInternalFunc`.
+当你取消注释`testPrivateFunc`（第58-60行），你会得到一个错误，因为子合约没有访问来自`Base`合约的`privateFunc` private 函数。
 
-<a href="https://www.youtube.com/watch?v=NBzQVJ6OrrQ" target="_blank">Watch a video tutorial on Visibility</a>.
+如果您编译并部署这两个合约，则无法直接调用函数`privateFunc`和`internalFunc`。 如果您编译并部署这两个合约，则无法直接调用函数`privateFunc`和`internalFunc`。您只能通过`testPrivateFunc`和`testInternalFunc`来调用它们。
 
-## ⭐️ Assignment
-Create a new function in the `Child` contract called `testInternalVar` that returns the values of all state variables from the `Base` contract that are possible to return.
+<a href="https://www.youtube.com/watch?v=NBzQVJ6OrrQ" target="_blank">观看关于可见性的视频教程</a>。
+
+## ⭐️ 作业
+
+在`Child`合约中创建一个名为`testInternalVar`的新函数，该函数返回可能返回`Base`合约所有状态变量值。

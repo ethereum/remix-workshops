@@ -1,40 +1,47 @@
-In this tutorial, we'll explore the Uniswap V3 Swap contract to learn about how single-hop and multi-hop swaps work. 
+在本教程中，我们将探索 Uniswap V3 交换合约，以了解单跳和多跳交换的工作原理。
 
-But first, some Uniswap fundamentals.
+但首先，我们需要了解一些 Uniswap 基础知识。
 
-## What is Uniswap?
-Uniswap is a decentralized cryptocurrency exchange. It allows users to exchange tokens without the need for a centralized intermediary. Uniswap is a key player in the decentralized finance (DeFi) space.
+## 什么是 Uniswap？
 
-## How does Uniswap work?
-Instead of using an order book like a traditional centralized exchange, Uniswap uses an automated market maker (AMM) model. In Uniswap, the AMM is a smart contract that holds reserves of tokens (Liquidity Pool). Users can trade between tokens in the Liquidity Pool. The price of each token is determined by the ratio of the reserves.
+Uniswap 是一个去中心化的加密货币交易所。 它允许用户无需中心化中介即可交换代币。 Uniswap 是去中心化金融 (DeFi) 领域的关键参与者。
 
-### Step-by-step example of a Uniswap trade
-1. Alice wants to trade 1 ETH for DAI.
-2. Alice sends 1 ETH to the Uniswap smart contract.
-3. The Uniswap smart contract calculates the amount of DAI that Alice should receive based on the current exchange rate.
-4. The Uniswap smart contract sends the DAI to Alice.
-5. The Uniswap smart contract adds the 1 ETH to its reserves.
-6. The Uniswap smart contract recalculates the exchange rate based on the new reserves.
+## Uniswap 是怎么运作的？
 
-The tokens in the Liquidity Pool are provided by Liquidity Providers. When a Liquidity Provider deposits tokens into a Liquidity Pool, they receive Liquidity Provider Tokens in return. Liquidity Provider Tokens represent a user's share of a Liquidity Pool. 
+Uniswap 没有像传统中心化交易所那样使用订单簿，而是使用自动做市商（AMM）模型。 在 Uniswap 中，AMM 是一个持有代币储备（流动性池）的智能合约。 用户可以在流动性池中的代币之间进行交易。 每个代币的价格由储备金比例决定。
 
-Users of Uniswap pay a fee for each trade. The fee is paid to the Liquidity Providers in the form of additional Liquidity Provider Tokens.
+### Uniswap 交易的分步示例
 
-## Uniswap Swap Contract
-The Uniswap Swap contract allows users to swap tokens using Uniswap V3. It can do single-hop swaps, which allow users to exchange one token for another directly. It can also do multi-hop swaps, which means that users can exchange one token for another by routing through multiple tokens. Routing in this context means that the swap contract will exchange the token for another token, then exchange that token for another token, and so on until it reaches the desired token.
+1. Alice 想要用 1 ETH 换取 DAI。
+2. Alice 向 Uniswap 智能合约发送 1 ETH。
+3. Uniswap 智能合约根据当前汇率计算 Alice 应收到的 DAI 数量。
+4. Uniswap 智能合约将 DAI 发送给 Alice。
+5. Uniswap 智能合约将 1 ETH 添加到其储备中。
+6. Uniswap 智能合约根据新的储备重新计算汇率。
 
-## Conclusion
-In this section, we learned about Uniswap, how it works, and how we are going to use it to swap tokens. 
+流动性池中的代币由流动性提供者提供。 当流动性提供者将代币存入流动性池时，他们会收到流动性提供者代币作为回报。 流动性提供者代币代表用户在流动性池中的份额。
 
-## ⭐️ Assignment: Multiple Choice Test
+Uniswap 用户为每笔交易支付费用。 该费用以额外流动性提供者代币的形式支付给流动性提供者。
 
-### 1. What is Uniswap?
-1. A centralized exchange protocol.
-2. A decentralized exchange protocol that uses an order book.
-3. A decentralized exchange protocol that uses an automated market maker (AMM) model.
-4. A decentralized exchange protocol that uses an order book and an automated market maker (AMM) model.
+## Uniswap 交换合约
 
-### 2. How does Uniswap determine the price of a token?
-1. The price of a token is determined by the ratio of the reserves.
-2. The price of a token is determined by the ratio of the reserves and the number of trades.
-3. The price of a token is determined by the ratio of the reserves and the number of Liquidity Providers.
+Uniswap Swap 合约允许用户使用 Uniswap V3 交换代币。 它可以进行单跳交换，允许用户直接将一种代币交换为另一种代币。 它还可以进行多跳交换，这意味着用户可以通过多个代币的路由来将一种代币交换为另一种代币。 在这种情况下，路由意味着交换合约会将代币交换为另一个代币，然后将该代币交换为另一个代币，依此类推，直到达到所需的代币。
+
+## 结论
+
+在本节中，我们了解了 Uniswap、它的工作原理以及我们将如何使用它来交换代币。
+
+## ⭐ 作业: 多选测试
+
+### 1. 什么是 Uniswap？
+
+1. 一个中心化的交易协议。
+2. 使用订单簿的去中心化交易协议。
+3. 一种使用自动做市商（AMM）模型的去中心化交易协议。
+4. 一种使用订单簿和自动做市商（AMM）模型的去中心化交易协议。
+
+### 2) Uniswap 如何确定代币的价格？
+
+1. 代币的价格由储备金比例决定。
+2. 代币的价格由储备金和交易数量的比率决定。
+3. 代币的价格由储备金和流动性提供者数量的比例决定。

@@ -1,11 +1,11 @@
-Let's go back to our contract.
-Please make sure the `solidity compiler` and `Deploy & Run Transactions` are activated.
+我们回到我们的合约。
+让我们回到合约上。请确保激活了`Solidity compiler`和`Deploy＆Run Transactions`。
 
-Alternatively, you can click on `Solidity` from the `Home Page` **Environments** section.
+或者，您可以从`主页` **Environments** 部分单击`Solidity`。
 
- - Compile the contract from the `solidity compiler`.
- - Go to the `Deploy & Run Transactions` and make sure `SimpleStore` is selected contract.
- - In the textbox to the right of `Deploy`, input a positive integer.
- - Click on `Deploy`.
+- 从`solidity compiler`编译合约。
+- 转到`Deploy＆Run Transactions`，并确保选择了`SimpleStore`合约。
+- 在`Deploy`右侧的文本框中输入正整数。
+- 点击`Deploy`.
 
-In the next step, we'll watch the deployment in the debugger.
+在下一步中，我们将在调试器中观察部署过程。

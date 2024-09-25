@@ -1,27 +1,27 @@
-The Axelar executable contains relevant helper functions that will be automatically executed on the destination chain in correspondence to the relevant inbound transaction from the source chain.
+Axelar 可执行文件包含相关的辅助函数，这些函数将根据源链的相关入站交易在目标链上自动执行。
 
-The following are the relevant functions you will need to use from Axelar Executable
+以下是您需要使用 Axelar 可执行文件中的相关函数
 
 ## \_execute()
 
-This function handles the execution on the destination chain. It takes the following four parameters:
+此函数处理目标链上的执行操作。 它需要以下四个参数：
 
-1. `commandId`: A unique transaction id on the Axelar chain.
-2. `sourceChain`: The blockchain which the transaction has been sent from
-3. `sourceAddress`: The address from the source chain that the transaction has been sent from
-4. `payload`: The message that is being sent
+1. `commandId`: Axelar 链上唯一的交易ID。
+2. `sourceChain`: 被发送的这条交易所在的源链
+3. `sourceAddress`: 被发送的这条交易所在源链上的地址
+4. `payload`: 发送的信息
 
-The `sourceChain` and `sourceAddress` are key paramaters which you receive out of the box that can be used for verifying authenticity of messages on the destination chain. The payload (as discussed in the gateway section) is the message that was sent from the source chain to be used on your destination chain. The `commandId` will not be used during the rest of this module.
+`sourceChain`和`sourceAddress`是开箱即用的关键参数，可以用于核查真实性的信息上的目的地链。 有效负载（如网关部分中所述）是从源链发送并在目标链上使用的消息。 此模块的其余部分不会使用 `commandId` 。
 
-## \_executeWithToken()
+## \_executeWithoken()
 
-This function handles the execution on the destination chain for a message being sent with a fungible token. It takes six relevant parameters:
+此函数处理被发送到目标链上带有可替代代币的消息交易。 它需要六个相关参数：
 
-1. `commandId`: A unique transaction id on the Axelar chain.
-2. `sourceChain`: The blockchain which the transaction has been sent from
-3. `sourceAddress`: The address from the source chain that the transaction has been sent from
-4. `payload`: The message that is being sent
-5. `tokenSymbol`: The symbol of the token being sent
-6. `amount`: The amount of that token that is being sent
+1. `commandId`: Axelar 链上唯一的交易ID。
+2. `sourceChain`: 被发送的这条交易所在的源链
+3. `sourceAddress`: 被发送的这条交易所在源链上的地址
+4. `payload`: 发送的信息
+5. `tokenSymbol `：正在发送的代币的符号
+6. `amount`: 被发送的代币数量
 
-The first four parameters are identical to that of the `_execute()` function. The final two parameters of `tokenSymbol` and `amount` are in reference to the token that is being sent along with the message. It allows you on the destination chain to interact with the token accordingly, for example transferring it to another receiving address. The `commandId` will not be used during the rest of this module.
+前四个参数与 `_execute()` 函数相同。 最后两个参数`tokenSymbol` 和 `amount` 与随信息发送的代币有关。 它允许您在目标链上与代币进行交互，例如将其转移到另一个接收地址。 此模块的其余部分不会使用 `commandId` 。

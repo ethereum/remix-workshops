@@ -1,61 +1,57 @@
-The goal here is to store the code in the blockchain. The EVM needs to tell the client (geth, parity) which what part of the **Call Data** to store.   In this step, we are saving the contract MINUS its constructor (because that gets inplmented only 1 time) and MINUS the input parameter does not need to be stored.
+这里的目标是将代码存储在区块链中。 EVM 需要告诉客户端（geth、parity）要存储 **Call Data** 的哪一部分。   在这一步中，我们保存的是合约，不包括其构造函数（因为构造函数只被添加一次），也不包括不需要保存的输入参数。
 
+`CODECOPY`是第一步：它将字节码复制到内存中，然后以太坊客户端就能够使用它。咀嚼！  咀嚼！
 
-`CODECOPY` is the first step: it copies the bytecode to memory, then the ethereum client will be able to consume it.  MUNCH! 
+但是，等等… 但是...在客户端可以处理字节码之前，它需要一个指令 - 一个操作码来告诉它进行处理。`RETURN`就是这个操作码！ `RETURN` 就是这个操作码！
 
-But wait... before the client can **MUNCH**  bytecode, it needs an instruction - an opcode to tell it to MUNCH. `RETURN` is this opcode!
+根据通用规范，在合约创建的结尾处，客户端（geth、parity）通过操作码`RETURN`获取目标值，并通过使其成为部署的字节码的一部分而将其持久化。
 
-As stated in the general spec, at the end of the contract creation, the client (geth, parity) takes the targeted value by the opcode `RETURN` and **persists** it by making it part of the deployed bytecode.  
-
-
-Once you are in the `CODECOPY`, look at the top 3 items in the **Stack**:
+一旦进入`CODECOPY`，请查看堆栈中的前3个项目：
 
 `0: 0x0000000000000000000000000000000000000000000000000000000000000000`
 `1: 0x0000000000000000000000000000000000000000000000000000000000000055`
 `2: 0x000000000000000000000000000000000000000000000000000000000000003e`
 
-*In your Stack - `1` & `2` may be slightly different.  The difference may be due to a different compiler version.*
+_在您的Stack中，1和2可能略有不同。这种差异可能是由于不同的编译器版本造成的。_  这种差异可能是由于不同的编译器版本造成的。\*
 
-**These are the parameters for `CODECOPY`.**
+**这些是`CODECOPY`的参数。**
 
-Remember: *codecopy(t, f, s)* - copy **s** bytes from code at position **f** to memory at position **t**
+记住：_codecopy(t, f, s)_ - 将来自位置**f**处代码的**s**个字节复制到位置**t**处内存
 
-`0` is the offset where the copied code should be placed in the **memory**. In this example, ( all zeros) the code is copied to the beginning of the memory. (**t**)
-`1` is the offset in **calldata** where to copy from (**f**)
-`2` number of bytes to copy - (**s**)
+`0x0`、`0x10`等是位置。下一个数字是该位置的字节码。然后跟着问号和看似随机的字母和数字。这是Remix尝试将其转换为字符串。 在此示例中，（全零）代码被复制到内存的开头。 `0` 是应将复制代码放置在内存中的偏移量。在此示例中（全零），该代码被复制到内存开头。（t）
+`1` 是要从其中进行复制的**calldata**中的偏移量（**f**）
+`2` 要复制的字节数 - (**s**)
 
+执行`CODECOPY`后（单击“step into”按钮），所复制的代码应为：
+`0x6080604052600080fdfea265627a7a7231582029bb0975555a15a155e2cf28e025c8d492f0613bfb5cbf96399f6dbd4ea6fc9164736f6c63430005110032` 在内存中。**我将把这个值称为(X)。**  **我将把这个值称为(X)**。
 
-After `CODECOPY` is executed, (click the *step into* button) the copied code should be:
-`0x6080604052600080fdfea265627a7a7231582029bb0975555a15a155e2cf28e025c8d492f0613bfb5cbf96399f6dbd4ea6fc9164736f6c63430005110032` in memory.  **I'll refer to this value as (X)**.
-
-Let's look at the debugger's **Memory** panel.
-The 0x number I gave above is not what you will see in the **Memory** panel -what you will see is this:
+让我们来看一下调试器的**内存**面板。
+让我们来看一下调试器的内存面板。我上面给出的0x数字并不是您在内存面板中看到的内容 - 您将会看到：
 0x0: 6080604052600080fdfea265627a7a72 ????R??????ebzzr
 0x10: 31582029bb0975555a15a155e2cf28e0 1X ?? uUZ??U????
 0x20: 25c8d492f0613bfb5cbf96399f6dbd4e ?????a?????9?m?N
 0x30: a6fc9164736f6c634300051100320000 ???dsolcC????2??
 0x40: 00000000000000000000000000000000 ????????????????
-0x50: 000000000000000000000000000000a0 ??????????????? 
+0x50: 000000000000000000000000000000a0 ???????????????
 0x60: 00000000000000000000000000000000 ????????????????
 0x70: 00000000000000000000000000000000 ????????????????
 0x80: 00000000000000000000000000000000 ????????????????
 0x90: 00000000000000000000000000000002 ????????????????
 
-The `0x0`, `0x10`, etc is the position. The next number is the bytecode for that position.  This is followed by question marks and seemingly random letters & numbers.  This is **Remix**'s attempt to convert this into a string.  
+`0x0`, `0x10`, 等是其位置。 接下来的数字是该位置的字节码。  接下来是问号和看似随机的字母和数字。  这是 **Remix** 尝试将其转换为字符串。
 
-So if we glue the first four sections of bytecode together, we'll get:
-**0x6080604052600080fdfea265627a7a7231582029bb0975555a15a155e2cf28e0a6fc9164736f6c63430005110032**  The last section - `0x90` has 2 which is what I input for the constructors parameter.
+因此，如果我们将前四个字节码部分粘合在一起，我们会得到：
+**0x6080604052600080fdfea265627a7a7231582029bb0975555a15a155e2cf28e0a6fc9164736f6c63430005110032**
+最后一部分 - `0x90`是2，这就是我为构造函数参数输入的内容。
 
-The input data from the **Call Data** panel is:
+来自`Call Data`面板的输入数据为：
 `0x6080604052348015600f57600080fd5b506040516093380380609383398181016040526020811015602f57600080fd5b81019080805190602001909291905050508060008190555050603e8060556000396000f3fe6080604052600080fdfea265627a7a7231582029bb0975555a15a155e2cf28e025c8d492f0613bfb5cbf96399f6dbd4ea6fc9164736f6c634300051100320000000000000000000000000000000000000000000000000000000000000002`
- **I'll refer to this value as (Y).**
+**将此值称为(Y)。**
 
-This shows us that `(X)` is a subset of the original calldata `(Y)`:
+这告诉我们`(X)`是原始calldata`(Y)`的子集：
 
-`(X)` is calldata without the input parameter `0000000000000000000000000000000000000000000000000000000000000002` (we don't need to store this)
-and without the constructor code `6080604052348015600f57600080fd5b506040516093380380609383398181016040526020811015602f57600080fd5b81019080805190602001909291905050508060008190555050603e8060556000396000f3fe` which should be executed only 1 time.
+`(X)`是一个calldata，没有输入参数`00000000000000000000000000000000000000000002`（我们不需要存储此内容）和构造函数代码`6080604052348015600f57600080fd5b506040516093380380609383398181016040526020811015602f57600080fd5b81019080805190602001909291905050508060008190555050603e8060556000396000f3fe`，应仅执行1次。
 
+因此，`CODECOPY`从calldata中提取字节码并将其复制到内存中。
 
-So `CODECOPY` extracts the bytecode from the calldata and copies it to the memory.
-
-Let's move to the next step.
+让我们进入下一步。

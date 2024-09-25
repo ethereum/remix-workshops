@@ -1,25 +1,30 @@
-In this section, we'll explore the process of revoking confirmations. This process is necessary when an owner changes their mind about a transaction and wants to stop it from being executed. This section will be pretty straightforward. 
+在本节中，我们将探讨撤销确认的过程。 当所有者改变对交易的想法并想要阻止其执行时，此过程是必要的。 这部分将非常简单。
 
-## revokeConfirmation Event
-On line 14, we have added the `RevokeConfirmation` event. This event is emitted whenever a transaction confirmation is revoked by an owner. 
+## revokeConfirmation 事件
 
-## revokeConfirmation Function
-On line 129, we have added the `revokeConfirmation` function. It allows users to revoke a transaction confirmation. 
+在第 14 行，我们添加了 `RevokeConfirmation` 事件。 每当交易确认被所有者撤销时，就会发出此事件。
 
-`revokeConfirmation` takes one parameter: `txIndex`. It has three modifiers: `onlyOwner`, `txExists`, and `notExecuted`. 
+## revokeConfirmation 函数
 
-On line 134, we require that the transaction has been confirmed by the caller. This ensures that an owner who has confirmed the transaction can only revoke their own confirmation.
-We then decrement the `numConfirmations` variable of the transaction and set the `isConfirmed` mapping of the transaction index and the caller's address to false. Finally, we emit the `RevokeConfirmation` event.
+在第 129 行，我们添加了 `revokeConfirmation` 函数。 它允许用户撤销交易确认。
 
-## Conclusion
-In this section, we explored the process of revoking confirmations. We examined the `revokeConfirmation` function and understood how it works to allow users to revoke confirmations.
+`revokeConfirmation` 需要一个参数：`txIndex`。 它有三个修饰符：`onlyOwner`, `txExists`, 和 `notExecuted`。
 
-## ⭐️ Assignment: Revoke a Confirmation
-Confirm and revoke a transaction to send 2 Ether to the first account in the "ACCOUNTS" dropdown menu.
+在第 134 行，我们要求调用方已确认交易。 这确保了已确认交易的所有者只能撤销自己的确认。
+然后，我们递减交易的`numConfirmations`变量，并将交易索引和调用者地址的`isConfirmed`映射设置为 false。 最后，我们发出 `RevokeConfirmation` 事件。
 
-1. As in the previous assignment, deploy the Multisig contract, send the contract some Ether, and then  submit a transaction to the first account in the "ACCOUNTS" dropdown menu with a value of 2 Ether.
-2. Confirm the transaction twice as in the previous assignment.
-3. Revoke the transaction by clicking on `revokeConfirmation` and inserting 0 as the transaction index. If you click on `getTransaction` again, you should see that the transaction has been confirmed once.
+## 结论
 
-## Final Conclusion
-In this tutorial, we explored the process of creating a multi-signature wallet. We learned how to initialize the contract, deposit Ether, submit, confirm, and revoke transactions. We also learned how to execute transactions and retrieve information about the multi-signature wallet.
+在本节中，我们探讨了撤销确认的过程。 我们检查了`revokeConfirmation`函数并了解它如何允许用户撤销确认。
+
+## ⭐ 作业: 撤销一个确认
+
+确认并撤销将 2 以太币发送到“账户”下拉菜单中的第一个账户的交易。
+
+1. 与之前的作业一样，部署多重签名合约，向合约发送一些以太币，然后向“账户”下拉菜单中的第一个账户提交一笔交易，交易值为 2 以太币。
+2. 与之前的任务一样确认交易两次。
+3. 通过点击`revokeConfirmation` 并插入 0 作为交易索引来撤销交易。 如果您再次点击 `getTransaction` ，您应该会看到交易已被确认一次。
+
+## 最终结论
+
+在本教程中，我们探索了创建多重签名钱包的过程。 我们学习了如何初始化合约、存入以太币、提交、确认和撤销交易。 我们还学习了如何执行交易和检索有关多重签名钱包的信息。

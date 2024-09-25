@@ -1,16 +1,17 @@
-A libraries looks like a **contract** but use the keyword `library` 
+一个库看起来像是一个合约，但使用关键字library。
 
-A library typically is a collection of useful functions sitting out there on the blockchain that any contract can use.  Because the library is already deployed, it saves the deployment costs of the many contracts that use it.
+库通常是一组有用的函数，部署在区块链上，任何合约都可以使用。因为该库已经部署了，所以它节省了许多使用它的合约的部署成本。  因为该库已经部署了，所以它节省了许多使用它的合约的部署成本。
 
-In the following contract:
- - Make a library with the name `LibraryForTest`. 
- 
- It is possible to put a library in same file with another contract.  So put the library below the contract. 
- 
- This library should have a method called `getFromLib` method which returns `3`.
- 
- - Update the `get` method in the `test` contract to use the `LibraryForTest` library.   The function `get` should return the value it receives from `getFromLib`.
+在下面的合约中：
 
- ---------
+- 创建一个名为`LibraryForTest`的库。
 
-You can find more info about libraries in <a href="https://solidity.readthedocs.io/en/latest/contracts.html?highlight=library#libraries" target="_blank">this section of the Solidity Docs</a>.
+将库放置在与另一个合约相同的文件中。因此，请将该库放置在合约下方。  因此，请将该库放置在合约下方。
+
+这个库应该有一个名为`getFromLib`的方法，返回`3`。
+
+- 更新`test`合约中的`get`方法以使用`LibraryForTest`库。函数`get`应返回从`getFromLib`接收到的值。   函数`get`应返回从`getFromLib`接收到的值。
+
+---------
+
+您可以在<a href="https://solidity.readthedocs.io/en/latest/contracts.html?highlight=library#libraries" target="_blank">Solidity 文档</a> 中找到更多关于libraries信息。

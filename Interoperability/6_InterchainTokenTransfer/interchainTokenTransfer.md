@@ -1,39 +1,39 @@
-At this point we have gone over an example for how to send a general message between one blockchain to another. Now, let's implement a contract that sends a message and a token from one blockchain to another.
+到此为止，我们已经举例说明了如何在一个区块链与另一个区块链之间发送普通信息。 现在，让我们来实现一个合约，从一个区块链向另一个区块链发送一条信息和一个代币。
 
-## Overview
+## 概述
 
-This contract should seem largely familiar. Much like the previous section the `constructor` receives the `Gateway` and `Gas Service` addresses.
+这份合约看起来应该很熟悉。 与上一节非常相似，`constructor`接收`Gateway` 和 `Gas Service`地址。
 
-It then has a function that will be called from the source chain called `sendToMany` that takes in parameters similar to the previous section.
+然后，它将从源链中调用一个名为 `sendToMany` 的函数，该函数接收的参数与上一节类似。
 
-1. `_destinationChain`: The chain the transaction is sending to
-2. `_destinationAddress`: The address on the destination chain your transaction is sending to
-3. `_destinationAddresses`: The message that you will be sending along with your token transfer. In this example the message is a list of receiving addresses for the token transfer.
-4. `_symbol`: The symbol of the token address being sent
-5. `_amount`: The amount of the token being sent
+1. `_destinationChain`: 交易被发往的链
+2. `_destinationAddress`：交易被发往的目标链上的地址
+3. `_destinationAddresses`：将随代币转账一起发送的消息。 在此示例中，消息是代币转账的接收地址列表。
+4. `_symbol`：正在发送的代币的符号
+5. `_amount`: 正在发送的代币数量
 
-In the function we already have the `require` statement implemented to ensure gas is sent
+在函数中，我们已经实现了 `require` 语句，以确保 gas 被发送
 
-We also have the basic ERC20 functionality to send the token from the calling wallet to this smart contract. The contract also calls the `approve` function to allows the Gateway to eventually transfer funds on its behalf.
+我们还具有基本的 ERC20 功能，可将代币从调用钱包发送到此智能合约。 该合约还调用`approve `功能，以允许网关最终代表其转移资金。
 
-Finally, the `_executeWithToken()` function is also implemented out of the box.
+最后，`_executeWithToken()`函数也是开箱即用的。
 
-It makes use of the following params:
+它使用以下参数：
 
-1. `_payload`: The incoming message from the source chain
-2. `_tokenSymbol`: The symbol of the token that was sent from the source chain
-3. `_amount`: The amount of the token that was sent from the source chain
+1. `_payload`: 源链中传入的消息
+2. `_tokenSymbol`: 从源链发来的代币符号
+3. `_amount`: 从源链发来的代币数量
 
-Now with these params that were passed in, the `_execute()` function can send the tokens that were sent to the appropriate receivers.
+现在，通过传入的这些参数，`_execute()`函数可以将已发送的代币发给合适的接收者。
 
-## Challenge
+## 挑战
 
-Your challenge here is to finish off the `sendToMany()` function using the Axelar Gateway and Gas Service to trigger an interchain transaction.
+这里您面临的挑战是使用 Axelar 网关和 Gas 服务完成`sendToMany()`函数以触发链间交易。
 
-In the end you should be able to deploy this contract on two testnets, trigger the `sendToMany()` function and see the live transaction on <a href="https://testnet.axelarscan.io" target="_blank">Axelarscan (testnet) block explorer</a>.
+最后，您应该能够在两个测试网上部署此合约，触发`sendToMany()`函数并在<a href="https://testnet.axelarscan.io" target="_blank">Axelarscan（测试网）区块浏览器</a>上查看实时交易。
 
-### Testing Notes
+### 测试备注
 
-Note 1: The recommended ERC20 to use is `aUSDC` a wrapped version of the USDC token that can be obtained from <a href= "https://docs.axelar.dev/resources/rpc/resources" target="_blank">the discord faucet bot</a>. When triggering the `sendToMany()` function simply pass in the symbol `aUSDC` to the fourth param.
+注 1：建议使用的 ERC20 是`aUSDC`，它是 USDC 代币的封装版本，可以从 <a href= "https://docs.axelar.dev/resources/rpc/resources" target="_blank">discord faucet bot</a> 获取。 触发`sendToMany()`函数时，只需将符号`aUSDC`传递给第四个参数即可。
 
-Note2: When triggering the `sendToMany()` function you must remember to `approve` your contract to spend `aUSDC` tokens on your behalf, otherwise `transferFrom()` on line49 will throw an error.
+注2：当触发`sendToMany()`函数时，您必须记住`approve`您的合约以代表您花费`aUSDC`代币，否则第49行的`transferFrom()`将抛出错误。

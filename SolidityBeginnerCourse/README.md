@@ -1,5 +1,5 @@
-## Interactive Solidity Course
+## 交互式 Solidity 课程
 
-Learn the most important Solidity beginner concepts interactively, based on the popular https://solidity-by-example.org/ contracts.
+基于流行的 https://solidity-by-example.org/ 合约，以交互方式学习最重要的 Solidity 初级概念。
 
-Developed by the p2p learning platform https://dacade.org.
+由p2p学习平台 https://dacade.org 开发。

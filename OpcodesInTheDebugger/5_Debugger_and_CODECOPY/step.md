@@ -1,7 +1,7 @@
-From the Remix terminal, identify the transaction that deployed the contract and click `Debug`
+从Remix终端，找到部署合约的交易并单击`Debug`。
 
-In the gutter of the editor, put a breakpoint on the line `s = _o`, and click on `Jump to the next Breakpoint` (bottom right button).
+在编辑器的沟槽中，在行`s = _o`上设置断点，并单击跳转到下一个断点（右下角按钮）。
 
-Click on `Step into`, to move along the opcodes until you reach `SSTORE`. 
+点击`Step into`，沿着操作码移动，直到达到`SSTORE`。
 
-`SSTORE` is the opcode for storing the value `_o` in the storage. Let's continue further to the `CODECOPY`.
+`SSTORE`是将值`_o`存储在存储器中的操作码。让我们进一步进行`CODECOPY`。 让我们继续讨论 `CODECOPY` 。

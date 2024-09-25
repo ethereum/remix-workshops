@@ -1,3 +1,3 @@
-**Libraries** are deployed contracts that do not store state and are used by other contracts to decrease their size and thus their deployment costs.
+**库**是不存储状态的已部署合约，由其他合约使用以减小其大小，从而减少部署成本。
 
-Learn to work with **Libraries** in Remix - you won't need to whisper.
+学习在 Remix 中使用 **Libraries** - 您无需窃窃私语。

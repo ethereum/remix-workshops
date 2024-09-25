@@ -1,29 +1,29 @@
-The Axelar Gas Service is an extremely useful tool made available to pay gas for an interchain transaction. It allows you to pay for the cost of a transaction in the token of the source chain, making for a much easier end user (and developer) experience. If for example the source chain is Ethereum and the destination chain is Polygon then the gas service will receive the complete payment for the transaction in ETH and no matic is needed from the caller to pay for the execution on the Polygon destination chain.
+Axelar 燃料服务是一个非常有用的工具，可用于支付链间交易的燃料。 它允许您使用源链的代币来支付交易费用，从而大大简化了终端用户（和开发者）的体验。 例如，如果源链是Ethereum，而目标链是Polygon，那么燃料服务将以ETH接收交易的全部付款，调用者无需提供matic来支付在Polygon目标链上的执行费用。
 
-The following are the two more relevant functions you will need to be familiar with in regards to the Gas Service.
+你需要熟悉下面两个与燃料服务更具相关性的函数。
 
 ## payNativeGasForContractCall()
 
-This function allows you to pay for the entirety of an interchain transaction in the native token of the source chain. It takes five relevant parameters:
+此功能允许您使用源链的原生代币支付整个跨链交易的费用。 它需要五个相关参数：
 
-1. `sender`: The address making the payment
-2. `destinationAddress`: The address on the destination chain the transaction is sent to
-3. `destinationChain`: The name of the destination the transaction is sent to
-4. `payload`: The message that is being sent
-5. `refundAddress`: The address any refunds should be sent to if too much gas was sent along with this transaction.
+1. `sender`：付款地址
+2. `destinationAddress`：交易被发往的目标链上的地址
+3. `destinationChain`：交易被发往的目标链名称
+4. `payload`: 发送的信息
+5. `refundAddress`：如果随此交易发送的燃气费过多，则应将任何退款发送到的地址。
 
-The parameters overlap with the parameters required by the `callContract()` function in the Gateway contract. The two parameters not discussed in the Gateway section are `sender` and `refundAddress`. The sender is the address paying for the transaction and the refund address is the address that will receive any surplus funds sent to the gas service.
+这些参数与Gateway合约中`callContract()`函数所需的参数重叠。 在网关部分没有讨论的两个参数是 `sender` 和 `refundAddress`。 sender是支付交易费用的地址，refundAddress是将收到发送到燃气服务的任何多余资金的地址。
 
 ## payNativeGasForContractCallWithToken()
 
-This function allows you to pay for the entirety of a interchain transaction (that includes a token transfer) in the native token of the source chain. It takes seven relevant parameters:
+此功能允许您使用源链的原生代币支付整个跨链交易的费用（包括一次代币转账）。 它需要七个相关参数：
 
-1. `sender`: The address making the payment
-2. `destinationAddress`: The address on the destination chain the transaction is sent to
-3. `destinationChain`: The name of the destination the transaction is sent to
-4. `payload`: The message that is being sent
-5. `symbol`: The symbol of the token that was sent
-6. `amount`: The amount of the token that was sent
-7. `refundAddress`: The address any refunds should be sent to if too much gas was sent along with this transaction.
+1. `sender`：付款地址
+2. `destinationAddress`：交易被发往的目标链上的地址
+3. `destinationChain`：交易被发往的目标链名称
+4. `payload`: 发送的信息
+5. `symbol`：被发送的代币的符号
+6. `amount`: 被发送的代币数量
+7. `refundAddress`：如果随此交易发送的燃气费过多，则应将任何退款发送到的地址。
 
-This function is nearly identical to the first top one the main different being that it is used for message + token transfer transactions as opposed to just interchain message transactions (aka GMP Transactions). As a result the GasService needs to also know the `symbol` and `amount` of the token that is being sent.
+这个函数与第一个前面的函数几乎完全相同，主要不同的是它用于消息+代币的传输交易，而不是仅仅用于跨链消息交易(又称GMP交易)。 因此，燃料服务也需要知道正在发送的代币的`symbol`和`amount`。

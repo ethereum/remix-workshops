@@ -1,36 +1,41 @@
-Welcome to the Multisignature Wallet course! In this section, we'll explore the fundamentals of Multisignature (Multisig) wallets and we'll go through a multisig wallet contract. 
+欢迎来到多重签名钱包课程！ 在本节中，我们将探讨多重签名（Multisig）钱包的基础知识，并将介绍多签钱包合约。
 
-## What is a Multisignature Wallet?
-A multisignature (multisig) wallet is a type of digital wallet that requires multiple keys to authorize a cryptocurrency transaction.
+## 什么是多重签名钱包？
 
-Imagine a multisig wallet as a secure vault with multiple locks. To open the vault, each the keyholder must open their individual lock. This setup ensures that no single person can access the vault's contents without the others' consent.
+多重签名（multisig）钱包是一种需要多个密钥来授权加密货币交易的数字钱包。
 
-## How Does a Multisig Wallet Work?
-In a multisig setup, each transaction must receive a predetermined number of approvals from a set group of individuals. For instance, in a 3-of-5 wallet configuration, there are five authorized addresses, but a transaction only goes through when at least three of them give their approval. When a transaction is initiated, it's presented as a **proposal** to the group. Each member who agrees to the transaction uses their private key to digitally sign it. 
+将多签钱包想象成一个带有多个锁的安全保险库。 要打开保险库，每个钥匙持有者都必须打开各自的锁。 这种设置可确保任何人都无法在未经其他人同意的情况下访问保险库的内容。
 
-These **digital signatures** are unique and are generated based on the combination of the transaction data and the private key. 
+## 多签钱包如何工作？
 
-When the required number of signatures is reached, the transaction is broadcasted to the blockchain for execution.
+在多重签名设置中，每笔交易都必须获得一组人的预定数量的批准。 例如，在 3-of-5 钱包配置中，有 5 个授权地址，但只有当至少其中 3 个地址批准时，交易才会进行。 当交易启动时，它会作为**提案**提交给小组。 每个同意交易的成员都使用他们的私钥对其进行数字签名。
 
-## Why Use a Multisig Wallet?
-Multisig wallets are crucial for enhanced security in cryptocurrency transactions. They mitigate the risk of theft or loss of a single key. In business, they're used to ensure that funds can't be moved without consensus among stakeholders. For instance, in a company managing cryptocurrency assets, a multisig wallet might require the CFO, CEO, and a board member to all approve significant transactions, protecting against internal fraud or external hacks.
+这些**数字签名**是唯一的，是根据交易数据和私钥组合生成的。
 
-## Conclusion
-In this section, we learned that a multisig wallet requires multiple keys to authorize a proposed cryptocurrency transaction and that a multisigs mitigates the risk of theft or loss of a single key.
+当达到所需的签名数量时，交易将被广播到区块链上执行。
 
-## ⭐️ Assignment: Multiple Choice Test
+## 为什么要使用多签钱包？
 
-### 1. What is a Multisignature Wallet?
-1. A digital wallet that requires a single signature for transactions.
-2.  A digital wallet that requires multiple signatures for transactions.
-3. A physical wallet used for storing cryptocurrency.
-4. A wallet that can only hold multiple types of cryptocurrencies.
+多签钱包对于增强加密货币交易的安全性至关重要。 它们降低了单个钥匙被盗或丢失的风险。 在商业中，它们被用来确保资金在利益相关者之间没有达成共识的情况下不会被转移。 例如，在管理加密货币资产的公司中，多重签名钱包可能需要首席财务官、首席执行官和董事会成员全部批准重大交易，以防止内部欺诈或外部黑客攻击。
 
-### 2. How does a Multisignature Wallet enhance security?
+## 结论
 
-1. By requiring a single private key for transactions.
-2. By distributing transaction approval across multiple owners.
-3. By storing transaction data on-chain.
-4. None of the above.
+在本节中，我们了解到多重签名钱包需要多个密钥来授权拟议的加密货币交易，并且多重签名可以降低单个密钥被盗或丢失的风险。
 
-Feel free to take your time and answer the questions above. Once you're ready, we'll move on to exploring the Multisig smart contract and understanding its structure.
+## ⭐ 作业: 多选测试
+
+### 1. 什么是多重签名钱包？
+
+1. 需要单一签名进行交易的数字钱包。
+2. 需要多个签名才能进行交易的数字钱包。
+3. 用于存储加密货币的物理钱包。
+4. 只能容纳多种加密货币的钱包。
+
+### 2) 多重签名钱包如何增强安全性？
+
+1. 要求交易使用单一私人密钥。
+2. 通过将交易批准分配给多个所有者。
+3. 通过在链上存储交易数据。
+4. 以上都不是。
+
+请回答上述问题，慢慢来，不着急。 一旦您准备好，我们将继续探索多重签名智能合约并了解其结构。

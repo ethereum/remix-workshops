@@ -1,37 +1,41 @@
-The entire UniswapSwapExamples contract will only be presented in section 5 of this tutorial.  Before then, we'll build up blocks of code.  
+整个 UniswapSwapExamples 合约将仅在本教程的第 5 节中介绍。  在此之前，我们将构建代码块。
 
-This section explores the `ISwapRouter` interface, which defines the functions that can be called on the Uniswap Swap contract.
+本节探讨`ISwapRouter`接口，该接口定义了可以在 Uniswap 交换合约上调用的函数。
 
-Single-hop swaps allow users to exchange one token for another directly within a liquidity pool. 
-Multi-hop swaps allow users to exchange one token for another by routing through multiple tokens. 
+单跳交换允许用户直接在流动性池内将一种代币交换为另一种代币。
+多跳交换允许用户通过路由多个代币来将一种代币交换为另一种代币。
 
-Interfaces in Solidity specify functions that must be included in a contract that inherits them.  They are useful for declaring what functions be supported and allow for easier integration and interaction between different contracts.
+Solidity 中的接口指定了必须包含在继承它们的合约中的函数。  它们对于声明支持哪些函数非常有用，并允许不同合约之间更轻松地集成和交互。
 
-Structs are used to define custom data types.
+结构体用于定义自定义数据类型。
 
-## ISwapRouter Interface
-The ISwapRouter interface defines the functions that can be called on the Uniswap Swap contract. We will need to use this interface to interact with the Uniswap Swap contract and execute swaps.
+## ISwapRouter 接口
 
-On line 5, we define a constant variable called `router` that is of type `ISwapRouter`. We set the value of this variable to the interface instance of a smart contract that is deployed at the address `0xE592427A0AEce92De3Edee1F18E0157C05861564`. This is the address of the Uniswap V3 Swap contract on the Ethereum mainnet.
+ISwapRouter 接口定义了可以在 Uniswap 交换合约上调用的函数。 我们需要使用此接口与 Uniswap 交换合约进行交互并执行交换。
 
-On line 9, we define an interface called `ISwapRouter`. This interface defines two functions: `exactInputSingle` and `exactInput`. 
+在第 5 行，我们定义了一个名为`router`的常量，其类型为`ISwapRouter`。 我们将此变量的值设置为部署在地址`0xE592427A0AEce92De3Edee1F18E0157C05861564`的智能合约的接口实例。 这是以太坊主网上 Uniswap V3 Swap 合约的地址。
+
+在第 9 行，我们定义了一个名为`ISwapRouter`的接口。 此接口定义了两个函数: `exactInputSingle` 和 `exactInput` 。
 
 ## exactInputSingle
-On line 25, we define a struct called `ExactInputSingleParams`. This struct defines the parameters that are required for our exactInputSingle function on line 21, which will execute a single-hop swap. The struct has the following parameters: 
-- **`address tokenIn`**: The address of the token being sent.
-- **`address tokenOut`**: The address of the token being received.
-- **`uint24 fee`**: The fee associated with the swap.
-- **`address recipient`**: The address that will receive the output token.
-- **`uint deadline`**: A timestamp by which the transaction must be processed, for time-limiting the swap.
-- **`uint amountIn`**: The amount of the input token being sent.
-- **`uint amountOutMinimum`**: The minimum amount of the output token that the sender is willing to accept, to protect against unfavorable price movements.
-- **`uint160 sqrtPriceLimitX96`**: A limit on the price, represented in a specific format, to prevent the swap from occurring at unfavorable prices.
+
+在第25行，我们定义了一个叫做`ExactInputSingleParams`的结构体。 该结构体定义了第 21 行的 exactInputSingle 函数所需的参数，该函数将执行单跳交换。 该结构体具有以下参数：
+
+- **`address tokenIn`**：发送代币的地址。
+- **`address tokenOut`**: 接收代币的地址
+- **`uint24 fee`**: 交换费用
+- **`address recipient`**: 将接收输出代币的地址。
+- **`uint deadline`**: 必须处理交易的时间戳，以限制交换的时间。
+- **`uint amountIn`**: 发送的输入代币的数量。
+- **`uint amountOutMinimum`**: 发送者愿意接受的最小输出代币数量，以防止不利的价格变动。
+- **`uint160 sqrtPriceLimitX96`**: 以特定格式表示的价格限制，以防止互换在不利价格下发生。
 
 ## exactInput
-On line 25, we define a struct called `ExactInputParams`. This struct defines the parameters that are required for our `exactInput` function on line 33. This function will execute a multi-hop swap. The struct has the following parameters:
-- **`bytes path`**: Encoded information about the swap path (i.e., which tokens to swap through).
-- **`address recipient`**: The address receiving the output tokens.
-- **`uint deadline`**: Similar to above, a timestamp by which the transaction must be processed.
-- **`uint amountIn`**: The amount of the input token.
-- **`uint amountOutMinimum`**: The minimum amount of the output token the sender expects to receive.
 
+在第25行，我们定义了一个叫做`ExactInputParams `的结构体。 这个结构体定义了我们在第 33 行上的 `extractInput` 函数所需的参数。 该函数将执行多跳交换。 该结构体具有以下参数：
+
+- **`bytes path`**: 有关交换路径的编码信息（即通过哪些代币进行交换）。
+- **`address recipient`**: 接收输出代币的地址。
+- **`uint deadline`**: 与上面类似，处理交易必须遵循的时间戳。
+- **`uint amountIn`**: 输入代币的数量。
+- **`uint amountOutMinimum`**: 发送者期望接收的输出代币的最小数量。

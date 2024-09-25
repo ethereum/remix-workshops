@@ -1,3 +1,3 @@
-## Learn the Proxy Pattern
+## 学习代理模式
 
-Save gas & make upgradable contracts
+节省gas & 制作可升级的合约

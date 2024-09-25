@@ -1,50 +1,60 @@
-In this section, we'll explore the **initialization process** of the Multisig smart contract. We'll examine the constructor function and review how it sets up the initial state of the contract.
+在本节中，我们将探讨多重签名智能合约的**初始化过程**。 我们将检查构造函数并回顾它如何设置合约的初始状态。
 
-## Note
-From this section on in this tutorial, we will be building up a multisig contract. In subsequent sections, the contract will become increasingly complete.
+## 备注
 
-## Overview
-In this section, the contract consists of events, state variables, modifiers, and functions. **Events** provide transparency by logging specified activities on the blockchain, while **modifiers** ensure that only authorized users can execute certain functions.
+从本教程的这一部分开始，我们将构建一个多重签名合约。 在接下来的章节中，合约将会变得越来越完整。
 
-## State Variables
-In Line 4, we have the MultisigWallet contract itself. At the beginning of the contract, we have three state variables.
+## 概述
 
-1. **`owners`:** An array containing the addresses of all owners of the multi-signature wallet (Line 5).
-2. **`isOwner`:** A mapping indicating whether an address is an owner (Line 6).
-3. **`numConfirmationsRequired`:** The number of confirmations required for a transaction (Line 7).
+在本节中，合约由事件、状态变量、修饰符和函数组成。 **事件**通过在区块链上记录指定的活动来提供透明度，而**修饰符**确保只有授权用户才能执行某些功能。
 
-The setup of array and mapping allows us to easily retrieve the list of owners and verify whether an address is an owner.
+## 状态变量
 
-## Modifiers
-Next, we have a modifier called `onlyOwner` (Line 9). Modifiers in Solidity are special keywords that can be used to amend the behavior of functions. In our case, the `onlyOwner` modifier ensures that only owners can execute a function. It does this by checking whether the address of the **caller** is an owner.
+在第 4 行中，我们有 MultisigWallet 合约本身。 在合约开始时，我们有三个状态变量。
 
-## Constructor Function
-The `constructor` function (Line 14) is executed only once during the deployment of the contract. It initializes essential parameters, in this case, the list of owners and the required number of confirmations (Line 14).
+1. **`owners`:** 包含多重签名钱包所有所有者地址的数组（第 5 行）。
+2. **`isOwner`:** 指示地址是否是所有者的映射（第 6 行）。
+3. **`numConfirmationsRequired`:** 一笔交易所需的确认数量（第 7 行）。
 
-On lines 15 and 16, we have two `require` statements to ensure that the inputs are valid. In this case, we require that there must be at least one owner and that the number of required confirmations must be greater than zero and less than or equal to the number of owners.
+通过设置数组和映射，我们可以轻松检索所有者列表，并验证某个地址是否为所有者。
 
-The constructor then initializes the contract state by verifying that is not address(0) (Line 25) and that the owner is unique (Line 26).  Then it adds a key/ value pair to the isOwner mapping (Line 28), and then it populates the `owners` array with the provided owner addresses (Line 29).
+## 修饰符
 
-Finally, it sets the `numConfirmationsRequired` variable with the specified value (Line 32).
+接下来，我们有一个名为 `onlyOwner` 的修饰符（第 9 行）。 Solidity 中的修饰符是特殊的关键字，可用于修改函数的行为。 在我们的例子中，`onlyOwner`修饰符确保只有所有者才能执行函数。 它通过检查 **调用者** 的地址是否是所有者来实现这一点。
 
-## getOwners Function
-The `getOwners` function (Line 36) allows users to retrieve the list of owners of the multi-signature wallet. It returns the `owners` array (Line 37).
+## 构造函数
 
-## getNumConfirmationsRequired Function
-The `getNumConfirmationsRequired` function (Line 41) allows users to retrieve the number of confirmations required for a transaction. It returns the `numConfirmationsRequired` variable (Line 42).
+`constructor` 函数（第 14 行）在合约部署期间仅执行一次。 它初始化基本参数，在本例中为所有者列表和所需的确认数量（第 14 行）。
 
-## Conclusion
-In this section, we explored the initialization process of the Multisig smart contract. We examined the constructor function and understood how it sets up the initial state of the contract.
+在第 15 行和第 16 行，我们有两个`require`语句来确保输入有效。 在这种情况下，我们要求必须至少有一个所有者，并且所需确认的数量必须大于零且小于或等于所有者的数量。
 
-## ⭐️ Assignment: Deploy a Multisig Wallet
-Deploy a Multisig contract with three owners and require two confirmations for transaction execution.
+然后，构造函数通过验证不是 address(0)（第 25 行）并且所有者是唯一的（第 26 行）来初始化合约状态。  然后它向 isOwner 映射添加一个键/值对（第 28 行），然后用提供的所有者地址填充`owners`数组（第 29 行）。
 
-1. Compile contractInitialization.sol
-2. Go to Deploy & Run Transactions in Remix.
-3. Expand the "Deploy" section.
-4. Under "_OWNERS", enter three an array of three addresses.
-5. Under "_NUM_CONFIRMATIONS_REQUIRED", enter the number of confirmations required for a transaction.
+最后，它会将 `numConfirmationsRequired` 变量设置为指定值（第 32 行）。
 
-**Hints:**
-- You can get addresses from the "ACCOUNTS" dropdown menu.
-- The array of addresses should be in the format: ["0x123...", "0x456...", "0x789..."].
+## getOwners 函数
+
+`getOwners` 函数（第 36 行）允许用户检索多重签名钱包的所有者列表。 它返回 `owners` 数组（第 37 行）。
+
+## getNumConfirmationsRequired 函数
+
+`getNumConfirmationsRequired` 函数（第 41 行）允许用户检索交易所需的确认数量。 它会返回 `numConfirmationsRequired` 变量（第 42 行）。
+
+## 结论
+
+在本节中，我们探讨了多重签名智能合约的初始化过程。 我们检查了构造函数并了解它如何设置合约的初始状态。
+
+## ⭐ 作业: 部署一个多签钱包
+
+部署一个具有三个所有者并需要两次确认才能执行交易的多重签名合约。
+
+1. 编译 contractInitialization.sol
+2. 进入 Remix 的 Deploy & Run Transactions 模块。
+3. 展开 "Deploy" 部分。
+4. 在"_OWNERS"下，输入三个地址的数组。
+5. 在"_NUM_CONFIRMATIONS_REQUIRED"下，输入交易所需的确认数量。
+
+**提示:**
+
+- 您可以从"ACCOUNTS"下拉菜单中获取地址。
+- 地址数组的格式应该是：["0x123...", "0x456...", "0x789..."]。

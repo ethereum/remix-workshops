@@ -1,8 +1,9 @@
-# Playing a scenario
+# 重放场景
 
-1. Click the play icon to the right of the floppy disk icon to play the steps you did.
+1. 单击保存图标右侧的播放图标以播放您执行的步骤。
 
-2. You'll see another instance of the contract deployed. Open it up.
+2. 您将看到合约的另一个实例已部署。打开它。 打开它。
 
-3. Click the winningProposal function and you should see now that proposal 1 won.
-It should print out: **0: uint256: winningProposal_ 1**
+3. 单击 winningProposal 函数，现在应该可以看到提案 1 获胜。
+   单击`winningProposal`函数，现在应该可以看到提案1获胜。
+   它应该会输出：**0: uint256: winningProposal_ 1**

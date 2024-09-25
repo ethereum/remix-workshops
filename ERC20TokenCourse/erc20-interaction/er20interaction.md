@@ -1,83 +1,88 @@
-In this section, we will deploy a contract in our browser and test its functionality.
+在本节中，我们将在浏览器中部署合约并测试其功能。
 
-### 1. Deploy the contract
-**1.1** Compile your EduCoin contract in the "Solidity compiler" module of the Remix IDE.
+### 1. 部署合约
 
-**1.2** In the "Deploy & run transactions" module, select your contract "EduCoin" in the contract input field and click on the "Deploy" button. Always make sure to select the correct contract in the contract selector input field.
+**1.1** 在 Remix IDE 的“Solidity 编译器”模块中编译您的 EduCoin 合约。
 
-**GIF** Compile and deploy:
-<img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_compileAndDeploy.gif?raw=true" alt="Compile and deploy contract" width="300"/>
+**1.2** 在“部署和运行交易”模块中，在合约输入字段中选择您的合约“EduCoin”，然后单击“部署”按钮。始终确保在合约选择器输入字段中选择正确的合约。 始终确保在合约选择器输入字段中选择正确的合约。
 
-### 2. Test the functions
-Expand the token contract functions in the IDE.
+**GIF** 编译和部署: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_compileAndDeploy.gif?raw=true" alt="Compile and deploy contract" width="300"/>
+
+### 2. 测试函数
+
+展开 IDE 中的代币合约函数。
 
 #### 2.1 Decimals
-Click on the "decimals" button to call the decimals() function.
-It should return "18".
 
-####  2.2 Name
-Click on the "name" button to call the name() function.
-It should return "EduCoin".
+单击“decimals”按钮以调用`decimals()`函数。它应该返回“18”。
+它应该返回“18”。
+
+#### 2.2 Name
+
+单击“name”按钮调用 name() 函数。
+它应该返回“EduCoin”。
 
 #### 2.3 Symbol
-Click on the "symbol" button to call the symbol() function.
-It should return "EDC".
+
+单击“symbol”按钮来调用symbol() 函数。
+它应该返回 “EDC”。
 
 #### 2.4 Total supply
-Click on the "totalSupply" button to call the totalSupply() function.
-It should return 1000000000000000000000 (1000*10**18).
 
-**GIF** Test decimals, name, symbol, and totalSupply functions:
-<img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_test_functions.gif?raw=true" alt="Test transfer function" width="300"/>
+单击“totalSupply” 按钮以调用 `totalSupply()` 函数。它应该返回 1000000000000000000000（1000_10\*\*18）。
+它应该返回 1000000000000000000000 (1000_10\*\*18) 。
+
+**GIF** 测试 decimals、name、symbol 和 totalSupply 函数：: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_test_functions.gif?raw=true" alt="Test transfer function" width="300"/>
 
 #### 2.5 Balance of
-**2.5.1** Go to the "ACCOUNT" section in the sidebar and copy the displayed address by using the copy icon next to it.
 
-**2.5.2** Paste the address in the input field next to the "balanceOf" function button and click on the button.
-It should return 1000000000000000000000 (1000*10**18).
+**2.5.1** 转到侧边栏的 "ACCOUNT" 部分，并使用旁边的复制图标复制地址。
 
-**GIF** Test balanceOf function:
-<img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_balanceOf.gif?raw=true" alt="Test transfer function" width="300"/>
+**2.5.2** 将地址粘贴到`balanceOf`函数按钮旁边的输入字段中，然后单击该按钮。
+应该返回 1000000000000000000000 (1000_10\*\*18).
+应该返回 1000000000000000000000 (1000_10\*\*18) 。
+
+**GIF** 测试 balanceOf 函数: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_balanceOf.gif?raw=true" alt="Test transfer function" width="300"/>
 
 #### 2.6 Transfer
-We will transfer EduCoin from one account to a second account.
 
-**2.6.1** Go to the "ACCOUNT" section in the sidebar and click on the displayed address. This should open a dropdown. Select the second address displayed and copy its address (account 2).
+我们将从一个帐户转移 EduCoin 到第二个帐户。
 
-**2.6.2** Open the dropdown and select the first account again (account 1), because this is the account that we want to use to make the transfer.
+**2.6.1** 转到侧边栏的 "ACCOUNT" 部分，并单击显示的地址。这会打开一个下拉菜单，选择显示的第二个地址并复制其地址（帐户 2）。 这会打开一个下拉菜单。 选择显示的第二个地址并复制其地址（帐户 2）。
 
-**2.6.3** Paste the address in the input field next to the "transfer" function button, input the number 500000000000000000000, and click on the button.
+**2.6.2** 打开下拉菜单并再次选择第一个帐户（帐户 1），因为这是我们要使用来进行转账的帐户。
 
-**2.6.4** If you check the balances for account 1 and account 2, they should both return the amount 500000000000000000000.
+**2.6.3** 将地址粘贴到`transfer`函数按钮旁边的输入字段中，输入数字 50000000000000000000，然后单击该按钮。
 
-**GIF** Test transfer function:
-<img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_transfer.gif?raw=true" alt="Test transfer function" width="300"/>
+**2.6.4** 如果您检查帐户 1 和 帐户 2 的余额，则两者都应返回金额为500000000000000000000。
+
+**GIF** 测试transfer函数: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_transfer.gif?raw=true" alt="Test transfer function" width="300"/>
 
 #### 2.7 Approve
-We will now allow account 1 to spend tokens on behalf of account 2.
 
-**2.7.1** Go to the "Account" section, copy the address of account 1, then set it to account 2 again.
+现在，我们将允许账号1代表账号2消费代币。
 
-**2.7.2** In the approve function, enter the address of account 1 as the input for spender and set the amount to 250000000000000000000.
+**2.7.1** 转到“Account”部分，复制账号1的地址，然后再次设置回账号2。
 
-**GIF** Test approve function:
-<img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_approve.gif?raw=true" alt="Test approve function" width="300"/>
+**2.7.2** 在授权功能中，请将 account 1 的地址输入为 spender ，并将金额设置为250000000000000000000。
+
+**GIF** 测试 approve 函数: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_approve.gif?raw=true" alt="Test approve function" width="300"/>
 
 #### 2.8 Allowance
-Next to the "allowance" button enter the address of account 2 as the owner and account 1 as the spender; click on the button.
-It should return 1000000000000000000000.
 
-**GIF** Test allowance function:
-<img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_allowance.gif?raw=true" alt="Test allowance function" width="300"/>
+在“allowance”按钮旁边，将帐户2的地址作为owner，账户1作为spender；然后单击该按钮。它应该返回1000000000000000000。
+它应该返回1000000000000000000。
+
+**GIF** 测试 allowance 函数: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_allowance.gif?raw=true" alt="Test allowance function" width="300"/>
 
 #### 2.9 TransferFrom
-Now account 1 will transfer 250000000000000000000 tokens from account 2 to its own account.
 
-**2.9.1** Select account 1 in the "ACCOUNT" section.
+现在，账号1将从账号2中转移250000000000000000000个代币到自己的账户中。
 
-**2.9.2** Next to the "transferFrom" button enter the address of account 2 as the sender and account 1 as the recipient, enter 250000000000000000000 as the amount and click on the button.
+**2.9.1** 在“ACCOUNT”部分选择帐户1。
 
-**2.9.3** Check the balances of accounts 2 and 1, they should return 250000000000000000000 and 750000000000000000000.
+**2.9.2** 在"transferFrom"按钮旁边输入account 2的地址作为发送方和account 1的地址作为接收方，输入金额250000000000000000000
 
-**GIF** Test transferFrom function:
-<img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_transferFrom.gif?raw=true" alt="Test transferFrom function" width="300"/>
+**2.9.3** 检查account 2和account 1的余额，应该返回250000000000000000000 和 750000000000000000000。
+
+**GIF** 测试 transferFrom 函数: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_transferFrom.gif?raw=true" alt="Test transferFrom function" width="300"/>

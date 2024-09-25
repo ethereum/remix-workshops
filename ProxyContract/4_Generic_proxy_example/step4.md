@@ -1,15 +1,15 @@
-# A Basic Generic Proxy Example
+# 一个基本的通用代理示例
 
-In the associated solidity file, **step4.sol**, there are 2 contracts - **ProxyContract** and **LogicContract**.
+在关联的solidity文件**step4.sol**中，有两个合约 - **ProxyContract** 和 **LogicContract**。
 
-To use this system, we first deploy the LogicContract.
+要使用此系统，我们首先部署LogicContract。
 
-And then when we go to deploy the ProxyContract, we pass the LogicContract's address as an argument of the ProxyContract's constructor.
+然后当我们去部署ProxyContract时，将LogicContract的地址作为ProxyContract构造函数的参数传递。
 
-The ProxyContract is deployed only once.
+只部署一次ProxyContract。
 
-The code of LogicContract will be called at the line 20. It will be forwarded with delegate call while keeping the context of LogicContract.
+LogicContract代码将在第20行调用。它将被委托调用，并保持LogicContract上下文不变。 它将被委托调用，并保持LogicContract上下文不变。
 
-In case we need to change the logic we would deploy a new LogicContract and set the address of it with setLogicContractAddress setter function.
+如果需要更改逻辑，则会部署新的LogicContract并使用setLogicContracAddress设置器函数设置其地址。
 
-*Note: The LogicContract we have here does not use the storage. Once you need to use the storage the implementation becomes a bit more complicated because those contracts share the context.*
+_注意：这里使用的LogicConract不使用存储。一旦需要使用存储，实现就会变得更加复杂，因为这些合同共享上下文。_ 一旦需要使用存储，实现就会变得更加复杂，因为这些合同共享上下文。\*

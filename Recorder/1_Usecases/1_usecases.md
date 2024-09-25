@@ -1,7 +1,7 @@
-1. You want to show someone what happens when you do a number of transactions with a contract and you don't want to explain each step - you just want to get them to the last step.
+1. 你想向某人展示当您与合约进行多个交易时会发生什么，而且您不想解释每一步 - 您只想让他们到达最后一步。
 
-    - To show someone a problem in their code.
+   - 向某人展示其代码中的问题。
 
-    - In a class, to get the students to a certain place and have them start working from there.
+   - 在课堂上，将学生带到特定位置并让他们从那里开始工作。
 
-2. You want to start your development in the JavascriptVM because it is quick and then to switch to another testnet - but you don't want to manually repeat all the tedious clicking for each different network.
+2. 您希望在JavascriptVM中开始开发，因为它很快，然后切换到另一个测试网络 - 但是您不想手动重复所有繁琐的点击操作以适应每个不同的网络。

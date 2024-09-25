@@ -1,13 +1,13 @@
-# How it works?
+# 它是如何工作的？
 
-**EIP-7 DelegateCall** opcode allows a separate execution in another contract while maintaining the original execution context.
+**EIP-7 DelegateCall**操作码允许在保持原始执行上下文的同时，在另一个合约中进行单独的执行。
 
-All **message calls** from the user go through a **Proxy contract**. 
+所有用户发起的消息调用都经过代理合约。
 
-The **Proxy contract** then will redirect them to the **Logic contract**. 
+然后，**代理合约**会将它们重定向到**逻辑合约**。
 
-And when you need to **upgrade** the logic, you'll **just** deploy that - **HOWEVER** - the implementation of Proxy will remain the same. 
+当您需要**升级**逻辑时，您**只需**部署该逻辑 - **但是** - 代理的实现将保持不变。
 
-You'll only need to update the address of Logic contract in Proxy.
+您只需要在代理合约中更新逻辑合约地址即可。
 
-The Proxy Contract uses **Delegate calls** and **Solidity assembly** because without it, it's impossible to return any value from **delegatecall**.
+代理合约使用**Delegate calls**和**Solidity assembly**，因为如果没有这些内容，则无法从**delegatecall**返回任何值。

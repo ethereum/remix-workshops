@@ -1,37 +1,44 @@
-In the next sections, we will look into the data structures that we can use to organize and store our data in Solidity.
+在接下来的章节中，我们将探讨在Solidity中可以用于组织和存储数据的数据结构。
 
-*Arrays*, *mappings* and *structs* are all *reference types*. Unlike *value types* (e.g. *booleans* or *integers*) reference types don't store their value directly. Instead, they store the location where the value is being stored. Multiple reference type variables could reference the same location, and a change in one variable would affect the others, therefore they need to be handled carefully.
+`Arrays`、`mappings`和`structs`都是引用类型。与值类型（例如_booleans_ 或者 _integers_）不同，引用类型不直接存储其值。相反，它们存储该值被存储的位置。多个引用类型变量可能引用同一位置，并且一个变量的更改会影响其他变量，因此需要小心处理。 与 _值类型_（例如 _booleans_ 或者 _integers_）不同，引用类型不直接存储其值。 相反，它们存储该值被存储的位置。 多个引用类型变量可能引用同一位置，并且一个变量的更改会影响其他变量，因此需要小心处理。
 
-In Solidity, an array stores an ordered list of values of the same type that are indexed numerically.
+在Solidity中，数组是一个列表，存储按数字索引排序的相同类型的值。
 
-There are two types of arrays, compile-time *fixed-size* and *dynamic arrays*. For fixed-size arrays, we need to declare the size of the array before it is compiled. The size of dynamic arrays can be changed after the contract has been compiled.
+有两种类型的数组，编译时 _固定大小_ 和 _动态数组_ 。 对于固定大小的数组，我们需要在编译之前声明数组的大小。 动态数组的大小可以在合约编译后更改。
 
-### Declaring arrays
-We declare a fixed-size array by providing its type, array size (as an integer in square brackets), visibility, and name (line 9).
+### 声明数组
 
-We declare a dynamic array in the same manner. However, we don’t provide an array size and leave the brackets empty (line 6).
+通过提供其类型、数组大小（作为方括号内的整数）、可见性和名称（第9行）来声明固定大小数组。
 
-### Initializing arrays
-We can initialize the elements of an array all at once (line 7), or initiate new elements one by one (arr[0] = 1;). If we declare an array, we automatically initialize its elements with the default value 0 (line 9).
+有两种类型的数组：编译时固定大小的数组和动态数组。对于固定大小数组，在编译之前需要声明数组大小。动态数组的大小可以在合约编译后更改。 我们以相同方式声明动态数组。但是，我们不提供阵列大小并留空括号（第6行）。
 
-### Accessing array elements
-We access elements inside an array by providing the name of the array and the index in brackets (line 12).
+### 初始化数组
 
-### Adding array elements
-Using the `push()` member function, we add an element to the end of a dynamic array (line 25). 
+我们可以一次性初始化所有元素（第7行），也可以逐个初始化新元素（arr [0] = 1;）。如果我们声明一个数组，则自动使用默认值0初始化其元素（第9行）。 如果我们声明一个数组，则自动使用默认值0初始化其元素（第9行）。
 
-### Removing array elements
-Using the `pop()` member function, we delete the last element of a dynamic array (line 31). 
+### 访问数组元素
 
-We can use the `delete` operator to remove an element with a specific index from an array (line 42). 
-When we remove an element with the `delete` operator all other elements stay the same, which means that the length of the array will stay the same. This will create a gap in our array. 
-If the order of the array is not important, then we can move the last element of the array to the place of the deleted element (line 46), or use a mapping. A mapping might be a better choice if we plan to remove elements in our data structure.
+通过提供数组名称和方括号中的索引来访问数组内部元素（第12行）。
 
-### Array length
-Using the length member, we can read the number of elements that are stored in an array (line 35).
+### 添加数组元素
 
-<a href="https://www.youtube.com/watch?v=vTxxCbwMPwo" target="_blank">Watch a video tutorial on Arrays</a>.
+使用`push()`成员函数，我们将一个元素添加到动态数组的末尾（第25行）。
 
-## ⭐️ Assignment
-1. Initialize a public fixed-sized array called `arr3` with the values 0, 1, 2. Make the size as small as possible.
-2. Change the `getArr()` function to return the value of `arr3`.
+### 删除数组元素
+
+使用`pop()`成员函数，我们删除动态数组的最后一个元素（第31行）。
+
+我们可以使用`delete`运算符从数组中删除具有特定索引的元素（第42行）。当我们使用`delete`运算符删除一个元素时，所有其他元素保持不变，这意味着数组的长度将保持不变。这将在我们的数组中产生间隙。如果数组顺序不重要，则可以将该数组的最后一个元素移动到已删除元素所在位置（第46行），或者使用`mapping`。如果需要从数据结构中删除元素，则`mapping`可能是更好的选择。
+当我们使用`delete`运算符删除一个元素时，所有其他元素保持不变，这意味着数组的长度将保持不变。 这将在我们的数组中产生间隙。
+如果数组顺序不重要，则可以将该数组的最后一个元素移动到已删除元素所在位置（第46行），或者使用`mapping`。 如果需要从数据结构中删除元素，则 mapping 可能是更好的选择。
+
+### 数组长度
+
+使用`length`成员变量，我们可以读取存储在数组中的元素数量（第35行）。
+
+<a href="https://www.youtube.com/watch?v=vTxxCbwMPwo" target="_blank">观看关于Arrays 的视频教程</a>。
+
+## ⭐️ 作业
+
+1. 用值0、1、2初始化名为arr3 的公共固定大小数组。使其大小尽可能小。 使其大小尽可能小。
+2. 更改`getArr()`函数以返回`arr3`的值。
