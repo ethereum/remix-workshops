@@ -1,9 +1,3 @@
-# Introduction to Circom and Remix-IDE
-
-[Back to Tutorial Overview](../README.md)
-
----
-
 Welcome to this beginner-friendly tutorial on Circom using Remix-IDE. In this tutorial, you'll learn the basics of Circom, a domain-specific language used for creating arithmetic circuits, and how to use Remix-IDE as a tool for writing, compiling, and testing Circom code.
 
 **What is Circom?**

@@ -1,15 +1,4 @@
 
----
-
-## Step 4: Compiling the Circuit Using the Plugin
-
-```markdown
-# Compiling the Circuit Using the Plugin
-
-[Back to Step 3](../step-3/README.md)
-
----
-
 With your `multiplier.circom` circuit ready, it's time to compile it using the Circuit Compiler plugin.
 
 ## Selecting the Compiler Version

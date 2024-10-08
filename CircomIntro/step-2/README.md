@@ -1,9 +1,3 @@
-# Setting Up Remix-IDE and Installing the Circuit-Compiler Plugin
-
-[Back to Step 1](../step-1/README.md)
-
----
-
 In this step, we'll set up Remix-IDE for Circom development by installing the `circuit-compiler` plugin.
 
 ## Accessing Remix-IDE
