@@ -1,9 +1,3 @@
-# Computing the Witness
-
-[Back to Step 5](../step-5/README.md)
-
----
-
 With the trusted setup complete, you can now compute the witness for your circuit based on specific inputs.
 
 ## What is a Witness?

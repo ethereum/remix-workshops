@@ -1,9 +1,3 @@
-# Performing a Trusted Setup
-
-[Back to Step 4](../step-4/README.md)
-
----
-
 After compiling your circuit, you need to perform a trusted setup to generate proving and verification keys.
 
 ## Understanding Trusted Setup

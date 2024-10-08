@@ -1,9 +1,3 @@
-# Generating the Proof
-
-[Back to Step 6](../step-6/README.md)
-
----
-
 With the witness computed, the final step is to generate a proof that can be verified by others.
 
 ## Generating the Proof
