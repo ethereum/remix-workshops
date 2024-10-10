@@ -1,10 +1,5 @@
 In this step, we'll set up Remix-IDE for Circom development by installing the `circuit-compiler` plugin.
 
-## Accessing Remix-IDE
-
-1. Open your web browser and navigate to [Remix-IDE](https://remix.ethereum.org).
-2. You'll see the default interface for Solidity development.
-
 ## Installing the Circuit-Compiler Plugin
 
 1. On the left sidebar, click on the **Plugin Manager** (the plug icon).
@@ -19,7 +14,7 @@ In this step, we'll set up Remix-IDE for Circom development by installing the `c
 - **Compiler Version Dropdown:** Select the Circom compiler version you wish to use.
 - **Auto Compile Checkbox:** Enable this to automatically compile your circuit whenever you make changes.
 - **Hide Warnings Checkbox:** Enable this to suppress compiler warnings.
-- **Advanced Configuration:** Click to expand options for selecting the prime field (e.g., BN128, BLS12-381).
+- **Advanced Configuration:** Click to expand options for selecting the prime field (e.g., BN128, BLS12381).
 
 ![Circuit Compiler Interface](images/compiler_interface.png)
 
