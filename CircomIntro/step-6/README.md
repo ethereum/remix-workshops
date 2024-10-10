@@ -12,15 +12,15 @@ With the trusted setup complete, you can now compute the witness for your circui
    - `a = 3`
    - `b = 4`
 
-![Compute Witness](images/compute_witness.png)
+<img src="images/compute_witness.png" width=280 height=240>
 
 ## Computing the Witness
 
 1. After entering the inputs, click on the **Compute Witness** button.
 2. The plugin will compute the witness based on your inputs.
-3. If successful, you'll see a success message.
+3. If successful, you'll see `multiplier.wtn` created in the `.bin` directory in the file explorer.
 
-![Witness Computed](images/witness_computed.png)
+<img src="images/witness_computed.png" width=340 height=350>
 
 **Note:** If there are any errors, ensure that your inputs are valid and satisfy the circuit's constraints.
 
