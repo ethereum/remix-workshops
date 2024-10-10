@@ -14,7 +14,7 @@ In this step, we'll set up Remix-IDE for Circom development by installing the `c
 - **Compiler Version Dropdown:** Select the Circom compiler version you wish to use.
 - **Auto Compile Checkbox:** Enable this to automatically compile your circuit whenever you make changes.
 - **Hide Warnings Checkbox:** Enable this to suppress compiler warnings.
-- **Advanced Configuration:** Click to expand options for selecting the prime field (e.g., BN128, BLS12-381).
+- **Advanced Configuration:** Click to expand options for selecting the prime field (e.g., BN128, BLS12381).
 
 ![Circuit Compiler Interface](images/compiler_interface.png)
 
