@@ -5,13 +5,15 @@ Now that you have the Circuit Compiler plugin installed, let's write a simple Ci
 1. In the **File Explorer** on the left sidebar, click on the **Create New File** icon.
 2. Name your file `multiplier.circom` and press **Enter**.
 
-![Create New File](images/create_new_file.png)
+<img src="images/create_new_file.png" width=300 height=200>
 
 ## Writing the Circuit
 
 Open `multiplier.circom` and add the following code:
 
 ```circom
+pragma circom 2.0.0;
+
 template Multiplier() {
     signal input a;
     signal input b;
@@ -21,3 +23,11 @@ template Multiplier() {
 }
 
 component main = Multiplier();
+```
+
+## Explanation:
+- template `Multiplier()`: Defines a new circuit template called Multiplier.
+- `signal input a;` and `signal input b;`: Declare input signals a and b.
+- `signal output c;`: Declare an output signal c.
+- `c <== a * b;`: Constrain c to be the product of a and b.
+- `component main = Multiplier();`: Instantiates the Multiplier circuit as main, which is required for the compiler.

@@ -13,16 +13,11 @@ After compiling your circuit, you need to perform a trusted setup to generate pr
    - If unsure, select the default option.
 3. Click on the **Setup** button to start the trusted setup process.
 
-![Trusted Setup](images/trusted_setup.png)
+4. You can enable **Export Verification Key** to get the verification parameters.
 
-## Exporting Keys
+5. You can enable **Export Verification Contract** if you intend to verify proofs on-chain.
 
-After the setup is complete:
-
-- You can **Export Verification Key** to get the verification parameters.
-- You can **Export Verification Contract** if you intend to verify proofs on-chain.
-
-![Export Keys](images/export_keys.png)
+<img src="images/trusted_setup.png" width=330 height=350>
 
 **Note:** The trusted setup may take some time, depending on the complexity of your circuit.
 

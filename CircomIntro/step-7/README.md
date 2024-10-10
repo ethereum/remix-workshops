@@ -6,14 +6,14 @@ With the witness computed, the final step is to generate a proof that can be ver
    - Enable the **Export Verifier Calldata** checkbox if you plan to verify the proof on-chain.
 2. Click on the **Generate Proof** button.
 
-![Generate Proof](images/generate_proof.png)
+<img src="images/generate_proof.png" width=280 height=120>
 
 ## Understanding the Output
 
 - After generating the proof, the plugin will display the proof data.
 - If you enabled **Export Verifier Calldata**, it will also provide the calldata needed for on-chain verification.
 
-![Proof Generated](images/proof_generated.png)
+<img src="images/proof_generated.png" width=310 height=350>
 
 ## Next Steps
 
