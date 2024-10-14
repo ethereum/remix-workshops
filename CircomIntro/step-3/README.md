@@ -5,7 +5,7 @@ Now that you have the Circuit Compiler plugin installed, let's write a simple Ci
 1. In the **File Explorer** on the left sidebar, click on the **Create New File** icon.
 2. Name your file `multiplier.circom` and press **Enter**.
 
-<img src="images/create_new_file.png" width=300 height=200>
+<img src="https://i.ibb.co/rMCHK4B/create-new-file.png" alt="create-new-file" width=300 height=200>
 
 ## Writing the Circuit
 
