@@ -7,7 +7,7 @@ In this step, we'll set up Remix-IDE for Circom development by installing the `c
 3. Find the **Circuit Compiler** plugin in the list and click on the **Activate** button.
 4. The plugin will now appear in your sidebar.
 
-<img src="images/install_plugin.png" width=200 height=475>
+<img src="https://i.ibb.co/7Xj4v9T/install-plugin.png" alt="install-plugin" width=200 height=475>
 
 ## Understanding the Circuit Compiler Plugin Interface
 
@@ -16,7 +16,7 @@ In this step, we'll set up Remix-IDE for Circom development by installing the `c
 - **Hide Warnings Checkbox:** Enable this to suppress compiler warnings.
 - **Advanced Configuration:** Click to expand options for selecting the prime field (e.g., BN128, BLS12381).
 
-<img src="images/compiler_interface.png" width=300 height=300>
+<img src="https://i.ibb.co/Dk8DZxr/compiler-interface.png" alt="compiler-interface" width=300 height=300>
 
 With the plugin installed, you're now ready to start writing Circom code in Remix-IDE.
 

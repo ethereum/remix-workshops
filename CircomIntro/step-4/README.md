@@ -6,7 +6,7 @@ With your `multiplier.circom` circuit ready, it's time to compile it using the C
 1. Go to the **Circuit Compiler** plugin in the sidebar.
 2. Choose the desired **Compiler Version** from the dropdown menu. For this tutorial, select the latest stable version.
 
-<img src="images/select_compiler_version.png" width=250 height=100>
+<img src="https://i.ibb.co/bsRyNYY/select-compiler-version.png" alt="select-compiler-version" width=250 height=100>
 
 ## Configuring Compilation Options
 
@@ -16,7 +16,7 @@ With your `multiplier.circom` circuit ready, it's time to compile it using the C
   - Click to expand.
   - Select the **Prime Field**. For most cases, `BN128` is sufficient.
 
-<img src="images/advanced_configuration.png" width=300 height=100>
+<img src="https://i.ibb.co/XLxwQ10/advanced-configuration.png" alt="advanced-configuration" width=300 height=100>
 
 ## Compiling the Circuit
 
@@ -24,7 +24,7 @@ With your `multiplier.circom` circuit ready, it's time to compile it using the C
 2. The compiler will process your circuit.
 3. If successful, you'll see a compilation success message.
 
-<img src="images/compilation_success.png" width=200 height=400>
+<img src="https://i.ibb.co/YDP3Dp3/compilation-success.png" alt="compilation-success" width=200 height=400>
 
 **Note:** If there are any errors, they will be displayed in the console. Check your code for typos or syntax errors.
 
