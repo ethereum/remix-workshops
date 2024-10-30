@@ -1,6 +1,6 @@
 Now that we know how to query simple data, let's try a more complex query.
 
-This is a contract deployed to the mainnet - at this address: <a href="https://etherscan.io/address/0xdac17f958d2ee523a2206206994597c13d831ec7#code" target="_blank">https\://etherscan.io/address/0xdac17f958d2ee523a2206206994597c13d831ec7#code</a>
+This is a contract deployed to the mainnet - at this address: <a href="https://etherscan.io/address/0xdac17f958d2ee523a2206206994597c13d831ec7#code" target="_blank">https://etherscan.io/address/0xdac17f958d2ee523a2206206994597c13d831ec7#code</a>
 
 We are going to query the contract to find the name of it's token.
 
