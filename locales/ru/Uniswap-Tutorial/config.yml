@@ -1,0 +1,25 @@
+---
+id: uniswapSwapCourse
+name: Uniswap Swap Course
+summary: Go through the Solidity code of the Uniswap V3 Swap contract. Developed by the p2p learning platform https://dacade.org.
+level: 2
+tags:
+  - Solidity
+  - Tokens
+  - Uniswap
+steps:
+  - 
+    name: 1. Introduction
+    path: 1-introduction-to-uniswap
+  - 
+    name: 2. Routers, Interfaces, and Structs
+    path: 2-router-interfaces-and-structs
+  - 
+    name: 3. Single Hop Swaps
+    path: 3-single-hop-swaps
+  - 
+    name: 4. Multi-Hop Swaps
+    path: 4-multi-hop-swaps
+  - 
+    name: 5. Erc20 and Weth Interfaces
+    path: 5-erc20-weth-interfaces
