@@ -1,6 +1,6 @@
 In this section, we will create our first _smart contract_. This contract only consists of a string that holds the value "Hello World!".
 
-In the first line, we should specify the license that we want to use. You can find a comprehensive list of licenses here: <a href="https://spdx.org/licenses/" target="_blank">https\://spdx.org/licenses/</a>.
+In the first line, we should specify the license that we want to use. You can find a comprehensive list of licenses here: <a href="https://spdx.org/licenses/" target="_blank">https://spdx.org/licenses/</a>.
 
 Using the `pragma` keyword (line 3), we specify the Solidity version we want the compiler to use. In this case, it should be greater than or equal to `0.8.3` but less than 0.9.0.
 
