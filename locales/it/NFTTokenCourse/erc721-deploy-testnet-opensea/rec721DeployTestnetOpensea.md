@@ -15,8 +15,8 @@ In order to make transactions on the testnet, we need Ethereum testnet tokens.
 **2.1** Switch your Metamask from "Ethereum Mainnetwork" to "Rinkeby Test Network".
 
 **2.2** Go to <a href="https://faucet.paradigm.xyz/" 
-target="_blank">https\://faucet.paradigm.xyz/</a>, enter the address of your account and claim testnet ETH.
-You could also use other ropsten faucets like <a href="https://faucet.paradigm.xyz/" target="_blank">https\://faucet.paradigm.xyz/</a> or <a href="https://app.mycrypto.com/faucet" target="_blank">https\://app.mycrypto.com/faucet</a>. Have a look at the faucets listed on <a href="https://ethereum.org/en/developers/docs/networks/#testnet-faucets" target="_blank">ethereum.org</a> to learn more.
+target="_blank">https://faucet.paradigm.xyz/</a>, enter the address of your account and claim testnet ETH.
+You could also use other ropsten faucets like <a href="https://faucet.paradigm.xyz/" target="_blank">https://faucet.paradigm.xyz/</a> or <a href="https://app.mycrypto.com/faucet" target="_blank">https://app.mycrypto.com/faucet</a>. Have a look at the faucets listed on <a href="https://ethereum.org/en/developers/docs/networks/#testnet-faucets" target="_blank">ethereum.org</a> to learn more.
 
 ### 3. Contract Deployment
 
@@ -40,11 +40,11 @@ You should now see the name of the symbol of your token contract (e.g. GEO) in y
 
 <a href="https://opensea.io/" 
 target="_blank">OpenSea </a> is one of the most popular online marketplace for NFTs. OpenSea also provides a version where you can see assets on the testnet, under <a href="https://testnets.opensea.io/" 
-target="_blank">https\://testnets.opensea.io/</a>
+target="_blank">https://testnets.opensea.io/</a>
 
 **5.1** Go to <a href="https://testnets.opensea.io/login" 
-target="_blank">https\://testnets.opensea.io/login</a>.
+target="_blank">https://testnets.opensea.io/login</a>.
 
-**5.2** Connect with your Metamask wallet. You should be redirected to your account <a href="https://testnets.opensea.io/account" target="_blank">https\://testnets.opensea.io/account</a> view on OpenSea, where you should be able to see your NFT. You should see the image of your NFT; when you click on it, you should see the name, description, and under properties, also the attributes that you created.
+**5.2** Connect with your Metamask wallet. You should be redirected to your account <a href="https://testnets.opensea.io/account" target="_blank">https://testnets.opensea.io/account</a> view on OpenSea, where you should be able to see your NFT. You should see the image of your NFT; when you click on it, you should see the name, description, and under properties, also the attributes that you created.
 
 If you successfully completed this course and are familiar with the basics of Solidity development, we encourage you to continue your learning journey by learning how to create your own NFT auction contract from the Learneth resources.
