@@ -1,0 +1,26 @@
+---
+id: basics
+name: Basics of Remix
+summary: A typical workflow in Remix
+level: 1
+tags:
+  - Remix
+steps:
+  - 
+    name: Intro to the Interface
+    path: interface_introduction
+  - 
+    name: Intro to Workspaces
+    path: workspaces
+  - 
+    name: Loading & Compiling
+    path: load_and_compile
+  - 
+    name: Deploying to the Remix VM
+    path: deploy_to_the_remixvm
+  - 
+    name: Interacting with Functions
+    path: interacting
+  - 
+    name: Deploying to Public Networks
+    path: deploy_injected
