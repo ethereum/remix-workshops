@@ -4,7 +4,7 @@
 
 **1. Open Remix**
 
-https\://remix.ethereum.org
+https://remix.ethereum.org
 
 **2. In the plugin manager activate LEARNETH**
 
@@ -25,12 +25,12 @@ https://github.com/settings/tokens
 and create a new token and save it in Remix in the you just opened on the settings tab.
 ```
 
-***
+---
 
 ### Write your own tutorials for LEARNETH:
 
 See this site for instructions:
 
-https\://remix-learneth-plugin.readthedocs.io/en/latest/index.html#creating-tutorials
+https://remix-learneth-plugin.readthedocs.io/en/latest/index.html#creating-tutorials
 
-***
+---
