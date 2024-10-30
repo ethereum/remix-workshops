@@ -12,6 +12,6 @@ This library should have a method called `getFromLib` method which returns `3`.
 
 - Update the `get` method in the `test` contract to use the `LibraryForTest` library.   The function `get` should return the value it receives from `getFromLib`.
 
-***
+---------
 
 You can find more info about libraries in <a href="https://solidity.readthedocs.io/en/latest/contracts.html?highlight=library#libraries" target="_blank">this section of the Solidity Docs</a>.
