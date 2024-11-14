@@ -6,14 +6,14 @@ With the witness computed, the final step is to generate a proof that can be ver
    - Enable the **Export Verifier Calldata** checkbox if you plan to verify the proof on-chain.
 2. Click on the **Generate Proof** button.
 
-<img src="https://i.ibb.co/T2mZ6BR/generate-proof.png" alt="generate-proof" width=280 height=120>
+<img src="https://raw.githubusercontent.com/ethereum/remix-workshops/master/CircomIntro/step-7/images/generate_proof.png" alt="generate-proof" width=280 height=120>
 
 ## Understanding the Output
 
 - After generating the proof, the plugin will display the proof data.
 - If you enabled **Export Verifier Calldata**, it will also provide the calldata needed for on-chain verification.
 
-<img src="https://i.ibb.co/mSvcTGF/proof-generated.png" alt="proof-generated" width=310 height=350>
+<img src="https://raw.githubusercontent.com/ethereum/remix-workshops/master/CircomIntro/step-7/images/proof_generated.png" alt="proof-generated" width=310 height=350>
 
 ## Next Steps
 
