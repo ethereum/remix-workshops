@@ -17,7 +17,7 @@ After compiling your circuit, you need to perform a trusted setup to generate pr
 
 5. You can enable **Export Verification Contract** if you intend to verify proofs on-chain.
 
-<img src="https://i.ibb.co/fkppHnR/trusted-setup.png" alt="trusted-setup" width=330 height=350>
+<img src="https://raw.githubusercontent.com/ethereum/remix-workshops/master/CircomIntro/step-5/images/trusted_setup.png" alt="trusted-setup" width=330 height=350>
 
 **Note:** The trusted setup may take some time, depending on the complexity of your circuit.
 
