@@ -1,4 +1,4 @@
-As the web3 world grows, there there will be more blockchains. Unless the chains can communicate with one another, the ecosystem will become increasingly fragmented.
+As the web3 world grows, there will be more blockchains. Unless the chains can communicate with one another, the ecosystem will become increasingly fragmented.
 
 The Axelar network enables protocols to have cross-chain functionality between any two blockchains.
 
