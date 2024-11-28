@@ -1,5 +1,3 @@
-## Generating the Hash Checker Template in Remix-IDE
-
 Follow these steps to create the Hash Checker workspace in Remix-IDE.
 
 ### Step 1: Access the Workspace Templates
@@ -35,3 +33,5 @@ Follow these steps to create the Hash Checker workspace in Remix-IDE.
 ### Result
 
 - The workspace is created with the necessary files and directories.
+
+   ![Workspace Files](images/workspace_files.png)

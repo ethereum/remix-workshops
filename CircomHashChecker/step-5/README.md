@@ -13,6 +13,8 @@
 - Enable **Export Verification Key** to save the verification key to the File Explorer.
 - Enable **Export Verifier Contract** to save the Solidity contract for on-chain verification.
 
+<img src="https://raw.githubusercontent.com/ethereum/remix-workshops/master/CircomHashChecker/step-5/images/trusted_setup.png" alt="trusted-setup" width=330 height=350>
+
 5. **Run the Trusted Setup**:
 - Click on the **Run Setup** button.
 - Wait for the process to complete. This may take some time depending on the circuit complexity.
