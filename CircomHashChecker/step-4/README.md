@@ -22,7 +22,7 @@
 1. Click on the **Compile** button.
 2. Wait for the compilation to complete. A success badge will appear if compilation is successful.
 
-<img src="https://raw.githubusercontent.com/ethereum/remix-workshops/master/CircomHashChecker/step-4/images/compilation_success.png" alt="compilation-success" width=200 height=400>
+<img src="https://raw.githubusercontent.com/ethereum/remix-workshops/master/CircomHashChecker/step-4/images/compilation_success.png" alt="compilation-success" width=300 height=675>
 
 ### Understanding the Compilation Output
 

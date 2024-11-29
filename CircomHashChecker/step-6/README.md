@@ -15,11 +15,11 @@
    - For the values above, here is the computed Poseidon hash `16382790289988537028417564277589554649233048801038362947503054340165041751802`.
    - Enter the calculated `hash` value in the `hash` input field.
 
-   <img src="https://raw.githubusercontent.com/ethereum/remix-workshops/master/CircomHashChecker/step-6/images/compute_witness.png" alt="compute-witness" width=280 height=240>
+   <img src="https://raw.githubusercontent.com/ethereum/remix-workshops/master/CircomHashChecker/step-6/images/compute_witness.png" alt="compute-witness" width=250 height=400>
 
 4. **Compute the Witness**:
    - Click on the **Compute Witness** button.
    - Wait for the process to complete. A success badge will appear if the witness is computed successfully.
    - If successful, you'll see `calculate_hash.wtn` created in the `.bin` directory in the file explorer.
 
-   <img src="https://raw.githubusercontent.com/ethereum/remix-workshops/master/CircomHashChecker/step-6/images/witness_computed.png" alt="witness-computed" width=340 height=350>
+   <img src="https://raw.githubusercontent.com/ethereum/remix-workshops/master/CircomHashChecker/step-6/images/witness_computed.png" alt="witness-computed" width=300 height=100>
