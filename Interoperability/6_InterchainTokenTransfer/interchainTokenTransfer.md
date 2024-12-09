@@ -1,4 +1,4 @@
-At this point we have gone over an example for how to send a general message between one blockchain to another. Now, let's implement a contract that sends a message and a token from one blockchain to another.
+At this point we have gone over an example of how to send a general message between one blockchain to another. Now, let's implement a contract that sends a message and a token from one blockchain to another.
 
 ## Overview
 
@@ -14,7 +14,7 @@ It then has a function that will be called from the source chain called `sendToM
 
 In the function we already have the `require` statement implemented to ensure gas is sent
 
-We also have the basic ERC20 functionality to send the token from the calling wallet to this smart contract. The contract also calls the `approve` function to allows the Gateway to eventually transfer funds on its behalf.
+We also have the basic ERC20 functionality to send the token from the calling wallet to this smart contract. The contract also calls the `approve` function to allow the Gateway to eventually transfer funds on its behalf.
 
 Finally, the `_executeWithToken()` function is also implemented out of the box.
 

@@ -11,7 +11,7 @@ This function handles the execution on the destination chain. It takes the follo
 3. `sourceAddress`: The address from the source chain that the transaction has been sent from
 4. `payload`: The message that is being sent
 
-The `sourceChain` and `sourceAddress` are key paramaters which you receive out of the box that can be used for verifying authenticity of messages on the destination chain. The payload (as discussed in the gateway section) is the message that was sent from the source chain to be used on your destination chain. The `commandId` will not be used during the rest of this module.
+The `sourceChain` and `sourceAddress` are key parameters which you receive out of the box that can be used for verifying authenticity of messages on the destination chain. The payload (as discussed in the gateway section) is the message that was sent from the source chain to be used on your destination chain. The `commandId` will not be used during the rest of this module.
 
 ## \_executeWithToken()
 
