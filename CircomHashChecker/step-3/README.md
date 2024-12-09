@@ -10,9 +10,14 @@ Navigate to the `circuits` directory and open `calculate_hash.circom`. This file
 
 #### `CalculateHash` Template:
 - Defines inputs `value1`, `value2`, `value3`, `value4`.
-- Uses the `Poseidon` hash function to compute a hash of these values.
-- Uses `assert(hash == calculatedHash);` to ensure the provided hash matches the calculated hash.
+- Uses the `Poseidon` hash function to compute a hash of these values.\
 - Outputs `out`, which is the hash.
+
+#### `HashChecker` Template:
+- Inputs are the same values plus a `hash`.
+- Instantiates `CalculateHash` as `calculateSecret`.
+- Computes `calculatedHash`.
+- Uses `assert(hash == calculatedHash);` to ensure the provided hash matches the calculated hash.
 
 #### Main Component:
 - `component main {public [hash]} = HashChecker();`
