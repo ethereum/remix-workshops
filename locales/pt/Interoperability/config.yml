@@ -1,0 +1,31 @@
+---
+id: interopCourse
+name: Multichain Protocols with Axelar
+summary: Learn how to build interoperable smart contracts that can send messages and assets between different blockchains using Axelar technology.
+level: 2
+tags:
+  - Solidity
+  - Interoperability
+  - Axelar
+steps:
+  - 
+    name: An Intro to Axelar
+    path: 1_Intro
+  - 
+    name: Axelar Gateway
+    path: 2_Gateway
+  - 
+    name: Axelar Gas Service
+    path: 3_GasService
+  - 
+    name: Axelar Executable
+    path: 4_Executable
+  - 
+    name: Interchain Messages
+    path: 5_InterchainMessage
+  - 
+    name: Interchain Token Transfers
+    path: 6_InterchainTokenTransfer
+  - 
+    name: Further Reading
+    path: 7_FurtherReading

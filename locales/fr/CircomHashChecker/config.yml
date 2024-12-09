@@ -1,0 +1,35 @@
+id: circom-hash-checker
+name: Hash Checker Tutorial
+summary: A tutorial on creating and understanding a Hash Checker circuit using Remix-IDE templates, including trusted setup and proof generation.
+level: 1
+tags:
+  - Circom
+  - Remix-IDE
+steps:
+  - 
+    name: Introduction to the Hash Checker Circuit
+    path: step-1
+  - 
+    name: Generating the Hash Checker Template in Remix-IDE
+    path: step-2
+  - 
+    name: Exploring calculate_hash.circom
+    path: step-3
+  - 
+    name: Compiling the Circuit
+    path: step-4
+  - 
+    name: Performing a Trusted Setup
+    path: step-5
+  - 
+    name: Compute Witness
+    path: step-6
+  - 
+    name: Generate Proof
+    path: step-7
+  - 
+    name: Exploring the Trusted Setup Script (Optional)
+    path: step-8
+  - 
+    name: Exploring the Proof Generation Script (Optional)
+    path: step-9
