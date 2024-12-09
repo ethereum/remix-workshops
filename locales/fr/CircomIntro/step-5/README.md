@@ -7,7 +7,7 @@ After compiling your circuit, you need to perform a trusted setup to generate pr
 
 ## Performing the Trusted Setup
 
-1. In the **Setup and Exports** section, select the **Protocol**:
+1. In the **Setup and Exports** section, select the **Proving Scheme**:
    - Choose between **Groth16** or **Plonk**. We'll use **Groth16** for this tutorial.
 
 2. Choose the appropriate **Power of Tau** file from the dropdown. This file is necessary for the trusted setup.
