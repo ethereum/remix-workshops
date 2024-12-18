@@ -1,10 +1,9 @@
 
-With your `multiplier.circom` circuit ready, it's time to compile it using the Circuit Compiler plugin.
+With your `multiplier.circom` circuit ready, let's compile it using the Circuit Compiler plugin.
 
 ## Selecting the Compiler Version
 
-1. Go to the **Circuit Compiler** plugin in the sidebar.
-2. Choose the desired **Compiler Version** from the dropdown menu. For this tutorial, select the latest stable version.
+Choose the desired **Compiler Version** from the dropdown menu. For this tutorial, select the latest stable version.
 
 <img src="https://raw.githubusercontent.com/ethereum/remix-workshops/master/CircomIntro/step-4/images/select_compiler_version.png" alt="select-compiler-version" width=250 height=100>
 
