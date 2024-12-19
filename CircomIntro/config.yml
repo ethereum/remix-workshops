@@ -1,14 +1,14 @@
 id: circom-intro
-name: Introduction to Circom with Remix-IDE
-summary: A beginner-friendly tutorial on using Circom within Remix-IDE to create and compile arithmetic circuits.
+name: Intro to Circom
+summary: A intro to using Circom for creating arithmetic circuits.
 level: 1
 tags:
   - Circom
   - Remix-IDE
 steps:
-  - name: Introduction to Circom and Remix-IDE
+  - name: Introduction
     path: step-1
-  - name: Installing the Circuit-Compiler Plugin
+  - name: Installing the Circuit-Compiler
     path: step-2
   - name: Writing Your First Circom Circuit
     path: step-3
