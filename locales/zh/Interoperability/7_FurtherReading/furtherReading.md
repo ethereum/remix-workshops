@@ -1,6 +1,6 @@
 恭喜您完成了互操作性模块！ 🎉🎉
 
-想要继续学习与Axelar的互操作性。 这儿有许多有用的资源。
+想要继续学习与Axelar的互操作性。 There are many useful resources available.
 
 - 关于 <a href="https://docs.axelar.dev/" target="_blank">文档 📚</a>
 
