@@ -1,4 +1,4 @@
-随着Web3世界的增长，将会有更多的区块链。 除非这些链之间可以互相通信，否则生态系统将越来越碎片化。
+As the web3 world grows, there will be more blockchains. 除非这些链之间可以互相通信，否则生态系统将越来越碎片化。
 
 Axelar 网络使协议能够在任意两个区块链之间具有跨链功能。
 
