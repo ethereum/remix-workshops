@@ -11,7 +11,7 @@ Axelar 可执行文件包含相关的辅助函数，这些函数将根据源链�
 3. `sourceAddress`: 被发送的这条交易所在源链上的地址
 4. `payload`: 发送的信息
 
-`sourceChain`和`sourceAddress`是开箱即用的关键参数，可以用于核查真实性的信息上的目的地链。 有效负载（如网关部分中所述）是从源链发送并在目标链上使用的消息。 此模块的其余部分不会使用 `commandId` 。
+The `sourceChain` and `sourceAddress` are key parameters which you receive out of the box that can be used for verifying authenticity of messages on the destination chain. 有效负载（如网关部分中所述）是从源链发送并在目标链上使用的消息。 此模块的其余部分不会使用 `commandId` 。
 
 ## \_executeWithoken()
 
