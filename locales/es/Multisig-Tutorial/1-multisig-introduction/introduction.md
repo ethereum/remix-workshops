@@ -4,7 +4,7 @@
 
 Una cartera multifirma (multifirma) es un tipo de cartera digital que requiere varias claves para autorizar una transacción de criptomonedas.
 
-Imagina una cartera multifirma como una bóveda segura con múltiples bloqueos. Para abrir la bóveda, cada uno de los teclados debe abrir su bloqueo individual. Esta configuración asegura que ninguna persona puede acceder a los contenidos de la bóveda sin el consentimiento de los demás.
+Imagina una cartera multifirma como una bóveda segura con múltiples bloqueos. To open the vault, each keyholder must open their individual lock. Esta configuración asegura que ninguna persona puede acceder a los contenidos de la bóveda sin el consentimiento de los demás.
 
 ## ¿Cómo funciona una Cartera Multifirma Multisig?
 
