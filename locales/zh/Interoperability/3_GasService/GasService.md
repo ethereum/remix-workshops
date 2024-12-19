@@ -16,7 +16,7 @@ Axelar 燃料服务是一个非常有用的工具，可用于支付链间交易�
 
 ## payNativeGasForContractCallWithToken()
 
-此功能允许您使用源链的原生代币支付整个跨链交易的费用（包括一次代币转账）。 它需要七个相关参数：
+This function allows you to pay for the entirety of an interchain transaction (that includes a token transfer) in the native token of the source chain. 它需要七个相关参数：
 
 1. `sender`：付款地址
 2. `destinationAddress`：交易被发往的目标链上的地址
@@ -26,4 +26,4 @@ Axelar 燃料服务是一个非常有用的工具，可用于支付链间交易�
 6. `amount`: 被发送的代币数量
 7. `refundAddress`：如果随此交易发送的燃气费过多，则应将任何退款发送到的地址。
 
-这个函数与第一个前面的函数几乎完全相同，主要不同的是它用于消息+代币的传输交易，而不是仅仅用于跨链消息交易(又称GMP交易)。 因此，燃料服务也需要知道正在发送的代币的`symbol`和`amount`。
+This function is nearly identical to the first top one the main difference being that it is used for message + token transfer transactions as opposed to just interchain message transactions (aka GMP Transactions). 因此，燃料服务也需要知道正在发送的代币的`symbol`和`amount`。
