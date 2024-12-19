@@ -1,6 +1,6 @@
 Axelar网关是您的智能合约进入Axelar生态系统的入口。 一旦你在网关上触发了适当的函数，你的交易将从源链跨越Axelar网络开始其跨链之旅到目标链。 每个连接到Axelar的链都有一个部署的网关合约供您互动。
 
-你需要熟悉下面两个更具相关性的函数。
+The following are the two more relevant functions you will need to be familiar with.
 
 ## callContract()
 
