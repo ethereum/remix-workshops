@@ -1,6 +1,6 @@
 El Portal Axelar es el punto de entrada para tu contrato inteligente en el ecosistema Axelli. Una vez que hayas activado la función apropiada en la puerta de enlace, tu transacción iniciará su viaje intercadena desde su cadena de origen a través de la red Axelar hasta la cadena de destino. Cada cadena que está conectada a Axelar tiene un contrato de pasarela desplegado con el que interactuar con ella.
 
-Las siguientes son las dos funciones más relevantes que necesitarás para familiarizarse.
+The following are the two more relevant functions you will need to be familiar with.
 
 ## callContract()
 
