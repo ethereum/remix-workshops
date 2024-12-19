@@ -16,7 +16,7 @@ The parameters overlap with the parameters required by the `callContract()` func
 
 ## payNativeGasForContractCallWithToken()
 
-This function allows you to pay for the entirety of a interchain transaction (that includes a token transfer) in the native token of the source chain. It takes seven relevant parameters:
+This function allows you to pay for the entirety of an interchain transaction (that includes a token transfer) in the native token of the source chain. It takes seven relevant parameters:
 
 1. `sender`: The address making the payment
 2. `destinationAddress`: The address on the destination chain the transaction is sent to
@@ -26,4 +26,4 @@ This function allows you to pay for the entirety of a interchain transaction (th
 6. `amount`: The amount of the token that was sent
 7. `refundAddress`: The address any refunds should be sent to if too much gas was sent along with this transaction.
 
-This function is nearly identical to the first top one the main different being that it is used for message + token transfer transactions as opposed to just interchain message transactions (aka GMP Transactions). As a result the GasService needs to also know the `symbol` and `amount` of the token that is being sent.
+This function is nearly identical to the first top one the main difference being that it is used for message + token transfer transactions as opposed to just interchain message transactions (aka GMP Transactions). As a result the GasService needs to also know the `symbol` and `amount` of the token that is being sent.
