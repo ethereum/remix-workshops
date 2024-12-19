@@ -4,11 +4,11 @@ Si esta es su primera vez en Remix, se carga un espacio de trabajo llamado **esp
 
 ![default workspace](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/default_workspace.png)
 
-El **espacio_de_trabajo_por_defecto** tiene tres archivos Solidity (.sol) en la carpeta contractuales. Remix tiene una serie de otras plantillas.  Cuando se carga una plantilla, entra en un espacio de trabajo.  Para ir entre espacios de trabajo, usa el cuadro de selección en la parte superior del Explorador de archivos.
+El **espacio_de_trabajo_por_defecto** tiene tres archivos Solidity (.sol) en la carpeta contractuales. Remix has a number of other templates. Cuando se carga una plantilla, entra en un espacio de trabajo. Para ir entre espacios de trabajo, usa el cuadro de selección en la parte superior del Explorador de archivos.
 
 ![](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/select-box.png)
 
-Pero los espacios de trabajo no son sólo para plantillas.  Al clonar un repositorio en Remix, los archivos serán colocados en un espacio de trabajo.
+Pero los espacios de trabajo no son sólo para plantillas. Al clonar un repositorio en Remix, los archivos serán colocados en un espacio de trabajo.
 
 Vamos a crear un nuevo área de trabajo
 
@@ -20,4 +20,4 @@ Vamos a crear un nuevo área de trabajo
 
 ![hamburger](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/workspaces/images/popup.png)
 
-Ten en cuenta que en este menú emergente, puedes clonar un repositorio.  La gestión de un repositorio de Git ocurre en el complemento de DGit.  También puedes crear acciones de Github con las opciones del flujo de trabajo en el menú emergente.
+Ten en cuenta que en este menú emergente, puedes clonar un repositorio. La gestión de un repositorio de Git ocurre en el complemento de DGit. You can also create Github actions with the three workflow choices in the popup menu.
