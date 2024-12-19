@@ -1,4 +1,4 @@
-Now that you have the Circuit Compiler plugin installed, let's write a simple Circom circuit.
+Let's write a simple Circom circuit.
 
 ## Creating a New Circuit File
 
