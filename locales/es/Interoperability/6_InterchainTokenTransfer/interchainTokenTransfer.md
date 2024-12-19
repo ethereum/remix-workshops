@@ -1,4 +1,4 @@
-En este punto hemos pasado por un ejemplo para enviar un mensaje general entre una cadena de bloque a otra. Ahora, vamos a implementar un contrato que envía un mensaje y un token de un cadena de bloque a otro.
+At this point we have gone over an example of how to send a general message between one blockchain to another. Ahora, vamos a implementar un contrato que envía un mensaje y un token de un cadena de bloque a otro.
 
 ## General
 
@@ -14,7 +14,7 @@ Posteriormente tiene una función que será llamada desde la cadena fuente llama
 
 En la función ya tenemos la instrucción `require` implementada para asegurar que el gas sea enviado
 
-También tenemos la funcionalidad básica ERC20 para enviar el token desde la cartera de llamadas a este contrato inteligente. El contrato también llama a la función 'approve' para permitir que la puerta de enlace finalmente transfiera fondos en su nombre.
+También tenemos la funcionalidad básica ERC20 para enviar el token desde la cartera de llamadas a este contrato inteligente. The contract also calls the `approve` function to allow the Gateway to eventually transfer funds on its behalf.
 
 Finalmente, la función `_executeWithToken()` también se implementa desde la caja.
 
