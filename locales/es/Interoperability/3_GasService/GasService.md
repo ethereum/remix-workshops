@@ -16,7 +16,7 @@ Los parámetros se solapan con los parámetros requeridos por la función `callC
 
 ## payNativeGasForContractCallWithToken()
 
-Esta función te permite pagar la totalidad de una transacción intercadena (que incluye una transferencia de tokens) en el token nativo de la cadena de origen. Necesitas tres parámetros relevantes:
+This function allows you to pay for the entirety of an interchain transaction (that includes a token transfer) in the native token of the source chain. Necesitas tres parámetros relevantes:
 
 1. `sender`: La dirección que realiza el pago
 2. `destinationContractAddress`: La dirección en la cadena de destino en la que se ejecutará esta transacción
@@ -26,4 +26,4 @@ Esta función te permite pagar la totalidad de una transacción intercadena (que
 6. "amount": La cantidad del token que se envió
 7. `refundAddress`: La dirección de cualquier reembolso debería ser enviada a si se envió demasiado gas junto con esta transacción.
 
-Esta función es casi idéntica a la primera de la primera, siendo la principal diferente que se utiliza para las transacciones de mensaje + de transferencia de tokens en contraposición a las transacciones de mensajes intercadenas (también conocidas como transacciones GMP). Como resultado, GasService también necesita conocer el `symbol` y `amount` del token que se está enviando.
+This function is nearly identical to the first top one the main difference being that it is used for message + token transfer transactions as opposed to just interchain message transactions (aka GMP Transactions). Como resultado, GasService también necesita conocer el `symbol` y `amount` del token que se está enviando.
