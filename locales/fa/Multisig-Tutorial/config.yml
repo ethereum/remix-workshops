@@ -1,0 +1,25 @@
+---
+id: multisigCourse
+name: Multisig Wallet
+summary: Learn how to create and interact with a multisig wallet. Developed by the p2p learning platform https://dacade.org.
+level: 1
+tags:
+  - Solidity
+  - Tokens
+  - Multisig
+steps:
+  - 
+    name: 1. Introduction
+    path: 1-multisig-introduction
+  - 
+    name: 2. Initialize the Contract
+    path: 2-multisig-initialization
+  - 
+    name: 3. Deposits
+    path: 3-multisig-deposits
+  - 
+    name: 4. Transactions
+    path: 4-multisig-transactions
+  - 
+    name: 5. Revoking Confirmations
+    path: 5-multisig-revoke
