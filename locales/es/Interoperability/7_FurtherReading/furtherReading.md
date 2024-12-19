@@ -1,6 +1,6 @@
 ¡Felicitaciones por llegar al final del módulo de interoperabilidad! 🎉🎉
 
-Para continuar con tu aprendizaje de interoperabilidad con Axelar. Hay muchos recursos útiles disponibles.
+Para continuar con tu aprendizaje de interoperabilidad con Axelar. There are many useful resources available.
 
 - Para <a href="https://docs.axelar.dev/" target="_blank">documentation 📚</a>
 
