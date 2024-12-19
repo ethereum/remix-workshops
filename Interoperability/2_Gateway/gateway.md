@@ -1,6 +1,6 @@
 The Axelar Gateway is the entrypoint for your smart contract into the Axelar ecosystem. Once you have triggered the appropriate function on the Gateway, your transaction will begin its interchain journey from your source chain across the Axelar network to the destination chain. Each chain that is connected to Axelar has a deployed gateway contract for you to interact with.
 
-The follow are the two more relevant functions you will need to be familiar with.
+The following are the two more relevant functions you will need to be familiar with.
 
 ## callContract()
 
