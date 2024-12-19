@@ -2,7 +2,7 @@ En esta sección crearemos un contrato que enviará un mensaje de "Hola mundo" e
 
 ## Constructor
 
-Lo primero que necesitarás para crear en el `constructor` para la función. Esto te permitirá establecer los contratos `Gateway` y `Gas Service` que hemos discutido en las secciones anteriores.
+The first thing you will need to create is the `constructor` for the function. Esto te permitirá establecer los contratos `Gateway` y `Gas Service` que hemos discutido en las secciones anteriores.
 
 Al desplegar el contrato pasarás en la dirección de la `Gateway` y `GasService` para Ethereum Sepolia esas direcciones son `0xe432150cce91c13a887f7D836923d5597adD8E31` para la Puerta de Enlace y `0xbE406F0189A0B4cf3A05C286473D23791D44Cc6` para el Servicio de Gas.
 
@@ -18,7 +18,7 @@ Esta función requiere tres parámetros:
 2. `_destinationAddress`: La dirección en la cadena de destino en la que se ejecutará esta transacción
 3. `_message`: El mensaje siendo pasado a la cadena de destino
 
-Primero, tienes una sentencia `require` que asegura que el `msg.value` contenga un valor. Este `msg.value` será usado para pagar el `GasService`. Si no se han enviado fondos, entonces la transacción debe ser revertida ya que la transacción no puede ejecutarse en la cadena de bloques Axelar y de destino sin ningún gas.
+First, you have a `require` statement which ensures that the `msg.value` contains a value. Este `msg.value` será usado para pagar el `GasService`. Si no se han enviado fondos, entonces la transacción debe ser revertida ya que la transacción no puede ejecutarse en la cadena de bloques Axelar y de destino sin ningún gas.
 
 Después, codificas el `_message` que fue pasado. Observa que el `_message` se establece como un tipo de `string`. Axelar espera que este mensaje se envíe como un tipo `bytes` para convertir la `string` a `bytes` simplemente pasarla a través de `abi.encode()`.
 
@@ -28,7 +28,7 @@ Para pagar toda la transacción intercadena activarás la función `payNativeGas
 
 Esta función necesita los parámetros explicados anteriormente en la sección GasService. El `sender` para esta transacción será este contrato, que es `address(this)`. El `destinationChain` y `destinationAddress` simplemente pueden pasarse desde estos parámetros de funciones, el `payload` es el \_message codificado que escribimos antes. Por último, necesita especificar cuál es la dirección de reembolso, esta puede ser la dirección que activa esta función, que se obtiene escribiendo `msg.sender`.
 
-Una vez que actives esta función, ¡habrás enviado con éxito una transacción desde la cadena origen a través de Axelar a la cadena de destino! Pero todavía hay un último paso que necesita ser completado.
+Once you trigger this function you will have successfully sent a transaction from the source chain via Axelar to the destination chain! But there is still one final step that needs to be complete.
 
 ### Recibir mensajes en la cadena de destino
 
