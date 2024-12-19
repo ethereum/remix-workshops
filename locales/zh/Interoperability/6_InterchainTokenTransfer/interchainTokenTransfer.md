@@ -1,4 +1,4 @@
-到此为止，我们已经举例说明了如何在一个区块链与另一个区块链之间发送普通信息。 现在，让我们来实现一个合约，从一个区块链向另一个区块链发送一条信息和一个代币。
+At this point we have gone over an example of how to send a general message between one blockchain to another. 现在，让我们来实现一个合约，从一个区块链向另一个区块链发送一条信息和一个代币。
 
 ## 概述
 
@@ -14,7 +14,7 @@
 
 在函数中，我们已经实现了 `require` 语句，以确保 gas 被发送
 
-我们还具有基本的 ERC20 功能，可将代币从调用钱包发送到此智能合约。 该合约还调用`approve `功能，以允许网关最终代表其转移资金。
+我们还具有基本的 ERC20 功能，可将代币从调用钱包发送到此智能合约。 The contract also calls the `approve` function to allow the Gateway to eventually transfer funds on its behalf.
 
 最后，`_executeWithToken()`函数也是开箱即用的。
 
