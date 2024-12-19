@@ -2,7 +2,7 @@
 
 ## 构造函数
 
-首先需要为合约创建构造函数。 这样就可以设置前几节讨论过的 "网关" 和 "燃气服务" 合约。
+The first thing you will need to create is the `constructor` for the function. 这样就可以设置前几节讨论过的 "网关" 和 "燃气服务" 合约。
 
 部署合约时，你需要输入以太坊 Sepolia 的 `Gateway` 和 `GasService` 的地址，Gateway 是 `0xe43250cce91cce91c13a887f7D836923d5597adD8E31` ，GasService 是 `0xbE406F0189A0B4cf3A05C286473D23791Dd44Cc6`。
 
@@ -18,7 +18,7 @@
 2. `_destinationAddress`：交易将在目标链上执行的地址
 3. `_message`：传递到目标链的消息
 
-首先，你得有一个 `require` 语句，确保`msg.value` 包含一个值。 此 `msg.value` 将用于支付 `GasService` 。 如果没有发送资金，则应撤销交易，因为在没有任何 gas 的情况下，交易无法在 Axelar 区块链和目标链上执行。
+First, you have a `require` statement which ensures that the `msg.value` contains a value. 此 `msg.value` 将用于支付 `GasService` 。 如果没有发送资金，则应撤销交易，因为在没有任何 gas 的情况下，交易无法在 Axelar 区块链和目标链上执行。
 
 接下来，你需要对传入的 `_message` 进行编码。 请注意，`_message`已设置为`string`类型。 Axelar 希望此消息以 `bytes` 类型提交，要将`string` 转换为 `bytes` ，您只需通过 `abi.encode()` 传递。
 
@@ -28,7 +28,7 @@
 
 该函数需要前面 GasService 部分中解释的参数。 此交易的 `sender` 就是该合约，也就是 `address(this)` 。 `destinationChain` 和 `destinationAddress` 可以从这个函数参数中传递，`payload` 是我们先前所写的 \_message 的编码。 最后，您需要指定退款地址，这可以是触发此函数的地址，您可以写入`msg.sender`。
 
-一旦您触发此函数，您将成功地通过Axelar从源链向目标链发送一笔交易！ 但仍有最后一步需要完成。
+Once you trigger this function you will have successfully sent a transaction from the source chain via Axelar to the destination chain! But there is still one final step that needs to be complete.
 
 ### 在目标链上接收消息
 
