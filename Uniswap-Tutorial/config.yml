@@ -8,7 +8,7 @@ tags:
   - Tokens
   - Uniswap
 steps:
-  - name: 1. Introduction
+  - name: 1. Introducción
     path: 1-introduction-to-uniswap
 
   - name: 2. Routers, Interfaces, and Structs
