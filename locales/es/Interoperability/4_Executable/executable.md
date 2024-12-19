@@ -11,7 +11,7 @@ Esta función gestiona la ejecución en la cadena de destino. Necesitas los sigu
 3. `sourceAddress`: La dirección de la cadena de origen desde la que la transacción ha sido enviada
 4. `payload`: El mensaje que está siendo enviado
 
-La `sourceChain` y `sourceAddress` son parámetros clave que recibes de la caja que se puede utilizar para verificar la autenticidad de los mensajes de la cadena de destino. La carga útil (tal como se describe en la sección de la puerta de enlace) es el mensaje que fue enviado desde la cadena fuente para ser utilizado en tu cadena de destino. El `commandId` no será utilizado durante el resto de este módulo.
+The `sourceChain` and `sourceAddress` are key parameters which you receive out of the box that can be used for verifying authenticity of messages on the destination chain. La carga útil (tal como se describe en la sección de la puerta de enlace) es el mensaje que fue enviado desde la cadena fuente para ser utilizado en tu cadena de destino. El `commandId` no será utilizado durante el resto de este módulo.
 
 ## \_executeWithToken()
 
