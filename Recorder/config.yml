@@ -1,0 +1,7 @@
+--- 
+id: recorder
+name: Recorder
+summary: Guardar un conjunto de acciones y reproducirlas una y otra vez
+level: 2
+tags: 
+  - Remix
