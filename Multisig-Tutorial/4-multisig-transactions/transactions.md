@@ -11,7 +11,7 @@ We have new modifiers in this iteration of the contract. Let's examine them one 
 On line 28, we have a struct called `Transaction`. We store the struct members: `to`, `value`, `data`, `executed`, and `numConfirmations` in individual variables.
 
 ## Mapping of Confirmations
-On line 37, we have a mapping called `isConfirmed`. This mapping is used to keep track of the confirmations of each transaction. It maps the transaction's index to a mapping of an owner addresse to a boolean value. The boolean value indicates whether this owner has confirmed the transaction.
+On line 37, we have a mapping called `isConfirmed`. This mapping is used to keep track of the confirmations of each transaction. It maps the transaction's index to a mapping of an owner addresses to a boolean value. The boolean value indicates whether this owner has confirmed the transaction.
 
 ## Transactions Array
 On line 39, we have an array called `transactions`. The array is used to store all the transactions submitted to the multi-signature wallet.
