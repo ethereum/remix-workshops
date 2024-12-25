@@ -1,6 +1,6 @@
-In the previous chapter, we compiled a contract  - which is to say the Solidity code has been transformed into little chunks of Ethereum Virtual Machine (EVM) bytecode.
+前の章では、コントラクトをコンパイルしました。これは、Solidityコードがイーサリアム仮想マシン(EVM)におけるバイトコードの小さなチャンクに変換されたと言うことが出来ます。
 
-Now we will put that code on a test blockchain.
+次は、テストブロックチェーンにコードを配置しましょう。
 
 1. Click the Deploy and Run icon ![deploy & run icon](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/deploy_to_the_remixvm/images/run.png "deploy & run icon").
 
