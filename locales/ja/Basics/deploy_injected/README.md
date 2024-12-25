@@ -1,12 +1,12 @@
-1. If you don't have a browser wallet like **MetaMask** download and install one now.
+1. **MetaMask** のようなブラウザウォレットが無ければ、はじめにダウンロードしてインストールしてください。
 
-2. Click the MetaMask icon in your browser. Sign in and choose the Ephemery test network. You might need to update your wallet's settings so that you can see **test networks**.  Alternatively, you can go to Remix's Deploy & Run transation module and in the ENVIRONMENT section select Ephemery.
+2. ブラウザにあるMetaMaskアイコンをクリックしてください。 サインインして、 Ephemeryテストネットワークを選択します。 **テストネットワーク** を表示するには、ウォレット設定の更新が必要になります。  他の方法として、RemixのDeploy & RunトランザクションモジュールのENVIRONMENTセクションでEphemeryを選択することもできます。
 
-3. Getting test ETH for public test networks is often annoying.  Ephemery is a public network that is refreshed monthly, so getting test ETH should be painless.  Here is a link to some <a href="https://github.com/ephemery-testnet/ephemery-resources?tab=readme-ov-file#faucets" target="_blank">Ephemery faucets</a>.
+3. 公開テストネットワークでテスト用のETHを取得するのは、煩雑な場合があります。  Ephemeryは、公開テストネットワークで毎月リフレッシュされます。そのため、テスト用のETHを取得するのは簡単になっています。  こちらに<a href="https://github.com/ephemery-testnet/ephemery-resources?tab=readme-ov-file#faucets" target="_blank">Ephemeryフォーセット</a>のリンクがまとまっています。
 
 ![](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/deploy_injected/images/testnet.png)
 
-Sepolia is another popular testnet that is not refreshed, so deployments will persist, but Sepolia faucets are more difficult to use.
+もう一つの人気のテストネットとしてSepoliaがあります。こちらは、リフレッシュされません。デプロイしたものが保持されますが、Sepoliaフォーセットの使用には、より困難が伴います。
 
 In your browser wallet make sure that you have NOT selected mainnet or any network that will cost real ETH. In the Deploy & Run module, below the Environment select box, you'll see a badge with the network's ID and for popular chains, its name.  In the case below its Sepolia.
 
