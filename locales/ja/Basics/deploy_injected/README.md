@@ -8,14 +8,14 @@
 
 もう一つの人気のテストネットとしてSepoliaがあります。こちらは、リフレッシュされません。デプロイしたものが保持されますが、Sepoliaフォーセットの使用には、より困難が伴います。
 
-In your browser wallet make sure that you have NOT selected mainnet or any network that will cost real ETH. In the Deploy & Run module, below the Environment select box, you'll see a badge with the network's ID and for popular chains, its name.  In the case below its Sepolia.
+ブラウザウォレットでメインネットや他のETHを使用するネットワークが選択されていないことを確認してください。 Deploy & Runモジュールでは、次のENVIRONMENT選択ボックスで、一般的なチェーンの名前とネットワークIDが表示されます。  以下はSepoliaのケースです。
 
 ![](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/deploy_injected/images/sepolia.png)
 
-5. Make sure you see the 2_Owner.sol as a choice in the **CONTRACT** select box, then click the **Deploy** button.
+5. **CONTRACT** 選択ボックスの欄に 2_Owner.sol があることを確認し、 **Deploy** ボタンをクリックして下さい。
 
-If the **CONTRACT** select box is empty, you'll need to compile 2_Owner again by making 2_Owner.sol the active file in the **editor** and then go to the **Solidity Compiler** to compile it.
+**CONTRACT** 選択ボックスが空の場合は、**エディタ** 内にあるアクティブファイルで 2_Owner.sol を作成し、 **Solidityコンパイラ** で 2_Owner をコンパイルする必要があります。
 
-6. After you hit the `Deploy` button, you'll see the browser wallet popup asking you to pay for the transactions.  If you have the appropriate kind of ETH for this chain, approve this transaction.  Check the printout in the terminal.  Once the block is validated, the **deployed instance** will appear at the bottom of Deploy & Run
+6. `Deploy` ボタンを押すと、ブラウザウォレットのポップアップがトランザクションの支払を求めてきます。  使用しているチェーンにETHが十分にある場合は、トランザクションを承認してください。  ターミナルの出力を確認してください。  ブロックが検証されると、 **デプロイ済みのインスタンス** が Deploy & Run ボタンに現れます。
 
-And with that you have finished this tutorial.  You now have experience with opening, compiling, deploying and interacting with Smart Contracts in Remix IDE.
+以上でこのチュートリアルは終了です。  これで、Remix IDEでスマートコントラクトを開き、デプロイし、やり取りする経験を得ることができました。
