@@ -2,9 +2,9 @@
 
 次は、テストブロックチェーンにコードを配置しましょう。
 
-1. Click the Deploy and Run icon ![deploy & run icon](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/deploy_to_the_remixvm/images/run.png "deploy & run icon").
+1. Deploy and Run アイコン ![deploy & run icon](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/deploy_to_the_remixvm/images/run.png "deploy & run icon") をクリックしてください。
 
-2. Select one of the **Remix VM**s from the **Environment** pulldown.
+2. **Environment** プルダウンで **Remix VM** のどれか１つを選択してください。
 
 3. Click the Deploy button (or the transact button in the expanded view).
 
