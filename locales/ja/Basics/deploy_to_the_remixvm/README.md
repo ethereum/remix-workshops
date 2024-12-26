@@ -6,10 +6,10 @@
 
 2. **Environment** プルダウンで **Remix VM** のどれか１つを選択してください。
 
-3. Click the Deploy button (or the transact button in the expanded view).
+3. Deployボタン(または展開したビューにあるTransactボタン)をクリックしてください。
 
-4. You have deployed your compiled contract to the Remix VM - a simulated blockchain that is running inside of your browser window.  The Remix VM is simple, fast test chain.  It is not that realistic because you don't need to approve each transaction.
+4. コンパイル済みのコントラクトがRemix VMにデプロイされます。これにより、ブロックチェーンのシミュレーションがブラウザ内部のウィンドウで実行されます。  Remix VMは、シンプルで高速なテストチェーンです。  しかし、各トランザクションで承認が不要なため、現実のブロックチェーンとは異なります。
 
-5. Check the terminal to see detail of this deployment transaction.
+5. ターミナルでトランザクションのデプロイメントの詳細をご覧ください
 
-You can also use Remix to deploy to other public EVM chains. To do this, you'll need to connect to a different **Environment** - like Injected Provider.  The Injected Provider connects Remix to browser wallet (like MetaMask or similar).  We'll try deploying to a public network at the end of this tutorial. But before we get there, we'll cover how to interact with a deployed contract's functions.
+Remixを使用して、他の公開EVMチェーンへデプロイすることができます。 それには、 Injected Providerで違う **環境** に接続する必要があります。  Injected Providerは、Remixをブラウザウォレット(MetaMaskなど)に接続します。  チュートリアルの最後に公開ネットワークにデプロイします。 その前に、デプロイ済みのコントラクトとやり取りする方法について説明します。
