@@ -9,11 +9,11 @@
 
 このコントラクトが他のコントラクトをインポートしている場合は、インポートされたコントラクトの関数もここに表示されます。  お時間があれば、ERC20コントラクトで多数の関数が表示されるので試してみて下さい。
 
-3. 青いボタンの関数は、 **pure** または **view** 関数です。  This means that they are just reading a property or are returning a value.  In other words, they aren't saving anything - so they are FREE (they don’t cost gas).  Functions with other colors - usually orange (depending on the Remix theme) cost gas because they are saving information.  They are creating a **transaction**.
+3. 青いボタンの関数は、 **pure** または **view** 関数です。  これは、プロパティを読み込んで値を返すことのみであることを表しています。  言い換えれば、何も保存をしていないため、無料です(ガスを消費しません)。  他の色の関数は、通常オレンジ(Remixテーマによって変化)は、情報を保存するためガスを消費します。  他の色の関数は、トランザクションを作成します。
 
-4. 2_Owner.sol does not have a **payable** function.  If it did, the button's color would be red.  Payable functions allow you to send Ether to the function.  To send ETH with a payable function, you put the amount you want to send in the **value** field towards the top of the Deploy & Run module.
+4. 2_Owner.sol は、 **payable** 関数がありません。  payable 関数のボタンの色は赤になります。  payable 関数では、Etherを関数に送金することができます。  payable でETHを送金するには、Deploy & Run モジュールの上部にある **value** フィールドに送金したい金額を入力します。
 
-5. In the Remix VM, you don't need to approve a transaction.  When using a more realistic test environment or when using the mainnet - you will need to approve the transactions for them to go through. Approving a transaction costs gas.
+5. Remix VMでは、トランザクションの承認は不要です。  より現実に近いテスト環境やメインネットを使用する場合は、トランザクションの承認が必要になります。 トランザクションの承認では、ガスを消費します。
 
-6. Choosing a public network is not done in Remix but in your Browser Wallet.  There is a plug icon to the right of the Environment title that links to chainlist.org where you can get the specs of the chain you want to interact with.
+6. 公開ネットワークの選択は、Remixではなく、ブラウザウォレットで行います。  ENVIRONMENTのタイトルの右際にプラグアイコンがあり、chainlist.orgへのリンクになっており、やり取りを行いたいチェーンの仕様を得ることができます。
    ![chainlist](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interacting/images/chainlist.png "chainlist")
