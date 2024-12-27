@@ -9,7 +9,7 @@
 
 このコントラクトが他のコントラクトをインポートしている場合は、インポートされたコントラクトの関数もここに表示されます。  お時間があれば、ERC20コントラクトで多数の関数が表示されるので試してみて下さい。
 
-3. Functions with blue buttons are either  **pure** or **view** functions.  This means that they are just reading a property or are returning a value.  In other words, they aren't saving anything - so they are FREE (they don’t cost gas).  Functions with other colors - usually orange (depending on the Remix theme) cost gas because they are saving information.  They are creating a **transaction**.
+3. 青いボタンの関数は、 **pure** または **view** 関数です。  This means that they are just reading a property or are returning a value.  In other words, they aren't saving anything - so they are FREE (they don’t cost gas).  Functions with other colors - usually orange (depending on the Remix theme) cost gas because they are saving information.  They are creating a **transaction**.
 
 4. 2_Owner.sol does not have a **payable** function.  If it did, the button's color would be red.  Payable functions allow you to send Ether to the function.  To send ETH with a payable function, you put the amount you want to send in the **value** field towards the top of the Deploy & Run module.
 
