@@ -1,15 +1,15 @@
-## Remix is composed of four panels.
+## Remixを構成する4つのパネル
 
 ![Remix layout](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/a-layout1c.png "Remix layout")
 
-- Most plugins appear in the **Side Panel**.
-- Editing code happens in tabs in the **Main Panel**.
-- The results of transactions and other actions are visible in the **Terminal**.
-- Switching between plugins happens in the **Icons Panel**.
-- To make a panel larger, drag its border.
+- **Side Panel** にプラグインが表示されます。
+- **Main Panel** のタブでコードの編集を行います。
+- **Terminal** では、トランザクションの結果やその他のアクションなどが表示されます。
+- **Icons Panel** では、プラグインの切り替えを行います。
+- パネルを大きくするには、ボーダーでドラックしてください。
 
-Try clicking the **Solidity Compiler** icon ![](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/solidity-icon.png) in the **Icons Panel**. Then click the **Deploy & Run** icon ![](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/deploy-run.png).  Then come back to **LearnEth** by clicking this icon ![](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/learneth.png).
+**Icons Panel** にある **Solidity Compiler** アイコン ![](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/solidity-icon.png) をクリックしてみてください。 次に、**Deploy & Run** アイコン ![](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/deploy-run.png) をクリックしてください。  最後に、このアイコン ![](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/learneth.png) をクリックして **LearnEth** に戻ってください。
 
-In the **Main Panel** of Remix, make sure you see the **Home** tab.  The **Home** tab has lots of useful links. To navigate there, either click the **Home** tab in the **Main Panel** or click the Remix icon ![Remix icon](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/remix-logo.png "Remix icon") on the top of the icon panel.
+Remixの **Main Panel** に、 **Home** タブが表示されていることを確認してください。  **Home** タブには、便利なリンクが沢山あります。 **Main Panel** にある **Home** タブまたはアイコンパネルの上部にあるRemixアイコン ![Remix icon](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/remix-logo.png "Remix icon") をクリックすると行くことができます。
 
-- See all the plugins in the **Plugin Manager**.  Click this icon ![plugin manager](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/plugin1.png "Plugin Manager icon") in the lower left corner Remix.
+- **Plugin Manager** では、すべてのプラグインを確認できます。  Remixの左下部にある、このアイコン ![plugin manager](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/plugin1.png "Plugin Manager icon") をクリックしてください。
