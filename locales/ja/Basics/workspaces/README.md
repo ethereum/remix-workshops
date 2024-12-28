@@ -1,23 +1,23 @@
-## Workspaces help organize your separate projects.
+## ワークスペースを個別のプロジェクトの整理に役立てる
 
-If this is your first time to Remix, a Workspace named **default_workspace** is loaded in the File Explorer.
+初期状態のRemixでは、ファイルエクスプローラに **default_workspace** という名前でワークスペースが読み込まれます。
 
 ![](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/default_workspace.png)
 
-The **default_workspace** has three Solidity (.sol) files in the contracts folder. Remix has a number of other templates. When you load a template, it goes into a Workspace. To go between Workspaces, use the select box at the top of the File Explorer.
+**default_workspace** のcontractsフォルダに3つのSolidity (.sol)ファイルがあります。 Remixは、様々なテンプレートがあります。 テンプレートをロードすると、ワークスペースに入ります。 ワークスペース間を移動するには、File Explorer上部にある選択ボックスを使います。
 
 ![](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/select-box.png)
 
-But Workspaces are not only for templates. When cloning a repo into Remix, the files will be put into a Workspace.
+ワークスペースは、テンプレート用途に限定するものではありません。 リポジトリをRemixにクローンする時に、ワークスペースにファイルを配置することができます。
 
-Let's create a new Workspace
+新しいワークスペースを作成してみましょう。
 
-1. At the top of the File Explorer, click the hamburger icon (the 3 horizontal lines). Read through the commands and tools in this menu.
+1. File Explorerの上部にある、ハンバーガーアイコン(3本の横線).をクリックします。 メニューにあるコマンドとツールに目を通しましょう。
 
-2. Select **+ Create** (the first choice).
+2. **+ Create** (最上部)を選択します。
 
-3. In the modal the comes up, choose one of the templates.
+3. モーダルが表示されるので、テンプレート中から1つを選んでください。
 
 ![hamburger](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/workspaces/images/popup.png)
 
-Notice that in this popup menu, you can clone a repo. Managing a Git repo happens in the DGit plugin. You can also create Github actions with the three workflow choices in the popup menu.
+ポップアップメニューから、リポジトリのクローンができることに気づいたと思います。 Gitリポジトリの管理は、DGitプラグインによって動作します。 ポップアップメニューでは、3種類のワークフローとともにGitHub actionsの作成もできます。
