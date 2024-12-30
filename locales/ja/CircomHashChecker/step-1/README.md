@@ -1,8 +1,8 @@
-In this tutorial, we'll explore the **Hash Checker** circuit, a zero-knowledge proof (ZKP) application using Circom and Remix-IDE. The Hash Checker circuit allows you to prove knowledge of certain inputs that hash to a given value without revealing the inputs themselves.
+このチュートリアルでは、CircomやRemix-IDEを使って、 **Hash Checker** 回路やゼロ知識証明(ZKP)アプリの仕組みを学びます。 Hash Checker回路では、入力自体を明らかにすることなく、特定の値にハッシュされる特定の入力に関する知識を証明することができます。
 
-### What You'll Learn
+### 学ぶこと
 
-- How to generate a Hash Checker circuit using Remix-IDE's workspace templates.
-- Understanding the Circom code for hashing and checking hashes.
-- Performing a trusted setup using Groth16.
-- Generating zero-knowledge proofs.
+- Remix-IDEのワークスペースのテンプレートを使用したHash Checker回路の生成方法。
+- ハッシュ化およびハッシュをチェックするCircomコードの理解。
+- Groth 16を使用した信頼されたセットアップの実行。
+- ゼロ知識証明の生成。
