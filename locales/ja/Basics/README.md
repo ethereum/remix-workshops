@@ -1,3 +1,3 @@
 ## ロード、コンパイル、デプロイ
 
-This beginner level tutorial introduces Remix's interface and concepts used in Ethereum.
+このビギナー向けのチュートリアルでは、Remixのインターフェースやイーサリアムで使用されているコンセプトを紹介します。
