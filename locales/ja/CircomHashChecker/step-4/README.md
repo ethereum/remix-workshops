@@ -1,32 +1,32 @@
-## Compiling the Circuit
+## 回路のコンパイル
 
-### Selecting the Compiler Version
+### コンパイラバージョンの選択
 
-1. Go to the **Circuit Compiler** plugin in the sidebar.
-2. Choose the desired **Compiler Version** from the dropdown menu. For this tutorial, select the latest stable version.
+1. サイドバーにある**Circuit Compiler**プラグインに行きます。
+2. ドロップダウンメニューで必要な**コンパイラバージョン**を選びます。 このチュートリアルでは、最新の安定バージョンを選びます。
 
 <img src="https://raw.githubusercontent.com/ethereum/remix-workshops/master/CircomHashChecker/step-4/images/select_compiler_version.png" alt="select-compiler-version" width=250 height=100>
 
-### Configuring Compilation Options
+### コンパイラオプションの設定
 
-- **Auto Compile:** You can enable this option to automatically compile your circuit whenever you save changes.
-- **Hide Warnings:** Enable this to suppress compiler warnings if any.
+- **Auto Compile:** このオプションを有効にすると、回路の変更を保存した時に、自動的にコンパイルされます。
+- **Hide Warnings:** これを有効にするとコンパイラの警告が通知されなくなります。
 - **Advanced Configuration:**
-  - Click to expand.
-  - Select the **Prime Field**. For most cases, `BN128` is sufficient.
+  - クリックすると展開します。
+  - **Prime Field**を選びます。 多くの場合において`BN128`で十分です。
 
 <img src="https://raw.githubusercontent.com/ethereum/remix-workshops/master/CircomHashChecker/step-4/images/advanced_configuration.png" alt="advanced-configuration" width=300 height=100>
 
-### Compiling the Circuit
+### 回路のコンパイル
 
-1. Click on the **Compile** button.
-2. Wait for the compilation to complete. A success badge will appear if compilation is successful.
+1. **Compile**ボタンをクリックします。
+2. コンパイルが完了するまで待ちます。 コンパイルに成功するとsuccessバッジが表示されます。
 
 <img src="https://raw.githubusercontent.com/ethereum/remix-workshops/master/CircomHashChecker/step-4/images/compilation_success.png" alt="compilation-success" width=300 height=675>
 
-### Understanding the Compilation Output
+### コンパイルの出力を理解する
 
-- After successful compilation, the **Setup and Exports** section becomes visible.
-- You can proceed to the next step to perform a trusted setup.
+- コンパイルが成功すると、 **Setup and Exports**セクションが現れます。
+- これで、信頼されたセットアップを実行する次のステップに進めます。
 
-In the next step, we'll perform a trusted setup using the compiled circuit.
+次のステップでは、信頼されたセットアップを使用して回路をコンパイルします。
