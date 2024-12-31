@@ -1,4 +1,4 @@
-## Performing a Trusted Setup
+## 信頼されたセットアップの実行
 
 1. **Access the Setup and Exports Section**:
 
