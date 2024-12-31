@@ -17,16 +17,16 @@
 
 #### `HashChecker`テンプレート:
 
-- Inputs are the same values plus a `hash`.
-- Instantiates `CalculateHash` as `calculateSecret`.
-- Computes `calculatedHash`.
-- Uses `assert(hash == calculatedHash);` to ensure the provided hash matches the calculated hash.
+- 入力は、同じ値に対して`hash`を加えます。
+- `calculateSecret`として`CalculateHash` をインスタンス化します。
+- `calculatedHash`を計算します。
+- `assert(hash == calculatedHash);` 使用して、計算されたハッシュと、提供されたハッシュが一致することを確認します。
 
 #### メインコンポーネント:
 
 - `component main {public [hash]} = HashChecker();`
-- Specifies that `hash` is a `public` input, while the values are `private`.
+- `hash`は、`public`の入力であり、値は`private`であることが記述されています。
 
 ### 目的
 
-The circuit allows someone to prove they know `value1`, `value2`, `value3`, and `value4` that hash to a specific `hash` without revealing the values themselves.
+この回路によって、値そのものを明らかにせずに、特定の`hash`にハッシュされる`value1`、`value2`、`value3`、`value4`について知っていることを証明することができます。
