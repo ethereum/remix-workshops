@@ -1,25 +1,25 @@
 ## 信頼されたセットアップの実行
 
-1. **Access the Setup and Exports Section**:
+1. **Setup and Exportsセクションへのアクセス**:
 
-- After successful compilation, the **Setup and Exports** section becomes available in the plugin.
+- コンパイルに成功すると、プラグインで **Setup and Exports** セクションが利用可能になります。
 
-2. **Select Proving Scheme**:
+2. **Proving Schemeの選択**:
 
-- Choose **Groth16** from the **Proving Scheme** dropdown.
+- **Proving Scheme** ドロップダウンで **Groth16** を選びます。
 
-3. **Select Power of Tau File**:
+3. **Power of Tauファイルの選択**:
 
-- Choose the appropriate **Power of Tau** file from the dropdown. If unsure, use the default option.
+- ドロップダウンから適切な **Power of Tau** ファイルを選びます。 わからない場合は、デフォルトのオプションを使用してください。
 
-4. **Export Verification Key and Contract** (optional):
+4. **検証鍵とコントラクトのエクスポート** (任意):
 
-- Enable **Export Verification Key** to save the verification key to the File Explorer.
-- Enable **Export Verifier Contract** to save the Solidity contract for on-chain verification.
+- **Export Verification Key** を有効にすると、検証鍵がファイルエクスプローラに保存されます。
+- **Export Verifier Contract** を有効にすると、オンチェーン検証用のSolidityコントラクトが保存されます。
 
 <img src="https://raw.githubusercontent.com/ethereum/remix-workshops/master/CircomHashChecker/step-5/images/trusted_setup.png" alt="trusted-setup" width=330 height=350>
 
-5. **Run the Trusted Setup**:
+5. **信頼されたセットアップの実行**:
 
 - Click on the **Run Setup** button.
 - Wait for the process to complete. This may take some time depending on the circuit complexity.
