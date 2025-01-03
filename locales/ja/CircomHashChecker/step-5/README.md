@@ -21,5 +21,5 @@
 
 5. **信頼されたセットアップの実行**:
 
-- Click on the **Run Setup** button.
-- Wait for the process to complete. This may take some time depending on the circuit complexity.
+- **Run Setup** ボタンをクリックします。
+- プロセスが完了するのを待ちます。 この処理は、回路の複雑性によって時間ががかかることがあります。
