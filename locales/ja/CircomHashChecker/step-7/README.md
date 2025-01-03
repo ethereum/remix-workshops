@@ -1,4 +1,4 @@
-## Generate Proof
+## 証明の生成
 
 1. **Access the Generate Proof Section**:
    - After computing the witness, expand the **Generate Proof** section.
