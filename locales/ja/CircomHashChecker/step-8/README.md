@@ -1,34 +1,34 @@
-## Understanding `groth16_trusted_setup.ts`
+## `groth16_trusted_setup.ts`について理解する
 
-Navigate to `scripts/groth16/groth16_trusted_setup.ts`. This script performs the trusted setup necessary for generating proofs.
+`scripts/groth16/groth16_trusted_setup.ts`に移動します。 このスクリプトは、証明の生成に必要な信頼されたセットアップを実行します。
 
-### Code Breakdown
+### コードの概要
 
-#### Circuit Compilation:
+#### 回路のコンパイル:
 
-- Uses `remix.call('circuit-compiler', 'generateR1cs', ...)` to generate `R1CS` (Rank-1 Constraint System) from the circuit.
+- `remix.call('circuit-compiler', 'generateR1cs', ...)`を使用して、回路から`R1CS` (Rank-1 Constraint System)を生成します。
 
-#### Trusted Setup Steps:
+#### 信頼されたセットアップのステップ
 
-- `snarkjs.zKey.newZKey`: Initializes the proving key (`zkey_0`).
-- `snarkjs.zKey.contribute`: Adds contributions to the proving key (`zkey_1`).
-- `snarkjs.zKey.beacon`: Finalizes the proving key (`zkey_final`).
+- `snarkjs.zKey.newZKey`: 証明鍵 (`zkey_0`) の初期化
+- `snarkjs.zKey.contribute`: 証明鍵(`zkey_1`)にコントリビューションを追加
+- `snarkjs.zKey.beacon`: 証明鍵(`zkey_final`)の確定
 
-#### Verification:
+#### 検証:
 
-- `snarkjs.zKey.verifyFromR1cs`: Verifies the proving key against the `R1CS` and initial parameters.
+- `snarkjs.zKey.verifyFromR1cs`:  `R1CS`と初期パラメータに対して証明鍵を検証します。
 
-#### Exporting Keys:
+#### 鍵のエクスポート:
 
-- Exports the verification key to `scripts/groth16/zk/keys/verification_key.json`.
-- Exports the final proving key (`scripts/groth16/zk/keys/zkey_final.txt`).
+- 検証鍵を`scripts/groth16/zk/keys/verification_key.json`にエクスポートします。
+- 最終証明鍵をエクスポートします(`scripts/groth16/zk/keys/zkey_final.txt`)。
 
-### Purpose
+### 目的
 
-- Performs the trusted setup required for the `Groth16` proving system.
-- Generates the necessary keys for proof generation and verification.
+- `Groth16`証明システムに必要な信頼されたセットアップの実行。
+- 証明の生成と検証に必要な鍵の生成。
 
-### Execute the Script
+### スクリプトの実行
 
-- Click the play button in the editor, or right-click the file and select "Run".
-- Wait for the script to complete and `"setup done."` logged in the terminal.
+- エディタにあるPlayボタンをクリック、またはファイルで右クリックして「Run」を選択します。
+- スクリプトが完了し、 ターミナルに`"setup done."`というログが出力されるまで待ちます。
