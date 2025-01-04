@@ -6,16 +6,16 @@
 2. **Proof Generationの設定をする**:
    - **Export Verifier Calldata**: このオプションを有効にすると、オンチェーンで証明の検証ができます。
 
-3. **Generate the Proof**:
+3. **証明を生成する**:
 
-   - Click on the **Generate Proof** button.
-   - Wait for the proof generation to complete.
+   - **Generate Proof** ボタンをクリックします。
+   - 証明の生成が完了するまで待ちます。
 
    <img src="https://raw.githubusercontent.com/ethereum/remix-workshops/master/CircomHashChecker/step-7/images/generate_proof.png" alt="generate-proof" width=280 height=120>
 
-4. **View the Proof**:
+4. **証明を表示する**:
 
-   - The proof data will be displayed in the File Explorer.
-   - **Congratulations!** You've successfully compiled the `Hash Checker` circuit, performed a trusted setup, computed a witness, and generated a proof using Remix-IDE.
+   - ファイルエクスプローラ内に証明データが表示されます。
+   - **おめでとうございます！** Remix-IDEを使用した`Hash Checker`回路のコンパイル、信頼されたセットアップ、ウィットネスの計算、証明の生成に成功しました。
 
    <img src="https://raw.githubusercontent.com/ethereum/remix-workshops/master/CircomHashChecker/step-7/images/proof_generated.png" alt="generate-proof" width=375 height=300>
