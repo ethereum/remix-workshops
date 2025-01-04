@@ -1,37 +1,37 @@
-## Understanding `groth16_zkproof.ts`
+## `groth16_zkproof.ts`を理解する
 
-Navigate to `scripts/groth16/groth16_zkproof.ts`. This script generates the zero-knowledge proof and prepares it for verification.
+`scripts/groth16/groth16_zkproof.ts`に移動します。 このスクリプトは、ゼロ知識証明を生成し、その検証の準備を行います。
 
-### Code Overview
+### コードの概要
 
-#### Loading Files:
+#### ファイルのロード:
 
-- Reads the R1CS and WASM files generated from the circuit.
-- Loads the final proving key (`zkey_final`) and verification key (`vKey`).
+- 回路によって生成されたR1CSとWASMファイルを読み込みます。
+- 最終証明鍵(`zkey_final`)と検証鍵(`vKey`)をロードします。
 
-#### Defining Inputs:
+#### 入力の定義:
 
-- Sets the private values (`value1`, `value2`, `value3`, `value4`).
-- Computes the `hash` using Poseidon from [CircomLib](https://github.com/iden3/circomlib).
+- プライベート値の設定 (`value1`, `value2`, `value3`, `value4`)。
+- [CircomLib](https://github.com/iden3/circomlib)のPoseidonを使用した`hash`の計算。
 
-#### Witness Calculation and Proof Generation:
+#### ウィットネスの計算と証明の生成:
 
-- Calculates the witness (`wtns`).
-- Checks the witness against the `R1CS`.
-- Generates the proof using `Groth16`.
-- Verifies the proof.
+- ウィットネスの計算(`wtns`)。
+- `R1CS`に対してウィットネスを確認する。
+- `Groth16`使用して証明を生成する。
+- 証明の検証
 
-#### Exporting Verifier Contract and Inputs:
+#### 検証コントラクトと入力のエクスポート
 
-- Generates a Solidity verifier contract.
-- Exports the proof inputs to `input.json`.
+- Solidity検証コントラクトを生成する。
+- 証明の入力を`input.json`にエクスポートする。
 
-### Purpose
+### 目的
 
-- Generates a zero-knowledge proof that the prover knows values hashing to a specific hash.
-- Prepares the verifier contract and inputs for on-chain verification.
+- 証明者が知っている値を特定のハッシュにハッシュするゼロ知識証明を生成。
+- オンチェーン検証のための検証コントラクトと入力の準備。
 
-### Execute the Script
+### スクリプトの実行
 
-- Click the play button in the editor, or right-click the file and select "Run".
-- Wait for the script to complete and `"zk proof validity"` logged in the terminal.
+- エディタにあるPlayボタンをクリック、またはファイルで右クリックして「Run」を選択します。
+- スクリプトが完了し、 ターミナルに`"zk proof validity"`というログが出力されるまで待ちます。
