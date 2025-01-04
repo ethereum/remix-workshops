@@ -1,10 +1,10 @@
 ## 証明の生成
 
-1. **Access the Generate Proof Section**:
-   - After computing the witness, expand the **Generate Proof** section.
+1. **Generate Proofセクションへアクセスする**:
+   - ウィットネスを計算したら、**Generate Proof** を開きます。
 
-2. **Configure Proof Generation**:
-   - **Export Verifier Calldata**: Enable this option if you plan to verify the proof on-chain.
+2. **Proof Generationの設定をする**:
+   - **Export Verifier Calldata**: このオプションを有効にすると、オンチェーンで証明の検証ができます。
 
 3. **Generate the Proof**:
 
