@@ -1,15 +1,15 @@
-Let's write a simple Circom circuit.
+シンプルなCircom回路を作成してみましょう。
 
-## Creating a New Circuit File
+## 新規Circomファイルの作成
 
-1. In the **File Explorer** on the left sidebar, click on the **Create New File** icon.
-2. Name your file `multiplier.circom` and press **Enter**.
+1. サイドバーの左の**ファイルエクスプローラ**で、 **Create New File** アイコンをクリックします。
+2. `multiplier.circom`というファイル名にして、**Enter** キーを押します。
 
 <img src="https://raw.githubusercontent.com/ethereum/remix-workshops/master/CircomIntro/step-3/images/create_new_file.png" alt="create-new-file" width=300 height=200>
 
-## Writing the Circuit
+## 回路の記述
 
-Open `multiplier.circom` and add the following code:
+`multiplier.circom` を開いて、次のコードを加えてください。
 
 ```circom
 pragma circom 2.0.0;
@@ -25,13 +25,13 @@ template Multiplier() {
 component main = Multiplier();
 ```
 
-## Explanation:
+## 説明:
 
-- template `Multiplier()`: Defines a new circuit template called Multiplier.
-- `signal input a;` and `signal input b;`: Declare input signals a and b.
-- `signal output c;`: Declare an output signal c.
-- `c <== a * b;`: Constrain c to be the product of a and b.
-- `component main = Multiplier();`: Instantiates the Multiplier circuit as main, which is required for the compiler.
+- template `Multiplier()`: Multiplierという新規の回路のテンプレートを定義しています。
+- `signal input a;` および `signal input b;`: 入力シグナルである a と b を宣言しています。
+- `signal output c;`: 出力シグナルである c を宣言しています。
+- `c <== a * b;`: c が a と b の積であることを制限しています。
+- `component main = Multiplier();`: mainとしてMultiplier回路をインスタンス化しています。これには、コンパイラが必要になります。
 
 ### NB:
 
