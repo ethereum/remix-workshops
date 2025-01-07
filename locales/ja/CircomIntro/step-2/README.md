@@ -1,6 +1,6 @@
-In this step, we'll set up Remix for Circom development by activating the `Circom ZKP compiler` plugin.
+このステップでは、`Circom ZKP compiler` プラグインを有効化してCircom開発の設定を行います。
 
-## Activating the Circom ZKP compiler
+## Circomゼロ知識証明コンパイラの有効化
 
 1. At the bottom of the icon panel on the left of the screen, click on the **Plugin Manager** (the plug icon).
    2.In the search bar, type **Circom**.
