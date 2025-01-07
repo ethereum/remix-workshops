@@ -1,13 +1,13 @@
-Welcome to this beginner-level tutorial on Circom using Remix. In this tutorial, you'll learn the basics of Circom, a domain-specific language used for creating arithmetic circuits.
+Remixを使ったCircomの初心者向けのチュートリアルへようこそ。 このチュートリアルでは、Circomの基本である演算回路の作成に使うドメイン固有言語を学びます。
 
-**What is Circom?**
+**Circomとは**
 
-Circom is a language designed for writing arithmetic circuits that can be used in zero-knowledge proofs, particularly zk-SNARKs. It allows developers to define complex mathematical circuits that can prove knowledge of certain data without revealing it.
+Circomとは、演算回路を記述するために設計されて言語で、ゼロ知識証明、特にzk-SNARKsに使うことができます。 デベロッパーは、複雑な演算回路を定義することで、特定のデータに関する知識を明らかにすることなく証明することができます。
 
-**Why Use Remix-IDE for Circom?**
+**CircomでRemix-IDEを使用する理由**
 
-- **Ease of Use:** Remix-IDE provides a user-friendly interface that simplifies the development process.
-- **Integrated Tools:** With plugins like `circuit-compiler`, you can compile Circom code, perform trusted setups, compute witnesses, and generate proofs all within the same environment.
-- **No Installation Required:** As a web-based IDE, you can start coding immediately without setting up a local development environment.
+- **使いやすさ:** Remix-IDEは、ユーザーフレンドリーなインターフェースを備えており、開発プロセスをシンプルにすることができます。
+- **統合されたツール:** `circuit-compiler`のようなプラグインを使用して、同じ環境内でCircomコードをコンパイル、信頼されたセットアップの実行、ウィットネスの計算、証明の作成が可能です。
+- **インストール不要:** WebベースのIDEなので、ローカル開発環境をセットアップしなくともコーディングを即座に開始できます。
 
-In the next steps, we'll guide you through setting up Remix-IDE for Circom development and help you write your first circuit.
+次のステップでは、Remix-IDEでCircom開発の設定を行い、最初の回路の作成を手助けします。
