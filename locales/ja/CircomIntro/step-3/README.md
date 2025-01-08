@@ -35,4 +35,4 @@ component main = Multiplier();
 
 ### 注意:
 
-Signals are values in a cryptographic circuit that are strictly determined by the circuit's equations and constraints. Think of a signal as a value that must follow specific mathematical rules defined by the circuit—once set, it can't be changed arbitrarily. In regular programming, variables are flexible and can be updated or reassigned as needed, whereas, signals can't be altered freely.
+シグナルは、暗号回路内の値で、回路の式と制約によって厳密に決定されます。 シグナルを回路によって定義される特定の数学的なルールに従わなければならない値として考えてください。一度設定されると、任意に変更することはできません。 通常のプログラミングでは、必要に応じて値を柔軟に更新したり、再割り当てすることができますが、シグナルは自由に変更できません。
