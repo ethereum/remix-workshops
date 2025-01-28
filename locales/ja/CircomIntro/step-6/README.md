@@ -1,8 +1,8 @@
-With the trusted setup complete, you can now compute the witness for your circuit based on specific inputs.
+信頼されたセットアップが完了すると、特定の入力に基づいた回路のウィットネスの計算ができます。
 
-## What is a Witness?
+## ウィットネスとは
 
-- A **Witness** is a set of values that satisfy all the constraints of your circuit. It includes all the intermediate numbers and results that satisfy the circuit's rules. The witness is used in zero-knowledge proofs to demonstrate that you know a valid solution to the problem without actually showing the solution itself. This allows others to verify that you did everything correctly while keeping your specific numbers and calculations private.
+- **ウィットネス**は、値のセットで回路の制約の全てを満たします。 ウィットネスは、中間の数値の全てを含み、結果は回路のルールを満たします。 The witness is used in zero-knowledge proofs to demonstrate that you know a valid solution to the problem without actually showing the solution itself. This allows others to verify that you did everything correctly while keeping your specific numbers and calculations private.
 - It is essential for generating a proof.
 
 ## Inputting Values
