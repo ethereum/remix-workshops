@@ -1,31 +1,31 @@
-With the witness computed, the final step is to generate a proof that can be verified by others.
+計算されたウィットネスで、最後のステップである証明の生成します。これにより、第三者が検証できるようになります。
 
-## Generating the Proof
+## 証明の生成
 
-1. In the **Generate Proof** section, you have the option to **Export Verifier Calldata**.
-   - Enable the **Export Verifier Calldata** checkbox if you plan to verify the proof on-chain.
-2. Click on the **Generate Proof** button.
+1. **Generate Proof** セクションに、**Export Verifier Calldata** というオプションがあります。
+   - オンチェーンでの検証を想定しているならば、**Export Verifier Calldata** チェックボックスにチェックしてください。
+2. **Generate Proof** ボタンをクリックします。
 
 <img src="https://raw.githubusercontent.com/ethereum/remix-workshops/master/CircomIntro/step-7/images/generate_proof.png" alt="generate-proof" width=280 height=120>
 
-## Understanding the Output
+## 出力の理解
 
-- After generating the proof, the plugin will display the proof data.
-- If you enabled **Export Verifier Calldata**, it will also provide the calldata needed for on-chain verification.
+- 証明の生成後、プラグインは、証明データを表示します。
+- **Export Verifier Calldata**にチェックをしていると、オンチェーン検証で必要になるcalldataも提供されます。
 
 <img src="https://raw.githubusercontent.com/ethereum/remix-workshops/master/CircomIntro/step-7/images/proof_generated.png" alt="proof-generated" width=310 height=350>
 
-## Next Steps
+## 次のステップ
 
-- **Verification:** You can use the verification key or contract exported earlier to verify the proof.
-- **On-Chain Verification:** If you're familiar with smart contracts, you can deploy the verification contract and use the calldata to perform on-chain verification.
+- **検証:** 検証鍵または事前にエクスポートしたコントラクトを使い検証することができます。
+- **オンチェーン検証:** スマートコントラクトに詳しければ、検証コントラクトをデプロイし、calldataを使用することでオンチェーン検証が実行可能です。
 
-**Congratulations!** You've successfully written a Circom circuit, compiled it, performed a trusted setup, computed a witness, and generated a proof using Remix-IDE.
+**おめでとうございます！** Remix-IDEを使用したCircom回路のコンパイル、信頼されたセットアップ、ウィットネスの計算、証明の生成に成功しました。
 
-## Additional Resources
+## 関連資料
 
-- [Circom Documentation](https://docs.circom.io/)
-- [Remix-IDE Documentation](https://remix-ide.readthedocs.io/)
-- [Zero-Knowledge Proofs Explained](https://zkproof.org/)
+- [Circomドキュメント](https://docs.circom.io/)
+- [Remix-IDE ドキュメント](https://remix-ide.readthedocs.io/)
+- [ゼロ知識証明の解説](https://zkproof.org/)
 
-Feel free to experiment with more complex circuits and explore the capabilities of Circom and Remix-IDE further.
+より複雑な回路で実験することで、CircomとRemix-IDEの可能性を探求してみてください。
