@@ -2,26 +2,26 @@
 
 ## ウィットネスとは
 
-- **ウィットネス**は、値のセットで回路の制約の全てを満たします。 ウィットネスは、中間の数値の全てを含み、結果は回路のルールを満たします。 The witness is used in zero-knowledge proofs to demonstrate that you know a valid solution to the problem without actually showing the solution itself. This allows others to verify that you did everything correctly while keeping your specific numbers and calculations private.
-- It is essential for generating a proof.
+- **ウィットネス**は、値のセットで回路の制約の全てを満たします。 ウィットネスは、中間の数値の全てを含み、結果は回路のルールを満たします。 ウィットネスは、ゼロ知識証明で使用され、問題に対して実際に解を示さなくても有効な解を知っていることを明らかにします。 これにより、あなたの特定の数値と計算を秘密にしながら、他者は、すべてにおいて正しく行っていることを確認できます。
+- 証明を生成するのに必要不可欠なのがウィットネスです。
 
-## Inputting Values
+## 入力値
 
-1. In the **Compute Witness** section, you'll see input fields dynamically generated based on your circuit's inputs.
-2. Enter values for `a` and `b`. For example:
+1. **Compute Witness** セクションでは、回路の入力に基づいて動的に生成された入力フィールドが表示されます。
+2. `a`と`b`の値を入力します。 入力例:
    - `a = 3`
    - `b = 4`
 
 <img src="https://raw.githubusercontent.com/ethereum/remix-workshops/master/CircomIntro/step-6/images/compute_witness.png" alt="compute-witness" width=280 height=240>
 
-## Computing the Witness
+## ウィットネスの計算
 
-1. After entering the inputs, click on the **Compute Witness** button.
-2. The plugin will compute the witness based on your inputs.
-3. If successful, you'll see `multiplier.wtn` created in the `.bin` directory in the file explorer.
+1. 入力をしたら、**Compute Witness** ボタンをクリックします。
+2. プラグインは、入力に基づいてウィットネスを計算します。
+3. 成功すると、`multiplier.wtn`がファイルエクスプローラの`.bin`ディレクトリに作成されます。
 
 <img src="https://raw.githubusercontent.com/ethereum/remix-workshops/master/CircomIntro/step-6/images/witness_computed.png" alt="witness-computed" width=340 height=350>
 
-**Note:** If there are any errors, ensure that your inputs are valid and satisfy the circuit's constraints.
+**注意:** エラーがある場合は、入力が有効もしくは回路の制約を満たしているかを確認してください。
 
-In the next step, we'll generate a proof using the computed witness.
+次のステップでは、計算されたウィットネスを使用して証明を生成します。
