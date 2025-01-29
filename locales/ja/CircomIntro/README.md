@@ -1,21 +1,21 @@
-Intro to Circom
+Circomの紹介
 
-This is an introduction to Circom. You'll learn how to write, compile, and test arithmetic circuits in Circom. We'll go over how to do this within Remix-IDE.
+Circomについての紹介します。 Circomでの演算回路の作成、コンパイル、テストの方法を学びます。 Remix-IDEを使って、これらの方法を試します。
 
-Tutorial Overview
-
-```
-Step 1: Introduction
-Step 2: Setting Up Remix-IDE and Installing the Circuit-Compiler Plugin
-Step 3: Writing Your First Circom Circuit
-Step 4: Compiling the Circuit Using the Plugin
-Step 5: Performing a Trusted Setup
-Step 6: Computing the Witness
-Step 7: Generating the Proof
-```
-
-Prerequisites:
+チュートリアルの概要
 
 ```
-Basic understanding of cryptography and zero-knowledge proofs is helpful but not required.
+ステップ1: 紹介
+ステップ2: Remix-IDEのセットアップとCircuit-Compilerプラグインのインストール
+ステップ3: はじめてのCircom回路の作成
+ステップ4: プラグインを使った回路のコンパイル
+ステップ5: 信頼されたセットアップの実行
+ステップ6: ウィットネスの計算
+ステップ7: 証明の生成
+```
+
+前提条件:
+
+```
+暗号とゼロ知識証明の基本的な知識があると良いですが、必須ではありません。
 ```
