@@ -1,29 +1,29 @@
 id: circomの紹介
-name: Intro to Circom
-summary: A intro to using Circom for creating arithmetic circuits.
+name: Circomの紹介
+summary: Circomを使った演算回路の作成を紹介します。
 level: 1
 tags:
   - Circom
   - Remix-IDE
 steps:
   - 
-    name: Introduction
-    path: step-1
+    name: はじめに
+    path: ステップ1
   - 
-    name: Installing the Circuit-Compiler
-    path: step-2
+    name: Circuit-Compilerのインストール
+    path: ステップ2
   - 
-    name: Writing Your First Circom Circuit
-    path: step-3
+    name: はじめてのCircom回路の作成
+    path: ステップ3
   - 
-    name: Compiling the Circuit Using the Plugin
-    path: step-4
+    name: プラグインを使った回路のコンパイル
+    path: ステップ4
   - 
-    name: Performing a Trusted Setup
-    path: step-5
+    name: 信頼されたセットアップの実行
+    path: ステップ5
   - 
-    name: Computing the Witness
-    path: step-6
+    name: ウィットネスの計算
+    path: ステップ6
   - 
-    name: Generating the Proof
-    path: step-7
+    name: 証明の生成
+    path: ステップ7
