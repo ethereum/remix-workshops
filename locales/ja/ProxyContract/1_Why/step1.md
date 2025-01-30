@@ -12,16 +12,16 @@
 - プロキシコントラクトは、デプロイにおける冗長性を減らすことができるので、同じコントラクトで多数のインスタンスをデプロイすることが必要な時に便利です。
 
 - **ブロックチェーンでコードの繰り返しを避ける**
-  負荷の高い計算は、すべてのノードで実行する必要があるため、高価になります。また、ネットワークでも遅延を発生させます。
+  負荷の高い計算は、すべてのノードで実行する必要があるため、高価になります。また、ネットワークにも遅延を発生させます。
 
-- **Develop upgradable(versioned) contracts**
-  When the contract is deployed, it’s immutable. By re-designing the code into different contracts, it is possible to allow logic upgrades while keeping the storage the same.
+- **アップグレーダブル(バージョン化)コントラクトの開発**
+  コントラクトをデプロイすると、イミュータブルになります。 異なるコントラクトにコードを再設計することで、同じストレージを保ちながら、ロジックのアップグレードを可能にします。
 
-## Example of gas cost
+## ガス代の例
 
-Storing contract code at creation time can cost up to:
+作成時において、コントラクトのコードを保存するのにかかるコストは次のようになります。
 
 - 200 \* max_byte_code_length gas
 - 200 \* 24576 = 49152004915200 \* 10 gwei = 49152000 gwei = 0.049152 ether = 9 EUR
 
-see https://github.com/ethereum/EIPs/blob/master/EIPS/eip-170.md for more info on max_byte_code_length.
+max_byte_code_lengthについての情報は、 https://github.com/ethereum/EIPs/blob/master/EIPS/eip-170.md をご覧ください。
