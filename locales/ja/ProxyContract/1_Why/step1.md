@@ -1,13 +1,13 @@
-# Proxy Contract AKA the Dispatcher
+# プロキシコントラクト（別名: ディスパッチャー)
 
-## Why?
+## 目的
 
-This is a great pattern that is used mainly in **library development**.
+**ライブラリ開発**で主に使用されている有用なパターンです。
 
-It helps in the following ways:
+このパターンは、次の場面で役立ちます。
 
-- **Save gas cost at deployment time**
-  The purpose of a high gas cost is to discourage the operations that cost a lot for their execution and to encourage optimized code.
+- **デプロイ時にガス代を節約**
+  ガス代が高いことの理由は、実行において多大なガス代がかかることを抑制し、最適化されたコードを奨励するためです。
 
 - Proxy contracts are useful when a lot of instances of the same contract need to be deployed because they reduce the duplications in the deployment.
 
