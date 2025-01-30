@@ -9,10 +9,10 @@
 - **デプロイ時にガス代を節約**
   ガス代が高いことの理由は、実行において多大なガス代がかかることを抑制し、最適化されたコードを奨励するためです。
 
-- Proxy contracts are useful when a lot of instances of the same contract need to be deployed because they reduce the duplications in the deployment.
+- プロキシコントラクトは、デプロイにおける冗長性を減らすことができるので、同じコントラクトで多数のインスタンスをデプロイすることが必要な時に便利です。
 
-- **Avoid code repetition in the blockchain.**
-  Heavy computations are expensive because every node will need to perform them, this is of course slowing the network.
+- **ブロックチェーンでコードの繰り返しを避ける**
+  負荷の高い計算は、すべてのノードで実行する必要があるため、高価になります。また、ネットワークでも遅延を発生させます。
 
 - **Develop upgradable(versioned) contracts**
   When the contract is deployed, it’s immutable. By re-designing the code into different contracts, it is possible to allow logic upgrades while keeping the storage the same.
