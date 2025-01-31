@@ -6,4 +6,4 @@ Delegate callは、**メッセージの呼び出し**の特殊な形で、呼び
 
 ストレージ、コントラクトアドレス、残高は、呼び出し元のコントラクトを参照します。呼び出し元のアドレスは、コードのみを取得します。
 
-So when a **Proxy** delegates calls to the Logic contract, every storage modification will impact the storage of Logic contract.
+**プロキシ**がロジックコントラクトへdelegates callをするときに、各ストレージの変更が、ロジックコントラクトのストレージに影響します。
