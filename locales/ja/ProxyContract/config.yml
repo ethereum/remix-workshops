@@ -1,9 +1,9 @@
 ---
 id: プロキシコントラクト
 name: プロキシコントラクトの詳細
-summary: This tutorial gives a short introduction of the web3.js library, querying the block number
+summary: このチュートリアルでは、web3.jsライブラリとブロック番号のクエリの簡単な詳細をします
 level: 3
 tags:
   - Remix
   - Solidity
-  - Code Patterns
+  - コードパターン
