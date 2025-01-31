@@ -1,6 +1,6 @@
 ---
-id: proxycontract
-name: All about Proxy Contracts
+id: プロキシコントラクト
+name: プロキシコントラクトの詳細
 summary: This tutorial gives a short introduction of the web3.js library, querying the block number
 level: 3
 tags:
