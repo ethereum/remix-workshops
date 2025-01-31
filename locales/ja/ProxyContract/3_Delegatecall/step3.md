@@ -1,9 +1,9 @@
 # Delegate call
 
-It's a special variant of a **message call**, which is identical to a message call apart from the fact that the code at the target address is executed in the context of the calling contract so **msg.sender** and **msg.value** do not change their values.
+Delegate callは、**メッセージの呼び出し**の特殊な形で、呼び出しコントラクトのコンテクストの中で目的のアドレスにあるコードが実行されるという事実を除いてメッセージ呼び出しと同一です。そのため、 **msg.sender** と **msg.value** の値は変わりません。
 
-This means that a contract can dynamically load code from a different address at runtime.
+つまり、コントラクトは、ランタイムにおいて異なるアドレスから動的にコードをロードすることができます。
 
-The storage, the current address and balance still refer to the calling contract, only the code is taken from the called address.
+ストレージ、コントラクトアドレス、残高は、呼び出し元のコントラクトを参照します。呼び出し元のアドレスは、コードのみを取得します。
 
 So when a **Proxy** delegates calls to the Logic contract, every storage modification will impact the storage of Logic contract.
