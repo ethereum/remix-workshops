@@ -1,4 +1,4 @@
-# A Basic Generic Proxy Example
+# 基本的な汎用プロキシの例
 
 In the associated solidity file, **step4.sol**, there are 2 contracts - **ProxyContract** and **LogicContract**.
 
