@@ -1,8 +1,8 @@
 # 基本的な汎用プロキシの例
 
-In the associated solidity file, **step4.sol**, there are 2 contracts - **ProxyContract** and **LogicContract**.
+これに関するSolidityファイルである **step4.sol** に、**ProxyContract** と **LogicContract** の2つのコントラクトがります。
 
-To use this system, we first deploy the LogicContract.
+このシステムを使用するには、まずLogicContractをデプロイします。
 
 And then when we go to deploy the ProxyContract, we pass the LogicContract's address as an argument of the ProxyContract's constructor.
 
