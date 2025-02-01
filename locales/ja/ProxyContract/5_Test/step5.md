@@ -1,6 +1,6 @@
-# Let's test what we've learned
+# 学んだことをテストしましょう
 
-- Write a contract named "LogicContract" which implements a public function named "getNumber" which returns 10
-- Write a proxy contract named "ProxyContract". This ProxyContract should take an address of LogicContract as a first parameter.
+- 「LogicContract」という名前のコントラクトを作成し、「getNumber」という名前の10を返すパブリック関数を実装してください。
+- 「ProxyContract」という名前のプロキシコントラクトを作成してください。 このProxyContractは、最初のパラメータでLogicContractのアドレスを取るようにしてください。
 
-Good Luck!
+頑張りましょう!
