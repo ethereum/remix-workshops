@@ -4,12 +4,12 @@
 
 このシステムを使用するには、まずLogicContractをデプロイします。
 
-And then when we go to deploy the ProxyContract, we pass the LogicContract's address as an argument of the ProxyContract's constructor.
+次に、ProxyContractをデプロイする時に、LogicContractのアドレスをProxyContractのコンストラクタの引数として渡します。
 
-The ProxyContract is deployed only once.
+ProxyContractは、ただ一度のみデプロイされます。
 
-The code of LogicContract will be called at the line 20. It will be forwarded with delegate call while keeping the context of LogicContract.
+LogicContractのコードは、20行目で呼び出されます。 LogicContractのコンテキストを保持しつつ、delegate callで転送されます。
 
-In case we need to change the logic we would deploy a new LogicContract and set the address of it with setLogicContractAddress setter function.
+ロジックの変更が必要になった場合は、新しいLogicContractをデプロイし、setLogicContractAddressセッター関数で新しいLogicContractのアドレスをセットします。
 
-_Note: The LogicContract we have here does not use the storage. Once you need to use the storage the implementation becomes a bit more complicated because those contracts share the context._
+_注意: このLogicContractでは、ストレージを用いていません。 ストレージが必要になる場合は、これらのコントラクトがコンテキスト共有するため、実装がより複雑になります。_
