@@ -4,10 +4,10 @@
 
 `storage`は、マッピングであり、各値はオンチェーンに永続化されて保存されます。
 
-_注意: 静的サイズの状態変数(マッピングと動的サイズの配列型を除外)は、ポジション0から始まるストレージ内で連続的に配置されます。 なるべく複数の隣接する32バイト未満のアイテムが単一のストレージスロットにパックされている必要があります。 For contracts that use inheritance, the ordering of state variables is determined by the C3-linearized order of contracts starting with the most base-ward contract_
+_注意: 静的サイズの状態変数(マッピングと動的サイズの配列型を除外)は、ポジション0から始まるストレージ内で連続的に配置されます。 なるべく複数の隣接する32バイト未満のアイテムが単一のストレージスロットにパックされている必要があります。 継承を使用するコントラクトの場合、状態変数の順序は、基底位置にあるコントラクトから始まるC3線形化順序によって決定されます。_
 
-Once we execute **delegate call**, the storage of both contracts get **"merged"** into a single messy state.
+**delegate call**を実行すると、両方のコントラクトのストレージが、単一の乱雑な状態に **「マージ」** されます。
 
-We have to "tell" ProxyContract what the **state** of the **Logic contract** looks like.
+ProxyContractに **ロジックコントラクト** の **状態** について「伝える」必要があります。
 
-The easiest way to do this is to create a separate contract - in this example - named **StorageContract** which will represent the **state** and which proxyContract will inherit from.
+最も簡単な方法としては、別のコントラクトを作成します。この例では 、 **StorageContract** と名付けて **状態** の表す役割にして、proxyContractが継承します。
