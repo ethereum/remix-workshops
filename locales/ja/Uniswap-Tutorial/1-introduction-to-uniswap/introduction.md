@@ -23,25 +23,25 @@ The tokens in the Liquidity Pool are provided by Liquidity Providers. When a Liq
 
 Users of Uniswap pay a fee for each trade. The fee is paid to the Liquidity Providers in the form of additional Liquidity Provider Tokens.
 
-## Uniswap Swap Contract
+## Uniswapスワップコントラクト
 
-The Uniswap Swap contract allows users to swap tokens using Uniswap V3. It can do single-hop swaps, which allow users to exchange one token for another directly. It can also do multi-hop swaps, which means that users can exchange one token for another by routing through multiple tokens. Routing in this context means that the swap contract will exchange the token for another token, then exchange that token for another token, and so on until it reaches the desired token.
+ユーザーは、UniswapスワップコントラクトのV3を使用してトークンのスワップができます。 シングルホップスワップでは、ユーザー1つのトークンをもう一つのトークンと直接交換できます。 V3では、マルチホップスワップも可能で、ユーザーはルーティングによって複数のトークンを経由してトークンを交換できます。 このコンテキストにおいてルーティングが意味するところは、スワップコントラクトがトークンを別のトークンに交換し、その後に別のトークンがもう一つの別のートークンと交換されます。これが、欲しいトークンに交換されるまで行われます。
 
-## Conclusion
+## 結論
 
-In this section, we learned about Uniswap, how it works, and how we are going to use it to swap tokens.
+このセクションでは、Uniswapの仕組み、トークンのスワップで必要な知識を学びました。
 
-## ⭐️ Assignment: Multiple Choice Test
+## ⭐️ 宿題: 多肢選択式テスト
 
-### 1. What is Uniswap?
+### Uniswapとは何でしょうか？
 
-1. A centralized exchange protocol.
-2. A decentralized exchange protocol that uses an order book.
-3. A decentralized exchange protocol that uses an automated market maker (AMM) model.
-4. A decentralized exchange protocol that uses an order book and an automated market maker (AMM) model.
+1. 中央集権型の取引プロトコル
+2. オーダーブックを使用する分散型の取引プロトコル
+3. 自動マーケットメーカー(AMM)モデルを使用する分散型の取引プロトコル
+4. オーダーブックと自動マーケットメーカー(AMM)モデルを使用する分散型の取引プロトコル
 
-### 2) How does Uniswap determine the price of a token?
+### 2) Uniswapでは、どのようにしてトークンの価格を決定するでしょうか？
 
-1. The price of a token is determined by the ratio of the reserves.
-2. The price of a token is determined by the ratio of the reserves and the number of trades.
-3. The price of a token is determined by the ratio of the reserves and the number of Liquidity Providers.
+1. リザーブの比率によってトークンの価格が決定される
+2. リザーブの比率と取引数によってトークンの価格が決定される
+3. リザーブの比率と流動性プロバイダーの数によってトークンの価格が決定される
