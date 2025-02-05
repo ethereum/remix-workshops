@@ -1,15 +1,15 @@
-The entire UniswapSwapExamples contract will only be presented in section 5 of this tutorial.  Before then, we'll build up blocks of code.
+UniswapSwapExamplesコントラクト全体は、このチュートリアルのセクション5になると見ることができます。  それまでは、コードのブロックをビルドしていきます。
 
-This section explores the `ISwapRouter` interface, which defines the functions that can be called on the Uniswap Swap contract.
+このセクションでは、`ISwapRouter` インターフェースについて学びます。これで関数を定義してUniswapスワップコントラクトから呼び出せるようにします。
 
-Single-hop swaps allow users to exchange one token for another directly within a liquidity pool.
-Multi-hop swaps allow users to exchange one token for another by routing through multiple tokens.
+ユーザーは、シングルホップスワップを使って流動性プール内でトークンと別のトークンを交換できます。
+ユーザーは、マルチホップスワップを使い、トークンを別のトークンに複数のトークンを経由するルーティングにより交換できます。
 
-Interfaces in Solidity specify functions that must be included in a contract that inherits them.  They are useful for declaring what functions be supported and allow for easier integration and interaction between different contracts.
+Solidityのインターフェースでは、継承するコントラクトが含まなければならない関数を指定します。  インターフェースにより、どの関数がサポートされているかを宣言することで、異なるコントラクト間の統合や、やり取りを容易にすることができるので有用です。
 
-Structs are used to define custom data types.
+構造体は、カスタムデータ型を定義するのに使われます。
 
-## ISwapRouter Interface
+## ISwapRouterインターフェース
 
 The ISwapRouter interface defines the functions that can be called on the Uniswap Swap contract. We will need to use this interface to interact with the Uniswap Swap contract and execute swaps.
 
