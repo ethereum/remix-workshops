@@ -19,13 +19,13 @@ Uniswapは、分散型暗号通貨取引所です。 ユーザーは、中央集
 5. Uniswapスマートコントラクトは、受け取った1 ETHをリザーブに追加します。
 6. Uniswapスマートコントラクトは、更新されたリザーブを基に新しいレートを再計算します。
 
-The tokens in the Liquidity Pool are provided by Liquidity Providers. When a Liquidity Provider deposits tokens into a Liquidity Pool, they receive Liquidity Provider Tokens in return. Liquidity Provider Tokens represent a user's share of a Liquidity Pool.
+流動性プールのトークンは、流動性プロバイダーによって提供されます。 流動性プロバイダーがトークンを流動性プールにデポジットすると、流動性プロバイダーは代わりに流動性プロバイダートークンを受け取ります。 流動性プロバイダートークンは、流動性プロバイダーのユーザーの割合(シェア)を表します。
 
-Users of Uniswap pay a fee for each trade. The fee is paid to the Liquidity Providers in the form of additional Liquidity Provider Tokens.
+Uniswapのユーザーは、トレードごとに手数料を払います。 手数料は、流動性プロバイダートークンとして流動性プロバイダーに追加で支払われます。
 
 ## Uniswapスワップコントラクト
 
-ユーザーは、UniswapスワップコントラクトのV3を使用してトークンのスワップができます。 シングルホップスワップでは、ユーザー1つのトークンをもう一つのトークンと直接交換できます。 V3では、マルチホップスワップも可能で、ユーザーはルーティングによって複数のトークンを経由してトークンを交換できます。 このコンテキストにおいてルーティングが意味するところは、スワップコントラクトがトークンを別のトークンに交換し、その後に別のトークンがもう一つの別のートークンと交換されます。これが、欲しいトークンに交換されるまで行われます。
+ユーザーは、UniswapスワップコントラクトのV3を使用してトークンのスワップができます。 シングルホップスワップでは、ユーザー1つのトークンをもう一つのトークンと直接交換できます。 V3では、マルチホップスワップも可能で、ユーザーはルーティングによって複数のトークンを経由してトークンを交換できます。 このコンテキストにおいてルーティングが意味するところは、スワップコントラクトがトークンを別のトークンに交換し、その後に別のトークンがもう一つの別のトークンと交換されることを言います。これが、欲しいトークンに交換されるまで行われます。
 
 ## 結論
 
