@@ -13,29 +13,29 @@ Solidityのインターフェースでは、継承するコントラクトが含
 
 ISwapRouterインターフェースは、Uniswapスワップコントラクトで呼び出すことのできる関数を定義します。 このインターフェースは、Uniswapスワップコントラクトとのやり取りおよびスワップの実行で必要になります。
 
-5行目で、 `ISwapRouter`型の`router`という名の定数変数が定義されています。 この変数の値にスマートコントラクトのインスタンスでデプロイされたアドレスである`0xE592427A0AEce92De3Edee1F18E0157C05861564`を設定しています。 This is the address of the Uniswap V3 Swap contract on the Ethereum mainnet.
+5行目で、 `ISwapRouter`型の`router`という名の定数変数が定義されています。 この変数の値にスマートコントラクトのインスタンスでデプロイされたアドレスである`0xE592427A0AEce92De3Edee1F18E0157C05861564`を設定しています。 これはイーサリアムメインネットのUniswap V3 スワップコントラクトのアドレスです。
 
-On line 9, we define an interface called `ISwapRouter`. This interface defines two functions: `exactInputSingle` and `exactInput`.
+9行目では、`ISwapRouter`という名前のインターフェースを定義しています。 このインターフェースにおいて、２つの関数、 `exactInputSingle`と `exactInput`を定義しています。
 
 ## exactInputSingle
 
-On line 25, we define a struct called `ExactInputSingleParams`. This struct defines the parameters that are required for our exactInputSingle function on line 21, which will execute a single-hop swap. The struct has the following parameters:
+25行目では、`ExactInputSingleParams`という構造体を定義しています。 この構造体は、21行目にあるexactInputSingle関数で必要になるパラメータを定義しています。この関数は、シングルホップスワップで実行されます。 この構造体は、次のパラメータがあります。
 
-- **`address tokenIn`**: The address of the token being sent.
-- **`address tokenOut`**: The address of the token being received.
-- **`uint24 fee`**: The fee associated with the swap.
-- **`address recipient`**: The address that will receive the output token.
-- **`uint deadline`**: A timestamp by which the transaction must be processed, for time-limiting the swap.
-- **`uint amountIn`**: The amount of the input token being sent.
-- **`uint amountOutMinimum`**: The minimum amount of the output token that the sender is willing to accept, to protect against unfavorable price movements.
-- **`uint160 sqrtPriceLimitX96`**: A limit on the price, represented in a specific format, to prevent the swap from occurring at unfavorable prices.
+- **`address tokenIn`**: 送信されるトークンのアドレスです。
+- **`address tokenOut`**: 受け取るトークンのアドレスです。
+- **`uint24 fee`**: スワップの手数料です。
+- **`address recipient`**: 出力されるトークンを受け取るアドレスです。
+- **`uint deadline`**: スワップの時間制限で、トランザクションが処理されるまでの時間です。
+- **`uint amountIn`**: 送信されるトークンの量です。
+- **`uint amountOutMinimum`**: 送信者が受け取れる出力トークンの最小量で、不利になる価格な動きから保護します。
+- **`uint160 sqrtPriceLimitX96`**: 特定のフォーマットで表される価格の制限で、不利な価格がスワップにより発生することを防ぎます。
 
 ## exactInput
 
-On line 25, we define a struct called `ExactInputParams`. This struct defines the parameters that are required for our `exactInput` function on line 33. This function will execute a multi-hop swap. The struct has the following parameters:
+25行目では、 `ExactInputParams`という名の構造体が定義されています。 この構造体は、33行目の`exactInput`関数で必要とされるパラメータが定義されています。 この関数は、マルチホップスワップを実行します。 この構造体は、次のパラメータがあります。
 
-- **`bytes path`**: Encoded information about the swap path (i.e., which tokens to swap through).
-- **`address recipient`**: The address receiving the output tokens.
-- **`uint deadline`**: Similar to above, a timestamp by which the transaction must be processed.
-- **`uint amountIn`**: The amount of the input token.
-- **`uint amountOutMinimum`**: The minimum amount of the output token the sender expects to receive.
+- **`bytes path`**: スワップパス(どのトークンを経由してスワップするか)についての情報がエンコードされています。
+- **`address recipient`**: 出力トークンのアドレスです。
+- **`uint deadline`**: 上で述べたのと同様で、トランザクションが処理されるまでの時間制限です。
+- **`uint amountIn`**: インプットトークンの量です。
+- **`uint amountOutMinimum`**: 送信者が受け取る出力トークンの最小量です。
