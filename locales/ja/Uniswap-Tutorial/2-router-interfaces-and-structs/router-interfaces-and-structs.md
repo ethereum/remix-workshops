@@ -11,9 +11,9 @@ Solidityのインターフェースでは、継承するコントラクトが含
 
 ## ISwapRouterインターフェース
 
-The ISwapRouter interface defines the functions that can be called on the Uniswap Swap contract. We will need to use this interface to interact with the Uniswap Swap contract and execute swaps.
+ISwapRouterインターフェースは、Uniswapスワップコントラクトで呼び出すことのできる関数を定義します。 このインターフェースは、Uniswapスワップコントラクトとのやり取りおよびスワップの実行で必要になります。
 
-On line 5, we define a constant variable called `router` that is of type `ISwapRouter`. We set the value of this variable to the interface instance of a smart contract that is deployed at the address `0xE592427A0AEce92De3Edee1F18E0157C05861564`. This is the address of the Uniswap V3 Swap contract on the Ethereum mainnet.
+5行目で、 `ISwapRouter`型の`router`という名の定数変数が定義されています。 この変数の値にスマートコントラクトのインスタンスでデプロイされたアドレスである`0xE592427A0AEce92De3Edee1F18E0157C05861564`を設定しています。 This is the address of the Uniswap V3 Swap contract on the Ethereum mainnet.
 
 On line 9, we define an interface called `ISwapRouter`. This interface defines two functions: `exactInputSingle` and `exactInput`.
 
