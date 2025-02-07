@@ -7,30 +7,30 @@
 - **`address tokenIn`**: 送信されるトークンのアドレス
 - **`address tokenOut`**: 受け取るトークンのアドレス
 - **`uint24 poolFee`**: スワップの手数料
-- **`uint amountIn`**: The amount of the input token being sent.
+- **`uint amountIn`**: 送信される入力トークンの量
 
-It returns a `uint` called `amountOut`, which is the amount of the output token that was received.
+受け取る出力トークンの量である`amountOut`という`uint`を返します。
 
 ## 関数の本体
 
-In the function body, we first transfer the input token from the sender to our contract, line 14.
-Then, we approve the Uniswap Swap contract to spend the input token on our behalf, line 15.
+関数本体では、14行目で最初に送信者から、このコントラクトに入力トークンを送信します。
+そして、15行目で私たちの代わりに入力トークンを使用できるように承認します。
 
-On line 17, we create an instance of the `ExactInputSingleParams` struct. This struct contains the parameters that are required for our `exactInputSingle` function on line 45, which will execute the single-hop swap. We repeat `ISwapRouter.ExactInputSingleParams` two times on that line because we are making an instance of a struct that is defined in an interface.
+17行目では、`ExactInputSingleParams` 構造体のインスタンスを作成します。 この構造体は、45行目にシングルホップスワップを実行する`exactInputSingle` 関数で必要とされるパラメータを含んでいます。 この行において`ISwapRouter.ExactInputSingleParams`を2回繰り返している理由は、インターフェースで定義されている構造体のインスタンスを作成しているためです。
 
 ## ExactInputSingleParams構造体のパラメータ
 
-We set the parameters of the struct as follows:
+構造体のパラメータを次のように設定しています。
 
-- **`tokenIn`**: We set this to the `tokenIn` parameter of our function.
-- **`tokenOut`**: We set this to the `tokenOut` parameter of our function.
-- **`fee`**: We set this to the `poolFee` parameter of our function.
-- **`recipient`**: We set this to the sender of the transaction.
-- **`deadline`**: We set this to the current timestamp. We do this because we want the transaction to be processed as soon as possible.
-- **`amountIn`**: We set this to the `amountIn` parameter of our function.
-- **`amountOutMinimum`**: We set this to 0 because we do not want to specify a minimum amount of the output token that we are willing to accept.
-- **`sqrtPriceLimitX96`**: We set this to 0 because we do not want to specify a limit on the price.
+- **`tokenIn`**:  関数の`tokenIn`パラメータに設定しています。
+- **`tokenOut`**: 関数の`tokenOut`パラメータに設定しています。
+- **`fee`**: 関数の`poolFee`パラメータに設定しています。
+- **`recipient`**: トランザクションの送信者に設定しています。
+- **`deadline`**: 現在のタイムスタンプを設定しています。 この設定をしている理由は、できるだけ早くトランザクション処理をしたいためです。
+- **`amountIn`**: 関数の`amountln`パラメータに設定しています。
+- **`amountOutMinimum`**: 0を設定しています。理由は、受け取る出力トークンの最小量を指定したくないためです。
+- **`sqrtPriceLimitX96`**: 0に設定しています。理由は、価格の制限を指定したくないためです。
 
 ## シングルホップスワップの実行
 
-On line 29, we assign the output of the `exactInputSingle` function to the `amountOut` variable. This function executes the single-hop swap and returns the amount of the output token that was received.
+29行目で、 `exactInputSingle`関数の出力を`amountOut`変数に割り当てています。 この関数は、シングルホップスワップを実行し、受け取った出力トークンの量を返します。
