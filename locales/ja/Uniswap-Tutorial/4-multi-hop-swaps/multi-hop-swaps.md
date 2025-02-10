@@ -1,30 +1,30 @@
 このセクションでは、`UniswapV3SwapExamples`コントラクトにある`swapExactInputMultiHop`関数について詳しく解説します。 この関数は、ユーザーがカスタムパスを指定することで複数の流動性プールを介することができます。これにより、より複雑なトークンスワップが可能になります。
 
-例えば、ユーザーがトークンAをトークンDに交換したいとして、直接交換するAとDの流動性プールが無いとします。この場合は、ユーザーが複数のトークンを経由するパスを指定することができます。 For example, the user can swap A for B, then B for C, and finally C for D. This is of course automatically done by the Uniswap V3 Swap contract.
+例えば、ユーザーがトークンAをトークンDに交換したいとして、直接交換するAとDの流動性プールが無いとします。この場合は、ユーザーが複数のトークンを経由するパスを指定することができます。 いわば、ユーザーは、AをBに交換、そしてBをCに交換、最後にCをDに交換ことができます。この道筋がUniswap V3スワップコントラクトによって自動的に行われます。
 
-### Parameters and Return Value
+### パラメーターと戻り値
 
-On line 32, we define a function called `swapExactInputMultiHop`. This function executes a multi-hop swap. It takes the following parameters:
+32行目では、`swapExactInputMultiHop`という関数が定義されています。 この関数は、マルチホップスワップを実行します。 この関数は、次のパラメータを受け取ります。
 
-- **`bytes calldata path`**: Encoded information about the swap path (i.e., which tokens to swap through).
-- **`address tokenIn`**: The address of the token being sent.
-- **`uint amountIn`**: The amount of the input token being sent.
+- **`bytes calldata path`**: エンコードされたスワップパス(どのトークンを経由してスワップするか)についての情報
+- **`address tokenIn`**: 送信されるトークンのアドレス
+- **`uint amountIn`**: 送信される入力トークンの量
 
-It returns a `uint` called `amountOut`, which is the amount of the output token that was received.
+受け取る出力トークンの量である`amountOut`という`uint`を返します。
 
-### Function Body
+### 関数の本体
 
-In the function body, we first transfer the input token from the sender to our contract, line 38.
-Then, we approve the Uniswap Swap router to spend the input token on our behalf, line 41.
+関数本体では、38行目で最初に送信者から、このコントラクトに入力トークンを送信します。
+そして、41行目で私たちの代わりにUniswapスワップルーターが入力トークンを使用できるように承認します。
 
-On line 43, we create an instance of the `ExactInputParams` struct, line 73. This struct contains the parameters that are required for our `exactInput` function on line 81, which will execute the multi-hop swap.
+43行目では、73行目にある`ExactInputParams`構造体のインスタンスを作成しています。 この構造体は、81行目にマルチホップスワップを実行する `exactInput`  関数で必要とされるパラメータを含んでいます。
 
-We set the parameters of the struct as follows:
+構造体のパラメータを次のように設定しています。
 
-- **`path`**: We set this to the `path` parameter of our function.
-- **`recipient`**: We set this to the sender of the transaction.
-- **`deadline`**: We set this to the current timestamp. We do this because we want the transaction to be processed as soon as possible.
-- **`amountIn`**: We set this to the `amountIn` parameter of our function.
-- **`amountOutMinimum`**: We set this to 0 because we do not want to specify a minimum amount of the output token that we are willing to accept.
+- **`path`**: 関数の`path`パラメータに設定しています。
+- **`recipient`**: トランザクションの送信者に設定しています。
+- **`deadline`**: 現在のタイムスタンプを設定しています。 この設定をしている理由は、できるだけ早くトランザクション処理をしたいためです。
+- **`amountIn`**: 関数の`amountln`パラメータに設定しています。
+- **`amountOutMinimum`**: 0を設定しています。理由は、受け取る出力トークンの最小量を指定したくないためです。
 
-On line 53, we execute the multi-hop swap by calling the `exactInput` function. This function returns the amount of the output token that was received.
+53行目で`exactInput` を呼び出してマルチホップスワップを実行します。 この関数は、受け取った出力トークンの量を返します。
