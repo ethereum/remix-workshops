@@ -1,6 +1,6 @@
-In this section, we'll delve into the `swapExactInputMultiHop` function in the `UniswapV3SwapExamples` contract. This function enables more complex token swaps by allowing users to specify a custom path through multiple liquidity pools.
+このセクションでは、`UniswapV3SwapExamples`コントラクトにある`swapExactInputMultiHop`関数について詳しく解説します。 この関数は、ユーザーがカスタムパスを指定することで複数の流動性プールを介することができます。これにより、より複雑なトークンスワップが可能になります。
 
-If for example, a user wants to swap token A for token D, but there is no direct liquidity pool for A and D, the user can specify a path through multiple tokens. For example, the user can swap A for B, then B for C, and finally C for D. This is of course automatically done by the Uniswap V3 Swap contract.
+例えば、ユーザーがトークンAをトークンDに交換したいとして、直接交換するAとDの流動性プールが無いとします。この場合は、ユーザーが複数のトークンを経由するパスを指定することができます。 For example, the user can swap A for B, then B for C, and finally C for D. This is of course automatically done by the Uniswap V3 Swap contract.
 
 ### Parameters and Return Value
 
