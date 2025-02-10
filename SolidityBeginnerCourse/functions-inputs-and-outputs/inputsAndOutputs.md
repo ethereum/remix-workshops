@@ -15,7 +15,7 @@ When you assign values to a name you can omit (leave out) the return statement a
 ### Deconstructing Assignments
 You can use deconstructing assignments to unpack values into distinct variables.
 
-The `destructingAssigments` function (line 49) assigns the values of the `returnMany` function to the new local variables `i`, `b`, and `j` (line 60).
+The `destructingAssignments` function (line 49) assigns the values of the `returnMany` function to the new local variables `i`, `b`, and `j` (line 60).
 
 ### Input and Output restrictions
 There are a few restrictions and best practices for the input and output parameters of contract functions.
