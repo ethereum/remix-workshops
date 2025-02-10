@@ -1,5 +1,5 @@
-# Uniswap Swap Course
+# Uniswapスワップコース
 
-Review the code of the Uniswap V3 Swap contract for performing token swaps.
+Uniswap V3スワップコントラクトを概説して、トークンスワップを実行します。
 
-Developed by the p2p learning platform https://dacade.org.
+このコースは、p2p学習プラットフォーム https://dacade.orgにより開発されました。
