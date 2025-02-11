@@ -1,8 +1,8 @@
-In this section, we'll explore the `IERC20` interface, a standard interface for interacting with ERC-20 tokens and the `IWETH` interface, a standard interface for interacting with wrapped Ether (WETH). Understanding these interfaces is crucial as it is used in the Uniswap V3 Swap contract to handle token transfers and approvals.
+このセクションでは、ERC-20トークンとやり取りする標準である`IERC20`インターフェース、ラップドイーサ(WETH)とやり取りする標準インターフェースである`IWETH`を探索します。 Understanding these interfaces is crucial as it is used in the Uniswap V3 Swap contract to handle token transfers and approvals.
 
 You can find a "Solidity ERC20 Token Course" for beginners in LearnEth to understand the ERC20 token standard in more detail.
 
-## IERC20 Interface
+## IERC20インターフェース
 
 On line 80, we define the `IERC20` interface. This interface defines a standard set of functions that ERC-20 tokens must implement. Let's examine the key functions within this interface:
 
@@ -34,7 +34,7 @@ On line 91, we define the `transferFrom` function. This function transfers token
 
 On lines 102-103, we define the `Transfer` and `Approval` events. These events are emitted when the `transfer` and `approve` functions are called, respectively.
 
-## IWETH Interface
+## IWETHインターフェース
 
 On line 106, we define the `IWETH` interface. This interface extends the `IERC20` interface and defines two additional functions:
 
@@ -47,6 +47,6 @@ We need to wrap ETH into WETH because the Uniswap V3 Swap contract only supports
 
 On line 109, we define the `withdraw` function. This function withdraws the specified amount of WETH from the contract and returns the equivalent amount of ETH. This function is used to unwrap WETH into ETH.
 
-## Conclusion
+## まとめ
 
 In this tutorial, we explored the Uniswap V3 Swap contract.  To get a full sense of how Uniswap works, try making some swaps on the <a href="https://app.uniswap.org/" target="_blank">Uniswap DApp</a> and go to the <a href="https://docs.uniswap.org/" target="_blank">Uniswap docs</a>.
