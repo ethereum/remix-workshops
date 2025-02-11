@@ -1,30 +1,30 @@
-このセクションでは、ERC-20トークンとやり取りする標準である`IERC20`インターフェース、ラップドイーサ(WETH)とやり取りする標準インターフェースである`IWETH`を探索します。 Understanding these interfaces is crucial as it is used in the Uniswap V3 Swap contract to handle token transfers and approvals.
+このセクションでは、ERC-20トークンとやり取りする標準である`IERC20`インターフェース、ラップドイーサ(WETH)とやり取りする標準インターフェースである`IWETH`を探索します。 Uniswap V3スワップコントラクトでトークンの送信やトークンの承認を処理するため、これらのインターフェースを理解するとが非常に重要です。
 
-You can find a "Solidity ERC20 Token Course" for beginners in LearnEth to understand the ERC20 token standard in more detail.
+初心者向けの「Solidity ERC20トークンコース」がLearnEthにあります。そこでERC20トークン標準に関する詳細を理解することができます。
 
 ## IERC20インターフェース
 
-On line 80, we define the `IERC20` interface. This interface defines a standard set of functions that ERC-20 tokens must implement. Let's examine the key functions within this interface:
+80行目で、 `IERC20`インターフェースを定義しています。 このインターフェースは、ERC-20トークンが実装しなければならない関数の標準セットを定義します。 インターフェース内にある主要な関数を見ていきましょう。
 
 ### 1. totalSupply
 
-On line 81, we define the `totalSupply` function. This function returns the total supply of the token.
+81行目では、`totalSupply`関数を定義しています。 この関数は、トークンの総供給量を返します。
 
 ### 2. balanceOf
 
-On line 83, we define the `balanceOf` function. This function returns the balance of the specified address.
+83行目では、`balanceOf`関数を定義しています。 この関数は、特定のアドレスの残高を返します。
 
 ### 3. transfer
 
-On line 85, we define the `transfer` function. This function transfers tokens from the sender to the specified recipient.
+85行目では、`transfer`関数を定義しています。 この関数は、送信者から特定の受信者にトークンを送信します。
 
 ### 4. allowance
 
-On line 87, we define the `allowance` function. This function returns the amount of tokens that the spender is allowed to spend on behalf of the owner.
+87行目では、`allowance`関数を定義しています。 この関数は、所有者の代わりに消費できる消費者(spender)のトークン量を返します。
 
 ### 5. approve
 
-On line 89, we define the `approve` function. When called, this function approves a spender to spend the specified amount of tokens on behalf of the sender.
+89行目では、`approve`関数を定義しています。 これを呼び出すことにより、送信者の代わりに特定のトークン量を消費できる消費者(spender)を承認します。
 
 ### 6. transferFrom
 
@@ -49,4 +49,4 @@ On line 109, we define the `withdraw` function. This function withdraws the spec
 
 ## まとめ
 
-In this tutorial, we explored the Uniswap V3 Swap contract.  To get a full sense of how Uniswap works, try making some swaps on the <a href="https://app.uniswap.org/" target="_blank">Uniswap DApp</a> and go to the <a href="https://docs.uniswap.org/" target="_blank">Uniswap docs</a>.
+このチュートリアルでは、Uniswap V3スワップコントラクトについて解説しました。  Uniswapの動作を完全に理解するために、<a href="https://app.uniswap.org/" target="_blank">Uniswap DApp</a>でスワップを試しながら、<a href="https://docs.uniswap.org/" target="_blank">Uniswapドキュメント</a>を読みましょう。
