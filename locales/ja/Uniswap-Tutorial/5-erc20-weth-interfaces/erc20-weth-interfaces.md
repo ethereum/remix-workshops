@@ -28,24 +28,24 @@
 
 ### 6. transferFrom
 
-On line 91, we define the `transferFrom` function. This function transfers tokens from the specified sender to the recipient. The function can only be called by the spender if the spender is allowed to spend the specified amount of tokens on behalf of the sender.
+91行目では、`transferFrom`関数を定義しています。 この関数は、特定の送信者から受信者へトークンを送信します。 この関数は、消費者(spender)が送信者の代わりに特定の量のトークンの消費を許可されている場合に、消費者(spender)によって呼び出すことができます。
 
 ### 7. Events
 
-On lines 102-103, we define the `Transfer` and `Approval` events. These events are emitted when the `transfer` and `approve` functions are called, respectively.
+102から103行目では、`Transfer`イベントと`Approval`イベントを定義しています。 これらのイベントは、 `transfer` 関数や`approve` 関数が呼び出された場合に、それぞれ発生します。
 
 ## IWETHインターフェース
 
-On line 106, we define the `IWETH` interface. This interface extends the `IERC20` interface and defines two additional functions:
+106行目では、 `IWETH`インターフェースを定義しています。 このインターフェースは、`IERC20`インターフェースと次の2つの関数を追加で定義しています。
 
 ### 1. deposit
 
-On line 107, we define the `deposit` function. This function deposits ETH into the contract and returns the equivalent amount of WETH. This function is used to wrap ETH into WETH.
-We need to wrap ETH into WETH because the Uniswap V3 Swap contract only supports ERC-20 tokens.
+107行目では、`deposit`関数を定義しています。 この関数は、ETHをコントラクトにデポジットして、同量のWETHを返します。 この関数は、ETHをWETHへラップするのに使います。
+ETHをWETHにラップする必要があるのは、Uniswap V3スワップコントラクトでは、ERC-20トークンのみをサポートしているのが理由です。
 
 ### 2. withdraw
 
-On line 109, we define the `withdraw` function. This function withdraws the specified amount of WETH from the contract and returns the equivalent amount of ETH. This function is used to unwrap WETH into ETH.
+109行目では、`withdraw`関数を定義しています。 この関数は、特定量のWETHをコントラクトから引き出して、同量のETHを返します。 この関数は、WETHをアンラップしてETHにするのに使われます。
 
 ## まとめ
 
