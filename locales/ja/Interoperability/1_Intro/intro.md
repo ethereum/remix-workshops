@@ -1,5 +1,5 @@
-As the web3 world grows, there will be more blockchains. Unless the chains can communicate with one another, the ecosystem will become increasingly fragmented.
+web3の世界が成長するにつれて、ブロックチェーンも増えています。 チェーンがお互いにコミュニケーションできない限り、エコシステムが分断されていきます。
 
-The Axelar network enables protocols to have cross-chain functionality between any two blockchains.
+Axelar networkは、2つのブロックチェーン間でクロスチェーン機能を持たせるプロトコルを可能にます。
 
-Building a protocol that is interoperable between ecosystems is essential for growth.
+エコシステム間で相互運用可能なプロトコルを構築することは、成長に必要不可欠です。
