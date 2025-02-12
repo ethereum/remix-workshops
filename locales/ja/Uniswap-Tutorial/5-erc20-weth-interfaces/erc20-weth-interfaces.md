@@ -49,4 +49,4 @@ On line 109, we define the `withdraw` function. This function withdraws the spec
 
 ## まとめ
 
-このチュートリアルでは、Uniswap V3スワップコントラクトについて解説しました。  Uniswapの動作を完全に理解するために、<a href="https://app.uniswap.org/" target="_blank">Uniswap DApp</a>でスワップを試しながら、<a href="https://docs.uniswap.org/" target="_blank">Uniswapドキュメント</a>を読みましょう。
+このチュートリアルでは、Uniswap V3スワップコントラクトについて解説しました。  Uniswapの動作を完全に理解するために、<a href="https://app.uniswap.org/" target="_blank">Uniswap DApp</a>でスワップを試しながら、<a href="https://docs.uniswap.org/" target="_blank">Uniswapのドキュメント</a>を読みましょう。
