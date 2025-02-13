@@ -1,25 +1,25 @@
 Axelar Gatewayは、 Axelarエコシステムに入るスマートコントラクトのエントリーポイントです。 Gatewayの適切な関数をトリガーすると、あなたのトランザクションは、発生源のチェーンからAxelarネットワークを横断して目的のチェーンへ向かってインターチェーンの旅を開始します。 Axelarに接続されている各チェーンには、ゲートウェイコントラクトがデプロイされており、ユーザーはやり取りすることができます。
 
-The following are the two more relevant functions you will need to be familiar with.
+次は、より関連性が高く重要な関数のうちの2つです。
 
 ## callContract()
 
-This function triggers an interchain transaction with a message from the source to the destination chain. It takes three relevant parameters:
+この関数は、送信元のチェーンから目的のチェーンへインターチェーントランザクションをメッセージとともにトリガーします。 この関数は、次の3つの関連パラメータを取ります。
 
-1. `destinationChain`: The name of the destination chain
-2. `destinationContractAddress`: The address on the destination chain this transaction will execute at.
-3. `payload`: The message that is being sent
+1. `destinationChain`: 目的のチェーンの名前
+2. `destinationContractAddress`: このトランザクチョンを実行する目的のチェーンのアドレス
+3. `payload`: 送信されるメッセージ
 
-The first two parameters are quite intuitive. They consist of both the name of the chain you want this transaction to go to and the address on that chain you want to end execute at. The final parameter is the payload. This payload represents a general message that is sent to the destination chain. The message can be used in many different ways on the destination chain. For example, you can send data to be used as a parameter in another function on the destination chain, you can send a function signature as a message that will then get executed on a destination chain, and much more.
+最初の2つのパラメータは、かなり直観的です。 このトランザクションが行われるチェーン、実行したいチェーンのアドレスで構成されています。 最後のパラメータは、ペイロードです。 このペイロードは、一般的なメッセージを表し、目的のチェーンに送られます。 このメッセージは、目的のチェーン上でさまざまな形で使われます。 例えば、目的のチェーン上の別の関数にあるパラメータとして使われるデータを送信することができます。これにより、関数のシグネチャをメッセージとして送信して目的のチェーン上で実行するなどができます。
 
 ## callContractWithToken()
 
-This function triggers an interchain with a message and a fungible token from the source to the destination chain. It takes five relevant parameters:
+この関数は、送信もとのチェーンから目的のチェーンへインターチェーンとともにメッセージ、代替トークンをトリガーします。 この関数は、5つの関連パラメータを取ります。
 
-1. `destinationChain`: The name of the destination chain
-2. `destinationContractAddress`: The address on the destination chain this transaction will execute at.
-3. `payload`: The message that is being sent
-4. `symbol`: The symbol of the token being sent
-5. `amount`: The amount of that token that is being sent
+1. `destinationChain`: 目的チェーンの名前
+2. `destinationContractAddress`: トランザクションが実行される目的チェーンのアドレス
+3. `payload`: 送信されるメッセージ
+4. `symbol`: 送信されるトークンのシンボル
+5. `amount`: 送信されるトークンの量
 
-The first three parameters here are the same as in `callContract()`. The final two parameters are relevant to the token that is being sent along with the message. These are the symbol of the token and the amount of the token that is being sent.
+この最初の3つのパラメータは、`callContract()`にあるものと同じです。 最後の2つのパラメータは、トークンに関連しており、メッセージとともにトークンを送信します。 これらのパラメータは、トークンのシンボルと、送信されるトークンの量です。
