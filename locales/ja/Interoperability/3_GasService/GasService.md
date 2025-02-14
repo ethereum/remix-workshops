@@ -4,26 +4,26 @@ Axelar Gas Serviceは、非常に有用なツールでインターチェーン�
 
 ## payNativeGasForContractCall()
 
-This function allows you to pay for the entirety of an interchain transaction in the native token of the source chain. It takes five relevant parameters:
+この関数によって送信元のチェーンのネイティブトークンでインターチェーントランザクション全体の支払ができます。 この関数には、5つの関連パラメータを取ります。
 
-1. `sender`: The address making the payment
-2. `destinationAddress`: The address on the destination chain the transaction is sent to
-3. `destinationChain`: The name of the destination the transaction is sent to
-4. `payload`: The message that is being sent
-5. `refundAddress`: The address any refunds should be sent to if too much gas was sent along with this transaction.
+1. `sender`: 支払を行うアドレス
+2. `destinationAddress`: トランザクションが送信される目的のチェーンのアドレス
+3. `destinationChain`: トランザクションが送信される目的のチェーンの名前
+4. `payload`: 送信されるメッセージ
+5. `refundAddress`: 送信されたトランザクションとともに過剰なガスが送られた場合に返金されるアドレス
 
-The parameters overlap with the parameters required by the `callContract()` function in the Gateway contract. The two parameters not discussed in the Gateway section are `sender` and `refundAddress`. The sender is the address paying for the transaction and the refund address is the address that will receive any surplus funds sent to the gas service.
+パラメータがGatewayコントラクトにある`callContract()`で必要なパラメータと重複しています。 Gatewayセクションでなかった2つのパラメータは、`sender`と`refundAddress`です。 senderは、トランザクションの支払をするアドレス。refundAddressは、ガスサービスに送られた余分な資金を受け取るアドレスです。
 
 ## payNativeGasForContractCallWithToken()
 
-This function allows you to pay for the entirety of an interchain transaction (that includes a token transfer) in the native token of the source chain. It takes seven relevant parameters:
+この関数によって送信元のチェーンのネイティブトークンでインターチェーントランザクション全体の支払ができます(トークンの送信も含みます)。 この関数には、7つの関連パラメータを取ります。
 
-1. `sender`: The address making the payment
-2. `destinationAddress`: The address on the destination chain the transaction is sent to
-3. `destinationChain`: The name of the destination the transaction is sent to
-4. `payload`: The message that is being sent
-5. `symbol`: The symbol of the token that was sent
-6. `amount`: The amount of the token that was sent
-7. `refundAddress`: The address any refunds should be sent to if too much gas was sent along with this transaction.
+1. `sender`: 支払を行うアドレス
+2. `destinationAddress`: トランザクションが送信される目的のチェーンのアドレス
+3. `destinationChain`: トランザクションが送信される目的のチェーンの名前
+4. `payload`: 送信されるメッセージ
+5. `symbol`: 送信されるトークンのシンボル
+6. `amount`: 送信されるトークンの量
+7. `refundAddress`: 送信されたトランザクションとともに過剰なガスが送られた場合に返金されるアドレス
 
-This function is nearly identical to the first top one the main difference being that it is used for message + token transfer transactions as opposed to just interchain message transactions (aka GMP Transactions). As a result the GasService needs to also know the `symbol` and `amount` of the token that is being sent.
+この関数は、最初の関数とほとんど同じですが、主な違いは、単なるインターチェーン・メッセージ・トランザクション(別名: GMPトランザクション)と異なり、メッセージと同時にトークンの送信トランザクションに使えることです。 そのため、 GasServiceが送信されるトークンの`symbol`と`amount`について知ってる必要があるのです。
