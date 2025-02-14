@@ -1,6 +1,6 @@
-The Axelar Gas Service is an extremely useful tool made available to pay gas for an interchain transaction. It allows you to pay for the cost of a transaction in the token of the source chain, making for a much easier end user (and developer) experience. If for example the source chain is Ethereum and the destination chain is Polygon then the gas service will receive the complete payment for the transaction in ETH and no matic is needed from the caller to pay for the execution on the Polygon destination chain.
+Axelar Gas Serviceは、非常に有用なツールでインターチェーントランザクションのガスの支払で使用可能です。 送信元のチェーンのトークンにおいてトランザクションのコストを支払うことができ、これによってユーザー(デベロッパー)エクスペリエンスが向上します。 例えば、送信元のチェーンがイーサリアムで、目的のチェーンがPolygonだとします。ガスサービスがETHのトランザクションで全ての支払を受け付けます。呼び出し側から目的のチェーンのPolygonの実行においてMaticの支払いは必要ありません。
 
-The following are the two more relevant functions you will need to be familiar with in regards to the Gas Service.
+次は、Gas Serviceにおいて関連性が高く重要な関数のうちの2つです。
 
 ## payNativeGasForContractCall()
 
