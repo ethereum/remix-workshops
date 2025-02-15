@@ -1,27 +1,27 @@
 Axelar executableは、ヘルパー関数を含んでおり、送信元のチェーンのインバウンドのトランザクションに対応して、目的のチェーンで自動的に実行されます。
 
-The following are the relevant functions you will need to use from Axelar Executable
+次は、Axelar Executableから使用することになる関数です。
 
 ## \_execute()
 
-This function handles the execution on the destination chain. It takes the following four parameters:
+この関数は、目的のチェーンでの実行を担います。 次の4つのパラメータを取ります。
 
-1. `commandId`: A unique transaction id on the Axelar chain.
-2. `sourceChain`: The blockchain which the transaction has been sent from
-3. `sourceAddress`: The address from the source chain that the transaction has been sent from
-4. `payload`: The message that is being sent
+1. `commandId`: Axelarチェーンの一意のトランザクションID
+2. `sourceChain`: 送信元のトランザクションが送られてきたブロックチェーン
+3. `sourceAddress`: トランザクションが送られてきたソースチェーンのアドレス
+4. `payload`: 送信されるメッセージ
 
-The `sourceChain` and `sourceAddress` are key parameters which you receive out of the box that can be used for verifying authenticity of messages on the destination chain. The payload (as discussed in the gateway section) is the message that was sent from the source chain to be used on your destination chain. The `commandId` will not be used during the rest of this module.
+`sourceChain`と`sourceAddress`は、目的のチェーンのメッセージの真正性を検証するのに使用され、受信されるとすぐに使用可能な主要なパラメータです。 payloadは、目的のチェーンで使用される送信元のチェーンから送信されたメッセージです(ゲートウェイセクションでも説明)。 `commandId`は、このモジュールにおいて使用しません。
 
 ## \_executeWithToken()
 
-This function handles the execution on the destination chain for a message being sent with a fungible token. It takes six relevant parameters:
+この関数は、代替トークンとともに送信されたメッセージを目的のチェーンで上で実行を処理します。 次の6つの関連するパラメータを取ります。
 
-1. `commandId`: A unique transaction id on the Axelar chain.
-2. `sourceChain`: The blockchain which the transaction has been sent from
-3. `sourceAddress`: The address from the source chain that the transaction has been sent from
-4. `payload`: The message that is being sent
-5. `tokenSymbol`: The symbol of the token being sent
-6. `amount`: The amount of that token that is being sent
+1. `commandId`: Axelarチェーンの一意のトランザクションID
+2. `sourceChain`: 送信元のトランザクションが送られてきたブロックチェーン
+3. `sourceAddress`: トランザクションが送られてきたソースチェーンのアドレス
+4. `payload`: 送信されるメッセージ
+5. `tokenSymbol`: 送信されるトークンのシンボル
+6. `amount`: 送信されるトークンの量
 
-The first four parameters are identical to that of the `_execute()` function. The final two parameters of `tokenSymbol` and `amount` are in reference to the token that is being sent along with the message. It allows you on the destination chain to interact with the token accordingly, for example transferring it to another receiving address. The `commandId` will not be used during the rest of this module.
+最初の4つのパラメータは、`_execute()` 関数と同じです。 後半にある`tokenSymbol`と`amount`の2つのパラメータは、メッセージとともに送信されるトークンの参照です。 これによって、目的のチェーンで状況に応じてトークンのやり取りができます。例えば、トークンを受け取る別のアドレスに送信することができます。 `commandId`は、このモジュールにおいて使用しません。
