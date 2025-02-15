@@ -1,4 +1,4 @@
-The Axelar executable contains relevant helper functions that will be automatically executed on the destination chain in correspondence to the relevant inbound transaction from the source chain.
+Axelar executableは、ヘルパー関数を含んでおり、送信元のチェーンのインバウンドのトランザクションに対応して、目的のチェーンで自動的に実行されます。
 
 The following are the relevant functions you will need to use from Axelar Executable
 
