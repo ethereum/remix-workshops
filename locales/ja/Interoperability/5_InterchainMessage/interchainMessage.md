@@ -1,18 +1,18 @@
-In this section we will create a contract that will send a "hello world" message between two blockchains.
+このセクションでは、2つのブロックチェーン間で「hello world」メッセージを送るコントラクトを作成します。
 
-## Constructor
+## コンストラクタ
 
-The first thing you will need to create is the `constructor` for the function. This will allow you to set the `Gateway` and `Gas Service` contracts we discussed in the previous sections.
+まず最初に作成する必要があるのは、関数の`constructor`です。 コンストラクタにより、前のセクションで取り上げた`Gateway` と `Gas Service`を設定します。
 
-When deploying the contract you will pass in the address of the `Gateway` and `GasService` for Ethereum Sepolia those addresses are `0xe432150cce91c13a887f7D836923d5597adD8E31` for the Gateway and `0xbE406F0189A0B4cf3A05C286473D23791Dd44Cc6` for the Gas Service.
+コントラクトのデプロイ時に、Ethereum Sepoliaの`Gateway`と`GasService`のアドレスを渡します。アドレスは、Gatewayが`0xe432150cce91c13a887f7D836923d5597adD8E31`でGas Serviceが`0xbE406F0189A0B4cf3A05C286473D23791Dd44Cc6`です。
 
-For the full list of relevant Axelar addresses <a href="https://docs.axelar.dev/resources/contract-addresses/testnet" target="_blank">see here</a>
+関連するAxelarのアドレスの全リストは、<a href="https://docs.axelar.dev/resources/contract-addresses/testnet" target="_blank">こちらをご覧ください</a>。
 
-## Send Interchain Message
+## インターチェーンメッセージの送信
 
-Now that the constructor has set the relevant Axelar addresses needed to trigger an interchain transaction you can move on to the `setRemoteValue()`, which will trigger this transaction.
+それでは、コンストラクタにインターチェーントランザクションのトリガーに必要な関連Axelarアドレスを設定したら、`setRemoteValue()`に進むことが出来ます。この関数がトランザクションをトリガーします。
 
-This function takes three parameters:
+この関数は、3つのパラメータを取ります。
 
 1. `_destinationChain`: The chain which the transaction is going to
 2. `_destinationAddress`: The address on the destination chain the transaction will execute at
@@ -30,7 +30,7 @@ This function needs the parameters explained earlier in the GasService section. 
 
 Once you trigger this function you will have successfully sent a transaction from the source chain via Axelar to the destination chain! But there is still one final step that needs to be complete.
 
-### Receive Message on Destination Chain
+### 目的のチェーンからメッセージを受け取る
 
 On the destination chain the inbound interchain transaction needs to be picked up and handled by the `AxelarExecutable`'s `_execute()` function.
 
