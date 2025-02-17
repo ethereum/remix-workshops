@@ -14,21 +14,21 @@
 
 この関数は、3つのパラメータを取ります。
 
-1. `_destinationChain`: The chain which the transaction is going to
-2. `_destinationAddress`: The address on the destination chain the transaction will execute at
-3. `_message`: The message being passed to the destination chain
+1. `_destinationChain`: トランザクションが行われるチェーン
+2. `_destinationAddress`: トランザクションが実行される目的のチェーンのアドレス
+3. `_message`: 目的のチェーンに渡されるメッセージ
 
-First, you have a `require` statement which ensures that the `msg.value` contains a value. This `msg.value` will be used to pay the `GasService`. If no funds were sent, then the transaction should be reverted as the transaction cannot execute on the Axelar blockchain and destination chain without any gas.
+まず、`require`ステートメントがあり、 `msg.value`が値を含んでいることを確認します。 この`msg.value` は、`GasService`の支払いに使用されます。 資金が送信されなかった場合は、トランザクションが取り消されます。Axelarブロックチェーンと目的のチェーンでは、ガスが無いと実行ができないためです。
 
-Next, you encode the `_message` that was passed in. Notice that the `_message` is set as a `string` type. Axelar expects this message to be submitted as a `bytes` type so to convert the `string` to `bytes` you simply pass it through `abi.encode()`.
+次に、渡す`_message` をエンコードします。 `_message`が `string`型に設定されていることに注意してください。 Axelarでは、メッセージを`bytes`型として受け取ることになっているので、シンプルに`abi.encode()`に渡すことで`string`を `bytes`に変換します。
 
-Now, with your message encoded you can begin to interact with the `GasService` and the `Gateway`
+これで、エンコードされたメッセージで`GasService`と`Gateway`とやり取りができるようになりました。
 
-To pay for the entire interchain transaction you will trigger the function `payNativeGasForContractCall`, which is defined in the `GasService`.
+`GasService`に定義されている`payNativeGasForContractCall`関数をトリガーしてインターチェーン全体のトランザクションの支払をします。
 
-This function needs the parameters explained earlier in the GasService section. The `sender` for this transaction will be this contract, which is `address(this)`. The `destinationChain` and `destinationAddress` can simply be passed in from this functions parameters, the `payload` is the encoded \_message we wrote earlier. Finally, you need to specify what the refund address is, this can be the address that triggers this function, which you get by writing `msg.sender`.
+この関数は、GasServiceセクションで既に説明したパラメータが必要です。 このトランザクションの`sender`は、このコントラクトで`address(this)`で表されています。 `destinationChain`とdestinationAddress`は、この関数のパラメータによってシンプルに渡されます。`payload`は、先ほど取り上げたエンコードされた\_messageです。 最後に、返金アドレスを記述します。このアドレスは、この関数をトリガーするアドレスです。`msg.sender\`を記述することでアドレスを取得できます。
 
-Once you trigger this function you will have successfully sent a transaction from the source chain via Axelar to the destination chain! But there is still one final step that needs to be complete.
+この関数をトリガーすると、送信元のチェーンからAxelarを経由して目的のチェーンへトランザクションを正常に送信したことになります。 しかし、終了するのに必要な最後のステップがあります。
 
 ### 目的のチェーンからメッセージを受け取る
 
