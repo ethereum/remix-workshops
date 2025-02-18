@@ -1,11 +1,11 @@
-Congratulations on making it to the end of the interoperability module! 🎉🎉
+おめでとうございます！インターオペラビリティモジュールを最後まで完了することができました。 🎉🎉
 
-To continue your learning journey of interoperability with Axelar. There are many useful resources available.
+Axelarのインターオペラビリティの学習を継続するのに、 さまざまな有用なリソースがあります。
 
-- For <a href="https://docs.axelar.dev/" target="_blank">documentation 📚</a>
+- <a href="https://docs.axelar.dev/" target="_blank">ドキュメント 📚</a>
 
-- For <a href="https://github.com/axelarnetwork/axelar-examples/tree/main" target="_blank">more technical examples 💻 </a>
+- <a href="https://github.com/axelarnetwork/axelar-examples/tree/main" target="_blank">技術的な例 💻 </a>
 
-- For <a href="https://www.youtube.com/watch?v=3sctKcQIaLA&list=PLh_q0hSKS_y0Zt_GfL3olZHi4GwbF6tuo" target="_blank">live coding demos 📹</a>
+- <a href="https://www.youtube.com/watch?v=3sctKcQIaLA&list=PLh_q0hSKS_y0Zt_GfL3olZHi4GwbF6tuo" target="_blank">ライブコードデモ 📹</a>
 
-- For <a href="https://blog.axelar.dev/" target="_blank">the developer blog 📝</a>
+- <a href="https://blog.axelar.dev/" target="_blank">デベロッパーブログ📝</a>
