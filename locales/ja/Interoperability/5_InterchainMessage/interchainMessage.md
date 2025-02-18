@@ -32,22 +32,22 @@
 
 ### 目的のチェーンからメッセージを受け取る
 
-On the destination chain the inbound interchain transaction needs to be picked up and handled by the `AxelarExecutable`'s `_execute()` function.
+目的のチェーンにおいて、インバウンド・インターチェーン・トランザクションは、 `AxelarExecutable`の`_execute()`関数でピックアップされ、処理されなければなりません。
 
-The `_execute()` function is defined in the `AxelarExecutable` contract so when defining this function you must remember to include the `override` keyword.
+`_execute()`関数は、`AxelarExecutable`コントラクトで定義されており、この関数を定義する場合には、`override`キーワードを含めなければならないことを忘れないでください。
 
-This function takes three parameters.
+この関数は、次の3つのパラメータを取ります。
 
-1. `_sourceChain`: The blockchain which the transaction has originated from
-2. `_sourceAddress`: The address on the source chain which the transaction has been sent from
-3. `_payload`: The message that has been sent from the source chain
+1. `_sourceChain`: トランザクションが発生したブロックチェーン
+2. `_sourceAddress`: トランザクションが送られてきた送信元のチェーンのアドレス
+3. `_payload`: 送信元のチェーンから送られてきたメッセージ
 
-The first thing that needs to be done in this contract is to get access to your `message` that was sent. Recall, before sending the message it was sent through `abi.encode()` to convert the message from type `string` to type `bytes`. To convert your message back from type `bytes` to type `string` simply pass the `_payload` to the function `abi.decode()` and specify that you want the `_payload` decoded to type `string`. This will return the message as a string.
+このコントラクトで、まず最初に行わなければならないことは、送信された`message`へアクセスできるようにすることです。 メッセージが送信される前に、 `abi.encode()`に送ることでメッセージが`string`から`bytes`に変換されていたことを思い出してください。 `bytes`型から`string`型ににメッセージを変換し直すには、シンプルに`_payload`を `abi.decode()`に渡し、`_payload`を`string`型にデコードするように指定します。 これによって、文字列としてメッセージが返されます。
 
-Now that you have your message as a type string you can set the `sourceChain` and `sourceAddress` storage variables as `_sourceChain` and `_sourceAddress` to have an easy reference to the data that was passed in. You can also emit the `Executed` event with the `sourceAddress` and `message` event that you just decoded.
+これで、メッセージを文字列型にでき、`sourceChain`とsourceAddress`のストレージ変数を`_sourceChain`と`_sourceAddress`をして設定でき、簡単に渡されたデータを参照できるようになります。 `Executed`イベントを、先ほどデコードした`sourceAddress`と`message\` イベントと一緒に発行することができます。
 
-Great! At this point you are now handling the interchain transaction on the destination chain.
+いい感じです。 この時点で、あなたは目的のチェーンでインターチェーントランザクションを処理しています。
 
-To interact with this contract make sure you deploy it on at least two blockchains so that you can call `setRemoteValue()` from the one chain and then have the `_execute()` function automatically triggered on another chain. You will be able to query the `sourceChain` and `sourceAddress` variables on the destination chain to ensure that the interchain execution worked correctly.
+コントラクトとやり取りをするには、少なくとも2つのブロックチェーンにデプロイする必要があります。1つのチェーンで`setRemoteValue()`を呼び出し、もう一方のチェーンで `_execute()`関数を自動的にトリガーするためです。 目的のチェーンで`sourceChain`と`sourceAddress`変数をクエリーすることで、インターチェーンの実行が正しく行われたことを確認することができます。
 
-To view the full step by step of the interchain transaction checkout the <a href="https://testnet.axelarscan.io" target="_blank">Axelarscan (testnet) block explorer</a>.
+<a href="https://testnet.axelarscan.io" target="_blank">Axelarscan(テストネット)ブロックエクスプローラ</a>でインターチェーントランザクションの詳細をステップバイステップで表示して確認してみてください。
