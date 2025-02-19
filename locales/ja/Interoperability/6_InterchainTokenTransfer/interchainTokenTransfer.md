@@ -24,16 +24,16 @@
 2. `_tokenSymbol`: 送信元のチェーンから送られてきたトークンのシンボル
 3. `_amount`: 送信元のチェーンから送られてきたトークンの量
 
-Now with these params that were passed in, the `_execute()` function can send the tokens that were sent to the appropriate receivers.
+これで、これらのパラメータを `_execute()` 関数へ渡して適切な受信者へトークンを送信できます。
 
-## Challenge
+## チャレンジ
 
-Your challenge here is to finish off the `sendToMany()` function using the Axelar Gateway and Gas Service to trigger an interchain transaction.
+`sendToMany()`関数を完成させ、Axelar GatewayとGas Serviceを使用してインターチェントランザクションをトリガーするようにチャレンジしてみてください。
 
-In the end you should be able to deploy this contract on two testnets, trigger the `sendToMany()` function and see the live transaction on <a href="https://testnet.axelarscan.io" target="_blank">Axelarscan (testnet) block explorer</a>.
+最後に、このコントラクトを2つのテストネットにデプロイし、 `sendToMany()`関数をトリガーして実際のトランザクションを<a href="https://testnet.axelarscan.io" target="_blank">Axelarscan(テストネット)ブロックエクスプローラ</a>で確認してみましょう。
 
-### Testing Notes
+### テストノート
 
-Note 1: The recommended ERC20 to use is `aUSDC` a wrapped version of the USDC token that can be obtained from <a href= "https://docs.axelar.dev/resources/rpc/resources" target="_blank">the discord faucet bot</a>. When triggering the `sendToMany()` function simply pass in the symbol `aUSDC` to the fourth param.
+ノート1: 推奨のERC20は、aUSDC`です。これは、ラップド版のUSDCトークンで<a href= "https://docs.axelar.dev/resources/rpc/resources" target="_blank">このDiscordファーセットボット</a>から入手できます。 `sendToMany()`関数をトリガーする場合は、シンプルに `aUSDC\`シンボルを4つ目のパラメータに渡します。
 
-Note2: When triggering the `sendToMany()` function you must remember to `approve` your contract to spend `aUSDC` tokens on your behalf, otherwise `transferFrom()` on line49 will throw an error.
+ノート2: `sendToMany()`関数をトリガーする場合は、あなたの代わりに`aUSDC`トークンを使えるように、コントラクトで`approve`をすることを忘れないでください。これを忘れると49行目にある`transferFrom()`でエラーがスローされます。
