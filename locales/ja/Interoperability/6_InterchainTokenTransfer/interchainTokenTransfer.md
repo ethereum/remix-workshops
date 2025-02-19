@@ -1,28 +1,28 @@
-At this point we have gone over an example of how to send a general message between one blockchain to another. Now, let's implement a contract that sends a message and a token from one blockchain to another.
+これまでに、あるブロックチェーンから他のブロックチェーンへ一般的なメッセージを送信する方法例を説明しました。 今回は、あるブロックチェーンから別のブロックチェーンにメッセージとトークンを送信するコントラクトの実装をします。
 
-## Overview
+## 概要
 
-This contract should seem largely familiar. Much like the previous section the `constructor` receives the `Gateway` and `Gas Service` addresses.
+このコントラクトは、ある程度理解できると思います。 前のセクションと非常に似ており、`constructor`が`Gateway`アドレスと`Gas Service`アドレスを受け取ります。
 
-It then has a function that will be called from the source chain called `sendToMany` that takes in parameters similar to the previous section.
+そして、このコントラクトには、送信元のチェーンで呼び出される`sendToMany`という前のセクションと同様なパラメータを取る関数があります。
 
-1. `_destinationChain`: The chain the transaction is sending to
-2. `_destinationAddress`: The address on the destination chain your transaction is sending to
-3. `_destinationAddresses`: The message that you will be sending along with your token transfer. In this example the message is a list of receiving addresses for the token transfer.
-4. `_symbol`: The symbol of the token address being sent
-5. `_amount`: The amount of the token being sent
+1. `_destinationChain`: トランザクションが送られるチェーン
+2. `_destinationAddress`: トランザクションが送られる目的のチェーンのアドレス
+3. `_destinationAddress`: トークンと一緒に送信するメッセージ。 この例では、トークン送信によって受け取るアドレスのリストがメッセージです。
+4. `_symbol`: 送信されるトークンアドレスのシンボル
+5. `_amount`: 送信されるトークンの量
 
-In the function we already have the `require` statement implemented to ensure gas is sent
+この関数内で、`require`が既に実装されており、ガスが送られることを確実にしています。
 
-We also have the basic ERC20 functionality to send the token from the calling wallet to this smart contract. The contract also calls the `approve` function to allow the Gateway to eventually transfer funds on its behalf.
+また、基本的なERC20機能を備えており、ウォレットから呼び出してスマートコントラクトにトークンを送信することができます。 このコントラクトでは、さらに`approve`関数を呼び出し、Gatewayに対して代理で送信する資金を許可することができます。
 
-Finally, the `_executeWithToken()` function is also implemented out of the box.
+最後に、`_executeWithToken()`関数も使用できるように実装されています。
 
-It makes use of the following params:
+この関数は、次のパラメータを受け取ります。
 
-1. `_payload`: The incoming message from the source chain
-2. `_tokenSymbol`: The symbol of the token that was sent from the source chain
-3. `_amount`: The amount of the token that was sent from the source chain
+1. `_payload`: 送信元チェーンから送られてきたメッセージ
+2. `_tokenSymbol`: 送信元のチェーンから送られてきたトークンのシンボル
+3. `_amount`: 送信元のチェーンから送られてきたトークンの量
 
 Now with these params that were passed in, the `_execute()` function can send the tokens that were sent to the appropriate receivers.
 
