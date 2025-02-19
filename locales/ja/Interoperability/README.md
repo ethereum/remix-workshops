@@ -1,3 +1,3 @@
-## Interoperability Between Blockchains
+## ブロックチェーン環の相互運用性
 
-Learn how to build interoperable smart contracts that can send messages and assets between different blockchains using Axelar technology.
+相互運用可能なスマートコントラクトについて学びます。Axelarテクノロジーを使用し、さまざまなブロックチェーン間でメッセージや資産を送れるようにします。
