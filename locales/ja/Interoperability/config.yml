@@ -1,15 +1,15 @@
 ---
 id: interopCourse
-name: Multichain Protocols with Axelar
-summary: Learn how to build interoperable smart contracts that can send messages and assets between different blockchains using Axelar technology.
+name: Axelarのマルチチェーンプロトコル
+summary: 相互運用可能なスマートコントラクトについて学びます。Axelarテクノロジーを使用し、さまざまなブロックチェーン間でメッセージや資産を送れるようにします。
 level: 2
 tags:
   - Solidity
-  - Interoperability
+  - インターオペラビリティ
   - Axelar
 steps:
   - 
-    name: An Intro to Axelar
+    name: Axelarの紹介
     path: 1_Intro
   - 
     name: Axelar Gateway
@@ -21,11 +21,11 @@ steps:
     name: Axelar Executable
     path: 4_Executable
   - 
-    name: Interchain Messages
+    name: インターチェーンメッセージ
     path: 5_InterchainMessage
   - 
-    name: Interchain Token Transfers
+    name: インターチェーンでのトークン送信
     path: 6_InterchainTokenTransfer
   - 
-    name: Further Reading
+    name: 参照情報
     path: 7_FurtherReading
