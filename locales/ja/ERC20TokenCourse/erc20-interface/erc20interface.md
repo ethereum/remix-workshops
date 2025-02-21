@@ -4,12 +4,12 @@ Fungible tokens are all equal to each other and have the same value, behavior, a
 
 If you want to know more about the ERC20 token standard, have a look at the specifications in its <a href="https://eips.ethereum.org/EIPS/eip-20" target="_blank">Ethereum improvement proposal</a>.
 
-## Interface
+## インターフェース
 
 To get an overview of the required functionality of an ERC20 token contract, we will look at an interface that interacts with an ERC20 contract.
 This interface (line 9) is part of the open-source contract library provided by <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.4.0/contracts/token/ERC20/IERC20.sol" target="_blank">OpenZeppelin</a>.
 
-## ERC20 Functions
+## ERC20関数
 
 Contracts compliant with the ERC20 standard must implement the following six functions:
 
@@ -51,7 +51,7 @@ The `Transfer` (line 71) event must be emitted when `value` amount of tokens are
 
 The `Approval` (line 77)  event must be emitted when the account `indexed owner` approves the account `indexed spender` to transfer `value` amount of tokens on its behalf.
 
-## ERC20 Optional functions
+## ERC20オプション関数
 
 In addition to the mandatory functions and events, there are also three optional functions specified in the ERC20 standard that are not implemented in this interface:
 
