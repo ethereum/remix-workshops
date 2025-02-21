@@ -4,25 +4,25 @@
 
 マルチシグネシャ(マルチシグ)ウォレットは、複数の鍵が暗号通貨のトランザクションの承認に必要となるデジタルウォレットです。
 
-Imagine a multisig wallet as a secure vault with multiple locks. To open the vault, each keyholder must open their individual lock. This setup ensures that no single person can access the vault's contents without the others' consent.
+マルチシグ・ウォレットは、複数のロックがある安全な金庫と想像してください。 金庫を開くには、各鍵の保有者が個別にロックを開く必要があります。 この設定により、他人の同意のない1人の人物が金庫の中にアクセスすることはできません。
 
-## How Does a Multisig Wallet Work?
+## マルチシグ・ウォレットが動作する仕組み
 
-In a multisig setup, each transaction must receive a predetermined number of approvals from a set group of individuals. For instance, in a 3-of-5 wallet configuration, there are five authorized addresses, but a transaction only goes through when at least three of them give their approval. When a transaction is initiated, it's presented as a **proposal** to the group. Each member who agrees to the transaction uses their private key to digitally sign it.
+マルチシグ設定で各トランザクションは、設定されたグループの各個人から事前に決められた数の承認を受け取る必要があります。 例えば、5分の3にウォレットを設定すると、5つの承認アドレスのうち、少なくとも3つの承認を受け取らないとトランザクションは実行されません。 トランザクションの開始時に、「**提案**」がグループに表示されます。 そのトランザクションに同意する各メンバーは、各秘密鍵でデジタル署名を行います。
 
-These **digital signatures** are unique and are generated based on the combination of the transaction data and the private key.
+これらの**デジタル署名**は、一意であり、トランザクションデータと秘密鍵の組み合わせに基いて生成されます。
 
-When the required number of signatures is reached, the transaction is broadcasted to the blockchain for execution.
+必要な署名数に達すると、トランザクションはブロックチェーンにブロードキャストされ実行されます。
 
-## Why Use a Multisig Wallet?
+## マルチシグ・ウォレットを使用する理由
 
-Multisig wallets are crucial for enhanced security in cryptocurrency transactions. They mitigate the risk of theft or loss of a single key. In business, they're used to ensure that funds can't be moved without consensus among stakeholders. For instance, in a company managing cryptocurrency assets, a multisig wallet might require the CFO, CEO, and a board member to all approve significant transactions, protecting against internal fraud or external hacks.
+マルチシグ・ウォレットは、暗号通貨トランザクションでセキュリティを強化するのに不可欠な存在です。 単一の鍵による盗難や損失のリスクを軽減することができます。 ビジネスでは、利害関係者間のコンセンサスなしで資金を移動できないことを確実にするのに使われます。 例えば、暗号通貨による資産を管理する会社では、マルチシグ・ウォレットでCFO、CEO、取締役などメンバー全員の承認を必要にして、内部の不正行為や外部からのハッキングから保護できます。
 
-## Conclusion
+## まとめ
 
 In this section, we learned that a multisig wallet requires multiple keys to authorize a proposed cryptocurrency transaction and that a multisigs mitigates the risk of theft or loss of a single key.
 
-## ⭐️ Assignment: Multiple Choice Test
+## ⭐️ 演習: 多肢選択式テスト
 
 ### 1. What is a Multisignature Wallet?
 
