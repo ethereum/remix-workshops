@@ -20,18 +20,18 @@
 
 ## まとめ
 
-In this section, we learned that a multisig wallet requires multiple keys to authorize a proposed cryptocurrency transaction and that a multisigs mitigates the risk of theft or loss of a single key.
+このセクションでは、マルチシグ・ウォレットが、提案された暗号通貨トランザクションを承認するのに複数の鍵が必要であること、マルチシグが単一の鍵による盗難や損失のリスクを軽減することを学びました。
 
 ## ⭐️ 演習: 多肢選択式テスト
 
-### 1. What is a Multisignature Wallet?
+### 1. マルチシグネチャ・ウォレットとは何でしょうか？
 
 1. A digital wallet that requires a single signature for transactions.
 2. A digital wallet that requires multiple signatures for transactions.
 3. A physical wallet used for storing cryptocurrency.
 4. A wallet that can only hold multiple types of cryptocurrencies.
 
-### 2) How does a Multisignature Wallet enhance security?
+### 2) マルチシグネチャ・ウォレットがセキュリティをどのように強化するでしょうか？
 
 1. By requiring a single private key for transactions.
 2. By distributing transaction approval across multiple owners.
