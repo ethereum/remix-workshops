@@ -1,8 +1,8 @@
-Welcome to the Multisignature Wallet course! In this section, we'll explore the fundamentals of Multisignature (Multisig) wallets and we'll go through a multisig wallet contract.
+マルチシグネチャ・ウォレット・コースへようこそ！ このセクションでは、マルチシグネシャ(マルチシグ)ウォレットの基本とマルチシグ・ウォレット・コントラクトを学びます。
 
-## What is a Multisignature Wallet?
+## マルチシグネシャ・ウォレットとは何か？
 
-A multisignature (multisig) wallet is a type of digital wallet that requires multiple keys to authorize a cryptocurrency transaction.
+マルチシグネシャ(マルチシグ)ウォレットは、複数の鍵が暗号通貨のトランザクションの承認に必要となるデジタルウォレットです。
 
 Imagine a multisig wallet as a secure vault with multiple locks. To open the vault, each keyholder must open their individual lock. This setup ensures that no single person can access the vault's contents without the others' consent.
 
