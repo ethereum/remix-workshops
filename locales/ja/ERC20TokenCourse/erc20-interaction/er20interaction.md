@@ -59,29 +59,29 @@ IDEでトークンコントラクト関数を開きます。
 
 #### 2.7 Approve
 
-We will now allow account 1 to spend tokens on behalf of account 2.
+これから、account 2の代わりにaccount 1がトークンを消費できるように許可します。
 
-**2.7.1** Go to the "Account" section, copy the address of account 1, then set it to account 2 again.
+**2.7.1** 「Account」セクションへ行き、account 1のアドレスをコピーし、再びaccount 2に設定します。
 
-**2.7.2** In the approve function, enter the address of account 1 as the input for spender and set the amount to 250000000000000000000.
+**2.7.2** approve関数で、spenderの入力値としてaccount 1のアドレスを入力し、金額を250000000000000000000を設定します。
 
-**GIF** Test approve function: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_approve.gif?raw=true" alt="Test approve function" width="300"/>
+**GIF** approve関数のテスト: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_approve.gif?raw=true" alt="Test approve function" width="300"/>
 
 #### 2.8 Allowance
 
-Next to the "allowance" button enter the address of account 2 as the owner and account 1 as the spender; click on the button.
-It should return 1000000000000000000000.
+「allowance」ボタンの隣で、account 2のアドレスをowner、account 1をspenderとして入力します。そしてボタンをクリックします。
+「1000000000000000000000」が返ってくる必要があります。
 
-**GIF** Test allowance function: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_allowance.gif?raw=true" alt="Test allowance function" width="300"/>
+**GIF** allowance関数のテスト: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_allowance.gif?raw=true" alt="Test allowance function" width="300"/>
 
 #### 2.9 TransferFrom
 
-Now account 1 will transfer 250000000000000000000 tokens from account 2 to its own account.
+次では、account 1が 250000000000000000000トークンをaccount 2から自身のアカウントに送信します。
 
-**2.9.1** Select account 1 in the "ACCOUNT" section.
+**2.9.1** 「ACCOUNT」セクションでaccount 1を選択します。
 
-**2.9.2** Next to the "transferFrom" button enter the address of account 2 as the sender and account 1 as the recipient, enter 250000000000000000000 as the amount and click on the button.
+**2.9.2** 「transferFrom」ボタンの隣で、account 2のアドレスをsender、account 1をrecipientとして入力し、金額(amount)として250000000000000000000を入力します。次にボタンをクリックします。
 
-**2.9.3** Check the balances of accounts 2 and 1, they should return 250000000000000000000 and 750000000000000000000.
+**2.9.3** account 2とaccount 1の残高を確認します。「250000000000000000000」と「750000000000000000000」が返ってくる必要があります。
 
-**GIF** Test transferFrom function: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_transferFrom.gif?raw=true" alt="Test transferFrom function" width="300"/>
+**GIF** transferFrom関数のテスト: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_transferFrom.gif?raw=true" alt="Test transferFrom function" width="300"/>
