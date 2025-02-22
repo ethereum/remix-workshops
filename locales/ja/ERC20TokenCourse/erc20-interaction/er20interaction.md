@@ -2,60 +2,60 @@
 
 ### 1. コントラクトのデプロイ
 
-**1.1** Compile your EduCoin contract in the "Solidity compiler" module of the Remix IDE.
+**1.1** Remix IDEの「Solidity compiler」モジュールで、EduCoinコントラクトをコンパイルします。
 
-**1.2** In the "Deploy & run transactions" module, select your contract "EduCoin" in the contract input field and click on the "Deploy" button. Always make sure to select the correct contract in the contract selector input field.
+**1.2** 「Deploy & run transactions」モジュールで、コントラクトの入力フィールドで「EduCoin」コントラクトを選択して、「Deploy」ボタンをクリックします。 コントラクト選択入力フィールドで、適切なコントラクトが選択されているか必ず確認してください。
 
-**GIF** Compile and deploy: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_compileAndDeploy.gif?raw=true" alt="Compile and deploy contract" width="300"/>
+**GIF** コンパイルとデプロイ: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_compileAndDeploy.gif?raw=true" alt="Compile and deploy contract" width="300"/>
 
-### 2. Test the functions
+### 2. 関数のテスト
 
-Expand the token contract functions in the IDE.
+IDEでトークンコントラクト関数を開きます。
 
 #### 2.1 Decimals
 
-Click on the "decimals" button to call the decimals() function.
-It should return "18".
+「decimals」ボタンをクリックしてdecimals()関数を呼び出します。
+「18」が返ってくる必要があります。
 
 #### 2.2 Name
 
-Click on the "name" button to call the name() function.
-It should return "EduCoin".
+「name」ボタンをクリックしてname()関数を呼び出します。
+「EduCoin」が返ってくる必要があります。
 
 #### 2.3 Symbol
 
-Click on the "symbol" button to call the symbol() function.
-It should return "EDC".
+「symbol」ボタンをクリックしてsymbol()関数を呼び出します。
+「EDC」が返ってくる必要があります。
 
-#### 2.4 Total supply
+#### 2.4 総供給量(Total supply)
 
-Click on the "totalSupply" button to call the totalSupply() function.
-It should return 1000000000000000000000 (1000\*10\*\*18).
+「totalSupply」ボタンをクリックしてtotalSupply()関数を呼び出します。
+1000000000000000000000 (1000\*10\*\*18)が返ってくる必要があります。
 
-**GIF** Test decimals, name, symbol, and totalSupply functions: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_test_functions.gif?raw=true" alt="Test transfer function" width="300"/>
+**GIF** decimals関数、name関数、symbol関数、totalSupply関数のテスト: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_test_functions.gif?raw=true" alt="Test transfer function" width="300"/>
 
 #### 2.5 Balance of
 
-**2.5.1** Go to the "ACCOUNT" section in the sidebar and copy the displayed address by using the copy icon next to it.
+**2.5.1** サイドバーにある「ACCOUNT」セクションへ行き、隣にあるコピーアイコンを使用して表示されているアドレスをコピーします。
 
-**2.5.2** Paste the address in the input field next to the "balanceOf" function button and click on the button.
-It should return 1000000000000000000000 (1000\*10\*\*18).
+**2.5.2** 「balanceOf」関数ボタンの隣にある入力フィールドにアドレスをペーストして、ボタンをクリックします。
+1000000000000000000000 (1000\*10\*\*18)が返ってくる必要があります。
 
-**GIF** Test balanceOf function: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_balanceOf.gif?raw=true" alt="Test transfer function" width="300"/>
+**GIF** balanceOf関数のテスト: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_balanceOf.gif?raw=true" alt="Test transfer function" width="300"/>
 
 #### 2.6 Transfer
 
-We will transfer EduCoin from one account to a second account.
+あるアカウントから別のアカウントへEduCoinを送ります。
 
-**2.6.1** Go to the "ACCOUNT" section in the sidebar and click on the displayed address. This should open a dropdown. Select the second address displayed and copy its address (account 2).
+**2.6.1** サイドバーにある「ACCOUNT」セクションへ行き、表示されているアドレスをクリックします。 ドロップダウンが開きます。 表示されている2つ目のアドレスを選択して、そのアドレス(account 2)をコピーします。
 
-**2.6.2** Open the dropdown and select the first account again (account 1), because this is the account that we want to use to make the transfer.
+**2.6.2** ドロップダウンを開き、最初のアカウント(account 1)を再度選びます。このアカウントを送信を行うのに使うためです。
 
-**2.6.3** Paste the address in the input field next to the "transfer" function button, input the number 500000000000000000000, and click on the button.
+**2.6.3** 上記のアドレスを「tarnsfer」関数ボタンの隣ににある入力フィールドにペーストし、500000000000000000000を入力して、ボタンをクリックします。
 
-**2.6.4** If you check the balances for account 1 and account 2, they should both return the amount 500000000000000000000.
+**2.6.4** account 1とaccount2のバランスを確認すると、両方とも金額で500000000000000000000を返します。
 
-**GIF** Test transfer function: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_transfer.gif?raw=true" alt="Test transfer function" width="300"/>
+**GIF** transfer関数のテスト: <img src="https://github.com/dacadeorg/remixMedia/blob/main/token-course/erc20/erc20_transfer.gif?raw=true" alt="Test transfer function" width="300"/>
 
 #### 2.7 Approve
 
