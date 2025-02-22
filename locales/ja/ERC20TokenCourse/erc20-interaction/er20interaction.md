@@ -1,6 +1,6 @@
-In this section, we will deploy a contract in our browser and test its functionality.
+このセクションでは、ブラウザでコントラクトをデプロイして、その機能のテストを行います。
 
-### 1. Deploy the contract
+### 1. コントラクトのデプロイ
 
 **1.1** Compile your EduCoin contract in the "Solidity compiler" module of the Remix IDE.
 
