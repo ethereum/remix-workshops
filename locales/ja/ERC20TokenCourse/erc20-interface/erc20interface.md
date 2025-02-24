@@ -1,55 +1,55 @@
 ERC20(イーサリアム・リクエスト・フォー・コメント20)は、トークンコントラクトの標準で、イーサリアムブロックチェーンで代替トークンを管理します。
 
-代替トークンは、相互に同じ価値、動作、権利を持っています。 代替トークンは、通貨であるETHやBTCのように取引の媒介として使われます。 However, they can also have other use cases like voting rights or reputation.
+代替トークンは、相互に同じ価値、動作、権利を持っています。 代替トークンは、通貨であるETHやBTCのように取引の媒介として使われます。 また一方で、投票権やレピュテーションでの使用など他のユースケースもあります。
 
-If you want to know more about the ERC20 token standard, have a look at the specifications in its <a href="https://eips.ethereum.org/EIPS/eip-20" target="_blank">Ethereum improvement proposal</a>.
+ERC20トークン標準について詳しく知りたい場合は、<a href="https://eips.ethereum.org/EIPS/eip-20" target="_blank">イーサリアム改善提案</a>の仕様をご覧ください。
 
 ## インターフェース
 
-To get an overview of the required functionality of an ERC20 token contract, we will look at an interface that interacts with an ERC20 contract.
-This interface (line 9) is part of the open-source contract library provided by <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.4.0/contracts/token/ERC20/IERC20.sol" target="_blank">OpenZeppelin</a>.
+ERC20トークンコントラクトの機能で必要とされる概要をつかむために、ERC20コントラクトとやり取りするインターフェースを見ていきます。
+このインターフェース(9行目)は、<a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.4.0/contracts/token/ERC20/IERC20.sol" target="_blank">OpenZeppelin</a>によって提供されているオープンソース・コントラクト・ライブラリです。
 
 ## ERC20関数
 
-Contracts compliant with the ERC20 standard must implement the following six functions:
+ERC20標準に準拠したコントラクトになるには、次の6つの関数を実装しなければなりません。
 
 ### totalSupply
 
-The function `totalSupply` (line 13) returns the total amount of tokens available.
+`totalSupply`関数(13行目)は、使用可能なトークンの総量を返します。
 
 ### balanceOf
 
-The function `balanceOf` (line 18) returns the amount of tokens owned by the account with the address `account`.
+`balanceOf`関数(18行目)は、アドレスである`account`が所有しているトークンの量を返します。
 
 ### transfer
 
-The function `transfer` (line 27) transfers `amount` of tokens to the address `recipient`.
-This function **must** emit (produce) a `Transfer` event (see below) and **should** throw an exception when the sender doesn't have enough tokens to make the transfer.
+`transfer`関数(27行目)は、トークンの`amount`(量)をアドレスである`recipient`に送信します。
+この関数は、`Transfer`イベントを発行(生成)する**必要**があります(下記参照)。また、送信者に送信するのに十分なトークンが無い場合は、例外を投げる**必要**があります。
 
 ### approve
 
-The function `approve` (line 52) creates an allowance for the address `spender` to transfer `amount` of tokens on behalf of the account calling the function.
+`approve`関数(52行目)は、アドレス`spender`に対してallowance を作成します。これにより、トークンの`amount`(量)をアカウントが関数を呼び出す代わりに送信できるようにします。
 
 ### allowance
 
-The function `allowance` (line 36) returns the amount of tokens that the address `spender` is allowed to spend on behalf of the account with the address `owner`.
+`allowance`関数(36行目)は、アドレス`spender`がアドレス`owner`アカウントに代わって使用することが許可されているトークンの量を返します。
 
 ### transferFrom
 
-The function `transferFrom` (line 63) transfers `amount` of tokens on behalf of the address `sender` to the address `recipient`.
-This function **must** emit a `Transfer` event.
+`transferFrom`関数(63行目)は、トークンの`amount`(量)をアドレス`sender`の代わりにアドレス`recipient`に送ります。
+この関数は、`Transfer`イベントを発行する**必要**があります。
 
-## ERC20 Events
+## ERC20イベント
 
-ERC20 contracts must also emit two events:
+ERC20コントラクトは、次の2つのイベントを発行する必要があります。
 
 ### Transfer
 
-The `Transfer` (line 71) event must be emitted when `value` amount of tokens are transferred from the account with the address `indexed from` to `indexed to`. The parameters `from` and `to` are `indexed` allowing us to search for these events using the indexed parameters as filters.
+`Transfer`イベント(71行目)は、このアカウントでアドレス`indexed from`から`indexed to`へ`value`の量のトークンが送信された場合に発行される必要があります。 パラメータ`from`と`to`は、`indexed`になっており、フィルターとしてインデックス済みのパラメータを使って、これらのイベントを検索することができます。
 
 ### Approval
 
-The `Approval` (line 77)  event must be emitted when the account `indexed owner` approves the account `indexed spender` to transfer `value` amount of tokens on its behalf.
+`Approval`イベント(77行目)は、アカウント`indexed owner`がアカウント`indexed spender`に代わりに`value`量のトークンを送信すること許可したときに発行しなければなりません。
 
 ## ERC20オプション関数
 
@@ -59,18 +59,18 @@ In addition to the mandatory functions and events, there are also three optional
 
 `function name() external view returns (string);`
 
-Returns the name of the token.
+トークンの名前を返します。
 
 ### symbol
 
 `function symbol() external view returns (string);`
 
-Returns the symbol of the token.
+トークンのシンボルを返します。
 
 ### decimals
 
 `function decimals() external view returns (uint8);`
 
-Returns the number of decimal places the token uses.
+トークンが使用する小数点の桁数を返します。
 
 You may want to use decimals to make your token divisible into arbitrary amounts like 1.5 ETH when displayed. The EVM (Ethereum virtual machine) only supports integer numbers. That's why the ERC20 standard suggests to implement the decimal functionality that specifies how many decimal places a token has. 18 decimal places is the industry standard.
