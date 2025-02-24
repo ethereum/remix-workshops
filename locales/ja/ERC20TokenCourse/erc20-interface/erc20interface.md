@@ -1,6 +1,6 @@
-ERC20 (Ethereum Request for Comments 20) is a standard for token contracts that manages fungible tokens on the Ethereum blockchain.
+ERC20(イーサリアム・リクエスト・フォー・コメント20)は、トークンコントラクトの標準で、イーサリアムブロックチェーンで代替トークンを管理します。
 
-Fungible tokens are all equal to each other and have the same value, behavior, and rights. Fungible tokens are often used as a medium of exchange, like the currencies ETH or BTC. However, they can also have other use cases like voting rights or reputation.
+代替トークンは、相互に同じ価値、動作、権利を持っています。 代替トークンは、通貨であるETHやBTCのように取引の媒介として使われます。 However, they can also have other use cases like voting rights or reputation.
 
 If you want to know more about the ERC20 token standard, have a look at the specifications in its <a href="https://eips.ethereum.org/EIPS/eip-20" target="_blank">Ethereum improvement proposal</a>.
 
