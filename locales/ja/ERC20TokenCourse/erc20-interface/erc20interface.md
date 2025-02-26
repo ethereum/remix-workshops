@@ -53,7 +53,7 @@ ERC20コントラクトは、次の2つのイベントを発行する必要が�
 
 ## ERC20オプション関数
 
-In addition to the mandatory functions and events, there are also three optional functions specified in the ERC20 standard that are not implemented in this interface:
+必須関数およびイベントに加え、ERC20に規定されている次のオプション関数があります。これらの関数は、このインターフェースには実装されていません。
 
 ### name
 
