@@ -1,41 +1,41 @@
-In this section, we will use Metamask (an Ethereum wallet) to deploy our contract to a testnet of the Ethereum blockchain. This testnet behaves very similarly to the real blockchain (mainnet), but does not require real ETH to pay for transactions.
+このセクションでは、メタマスク(イーサリアムウォレット)を使ってイーサリアムブロックチェーンのテストネットへコントラクトをデプロイします。 このテストネットは、本物のブロックチェーン(メインネット)と同様の動作をしますが、トランザクションの支払いに本物のETHは不要です。
 
-### 1. Install Metamask
+### 1. メタマスクのインストール
 
-**1.1** Go to <a href="https://metamask.io/" target="_blank">metamask.io</a>.
+**1.1** <a href="https://metamask.io/" target="_blank">metamask.io</a>に移動します。
 
-**1.2** Click on the download button, then click on install for your browser (e.g. Chrome) and add the extension to your browser.
+**1.2** ダウンロードボタンをクリックし、ブラウザ(例: Chrome)にインストール します。最後に、ブラウザの拡張機能に加えてください。
 
-**1.3** Create a wallet as described.
+**1.3** 説明に従って、ウォレットを作成します。
 
-### 2. Get testnet token
+### 2. テストネットトークンの入手
 
-In order to make transactions on the testnet we need Ethereum testnet tokens, which you can receive from something called a _faucet_.
+テストネットでトランザクションを行うには、イーサリアムテストネットのトークンが必要です。_フォーセット_と呼ばれる物から受け取ることができます。
 
-**2.1** Switch your Metamask network by clicking on the "Ethereum Mainnetwork" drop down and selecting "Ropsten Test Network". If you don’t see any test networks, click on the "Show/hide" link and enable "Show test networks" in the settings.
+**2.1** 「Ethereum Mainnetwork」ドロップダウンをクリック、「Ropsten Test Network」を選択し、メタマスクのネットワークを切り替えます。 テストネットワークが何も表示されない場合は、「Show/hide」リンクをクリックして、設定にある「Show test networks」を有効にします。
 
-**2.2** Go to <a href="https://faucet.ropsten.be/" target="_blank">https://faucet.ropsten.be/</a>, enter the address of your account, and claim testnet ETH. You could also use other ropsten faucets like <a href="https://faucet.paradigm.xyz/" target="_blank">https://faucet.paradigm.xyz/</a> or <a href="https://app.mycrypto.com/faucet" target="_blank">https://app.mycrypto.com/faucet</a>. Have a look at the faucets listed on <a href="https://ethereum.org/en/developers/docs/networks/#testnet-faucets" target="_blank">ethereum.org</a> to learn more.
+**2.2** <a href="https://faucet.ropsten.be/" target="_blank">https://faucet.ropsten.be/</a>へ移動し、あなたのアカウントのアドレスを入力して、テストネットETHを請求します。 <a href="https://faucet.paradigm.xyz/" target="_blank">https://faucet.paradigm.xyz/</a>や<a href="https://app.mycrypto.com/faucet" target="_blank">https://app.mycrypto.com/faucet</a>などの他のRopstenフォーセットも使えます。 より詳しい情報は、<a href="https://ethereum.org/en/developers/docs/networks/#testnet-faucets" target="_blank">ethereum.org</a>にリストされているフォーセットをご確認ください。
 
-### 3. Deployment
+### 3. デプロイメント
 
-Make sure the EduCoin contract is compiled.
+EduCoinコントラクトがコンパイルされていることを確認してください。
 
-**3.1.** In the "DEPLOY & RUN TRANSACTIONS" module of the Remix IDE under "ENVIRONMENT" select "Injected Web3". It will ask you to connect your account which you should confirm.
+**3.1.** Remix IDEの「ENVIRONMENT」の下にある「DEPLOY & RUN TRANSACTIONS」モジュールで、「Injected Web3」を選択します。 アカウントを接続するように求められたら、「Confirm」してください。
 
-**3.2** Deploy the EduCoin contract and confirm the transaction in Metamask.
+**3.2** EduCoinコントラクトをデプロイし、メタマスクでトランザクションを「Confirm」してください。
 
-**3.3** Your contract should appear in the "Deployed Contracts" section. Copy the contract address.
+**3.3** 「Deployed Contracts」セクションにコントラクトがすぐに現れます。 コントラクトアドレスをコピーします。
 
-**3.4** In Metamask, click on assets, then click on the "Import tokens" link, and paste the address of your contract in the input field.
+**3.4** メタマスクで、アセットをクリックし、「Import tokens」リンクをクリックします。そして、あなたのコントラクトのアドレスを入力フィールドにペーストします。
 
-You should now see a balance of 1000 EDC in your wallet.
+あなたのウォレットに、残高1000 EDCがあることを確認してください。
 
-### 4. Make a transaction
+### 4. トランザクションの作成
 
-**4.1** Click on the identicon (visual representation of your address) in the Metamask wallet and create a second account (Account 2).
+**4.1** メタマスクウォレットでidenticon(アドレスの視覚的表現)をクリックし、2つ目のアカウント(Account 2)を作成します。
 
-**4.2** Copy the address of Account 2.
+**4.2** Account 2のアドレスをコピーします。
 
-**4.3** Switch to the first account (Account 1) and send 250 EDC to Account 2. Check the balances of Account 1 and Account 2. You might need to add the token address again for Account 2 to import the tokens and you will need testeth if you want to make a transaction with this account.
+**4.3** 一番目のアカウント(Account 1)に切り替えて、250 EDCを送信します。 Account 1とAccount 2の残高を確認します。 Account 2でトークンをインポートするのにトークンアドレスを再度に加える必要になることがあります。また、Account 2からトランザクションを作成する場合は、テストネットのETHが必要になります。
 
-You can also see your account balances if you look at the contract in Remix and call the `balanceOf` function using the addresses of Account 1 and Account 2.
+RemixにあるEduCoinコントラクトで、Account 1および Account 2のアドレスを渡して`balancedOf`関数を呼び出し、アカウントの残高を確認することもできます。
