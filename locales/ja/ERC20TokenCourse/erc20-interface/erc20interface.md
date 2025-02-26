@@ -73,4 +73,4 @@ ERC20コントラクトは、次の2つのイベントを発行する必要が�
 
 トークンが使用する小数点の桁数を返します。
 
-You may want to use decimals to make your token divisible into arbitrary amounts like 1.5 ETH when displayed. The EVM (Ethereum virtual machine) only supports integer numbers. That's why the ERC20 standard suggests to implement the decimal functionality that specifies how many decimal places a token has. 18 decimal places is the industry standard.
+表示するときに1.5ETHのように任意の金額にトークンを割れるように、小数点を使いたいことがあると思います。 しかし、EVM(イーサリアム仮想マシン)は、整数のみをサポートしています。 そたのため、ERC20標準では、小数点機能を実装することを推奨しています。これにより、トークンが持つ小数点数を規定できます。 小数点18位が、業界の標準になっています。
