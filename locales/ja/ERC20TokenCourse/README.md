@@ -1,5 +1,5 @@
-## Interactive Solidity Token Course
+## インタラクティブなSolidityトークンコース
 
-Learn to understand and create ERC20 tokens.
+ERC20トークンの作成方法を学び理解します。
 
-Developed by the p2p learning platform https://dacade.org.
+p2p学習プラットフォームhttps://dacade.orgによって開発されました。
