@@ -1,11 +1,11 @@
-A token standard tells us what functionality the contract needs to comply with it. How this functionality is implemented is up to the developers. In this contract, we will use an ERC20 token contract implementation from OpenZeppelin (line 4). In this case, we import version 4.4.0 of the OpenZeppelin contracts.
+トークン標準は、コントラクトが標準に準拠する必要がある機能を規定しています。 この機能の実装は、デベロッパーに委ねられています。 このコントラクトでは、OpenZeppelinのERC20トークンコントラクト実装(4行目)を使用します。 このケースでは、OpenZeppelinコントラクトのバージョン4.4.0をインポートしています。
 
-Have a look at their nicely documented <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol" target="_blank">ERC20 contract</a> to have a better understanding of how an implementation might look. Apart from the functionality specified in the ERC20 standard, this contract provides additional functionality.
+実装の方法をより理解するには、<a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol" target="_blank">ERC20コントラクト</a>にドキュメントが良く書かれているのでご覧ください。 ERC20標準で規定されている機能とは別に、このコントラクトでは追加の機能も提供します。
 
-We will create our own contract called MyToken (line 6), which inherits the functionality from the OpenZepplin ERC20 token contract implementation that we imported (line 4).
+MyToken(6行目)という独自のコントラクトを作成し、インポートされたOpenZepplin ERC20トークンコントラクト実装(4行目)から機能を継承します。
 
-This contract implements the optional functions `name()` and `symbol()` of the ERC20 Token standard and has a constructor where their values can be set during the deployment of the contract (line 7).
-In this case, we are going to use the default values. We will call our token the same as the contract `"MyToken"` and make `"MTK"` its symbol.
+このコントラクトは、ERC20コントラクト標準のオプション関数である`name()`と`symbol()`を実装し、コントラクトのデプロイ時に値を設定するコンストラクタがあります(7行目)。
+このケースにおいては、デフォルト値を使用します。 We will call our token the same as the contract `"MyToken"` and make `"MTK"` its symbol.
 
 Next, we make use of the inherited `_mint` function (line 8) that allows us to create tokens upon deployment of the contract. Inside the parameters, we specify the address of the account that receives the tokens and the amount of tokens that are created.
 In this case, the account that deploys the contract will receive the tokens and we set the amount to 1000000 to the power of `decimals()`. The optional function `decimals()` of the ERC20 token standard is implemented and set to the default value of 18. This will create 1000000 tokens that will have 18 decimal places.
@@ -14,5 +14,5 @@ In this case, the account that deploys the contract will receive the tokens and 
 
 1. コントラクトの名前を`EduCoin`に変更してください。
 2. トークンの名前を`EduCoin`に変更してください。
-3. Change the symbol of your token to `EDC`.
-4. Change the amount of tokens that will be minted from 1000000 to 1000.
+3. トークンのシンボルを`EDC`に変更してください。
+4. トークンがミントされる量を1000000から1000に変更してください。
