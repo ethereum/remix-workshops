@@ -5,10 +5,10 @@
 MyToken(6行目)という独自のコントラクトを作成し、インポートされたOpenZepplin ERC20トークンコントラクト実装(4行目)から機能を継承します。
 
 このコントラクトは、ERC20コントラクト標準のオプション関数である`name()`と`symbol()`を実装し、コントラクトのデプロイ時に値を設定するコンストラクタがあります(7行目)。
-このケースにおいては、デフォルト値を使用します。 We will call our token the same as the contract `"MyToken"` and make `"MTK"` its symbol.
+このケースにおいては、デフォルト値を使用します。 コントラクト`"MyToken"`と同じようにトークンを呼び、シンボルを`"MTK"`にします。
 
-Next, we make use of the inherited `_mint` function (line 8) that allows us to create tokens upon deployment of the contract. Inside the parameters, we specify the address of the account that receives the tokens and the amount of tokens that are created.
-In this case, the account that deploys the contract will receive the tokens and we set the amount to 1000000 to the power of `decimals()`. The optional function `decimals()` of the ERC20 token standard is implemented and set to the default value of 18. This will create 1000000 tokens that will have 18 decimal places.
+次に、`_mint`関数(8行目)の継承を活用して、コントラクトのデプロイ時にトークンを作成できるようにします。 パラメータ内で、アカウントのアドレスを記述して、トークンと作成されたトークンの量を受け取ります。
+このケースでは、コントラクトをデプロイしたアカウントがトークンを受け取り、量を1000000 の`decimals()`の累乗に設定しています。 トークン標準のオプション関数である `decimals()`が実装されており、デフォルト値は18に設定されています。 これにより、小数点以下を18桁に持つトークンが1000000作成されます。
 
 ## ⭐️ 演習
 
