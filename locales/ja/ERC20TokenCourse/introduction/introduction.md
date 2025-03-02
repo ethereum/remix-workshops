@@ -1,8 +1,8 @@
-In this section of the course, we will give you a theoretical introduction to blockchain-based tokens.
+本コースのこのセクションでは、ブロックチェーンベースのトークンの理論的な紹介を行います。
 
-Blockchain tokens are a new technological building block created by blockchain technology (like websites were for the internet) that enables a decentralized, ownable internet (web3).
+ブロックチェーントークンは、ブロックチェーンテクノロジーによってもたらされた新しい技術要素(インターネットにおけるウェブサイトのようなもの)で、分散型かつ所有できるインターネット(web3)を可能にします。
 
-### Introduction
+### はじめに
 
 In the context of web3, tokens represent ownership. Tokens can represent ownership of anything: art, reputation, items in a video game, shares in a company, voting rights, or currencies.
 
