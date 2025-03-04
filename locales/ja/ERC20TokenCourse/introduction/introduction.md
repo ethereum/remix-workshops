@@ -57,7 +57,7 @@ ERC1155について詳しく知りたい場合は、こちらの<a href="https:/
 
 ### 問題3:
 
-If you would create a decentralised application for a baseball trading card game where each baseball player would be represented by a token, what token standard would you use to write the token contract?
+プロ野球のトレーディングカードゲームの分散型アプリケーションを作成したい場合は、各プロ野球プレイヤーがトークンで表されます。このトークンコントラクトを作成したい場合、どちらのトークン標準を使用すればよいでしょうか？
 
 1. ERC20
 2. ERC721
