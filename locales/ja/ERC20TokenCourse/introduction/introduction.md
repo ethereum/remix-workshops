@@ -36,25 +36,24 @@ ERC1155について詳しく知りたい場合は、こちらの<a href="https:/
 
 ## ⭐️ 演習
 
-For this assignment, we will test your knowledge via a short quiz.
-Assign the number of the best answer to the variables `question1` (line 5),
-`question2` (line 6), `question3` (line 7) in the `Quiz` contract (line 4).
+この演習では、短いテストで知識をテストします。
+`Quiz`コントラクト(4行目)の変数、`question1`(5行目)、`question2`(6行目)、`question3`(7行目)に最も正しい解答の数字を入れてください。
 
 ### 問題1:
 
-Why are blockchain based tokens so revolutionary?
+ブロックチェーンベースのトークンは、なぜ革新的なのでしょうか？
 
-1. Because people can now make investments anonymously.
-2. Because they represent ownership in digital assets that can be owned and transferred.
-3. Because you can use tokens to make transactions without having to pay taxes.
+1. 人々は、匿名で投資をすることができるから。
+2. 所有したり送信したりできるデジタル資産の所有権を表すことができるから。
+3. トークンを使用することで、税金を払うことなくトランザクションを行えるから。
 
 ### 問題2:
 
-Why did the community create token standards?
+コミュニティがトークン標準を作成した理由は何でしょうか？
 
-1. So that the community can control and approve the tokens that are created.
-2. In order to restrict the functionality of tokens to safe and non-malicious actions.
-3. So that the community can create tokens that are interoperable with other contracts, products, and services.
+1. コミュニティが作成したトークンをコントロールしたり承認するためです。
+2. トークンが安全で、悪意のない動作になるように機能を制限するためです。
+3. コミュニティがトークンを作成し、他のコントラクト、プロダクト、サービスと相互運用可能にできるからです。
 
 ### 問題3:
 
