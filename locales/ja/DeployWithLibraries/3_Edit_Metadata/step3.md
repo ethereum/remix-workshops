@@ -1,12 +1,12 @@
-The `Deploy` property in `sampleContract.json` contains everything you need for telling Remix IDE the address of the library for a specific network.
+`sampleContract.json`の`Deploy`プロパティは、Remix IDEに対して、特定のネットワークのライブラリのアドレスを伝えるためのに必要なことすべてが含まれています。
 
-- `<address>` contains the address of the library that is already deployed. You have to specify this address for each network.
-- `autoDeployLib` is a boolean and tells Remix IDE if it should autodeploy the library before deploying the contract.
+- `<address>`は、既にデプロイされているライブラリのアドレスを含みます。 各ネットワークのアドレスを指定する必要があります。
+- `autoDeployLib`は、ブール値でRemix IDEにコントラクトをデプロイする前にライブラリの自動デプロイをするかどうかを伝えます。
 
-Basically if `autoDeployLib` is **true**, the `<address>` will not be used and Remix will automatically deploy the library before deploying the contract.
+基本的に`autoDeployLib`が**true**の場合、`<address>`は使われず、Remixはコントラクトをデプロイする前に自動的にライブラリをデプロイしようとします。
 
-For the purpose of this demo - we are mimicking a situation where the library has already been deployed because this is a more common situation.
+このデモの目的どおり、より一般的な状況にするため、既にデプロイされているライブラリがある状況を模倣します。
 
 So set `autoDeploy` to **false**, for the `VM:-` entry.
 
-Move to next Step.
+次のステップに移動します。
