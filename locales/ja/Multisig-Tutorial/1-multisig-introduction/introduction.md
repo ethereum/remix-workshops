@@ -26,16 +26,16 @@
 
 ### 1. マルチシグネチャ・ウォレットとは何でしょうか？
 
-1. A digital wallet that requires a single signature for transactions.
-2. A digital wallet that requires multiple signatures for transactions.
-3. A physical wallet used for storing cryptocurrency.
-4. A wallet that can only hold multiple types of cryptocurrencies.
+1. デジタルウォレットでトランザクションに1つの署名が必要です。
+2. デジタルウォレットでトランザクションに複数の署名が必要です。
+3. 物理ウォレットで、暗号通貨を保管するのに使います。
+4. ウォレットで、複数タイプの暗号通貨の保持のみを行います。
 
-### 2) マルチシグネチャ・ウォレットがセキュリティをどのように強化するでしょうか？
+### 2) マルチシグネチャ・ウォレットがどのようにセキュリティを強化するでしょうか？
 
-1. By requiring a single private key for transactions.
-2. By distributing transaction approval across multiple owners.
-3. By storing transaction data on-chain.
-4. None of the above.
+1. トランザクションに1つの秘密鍵を要することで強化。
+2. 複数の所有者に承認を分散することで強化。
+3. トランザクションデータをオンチェーンに保存することで強化。
+4. 上記のどれでもない。
 
-Feel free to take your time and answer the questions above. Once you're ready, we'll move on to exploring the Multisig smart contract and understanding its structure.
+上記に問題に十分に時間をかけて解答を得ましょう。 準備ができましたら、マルチシグ・スマートコントラクトの探索と構造の理解に進みます。
