@@ -1,25 +1,26 @@
-Switch to the `Deploy & Run` module
-![Run transaction](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/4_Linking_and_Deploying/images/remix_runtransaction.png "Run Transaction")
+`Deploy & Run`モジュール
+![Run transaction](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/4_Linking_and_Deploying/images/remix_runtransaction.png "Run Transaction")に切り替えてください。
 
-- Select the Remix VM Environment and select the `sampleContract` contract in the list of compiled contracts.
+- Remix VM Environmentを選択して、コンパイルされたコントラクトのリストの中から`sampleContract` コントラクトを選択します。
 
-- Click on `Deploy`
+- `Deploy`をクリックします。
 
-The terminal should output something like `creation of sample errored: <address> is not a valid address. Please check the provided address is valid.`
+ターミナルは、次のような出力をする必要があります。`creation of sample errored: <address> is not a valid address. Please check the provided address is valid.`
 That is expected: **We have set `autoDeployLib` to false, so Remix expects to have an address and not just `<address>`**
 
-So we need deploy the library to get its address.
+そのため、アドレスを取得するためにライブラリをデプロイする必要があります。
 
-- Select the library `aLib` in the list of compiled contract and hit `deploy`
+- コンパイルされたコントラクトのリストの中からライブラリ`aLib`を選択し、`deploy`を押します。
 
-  ![Choose aLib](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/4_Linking_and_Deploying/images/contract_alib.png "Choose aLib")
+ ![Choose aLib](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/4_Linking_and_Deploying/images/contract_alib.png "Choose aLib")
 
-- Click the clipboard icon to copy the address of the library.
+- クリップボードアイコンをクリックして、ライブラリのアドレスをコピーします。
 
-  ![Copy lib1](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/4_Linking_and_Deploying/images/alib_copy.png "Copy")
+ ![Copy lib1](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/4_Linking_and_Deploying/images/alib_copy.png "Copy")
 
 - Paste it into the **contract sample's** metadata JSON.
 
 - Reselect the `sampleContract` contract in the `Run transaction` module and hit deploy.
 
 - Deploy should now be successful.
+
