@@ -1,8 +1,8 @@
-Switch to the `Solidity compiler` module
-![Solidity Compiler](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_Generate_Metadata/remix_icon_solidity.png "Solidity Compiler")
+`Solidity compiler`モジュール
+![Solidity Compiler](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_Generate_Metadata/remix_icon_solidity.png "Solidity Compiler")にスイッチします。
 
-- Select the `sampleContract` contract in the list of compiled contracts.
-- click on `ByteCode`, it should copy the following to the clipboard:
+- コンパイルされたコントラクトのリストの中から`sampleContract`コントラクトを選びます。
+- `ByteCode`をクリックし、クリップボードに次の内容をコピーしてください。
 
 ```
 {
@@ -22,9 +22,9 @@ Switch to the `Solidity compiler` module
 }
 ```
 
-This is basically what the compiler is returning:
+次は、基本的にコンパイラが返すものです。
 
-- `linkReferences` describes what are the libraries used by the contract.
-- `object` is the compiled contract (bytecode). This is what gets deployed and saved onto the blockchain. In this example, the value `__$d42d70ba92b626965f4c69b39148e37a33$__` inside the bytecode is just a placeholder for the library address. In your case, the placeholder will be between `__$` and `$__`.
+- `linkReferences` コントラクトが使用するライブラリを記述します。
+- `object` コンパイルされたコントラクト(バイトコード)。 これがブロックチェーンにデプロイおよび保存されます。 この例では、値`__$d42d70ba92b626965f4c69b39148e37a33$__` の内側がバイトコードで、ライブラリアドレスのプレースホルダです。 このケースでは、プレースフォルダーが `__$` と`$__`の間にあります。
 
-The metadata JSON from Remix IDE tells Remix to replace the placeholder with the given address.
+Remix IDEのメタデータJSONは、Remixにプレースホルダ―を与えられたアドレスに置き換えることを知らせます。
