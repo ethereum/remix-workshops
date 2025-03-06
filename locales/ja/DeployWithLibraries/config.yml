@@ -1,7 +1,7 @@
 ---
 id: deploylibraries
-name: Deploy with Libraries
-summary: Write, Deploy and link a Library to a Contract
+name: ライブラリとデプロイ
+summary: コントラクトにライブラリを書き、デプロイ、リンクする
 level: 3
 tags:
   - Remix
