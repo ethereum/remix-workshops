@@ -18,9 +18,9 @@ That is expected: **We have set `autoDeployLib` to false, so Remix expects to ha
 
  ![Copy lib1](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/4_Linking_and_Deploying/images/alib_copy.png "Copy")
 
-- Paste it into the **contract sample's** metadata JSON.
+- **contract sample's**メタデータJSONにアドレスをペーストします。
 
-- Reselect the `sampleContract` contract in the `Run transaction` module and hit deploy.
+- `Run transaction`モジュールにある`sampleContrac`コントラクトを再度選択します。そして、`deploy`を押します。
 
-- Deploy should now be successful.
+- デプロイが成功する必要があります。
 
