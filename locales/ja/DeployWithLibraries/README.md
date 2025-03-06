@@ -1,3 +1,3 @@
-**Libraries** are deployed contracts that do not store state and are used by other contracts to decrease their size and thus their deployment costs.
+**ライブラリ**は、デプロイされたコントラクトであり、状態を保存しません。他のコントラクトによって使用され、サイズとデプロイのコストの削減をします。
 
-Learn to work with **Libraries** in Remix - you won't need to whisper.
+Remixの**ライブラリ**の使用方法を学びます。恐れないでください！簡単な内容です。
