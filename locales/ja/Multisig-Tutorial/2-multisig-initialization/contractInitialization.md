@@ -1,4 +1,4 @@
-In this section, we'll explore the **initialization process** of the Multisig smart contract. We'll examine the constructor function and review how it sets up the initial state of the contract.
+このセクションでは、マルチシグ・スマートコントラクトの**初期化プロセス**に学びます。 コンストラクタ関数を学び、コントラクトを初期状態にするセットアップ方法を確認します。
 
 ## Note
 
