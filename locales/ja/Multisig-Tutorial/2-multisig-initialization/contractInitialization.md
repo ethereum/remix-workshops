@@ -1,12 +1,12 @@
-このセクションでは、マルチシグ・スマートコントラクトの**初期化プロセス**に学びます。 コンストラクタ関数を学び、コントラクトを初期状態にするセットアップ方法を確認します。
+このセクションでは、マルチシグ・スマートコントラクトの**初期化プロセス**を学びます。 コンストラクタ関数を学び、コントラクトがどのように初期状態にセットアップされるか確認します。
 
 ## 注意
 
-このチュートリアルのセクションから、マルチシグコントラクトの構築が始まります。 セクションを進めるにつれて、コントラクトが完成されていきます。
+チュートリアルのこのセクションから、マルチシグコントラクトの構築が始まります。 セクションを進めるにつれて、コントラクトが完成されていきます。
 
 ## 概要
 
-このセクションでは、このコントラクトが、イベント、状態変数、modifier、関数で構成されていることを学びます。 **イベント**は、ブロックチェーンの特定のアクティビティをロギングすることで透明性を提供します。一方で、**modifier**は、認証されたユーザーのみが特定の関数を実行できるようにします。
+このセクションでは、コントラクトが、イベント、状態変数、modifier、関数で構成されていることを学びます。 **イベント**は、ブロックチェーンの特定のアクティビティをロギングすることで透明性を提供します。一方で、**modifier**は、認証されたユーザーのみが特定の関数を実行できるようにします。
 
 ## 状態変数
 
@@ -28,21 +28,21 @@
 
 15行目と16行目では、2つの`require`文があり入力が有効であることを確認しています。 このケースでは、少なくとも一人以上の所有者、承認が少なくともゼロより大きく、所有者の数以下であることが必要になります。
 
-次に、address(0)でないことを検証(25行目)、所有者が一意であることの検証(26行目)することでコンストラクトの状態を初期化しています。  Then it adds a key/ value pair to the isOwner mapping (Line 28), and then it populates the `owners` array with the provided owner addresses (Line 29).
+次に、address(0)でないことを検証(25行目)、所有者が一意であることの検証(26行目)することでコンストラクトの状態を初期化しています。  その後、キー/バリューのペアをisOwnerマッピングに追加します(28行目)。また、`owners`配列に、指定された所有者のアドレスを追加しています(29行目)。
 
-Finally, it sets the `numConfirmationsRequired` variable with the specified value (Line 32).
+最後に、`numConfirmationsRequired`変数を特定の値に設定します(32行目)。
 
 ## getOwners関数
 
-The `getOwners` function (Line 36) allows users to retrieve the list of owners of the multi-signature wallet. It returns the `owners` array (Line 37).
+ユーザーは、`getOwners`関数(36行目)でマルチシグネチャ・ウォレットの所有者のリストを取得できます。 この関数は、`owners`配列を返します(37行目)。
 
 ## getNumConfirmationsRequired関数
 
-The `getNumConfirmationsRequired` function (Line 41) allows users to retrieve the number of confirmations required for a transaction. It returns the `numConfirmationsRequired` variable (Line 42).
+ユーザーは、 `getNumConfirmationsRequired`関数(41行目)でトランザクションに必要な承認数を取得することができます。  この関数は、 `numConfirmationsRequired` 変数を返します(42行目)。
 
 ## まとめ
 
-In this section, we explored the initialization process of the Multisig smart contract. We examined the constructor function and understood how it sets up the initial state of the contract.
+このセクションでは、マルチシグ・スマートコントラクトの初期化プロセスについて学びました。 コンストラクタ関数を調査して、どのように初期状態にコントラクトがセットアップされるかを理解しました。
 
 ## ⭐️ 演習: マルチシグ・ウォレットのデプロイ
 
