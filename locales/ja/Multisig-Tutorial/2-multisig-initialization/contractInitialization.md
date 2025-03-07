@@ -1,50 +1,50 @@
 このセクションでは、マルチシグ・スマートコントラクトの**初期化プロセス**に学びます。 コンストラクタ関数を学び、コントラクトを初期状態にするセットアップ方法を確認します。
 
-## Note
+## 注意
 
-From this section on in this tutorial, we will be building up a multisig contract. In subsequent sections, the contract will become increasingly complete.
+このチュートリアルのセクションから、マルチシグコントラクトの構築が始まります。 セクションを進めるにつれて、コントラクトが完成されていきます。
 
-## Overview
+## 概要
 
-In this section, the contract consists of events, state variables, modifiers, and functions. **Events** provide transparency by logging specified activities on the blockchain, while **modifiers** ensure that only authorized users can execute certain functions.
+このセクションでは、このコントラクトが、イベント、状態変数、modifier、関数で構成されていることを学びます。 **イベント**は、ブロックチェーンの特定のアクティビティをロギングすることで透明性を提供します。一方で、**modifier**は、認証されたユーザーのみが特定の関数を実行できるようにします。
 
-## State Variables
+## 状態変数
 
-In Line 4, we have the MultisigWallet contract itself. At the beginning of the contract, we have three state variables.
+4行目では、MultisigWalletコントラクト自体が書かれています。 コントラクトの最初に3つの状態変数があります。
 
-1. **`owners`:** An array containing the addresses of all owners of the multi-signature wallet (Line 5).
-2. **`isOwner`:** A mapping indicating whether an address is an owner (Line 6).
-3. **`numConfirmationsRequired`:** The number of confirmations required for a transaction (Line 7).
+1. **`owners`:** マルチシグネシャ・ウォレットのすべての所有者のアドレスを持つ配列です(5行目)。
+2. **`isOwner`:** アドレスが所有者かどうかを示すマッピングです(6行目)。
+3. **`numConfirmationsRequired`:** トランザクションで必要になる承認数です(7行目)。
 
-The setup of array and mapping allows us to easily retrieve the list of owners and verify whether an address is an owner.
+配列とマッピングをセットアップすることで、所有者のリストを簡単に取得でき、アドレスが所有者かどうか確認することができます。
 
-## Modifiers
+## Modifier
 
-Next, we have a modifier called `onlyOwner` (Line 9). Modifiers in Solidity are special keywords that can be used to amend the behavior of functions. In our case, the `onlyOwner` modifier ensures that only owners can execute a function. It does this by checking whether the address of the **caller** is an owner.
+次に、`onlyOwner`というmodifierがあります(9行目)。 Solidityにおいてmodifierは、特別なキーワードで関数の動作を修正するのに使われます。 この場合、`onlyOwner` modifierは、所有者のみが関数の実行ができることを保証します。 **呼び出している**アドレスが所有者かどうか確認することを行っています。
 
-## Constructor Function
+## コンストラクタ関数
 
-The `constructor` function (Line 14) is executed only once during the deployment of the contract. It initializes essential parameters, in this case, the list of owners and the required number of confirmations (Line 14).
+`constructor`関数(14行目)では、コントラクトのデプロイ中に一回だけ実行されます。 このケースでは、所有者のリスト、必須パラメータ、必要な承認数の初期化を行っています。
 
-On lines 15 and 16, we have two `require` statements to ensure that the inputs are valid. In this case, we require that there must be at least one owner and that the number of required confirmations must be greater than zero and less than or equal to the number of owners.
+15行目と16行目では、2つの`require`文があり入力が有効であることを確認しています。 このケースでは、少なくとも一人以上の所有者、承認が少なくともゼロより大きく、所有者の数以下であることが必要になります。
 
-The constructor then initializes the contract state by verifying that is not address(0) (Line 25) and that the owner is unique (Line 26).  Then it adds a key/ value pair to the isOwner mapping (Line 28), and then it populates the `owners` array with the provided owner addresses (Line 29).
+次に、address(0)でないことを検証(25行目)、所有者が一意であることの検証(26行目)することでコンストラクトの状態を初期化しています。  Then it adds a key/ value pair to the isOwner mapping (Line 28), and then it populates the `owners` array with the provided owner addresses (Line 29).
 
 Finally, it sets the `numConfirmationsRequired` variable with the specified value (Line 32).
 
-## getOwners Function
+## getOwners関数
 
 The `getOwners` function (Line 36) allows users to retrieve the list of owners of the multi-signature wallet. It returns the `owners` array (Line 37).
 
-## getNumConfirmationsRequired Function
+## getNumConfirmationsRequired関数
 
 The `getNumConfirmationsRequired` function (Line 41) allows users to retrieve the number of confirmations required for a transaction. It returns the `numConfirmationsRequired` variable (Line 42).
 
-## Conclusion
+## まとめ
 
 In this section, we explored the initialization process of the Multisig smart contract. We examined the constructor function and understood how it sets up the initial state of the contract.
 
-## ⭐️ Assignment: Deploy a Multisig Wallet
+## ⭐️ 演習: マルチシグ・ウォレットのデプロイ
 
 Deploy a Multisig contract with three owners and require two confirmations for transaction execution.
 
