@@ -1,4 +1,4 @@
-このセクションでは、マルチシグ・スマートコントラクトの**初期化プロセス**を学びます。 コンストラクタ関数を学び、コントラクトがどのように初期状態にセットアップされるか確認します。
+このセクションでは、マルチシグ・スマートコントラクトの**初期化プロセス**を学びます。 コンストラクタ関数を通して、コントラクトがどのように初期状態にセットアップされるか確認します。
 
 ## 注意
 
@@ -54,7 +54,7 @@ Deploy a Multisig contract with three owners and require two confirmations for t
 4. Under "_OWNERS", enter three an array of three addresses.
 5. Under "_NUM_CONFIRMATIONS_REQUIRED", enter the number of confirmations required for a transaction.
 
-**Hints:**
+**ヒント:**
 
 - You can get addresses from the "ACCOUNTS" dropdown menu.
 - The array of addresses should be in the format: ["0x123...", "0x456...", "0x789..."].
