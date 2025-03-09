@@ -1,6 +1,6 @@
-In this section, we'll explore the `receive` function and the associated Deposit event. We'll examine how the `receive` function is used to deposit Ether into the multi-signature wallet and how the Deposit event provides transparency.
+このセクションでは、`receive`関数と、それに関連するDopositイベントについて説明します。 マルチシグネチャ・ウォレットにEtherを入金するときに`receive` 関数が使われ、どのようにDepositイベントが透明性を提供するかを調べます。
 
-## Deposit Event
+## Depositイベント
 
 On line, 9 we have the Deposit event. The Deposit event is emitted whenever Ether is deposited into the multi-signature wallet. It includes three parameters:
 
@@ -10,7 +10,7 @@ On line, 9 we have the Deposit event. The Deposit event is emitted whenever Ethe
 
 We can use the Deposit event to track the flow of Ether into the multi-signature wallet and maybe trigger other actions based on the event.
 
-## receive Function
+## receive関数
 
 On line 43, we have the `receive` function. The `receive` function is a special function that is executed whenever Ether is sent to the contract.
 
@@ -20,11 +20,11 @@ The `receive` function emits the Deposit event (Line 44) with the address of the
 
 To receive Ether, a contract must have a `receive`, `fallback`, or a function with the `payable` modifier. If none of these are present, the contract will reject any Ether sent to it.
 
-## Conclusion
+## まとめ
 
 In this section, we explored the `receive` function and the associated Deposit event. We examined how the `receive` function is used to deposit Ether into the multi-signature wallet and how the Deposit event provides transparency.
 
-## ⭐️ Assignment: Deposit Ether
+## ⭐️演習: Etherの入金
 
 Deposit 2 Ether into the Multisig contract.
 
