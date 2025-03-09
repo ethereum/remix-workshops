@@ -2,13 +2,13 @@
 
 ## Depositイベント
 
-On line, 9 we have the Deposit event. The Deposit event is emitted whenever Ether is deposited into the multi-signature wallet. It includes three parameters:
+9行目に、Depositイベントがあります。 Depositイベントは、Etherがマルチシグネチャ・ウォレットに入金されたときに発行されます。 次の3つのパラメータを含んでいます。
 
-1. `sender`: The address that sent the Ether.
-2. `amount`: The amount of Ether deposited.
-3. `balance`: The updated balance of the contract after the deposit.
+1. `sender`: Etherを送信するアドレス
+2. `amount`: 入金されるEtherの量
+3. `balance`: 入金後に更新されたコントラクトの残高
 
-We can use the Deposit event to track the flow of Ether into the multi-signature wallet and maybe trigger other actions based on the event.
+Depositイベントを使いマルチシグネチャ・ウォレットへのEtherのフローを追跡し、イベントに基づいて他のアクションをトリガーすることもできます。
 
 ## receive関数
 
