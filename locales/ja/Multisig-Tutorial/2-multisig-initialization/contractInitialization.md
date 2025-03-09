@@ -46,13 +46,13 @@
 
 ## ⭐️ 演習: マルチシグ・ウォレットのデプロイ
 
-Deploy a Multisig contract with three owners and require two confirmations for transaction execution.
+トランザクションの実行に3人の所有者の内、2人の承認が必要なマルチシグ・コントラクトをデプロイしてください。
 
-1. Compile contractInitialization.sol
-2. Go to Deploy & Run Transactions in Remix.
-3. Expand the "Deploy" section.
-4. Under "_OWNERS", enter three an array of three addresses.
-5. Under "_NUM_CONFIRMATIONS_REQUIRED", enter the number of confirmations required for a transaction.
+1. contractInitialization.solのコンパイル
+2. RemixのDeploy & Run Transactionsに移動します。
+3. 「Deploy」セクションを展開します。
+4. 「_OWNERS」の下に、3つのアドレスの配列を入力します。
+5. 「_NUM_CONFIRMATIONS_REQUIRED」の下に、トランザクションに必要な承認の数を入力します。
 
 **ヒント:**
 
