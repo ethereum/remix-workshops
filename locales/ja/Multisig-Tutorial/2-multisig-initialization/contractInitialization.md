@@ -56,5 +56,5 @@
 
 **ヒント:**
 
-- You can get addresses from the "ACCOUNTS" dropdown menu.
-- The array of addresses should be in the format: ["0x123...", "0x456...", "0x789..."].
+- 「ACCOUNTS」ドロップメニューからアドレスを取得できます。
+- アドレスの配列は、 ["0x123...", "0x456...", "0x789..."]のようにフォーマットされている必要があります。
