@@ -12,11 +12,11 @@ Depositイベントを使いマルチシグネチャ・ウォレットへのEthe
 
 ## receive関数
 
-On line 43, we have the `receive` function. The `receive` function is a special function that is executed whenever Ether is sent to the contract.
+43行目に、`receive`関数があります。 `receive`関数は、特別な関数でコントラクトにEtherが送信されると実行されます。
 
-The `receive` function is marked as `external` and `payable`. The `external` modifier means that the function can only be called from outside the contract. The `payable` modifier means that the function can receive Ether.
+`receive`関数には、`external`と`payable`が付いています。 `external` modifierは、外部のコントラクトからのみ呼び出すことができる関数を意味します。 `payable` modifierは、Etherを受け取ることができる関数を意味します。
 
-The `receive` function emits the Deposit event (Line 44) with the address of the sender, the amount of Ether sent, and the updated balance of the contract. It doesn't return anything.
+`receive`関数は、Depositイベント(44行目)により、送信者のアドレス、受信したEtherの量、コントラクトの残高を発行します。 この関数には、returnがありません。
 
 To receive Ether, a contract must have a `receive`, `fallback`, or a function with the `payable` modifier. If none of these are present, the contract will reject any Ether sent to it.
 
