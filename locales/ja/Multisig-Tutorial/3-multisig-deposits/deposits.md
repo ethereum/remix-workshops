@@ -18,17 +18,17 @@ Depositイベントを使いマルチシグネチャ・ウォレットへのEthe
 
 `receive`関数は、Depositイベント(44行目)により、送信者のアドレス、受信したEtherの量、コントラクトの残高を発行します。 この関数には、returnがありません。
 
-To receive Ether, a contract must have a `receive`, `fallback`, or a function with the `payable` modifier. If none of these are present, the contract will reject any Ether sent to it.
+Etherを受け取るには、コントラクトに`receive`関数、`fallback`関数、または`payable` modifierを備えた関数が必要です。 これらのどれも無い場合は、コントラクトに対するEtherの送信が拒否されます。
 
 ## まとめ
 
-In this section, we explored the `receive` function and the associated Deposit event. We examined how the `receive` function is used to deposit Ether into the multi-signature wallet and how the Deposit event provides transparency.
+このセクションでは、`receive`関数と、この関数に関連するDepositイベントについて説明しました。 `receive`関数によるマルチシグネチャ・ウォレットへのEtherの入金方法およびDepositイベントによる透明性の提供について説明しました。
 
 ## ⭐️演習: Etherの入金
 
-Deposit 2 Ether into the Multisig contract.
+マルチシグ・ウォレットに2 Etherを入金してください。
 
-1. Deploy the Multisig contract as in the previous assignment.
-2. Enter a Value of 2 Ether in the Value field and select Ether in the dropdown menu.
-3. At the bottom of your deployed contract in the "Low level interactions" section, click on the "Transact" button.
-4. On top of your deployed contract, it should now say "Balance: 2 Ether".
+1. 前の演習課題と同じようにマルチシグ・コントラクトをデプロイしてください。
+2. Valueフィールドに2 Etherの値を入力し、ドロップダウンメニューでEtherを選択します。
+3. デプロイしたコントラクト下部にある「Low level interactions」で、「Transact」ボタンをクリックしてください。
+4. デプロイしたコントラクトの上部に「Balance: 2 Eth」が表示されていることを確認してください。
