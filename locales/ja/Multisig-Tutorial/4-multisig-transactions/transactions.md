@@ -22,18 +22,18 @@
 
 ## イベント
 
-We have four new events in this iteration of the contract:
+このコントラクトのイテレーションでは、4つの新しいイベントが加わりました。
 
-1. **`SubmitTransaction` event:** emitted whenever a transaction is submitted to the multi-signature wallet.
-2. **`ConfirmTransaction` event:** emitted whenever a transaction is confirmed by an owner.
-3. **`RevokeConfirmation` event:** emitted whenever a transaction confirmation is revoked by an owner.
-4. **`ExecuteTransaction` event:** emitted whenever a transaction is executed.
+1. **`SubmitTransaction` event:** マルチシグネシャ・ウォレットにトランザクションが送信されるたびに発行されます。
+2. **`ConfirmTransaction` event:** 所有者によってトランザクションが承認されるたびに発行されます。
+3. **`RevokeConfirmation` event:** 所有者によって承認が取り消されるたびに発行されます。
+4. **`ExecuteTransaction` event:** トランザクションが実行されるたびに発行されます。
 
 ## submitTransaction関数
 
-The `submitTransaction` function (Line 78) allows users to submit a transaction to the multi-sig wallet. It takes three parameters: `to`, `value`, and `data`. The `to` parameter is the address of the recipient of the transaction. The `value` parameter is the amount of Ether to be sent. The `data` parameter is the data to be sent to the recipient. Only owners can submit transactions.
+`submitTransaction`関数(78行目)は、ユーザーがマルチシグ・ウォレットにトランザクションを送信することを可能にします。 この関数は、3つのパラメータ `to`、`value`、`data`を取ります。  `to`パラメータは、トランザクションの受信者のアドレスです。 `value`パラメータは、送信されるEtherの量です。 `data`パラメータは、受信者に送信されるデータです。 所有者のみがトランザクションを送信できます。
 
-On line, 85 we create a new transaction struct and push it to the `transactions` array and emit the `SubmitTransaction` event. The `txIndex` variable is used to keep track of the transaction index.
+85行目では、新しいトランザクション構造体を作成し、`transactions`配列にプッシュしています。そして、`SubmitTransaction`イベントを発行しています。 `txIndex`変数は、トランザクションインデックスを追跡するのに使われます。
 
 ## confirmTransaction関数
 
