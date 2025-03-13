@@ -10,15 +10,15 @@
 
 ## トランザクション構造体
 
-On line 28, we have a struct called `Transaction`. We store the struct members: `to`, `value`, `data`, `executed`, and `numConfirmations` in individual variables.
+28行目に、`Transaction`という構造体があります。 構造体のメンバーとして、`to`、`value`、`data`、`executed`、`numConfirmations`という変数がそれぞれ格納されます。
 
 ## 承認のマッピング
 
-On line 37, we have a mapping called `isConfirmed`. This mapping is used to keep track of the confirmations of each transaction. It maps the transaction's index to a mapping of an owner addresse to a boolean value. The boolean value indicates whether this owner has confirmed the transaction.
+37行目では、`isConfirmed`というマッピングがあります。 このマッピングは、各トランザクションの承認を追跡するのに使われます。 これは、所有者のアドレスのトランザクションのインデックスをブール値にマッピングしています。 このブール値は、所有者がトランザクションに承認しているかを示しています。
 
 ## トランザクション配列
 
-On line 39, we have an array called `transactions`. The array is used to store all the transactions submitted to the multi-signature wallet.
+39行目には、`transactions`という配列があります。 この配列は、マルチシグネチャ・ウォレットに送信されたすべてのトランザクションを格納するのに使われます。
 
 ## イベント
 
