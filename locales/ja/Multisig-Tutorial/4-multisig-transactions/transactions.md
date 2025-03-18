@@ -4,8 +4,8 @@
 
 コントラクトに新しいmodifierがいくつか加わりました。 1つ1つ確認していきましょう。
 
-1. **`txExists` modifier:** (13行目) トランザクションが存在することを確実にします。 これは、トランザクションのインデックスが`transactions`配列の長さよりも小さいかどうかを確認しています。 このセクションのmodifierについては、後ほど詳しく取り上げます。
-2. **`notExecuted` modifier:** (18行目) トランザクションが実行されていないことを確実にします。 これは、トランザクションの`executed`変数がfalseであることを確認しています。
+1. **`txExists` modifier:** (13行目) トランザクションが存在することを確実にします。 これにより、トランザクションのインデックスが`transactions`配列の長さよりも小さいかどうかを確認しています。 このセクションのmodifierについては、後ほど詳しく取り上げます。
+2. **`notExecuted` modifier:** (18行目) トランザクションが実行されていないことを確実にします。 これにより、トランザクションの`executed`変数がfalseであることを確認しています。
 3. **`notConfirmed` modifier:** (23行目) 呼び出すアカウントによってトランザクションが承認されていないことを確実にします。 これにより、トランザクションインデックスのマッピング`isConfirmed`で呼び出し元のアドレスがfalseかどうかを確認しています。
 
 ## トランザクション構造体
@@ -14,7 +14,7 @@
 
 ## 承認のマッピング
 
-37行目では、`isConfirmed`というマッピングがあります。 このマッピングは、各トランザクションの承認を追跡するのに使われます。 これは、所有者のアドレスのトランザクションのインデックスをブール値にマッピングしています。 このブール値は、所有者がトランザクションに承認しているかを示しています。
+37行目では、`isConfirmed`というマッピングがあります。 このマッピングは、各トランザクションの承認を追跡するのに使われます。 これは、所有者のアドレスのトランザクションのインデックスをブール値にマッピングしています。 このブール値は、所有者がトランザクションに承認しているかどうかを示します。
 
 ## トランザクション配列
 
@@ -40,34 +40,34 @@
 `confirmTransaction`関数(98行目)は、ユーザーがトランザクションを承認することができます。 この関数は、パラメータ「`txIndex`」を取ります。
 また、3つのmodifier「`onlyOwner`」、「`txExists`」、「 `notExecuted`」があります。 `onlyOwner` modifierによって、所有者のみがトランザクションを承認できることを確実にしています。 `txExists` modifierにより、トランザクションが存在することを確実にしています。 `notExecuted` modifierにより、トランザクションが実行されていないことを確実にしています。
 
-101行目で、`transaction`というローカル変数にトランザクションを格納しています。 そして、トランザクションの`numConfirmations`変数をインクリメントしてから、トランザクションインデックスの `isConfirmed`マッピングで、呼び出しているアドレスにtrueを設定します。 Finally, we emit the `ConfirmTransaction` event.
+101行目で、`transaction`というローカル変数にトランザクションを格納しています。 そして、トランザクションの`numConfirmations`変数をインクリメントしてから、トランザクションインデックスの`isConfirmed`マッピングで、呼び出しているアドレスにtrueを設定します。 最後に、`ConfirmTransaction`イベントを発行します。
 
 ## executeTransaction関数
 
-The `executeTransaction` function (Line 108) allows users to execute a transaction. On line 113, we require that the number of confirmations of the transaction is greater than or equal to the required number of confirmations. We then set the `executed` variable of the transaction to true. Finally, send the funds using the `call` function.  This is the `call` of the recipient address with the value and data of the transaction. If the transaction is successful, we emit the `ExecuteTransaction` event.
+`executeTransaction`関数(108行目)では、ユーザーがトランザクションを実行することができます。 113行目で、トランザクションの承認数が必要な承認数以上であること要求しています。 そして、トランザクションの `executed`変数をtrueに設定しています。 最後に、`call`関数で資金を送信します。  トランザクションの値とデータと一緒に受信者のアドレスに`call`しています。 トランザクションが成功すると、`ExecuteTransaction`イベントを発行します。
 
 ## getTransactionCount関数
 
-The `getTransactionCount` function (Line 132) allows users to retrieve the number of transactions in the multi-signature wallet. It returns the length of the `transactions` array.
+`getTransactionCount`関数(132行目)では、ユーザーがマルチシグネシャ・ウォレットのトランザクションの数を取得することができます。 `transactions`配列の長さを返します。
 
 ## getTransaction関数
 
-The `getTransaction` function (Line 136) allows users to retrieve a transaction. It returns the transaction struct members that we explored earlier in this section.
+`getTransaction`関数(136行目)で、ユーザーがトランザクションを取得することができます。 この関数は、このセクションの前半で説明したトランザクション構造体のメンバーを返します。
 
 ## まとめ
 
-In this section, we explored the process of submitting, confirming, and executing transactions. We examined the `submitTransaction`, `confirmTransaction`, and `executeTransaction` functions and understood how they work together to allow multiple users to submit and confirm transactions.
+このセクションでは、トランザクションの送信、承認、実行プロセスについて説明しました。 submitTransaction`関数、`confirmTransaction`関数、`executeTransaction関数を調査し、それらが連携して複数のユーザーによって、トランザクションを送信したり、承認したりできることを理解しました。
 
 ## ⭐️ 演習: トランザクションの作成
 
-Submit, confirm, and execute a transaction to send 2 Ether to the first account in the "ACCOUNTS" dropdown menu.
+「ACCOUNTS」ドロップダウンメニュー内の最初のアカウントに対して、2 Etherを送信、承認、実行するトランザクションをしてください。
 
-1. Deploy the Multisig contract as in the previous assignment. Make sure that the required number of confirmations is 2.
-2. Fund the multisig from any address by sending 4 Ether as you did in the previous assignment.
-3. Try sending 2 Ether to the first account in the "ACCOUNTS" dropdown menu.  Once you have submitted this transaction (with submitTransaction), click on `getTransactionCount` and should see one transaction or you can click on `getTransaction`, insert 0 as the transaction index and see the transaction you just submitted.
-4. Now you can click on `confirmTransaction` and insert 0 as the transaction index. If you click on `getTransaction` again, you should see that the transaction has been confirmed once.
-5. Switch to the second owner account and confirm the transaction again. If you click on `getTransaction` again, you should see that the transaction has been confirmed twice.
-6. The last step is to execute the transaction. Click on `executeTransaction` and insert 0 as the transaction index. If you click on `getTransaction` again, you should see that the transaction has been executed. You can also check the balance of the first account in the "ACCOUNTS" dropdown menu. It should now be 2 Ether higher and the balance of the multi-signature wallet should be 2 Ether lower.
+1. 前回の演習と同様に、マルチシグ・コントラクトをデプロイします。 必要な承認数を2にします。
+2. 前回の課題と同じように、任意のアドレスから4 Etherを送信してマルチシグに資金を供給します。
+3. 「ACCOUNTS」ドロップダウンメニューで最初のアカウントに2 Etherの送信をします。  このトランザクションを(submitTransaction使用して)送信したら、`getTransactionCount` をクリックして、1つのトランザクションがあるか確認してください。もしくは、 `getTransaction`をクリックし、トランザクションインデックスで0を入力すると、送信したトランザクションを確認できます。
+4. `confirmTransaction`をクリックして、トランザクションインデックスとして0を挿入します。 `getTransaction`をもう一度クリックすると、トランザクションが一度承認されたことを確認できます。
+5. 2つめの所有者アカウントに切り替えて、トランザクションの承認をもう一度行います。 `getTransaction`を再度クリックすると、トランザクションが2回承認されているこを確認できます。
+6. 最後のステップは、トランザクションの実行です。 `executeTransaction`をクリックし、トランザクションインデックスとして0を挿入します。 `getTransaction`を再度クリックすると、トランザクションが実行されたことを確認できます。 また、「ACCOUNTS」ドロップダウンメニューの最初のアカウントの残高を確認します。 現在、アカウントの残高が2 Ether高くなり、マルチシグネシャ・ウォレットの残高が2 Ether少なくなっているはずです。
 
-**Hint:**
-If you submit a transaction make sure that the value is in Wei and that the _data field is correctly filled in. E.g. it could look like this: "0x5B38Da6a701c568545dCfcB03FcB875f56beddC4, 2000000000000000000, 0x" for 2 Ether.
+**ヒント:**
+トランザクションを送信する場合、値がWeiであり、_dataフィールドが正しく入力されていることを確実にしてください。 例: 2 Etherでは、「0x5B38Da6a701c568545dCfcB03FcB875f56beddC4, 2000000000000000000, 0x」のように入力します。
