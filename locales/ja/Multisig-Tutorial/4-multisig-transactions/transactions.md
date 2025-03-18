@@ -37,10 +37,10 @@
 
 ## confirmTransaction関数
 
-The `confirmTransaction` function (Line 98) allows users to confirm a transaction. It takes one parameter: `txIndex`.
-It has three modifiers: `onlyOwner`, `txExists`, and `notExecuted`. The `onlyOwner` modifier ensures that only owners can confirm transactions. The `txExists` modifier ensures that the transaction exists. The `notExecuted` modifier ensures that the transaction has not been executed.
+`confirmTransaction`関数(98行目)は、ユーザーがトランザクションを承認することができます。 この関数は、パラメータ「`txIndex`」を取ります。
+また、3つのmodifier「`onlyOwner`」、「`txExists`」、「 `notExecuted`」があります。 `onlyOwner` modifierによって、所有者のみがトランザクションを承認できることを確実にしています。 `txExists` modifierにより、トランザクションが存在することを確実にしています。 `notExecuted` modifierにより、トランザクションが実行されていないことを確実にしています。
 
-On line 101, we store the transaction in a local variable called `transaction`. We then increment the `numConfirmations` variable of the transaction and set the `isConfirmed` mapping of the transaction index and the caller's address to true. Finally, we emit the `ConfirmTransaction` event.
+101行目で、`transaction`というローカル変数にトランザクションを格納しています。 そして、トランザクションの`numConfirmations`変数をインクリメントしてから、トランザクションインデックスの `isConfirmed`マッピングで、呼び出しているアドレスにtrueを設定します。 Finally, we emit the `ConfirmTransaction` event.
 
 ## executeTransaction関数
 
