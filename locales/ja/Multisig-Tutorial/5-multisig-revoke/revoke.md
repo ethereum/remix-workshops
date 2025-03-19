@@ -1,30 +1,30 @@
-In this section, we'll explore the process of revoking confirmations. This process is necessary when an owner changes their mind about a transaction and wants to stop it from being executed. This section will be pretty straightforward.
+このセクションでは、承認の取り消しプロセスについて取り組みます。 このプロセスは、該当のトランザクションについて所有者の考えに変更があり、実行されるのを止めたい時に必要になります。 このセクションは、非常にシンプルです。
 
-## revokeConfirmation Event
+## revokeConfirmationイベント
 
-On line 14, we have added the `RevokeConfirmation` event. This event is emitted whenever a transaction confirmation is revoked by an owner.
+14行目では、`RevokeConfirmation`イベントを追加しています。 このイベントは、所有者によってトランザクションが取り消された場合に発行されます。
 
-## revokeConfirmation Function
+## revokeConfirmation関数
 
-On line 129, we have added the `revokeConfirmation` function. It allows users to revoke a transaction confirmation.
+129行目では、`revokeConfirmation`関数を加えています。 この関数は、ユーザーがトランザクションの承認を取り消すことができます。
 
-`revokeConfirmation` takes one parameter: `txIndex`. It has three modifiers: `onlyOwner`, `txExists`, and `notExecuted`.
+`revokeConfirmation`は、パラメーターで`txIndex`を取ります。 また、この関数は、3つのmodifierで`onlyOwner`、`txExists`、`notExecuted`があります。
 
-On line 134, we require that the transaction has been confirmed by the caller. This ensures that an owner who has confirmed the transaction can only revoke their own confirmation.
+134行目では、呼び出すアカウントによってトランザクションが承認されていることを要求しています。 これにより、トランザクションを承認した所有者のみが自身の承認を取り消せるようにしています。
 We then decrement the `numConfirmations` variable of the transaction and set the `isConfirmed` mapping of the transaction index and the caller's address to false. Finally, we emit the `RevokeConfirmation` event.
 
-## Conclusion
+## まとめ
 
-In this section, we explored the process of revoking confirmations. We examined the `revokeConfirmation` function and understood how it works to allow users to revoke confirmations.
+このセクションでは、承認の取り消しプロセスについて取り組みました。 `revokeConfirmation`関数を調査して、この関数でユーザーが承認を取り消せる仕組みを理解しました。
 
-## ⭐️ Assignment: Revoke a Confirmation
+## ⭐️ 課題: 承認の取り消し
 
-Confirm and revoke a transaction to send 2 Ether to the first account in the "ACCOUNTS" dropdown menu.
+「ACCOUNTS」ドロップダウンメニュー内の最初のアカウントに2 Etherを送信するトランザクションの承認と取り消しをしてみましょう。
 
-1. As in the previous assignment, deploy the Multisig contract, send the contract some Ether, and then  submit a transaction to the first account in the "ACCOUNTS" dropdown menu with a value of 2 Ether.
-2. Confirm the transaction twice as in the previous assignment.
-3. Revoke the transaction by clicking on `revokeConfirmation` and inserting 0 as the transaction index. If you click on `getTransaction` again, you should see that the transaction has been confirmed once.
+1. 前の課題と同様に、マルチシグ・コントラクトをデプロイシ、コントラクトにいくらかのEtherを送信します。それから、「ACCOUNTS」ドロップダウンメニュー内の最初のアカウントに2 Etherの値をもつトランザクションを送信します。
+2. 前の課題と同様に、2回トランザクションを承認します。
+3. `revokeConfirmation`をクリックし、トランザクションインデックスには0を入力してトランザクションを取り消します。 `getTransaction`を再度クリックし、トランザクションが一度承認されたことを確認してください。
 
-## Final Conclusion
+## 最後に
 
-In this tutorial, we explored the process of creating a multi-signature wallet. We learned how to initialize the contract, deposit Ether, submit, confirm, and revoke transactions. We also learned how to execute transactions and retrieve information about the multi-signature wallet.
+このチュートリアルでは、マルチシグネシャ・ウォレットを作成するプロセスに取り組みました。 コントラクトの初期化方法、Etherの入金、トランザクションの送信・承認・取り消しなどを学びました。 また、マルチシグネシャ・ウォレットでのトランザクションの実行方法、情報の取得方法についても学びました。
