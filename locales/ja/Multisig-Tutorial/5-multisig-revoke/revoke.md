@@ -11,7 +11,7 @@
 `revokeConfirmation`は、パラメーターで`txIndex`を取ります。 また、この関数は、3つのmodifierで`onlyOwner`、`txExists`、`notExecuted`があります。
 
 134行目では、呼び出すアカウントによってトランザクションが承認されていることを要求しています。 これにより、トランザクションを承認した所有者のみが自身の承認を取り消せるようにしています。
-We then decrement the `numConfirmations` variable of the transaction and set the `isConfirmed` mapping of the transaction index and the caller's address to false. Finally, we emit the `RevokeConfirmation` event.
+そして、トランザクションの`numConfirmations`変数をデクリメントし、トランザクションインデックスのマッピングで呼び出しアカウントのアドレスにfalseをセットしています。 最後に、`RevokeConfirmation` イベントを発行しています。
 
 ## まとめ
 
