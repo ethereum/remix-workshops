@@ -1,5 +1,5 @@
-## MultiSig Wallet
+## マルチシグウォレット
 
-Learn how to write a MultiSig Wallet smart contract on Ethereum.
+イーサリアムのマルチシグウォレットにおけるスマートコントラクトの作成方法を学びます。
 
-Developed by the p2p learning platform https://dacade.org.
+p2p学習プラットフォームhttps://dacade.orgによって開発されました。
