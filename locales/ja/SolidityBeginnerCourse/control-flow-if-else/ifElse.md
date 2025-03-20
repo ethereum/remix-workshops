@@ -10,24 +10,24 @@ Solidityでは、3つの異なるIf/Else文である、`if`、`else`、 `else if
 
 ### else
 
-The `else` statement enables our contract to perform an action if conditions are not met.
+`else`文は、if条件を満たさない場合にコントラクトがアクションを実行することができます。
 
-In this contract, the `foo` function uses the `else` statement (line 10) to return `2` if none of the other conditions are met.
+このコントラクトでは、`foo`関数が`else`文(10行目)を使い、他の条件のいずれも満たさない場合に`2`を返します。
 
 ### else if
 
-With the `else if` statement we can combine several conditions.
+`else if`で、いくつかの条件を組み合わせることができます。
 
-If the first condition (line 6) of the foo function is not met, but the condition of the `else if` statement (line 8) becomes true, the function returns `1`.
+foo関数の最初の条件(6行目)を満たさない場合で、 `else if`文(8行目)の条件がtrueの時に、この関数は`1`を返します。
 
-<a href="https://www.youtube.com/watch?v=Ld8bFWXLSfs" target="_blank">Watch a video tutorial on the If/Else statement</a>.
+<a href="https://www.youtube.com/watch?v=Ld8bFWXLSfs" target="_blank">If/Else文のビデオチュートリアルをご覧ください</a>。
 
 ## ⭐️ 演習
 
-Create a new function called `evenCheck` in the `IfElse` contract:
+`IfElse`コントラクト内に、`evenCheck`という新しい関数を作成してみましょう。
 
-- That takes in a `uint` as an argument.
-- The function returns `true` if the argument is even, and `false` if the argument is odd.
-- Use a ternery operator to return the result of the `evenCheck` function.
+- 引数として`uint`を取ります。
+- 引数が偶数の場合、この関数は`true`を返します。奇数の場合、`false`を返します。
+- 三項演算子を使用して `evenCheck` 関数の結果を返すようにしてください。
 
-Tip: The modulo (%) operator produces the remainder of an integer division.
+ヒント: 剰余(%)演算子は、整数除算の余りを生成します。
