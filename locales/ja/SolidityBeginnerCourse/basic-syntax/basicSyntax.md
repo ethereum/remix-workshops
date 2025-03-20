@@ -1,4 +1,4 @@
-In this section, we will create our first _smart contract_. This contract only consists of a string that holds the value "Hello World!".
+このセクションでは、最初の_スマートコントラクト_を作成します。 このコントラクトは、「Hello World!」という値を持つ文字列だけで構成されます。
 
 In the first line, we should specify the license that we want to use. You can find a comprehensive list of licenses here: <a href="https://spdx.org/licenses/" target="_blank">https://spdx.org/licenses/</a>.
 
