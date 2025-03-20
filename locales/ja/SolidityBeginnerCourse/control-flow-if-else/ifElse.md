@@ -1,12 +1,12 @@
-Solidity supports different control flow statements that determine which parts of the contract will be executed. The conditional _If/Else statement_ enables contracts to make decisions depending on whether boolean conditions are either `true` or `false`.
+Solidityは、様々な制御フロー文をサポートしており、これによりコントラクトのどの部分が実行されるかを決定します。 条件付き_If/Else文_で、コントラクトが`ture`または`false`どちらかのブール条件によって判断することができます。
 
-Solidity differentiates between three different If/Else statements: `if`, `else`, and `else if`.
+Solidityでは、3つの異なるIf/Else文である、`if`、`else`、 `else if`があります。
 
 ### if
 
-The `if` statement is the most basic statement that allows the contract to perform an action based on a boolean expression.
+`if`文は、最も基本的な文でブール式に基づいてコントラクトがアクションを実行できます。
 
-In this contract’s `foo` function (line 5) the if statement (line 6) checks if `x` is smaller than `10`. If the statement is true, the function returns `0`.
+このコントラクトの`foo`関数(5行目)にif文(6行目)で`x`が`10`未満であることを確認しています。 文がtrueの場合、この関数は`0`を返します。
 
 ### else
 
@@ -22,7 +22,7 @@ If the first condition (line 6) of the foo function is not met, but the conditio
 
 <a href="https://www.youtube.com/watch?v=Ld8bFWXLSfs" target="_blank">Watch a video tutorial on the If/Else statement</a>.
 
-## ⭐️ Assignment
+## ⭐️ 演習
 
 Create a new function called `evenCheck` in the `IfElse` contract:
 
