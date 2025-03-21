@@ -1,29 +1,29 @@
-In Solidity, we can define custom data types in the form of _structs_. Structs are a collection of variables that can consist of different data types.
+Solidityでは、カスタムデータ型である_構造体_を定義することができます。 構造体は、変数の集合体で、様々なデータ型で構成されます。
 
-### Defining structs
+### 構造体の定義
 
-We define a struct using the `struct` keyword and a name (line 5). Inside curly braces, we can define our struct’s members, which consist of the variable names and their data types.
+構造体を`struct`キーワードで定義し、名前を付けています(5行目)。  波括弧の中で、構造体のメンバーを定義しています。構造体の定義は、変数名とデータ型で構成されます。
 
-### Initializing structs
+### 構造体の初期化
 
-There are different ways to initialize a struct.
+構造体の初期化には様々な方法があります。
 
-Positional parameters: We can provide the name of the struct and the values of its members as parameters in parentheses (line 16).
+位置パラメーター: 構造体の名前とパラメータとしてメンバーの値を提供することが可能です(16行目)。
 
-Key-value mapping: We provide the name of the struct and the keys and values as a mapping inside curly braces (line 19).
+キーバリュー・マッピング: 構造体の名前と、キーとバリューをマッピングとして波括弧内に提供することが可能です(19行目)。
 
-Initialize and update a struct: We initialize an empty struct first and then update its member by assigning it a new value (line 23).
+構造体の初期化と更新: 空の構造体で最初に初期化して、新しい値を割り当てることでメンバーを更新します(23行目)。
 
-### Accessing structs
+### 構造体へのアクセス
 
-To access a member of a struct we can use the dot operator (line 33).
+構造体のメンバーにアクセスするには、ドット演算子を使用します(33行目)。
 
-### Updating structs
+### 構造体の更新
 
-To update a structs’ member we also use the dot operator and assign it a new value (lines 39 and 45).
+構造体のメンバーの更新でも、ドット演算子を使用して、新しい値を割り当てます(39行目および45行目)。
 
-<a href="https://www.youtube.com/watch?v=kYBHq7EmFBc" target="_blank">Watch a video tutorial on Structs</a>.
+<a href="https://www.youtube.com/watch?v=kYBHq7EmFBc" target="_blank">構造体のビデオチュートリアル</a>をご覧ください。
 
-## ⭐️ Assignment
+## ⭐️ 演習
 
-Create a function `remove` that takes a `uint` as a parameter and deletes a struct member with the given index in the `todos` mapping.
+`uint`をパラメータとして取り、構造体のメンバーを`todos`マッピング内に付与されたインデックスで削除する`remove`関数を作成してみましょう。
