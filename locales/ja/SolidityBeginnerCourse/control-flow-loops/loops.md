@@ -4,29 +4,29 @@ Solidityは、3つのループ型を識別しており、`for`、`while`、`do w
 
 ### for
 
-一般的に、`for`ルール(7行目)は、特定コードのブロックで何回実行したいか明らかな場合に最適です。 In solidity, you should specify this amount to avoid transactions running out of gas and failing if the amount of iterations is too high.
+一般的に、`for`ルール(7行目)は、特定コードのブロックで何回実行したいか明らかな場合に最適です。 Solidityでは、反復回数を指定する必要があります。これにより、反復回数が多すぎてトランザクションでガスを使い果たして失敗することを防ぐことができます。
 
 ### while
 
-If you don’t know how many times you want to execute the code but want to break the loop based on a condition, you can use a `while` loop (line 20).
-Loops are seldom used in Solidity since transactions might run out of gas and fail if there is no limit to the number of iterations that can occur.
+コードを難解実行するのか定まっていなく、条件に基づいてループを脱する場合は、`while`ループ(20行目)が使用できます。
+ルーフは、Solidityではあまり使われません。それは、反復回数制限がないとトランザクションがガスを使い果たし、失敗することが発生するからです。
 
 ### do while
 
-The `do while` loop is a special kind of while loop where you can ensure the code is executed at least once, before checking on the condition.
+`do while`ループは、特別な種類のwhileループで、条件を確認する前に最低1回はコードが実行されることが保証されています。
 
 ### continue
 
-The `continue` statement is used to skip the remaining code block and start the next iteration of the loop. In this contract, the `continue` statement (line 10) will prevent the second if statement (line 12) from being executed.
+`continue`文は、残りのコードブロックをスキップし、ループの次の繰り返しを開始します。 このコントラクトでは、`continue` 文(10行目)が次のif文(12行目)の実行を防いでいます。
 
 ### break
 
-The `break` statement is used to exit a loop. In this contract, the break statement (line 14) will cause the for loop to be terminated after the sixth iteration.
+`break`文は、ループを終了するのに使います。 このコントラクトでは、break文(14行目)が6回目の反復後にforループを終了させます。
 
-<a href="https://www.youtube.com/watch?v=SB705OK3bUg" target="_blank">Watch a video tutorial on Loop statements</a>.
+<a href="https://www.youtube.com/watch?v=SB705OK3bUg" target="_blank">ループ文のビデオチュートリアルをご覧ください</a>。
 
 ## ⭐️ 演習
 
-1. Create a public `uint` state variable called count in the `Loop` contract.
-2. At the end of the for loop, increment the count variable by 1.
-3. Try to get the count variable to be equal to 9, but make sure you don’t edit the `break` statement.
+1. `Loop`コントラクトでcountというpublicの `uint` 状態変数を作成してください。
+2. ループの終了時に、count変数を1インクリメント(増加)してください。
+3. count変数が9に等しくなるようにしますが、`break`文については編集しないでください。
