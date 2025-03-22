@@ -1,26 +1,26 @@
-Solidityにおいて変数の値は、さまざまな場所にデータを保存できます。_メモリー_、_ストレージ_、_calldata_などがあります。
+Solidityにおいて変数の値として、さまざまな場所にデータを保存できます。_メモリー_、_ストレージ_、_calldata_などがあります。
 
 以前説明したように、値型の変数は、値のコピーが個別に保存されますが、参照型(配列、構造体、マッピング)の変数は、値のロケーション(参照)のみが保存されます。
 
-関数で参照型を使う場合、その値が保存されるデータロケーションを指定する必要があります。 The price for the execution of the function is influenced by the data location; creating copies from reference types costs gas.
+関数で参照型を使う場合、その値が保存されるデータロケーションを指定する必要があります。 関数の実行の価格は、データロケーションに影響します。参照型からコピーを作成するのにはガスがかかります。
 
 ### ストレージ
 
-Values stored in _storage_ are stored permanently on the blockchain and, therefore, are expensive to use.
+_ストレージ_に保存される値は、ブロックチェーンに永久に保存されます。そのため、使用するのが高価です。
 
-In this contract, the state variables `arr`, `map`, and `myStructs` (lines 5, 6, and 10) are stored in storage. State variables are always stored in storage.
+このコントラクトでは、 `arr`、`map`、`myStructs`などの状態変数(5、6、10行目)がストレージに保存されます。 状態変数は、常にストレージに保存されます。
 
 ### メモリー
 
-Values stored in _memory_ are only stored temporarily and are not on the blockchain. They only exist during the execution of an external function and are discarded afterward. They are cheaper to use than values stored in _storage_.
+_メモリー_に保存される値は、一時的です。また、ブロックチェーンに保存されません。 external関数の実行の間に存在し、その後破棄されます。 _ストレージ_に保存される値よりも安価です。
 
-In this contract, the local variable `myMemstruct` (line 19), as well as the parameter `_arr` (line 31), are stored in memory. Function parameters need to have the data location _memory_ or _calldata_.
+このコントラクトでは、ローカル変数である`myMemstruct` (19行目)、`_arr`(31行目)がメモリーとして保存されています。 関数パラメータでは、データロケーションである_memory_や_calldata_が書かれている必要があります。
 
 ### Calldata
 
-_Calldata_ stores function arguments. Like _memory_, _calldata_ is only stored temporarily during the execution of an external function. In contrast to values stored in _memory_, values stored in _calldata_ can not be changed. Calldata is the cheapest data location to use.
+_Calldata_は、関数の引数を保存します。 _memory_のように、_calldata_は、external関数の実行中に一時的に保存されます。 _memory_に保存される値とは対照的に、_calldata_に保存される値は変更できません。 calldataは、使用するのに最も安いデータロケーションです。
 
-In this contract, the parameter `_arr` (line 35) has the data location _calldata_. If we wanted to assign a new value to the first element of the array `_arr`, we could do that in the `function g` (line 31) but not in the `function h` (line 35). This is because `_arr` in `function g `has the data location _memory_ and _function h_ has the data location `calldata`.
+このコントラクトでは、パラメータの`_arr`(35行目)は、データロケーションが_calldata_です。 配列の最初の要素に新しい値を割り当てたい場合、`function g`(31行目)で行えますが、 `function h`(35行目)ではできません。 理由としては、 `function g `の`_arr` は、データロケーションが_memory_になっおり、 _function h_はデータロケーションが`calldata`だからです。
 
 ## 割り当て
 
