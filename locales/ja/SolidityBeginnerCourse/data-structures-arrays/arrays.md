@@ -1,10 +1,10 @@
-In the next sections, we will look into the data structures that we can use to organize and store our data in Solidity.
+次のセクションでは、Solidityでデータを整理したり保存するために使うデータ構造について学びます。
 
-_Arrays_, _mappings_ and _structs_ are all _reference types_. Unlike _value types_ (e.g. _booleans_ or _integers_) reference types don't store their value directly. Instead, they store the location where the value is being stored. Multiple reference type variables could reference the same location, and a change in one variable would affect the others, therefore they need to be handled carefully.
+_配列_、_マッピング_、_構造体_は、_参照型_です。 _値型_(例: _ブール型_や_整数型_)と違い、参照型は値を直接保存しません。 代わりに、値が保存されている場所であるロケーションを保存します。 複数の参照型の変数は、同じロケーションを参照でき、1つの変数の変更は他の変数に影響します。そのため、注意して扱う必要があります。
 
-In Solidity, an array stores an ordered list of values of the same type that are indexed numerically.
+Solidityにおいて配列は、数値的にインデックス付けされた同じ型の値が順序付きリストに保存されます。
 
-There are two types of arrays, compile-time _fixed-size_ and _dynamic arrays_. For fixed-size arrays, we need to declare the size of the array before it is compiled. The size of dynamic arrays can be changed after the contract has been compiled.
+_固定サイズ配列_と_動的サイズ配列_の2種類の配列があります。 固定サイズの配列では、コンパイルされる前に配列のサイズを宣言する必要があります。 動的サイズ配列は、コントラクトのコンパイル後も変更することができます。
 
 ### Declaring arrays
 
