@@ -28,27 +28,27 @@ _Calldata_は、関数の引数を保存します。 _memory_のように、_cal
 
 _memory_から_memery_へ割り当てるには、コピーではなく参照を作成します。 変数の1つの値を変更すると、他の変数のすべての値で同じデータを参照しているものは、変更されます。
 
-If we were to create a new struct `myMemStruct2` with the data location _memory_ inside the `function f` (line 12) and assign it the value of `myMemStruct` (line 19), any change to `myMemStruct2` would also change the value of `myMemStruct`.
+`function f`(12行目)の内部で`myMemStruct2`という新しい構造体をロケーションが_memory_作成し、`myMemStruct` の値をこの構造体に割り当てると(19行目)、`myMemStruct2`のあらゆる変更は、`myMemStruct`の値でもまた反映されます。
 
 ### ストレージからローカルストレージ
 
-Assignments from _storage_ to _local storage_ also create references, not copies.
+_storage_から_local storage_での割り当てもまた、コピーではなく参照を作成します。
 
-If we change the value of the local variable `myStruct` (line 17), the value of our state variable `myStructs` (line 10) changes as well.
+ローカル変数である`myStruct`(17行目)の値を変更すると、状態変数 `myStructs`(10行目)の値も同様に変更されます。
 
 ## ストレージとメモリー/calldata
 
-Assignments between _storage_ and _memory_ (or _calldata_) create independent copies, not references.
+_storage_と_memory_(または_calldata_)間の割当では参照ではなく、独立したコピーを作成します。
 
-If we were to create a new struct `myMemStruct3` with the data location _memory_ inside the `function f` (line 12) and assign it the value of `myStruct`, changes in `myMemStruct3` would not affect the values stored in the mapping `myStructs` (line 10).
+`function f`(12行目)内で、新し構造体 `myMemStruct3`をデータロケーション_memory_で作成し、これに`myStruct`の値を割り当てると、`myMemStruct3`の変更は、 `myStructs`(10行目)のマッピングに保存されている値に影響しません。
 
-As we said in the beginning, when creating contracts we have to be mindful of gas costs. Therefore, we need to use data locations that require the lowest amount of gas possible.
+最初に述べたように、コントラクトの作成時に、ガス代に注意する必要があります。 ガス代を減らすために、ガス代が可能な限りかからないデータロケーションを使用する必要があります。
 
 ## ⭐️ 演習
 
-1. Change the value of the `myStruct` member `foo`, inside the `function f`, to 4.
-2. Create a new struct `myMemStruct2` with the data location _memory_ inside the `function f` and assign it the value of `myMemStruct`. Change the value of the `myMemStruct2` member `foo` to 1.
-3. Create a new struct `myMemStruct3` with the data location _memory_ inside the `function f` and assign it the value of `myStruct`. Change the value of the `myMemStruct3` member `foo` to 3.
-4. Let the function f return `myStruct`, `myMemStruct2`, and `myMemStruct3`.
+1. `function f`内部にある`myStruct` メンバーの`foo`の値を4に変更してください。
+2. `function f`の内部にデータロケーションが_memory_の新しい構造体`myMemStruct2`を作成し、`myMemStruct`の値を割り当ててください。 `myMemStruct2`のメンバー`foo`の値を1に変更してださい。
+3. `function f`内部に、データロケーション_memory_で新しい構造体`myMemStruct3`を作成し、`myStruct`の値を割り当ててください。 `myMemStruct3`メンバー `foo`の値を3に変更してください。
+4. 関数fが `myStruct`、`myMemStruct2`、`myMemStruct3`を返すようにしてください。
 
-Tip: Make sure to create the correct return types for the function `f`.
+ヒント: 関数`f`で正しい戻り値の型が作成されていることを確認しましょう。
