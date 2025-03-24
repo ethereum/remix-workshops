@@ -26,7 +26,7 @@ _Calldata_は、関数の引数を保存します。 _memory_のように、_cal
 
 ### メモリーからメモリー
 
-Assignments from _memory_ to _memory_ create references instead of copies. If you change the value in one variable, the value of all other variables that reference the same data will be changed.
+_memory_から_memery_へ割り当てるには、コピーではなく参照を作成します。 変数の1つの値を変更すると、他の変数のすべての値で同じデータを参照しているものは、変更されます。
 
 If we were to create a new struct `myMemStruct2` with the data location _memory_ inside the `function f` (line 12) and assign it the value of `myMemStruct` (line 19), any change to `myMemStruct2` would also change the value of `myMemStruct`.
 
