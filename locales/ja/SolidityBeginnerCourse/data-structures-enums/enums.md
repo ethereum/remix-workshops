@@ -1,10 +1,10 @@
-In Solidity _enums_ are custom data types consisting of a limited set of constant values. We use enums when our variables should only get assigned a value from a predefined set of values.
+Solidityで_列挙型_は、限られた定数のセットで構成されるカスタムデータ型です。 事前に定義した値のセットからのみ値を変数に割り当てる場合は、列挙型を使用します。
 
-In this contract, the state variable `status` can get assigned a value from the limited set of provided values of the enum `Status` representing the various states of a shipping status.
+このコントラクトでは、状態変数`status`に対して、提供された列挙型の値のセットに限定された値を割り当てることができ、さまざまな配送ステータスの状態を表しています。
 
-### Defining enums
+### 列挙型の定義
 
-We define an enum with the enum keyword, followed by the name of the custom type we want to create (line 6). Inside the curly braces, we define all available members of the enum.
+列挙型は、enumキーワードを用います。次に作成したいカスタム型の名前を定義します(6行目)。 波括弧の内部で利用可能な列挙型のメンバーを定義しています。
 
 ### Initializing an enum variable
 
