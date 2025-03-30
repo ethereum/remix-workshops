@@ -30,15 +30,15 @@ _固定サイズ配列_と_動的サイズ配列_の2種類の配列がありま
 
 `delete`演算子を使用して、配列の特定のインデックスにある要素を削除することができます(42行目)。
 `delete`演算子で要素を削除すると、他の要素のすべてはそのままです。ようするに、配列の長さは変わりません。 配列に空白を作ることになります。
-配列の順序が重要でなければ、最後にある要素を削除された要素に移動することができます(46行目)。または、マッピングを使用してください。 A mapping might be a better choice if we plan to remove elements in our data structure.
+配列の順序が重要でなければ、最後にある要素を削除された要素に移動することができます(46行目)。または、マッピングを使用してください。 データ構造内の要素を削除することを計画している場合は、マッピングを選択する方が適しているかもしれません。
 
 ### 配列の長さ
 
-Using the length member, we can read the number of elements that are stored in an array (line 35).
+lengthメンバーを使い、配列に格納されている要素の数を読み取ることができます(35行目)。
 
-<a href="https://www.youtube.com/watch?v=vTxxCbwMPwo" target="_blank">Watch a video tutorial on Arrays</a>.
+<a href="https://www.youtube.com/watch?v=vTxxCbwMPwo" target="_blank">配列のビデオチュートリアルをご覧ください</a>。
 
 ## ⭐️ 演習
 
-1. Initialize a public fixed-sized array called `arr3` with the values 0, 1, 2. Make the size as small as possible.
-2. Change the `getArr()` function to return the value of `arr3`.
+1. `arr3`という名前で、public、値0, 1, 2を持つ固定サイズの配列を初期化してください。 サイズをできるだけ小さくしてください。
+2. `getArr()`関数を変更して、`arr3`の値を返すようにしてください。
