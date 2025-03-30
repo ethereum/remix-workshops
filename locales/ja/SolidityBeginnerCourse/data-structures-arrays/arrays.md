@@ -2,13 +2,13 @@
 
 _配列_、_マッピング_、_構造体_は、_参照型_です。 _値型_(例: _ブール型_や_整数型_)と違い、参照型は値を直接保存しません。 代わりに、値が保存されている場所であるロケーションを保存します。 複数の参照型の変数は、同じロケーションを参照でき、1つの変数の変更は他の変数に影響します。そのため、注意して扱う必要があります。
 
-Solidityにおいて配列は、数値的にインデックス付けされた同じ型の値が順序付きリストに保存されます。
+Solidityにおいて配列は、数値的にインデックス付けされた同一の型の値が順序付きリストに保存されます。
 
 _固定サイズ配列_と_動的サイズ配列_の2種類の配列があります。 固定サイズの配列では、コンパイルされる前に配列のサイズを宣言する必要があります。 動的サイズ配列は、コントラクトのコンパイル後も変更することができます。
 
-### Declaring arrays
+### 配列の宣言
 
-We declare a fixed-size array by providing its type, array size (as an integer in square brackets), visibility, and name (line 9).
+型、配列のサイズ(角括弧内の整数)、可視性、名前(９行目)を指定して、固定サイズの配列を宣言します。
 
 We declare a dynamic array in the same manner. However, we don’t provide an array size and leave the brackets empty (line 6).
 
