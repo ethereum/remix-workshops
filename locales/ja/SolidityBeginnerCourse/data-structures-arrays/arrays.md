@@ -10,35 +10,35 @@ _固定サイズ配列_と_動的サイズ配列_の2種類の配列がありま
 
 型、配列のサイズ(角括弧内の整数)、可視性、名前(９行目)を指定して、固定サイズの配列を宣言します。
 
-We declare a dynamic array in the same manner. However, we don’t provide an array size and leave the brackets empty (line 6).
+動的配列も同じ方法で宣言しますが、 配列のサイズと括弧を空にします(6行目)。
 
-### Initializing arrays
+### 配列の初期化
 
-We can initialize the elements of an array all at once (line 7), or initiate new elements one by one (arr[0] = 1;). If we declare an array, we automatically initialize its elements with the default value 0 (line 9).
+一度に配列のすべての要素を初期化(7行目)したり、新しい要素を１つずつ初期化することができます(arr[0] = 1;)。 配列を宣言した場合、要素をデフォルト値である0で初期化されます(9行目)。
 
-### Accessing array elements
+### 配列要素へのアクセス
 
-We access elements inside an array by providing the name of the array and the index in brackets (line 12).
+配列内の要素へのアクセスには、配列名および括弧内のインデックスを提供します(12行目)。
 
-### Adding array elements
+### 配列要素の追加
 
-Using the `push()` member function, we add an element to the end of a dynamic array (line 25).
+`push()`メンバー関数を使い、動的配列の最後に要素を追加することができます(25行目)。
 
-### Removing array elements
+### 配列要素の削除
 
-Using the `pop()` member function, we delete the last element of a dynamic array (line 31).
+`pop()`メンバー関数を使い、動的配列の最後の要素を削除できます(31行目)。
 
-We can use the `delete` operator to remove an element with a specific index from an array (line 42).
-When we remove an element with the `delete` operator all other elements stay the same, which means that the length of the array will stay the same. This will create a gap in our array.
-If the order of the array is not important, then we can move the last element of the array to the place of the deleted element (line 46), or use a mapping. A mapping might be a better choice if we plan to remove elements in our data structure.
+`delete`演算子を使用して、配列の特定のインデックスにある要素を削除することができます(42行目)。
+`delete`演算子で要素を削除すると、他の要素のすべてはそのままです。ようするに、配列の長さは変わりません。 配列に空白を作ることになります。
+配列の順序が重要でなければ、最後にある要素を削除された要素に移動することができます(46行目)。または、マッピングを使用してください。 A mapping might be a better choice if we plan to remove elements in our data structure.
 
-### Array length
+### 配列の長さ
 
 Using the length member, we can read the number of elements that are stored in an array (line 35).
 
 <a href="https://www.youtube.com/watch?v=vTxxCbwMPwo" target="_blank">Watch a video tutorial on Arrays</a>.
 
-## ⭐️ Assignment
+## ⭐️ 演習
 
 1. Initialize a public fixed-sized array called `arr3` with the values 0, 1, 2. Make the size as small as possible.
 2. Change the `getArr()` function to return the value of `arr3`.
