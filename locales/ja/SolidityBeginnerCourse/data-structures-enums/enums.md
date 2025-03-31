@@ -8,26 +8,26 @@ Solidityで_列挙型_は、限られた定数のセットで構成されるカ�
 
 ### 列挙型変数の初期化
 
-列挙型の新しい変数の初期化では、列挙型の名前、可視性、変数名を提供します(16行目)。 Upon its initialization, the variable will be assigned the value of the first member of the enum, in this case, Pending (line 7).
+列挙型の新しい変数の初期化では、列挙型の名前、可視性、変数名を提供します(16行目)。 初期化すると、変数には、列挙型の最初のメンバーの値が割り当てられます。この例だと「Pending(7行目)」になります。
 
-Even though enum members are named when you define them, they are stored as unsigned integers, not strings. They are numbered in the order that they were defined, the first member starting at 0. The initial value of status, in this case, is 0.
+列挙型のメンバーの定義では、名前が付けられるものの整数型として格納されます。文字列ではありません。 定義された順番に番号が付けられ、最初のメンバーは0から始まります。 この場合のStatusの初期値は、0となります。
 
-### Accessing an enum value
+### 列挙型の値へのアクセス
 
-To access the enum value of a variable, we simply need to provide the name of the variable that is storing the value (line 25).
+列挙型の変数の値にアクセスするには、単純に値を格納している変数の名前を提供するだけです。
 
-### Updating an enum value
+### 列挙型の値の更新
 
-We can update the enum value of a variable by assigning it the `uint` representing the enum member (line 30). Shipped would be 1 in this example. Another way to update the value is using the dot operator by providing the name of the enum and its member (line 35).
+列挙型のメンバーを表している`uint`を割り当てることで列挙型の変数の値を更新することができます(30行目)。 この例では、「Shipped」は、1になります。 もう一つの値の更新方法は、ドット演算子を使用して列挙型とそのメンバーの名前を提供します(35行目)。
 
-### Removing an enum value
+### 列挙型の値の削除
 
-We can use the delete operator to delete the enum value of the variable, which means as for arrays and mappings, to set the default value to 0.
+配列やマッピングと同様に、delete演算子を使用して、列挙型の変数の値を削除することができます。値は、デフォルト値の0がセットされます。
 
-<a href="https://www.youtube.com/watch?v=yJbx07N15j0" target="_blank">Watch a video tutorial on Enums</a>.
+<a href="https://www.youtube.com/watch?v=yJbx07N15j0" target="_blank">列挙型のビデオチュートリアルをご覧ください</a>。
 
-## ⭐️ Assignment
+## ⭐️ 演習
 
-1. Define an enum type called `Size` with the members `S`, `M`, and `L`.
-2. Initialize the variable `sizes` of the enum type `Size`.
-3. Create a getter function `getSize()` that returns the value of the variable `sizes`.
+1. `Size`という列挙型とメンバー `S`、`M`、`L`を定義しましょう。
+2. 列挙型`Size`の変数`size`を初期化してください。
+3. getter関数`getSize()`を作成し、変数`sizes`の値を返すようにしてください。
