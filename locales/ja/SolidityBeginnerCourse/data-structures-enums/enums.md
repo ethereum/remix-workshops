@@ -6,9 +6,9 @@ Solidityで_列挙型_は、限られた定数のセットで構成されるカ�
 
 列挙型は、enumキーワードを用います。次に作成したいカスタム型の名前を定義します(6行目)。 波括弧の内部で利用可能な列挙型のメンバーを定義しています。
 
-### Initializing an enum variable
+### 列挙型変数の初期化
 
-We can initialize a new variable of an enum type by providing the name of the enum, the visibility, and the name of the variable (line 16). Upon its initialization, the variable will be assigned the value of the first member of the enum, in this case, Pending (line 7).
+列挙型の新しい変数の初期化では、列挙型の名前、可視性、変数名を提供します(16行目)。 Upon its initialization, the variable will be assigned the value of the first member of the enum, in this case, Pending (line 7).
 
 Even though enum members are named when you define them, they are stored as unsigned integers, not strings. They are numbered in the order that they were defined, the first member starting at 0. The initial value of status, in this case, is 0.
 
