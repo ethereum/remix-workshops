@@ -23,16 +23,16 @@ Solidityでは、_マッピング_は、キー型と対応する値型のペア�
 
 ### 値の設定
 
-We set a new value for a key by providing the mapping’s name and key in brackets and assigning it a new value (line 16).
+マッピング名、カッコ内にキー、新しい値の割り当てを提供することで、新しい値を設定します(16行目）。
 
 ### 値の削除
 
-We can use the delete operator to delete a value associated with a key, which will set it to the default value of 0. As we have seen in the arrays section.
+delete演算子を使用いｓて、キーに紐づいた値を削除することができます。この値は、デフォルト値の0に設定されます。 これは、配列のセクションと同様です。
 
 <a href="https://www.youtube.com/watch?v=tO3vVMCOts8" target="_blank">マッピングのビデオチュートリアルをご覧ください</a>。
 
 ## ⭐️ 演習
 
-1. Create a public mapping `balances` that associates the key type `address` with the value type `uint`.
-2. Change the functions `get` and `remove` to work with the mapping balances.
-3. Change the function `set` to create a new entry to the balances mapping, where the key is the address of the parameter and the value is the balance associated with the address of the parameter.
+1. publicのマッピング`balances`を作成し、キー型は`address`で値型は`unit`を紐づけましょう。
+2. 関数`get`と`remove`を変更してマッピングbalancesと連携させてください。
+3. 関数`set`をbalancesマッピングが新しいエントリーを作成するように、パラメータのアドレスがキーで、addressのパラメータに紐づいているbalanceが値になるように変更してください。
