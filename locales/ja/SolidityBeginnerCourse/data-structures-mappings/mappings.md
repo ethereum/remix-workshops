@@ -6,14 +6,14 @@ If we want to retrieve a value based on a known key we can use a mapping (e.g. a
 
 We could also store the keys of a mapping in an array that we can iterate over.
 
-### Creating mappings
+### マッピングの作成
 
 Mappings are declared with the syntax `mapping(KeyType => ValueType) VariableName`.
 The key type can be any built-in value type or any contract, but not a reference type. The value type can be of any type.
 
 In this contract, we are creating the public mapping `myMap` (line 6) that associates the key type `address` with the value type `uint`.
 
-### Accessing values
+### 値へのアクセス
 
 The syntax for interacting with key-value pairs of mappings is similar to that of arrays.
 To find the value associated with a specific key, we provide the name of the mapping and the key in brackets (line 11).
@@ -30,7 +30,7 @@ We can use the delete operator to delete a value associated with a key, which wi
 
 <a href="https://www.youtube.com/watch?v=tO3vVMCOts8" target="_blank">Watch a video tutorial on Mappings</a>.
 
-## ⭐️ Assignment
+## ⭐️ 演習
 
 1. Create a public mapping `balances` that associates the key type `address` with the value type `uint`.
 2. Change the functions `get` and `remove` to work with the mapping balances.
