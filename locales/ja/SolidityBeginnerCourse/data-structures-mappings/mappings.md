@@ -1,34 +1,35 @@
-In Solidity, _mappings_ are a collection of key types and corresponding value type pairs.
+Solidityでは、_マッピング_は、キー型と対応する値型のペアのコレクションです。
 
-The biggest difference between a mapping and an array is that you can't iterate over mappings. If we don't know a key we won't be able to access its value. If we need to know all of our data or iterate over it, we should use an array.
+マッピングと配列の最大の違いは、マッピングは反復処理ができないことです。 キーがわからないと、その値にアクセスできません。 すべてのデータを知りたかったり、反復処理をしたい場合は、配列を使います。
 
-If we want to retrieve a value based on a known key we can use a mapping (e.g. addresses are often used as keys). Looking up values with a mapping is easier and cheaper than iterating over arrays. If arrays become too large, the gas cost of iterating over it could become too high and cause the transaction to fail.
+既知のキーに基づいて値を取得したい場合は、マッピングが使えます(例
+: アドレスをキーとしてよく使用)。 マッピングで値を検索するのは配列よりも簡単で安価です。 配列が大きくなりすぎると、反復処理のガス代が高くなりすぎて、反復処理が失敗する可能性があります。
 
-We could also store the keys of a mapping in an array that we can iterate over.
+マッピングのキーを配列に格納して反復処理をすることもできます。
 
 ### マッピングの作成
 
-Mappings are declared with the syntax `mapping(KeyType => ValueType) VariableName`.
-The key type can be any built-in value type or any contract, but not a reference type. The value type can be of any type.
+マッピングは、構文「 `mapping(KeyType => ValueType) VariableName`」で宣言します。
+キー型は、組み込みの値型または任意のコントラクトが可能ですが、参照型はできません。 値型は、任意の型が可能です。
 
-In this contract, we are creating the public mapping `myMap` (line 6) that associates the key type `address` with the value type `uint`.
+このコントラクトでは、publicのマッピング「`myMap`」 (6行目)を作成し、キー型「`address`」に値型「`uint`」を紐づけています。
 
 ### 値へのアクセス
 
-The syntax for interacting with key-value pairs of mappings is similar to that of arrays.
-To find the value associated with a specific key, we provide the name of the mapping and the key in brackets (line 11).
+マッピングが持つキーと値のペアとやり取りするための構文は、配列と似ています。
+特定のキーに紐づいた値を見つけるには、マッピングの名前および括弧内にキーを提供します(11行目)。
 
-In contrast to arrays, we won't get an error if we try to access the value of a key whose value has not been set yet. When we create a mapping, every possible key is mapped to the default value 0.
+配列と対照的なのは、キーがもつ値がセットされていないのにアクセスしてもエラーが発生しません。 マッピングを作成する際に、すべてのキーはデフォルト値が0としてマッピングされます。
 
-### Setting values
+### 値の設定
 
 We set a new value for a key by providing the mapping’s name and key in brackets and assigning it a new value (line 16).
 
-### Removing values
+### 値の削除
 
 We can use the delete operator to delete a value associated with a key, which will set it to the default value of 0. As we have seen in the arrays section.
 
-<a href="https://www.youtube.com/watch?v=tO3vVMCOts8" target="_blank">Watch a video tutorial on Mappings</a>.
+<a href="https://www.youtube.com/watch?v=tO3vVMCOts8" target="_blank">マッピングのビデオチュートリアルをご覧ください</a>。
 
 ## ⭐️ 演習
 
