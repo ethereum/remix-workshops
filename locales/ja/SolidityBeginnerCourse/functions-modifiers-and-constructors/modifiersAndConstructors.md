@@ -1,6 +1,6 @@
-In this section, we will learn how to modify the behavior of a function and how to run contract initialization code.
+このセクションでは、関数の振る舞いを修正する方法とコントラクトの初期化コードの実行方法を学びます。
 
-### Function Modifier
+### 関数Modifier
 
 _Function Modifiers_ are used to change the behavior of a function. For example, they often check for a condition prior to executing a function to restrict access or validate inputs.
 
