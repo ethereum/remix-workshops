@@ -1,10 +1,10 @@
-In this section, we will learn more about the inputs and outputs of functions.
+このセクションでは、関数の入力や出力について詳しく学びます。
 
-### Multiple named Outputs
+### 複数の名前付き出力
 
-Functions can return multiple values that can be named and assigned to their name.
+関数は、複数の値を返すことができ、付けた名前を割り当てることができます。
 
-The `returnMany` function (line 6) shows how to return multiple values.
+`returnMany`関数(6行目)では、複数の値を返す方法を示しています。
 You will often return multiple values. It could be a function that collects outputs of various functions and returns them in a single function call for example.
 
 The `named` function (line 19) shows how to name return values.
@@ -32,6 +32,6 @@ You have to be cautious with arrays of arbitrary size because of their gas consu
 
 <a href="https://www.youtube.com/watch?v=je7dWT6bEZM" target="_blank">Watch a video tutorial on Function Outputs</a>.
 
-## ⭐️ Assignment
+## ⭐️ 演習
 
 Create a new function called `returnTwo` that returns the values `-2` and `true` without using a return statement.
