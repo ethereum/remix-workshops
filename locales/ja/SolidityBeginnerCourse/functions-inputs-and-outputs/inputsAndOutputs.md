@@ -2,36 +2,35 @@
 
 ### 複数の名前付き出力
 
-関数は、複数の値を返すことができ、付けた名前を割り当てることができます。
+関数は、複数の値を返すことができ、名前を付けて割り当てることができます。
 
 `returnMany`関数(6行目)では、複数の値を返す方法を示しています。
-You will often return multiple values. It could be a function that collects outputs of various functions and returns them in a single function call for example.
+複数の値を返すことは、頻繁にあります。 例えば、関数が様々な関数の出力を集め、1つの関数の呼び出しで返す場合です。
 
-The `named` function (line 19) shows how to name return values.
-Naming return values helps with the readability of your contracts. Named return values make it easier to keep track of the values and the order in which they are returned. You can also assign values to a name.
+`named`関数(19行目)は、戻り値の名前を付ける方法です。
+戻り値に名前が付いていると、コントラクトの可読性を向上します。 名前付きの戻り値では、戻り値の値と順序の追跡がしやすくなります。 名前に値を割り当てることもできます。
 
-The `assigned` function (line 33) shows how to assign values to a name.
-When you assign values to a name you can omit (leave out) the return statement and return them individually.
+`assigned`関数(33行目)では、名前に値を割り当てる方法を示しています。
+名前に値を割り当てる場合は、return文を省略します。それぞれを個別に返すことができます。
 
-### Deconstructing Assignments
+### 分割代入
 
-You can use deconstructing assignments to unpack values into distinct variables.
+分割代入を行うことで、値を取り出し個別の変数に格納することが出来ます。
 
-The `destructingAssigments` function (line 49) assigns the values of the `returnMany` function to the new local variables `i`, `b`, and `j` (line 60).
+`destructingAssigments` 関数(49行目)は、`returnMany`関数の値の割り当てを新しいローカル変数である`i`、`b`、`j`にしています(60行目)。
 
-### Input and Output restrictions
+### 入力と出力の制限
 
-There are a few restrictions and best practices for the input and output parameters of contract functions.
+コントラクト関数には、いくつかの入力と出力パラメータの制限とベストプラクティスがあります。
 
-"_[Mappings] cannot be used as parameters or return parameters of contract functions that are publicly visible._"
-From the <a href="https://docs.soliditylang.org/en/latest/types.html#mapping-types" target="_blank">Solidity documentation</a>.
+_[マッピング]は、publicの可視性のコントラクト関数のパラメータまたは戻り値として使用できません_。これについては、<a href="https://docs.soliditylang.org/en/latest/types.html#mapping-types" target="_blank">Solidityドキュメント</a>をご覧ください。
 
-Arrays can be used as parameters, as shown in the function `arrayInput` (line 71). Arrays can also be used as return parameters as shown in the function `arrayOutput` (line 76).
+配列は、`arrayInput`関数(71行目)のようにパラメータとして使えます。 配列はまた、`arrayOutput`関数(76行目)のように戻り値のパラメータとして使えます。
 
-You have to be cautious with arrays of arbitrary size because of their gas consumption. While a function using very large arrays as inputs might fail when the gas costs are too high, a function using a smaller array might still be able to execute.
+動的サイズの配列では、ガスを消費するため注意が必要です。 巨大な配列を入力として使う関数は、ガス代が高すぎて失敗する可能性があります。一方、小さい配列を使う場合は、実行できる可能性が高くなります。
 
-<a href="https://www.youtube.com/watch?v=je7dWT6bEZM" target="_blank">Watch a video tutorial on Function Outputs</a>.
+<a href="https://www.youtube.com/watch?v=je7dWT6bEZM" target="_blank">関数出力のビデオチュートリアルをご覧ください</a>。
 
 ## ⭐️ 演習
 
-Create a new function called `returnTwo` that returns the values `-2` and `true` without using a return statement.
+値 `-2`と`true`をreturn文を使わずに返す、`returnTwo`という関数を新たに作成してみましょう。
