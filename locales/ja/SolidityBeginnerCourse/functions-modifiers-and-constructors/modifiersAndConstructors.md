@@ -1,8 +1,8 @@
 このセクションでは、関数の振る舞いを修正する方法とコントラクトの初期化コードの実行方法を学びます。
 
-### 関数Modifier
+### 関数修飾子(modifier)
 
-_Function Modifiers_ are used to change the behavior of a function. For example, they often check for a condition prior to executing a function to restrict access or validate inputs.
+_関数修飾子(modifier)_ は、関数の振る舞いを変更するのに使用します。 For example, they often check for a condition prior to executing a function to restrict access or validate inputs.
 
 This first part of this contract is about changing ownership of a contract. Ownership in this contract is expressed by the value of the state variable `owner` that is of the type `address` (line 7).
 
