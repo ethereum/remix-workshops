@@ -1,8 +1,8 @@
-This section will look into the types of functions that don't modify the state of the blockchain: _view_ and _pure_ functions.
+このセクションでは、ブロックチェーンの状態を変更しない関数のタイプである、_ビュー_関数および_ピュア_関数を学びます。
 
-### View Functions
+### ビュー関数
 
-_View functions_ promise to not modify the state.
+_ビュー関数_は、状態を変更しないことを約束します。
 
 "The following statements are considered modifying the state:
 
@@ -19,9 +19,9 @@ From the <a href="https://docs.soliditylang.org/en/latest/contracts.html#view-fu
 
 You can declare a view function using the keyword `view`. In this contract, `addToX` (line 8) is a view function. This function takes the parameter `y` and returns the sum of the parameter and the state variable `x`. It reads `x` but does not modify it.
 
-### Pure functions
+### ピュア関数
 
-_Pure functions_ promise to neither modify nor to read the state.
+_ピュア関数_は、状態の変更も読み込みも行わないことを約束します。
 
 "In addition to the list of state modifying statements explained above, the following are considered reading from the state:
 
@@ -39,6 +39,6 @@ In Solidity development, you need to optimise your code for saving computation c
 
 <a href="https://www.youtube.com/watch?v=vOmXqJ4Qzbc" target="_blank">Watch a video tutorial on View and Pure Functions</a>.
 
-## ⭐️ Assignment
+## ⭐️ 演習
 
 Create a function called `addToX2` that takes the parameter `y` and updates the state variable `x` with the sum of the parameter and the state variable `x`.
