@@ -1,11 +1,11 @@
-This section will give a short introduction to functions and teach you how to use them to read from and write to a state variable.
+このセクションでは、関数について簡単に紹介し、状態変数の読み込みおよび書き込みをする方法について学びます。
 
-As in other languages, we use functions in Solidity to create modular, reusable code. However, Solidity functions have some particularities.
+他の言語と同様に、Solidityでは関数を使ってモジュラー型で再利用可能なコードを作成します。 とはいえ、Solidityの関数では、いくつかの特徴があります。
 
-Solidity functions can be split into two types:
+Solidityの関数は、次の2つのタイプに分けられます。
 
-1. Functions that modify the state of the blockchain, like writing to a state variable. In this contract, the `set` function (line 9) changes the state variable `num`.
-2. Functions that don't modify the state of the blockchain. These functions are marked `view` or `pure`. For example, in this contract, the `get` function (line 14) marked `view` that only returns `num` does not change the state.
+1. ブロックチェーンの状態を変える関数。例えば、状態変数を書き込むなど。 このコントラクトでは、`set`関数(9行目)が状態変数`num`を変更しています。
+2. ブロックチェーンの状態を変更しない関数。 こういった関数は、 `view`や`pure`が付いています。 例えば、このコントラクトでは、`get`関数(14行目)に`view`が付いており、状態を変更しない`num`のみを返します。
 
 To define a function, use the `function` keyword followed by a unique name.
 
