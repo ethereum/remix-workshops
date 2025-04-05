@@ -17,28 +17,28 @@ _ビュー関数_は、状態を変更しないことを約束します。
 
 参照元: <a href="https://docs.soliditylang.org/en/latest/contracts.html#view-functions" target="_blank">Solidityドキュメント</a>
 
-You can declare a view function using the keyword `view`. In this contract, `addToX` (line 8) is a view function. This function takes the parameter `y` and returns the sum of the parameter and the state variable `x`. It reads `x` but does not modify it.
+ビュー関数は、キーワード`view`を使用して宣言します。 このコントラクトでは、`addToX`(8行目)がビュー関数です。 この関数は、パラメータ`y`を取り、そのパラメータと状態変数`x`の合計を返します。 この関数は、`x`を読み込みますが変更しません。
 
 ### ピュア関数
 
 _ピュア関数_は、状態の変更も読み込みも行わないことを約束します。
 
-"In addition to the list of state modifying statements explained above, the following are considered reading from the state:
+状態を変更する文について上記で説明したことに加え、次のことが状態の読み込みと見なされます。
 
-1. Reading from state variables.
-2. Accessing `address(this).balance` or `<address>.balance`.
-3. Accessing any of the members of block, tx, msg (with the exception of `msg.sig` and `msg.data`).
-4. Calling any function not marked pure.
-5. Using inline assembly that contains certain opcodes."
+1. 状態変数の読み込み
+2. `address(this).balance`または`<address>.balance`へのアクセス
+3. block、tx、msgのメンバーのいずれかにアクセスすること(`msg.sig`および`msg.data`を除く)
+4. pureと書かれていない関数の呼び出し
+5. 特定のオペコードを含んだインラインアセンブリの使用
 
-From the <a href="https://docs.soliditylang.org/en/latest/contracts.html#pure-functions" target="_blank">Solidity documentation</a>.
+参照元: <a href="https://docs.soliditylang.org/en/latest/contracts.html#pure-functions" target="_blank">Solidityドキュメント</a>
 
-You can declare a pure function using the keyword `pure`. In this contract, `add` (line 13) is a pure function. This function takes the parameters `i` and `j`, and returns the sum of them. It neither reads nor modifies the state variable `x`.
+ピュア関数は、キーワード`pure`を使用して宣言します。 このコントラクトでは、`add`(13行目)がピュア関数です。 この関数は、パラメータ`i`と`j`を取り、それらの合計を返します。 状態変数`x`の読み込みも変更も行いません。
 
-In Solidity development, you need to optimise your code for saving computation cost (gas cost). Declaring functions view and pure can save gas cost and make the code more readable and easier to maintain. Pure functions don't have any side effects and will always return the same result if you pass the same arguments.
+Solidity開発では、計算コスト(ガス代)を節約するためにコードを最適化する必要があります。 ビュー関数やピュア関数の宣言は、ガス代を節約して、コードをより読みやすく、メンテナンスしやすくします。 ピュア関数は、副作用がありません。そのため、同じ引数を渡した場合は、常に同じ結果を返します。
 
-<a href="https://www.youtube.com/watch?v=vOmXqJ4Qzbc" target="_blank">Watch a video tutorial on View and Pure Functions</a>.
+<a href="https://www.youtube.com/watch?v=vOmXqJ4Qzbc" target="_blank">ピュア関数のビデオチュートリアルをご覧ください</a>。
 
 ## ⭐️ 演習
 
-Create a function called `addToX2` that takes the parameter `y` and updates the state variable `x` with the sum of the parameter and the state variable `x`.
+`addToX2`という関数を作成し、パラメータ`y`を取り、そのパラメータと状態変数`x`の合計で状態変数`x`を更新するようにしましょう。
