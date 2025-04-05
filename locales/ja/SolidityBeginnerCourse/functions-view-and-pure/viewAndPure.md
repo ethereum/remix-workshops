@@ -4,18 +4,18 @@
 
 _ビュー関数_は、状態を変更しないことを約束します。
 
-"The following statements are considered modifying the state:
+次の文があると、状態の変更とされます。
 
-1. Writing to state variables.
-2. Emitting events.
-3. Creating other contracts.
-4. Using selfdestruct.
-5. Sending Ether via calls.
-6. Calling any function not marked view or pure.
-7. Using low-level calls.
-8. Using inline assembly that contains certain opcodes."
+1. 状態変数の書き込み
+2. イベントの発行
+3. 他のコントラクトの作成
+4. selfdestructの使用
+5. callを経由してEtherを送信
+6. viewまたはpureと書かれていない関数の呼び出し
+7. 低レベルの呼び出しの使用
+8. 特定のオペコードを含んだインラインアセンブリの使用
 
-From the <a href="https://docs.soliditylang.org/en/latest/contracts.html#view-functions" target="_blank">Solidity documentation</a>.
+参照元: <a href="https://docs.soliditylang.org/en/latest/contracts.html#view-functions" target="_blank">Solidityドキュメント</a>
 
 You can declare a view function using the keyword `view`. In this contract, `addToX` (line 8) is a view function. This function takes the parameter `y` and returns the sum of the parameter and the state variable `x`. It reads `x` but does not modify it.
 
