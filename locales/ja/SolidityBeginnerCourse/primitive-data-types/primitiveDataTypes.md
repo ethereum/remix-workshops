@@ -14,20 +14,20 @@
 
 ### アドレス(address)
 
-Variables of the type `address` hold a 20-byte value, which is the size of an Ethereum address. There is also a special kind of Ethereum address, `address payable`, which can receive ether from the contract.
+`address`型の変数は、20バイトの値であり、イーサリアムのアドレスのサイズです。 `address payable`というイーサリアムアドレスの特別な種類では、コントラクトからetherを受け取ることができます。
 
-All these data types have default values, as shown in the contract (line 29).
+これらのデータ型は、このコントラクトで示しているようにデフォルト値があります(29行目)。
 
-You can learn more about these data types as well as _Fixed Point Numbers_, _Byte Arrays_, _Strings_, and more in the <a href="https://docs.soliditylang.org/en/latest/types.html" target="_blank">Solidity documentation</a>.
+これらのデータ型および_固定小数点数型_、_バイト配列型_、_文字列型_などについて詳しく知りたい場合は、<a href="https://docs.soliditylang.org/en/latest/types.html" target="_blank">Solidityのドキュメント</a>をご覧ください。
 
-Later in the course, we will look at data structures like **Mappings**, **Arrays**, **Enums**, and **Structs**.
+このコースの後半では、データ構造である**マッピング**、**配列**\*、**列挙型**、**構造体**などについて学びます。
 
-<a href="https://www.youtube.com/watch?v=8Tj-Th_S7NU" target="_blank">Watch a video tutorial on Primitive Data Types</a>.
+<a href="https://www.youtube.com/watch?v=8Tj-Th_S7NU" target="_blank">プリミティブデータ型についてのビデオチュートリアルをご覧ください</a>。
 
 ## ⭐️ 演習
 
-1. Create a new variable `newAddr` that is a `public` `address` and give it a value that is not the same as the available variable `addr`.
-2. Create a `public` variable called `neg` that is a negative number, decide upon the type.
-3. Create a new variable, `newU` that has the smallest `uint` size type and the smallest `uint` value and is `public`.
+1. 新しい変数`newAddr`をpublic` `address` で作成して、使用可能になっている変数`addr\`とは異なる値を付与してください。
+2. `public`で負の数である変数`neg`に適切な型を考慮して作成してください。
+3. `public`で最小の`uint`サイズの型を持つ新しい変数`newU`を作成してください。
 
-Tip: Look at the other address in the contract or search the internet for an Ethereum address.
+ヒント: コントラクト内の他のアドレスを見たり、イーサリアムアドレスについて検索してみましょう。
