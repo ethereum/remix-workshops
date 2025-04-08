@@ -6,11 +6,11 @@
 
 ### 符号なし整数(uint)
 
-We use  the keywords `uint` and `uint8` to `uint256` to declare an _unsigned integer type_ (they don’t have a sign, unlike -12, for example). Uints are integers that are positive or zero and range from 8 bits to 256 bits. The type `uint` is the same as `uint256`.
+キーワード`uint`、`uint8`から`uint256`を使用することで\*符号なし整数型`を宣言することができます(例えば、-12と違い符号がありません)。 uintは正の数またはゼロで、範囲は8ビットから 256ビットです。 `uint`型は、`uint256\`型と同一です。
 
 ### 整数(int)
 
-We use the keywords `int` and `int8` to `int256` to declare an integer type. Integers can be positive, negative, or zero and range from 8 bits to 256 bits. The type `int` is the same as `int256`.
+キーワード`int`と`uint8`から`int256を使用することで整数型を宣言することができます。 整数型は、正負の数またはゼロで、範囲は8ビットから256ビットです。 `int`型は、`int256\`と同一です。
 
 ### アドレス(address)
 
