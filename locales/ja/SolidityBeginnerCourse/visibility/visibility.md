@@ -2,36 +2,36 @@
 
 `external`、`public`、`internal`、`private`の4つのタイプの可視性があります。
 
-They regulate if functions and state variables can be called from inside the contract, from contracts that derive from the contract (child contracts), or from other contracts and transactions.
+関数や状態変数がコントラクト内部、そのコントラクトから派生したコントラクト(子コントラクト)、他のコントラクトやトランザクションから呼び出されることを制限します。
 
 ### private
 
-- Can be called from inside the contract
+- コントラクト内部から呼び出すことができます。
 
 ### internal
 
-- Can be called from inside the contract
-- Can be called from a child contract
+- コントラクト内部から呼び出すことができます。
+- 子コントラクトから呼び出すことができます。
 
 ### public
 
-- Can be called from inside the contract
-- Can be called from a child contract
-- Can be called from other contracts or transactions
+- コントラクト内部から呼び出すことができます。
+- 子コントラクトから呼び出すことができます。
+- 他のコントラクトやトランザクションから呼び出すことができます。
 
 ### external
 
-- Can be called from other contracts or transactions
-- State variables can not be `external`
+- 他のコントラクトやトランザクションから呼び出すことができます。
+- 状態変数は、`external`にできません。
 
-In this example, we have two contracts, the `Base` contract (line 4) and the `Child` contract (line 55) which inherits the functions and state variables from the `Base` contract.
+この例では、2つのコントラクトがあります。`Base`コントラクト(4行目)と`Child`コントラクト(55行目)があり、`Child`コントラクトが`Base`コントラクトから関数と状態変数を継承しています。
 
-When you uncomment the `testPrivateFunc` (lines 58-60) you get an error because the child contract doesn’t have access to the private function `privateFunc` from the `Base` contract.
+`testPrivateFunc`(58-60行目)のコメントを外すと、エラーになります。理由は、子コントラクトが`Base`コントラクトのprivate関数`privateFunc`にアクセス権がないためです。
 
-If you compile and deploy the two contracts, you will not be able to call the functions `privateFunc` and `internalFunc` directly. You will only be able to call them via `testPrivateFunc` and `testInternalFunc`.
+2つのコントラクトをコンパイルしてデプロイした場合、`privateFunc`と`internalFunc`関数を直接呼び出すことはできません。 必ず`testPrivateFunc`と`testInternalFunc`を経由しなければ呼び出すことができません。
 
-<a href="https://www.youtube.com/watch?v=NBzQVJ6OrrQ" target="_blank">Watch a video tutorial on Visibility</a>.
+<a href="https://www.youtube.com/watch?v=NBzQVJ6OrrQ" target="_blank">可視性(Visibility)のビデオチュートリアルをご覧ください</a>。
 
 ## ⭐️ 演習
 
-Create a new function in the `Child` contract called `testInternalVar` that returns the values of all state variables from the `Base` contract that are possible to return.
+`Child`コントラクトに`testInternalVar`という新しい関数を作成し、`Base`コントラクトが返せるすべての状態変数を返すようにしてみましょう。
