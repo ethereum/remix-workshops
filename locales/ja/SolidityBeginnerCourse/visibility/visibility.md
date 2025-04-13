@@ -1,6 +1,6 @@
-The `visibility` specifier is used to control who has access to functions and state variables.
+可視性(`visibility`)指定子は、何が関数や状態変数にアクセスできるかを制御するために使用します。
 
-There are four types of visibilities: `external`, `public`, `internal`, and `private`.
+`external`、`public`、`internal`、`private`の4つのタイプの可視性があります。
 
 They regulate if functions and state variables can be called from inside the contract, from contracts that derive from the contract (child contracts), or from other contracts and transactions.
 
@@ -32,6 +32,6 @@ If you compile and deploy the two contracts, you will not be able to call the fu
 
 <a href="https://www.youtube.com/watch?v=NBzQVJ6OrrQ" target="_blank">Watch a video tutorial on Visibility</a>.
 
-## ⭐️ Assignment
+## ⭐️ 演習
 
 Create a new function in the `Child` contract called `testInternalVar` that returns the values of all state variables from the `Base` contract that are possible to return.
