@@ -1,10 +1,10 @@
-As we have seen in the previous section, executing code via transactions on the Ethereum Network costs transaction fees in the form of Ether. The amount of fees that have to be paid to execute a transaction depends on the amount of _gas_ that the execution of the transaction costs.
+前のセクションで理解したように、イーサリアムネットワークでトランザクションを通してコードを実行するとEtherでトランザクション手数料が掛かります。 トランザクションを実行するために払わなければならない手数料は、トランザクションの実行に掛かるコストのガス量によって変わります。
 
-### Gas
+### ガス
 
-_Gas_ is the unit that measures the amount of computational effort that is required to execute a specific operation on the Ethereum network.
+_ガス_は、イーサリアムネットワークで特定の演算を実行するのに必要な計算量を計測するのに使う単位です。
 
-### Gas price
+### ガス価格
 
 The _gas_ that fuels Ethereum is sometimes compared to the gas that fuels a car. The amount of gas your car consumes is mostly the same, but the price you pay for gas depends on the market.
 
@@ -14,7 +14,7 @@ When sending a transaction, the sender has to pay the _gas_ fee (gas_price \* ga
 
 _Gas_ prices are denoted in gwei.
 
-### Gas limit
+### ガスリミット
 
 When sending a transaction, the sender specifies the maximum amount of gas that they are willing to pay for. If they set the limit too low, their transaction can run out of _gas_ before being completed, reverting any changes being made. In this case, the _gas_ was consumed and can’t be refunded.
 
@@ -22,7 +22,7 @@ Learn more about _gas_ on <a href="https://ethereum.org/en/developers/docs/gas/"
 
 <a href="https://www.youtube.com/watch?v=oTS9uxU6cAM" target="_blank">Watch a video tutorial on Gas and Gas Price</a>.
 
-## ⭐️ Assignment
+## ⭐️ 演習
 
 Create a new `public` state variable in the `Gas` contract called `cost` of the type `uint`. Store the value of the gas cost for deploying the contract in the new variable, including the cost for the value you are storing.
 
