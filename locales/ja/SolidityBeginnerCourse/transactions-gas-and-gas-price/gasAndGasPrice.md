@@ -6,24 +6,24 @@ _ガス_は、イーサリアムネットワークで特定の演算を実行す
 
 ### ガス価格
 
-The _gas_ that fuels Ethereum is sometimes compared to the gas that fuels a car. The amount of gas your car consumes is mostly the same, but the price you pay for gas depends on the market.
+_ガス_は、時に車に供給するガソリンと比べられます。 あなたの車で消費するガソリンの量は、ほとんど同じですが支払うガソリン代はマーケットのガソリン価格によって変わります。
 
-Similarly, the amount of _gas_ that a transaction requires is always the same for the same computational work that is associated with it. However the price that the sender of the transaction is willing to pay for the _gas_ is up to them. Transactions with higher _gas prices_ are going through faster; transactions with very low _gas prices_ might not go through at all.
+同様に、同じ計算による作業においても、それに関連するトランザクションに必要な_ガス_の量は、常に同じです。 しかし、トランザクションの送信者が支払うガスの価格は、送信者自身によります。 トランザクションの_ガス価格_が高いと早く処理され、非常に低い_ガス価格_だとトランザクションが処理されないことがあります。
 
-When sending a transaction, the sender has to pay the _gas_ fee (gas_price \* gas) upon execution of the transaction. If _gas_ is left over after the execution is completed, the sender gets refunded.
+トランザクションを送信する場合、送信者はトランザクションの実行時に_ガス_代(ガス価格×ガス)を支払う必要があります。 トランザクションが完了し、_ガス_が残った場合は、送信者に返金されます。
 
-_Gas_ prices are denoted in gwei.
+_ガス_価格は、gweiで表示されます。
 
 ### ガスリミット
 
-When sending a transaction, the sender specifies the maximum amount of gas that they are willing to pay for. If they set the limit too low, their transaction can run out of _gas_ before being completed, reverting any changes being made. In this case, the _gas_ was consumed and can’t be refunded.
+トランザクションの送信時に、送信者は支払うことができるガスの最大量を明記します。 リミットを低く設定しすぎると、自分のトランザクションが完了する前に_ガス_を消費してしまい、行われた変更はリバート(取り消し)されます。 この場合において、_ガス_は消費されてしまい戻されることはありません。
 
-Learn more about _gas_ on <a href="https://ethereum.org/en/developers/docs/gas/" target="_blank">ethereum.org</a>.
+_ガス_について詳細を知りたい場合は、<a href="https://ethereum.org/en/developers/docs/gas/" target="_blank">ethereum.org</a>をご覧ください。
 
-<a href="https://www.youtube.com/watch?v=oTS9uxU6cAM" target="_blank">Watch a video tutorial on Gas and Gas Price</a>.
+<a href="https://www.youtube.com/watch?v=oTS9uxU6cAM" target="_blank">ガスおよびガス価格のビデオチュートリアルをご覧ください</a>。
 
 ## ⭐️ 演習
 
-Create a new `public` state variable in the `Gas` contract called `cost` of the type `uint`. Store the value of the gas cost for deploying the contract in the new variable, including the cost for the value you are storing.
+`Gas`コントラクトに`cost`という`public`で`uint`型の状態変数を作成してください。 新しい変数内にコントラクトをプロイするためのガス代をその値のコストも含めて格納してください。
 
-Tip: You can check in the Remix terminal the details of a transaction, including the gas cost. You can also use the Remix plugin _Gas Profiler_ to check for the gas cost of transactions.
+ヒント: トランザクションの詳細、特にガス代をRemixターミナルで確認できます。 Remixプラグイン _Gas Profiler_でもトランザクションのガス代を確認することができます。
