@@ -1,6 +1,6 @@
-In this section, we will learn how a contract can send and receive Ether.
+このセクションでは、Etherの送信および受信をする方法について学びます。
 
-### Sending Ether
+### Etherの送信
 
 We have three different options to transfer Ether: `transfer()`, `send()` and `call()`.
 
@@ -42,7 +42,7 @@ That’s why `call()` instead of `transfer()` is now recommended to send Ether.
 
 Learn more about the subject in this <a href="https://consensys.net/diligence/blog/2019/09/stop-using-soliditys-transfer-now/" target="_blank">Consensys blog post</a>.
 
-### Reentrancy attack
+### リエントランシー攻撃
 
 A _reentrancy attack_ occurs when a function makes an external call to an untrusted contract and the attacker uses the contract to make recursive calls back to the original function before it finishes its execution. Through this method, the attacker can drain funds and manipulate data in unintended ways.
 
@@ -50,13 +50,13 @@ To guard against a _reentrancy attack_, all state changes should be made before 
 
 Another way to prevent reentrancy is to use a _Reentrancy Guard_ that checks for such calls and rejects them. You can see an example of this in the contract in our modifier section or a more gas-efficient version on <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/security/ReentrancyGuard.sol" target="_blank">Open Zepplin</a>.
 
-### Receiving Ether
+### Etherの受け取り
 
 If we want to enable a contract to receive Ether without a function being called, we need to create a `receive` function (line 22) or a `fallback` function (line 25); otherwise, the Ether will be rejected, and the contract will throw an exception.
 
 The `receive` function is executed on calls with empty calldata (e.g. plain Ether transfers via send() or transfer()), while the fallback function is executed on calls with calldata. If no receive function exists but a fallback function does, calls with empty calldata will also use the fallback function.
 
-### Payable function modifier
+### payable関数修飾子
 
 The `payable` function modifier allows a function to receive Ether.
 
@@ -74,7 +74,7 @@ If you change the parameter type for the functions `sendViaTransfer` and `sendVi
 
 <a href="https://www.youtube.com/watch?v=_5vGaqgzlG8" target="_blank">Watch a video tutorial on Sending Ether</a>.
 
-## ⭐️ Assignment
+## ⭐️ 演習
 
 Build a charity contract that receives Ether that can be withdrawn by a beneficiary.
 
