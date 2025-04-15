@@ -2,37 +2,37 @@
 
 ### Etherの送信
 
-We have three different options to transfer Ether: `transfer()`, `send()` and `call()`.
+Etherを送信するのには、 `transfer()`、`send()`、`call()`の異なる3つの方法があります。
 
 #### **transfer**
 
 `<address payable>.transfer(uint256 amount)`
 
-- `transfer()` throws an exception on failure
-- Forwards a fixed 2300 gas stipend
+- `transfer()`は、失敗時に例外をスローします。
+- 固定で決められた2300ガスを転送します。
 
-An example of `transfer()` can be seen in the `SendEther` contract (line 35).
-**`Transfer()` is not recommended to be used anymore.**
+`SendEther`コントラクトに`transfer()`の例があります(35行目)。
+**`Transfer()`を使用することは推奨されていません。**
 
 #### **send**
 
 `<address payable>.send(uint256 amount) returns (bool)`
 
-- `send()` returns false on failure
-- Forwards a fixed 2300 gas stipend
+- `send()`は失敗時にfalseを返します。
+- 固定で決められた2300ガスを転送します。
 
-An example of `send()` can be seen in the `SendEther` contract (line 41).
-**`Send()` is not recommended to be used anymore.**
+`SendEther`コントラクトに`send()`の例があります(41行目)。
+**`send()`を使用することは推奨されていません。**
 
 #### **call**
 
 `<address>.call(bytes memory) returns (bool, bytes memory)`
 
-- `call()` returns false on failure
-- Forwards the maximum amount of gas, but this is adjustable
+- `call()`は失敗時にfalseを返します。
+- 最大量のガスを転送するものの、調整可能です。
 
-An example of `call()` can be seen in the `SendEther` contract (line 48).
-`Call()` is currently recommended if you are transfering Ether.
+`SendEther`コントラクトに`call()`の例があります(48行目)。
+現在、Etherの送信に`Call()`を使用することが推奨されています。
 
 The reason `transfer()` and `send()` were introduced was to guard against _reentry attacks_ by limiting the forwarded gas to 2300, which would be insufficient to make a reentrant call that can modify storage.
 
