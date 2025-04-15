@@ -34,45 +34,45 @@ Etherを送信するのには、 `transfer()`、`send()`、`call()`の異なる3
 `SendEther`コントラクトに`call()`の例があります(48行目)。
 現在、Etherの送信に`Call()`を使用することが推奨されています。
 
-The reason `transfer()` and `send()` were introduced was to guard against _reentry attacks_ by limiting the forwarded gas to 2300, which would be insufficient to make a reentrant call that can modify storage.
+`transfer()`と`send()`が導入された理由としては、転送されるガスを2300までにすることで_リエントランシー_攻撃を防ぐためです。これで、ストレージを変更する再入呼び出しに対して不十分にすることができます。
 
-As we discussed in the last section, each operation on Ethereum has a specific cost associated with it. Certain operations have become more cost intensive over time, so the gas costs associated with them are also raised. When gas costs for operations are subject to change it is not good to use a hardcoded gas amount like transfer(), and send() do.
+前のセクションで説明したように、イーサリアム上での各オペレーションには、それに関連する特定のコストがかかります。 特定のオペレーションには、よりコストが掛かり、それに関するガス代についても跳ね上がります。 変更されるオペレーションのガス代は、transfer()やsend()のようなハードコートされたガス量を使うのに適していません。
 
-That’s why `call()` instead of `transfer()` is now recommended to send Ether.
+それがEtherの送信には、`transfer()`の代わりに`call()`を使うことが推奨されている理由です。
 
-Learn more about the subject in this <a href="https://consensys.net/diligence/blog/2019/09/stop-using-soliditys-transfer-now/" target="_blank">Consensys blog post</a>.
+このテーマについて詳しく学びたい場合は、<a href="https://consensys.net/diligence/blog/2019/09/stop-using-soliditys-transfer-now/" target="_blank">Consensysのブログ記事</a>をご覧ください。
 
 ### リエントランシー攻撃
 
-A _reentrancy attack_ occurs when a function makes an external call to an untrusted contract and the attacker uses the contract to make recursive calls back to the original function before it finishes its execution. Through this method, the attacker can drain funds and manipulate data in unintended ways.
+_リエントランシー攻撃_は、関数が信頼されていないコントラクトへ外部呼び出しを行い、攻撃者がそのコントラクトを使って元の関数が実行を終える前に再帰コールバックをします。 この方法で攻撃者は、資金を抜き出したり、データを予期しない方法で操作したりすることができます。
 
-To guard against a _reentrancy attack_, all state changes should be made before calling an external contract. This is also called the <a href="https://docs.soliditylang.org/en/latest/security-considerations.html#re-entrancy" target="_blank">Checks-Effects-Interactions</a> pattern.
+_リエントランシー攻撃_を防ぐには、外部コントラクトを呼び出す前に状態のすべてを変更をする必要があります。 これは、 <a href="https://docs.soliditylang.org/en/latest/security-considerations.html#re-entrancy" target="_blank">Checks-Effects-Interactions</a>パターンと呼ばれています。
 
-Another way to prevent reentrancy is to use a _Reentrancy Guard_ that checks for such calls and rejects them. You can see an example of this in the contract in our modifier section or a more gas-efficient version on <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/security/ReentrancyGuard.sol" target="_blank">Open Zepplin</a>.
+リエントランシーを防ぐもう一つの方法としては、_Reentrancy Guard_を使用することです。これで、そのような呼び出しを拒否することができます。 この例は、このコントラクトのmodifierセクションにあります。また、<a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/security/ReentrancyGuard.sol" target="_blank">Open Zepplin</a>に、よりガス効率の良いバージョンがあります。
 
 ### Etherの受け取り
 
-If we want to enable a contract to receive Ether without a function being called, we need to create a `receive` function (line 22) or a `fallback` function (line 25); otherwise, the Ether will be rejected, and the contract will throw an exception.
+関数が呼び出されることなくEtherを受け取れるようにするには、`receive`関数(22行目)や`fallback`関数(25行目)を作成する必要があります。そうしないと、Etherは拒否され、コントラクトは例外をスローします。
 
-The `receive` function is executed on calls with empty calldata (e.g. plain Ether transfers via send() or transfer()), while the fallback function is executed on calls with calldata. If no receive function exists but a fallback function does, calls with empty calldata will also use the fallback function.
+`receive`関数は、空のcalldataで呼び出されると実行されます(例えば、send()やtransfer()による簡単なEtherの送信)。一方、fallback関数は、calldataを伴う呼び出しで実行されます。 receive関数が無く、fallback関数がある場合、空のcalldataの呼び出しでもfallback関数が使われます。
 
 ### payable関数修飾子
 
-The `payable` function modifier allows a function to receive Ether.
+`payable`関数修飾子は、関数がEtherを受け取ることを許可します。
 
-The `receive` function (line 22) needs to be `payable`. If you delete the `payable` modifier you will get an error from the compiler. If you delete the `payable` modifier from the `fallback` function (line 25) it will compile, but it won’t be able to receive Ether.
-The functions `sendViaTransfer`, `sendViaSend`, and `sendViaCall` (lines 33, 38, and 45) also need to be `payable` in order to receive Ether.
+`receive`関数は、`payable`が必要です(22行目)。 `payable`修飾子を削除すると、コンパイラでエラーが発生します。 `fallback`関数から`payable`修飾子を削除してコンパイルすると、Etherを受け取ることが出来なくなります(25行目)。
+関数 `sendViaTransfer`、`sendViaSend`、`sendViaCall`(33行目、38行目、45行目)がEtherを受け取るには、`payable`が必要になります。
 
 ### Payable address
 
-Solidity makes a distinction between two different flavors of the address data type: address and address payable.
+Solidityでは、アドレス型でaddressとaddress payableを異なるものとして区別しています。
 
-`address`: Holds a 20-byte value.
-`address payable`: Holds a 20-byte value and can receive Ether via its members: transfer and send.
+`address`は、20バイトの値を保持します。
+`address payable`は、20バイトの値を保持し、メンバーであるtransferやsendを通してEtherを受け取ることができます。
 
-If you change the parameter type for the functions `sendViaTransfer` and `sendViaSend` (line 33 and 38) from `payable address` to `address`, you won’t be able to use `transfer()` (line 35) or `send()` (line 41).
+関数`sendViaTransfer`や`sendViaSend`のパラメータの型を`payable address`から`address`に変えた場合は、`transfer()`(35行目)や`send()`(41行目)が使用不可になります。
 
-<a href="https://www.youtube.com/watch?v=_5vGaqgzlG8" target="_blank">Watch a video tutorial on Sending Ether</a>.
+<a href="https://www.youtube.com/watch?v=_5vGaqgzlG8" target="_blank">Etherの送信に関するビデオチュートリアルをご覧ください</a>。
 
 ## ⭐️ 演習
 
