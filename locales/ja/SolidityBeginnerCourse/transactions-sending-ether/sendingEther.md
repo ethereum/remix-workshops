@@ -78,9 +78,9 @@ Solidityでは、アドレス型でaddressとaddress payableを異なるもの�
 
 charityコントラクトを作成し、beneficiary(受益者)がEtherを引き出すことで受け取れるようにしてみましょう。
 
-1. Create a contract called `Charity`.
-2. Add a public state variable called `owner` of the type address.
-3. Create a donate function that is public and payable without any parameters or function code.
-4. Create a withdraw function that is public and sends the total balance of the contract to the `owner` address.
+1. `Charity`というコントラクトを作成します。
+2. address型の`owner`というpublicの状態変数を加えます。
+3. publicかつpayableでパラメータや関数のコードを持たないdonate関数を作成します。
+4. publicでコントラクトの残高すべてを`owner`アドレスに送信するwithdraw関数を作成します。
 
-Tip: Test your contract by deploying it from one account and then sending Ether to it from another account. Then execute the withdraw function.
+ヒント: コントラクトのテストでは、あるアカウントでコントラクトをデプロイして、別のアカウントからEtherをそのコントラクトに送信します。 そして、withdraw関数を実行します。
