@@ -76,7 +76,7 @@ Solidityでは、アドレス型でaddressとaddress payableを異なるもの�
 
 ## ⭐️ 演習
 
-Build a charity contract that receives Ether that can be withdrawn by a beneficiary.
+charityコントラクトを作成し、beneficiary(受益者)がEtherを引き出すことで受け取れるようにしてみましょう。
 
 1. Create a contract called `Charity`.
 2. Add a public state variable called `owner` of the type address.
