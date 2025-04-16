@@ -15,18 +15,18 @@
 
 **GIF** コントラクトとのやり取り: <img src="https://github.com/dacadeorg/remixMedia/blob/main/solidity-beginner-course/introduction.gif?raw=true" alt="Compile and deploy contract" width="300"/>
 
-1. We can compile your `Counter` contract in the "Solidity compiler" module of the Remix IDE.
+1. Remix IDEの「Soidityコンパイラ」モジュールで`Counter`コントラクトのコンパイルができます。
 
-2. In the "Deploy & run transactions" module, we select our contract "Counter" in the contract input field and click on the "Deploy" button.
+2. 「Deploy & run transactions」モジュールでは、コントラクト入力フィールドで「Counter」コントラクトを選択して、「Deploy」ボタンをクリックしてください。
 
-3. We expand the token contract functions in the IDE, and test its `get`, `inc`, and `dec` functions.
+3. IDEでトークンコントラクト関数を開いて、`get`関数、`inc`関数、`dec`関数をテストします。
 
 ## ⭐️ 演習
 
-Throughout this course, we will give you assignments to test and consolidate your newly acquired knowledge.
+このコースでは、演習を通して新たに習得した知識のテストと定着を行います。
 
-Your first assignment is to:
+最初の演習は、次の通りです。
 
-1. Compile this contract.
-2. Deploy it to the Remix VM.
-3. Interact with your contract.
+1. コントラクトをコンパイルしてみましょう。
+2. コントラクトをRemix VMにデプロイしてみましょう。
+3. そのコントラクトとやり取りしてみましょう。
