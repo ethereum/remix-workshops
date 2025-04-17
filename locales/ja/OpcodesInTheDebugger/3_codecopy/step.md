@@ -1,7 +1,7 @@
-CODECOPY is one of the many opcodes run by the EVM. Check out the complete list of opcodes at <a href="https://ethervm.io/" target="_blank">https://ethervm.io/</a> .
+CODECOPYは、EVMで実行される様々なオペコードのうちの1つです。 オペコードの完全なリストは、<a href="https://ethervm.io/" target="_blank">https://ethervm.io/</a>をご覧ください。
 
-CODECOPY takes the **running code** (or part of it) and to copies it from the `calldata` to the `memory`.
+CODECOPYは、**動作するコード**(またはその一部)を取り、`calldata`から`memory`にコピーします。
 
-The solidity implementation is: **codecopy(t, f, s)** - copy **s** bytes from code at position **f** to memory at position **t**.
+Solidityの実装である**codecopy(t, f, s)**では、**s**バイトをコードの位置である**f**からメモリの位置である**t**にコピーします。
 
-Every contract deployment uses **CODECOPY**.
+あらゆるコントラクトのデプロイでは、**CODECOPY**を使います。
