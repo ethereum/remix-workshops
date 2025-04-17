@@ -1,11 +1,11 @@
-Let's go back to our contract.
-Please make sure the `solidity compiler` and `Deploy & Run Transactions` are activated.
+このコントラクトに話を戻しましょう。
+`solidity compiler`と`Deploy & Run Transactions` が有効化されていることを確認してください。
 
-Alternatively, you can click on `Solidity` from the `Home Page` **Environments** section.
+別の方法として、`Home Page`の`Environments`セクションで`Solidity`をクリックすることもできます。
 
-- Compile the contract from the `solidity compiler`.
-- Go to the `Deploy & Run Transactions` and make sure `SimpleStore` is selected contract.
-- In the textbox to the right of `Deploy`, input a positive integer.
-- Click on `Deploy`.
+- `solidity compiler`でコントラクトをコンパイルします。
+- `Deploy & Run Transactions`に移動して、 `SimpleStore`コントラクトを必ず選択してください。
+- `Deploy`の右側のテキストボックスで、正の整数を入力します。
+- `Deploy`をクリックします。
 
-In the next step, we'll watch the deployment in the debugger.
+次のステップでは、デバッカでこのデプロイを見てみましょう。
