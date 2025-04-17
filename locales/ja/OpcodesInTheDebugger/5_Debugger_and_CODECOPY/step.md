@@ -1,7 +1,7 @@
-From the Remix terminal, identify the transaction that deployed the contract and click `Debug`
+Remixのターミナルで、デプロイされたコントラクトのトランザクションを特定し、`Debug`をクリックします。
 
-In the gutter of the editor, put a breakpoint on the line `s = _o`, and click on `Jump to the next Breakpoint` (bottom right button).
+`s = _o`の行のエディターの縁にブレークポイントを置きます。そして `Jump to the next Breakpoint` をクリックします(下部の右ボタン)。
 
-Click on `Step into`, to move along the opcodes until you reach `SSTORE`.
+`Step into`をクリックし、`SSTORE`に到達するまでオペコードにそって移動します。
 
-`SSTORE` is the opcode for storing the value `_o` in the storage. Let's continue further to the `CODECOPY`.
+`SSTORE`は、オペコードでストレージにある`_o`に値を格納します。 `CODECOPY`についてさらに続けていきます。
