@@ -1,4 +1,4 @@
-The goal here is to store the code in the blockchain. The EVM needs to tell the client (geth, parity) which what part of the **Call Data** to store.   In this step, we are saving the contract MINUS its constructor (because that gets inplmented only 1 time) and MINUS the input parameter does not need to be stored.
+ここでの目標は、ブロックチェーンにコードを保存することです。 EVMは、クライアント(geth、parity)に**Call Data**のどの部分を保存するかを命じる必要があります。   In this step, we are saving the contract MINUS its constructor (because that gets inplmented only 1 time) and MINUS the input parameter does not need to be stored.
 
 `CODECOPY` is the first step: it copies the bytecode to memory, then the ethereum client will be able to consume it.  MUNCH!
 
