@@ -1,32 +1,32 @@
-ここでの目標は、ブロックチェーンにコードを保存することです。 EVMは、クライアント(geth、parity)に**Call Data**のどの部分を保存するかを命じる必要があります。   In this step, we are saving the contract MINUS its constructor (because that gets inplmented only 1 time) and MINUS the input parameter does not need to be stored.
+ここでの目標は、ブロックチェーンにコードを保存することです。 EVMは、クライアント(geth、parity)に**Call Data**のどの部分を保存するかを命じる必要があります。   このステップでは、コントラクトからコンストラクタを除いたものを保存します(コンストラクタは1度のみ与えられるためです)。そして、保存される必要のなり入力パラメータも除かれます。
 
-`CODECOPY` is the first step: it copies the bytecode to memory, then the ethereum client will be able to consume it.  MUNCH!
+`CODECOPY`の最初のステップでは、バイトコードをメモリーにコピーし、そしてイーサリアムクライアントが消費できるようにします。  モグモグ！
 
-But wait... before the client can **MUNCH**  bytecode, it needs an instruction - an opcode to tell it to MUNCH. `RETURN` is this opcode!
+ちょっと待ってください。 クライアントがバイトコードを**モグモグ**する前に、命令が必要です。モグモグすることを命じるオペコードです。 `RETURN` がこのオペコードです！
 
-As stated in the general spec, at the end of the contract creation, the client (geth, parity) takes the targeted value by the opcode `RETURN` and **persists** it by making it part of the deployed bytecode.
+一般仕様書に記載されているように、コントラクト作成の最後に、クライアント(geth、parity)は、`RETURN`オペコードによってターゲットされた値を取得して、デプロイされたバイトコードの一部にすることで**保持**します。
 
-Once you are in the `CODECOPY`, look at the top 3 items in the **Stack**:
+`CODECOPY`内に入ったら、次にある**スタック**の上部3つのアイテムを見てみましょう。
 
 `0: 0x0000000000000000000000000000000000000000000000000000000000000000`
 `1: 0x0000000000000000000000000000000000000000000000000000000000000055`
 `2: 0x000000000000000000000000000000000000000000000000000000000000003e`
 
-_In your Stack - `1` & `2` may be slightly different.  The difference may be due to a different compiler version._
+_あなたのスタックでは、`1`と`2`が少し違うかもしれません。  コンパイラのバージョンが異なることによって違いが生じているかもしれません。_
 
-**These are the parameters for `CODECOPY`.**
+**`CODECOPY`のパラメータがこれらです。**
 
-Remember: _codecopy(t, f, s)_ - copy **s** bytes from code at position **f** to memory at position **t**
+_codecopy(t, f, s)_ では、**s**バイトをコードの位置である**f**からメモリの位置である**t**にコピーすることを思い出してみましょう。
 
-`0` is the offset where the copied code should be placed in the **memory**. In this example, ( all zeros) the code is copied to the beginning of the memory. (**t**)
-`1` is the offset in **calldata** where to copy from (**f**)
-`2` number of bytes to copy - (**s**)
+`0`はオフセットで、コピーされたコードを**メモリー**に配置する場所です。 この例では、(すべてのゼロ)のコードは、メモリーの最初にコピーされます。 (**t**)
+`1` は、**calldata**のオフセットで、(**f**)からコピーします。
+`2` は、コピーするバイト数(**s**)です。
 
-After `CODECOPY` is executed, (click the _step into_ button) the copied code should be:
-`0x6080604052600080fdfea265627a7a7231582029bb0975555a15a155e2cf28e025c8d492f0613bfb5cbf96399f6dbd4ea6fc9164736f6c63430005110032` in memory.  **I'll refer to this value as (X)**.
+`CODECOPY`が実行された後に、コピーされたコードはメモリー内で次のようになります(_step into_ボタンをクリックしてください):
+`0x6080604052600080fdfea265627a7a7231582029bb0975555a15a155e2cf28e025c8d492f0613bfb5cbf96399f6dbd4ea6fc9164736f6c63430005110032`  **この値を(X)として参照します**。
 
-Let's look at the debugger's **Memory** panel.
-The 0x number I gave above is not what you will see in the **Memory** panel -what you will see is this:
+デバッカの**Memory**パネルを見てみましょう。
+上記で示した0xの番号は、**Memory**パネル内で表示されものと違います。表示されるのは次のようになります:
 0x0: 6080604052600080fdfea265627a7a72 ????R??????ebzzr
 0x10: 31582029bb0975555a15a155e2cf28e0 1X ?? uUZ??U????
 0x20: 25c8d492f0613bfb5cbf96399f6dbd4e ?????a?????9?m?N
@@ -38,7 +38,7 @@ The 0x number I gave above is not what you will see in the **Memory** panel -wha
 0x80: 00000000000000000000000000000000 ????????????????
 0x90: 00000000000000000000000000000002 ????????????????
 
-The `0x0`, `0x10`, etc is the position. The next number is the bytecode for that position.  This is followed by question marks and seemingly random letters & numbers.  This is **Remix**'s attempt to convert this into a string.
+`0x0`、`0x10`などは位置を表しています。 隣の番号は、位置のバイトコードを表します。  疑問符マークに続いて、ランダムに見える文字と数字が続きます。  これは、**Remix**が文字列に変換しています。
 
 So if we glue the first four sections of bytecode together, we'll get:
 **0x6080604052600080fdfea265627a7a7231582029bb0975555a15a155e2cf28e0a6fc9164736f6c63430005110032**  The last section - `0x90` has 2 which is what I input for the constructors parameter.
@@ -54,4 +54,4 @@ and without the constructor code `6080604052348015600f57600080fd5b50604051609338
 
 So `CODECOPY` extracts the bytecode from the calldata and copies it to the memory.
 
-Let's move to the next step.
+次のステップに進みましょう。
