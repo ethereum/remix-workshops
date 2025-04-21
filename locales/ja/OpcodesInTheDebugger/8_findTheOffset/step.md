@@ -1,4 +1,4 @@
-# Find the offset ;)
+# オフセットを見つける;)
 
 And now for a slightly different example:
 
