@@ -2,11 +2,11 @@
 
 次に、少し異なる例を上げます。
 
-- Compile notSimpleStore.sol
-- Deploy the contract `notSoSimpleStore`
-- Make sure you have a successful deployment - if not check that you used **the correct input type** in the constructor.
-- Go to the Debugger by clicking the **debug** button at the (successful) creation transaction.
-- Find the value of the parameter of `CODECOPY` which represents the offset in calldata where to copy from.
+- notSimpleStore.solをコンパイルします。
+- コントラクト`notSoSimpleStore`をデプロイします。
+- デプロイが成功していることを確認します。失敗した場合、コンストラクタで**正しい入力タイプ**を使用したか確認してください。
+- トランザクションの作成(に成功)したら**debug**ボタンをクリックしてデバッカに移動します。
+- `CODECOPY`のパラメータの値を確認します。このパラメータは、コピー元のcalldataのオフセットを表しています。
 
 _codecopy(t, f, s)_ では、**s**バイトをコードの位置である**f**からメモリの位置である**t**にコピーすることを思い出してみましょう。
 
