@@ -1,5 +1,5 @@
-In this contract tutorial, we will learn how to create an ERC721 (NFT) auction contract.
-We recommend to you, to do the Learneth "Solidity NFT Course" before starting this tutorial.
+このコントラクトチュートリアルでは、ERC721(NFT)オークションの作成方法を学びます。
+Learnethの「Solidity NFTコース」を終了してから、このチュートリアルを始めることをお勧めします。
 
 In the following sections, we will create a contract that will enable a seller to auction an NFT to the highest bidder. This contract was created by the <a href="https://solidity-by-example.org/app/english-auction/" target="_blank">Solidity by Example</a> project. In this first section, we will create an interface, the necessary state variables, and the constructor.
 
