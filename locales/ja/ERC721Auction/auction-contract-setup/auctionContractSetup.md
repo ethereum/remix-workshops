@@ -1,46 +1,45 @@
 このコントラクトチュートリアルでは、ERC721(NFT)オークションの作成方法を学びます。
 Learnethの「Solidity NFTコース」を終了してから、このチュートリアルを始めることをお勧めします。
 
-In the following sections, we will create a contract that will enable a seller to auction an NFT to the highest bidder. This contract was created by the <a href="https://solidity-by-example.org/app/english-auction/" target="_blank">Solidity by Example</a> project. In this first section, we will create an interface, the necessary state variables, and the constructor.
+次のセクションでは、コントラクトを作成し、売り手が最高入札者にNFTをオークションで落札できるようにします。 このコントラクトは、 <a href="https://solidity-by-example.org/app/english-auction/" target="_blank">Solidity by Example</a>によって作成されました。 この最初のセクションでは、インターフェース、必要な状態変数、コンストラクタを作成します。
 
-### Interface
+### インターフェース
 
-We create the interface (line 5) for the ERC721 token since our contract will need to interact with it. We will need the `safeTransferFrom` (line 5),  and` transferFrom` (line 11) methods.
+ERC721トークンのインターフェースを作成します(5行目)。このコントラクトは、ERC721トークンとやり取りを行うのが理由です。 `safeTransferFrom`メソッド(5行目)と`transferFrom`メソッド(11行目)が必要になります。
 
 ### EnglishAuction
 
-We create the four events `Start`, `Bid`, `Withdraw`, `End` (line 19-22) so we can log important interactions.
+4つのイベント`Start`、`Bid`、`Withdraw`、`End`(19-22行目)を作成し、需要なやり取りをログとして出力します。
 
-Next, we will create the state variables that store all the necessary information about our auction on-chain.
+次に、状態変数を作成し、オンチェーンのオークションで必要となる情報のすべてを保存するようにします。
 
-We create two state variables for the NFT we want to auction. In the variable `nft` (line 24) we store a representation of the NFT contract, that will allow us to call its functions by combining the interface IERC721 and the address of the NFT contract.
-In `nftId` (line 25), we store the specific token id in our NFT contract that will be auctioned.
+オークションしたいNFT用に2つの状態変数を作成します。 変数`nft`(24行目)は、NFTコントラクトを表すものを保存しています。インターフェースであるIERC721とNFTコントラクトのアドレスを組み合わせて、それ自体がもつ関数を呼び出せるようにします。
+`nftId`(25行目)では、私たちが作成するNFTコントラクト内でオークションされる特定のトークンIDを保存します。
 
-Next, we need a variable to store the address of the person that is auctioning off the NFT, the `seller` (line 27).
-We want our NFT contract to send the seller the proceeds of the auction when it is finished, that’s why use `address payable`.
+その後には、NFTをオークションに出品している人のアドレスを変数に保存する必要があります。これが`seller`(27行目)です。
+このNFTコントラクトに、オークションの終了時に、収益を売り手に送信するようにしたいと思います。そのため、`address payable`を使うようにします。
 
-We create a state variable `endAt` (line 28) where we will store the end date of the auction.
-We also create the two booleans, `started` (line 29) and `ended` (line 30), that keep track of whether the auction has started or ended.
+状態変数`endAt`(28行目)を作成して、オークションの終了日を保存するようにします。
+また、2つのブーリアン型である`started`(29行目)と`ended`(30行目)を作成して、オークションの開始と終了を追跡できるようにします。
 
-We create a variable `highestBidder` (line 32) where we will store the address of the highest bidder. We will send the highest bidder the NFT once the auction has ended.
+変数`highestBidder`(32行目)を作成して、最高入札者のアドレスを保存します。 オークションが終了したら、NFTを最高入札者に送るようにします。
 
-Finally, we need a uint `highestBid` (line 33) to store the highest bid and a mapping `bids` (line 34), where we can store the total value of bids that an account has made before withdrawing; more on this in the next section.
+最後に、符号なし整数型(uint)で`highestBid`が必要です。これは、最高入札額を格納して`bids`(34行目)をマッピングします。この`bids`は、引き出す前のアカウントが持つ入札の総額が保存されています。詳細は次のセクションで説明します。
 
-### Constructor
+### コンストラクタ
 
-When the auctioneer deploys the contract, they need to provide a few arguments:
-the address of the contract of the NFT they want to auction `_nft` (line 37), the token id of the NFT they want to auction `_nftId` (line 38), and a starting price that must be overbid to place the first bid in the auction,`_startingBid` (line 39).
+競売人がコントラクトをデプロイするときに、次のいくつかの引数が必要になります。オークションにかけたいNFTコントラクトのアドレス`_nft`(37行目)、オークションにかけたいNFTトークンID`_nftId`(38行目)、オークションで最初の入札をするために越える必要のある開始価格`_startingBid`(39行目)です。
 
-Once deployed, the state variables `nft` (line 41), `nftId` (line 42), `highestBid` (line 45) will be assigned the values from the arguments. The address of the `seller` that deployed the contract will be automatically read out via msg.sender and stored in the state variable `seller` (line 44).
+デプロイされると、引数から状態変数である`nft`(41行目)、`nftId`(42行目)、`highestBid`(45行目)に値が割り当てられます。 コントラクトをデプロイした`seller`のアドレスは、自動的にmsg.senderを通して読み取られます。そして、状態変数`seller`として保存されます(44行目)。
 
-In the next section, we will enable the auctioneer to start the auction and bidders to place their bids.
+次のセクションでは、競売人がオークションを開始し、入札者が落札できるようにします。
 
-## ⭐️ Assignment
+## ⭐️ 演習
 
-We will use the assignment part of the following sections to give you instructions on testing your contract in the Remix VM environment of Remix.
+以下のセクションでは、演習を通してRemixにあるRemix VM環境であなたのコントラクトをテストする手順を示します。
 
-1. Deploy an NFT contract. You can use the NFT contract that we created in our "3.3 ERC721 - Token Creation" section.
+1. NFTコントラクトをデプロイします。 「3.3 ERC721 - Token Creation」で作成したNFTコントラクトを使用してみましょう。
 
-2. Deploy this EnglishAuction contract. Use the address of the NFT contract as an argument for the `_nft` parameter, 0 for `_nftId`, and 1 for `_startingBid`.
+2. EnglishAuctionコントラクトをデプロイします。 引数として、`_nft`にはNFTコントラクトのアドレス 、`_nftId`には0、`_startingBid`は1を使用します。
 
-3. After deploying your contract, test if contract functions like `nft`, `nftId`, and `started` work as expected.
+3. コントラクトをデプロイしたら、コントラクトの機能である`nft`、`nftId`、`started`などが期待通りに機能するかをテストしてください。
