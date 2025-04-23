@@ -1,19 +1,19 @@
-In this section, we will create a function to start the auction and a function to bid on the NFT.
+このセクションでは、オークションを開始する関数とNFTを入札する関数を作成します。
 
-### Start
+### 開始
 
-We use some control structures to check if necessary conditions are met before we let the seller start the auction.
+いくつかの制御構造を使用して、必要な条件が満たされているかどうかを確認します。その後、売り手がオークションを開始します。
 
-First, we check if the auction has already started (line 49). If it has started and our state variable `started` returns `true` we exit the function and throw an exception.
+まず、オークションが既に開始されているかどうかを確認します(49行目)。 既に開始されており、状態変数`started`が`true`を返した場合、関数が終了して例外を投げます。
 
-The second condition we check for is whether the seller is executing the function (line 50). We have already created a function to store the seller's address when they deploy the contract in the `seller` state variable and can now check if the account executing the start function is the seller. If not we throw an exception.
+2つ目の条件は、売り手が関数を実行しているかどうかを確認します(50行目)。 既に作成した関数が、コントラクトをデプロイした時に、`seller`状態変数にある売り手のアドレスを格納しており、現在のアカウントを開始している関数が売り手であるかを確認できます。 そうでない場合は、例外を投げます。
 
 Next, we want to transfer the NFT that is up for auction from the seller to the contract (line 52).
 We set the state variable `started` to `true` (line 53), and create an end date for the auction (line 54). In this case, it will be seven days from when the start function has been called. We can use a suffix like `days` after a literal number to specify units of time. If you want to learn more about time units have a look at the <a href="https://docs.soliditylang.org/en/latest/units-and-global-variables.html#time-units" target="_blank">solidity documentation</a>.
 
 Finally, we will emit our `Start()` event (line 56).
 
-### Bid
+### 入札
 
 Before the function caller can make a bid, we need to be sure that certain conditions are met. The auction needs to have started (line 60), the auction can not have ended (line 61) and the bid (the value attached to the call) needs to be higher than the current highest bid (line 62).
 
