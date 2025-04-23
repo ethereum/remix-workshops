@@ -8,14 +8,14 @@
 
 2つ目の条件は、売り手が関数を実行しているかどうかを確認します(50行目)。 既に作成した関数が、コントラクトをデプロイした時に、`seller`状態変数にある売り手のアドレスを格納しており、現在のアカウントを開始している関数が売り手であるかを確認できます。 そうでない場合は、例外を投げます。
 
-Next, we want to transfer the NFT that is up for auction from the seller to the contract (line 52).
-We set the state variable `started` to `true` (line 53), and create an end date for the auction (line 54). In this case, it will be seven days from when the start function has been called. We can use a suffix like `days` after a literal number to specify units of time. If you want to learn more about time units have a look at the <a href="https://docs.soliditylang.org/en/latest/units-and-global-variables.html#time-units" target="_blank">solidity documentation</a>.
+次に、オークションに出品されるNFTを売り手からコントラクトに送信します(52行目)。
+状態変数を`started`から`true`(53行目)に設定し、オークションの終了日を作成します(54行目)。 この場合、start関数が呼ばれてから7日間とします。 時間の単位では、数値リテラルのあとに`days`のような接尾辞を使用することができます。 時間の単位について、より詳細に学びたい場合は、<a href="https://docs.soliditylang.org/en/latest/units-and-global-variables.html#time-units" target="_blank">solidityのドキュメント</a>をご覧ください。
 
-Finally, we will emit our `Start()` event (line 56).
+最後に、`Start()`イベントを発行します(56行目)。
 
 ### 入札
 
-Before the function caller can make a bid, we need to be sure that certain conditions are met. The auction needs to have started (line 60), the auction can not have ended (line 61) and the bid (the value attached to the call) needs to be higher than the current highest bid (line 62).
+関数の呼び出し元が入札を行う前に、特定の条件が満たされることを確認する必要があります。 このオークションでは、開始されいること(60行目)、終了していないこと(61行目)、入札(呼び出しに付随する値)が現在の最高入札額より高額であること(62行目)が必須条件になります。
 
 Now we want to store the bid of the current highest bidder before we make a new bid.
 First, we check if there is a bidder (line 64). If this function call is the first bid then the next line would be irrelevant.
