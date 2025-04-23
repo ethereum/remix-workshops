@@ -27,7 +27,7 @@ Next, we set the `highestBidder` to the account calling the function (line 68), 
 
 Finally, we emit the `Bid` event (line 71).
 
-## ⭐️ Assignment
+## ⭐️ 演習
 
 1. Deploy an NFT contract. You can use the NFT contract that we create in our "Solidity NFT Course" Learneth course.
 
