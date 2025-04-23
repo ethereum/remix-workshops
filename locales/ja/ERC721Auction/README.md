@@ -1,5 +1,5 @@
-## NFT Auction Contract
+## NFTオークションコントラクト
 
-Learn how to write an ERC721 (NFT) auction contract.
+ERC721(NFT)オークションコントラクトの作成方法を学びます。
 
-Developed by the p2p learning platform https://dacade.org.
+p2p学習プラットフォームhttps://dacade.orgによって開発されました。
