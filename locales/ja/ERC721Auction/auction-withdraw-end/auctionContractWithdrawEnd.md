@@ -1,14 +1,14 @@
-In this section, we will finish the contract, create a function to withdraw the bids that an account has made, and create a function to end the auction.
+このセクションでは、コントラクトを完成させます。引き出し用の関数を作成し、入札を引き出せるようにします。また、オークションを終了するための関数を作成します。
 
-### Withdraw
+### 引き出し
 
-We create a local variable `bal` (balance) that stores the total value of bids that the function caller has made (line 75) since their last withdrawal. We can assign this value to `bal` by accessing the bids mapping using the address of the function caller as the key.
+ローカル変数である`bal`(balance)を作成し、前回の引き出し以降に関数の呼び出し元が入札した入札の総額を格納します(75行目)。 関数の呼び出し元のアドレスをキーとして、bidsマッピングにアクセスすることで、値を`bal`に割り当てます。
 
-Next, we set the value of the address of the function caller to 0 in the bids mapping because they will withdraw the total value of their bids (line 76).
+次に、bidsマッピングでは、関数の呼び出しているアドレスの値に対して0を設定します。このアドレスが入札の総額を引き出すためです(76行目)。
 
-Now we transfer that amount of ETH from the contract to the function caller and emit the `Withdraw` event (line 79).
+それから、ETHをコントラクトから関数の呼び出し元へ送信します。また、`Withdraw`イベントを発行します(79行目)。
 
-### End
+### 終了
 
 Before the function caller can execute this function and end the auction, we need to check if certain conditions are met. The auction needs to have started (line 83), the end date of the auction needs to have been reached (line 84), and the auction must not have ended already (line 85).
 
@@ -22,7 +22,7 @@ If nobody bids on the NFT, we send the NFT back to the auctioneer (line 92).
 
 Finally, we emit the `End` event (line 95).
 
-## ⭐️ Assignment
+## ⭐️ 演習
 
 1. Deploy an NFT contract. You can use the NFT contract that we created in our Learneth "Solidity NFT Course".
 
