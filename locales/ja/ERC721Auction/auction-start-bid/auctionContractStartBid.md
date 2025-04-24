@@ -17,8 +17,8 @@
 
 関数の呼び出し元が入札を行う前に、特定の条件が満たされることを確認する必要があります。 このオークションでは、開始されいること(60行目)、終了していないこと(61行目)、入札(呼び出しに付随する値)が現在の最高入札額より高額であること(62行目)が必須条件になります。
 
-Now we want to store the bid of the current highest bidder before we make a new bid.
-First, we check if there is a bidder (line 64). If this function call is the first bid then the next line would be irrelevant.
+それでは、現在の最高入札額を保存してから、新しい入札を行いたいと思います。
+まず、入札者がいるかどうかを確認します(64行目)。 この関数の呼び出しが、最初の入札の場合、次の行は考慮しません。
 In our mapping `bids` (line 34) we map the key, the `address` of the bidder, to the value, a `uint` that represents the total amount of ETH a bidder has bid in the auction before withdrawing.
 If there is a bidder, we add the last bid (`highestBid`) of the `highestBidder` to the total value of the bids they have made (line 65) before withdrawing.
 We store the bids because we want to enable the bidder to withdraw the ETH they used to make bids if they are no longer the highest bidder.
