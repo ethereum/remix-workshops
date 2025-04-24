@@ -19,24 +19,24 @@
 
 それでは、現在の最高入札額を保存してから、新しい入札を行いたいと思います。
 まず、入札者がいるかどうかを確認します(64行目)。 この関数の呼び出しが、最初の入札の場合、次の行は考慮しません。
-In our mapping `bids` (line 34) we map the key, the `address` of the bidder, to the value, a `uint` that represents the total amount of ETH a bidder has bid in the auction before withdrawing.
-If there is a bidder, we add the last bid (`highestBid`) of the `highestBidder` to the total value of the bids they have made (line 65) before withdrawing.
-We store the bids because we want to enable the bidder to withdraw the ETH they used to make bids if they are no longer the highest bidder.
+マッピング`bids`(34行目)は、キーとして入札者の`address`をマップし、オークションで入札者が引き出す前に持っているETHの総額を表す`uint`の値がマップされています。
+入札者がいる場合、`highestBidder`の最後の入札(`highestBid`)を引き出す前の合計入札額に加算します(65行目)。
+入札者が最高入札者ではなくなった場合、入札者が入札に利用したETHを引き出せるように入札を保存しています。
 
-Next, we set the `highestBidder` to the account calling the function (line 68), and the `highestBid` to their bid, the value that was sent with the call (line 69).
+次に、関数を呼び出しているアカウントを`highestBidder`に設定し、`highestBid`を呼び出し時に送信した値を入札額にします(69行目)。
 
-Finally, we emit the `Bid` event (line 71).
+最後に、`Bid`イベントを発行します(71行目)。
 
 ## ⭐️ 演習
 
-1. Deploy an NFT contract. You can use the NFT contract that we create in our "Solidity NFT Course" Learneth course.
+1. NFTコントラクトをデプロイします。 LearnEthコースである「Solidity NFTコース」で作成したNFTコントラクトを使用します。
 
-2. Mint yourself an NFT with the tokenId 0.
+2. tokenId 0のNFTをミントしてください。
 
-3. Deploy this EnglishAuction contract. Use the address of the NFT contract as an argument for the `_nft` parameter, 0 for `_nftId`, and 1 for `_startingBid`.
+3. EnglishAuctionコントラクトをデプロイします。 NFTコントラクトのアドレスを引数である`_nft`パラメータにして、`_nftId`に0、`_startingBid`を1にしてください。
 
-4. Call the `approve` function of your NFT contract with the address of the auction contract as an argument for the `to` parameter, and 0 for `tokenId`. This will allow the contract to transfer the token to be auctioned.
+4. NFTコントラクトの `approve` 関数のパラメータで、オークションコントラクトのアドレスを`to`、`tokenId`を0にして呼び出してください。 これで、コントラクトがオークションに出品されるトークンを送信できるようになります。
 
-5. Call the `start` function of your auction contract. If you call the `started` function now, it should return `true`. If you call the `highestBid` function it should return 1.
+5. オークションコントラクトの`start`関数を呼び出します。 `started`関数を呼び出すと、`started`を返すようになります。 `highestBid` 関数を呼び出すと、1を返します。
 
-6. Set the value that you can attach to transactions to 3 Wei and call the `bid` function of the auction contract. If you call the `highestBid` function it should now return 3.
+6. トランザクションに付加する値を3Weiにして、オークションコントラクトの`bid`関数を呼び出します。 `highestBid`関数を呼び出すと、3を返すようになります。
