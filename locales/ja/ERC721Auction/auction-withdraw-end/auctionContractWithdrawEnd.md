@@ -10,36 +10,36 @@
 
 ### 終了
 
-Before the function caller can execute this function and end the auction, we need to check if certain conditions are met. The auction needs to have started (line 83), the end date of the auction needs to have been reached (line 84), and the auction must not have ended already (line 85).
+関数の呼び出し元が、end関数を実行し、オークションを終了する前に、特定の条件を満たしているかを確認します。 このオークションが、開始されており(83行目)、オークションの終了日に達しており(84行目)、オークションが終了されていないこと(85行目)必要があります。
 
-Once the auction has ended, we set the state variable `ended` to `true` (line 87).
+オークションが終了すると、状態変数`ended`に`true`を設定します(87行目)。
 
-We check if anybody participated in the auction and bid on the NFT (line 88).
+このオークションに誰かが参加しており、NFTに集札しているかどうかを確認します(88行目)。
 
-If there was a bid, we transfer the NFT from the contract to the highest bidder (line 89) and transfer the ETH that was sent from the highest bidder to the contract, now to the address of the auctioneer, the seller of the NFT (line 90).
+入札があれば、NFTをコントラクトから最高入札者に送信します(89行目)。そして、ETHを最高入札者から、このコントラクトに送信します。これは、NFTの売り手である競売人のアドレスです(90行目)。
 
-If nobody bids on the NFT, we send the NFT back to the auctioneer (line 92).
+誰もこのNFTに入札していない場合は、NFTを売り手に送り返します(92行目)。
 
-Finally, we emit the `End` event (line 95).
+最後に、`End`イベントを発行します(95行目)。
 
 ## ⭐️ 演習
 
-1. Deploy an NFT contract. You can use the NFT contract that we created in our Learneth "Solidity NFT Course".
+1. NFTコントラクトをデプロイします。 LearnEthの「Solidity NFTコース」で作成したNFTコントラクトを使用します。
 
-2. Mint yourself an NFT with the tokenId 0.
+2. tokenId 0のNFTをミントしてください。
 
-3. For testing purposes, change the value that is assigned to the `endAt` state variable (line 54) from `7 days` to `5 minutes`.
+3. テストのために、`endAt`状態変数の割当を`7 days`から`5 minutes`に変更してください。
 
-4. Deploy this EnglishAuction contract. Use the address of the NFT contract as an argument for the `_nft` parameter, 0 for `_nftId`, and 1 for `_startingBid`.
+4. EnglishAuctionコントラクトをデプロイします。 NFTコントラクトのアドレスを引数である`_nft`パラメータにして、`_nftId`に0、`_startingBid`を1にしてください。
 
-5. Call the `approve` function of your NFT contract with the address of the auction contract as an argument for the `to` parameter, and 0 for the `tokenId`.
+5. NFTコントラクトの `approve` 関数のパラメータで、オークションコントラクトのアドレスを`to`、`tokenId`を0にして呼び出してください。
 
-6. Call the `start` function of your auction contract.
+6. オークションコントラクトの`start`関数を呼び出します。
 
-7. Bid 2 Ether using account 1, and 3 Ether using account 2. If you call the `highestBidder` function, it should now return the address of account 2.
+7. アカウント1で2 Etherを入札します。そして、アカウント2で3 Etherを入札します。 これで、`highestBidder`関数を呼び出すと、アカウント2のアドレスが返されます。
 
-8. Call the `withdraw` function with account 1. In the balance of account 1, you should see the 2 Ether minus some transaction fees.
+8. `withdraw`関数をアカウント1で呼び出してください。 アカウント1の残高が、トランザクション手数料とともに2 Ether引かれていることが確認できます。
 
-9. After 5 minutes have passed, call the `end` function. Then, call the `ended` function which should return `true`.
+9. 5分経過後に`end`関数を呼び出します。 その後、`ended`関数を呼び出すと`true`が返されます。
 
-In the NFT contract, if you call the `ownerOf` function with the tokenId 0, it should return the address of account 2. If you look at the balance of account 1 it should have increased by 3 Ether minus some transaction fees.
+NFTコントラクトでは、tokenId 0で`ownerOf`関数を呼び出すと、アカウント2のアドレスが返されます。 アカウント1の残高を見ると、トランザクション手数料が引かれた3 Ether分が増えています。
