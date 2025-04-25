@@ -1,24 +1,24 @@
-In this section, we will use Metamask (an Ethereum wallet) to deploy our contract to the Rinkeby testnet of the Ethereum blockchain, mint an NFT, and look at it on the NFT marketplace OpenSea.
+このセクションでは、MetaMask(イーサリアムウォレット)を使用してコントラクトをイーサリアムブロックチェーンのテストネットであるRinkebyにデプロイします。そしてNFTをミントして、NFTマーケットプレースであるOpenSeaで確認します。
 
-### 1. Install Metamask
+### 1. MetaMaskのインストール
 
-**1.1** Go to <a href="https://metamask.io/" target="_blank">metamask.io</a>.
+**1.1** <a href="https://metamask.io/" target="_blank">metamask.io</a>に移動します。
 
-**1.2** Click on the download button, then click on install for your browser (e.g. Chrome) and add the extension to your browser.
+**1.2** ダウンロードボタンをクリックして、ブラウザ(例: Chrome)にインストールすることで拡張機能に加えてください。
 
-**1.3** Create a wallet as described.
+**1.3** 説明に従ってウォレットを作成してください。
 
-### 2. Get testnet token for Rinkeby
+### 2. Rinkeby用のテストネットトークンの取得
 
-In order to make transactions on the testnet, we need Ethereum testnet tokens.
+テストネットでトランザクションを作成するには、イーサリアムのテストネットトークンが必要になります。
 
-**2.1** Switch your Metamask from "Ethereum Mainnetwork" to "Rinkeby Test Network".
+**2.1** 「Ethereum Mainnetwork」から「Rinkeby Test Network」に変更します。
 
-**2.2** Go to <a href="https://faucet.paradigm.xyz/" 
-target="_blank">https://faucet.paradigm.xyz/</a>, enter the address of your account and claim testnet ETH.
-You could also use other ropsten faucets like <a href="https://faucet.paradigm.xyz/" target="_blank">https://faucet.paradigm.xyz/</a> or <a href="https://app.mycrypto.com/faucet" target="_blank">https://app.mycrypto.com/faucet</a>. Have a look at the faucets listed on <a href="https://ethereum.org/en/developers/docs/networks/#testnet-faucets" target="_blank">ethereum.org</a> to learn more.
+**2.2** <a href="https://faucet.paradigm.xyz/" 
+target="_blank">https://faucet.paradigm.xyz/</a>に移動して、あなたのアカウントのアドレスを入力して、テストネット用のETHを請求してください。
+他のRopstenフォーセットである<a href="https://faucet.paradigm.xyz/" target="_blank">https://faucet.paradigm.xyz/</a>や <a href="https://app.mycrypto.com/faucet" target="_blank">https://app.mycrypto.com/faucet</a>も使用することができます。 フォーセットのリストは、<a href="https://ethereum.org/en/developers/docs/networks/#testnet-faucets" target="_blank">ethereum.org</a>に掲載されているのでご覧ください。
 
-### 3. Contract Deployment
+### 3. コントラクトのデプロイ
 
 **3.1** In the "DEPLOY & RUN TRANSACTIONS" module of the Remix IDE under "ENVIRONMENT" select "Injected Web3". It should then ask you to connect your account, which you should confirm. Then you should see the Rinkeby network badge under "Injected Web3".
 
@@ -26,7 +26,7 @@ You could also use other ropsten faucets like <a href="https://faucet.paradigm.x
 
 **3.3**  Your contract should appear in the "Deployed Contracts" section.
 
-### 4. Mint an NFT
+### 4. NFTのミント
 
 **4.1** Expand your contract in the IDE so you can see the buttons for the functions.
 
