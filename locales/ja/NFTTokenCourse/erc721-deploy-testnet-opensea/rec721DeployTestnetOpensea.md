@@ -20,23 +20,23 @@ target="_blank">https://faucet.paradigm.xyz/</a>に移動して、あなたの�
 
 ### 3. コントラクトのデプロイ
 
-**3.1** In the "DEPLOY & RUN TRANSACTIONS" module of the Remix IDE under "ENVIRONMENT" select "Injected Web3". It should then ask you to connect your account, which you should confirm. Then you should see the Rinkeby network badge under "Injected Web3".
+**3.1**  Remix IDEの「ENVIRONMENT」の下にある「DEPLOY & RUN TRANSACTIONS」モジュールで「Injected Web3」を選択します。 アカウントを接続するように求められたら、「Confirm」してください。 次に、「Injected Web3」の下にRinkebyネットワークバッチが表示されます。
 
-**3.2** Deploy your token contract and confirm the transaction in Metamask.
+**3.2** トークンコントラクトをデプロイし、MetaMaskでトランザクションを「Confirm」してください。
 
-**3.3**  Your contract should appear in the "Deployed Contracts" section.
+**3.3**  あなたのコントラクトが「Deployed Contracts」セクションに現れます。
 
 ### 4. NFTのミント
 
-**4.1** Expand your contract in the IDE so you can see the buttons for the functions.
+**4.1** IDEであなたのコントラクトを展開すると、関数のボタンが表示されます。
 
-**4.2** Expand the input fields next to the safeMint button. Enter the Ethereum address of the account that is connected to Remix in the “to:” input field. Enter “0” in the input field "tokenID:". Click on transact.
+**4.2** safeMintボタンの横にある入力フィールドを展開します。 Remixに接続しているアカウントのイーサリアムアドレスを入力フィールド「to:」に入力します。 入力フィールド「tokenID:」には、「0」を入力します。 「transact」をクリックします。
 
-**4.3** In Metamask click on assets, then click on the “Import tokens” link, and paste the address of your contract in the input field. You can set decimals to 0.
+**4.3** MetaMaskで「assets」をクリックし、「Import tokens」リンクをクリックします。次に、入力フィールドにあなたのコントラクトのアドレスをペーストします。 小数点を0に設定します。
 
 You should now see the name of the symbol of your token contract (e.g. GEO) in your “Assets” view in Metamask. You should have one of these tokens.
 
-### 5. See your NFT on OpenSea
+### 5. あなたのNFTをOpenSeaで確認する
 
 <a href="https://opensea.io/" 
 target="_blank">OpenSea </a> is one of the most popular online marketplace for NFTs. OpenSea also provides a version where you can see assets on the testnet, under <a href="https://testnets.opensea.io/" 
