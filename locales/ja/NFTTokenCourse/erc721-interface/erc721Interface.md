@@ -4,13 +4,13 @@ Each non-fungible token is unique and not interchangeable. NFTs can have differe
 
 If you want to know more about the ERC721 token standard, have a look at the specifications in its <a href="https://eips.ethereum.org/EIPS/eip-721" target="_blank">Ethereum improvement proposal</a>.
 
-## Interface
+## インターフェース
 
 The ERC721 standard is more complex than the ERC20 standard and it features optional extensions. ERC721 compliant contracts must, at a minimum, implement the ERC721 and ERC165 interfaces, which we will look at in this section.
 
 This interface (line 11) is part of the open-source contract library provided by <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol" target="_blank">OpenZeppelin</a>.
 
-## Basic IERC721 Functions
+## 基本的なIERC721関数
 
 Contracts compliant with the ERC721 standard have to implement the following functions:
 
@@ -37,7 +37,7 @@ The function `transferFrom` (line 55) transfers the ownership of a token with th
 **It is recommended to use safeTransferFrom instead of transferFrom whenever possible.**
 The `transferFrom` function is not secure because it doesn’t check if the smart contract that is the recipient of the transfer has implemented the ERC721TokenReceiver interface and is capable of handling ERC721 tokens.
 
-## Advanced IERC721 Functions
+## 高度なIERC721関数
 
 ### approve
 
@@ -89,7 +89,7 @@ interface IERC165 {
 
 For example, the ERC165 identifier for the ERC721 interface as specified in the EIP721 is “0x80ac58cd”. Learn how to calculate an interface identifier and more about the ERC165 in its <a href="https://eips.ethereum.org/EIPS/eip-165" target="_blank">improvement proposal</a>.
 
-## Other interfaces
+## 他のインターフェース
 
 The <a href="https://eips.ethereum.org/EIPS/eip-721#specification" target="_blank">IERC721TokenReceiver</a> interface must be implemented to accept safe transfers.
 
