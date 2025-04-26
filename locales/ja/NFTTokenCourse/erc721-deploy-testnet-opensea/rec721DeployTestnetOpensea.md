@@ -34,17 +34,17 @@ target="_blank">https://faucet.paradigm.xyz/</a>に移動して、あなたの�
 
 **4.3** MetaMaskで「assets」をクリックし、「Import tokens」リンクをクリックします。次に、入力フィールドにあなたのコントラクトのアドレスをペーストします。 小数点を0に設定します。
 
-You should now see the name of the symbol of your token contract (e.g. GEO) in your “Assets” view in Metamask. You should have one of these tokens.
+これで、MetaMaskにある「Assets」ビューで、あなたのトークンコントラクトのシンボル名が確認できます(例: GEO)。 トークンの1つを持っている必要があります。
 
 ### 5. あなたのNFTをOpenSeaで確認する
 
 <a href="https://opensea.io/" 
-target="_blank">OpenSea </a> is one of the most popular online marketplace for NFTs. OpenSea also provides a version where you can see assets on the testnet, under <a href="https://testnets.opensea.io/" 
-target="_blank">https://testnets.opensea.io/</a>
+target="_blank">OpenSea </a>は、NFTマーケットプレースで最も人気があるものの1つです。 OpenSeaでは、テストネット上にあるNFTを確認できるバージョン「<a href="https://testnets.opensea.io/" 
+target="_blank">https://testnets.opensea.io/</a>」があります。
 
-**5.1** Go to <a href="https://testnets.opensea.io/login" 
-target="_blank">https://testnets.opensea.io/login</a>.
+**5.1** 「<a href="https://testnets.opensea.io/login" 
+target="_blank">https://testnets.opensea.io/login</a>」に移動します。
 
-**5.2** Connect with your Metamask wallet. You should be redirected to your account <a href="https://testnets.opensea.io/account" target="_blank">https://testnets.opensea.io/account</a> view on OpenSea, where you should be able to see your NFT. You should see the image of your NFT; when you click on it, you should see the name, description, and under properties, also the attributes that you created.
+**5.2** MetaMaskウォレットを接続します。 OpenSeaのアカウントビュー「<a href="https://testnets.opensea.io/account" target="_blank">https://testnets.opensea.io/account</a>」にリダイレクトされます。ここで、あなたのNFTを確認することができます。 あなたのNFTのイメージが見え、クリックすると「name」、「description」を見ることができます。また「propertiey」の下に作成した属性も見ることができます。
 
-If you successfully completed this course and are familiar with the basics of Solidity development, we encourage you to continue your learning journey by learning how to create your own NFT auction contract from the Learneth resources.
+このコースを完了したことによって、Solidity開発の基礎が身に着きました。LearnEthリソースにあるNFTオークションコントラクトの作成方法で、学習の旅を続けることをお勧めします。
