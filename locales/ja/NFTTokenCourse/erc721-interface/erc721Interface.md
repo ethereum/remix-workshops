@@ -1,8 +1,8 @@
-ERC721 is a standard for token contracts that manage non-fungible tokens (NFTs) on the Ethereum blockchain.
+ERC721は、非代替トークン(NFT)をイーサリアムブロックチェーンで管理するトークンコントラクトの標準です。
 
-Each non-fungible token is unique and not interchangeable. NFTs can have different properties, behavior, or rights. Non-fungible tokens are used to represent ownership of unique digital and physical assets like art, collectibles, or real estate.
+おのおのの非代替トークンは、一意で交換することができません。 NFTは、異なるプロパティ、動作、権利を持ちます。 非代替トークンは、一意なデジタル資産および物理資産(例: アート、コレクティブル、不動産)の所有権を表します。
 
-If you want to know more about the ERC721 token standard, have a look at the specifications in its <a href="https://eips.ethereum.org/EIPS/eip-721" target="_blank">Ethereum improvement proposal</a>.
+ERU721トークン標準についてより詳しく知りたい場合は、<a href="https://eips.ethereum.org/EIPS/eip-721" target="_blank">イーサリアム改善提案</a>の仕様をご覧ください。
 
 ## インターフェース
 
