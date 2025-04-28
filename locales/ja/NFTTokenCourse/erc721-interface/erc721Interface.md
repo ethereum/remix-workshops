@@ -2,50 +2,49 @@ ERC721は、非代替トークン(NFT)をイーサリアムブロックチェー
 
 おのおのの非代替トークンは、一意で交換することができません。 NFTは、異なるプロパティ、動作、権利を持ちます。 非代替トークンは、一意なデジタル資産および物理資産(例: アート、コレクティブル、不動産)の所有権を表します。
 
-ERU721トークン標準についてより詳しく知りたい場合は、<a href="https://eips.ethereum.org/EIPS/eip-721" target="_blank">イーサリアム改善提案</a>の仕様をご覧ください。
+ERC721トークン標準についてより詳しく知りたい場合は、<a href="https://eips.ethereum.org/EIPS/eip-721" target="_blank">イーサリアム改善提案</a>の仕様をご覧ください。
 
 ## インターフェース
 
-The ERC721 standard is more complex than the ERC20 standard and it features optional extensions. ERC721 compliant contracts must, at a minimum, implement the ERC721 and ERC165 interfaces, which we will look at in this section.
+ERC721標準は、ERC20標準よりも複雑で、オプションの拡張機能を備えています。 ERC721に準拠したコントラクトは、最低でも、ERC721インターフェースおよびERC165インターフェースを実装している必要があります。このセクションでは、これらのインターフェースを学びます。
 
-This interface (line 11) is part of the open-source contract library provided by <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol" target="_blank">OpenZeppelin</a>.
+このインターフェース(11行目)は、<a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol" target="_blank">OpenZeppelin</a>が提供しているオークションコントラクトライブラリの一部です。
 
 ## 基本的なIERC721関数
 
-Contracts compliant with the ERC721 standard have to implement the following functions:
+ERC721標準に準拠したコントラクトは、次の関数を実装する必要があります。
 
 ### balanceOf
 
-The function `balanceOf` (line 30) returns the amount of tokens owned by the account with the address `owner`.
+関数`balanceOf`(30行目)は、アドレス`owner`アカウントによって所有されているトークンの量を返します。
 
 ### ownerOf
 
-The function `ownerOf` (line 39) returns the address `owner` of the account that holds the token with the id `tokenId`.
+関数`ownerOf`(39行目)は、idである`tokenId`のトークンを保有しているアカウントであるアドレス`owner`を返します。
 
 ### safeTransferFrom
 
-The function `safeTransferFrom` (line 55) transfers the ownership of a token with the id `tokenId` from the account with the address `from` to the account with the address `to`.
+関数`safeTransferFrom`(55行目)は、idである`tokenId`のトークンの所有権をアドレス`from`のアカウントから、アドレス`to`のアカウントへ送信します。
 
-The function `safeTransferFrom` (line 137) is almost identical to the function `safeTransferFrom` (line 55) .The only difference is that this function has a non-empty payload `data`.
+関数`safeTransferFrom`(137行目)は、関数`safeTransferFrom`(55行目)とほぼ同一ですが、1つ違う部分があります。それは、ペイロード`data`が必要な点です。
 
-A smart contract must implement the ERC721TokenReceiver Interface if it is to receive a transfer. This will ensure that the contract can handle ERC721 token transfers and prevent the tokens from being locked in a contract that can’t.
+スマートコントラクトでは、送信されてきたNFTを受け取るのにERC721TokenReceiveインターフェースを実装する必要があります。 これによって、コントラクトがERC721トークンを送信できるようになり、送信できないトークンがロックされてしまうことを防ぎます。
 
 ### transferFrom
 
-The function `transferFrom` (line 55) transfers the ownership of a token with the id `tokenId` from the account with the address `from` to the account with the address `to`.
+関数transferFrom`(75行目)は、idである`tokenId`のトークンの所有権をアドレス`from`のアカウントから、アドレス`to\`のアカウントへ送信します。
 
-**It is recommended to use safeTransferFrom instead of transferFrom whenever possible.**
-The `transferFrom` function is not secure because it doesn’t check if the smart contract that is the recipient of the transfer has implemented the ERC721TokenReceiver interface and is capable of handling ERC721 tokens.
+**可能な限りtransferFromではなく、safeTransferFromを使うことを推奨します。** `transferFrom`関数は、安全ではありません。理由は、スマートコントラクトがtransferの受け取り先の場合、ERC721TokenReceiverインターフェースが実装されており、ERC721トークンを扱えるかどうかを確認しないためです。
 
 ## 高度なIERC721関数
 
 ### approve
 
-The function `approve` (line 94) gives the account with the address `to` the permission to manage the token with the id `tokenId` on behalf of the account calling the function.
+関数`approve`(94行目)は、所有しているアカウントが関数を呼び出すことに代わって、アカウントのアドレス`to`に対して、そのidである`tokenId`のトークンを管理する権限を与えます。
 
 ### getApproved
 
-The function `getApproved` (line 103) returns the address of the account (return var `operator`) that is approved to manage the token with the id `tokenId`.
+関数`getApproved`(103行目)では、アカウントのアドレスを返します(値`operator`を返却)。このアカウントは、idである`tokenId`のトークンを管理すること許可されたアカウントです。
 
 ### setApprovalForAll
 
