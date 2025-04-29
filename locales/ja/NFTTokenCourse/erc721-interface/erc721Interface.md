@@ -48,23 +48,23 @@ ERC721標準に準拠したコントラクトは、次の関数を実装する�
 
 ### setApprovalForAll
 
-The function `setApprovalForAll` (line 115) sets the permission (`_approved`) for the account with the specified address (input param - `operator`) to manage all tokens of the account calling the function.
+関数`setApprovalForAll`(115行目)は、指定されたアドレス(入力パラメータ「`operator`」)のアカウントに、関数を呼び出すアカウントのトークンのすべてを管理する権限を設定します。
 
 ### isApprovedForAll
 
-The function `getApproved` (line 103) returns the boolean true if the account with the address `operator` is approved to manage all tokens of the account with the address `owner`.
+関数`getApproved`(103行目)は、アドレス`operator`のアカウントがアドレス`owner`のトークンのすべてを管理することを許可かされている場合にブール値「true」を返します。
 
 ## IERC721 Events
 
-ERC721 contracts must also emit the following events:
+ERC721コントラクトは、次のイベントを発行する必要があります。
 
 ### Transfer
 
-The `Transfer` event (line 15) must be emitted when the token with the id `tokenId` is transferred from the account with the address `from` to the account with the address  `to`.
+`Transfer`イベント(15行目)は、idである`tokenId`がアドレス`from`のアカウントからアドレス`to`のアカウントへ送信された場合に発行される必要があります。
 
 ### Approval
 
-The `Approval` event (line 20) must be emitted when the account with the address `owner` approves the account with the address `spender` to manage the token with the id `tokenId` on its behalf.
+`Approval`イベント(20行目)は、アドレス`owner`のアカウントがアドレス`spender`のアドレスに対して、idである`tokenId`を持つトークンを代わりに管理することを許可した場合に発行する必要があります。
 
 ### ApprovalForAll
 
