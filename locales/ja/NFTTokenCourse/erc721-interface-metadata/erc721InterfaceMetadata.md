@@ -1,6 +1,6 @@
-The metadata extension is optional. It allows us to add additional information to our ERC721 tokens. We can specify a name, a symbol, and an URI (Uniform Resource Identifier) that can point to a file where we can add even more information in the form of a JSON.
+メータデータエクステンションは、オプションです。 このエクステンションでERC721トークンに、追加の情報を付加することができます。 名前(name)、シンボル(symbol)、URI(統一資源識別子)を明記することで、ファイルを指し示すことでJSONの形式でさらに追加の情報を加えることができます。
 
-## ERC721 Metadata Functions
+## ERC721メタデータ関数
 
 ### name
 
@@ -14,7 +14,7 @@ The function `symbol` (line 21) returns the symbol of the token collection.
 
 The function `tokenURI` (line 26) returns the URI for the token with the id `tokenId`. In this case it’s not the URI of the whole collection but of an individual token in the collection.
 
-## ERC721 Metadata JSON Schema
+## ERC721メタデータJSONスキーマ
 
 The file that the tokenURI points to should conform to the Metadata JSON Schema as it is specified in the <a href="https://eips.ethereum.org/EIPS/eip-721#specification" target="_blank">EIP-721</a>.
 
