@@ -68,17 +68,17 @@ ERC721コントラクトは、次のイベントを発行する必要があり�
 
 ### ApprovalForAll
 
-The `ApprovalForAll` event (line 25) must be emitted when the account with the address `owner` gives or removes the permission (`_approved`) of the account with the address `operator` to manage all its tokens.
+`ApprovalForAll`イベント(25行目)は、アドレス`owner`のアカウントがアドレス`operator`にトークンのすべてを管理する権限(`_approved`)を与えたり削除した場合に発行する必要があります。
 
 ## IERC165
 
-In addition to the ERC721 interface, ERC721 compliant contracts must also implement the ERC165 interface.
+RC721に準拠したコントラクトは、ERC721インターフェースに加え、EERC165インターフェースも実装する必要があります。
 
-With the implementation of the ERC165 interface, contracts can declare the support of specific interfaces. A contract that wants to interact with another contract can then query if the other contract supports this interface before making a transaction e.g. sending tokens to it that they might not support.
+ERC165インターフェースの実装によりコントラクトは、特定のインターフェースのサポートしていることを宣言することができます。 そして、別のコントラクトとやり取りする必要のあるコントラクトは、トランザクションを作成する前に、別のコントラクトがこのインターフェースをサポートしているかをクエリーすることができます(例: トークンの送信をサポートしていないなど)。
 
-Our IERC721 interface here imports (line 6) and inherits (line 11) from the IERC165 interface.
+IERC721インターフェースは、ここ(6行目)でインポートされ、IERC165インターフェースから継承(11行目)されています。
 
-This is how <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/introspection/IERC165.sol" target="_blank">OpenZeppelins implementation</a> of the ERC165 interface looks like:
+ERC165インターフェースの<a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/introspection/IERC165.sol" target="_blank">OpenZeppelinsの実装</a>は、次のようになっています。
 
 ```
 interface IERC165 {
@@ -86,14 +86,14 @@ interface IERC165 {
 }
 ```
 
-For example, the ERC165 identifier for the ERC721 interface as specified in the EIP721 is “0x80ac58cd”. Learn how to calculate an interface identifier and more about the ERC165 in its <a href="https://eips.ethereum.org/EIPS/eip-165" target="_blank">improvement proposal</a>.
+例えば、ERC721インターフェースのERC165の識別子は、EIP721では「0x80ac58cd」として指定されています。 インターフェースの識別子の計算方法や、ERC165についてより詳細に知りたい場合は、 <a href="https://eips.ethereum.org/EIPS/eip-165" target="_blank">改善提案</a>をご覧ください。
 
 ## 他のインターフェース
 
-The <a href="https://eips.ethereum.org/EIPS/eip-721#specification" target="_blank">IERC721TokenReceiver</a> interface must be implemented to accept safe transfers.
+<a href="https://eips.ethereum.org/EIPS/eip-721#specification" target="_blank">IERC721TokenReceiver</a>インターフェースは、安全な送信で受け入れる場合に必要になります。
 
-There are two optional extensions for ERC721 contracts specified in the EIP721:
+EIP721に明記されているERC721コントラクトには、次の2つのオプションのエクステンションがあります。
 
-IERC721Enumerable enables a contract to publish its full list of tokens and make them discoverable.
+IERC721Enumerableは、コントラクトが全トークンの一覧を発行し、発見可能にします。
 
-IERC721Metadata enables a contract to associate additional information to a token. We will have a more detailed look into this in the next section.
+IERC721Metadataは、コントラクトにトークンに追加の情報を関連付けること可能にします。 次のセクションでは、このことについて詳しく学習します。
