@@ -1,12 +1,12 @@
-In this section, we will create our metadata and store it in a decentralized way.
+このセクションでは、メタデータを作成して、分散化された方法で保存します。
 
-IPFS ( InterPlanetary File System) is a peer-to-peer network for storing files in a distributed way. Pinata.cloud is a pinning service that allows users to easily host files on the IPFS network.
+IPFS(InterPlanetary File System)は、ピアツーピアネットワークにファイルを分散して保存します。 Pinata.cloudは、ピンニングサービスと呼ばれ、ユーザーはIPFSネットワークに簡単にファイルをホストすることができます。
 
-We want to host our images and the JSON files with their metadata on IPFS.
+私たちの画像とJSONファイルをメタデータと一緒にIPFSに保存したいと思います。
 
-### Create Image Folder
+### 画像フォルダーの作成
 
-In this example, we will create metadata for three tokens. As you can see below, we create three images that we stored in a folder.
+この例では、3つのトークンのメタデータを作成します。 以下に示すように、3つの画像を作成してフォルダに保存します。
 
 ```
 geo-img
@@ -15,30 +15,30 @@ geo-img
 ├── geo_3.png
 ```
 
-### Register on Pinata
+### Pinataに登録
 
-Now, we want to host these images somewhere so we can point to them in the metadata of our tokens. Let's do it in a decentralized way and use Pinata to host them on IPFS.
+では、これらの画像をどこかにホストして、私たちのトークンのメタデータを指し示すようにします。 分散化された方法を用いるため、Pinataを使用してIPFSに保存します。
 
-First you need an account on Pinata. Go to <a href="https://app.pinata.cloud/register" target="_blank">Pinata.cloud</a> and create an account. On Pinata you can upload up to 1 GB of data for free.
+まず、Pinataのアカウントが必要になります。 <a href="https://app.pinata.cloud/register" target="_blank">Pinata.cloud</a>に移動して、アカウントを作成します。 Pinataでは、1GBまで無料でアップロードできます。
 
-Once you have signed up, you should be in the Pin Manager view.
+サインアップが完了すると、Pin Managerビューに移動します。
 
 <img src="https://i.imgur.com/yKpD65m.png" alt="Pin Manager Pinata" width="300"/>
 
-### Upload Images to IPFS
+### IPFSに画像をアップロード
 
-Click on the upload button and upload the folder with your images.
-Once you've uploaded your folder, you should see the name of your folder and the CID (content identifier) associated with it. If the content in the folder changes, the CID will also change.
+uploadボタンをクリックして、イメージの入ったフォルダをアップロードします。
+フォルダのアップロードが完了すると、フォルダーの名前と、それに関連付けられたCID(Content Identifer)が表示されます。 フォルダの内容が変更されると、CIDも変更されます。
 
-To access your folder on IPFS, enter this address "https://ipfs.io/ipfs/" and add your CID. For our current example, you can access your folder by using: <a href="https://ipfs.io/ipfs/QmTJok2tju9zstjtAqESdZxTiUiFCBAyApHiDVj4maV75P" target="_blank">
+IPFSのフォルダにアクセスするには、アドレス「https://ipfs.io/ipfs/」を入力し、CIDを追加します。 現在の例では、次のようにフォルダにアクセスします。 <a href="https://ipfs.io/ipfs/QmTJok2tju9zstjtAqESdZxTiUiFCBAyApHiDVj4maV75P" target="_blank">
 https://ipfs.io/ipfs/QmTJok2tju9zstjtAqESdZxTiUiFCBAyApHiDVj4maV75P </a>
 
-You can access a specific image by using: <a href="https://ipfs.io/ipfs/QmTJok2tju9zstjtAqESdZxTiUiFCBAyApHiDVj4maV75P/geo_1.png" target="_blank">
+特定の画像は、次のようにアクセスします。 <a href="https://ipfs.io/ipfs/QmTJok2tju9zstjtAqESdZxTiUiFCBAyApHiDVj4maV75P/geo_1.png" target="_blank">
 https://ipfs.io/ipfs/QmTJok2tju9zstjtAqESdZxTiUiFCBAyApHiDVj4maV75P/geo_1.png </a>
 
-### Create JSON files
+### JSONファイルの作成
 
-We create another folder where we store three JSON files.
+別のフォルダを作成して、そこにJSONファイルを保存します。
 
 ```
 geo-json
@@ -47,10 +47,10 @@ geo-json
 ├── 2
 ```
 
-Inside the JSON files, create the metadata for the tokens, like name, description, and image.
-For the image URL, we are going to use the URL of our images on IPFS. You can add additional data if you like; in this example, we added some unique attributes for each token.
+JSONファイルの中に「name」、「description」、「image」などのトークンのメタデータを作成します。
+画像のURLでは、IPFSの画像のURLを使用します。 追加のデータを加えることができます。この例では、各トークンに一意の属性を追加しました。
 
-This is how the JSON for the first token could look:
+1つ目のトークンのJSONは、次のようになります。
 
 ```
 {
@@ -66,7 +66,7 @@ This is how the JSON for the first token could look:
 }
 ```
 
-This is how the JSON for the second token could look:
+2つ目のトークンのJSONは、次のようになります。
 
 ```
 {
