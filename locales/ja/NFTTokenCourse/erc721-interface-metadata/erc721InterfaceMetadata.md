@@ -39,6 +39,6 @@ tokenURIが指し示すファイルは、<a href="https://eips.ethereum.org/EIPS
 }
 ```
 
-ルート要素は、オブジェクト型である必要があります。 This root object should have properties with the keys: name, description, and image that should be all of the type string.
+ルート要素は、オブジェクト型である必要があります。 このルートオブジェクトは、「name」、「description」、「image」をキーに持つ文字列型のプロパティが必要になります。
 
-The ERC721 standard is pretty flexible, the tokenURI does not need to point to a JSON document and the JSON does not need to have all properties and often has additional properties.
+ERC721標準は、柔軟でtokenURIがJSONドキュメントを指し示す必要はなく、JSONがプロパティのすべてを備える必要はありません。また、追加のプロパティも、しばしば持っています。
