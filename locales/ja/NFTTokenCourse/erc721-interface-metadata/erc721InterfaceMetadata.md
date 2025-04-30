@@ -4,19 +4,19 @@
 
 ### name
 
-The function `name` (line 16) returns the name of the token collection. A token collection means all tokens created with your ERC721 token contract implementation. Every token in this collection will have this name, regardless of their tokenId.
+関数`name`(16行目)は、トークンコレクションの名前を返します。 トークンコレクションとは、このERC721トークンコントラクトの実装で作成されたトークンのすべてです。 このコレクションのすべてのトークンには、tokenIdに関わらず名前があります。
 
 ### symbol
 
-The function `symbol` (line 21) returns the symbol of the token collection.
+関数`symbol`(21行目)は、トークンコレクションのシンボルを返します。
 
 ### tokenURI
 
-The function `tokenURI` (line 26) returns the URI for the token with the id `tokenId`. In this case it’s not the URI of the whole collection but of an individual token in the collection.
+関数`tokenURI`(26行目)は、idである`tokenId`のトークンのURIを返します。 このケースでは、コレクションすべてのURIではなく、コレクションの個々のトークンのURIです。
 
 ## ERC721メタデータJSONスキーマ
 
-The file that the tokenURI points to should conform to the Metadata JSON Schema as it is specified in the <a href="https://eips.ethereum.org/EIPS/eip-721#specification" target="_blank">EIP-721</a>.
+tokenURIが指し示すファイルは、<a href="https://eips.ethereum.org/EIPS/eip-721#specification" target="_blank">EIP-721</a>に明記してあるメタデータJSONスキーマに準拠している必要があります。
 
 ```
 {
@@ -39,6 +39,6 @@ The file that the tokenURI points to should conform to the Metadata JSON Schema 
 }
 ```
 
-The root element must be of the type object. This root object should have properties with the keys: name, description, and image that should be all of the type string.
+ルート要素は、オブジェクト型である必要があります。 This root object should have properties with the keys: name, description, and image that should be all of the type string.
 
 The ERC721 standard is pretty flexible, the tokenURI does not need to point to a JSON document and the JSON does not need to have all properties and often has additional properties.
