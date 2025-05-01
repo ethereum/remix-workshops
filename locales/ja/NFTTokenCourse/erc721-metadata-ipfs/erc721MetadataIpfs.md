@@ -81,8 +81,8 @@ JSONファイルの中に「name」、「description」、「image」などの�
 }
 ```
 
-As shown above, the folder in this example is called "geo-json". Inside this folder, we have three JSON files.
-The first JSON file is called "0", the second JSON file is called "1", and the third JSON file is called "2".
+上記のように、この例では、「geo-json」という名前のフォルダがあります。 ファルダの内部には、3つのJSONファイルがあります。
+1つ目のJSONファイルは「0」で、2つ目のJSONファイルは「1」、3つ目のJSONファイルは「2」という名前です。
 
 Make sure that your JSON files don't have a file ending and are named like their corresponding tokenIds.
 In the pin manager on pinata.cloud, click on the upload button and upload the folder with your JSON files.
