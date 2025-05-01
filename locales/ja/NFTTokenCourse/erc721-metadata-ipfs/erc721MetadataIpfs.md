@@ -84,18 +84,17 @@ JSONファイルの中に「name」、「description」、「image」などの�
 上記のように、この例では、「geo-json」という名前のフォルダがあります。 ファルダの内部には、3つのJSONファイルがあります。
 1つ目のJSONファイルは「0」で、2つ目のJSONファイルは「1」、3つ目のJSONファイルは「2」という名前です。
 
-Make sure that your JSON files don't have a file ending and are named like their corresponding tokenIds.
-In the pin manager on pinata.cloud, click on the upload button and upload the folder with your JSON files.
+JSONファイルが拡張子を持っていなく、tokenIdに対応した名前を持っていること確認してください。
+pinata.cloudのPin Managerで、UploadボタンをクリックしてJSONファイルが入ったフォルダをアップロードしてください。
 
-To access your folder on IPFS, enter this address "https://ipfs.io/ipfs/" and add your CID.
-For our current example, you can access your folder by using: <a href="https://ipfs.io/ipfs/QmVrsYxXh5PzTfkKZr1MfUN6PotJj8VQkGQ3kGyBNVKtqp" target="_blank">
+IPFSにある、あなたのフォルダにアクセスするには、アドレス「https://ipfs.io/ipfs/」を入力し、CIDを加えます。
+現在の例では、次のようにフォルダにアクセスします。 <a href="https://ipfs.io/ipfs/QmVrsYxXh5PzTfkKZr1MfUN6PotJj8VQkGQ3kGyBNVKtqp" target="_blank">
 https://ipfs.io/ipfs/QmVrsYxXh5PzTfkKZr1MfUN6PotJj8VQkGQ3kGyBNVKtqp </a>
-This will become our baseURI.
+これがbaseURIになります。
 
-You can access a specific JSON file then by just adding a slash and the tokenId by using: <a href="https://ipfs.io/ipfs/QmVrsYxXh5PzTfkKZr1MfUN6PotJj8VQkGQ3kGyBNVKtqp/0" target="_blank">
+特定のJSONファイルにアクセスすることもできます。それには、次のようにスラッシュとtokenIdを加えます。 <a href="https://ipfs.io/ipfs/QmVrsYxXh5PzTfkKZr1MfUN6PotJj8VQkGQ3kGyBNVKtqp/0" target="_blank">
 https://ipfs.io/ipfs/QmVrsYxXh5PzTfkKZr1MfUN6PotJj8VQkGQ3kGyBNVKtqp/0 </a>
 
-In the contract, replace the baseURI with your own baseURI. In this example, the baseURI consists of the URL
-"https://ipfs.io/ipfs/", the CID containing the JSON files, and a slash at the end "/".
+このコントラクトでは、baseURIを自分のbaseURIに置き換えます。 この例では、baseURIは、「https://ipfs.io/ipfs/」とJSONファイルに含まれているCID、そして最後にスラッシュで構成されています。
 
-An individual tokenURI will now be created for each token by adding the tokenId to the baseURI — exactly what we did manually in the example above to access the JSON file.
+上記の例でJSONファイルにアクセスするためにマニュアルで行ったこの作業によって、baseURIにtokenIdを加えることで、個々のtokenURIが各トークンに作成されます。
