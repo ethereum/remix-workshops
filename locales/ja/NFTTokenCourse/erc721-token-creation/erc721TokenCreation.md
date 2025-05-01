@@ -1,10 +1,10 @@
-In this contract, we use an ERC721 token contract implementation from OpenZeppelin (line 4).
+このコントラクトでは、OpenZeppelin(4行目)によって実装されたERC721トークンコントラクトを使用します。
 
-Have a look at their implementation of a <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol" target="_blank">ERC721 contract</a>. Apart from the functionality specified in the ERC721 standard, the contract provides additional functions which we will see in a bit.
+<a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol" target="_blank">ERC721コントラクト</a>の実行を見てみましょう。 ERC721標準に規定されている機能とは別に、このコントラクトでは、後ほど使う追加の機能も提供しています。
 
 ## myToken
 
-We create our own contract called MyToken (line 7), which inherits (line 7) the functionality from the OpenZepplin `ERC721` token contract implementation and `Ownable` that we imported (line 4). If you don't remember the Ownable contract module, have a look at the ERC20 extensions section.
+MyToken(7行目)という独自のコントラクトを作成し、OpenZepplinの`ERC721`トークンコントラクト実装から機能を継承します(7行目)。そして、`Ownable`をインポートします(4行目)。 Ownableモジュールについて知らない場合は、ERC20のエクステンションセクションでご確認ください。
 
 This ERC721 implementation makes use of the IERC721Metadata extension that is specified in the EIP. Our contract inherits the functions `name()` and `symbol()`
 and has a constructor that allows their values to be set during the deployment of the contract (line 8).
@@ -27,9 +27,9 @@ The safeMint function is part of the ERC721 implementation of OpenZeppelin and l
 
 In the next section, we will see how we can create and host the metadata for our NFTs.
 
-## ⭐️ Assignment
+## ⭐️ 演習
 
-1. Rename your contract to `Geometry`.
-2. Rename your token to `Geometry`.
-3. Change the symbol of your token to `GEO`.
-4. Change the `_baseURI` to <a href="https://ipfs.io/ipfs/QmVrsYxXh5PzTfkKZr1MfUN6PotJj8VQkGQ3kGyBNVKtqp/" target="_blank">https://ipfs.io/ipfs/QmVrsYxXh5PzTfkKZr1MfUN6PotJj8VQkGQ3kGyBNVKtqp/</a>.
+1. コントラクトを`Geometry`という名前に変更してみましょう。
+2. トークンを`Geometry`とう名前に変更してみましょう。
+3. トークンのシンボルを`GEO`に変更してみましょう。
+4. `_baseURI`を<a href="https://ipfs.io/ipfs/QmVrsYxXh5PzTfkKZr1MfUN6PotJj8VQkGQ3kGyBNVKtqp/" target="_blank">https://ipfs.io/ipfs/QmVrsYxXh5PzTfkKZr1MfUN6PotJj8VQkGQ3kGyBNVKtqp/</a>に変更してみましょう。
