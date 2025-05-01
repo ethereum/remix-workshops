@@ -2,4 +2,4 @@
 
 独自のNFT(非代替トークン)を作成する方法を学びます。
 
-Developed by the p2p learning platform https://dacade.org.
+p2p学習プラットフォームhttps://dacade.orgによって開発されました。
