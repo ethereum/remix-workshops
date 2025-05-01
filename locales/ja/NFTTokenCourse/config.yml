@@ -1,11 +1,11 @@
 ---
 id: nftTokenCourse
-name: Solidity NFT Course
+name: Solidity NFTコース
 summary: Learn how to create your own NFT tokens. Developed by the p2p learning platform https://dacade.org.
 level: 1
 tags:
   - Solidity
-  - Tokens
+  - トークン
   - NFT
 steps:
   - 
