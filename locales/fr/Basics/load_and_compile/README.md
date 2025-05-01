@@ -11,7 +11,7 @@ Let's load a file from the File Explorer into the Editor.
 4. In the icon panel, click the **Solidity Compiler** ![solidity compiler icon](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/load_and_compile/images/solidity1.png "solidity compiler icon"). The Solidity compiler should now be in the side panel.
 
 5. Click the compile button.
-   ![compile 2\_owner](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/load_and_compile/images/compile2owner.png "compile 2_Owner")
+  ![compile 2_owner](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/load_and_compile/images/compile2owner.png "compile 2_Owner")
 
 6. Compiling can also be triggered by hitting **CTRL + S**.
 
