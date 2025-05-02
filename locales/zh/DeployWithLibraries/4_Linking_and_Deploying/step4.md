@@ -11,14 +11,15 @@
 
 - 在已编译合同列表中选择`aLib`库并点击`deploy`按钮。
 
-  ![Choose aLib](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/4_Linking_and_Deploying/images/contract_alib.png "Choose aLib")
+ ![Choose aLib](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/4_Linking_and_Deploying/images/contract_alib.png "Choose aLib")
 
 - 单击剪贴板图标以复制库的地址。
 
-  ![Copy lib1](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/4_Linking_and_Deploying/images/alib_copy.png "Copy")
+ ![Copy lib1](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/4_Linking_and_Deploying/images/alib_copy.png "Copy")
 
 - 将其粘贴到sample合约的元数据JSON中。
 
 - 重新选择`Run transaction`模块中的`sampleContract`合约并点击deploy按钮。
 
 - 现在应该可以成功部署。
+
