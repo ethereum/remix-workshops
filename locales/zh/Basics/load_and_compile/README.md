@@ -11,7 +11,7 @@
 4. 在图标面板中，单击**Solidity 编译器**![solidity compiler icon](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/load_and_compile/images/solidity1.png "solidity compiler icon")。 Solidity 编译器现在应该位于侧边栏中。
 
 5. 点击编译按钮。
-   ![compile 2\_owner](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/load_and_compile/images/compile2owner.png "compile 2_Owner")
+  ![compile 2_owner](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/load_and_compile/images/compile2owner.png "compile 2_Owner")
 
 6. 也可以通过按**CTRL + S**来触发编译过程。
 
