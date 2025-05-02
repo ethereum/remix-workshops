@@ -1,7 +1,7 @@
 ## 访问已部署合约中的函数
 
 1. 合约部署成功后，它将显示在 Deploy and Run 插件的底部。 单击插入符号打开合约 - 然后插入符号会指向下方。
-   ![deploy contract](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interacting/images/instance.png "deployed contract")
+  ![deploy contract](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interacting/images/instance.png "deployed contract")
 
 2. 这个合约有两个函数。  要单独输入参数，请单击changeOwner右侧的插入符号（下面以红色框出）。 在展开视图中，每个参数都有自己的输入框。
 
@@ -16,4 +16,4 @@
 5. 在 Remix VM 中，您无需批准交易即可进行操作。  当使用更真实的测试环境或使用主网时 - 您需要批准交易才能使其通过。 批准交易需要花费 gas。
 
 6. 选择公共网络不是在 Remix 中完成，而是在你的浏览器钱包中。  环境标题右侧有一个插头图标，链接到 chainlist.org，在那里可以获取与所需链互动所需规格。
-   ![chainlist](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interacting/images/chainlist.png "chainlist")
+  ![chainlist](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interacting/images/chainlist.png "chainlist")
