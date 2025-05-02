@@ -39,3 +39,4 @@ En la línea 25, definimos una estructura llamada "ExactInputParams". Esta estru
 - **`fecha límite`**: Similar a la anterior, una marca de tiempo con la que se debe procesar la transacción.
 - **`uint amountIn`**: La cantidad del token de entrada.
 - **`uint amountOutMinimum`**: La cantidad mínima del token de salida que el remitente espera recibir.
+
