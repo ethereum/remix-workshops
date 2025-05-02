@@ -13,7 +13,7 @@ Ayuda de las siguientes maneras:
 - \*\*Evite la repetición de código en la cadena de bloques. \*\*Los cálculos pesados son caros porque cada nodo tendrá que realizarlos, esto, por supuesto, ralentiza la red.
 
 - **Desarrollar contratos actualizables (versionados)**
-  Cuando se implementa el contrato, es inmutable. Al rediseñar el código en diferentes contratos, es posible permitir actualizaciones lógicas mientras se mantiene el almacenamiento igual.
+ Cuando se implementa el contrato, es inmutable. Al rediseñar el código en diferentes contratos, es posible permitir actualizaciones lógicas mientras se mantiene el almacenamiento igual.
 
 ## Ejemplo de costo de gas
 
