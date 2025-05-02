@@ -25,8 +25,8 @@
 8. 切换到您授予投票权的其中一个地址，并为提案1进行投票（在vote函数旁边的文本框中输入1）。然后切换到另一个地址，并使用该地址为提案2进行投票。  （在vote函数旁边的文本框中输入 **1**）  然后切换到另一个地址，并使用该地址为提案 **2** 进行投票。
 
 9. 打开模块中的 **交易记录** - 单击这个插入符。 单击 **记录交易** 中的硬盘图标以保存您的步骤。
-   通过单击插入符号打开模块中的交易记录，点击保存图标来保存上述步骤。
-   ![recorder](https://github.com/ethereum/remix-workshops/blob/master/Recorder/2_Record/images/recorder.png?raw=true "recorder")
+  通过单击插入符号打开模块中的交易记录，点击保存图标来保存上述步骤。
+  ![recorder](https://github.com/ethereum/remix-workshops/blob/master/Recorder/2_Record/images/recorder.png?raw=true "recorder")
 
 10. 你会得到一个模态窗口，告诉你它想要保存名为**scenario.json**的文件。点击“确定”。  点击确定。
 
