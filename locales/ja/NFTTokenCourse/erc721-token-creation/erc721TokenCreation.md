@@ -6,14 +6,13 @@
 
 MyToken(7行目)という独自のコントラクトを作成し、OpenZepplinの`ERC721`トークンコントラクト実装から機能を継承します(7行目)。そして、`Ownable`をインポートします(4行目)。 Ownableモジュールについて知らない場合は、ERC20のエクステンションセクションでご確認ください。
 
-This ERC721 implementation makes use of the IERC721Metadata extension that is specified in the EIP. Our contract inherits the functions `name()` and `symbol()`
-and has a constructor that allows their values to be set during the deployment of the contract (line 8).
-In this case, we are going to use the default values. We name our token the same as the contract `"MyToken"` and make `"MTK"` its symbol.
+ERC721実装では、EIPで規定されているIERC721Metadataエクステンションを使用しています。 このコントラクトでは、関数 `name()`と`symbol()`が継承し、コントラクトのデプロイ中にコンストラクタが値を設定します(8行目)。
+このケースでは、デフォルト値を使用します。 コントラクト`"MyToken"`と同じようにトークンに名前を付け、`"MTK"`とうシンボルで作ります。
 
 ### Base URI
 
-With an ERC721 contract, we are able to mint various tokens, each with its own tokenId. As we saw in the IERC721Metadata interface, each token can have its own `tokenURI`, which typically points to a JSON file to store metadata like name, description, and image link.
-If a contract mints multiple tokens, ERC721 implementations often use the same URI as a base (`baseURI`) for all tokens and only differentiate them by adding their unique `tokenId` at the end via concatenation. In the next part, we will see what this looks like in practice.
+ERC721コントラクトでは、さまざまなトークンをミントすることが出来、各トークンはtokenIdを持ちます。 IERC721Metadataインターフェースで確認したように、各トークンは自身の`tokenURI`を持っており、基本的にはJSONファイルを指し示し、そこに「name」、「description」、「imageのリンク」などのメタデータを格納します。
+コントラクトが複数のトークンをミントする場合、ERC721実装では、よく同じベースURI(`baseURI`)をトークンのすべてで使用します。それの末尾に一意の`tokenId`を連結することで区別します。 次のパートで、これが実際にどのようになっているかを学びます。
 
 In this example, we are storing our data on IPFS — more on that in the next section. Our baseURI is <a href="https://ipfs.io/ipfs/QmUYLUKwqX6CaZxeiYGwmAYeEkeTsV4cHNZJmCesuu3xKy/" target="_blank">https://ipfs.io/ipfs/QmUYLUKwqX6CaZxeiYGwmAYeEkeTsV4cHNZJmCesuu3xKy/</a> (line 11).
 Through concatenation the tokenURI for the token with the id 0 would be <a href="https://ipfs.io/ipfs/QmUYLUKwqX6CaZxeiYGwmAYeEkeTsV4cHNZJmCesuu3xKy/0" target="_blank">https://ipfs.io/ipfs/QmUYLUKwqX6CaZxeiYGwmAYeEkeTsV4cHNZJmCesuu3xKy/0</a> , the tokenURI for the token with the id 1 would be <a href="https://ipfs.io/ipfs/QmUYLUKwqX6CaZxeiYGwmAYeEkeTsV4cHNZJmCesuu3xKy/1" target="_blank">https://ipfs.io/ipfs/QmUYLUKwqX6CaZxeiYGwmAYeEkeTsV4cHNZJmCesuu3xKy/1</a>, and so on.
