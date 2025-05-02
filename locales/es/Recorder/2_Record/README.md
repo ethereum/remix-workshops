@@ -25,7 +25,7 @@ Vamos a:
 8. Cambie a una de las direcciones a las que dio derecho a votar y votar por la propuesta **1**.  (Pon **1** en el cuadro de texto junto a la función de voto).  Y luego cambia a la otra dirección y vota por la propuesta **2** con esa.
 
 9. Abra la sección **Transacciones registradas** del módulo, haciendo clic en el sin. Haga clic en el icono del disco duro en la sección **Transacciones grabadas** para guardar sus pasos.
-   ![recorder](https://github.com/ethereum/remix-workshops/blob/master/Recorder/2_Record/images/recorder.png?raw=true "recorder")
+  ![recorder](https://github.com/ethereum/remix-workshops/blob/master/Recorder/2_Record/images/recorder.png?raw=true "recorder")
 
 10. Obarás una ventana modal que te dice que quiere guardar un archivo llamado **scenario.json**.  Haz clic en Aceptar.
 
