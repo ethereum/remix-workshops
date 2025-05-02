@@ -1,7 +1,7 @@
 ## Acceder a las funciones en un contrato desplegado
 
 1. Cuando un contrato se ha desplegado con éxito, aparecerá en la parte inferior del plugin Desplegar y Ejecutar. Abre el contrato haciendo clic en el cursor - para que el cursor apunte hacia abajo.
-   ![desplegar contrato](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interacting/images/instance.png "contrato desplegado")
+  ![desplegar contrato](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interacting/images/instance.png "contrato desplegado")
 
 2. Hay dos funciones en este contrato.  Para introducir los parámetros individualmente, haciendo clic en el cursor a la derecha del changeOwner (descrito en rojo abajo). En la vista ampliada, cada parámetro tiene su propia casilla de entrada.
 
@@ -16,4 +16,4 @@ Si este contrato hubiera importado otros contratos, las funciones de los contrat
 5. En la MV Remix no necesita aprobar una transacción.  Cuando se utiliza un entorno de prueba más realista o cuando se utiliza la red principal - será necesario aprobar las transacciones para que se realicen. Aprobar una transacción cuesta gas.
 
 6. La elección de una red pública no se hace en Remix sino en tu cartera de navegador.  Hay un icono de enchufe a la derecha del título de Entorno que enlaza a chainlist.org donde se pueden obtener las especificaciones de la cadena con la que se quiere interactuar.
-   ![chainlist](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interacting/images/chainlist.png "lista de cadenas")
+  ![chainlist](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interacting/images/chainlist.png "lista de cadenas")
