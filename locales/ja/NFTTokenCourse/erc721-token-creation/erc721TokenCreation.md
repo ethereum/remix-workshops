@@ -11,20 +11,20 @@ ERC721実装では、EIPで規定されているIERC721Metadataエクステン�
 
 ### Base URI
 
-ERC721コントラクトでは、さまざまなトークンをミントすることが出来、各トークンはtokenIdを持ちます。 IERC721Metadataインターフェースで確認したように、各トークンは自身の`tokenURI`を持っており、基本的にはJSONファイルを指し示し、そこに「name」、「description」、「imageのリンク」などのメタデータを格納します。
-コントラクトが複数のトークンをミントする場合、ERC721実装では、よく同じベースURI(`baseURI`)をトークンのすべてで使用します。それの末尾に一意の`tokenId`を連結することで区別します。 次のパートで、これが実際にどのようになっているかを学びます。
+ERC721コントラクトでは、さまざまなトークンをミントすることができ、各トークンはtokenIdを持ちます。 IERC721Metadataインターフェースで確認したように、各トークンは自身の`tokenURI`を持っており、基本的にはJSONファイルを指し示し、そこに「name」、「description」、「imageのリンク」などのメタデータを格納します。
+コントラクトが複数のトークンをミントする場合、ERC721実装では、よく同じベースURI(`baseURI`)をすべてのトークンで使い、それの末尾に一意の`tokenId`を連結することで区別します。 次のパートで、これが実際にどのようになっているかを学びます。
 
-In this example, we are storing our data on IPFS — more on that in the next section. Our baseURI is <a href="https://ipfs.io/ipfs/QmUYLUKwqX6CaZxeiYGwmAYeEkeTsV4cHNZJmCesuu3xKy/" target="_blank">https://ipfs.io/ipfs/QmUYLUKwqX6CaZxeiYGwmAYeEkeTsV4cHNZJmCesuu3xKy/</a> (line 11).
-Through concatenation the tokenURI for the token with the id 0 would be <a href="https://ipfs.io/ipfs/QmUYLUKwqX6CaZxeiYGwmAYeEkeTsV4cHNZJmCesuu3xKy/0" target="_blank">https://ipfs.io/ipfs/QmUYLUKwqX6CaZxeiYGwmAYeEkeTsV4cHNZJmCesuu3xKy/0</a> , the tokenURI for the token with the id 1 would be <a href="https://ipfs.io/ipfs/QmUYLUKwqX6CaZxeiYGwmAYeEkeTsV4cHNZJmCesuu3xKy/1" target="_blank">https://ipfs.io/ipfs/QmUYLUKwqX6CaZxeiYGwmAYeEkeTsV4cHNZJmCesuu3xKy/1</a>, and so on.
+この例では、私たちのNFTのデータをIPFSに保存しています。詳細は次のセクションで説明します。 このbaseURIは、「<a href="https://ipfs.io/ipfs/QmUYLUKwqX6CaZxeiYGwmAYeEkeTsV4cHNZJmCesuu3xKy/" target="_blank">https://ipfs.io/ipfs/QmUYLUKwqX6CaZxeiYGwmAYeEkeTsV4cHNZJmCesuu3xKy/</a>」(11行目)です。
+トークンのid「0」とtokenURIを連結させると「<a href="https://ipfs.io/ipfs/QmUYLUKwqX6CaZxeiYGwmAYeEkeTsV4cHNZJmCesuu3xKy/0" target="_blank">https://ipfs.io/ipfs/QmUYLUKwqX6CaZxeiYGwmAYeEkeTsV4cHNZJmCesuu3xKy/0</a>」 となります。トークンのid「1」とtokenURIを連結させると同様に「ZJmCesuu3xKy/1" target="_blank">https://ipfs.io/ipfs/QmUYLUKwqX6CaZxeiYGwmAYeEkeTsV4cHNZJmCesuu3xKy/1</a>」になります。
 
-When using IPFS and you run into "504 Gateway Time-out" errors, you might have to wait and retry until the data is available.
+IPFSの使用時に「504 Gateway Time-out」エラーが発生した場合、データが利用可能になるまで待ち、再度リトライする必要があります。
 
 ### safeMint
 
-With the safeMint function (line 14) we enable the owner to create new tokens with a dedicated token id after contract deployment.
-The safeMint function is part of the ERC721 implementation of OpenZeppelin and lets us safely mint a token with the id `tokenId` to the account with the address `to`. For access control, we use the `onlyOwner` modifier from the Ownable access control contract module that we imported (line 5).
+safeMint関数(14行目)では、所有者が新しいトークンを専用のトークンIDで作成する前にコントラクトをデプロイします。
+safeMint関数は、OpenZepellingのERC721実装の一部で、安全にidである`tokenId`でアドレス`to`のアカウントでトークンをミントします。 アクセスコントロールで`onlyOwner` modifierを使用しています。これは、インポートしたOwnableアクセスコントロール・コントラクト・モジュール(5行目)です。
 
-In the next section, we will see how we can create and host the metadata for our NFTs.
+次のセクションでは、このNFTのメタデータを作成してホストする方法を学びます。
 
 ## ⭐️ 演習
 
