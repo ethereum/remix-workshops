@@ -29,7 +29,7 @@
 3. 切换到文件浏览器 ![File Explorer](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_Generate_Metadata/remix_file_explorer.png "File Explorer")
 
 4. 导航到新创建的JSON文件。
-   - 它应该在以下文件夹中：
+ - 它应该在以下文件夹中：
 
 **browser/.learneth/DeployWithLibraries/2_Generate_Metadata/artifacts/**
 
