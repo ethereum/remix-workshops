@@ -11,7 +11,7 @@ Vamos a cargar un archivo del Explorador de archivos en el editor.
 4. En el panel de iconos, haz clic en el **Compilador de Solidity** ![solidity compiler icon](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/load_and_compile/images/solidity1.png "solidity compiler icon""). Ahora el compilador de Solidity debería estar en el panel lateral.
 
 5. Haga clic en el botón de compilación.
-   ![compile 2\_owner](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/load_and_compile/images/compile2owner.png "compile 2_Owner")
+  ![compile 2_owner](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/load_and_compile/images/compile2owner.png "compile 2_Owner")
 
 6. También se puede activar la compilación pulsando **CTRL + S**.
 
