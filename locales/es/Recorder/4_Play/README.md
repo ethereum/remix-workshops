@@ -5,4 +5,4 @@
 2. Verás otra instancia del contrato desplegada. Ábrelo.
 
 3. Haz clic en la función de propuesta ganadora y deberías ver ahora que la propuesta 1 ganó.
-   Debería imprimirse: **0: uint256: winningProposal_ 1**
+  Debería imprimirse: **0: uint256: winningProposal_ 1**
