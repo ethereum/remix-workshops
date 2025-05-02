@@ -29,7 +29,7 @@ Vamos a configurar Remix para generar el **archivo de metadatos**.
 3. Cambia al Explorador de Archivos ![File Explorer](https://github.com/ethereum/remix-workshops/raw/master/DeployWithLibraries/2_Generate_Metadata/remix_file_explorer.png "File Explorer")
 
 4. Navega hasta los archivos JSON recién creados.
-   - Debería estar en la carpeta:
+ - Debería estar en la carpeta:
 
 **browser/.learneth/DeployWithLibraries/2_Generate_Metadata/artifact/**
 
