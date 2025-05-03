@@ -1,4 +1,4 @@
-# Editing a scenario
+# シナリオの編集
 
 Here's the first few lines of the scenario that I recorded.  The addresses on my machine will be different from your's.
 
@@ -35,9 +35,9 @@ For example here is a bit of the scenario.json a bit further down where proposal
     },
 ```
 
-Let's edit this so that another proposal wins in the playback.
+再生時に別の提案が勝つように、これを編集しましょう。
 
-Change the **parameters** array which now is:
+**parameters** 配列を変更します。現在は次のようになっています。
 
 ```
 "parameters": [
@@ -45,7 +45,7 @@ Change the **parameters** array which now is:
         ]
 ```
 
-to:
+これを以下のように変更します。
 
 ```
 "parameters": [
