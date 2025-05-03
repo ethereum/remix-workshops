@@ -1,32 +1,32 @@
-# Setting up a tedious series of steps
+# 面倒な一連のステップをセットアップします
 
-## Following this could get tedious but that's the point.
+## 次のステップは、面倒ですが要点となります。
 
-We are going to:
+以下のことをしていきます。
 
-- Deploy a voting contract where there are 3 proposals input in the constructor.
-- Give voting privileges to 2 additional address (so we have a total of 3 voting addresses).
-- Have one address vote for proposal 1 (0-based index) and the other two vote for proposal 2.
+- 投票コントラクトをデプロイします。コンストラクタに3つの提案の入力があります。
+- 投票権を追加で2つのアドレスに与えます(これが合計で3つの投票アドレスがある理由です)。
+- 1つのアドレスが提案1(0ベースのインデックス)に投票し、他の2つのアドレスが提案2に投票します。
 
-1. Take the 3_Ballot.sol from the sample solidity files and compile it.  Then go to the **Deploy & Run** Module.
+1. サンプルのsolidityファイルから 3_Ballot.solを選んでコンパイルします。  次に、**Deploy & Run** モジュールに移動します。
 
-2. Select the **JavaScript VM** Environment.
+2. **JavaScript VM** 環境を選択します。
 
-3. In the constructor's parameter - put in **["0x5031000000000000000000000000000000000000000000000000000000000000", "0x5032000000000000000000000000000000000000000000000000000000000000", "0x5033000000000000000000000000000000000000000000000000000000000000"]** Then click the **Deploy** button.
+3. コンストラクタのパラメータに **["0x5031000000000000000000000000000000000000000000000000000000000000", "0x5032000000000000000000000000000000000000000000000000000000000000", "0x5033000000000000000000000000000000000000000000000000000000000000"]** を入力し、**Deploy** ボタンをクリックします。
 
-4. Open up the deployed contract.
+4. デプロイしたコントラクトを開きます。
 
-5. In the **vote** function put in 2.  This means that you as the msg.sender & chairperson are voting for proposal at position 2, which is the last proposal in our list.
+5. **vote** 関数に2を入力します。  これは、あなたが「msg.sender」でかつ「chairperson」として、このリストの最後の提案である位置2の提案に投票していることを意味します。
 
-6. Now you need to give other addresses the right to vote.  Select another address in the **account** pulldown and copy it and then **go back to the 1st address**.  Paste the copy address into the textbox next to the giveRightToVote function.  And again, select another address and copy it and **then go back to the 1st address** again and paste it into giveRightToVote.
+6. 現在、あなたは他のアドレスに投票権を与える必要があります。  **account** のプルダウンで、もう一つのアドレスを選び、それをコピーしてから**最初のアドレスに戻ります**。  コピーしたアドレスをgiveRightToVote関数の隣のテキストボックスにペーストします。  もう一度、別のアドレスを選択してコピーしてから**最初のアドレスに戻り** 、それをgiveRightToVoteにペーストします。
 
-7. Now you have 3 addresses with the right to vote.
+7. これで、3つのアドレスに投票権があります。
 
-8. Switch to one of the addresses that you gave the right to vote and vote for proposal **1**.  (Put **1** in the textbox next to the vote function).  And then switch to the other address and vote for proposal **2** with that one.
+8. 投票権を与えたアドレスの内の1つに切り替えて、提案 **1** に投票します  (vote関数の隣のテキストボックスに **1** を入力します)。  そして再度、他のアドレスに切り替えて、そのアドレスで提案 **2**に投票します。
 
-9. Open up the **Transactions recorded** section of the module - by clicking on the caret. Click the hard disk icon in the **Transactions recorded** section to save your steps.
-   ![recorder](https://github.com/ethereum/remix-workshops/blob/master/Recorder/2_Record/images/recorder.png?raw=true "recorder")
+9. モジュールの **Transactions recorded** セクションをキャレットをクリックして開きます。  **Transactions recorded** にあるハードディスクのアイコンをクリックして、ステップを保存します。
+  ![recorder](https://github.com/ethereum/remix-workshops/blob/master/Recorder/2_Record/images/recorder.png?raw=true "recorder")
 
-10. You will get a modal window that tells you it wants to save a file called **scenario.json**.  Click OK.
+10. モーダルウィンドウが立ち上がり、 **scenario.json** というファイルを保存するか確認をしてきます。  OKをクリックします。
 
-11. Click on the function **winningProposal** to confirm that the final proposal won - which is the proposal at position 2 in the array. **0: uint256: winningProposal_ 2**
+11. 関数 **winningProposal** をクリックして、どの最終提案が勝利したかを確認します。勝利したのは、配列の位置2にある提案となります。 **0: uint256: winningProposal_ 2**
