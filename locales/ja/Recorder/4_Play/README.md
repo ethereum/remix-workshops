@@ -1,8 +1,8 @@
-# Playing a scenario
+# シナリオの再生
 
-1. Click the play icon to the right of the floppy disk icon to play the steps you did.
+1. フロッピーディスクアイコンの右にあるPlayアイコンをクリックして、実行したステップを再生します。
 
-2. You'll see another instance of the contract deployed. Open it up.
+2. デプロイされたコントラクトの別のインスタンスが確認できます。 これを開いてみます。
 
-3. Click the winningProposal function and you should see now that proposal 1 won.
-   It should print out: **0: uint256: winningProposal_ 1**
+3. winningProposal関数をクリックして、提案1が勝ったことを確認します。
+  次のような出力が得られます: **0: uint256: winningProposal_ 1**
