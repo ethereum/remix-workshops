@@ -1,24 +1,24 @@
-## Querying the Blockchain
+## ブロックチェーンに対して問い合わせを行う
 
-In this tutorial, we'll run a script that queries the blockchain using a JavaScript library.
+このチュートリアルでは、JavaScriptライブラリを使用したスクリプトを実行してブロックチェーンに対して問い合わせを行います。
 
-This means that instead of using the Remix GUI or a block explorer like Etherscan, we'll use a script in the editor and will run it from the terminal.
+Remix GUIやEtherscanのようなブロックエクスプローラを使う代わりに、エディタでスクリプトを用いて、ターミナルから実行します。
 
-The JS libraries that are used the most for interacting with the blockchain are web3.js & ethers.js.
+JSライブラリでブロックチェーンとやり取りをするのに最も使用されているのは、web3.jsとethers.jsです。
 
-Let's begin with a simple web3.js example, queryBlockNum.js.
+シンプルなweb3.jsおよびqueryBlockNum.jsから始めてみましょう。
 
-The script's call to web3.js is wrapped in a self-executing async function that contains a try/catch block.
+このweb3.jsのスクリプト呼び出しは、try/catchブロックを含む自己実行型の非同期関数でラップされています。
 
-We'll query the current blocknumber with:
+現在のブロック番号を以下のコードで問い合わせます。
 `let blockNumber = await web3.eth.getBlockNumber()`
 
-Note that the object `web3` is injected by Remix. For more info on web3.js, check their docs, <a href="https://web3js.readthedocs.io/" target="_blank">https://web3js.readthedocs.io</a>.
+オブジェクト`web3`は、Remixによって注入されることにご注意ください。 より詳細な情報については、web3.jsのドキュメント「<a href="https://web3js.readthedocs.io/" target="_blank">https://web3js.readthedocs.io</a>」を参照してください。
 
-To use web3.js or ethers.js, you need to select the **Injected Web3** or **Web3 Provider** environment in the **Deploy & Run** module.  Scripts don't currently work with the JSVM. **If you try, you'll get an error.**
+web3.jsまたはethers.jsを使用するには、 **Deploy & Run** モジュールにある **Injected Web3** または  **Web3 Provider** 環境を選択する必要があります。  スクリプトは、現在 JSVM で動作していません。 **これで試すと、エラーが発生します。**
 
-So for this example choose **Injected Web3** in the Deploy & Run module and have Metamask installed.
+この例では、Deploy & Runモジュールで **Injected Web3** を選択し、MetaMaskをインストールする必要があります。
 
-From the terminal, execute `remix.execute()`. This command will execute the current JavaScript file with the line `let blockNumber = await web3.eth.getBlockNumber()`.
+ターミナルで、`remix.execute()`を実行します。 このコマンドにより、行`let blockNumber = await web3.eth.getBlockNumber()`を持つ現在のJavaScriptファイルが実行されます。
 
-In the console, you should see the current block number of the chain that metamask is connected to.
+コンソールには、MetaMaskが接続しているチェーンの現在のブロック番号が表示されます。
