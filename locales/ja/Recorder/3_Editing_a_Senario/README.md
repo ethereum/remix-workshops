@@ -1,6 +1,6 @@
 # シナリオの編集
 
-Here's the first few lines of the scenario that I recorded.  The addresses on my machine will be different from your's.
+これが、レコードしたシナリオの最初の数行です。  私のマシン上のアドレスとあなたのマシン上のアドレスは、異なるものとなります。
 
 ```
 {
@@ -11,7 +11,7 @@ Here's the first few lines of the scenario that I recorded.  The addresses on my
     }
 ```
 
-So if you wanted to play this scenario in another testnet, you'd need to change these addresses to address that you have test ETH on so that you could pay for the transactions.  But other than swapping out the addresses, you can quickly run this on other nets.
+そのため、このシナリオを別のテストネットで再生したい場合は、これらのアドレスを、テスト用のETHを持っているあなたのアドレスに変更して、トランザクションで支払ができるようにします。  But other than swapping out the addresses, you can quickly run this on other nets.
 
 And you might change the parameters for the functions.
 
