@@ -11,11 +11,11 @@
     }
 ```
 
-そのため、このシナリオを別のテストネットで再生したい場合は、これらのアドレスを、テスト用のETHを持っているあなたのアドレスに変更して、トランザクションで支払ができるようにします。  But other than swapping out the addresses, you can quickly run this on other nets.
+そのため、このシナリオを別のテストネットで再生したい場合は、これらのアドレスを、テスト用のETHを持っているあなたのアドレスに変更して、トランザクションで支払ができるようにします。  アドレスを交換するのは面倒ですが、これで素早く他のネットワークでも実行できます。
 
-And you might change the parameters for the functions.
+次に、関数のパラメータを変更したい場合もあるかもしれません。
 
-For example here is a bit of the scenario.json a bit further down where proposal 2 was voted for by one of the addresses:
+例えば、scenario.jsonの一部が以下にあります。少し下の方に、1つのアドレスによって提案2が投票されている部分があります。
 
 ```
 {
