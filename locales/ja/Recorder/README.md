@@ -1,3 +1,3 @@
-## Get yourself Remixing!
+## 自分自身をRemixしましょう!
 
-The recorder is used for recording a set of transactions in the Deploy & Run module, editing their parameters and then playing them back in another context.  It really is the remix of Remix!
+Recoderは、「Deploy & Run」モジュール内のトランザクションのセットを記録して、パラメータを編集した後、別のコンテキストで再生することができます。  これはまさにRemixをRemixすることにです!
