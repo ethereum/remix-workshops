@@ -1,36 +1,36 @@
-# This is a repo of tutorials for the Remix's LearnEth Plugin
+# これはRemixのLearnEthプラグインのチュートリアルのリポジトリです
 
-### To use these tutorials:
+### チュートリアルの使用方法
 
-**1. Open Remix**
+**1. Remixを開く**
 
 https://remix.ethereum.org
 
-**2. In the plugin manager activate LEARNETH**
+**2. プラグインマネージャでLEARNETHを有効にする**
 
-**3. Go to the Learneth plugin and these tutorials will load by default**
+**3. LearnEthプラグインに移動すると、デフォルトでこれらのチュートリアルが読み込まれます**
 
-**4. You may need to sign into Github especially during an in-person workshop**
+\*\*4. 各自で取り組む必要のあるワークショップにおいては、GitHubにサインインしなければならない場合があります。
 
-Github will block too many requests from the same location, unless you are signed into Github and have input your token.  Generally, this is only an issue during in person workshops, when there can be many requests from the same location.
+GitHubでは、サインインせずに同じ場所から大量のリクエストが来た場合にブロックされます。そのため、サインインしてトークンを使用します。  一般的に、同じ場所から多数のリクエストが発生する、各自で取り組むワークショップでこれが問題になります。
 
-To input your Github token:
+GitHubトークンの入力方法:
 
 ```
-- In one browser window - go to https://remix.ethereum.org and go to the settings tab
-- In another browser window go to: 
-
+- ブラウザウィンドウの1つで https://remix.ethereum.org に移動して、settingタブを開きます。
+- 別のブラウザウィンドウを開いて、次のリンクに移動します。
 https://github.com/settings/tokens 
 
-and create a new token and save it in Remix in the you just opened on the settings tab.
+新しいトークンを作成し、Remixで開いているsettingタブ内に保存してください。
 ```
 
 ---
 
-### Write your own tutorials for LEARNETH:
+### LEARNETHでチュートリアルを作成:
 
-See this site for instructions:
+次のサイトにある手順をご確認ください:
 
 https://remix-learneth-plugin.readthedocs.io/en/latest/index.html#creating-tutorials
 
 ---
+
