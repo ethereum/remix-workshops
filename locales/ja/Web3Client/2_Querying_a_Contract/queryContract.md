@@ -1,8 +1,8 @@
-Now that we know how to query simple data, let's try a more complex query.
+シンプルなデータの問い合わせ方法を理解したので、より複雑な問い合わせに挑戦してみましょう。
 
-This is a contract deployed to the mainnet - at this address: <a href="https://etherscan.io/address/0xdac17f958d2ee523a2206206994597c13d831ec7#code" target="_blank">https://etherscan.io/address/0xdac17f958d2ee523a2206206994597c13d831ec7#code</a>
+このコントラクトは、メインネットにデプロイされています。アドレスは、次になります。<a href="https://etherscan.io/address/0xdac17f958d2ee523a2206206994597c13d831ec7#code" target="_blank">https://etherscan.io/address/0xdac17f958d2ee523a2206206994597c13d831ec7#code</a>
 
-We are going to query the contract to find the name of it's token.
+コントラクトに問い合わせて、トークンの名前を調べます。
 
 The **name** variable is a state variable of the contract.
 
