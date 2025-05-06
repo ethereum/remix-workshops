@@ -1,0 +1,31 @@
+---
+id: interopCourse
+name: Axelarのマルチチェーンプロトコル
+summary: 相互運用可能なスマートコントラクトについて学びます。Axelarテクノロジーを使用し、さまざまなブロックチェーン間でメッセージや資産を送れるようにします。
+level: 2
+tags:
+  - Solidity
+  - インターオペラビリティ
+  - Axelar
+steps:
+  - 
+    name: Axelarの紹介
+    path: 1_Intro
+  - 
+    name: Axelar Gateway
+    path: 2_Gateway
+  - 
+    name: Axelar Gas Service
+    path: 3_GasService
+  - 
+    name: Axelar Executable
+    path: 4_Executable
+  - 
+    name: インターチェーンメッセージ
+    path: 5_InterchainMessage
+  - 
+    name: インターチェーンでのトークン送信
+    path: 6_InterchainTokenTransfer
+  - 
+    name: 参照情報
+    path: 7_FurtherReading

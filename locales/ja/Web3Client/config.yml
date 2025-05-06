@@ -1,0 +1,9 @@
+---
+id: useofweb3js
+name: web3.jsの基本的な使用方法
+summary: このチュートリアルでは、web3.jsライブラリとブロック番号のクエリの簡単な紹介をします
+level: 2
+tags:
+  - JS
+  - Remix
+  - Web3

@@ -1,0 +1,65 @@
+---
+id: soliditybeginner
+name: Soidityビギナーコース
+summary: 人気のあるhttps://solidity-by-example.org/ コントラクトを基にしたSolidityビギナーコースです。p2p学習プラットフォームhttps://dacade.orgによって開発されました。
+level: 1
+tags:
+  - Solidity
+steps:
+  - 
+    name: 1. はじめに
+    path: introduction
+  - 
+    name: 2. 基本構文
+    path: introduction
+  - 
+    name: 3. プリミティブデータ型
+    path: primitive-data-types
+  - 
+    name: 4. 変数
+    path: variables
+  - 
+    name: 5.1 関数 - 状態変数の読み書き
+    path: functions-reading-and-writing
+  - 
+    name: 5.2 関数 - ビューおよびピュア
+    path: functions-view-and-pure
+  - 
+    name: 5.3 関数 - 修飾子とコンストラクタ
+    path: functions-modifiers-and-constructors
+  - 
+    name: 5.4 関数 - 入力と出力
+    path: functions-inputs-and-outputs
+  - 
+    name: 6. 可視性
+    path: visibility
+  - 
+    name: 7.1 制御フロー - If/Else
+    path: control-flow-if-else
+  - 
+    name: 7.2 制御フロー - ループ
+    path: control-flow-loops
+  - 
+    name: 8.1 データ構造 - 配列
+    path: data-structures-arrays
+  - 
+    name: 8.2 データ構造 - マッピング
+    path: data-structures-mappings
+  - 
+    name: 8.3 データ構造 - 構造体
+    path: data-structures-structs
+  - 
+    name: 8.4 Data Structures - 列挙型
+    path: data-structures-enums
+  - 
+    name: 9. データロケーション
+    path: data-locations
+  - 
+    name: 10.1 トランザクション - イーサとWei
+    path: transactions-ether-and-wei
+  - 
+    name: 10.2 トランザクション - ガスとガス価格
+    path: transactions-gas-and-gas-price
+  - 
+    name: 10.3 トランザクション - イーサの送信
+    path: transactions-sending-ether

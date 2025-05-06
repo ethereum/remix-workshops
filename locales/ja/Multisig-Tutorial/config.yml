@@ -1,0 +1,25 @@
+---
+id: multisigCourse
+name: マルチシグウォレット
+summary: マルチシグウォレットの作成し、やり取りする方法を学びます。 p2p学習プラットフォーム(https://dacade.org)によって作成されました。
+level: 1
+tags:
+  - Solidity
+  - トークン
+  - マルチシグ
+steps:
+  - 
+    name: 1. はじめに
+    path: 1-multisig-introduction
+  - 
+    name: 2. コントラクトの初期化
+    path: 2-multisig-initialization
+  - 
+    name: 3. 入金
+    path: 3-multisig-deposits
+  - 
+    name: 4. トランザクション
+    path: 4-multisig-transactions
+  - 
+    name: 5. 承認の取り消し
+    path: 5-multisig-revoke
