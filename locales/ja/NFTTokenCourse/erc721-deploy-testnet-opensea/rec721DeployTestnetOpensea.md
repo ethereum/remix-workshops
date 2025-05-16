@@ -12,15 +12,15 @@
 
 テストネットでトランザクションを作成するには、イーサリアムのテストネットトークンが必要になります。
 
-**2.1** 「Ethereum Mainnetwork」から「Rinkeby Test Network」に変更します。
+**2.1** Switch your Metamask from "Ethereum Mainnetwork" to "Sepolia Test Network".
 
-**2.2** <a href="https://faucet.paradigm.xyz/" 
-target="_blank">https://faucet.paradigm.xyz/</a>に移動して、あなたのアカウントのアドレスを入力して、テストネット用のETHを請求してください。
-他のRopstenフォーセットである<a href="https://faucet.paradigm.xyz/" target="_blank">https://faucet.paradigm.xyz/</a>や <a href="https://app.mycrypto.com/faucet" target="_blank">https://app.mycrypto.com/faucet</a>も使用することができます。 フォーセットのリストは、<a href="https://ethereum.org/en/developers/docs/networks/#testnet-faucets" target="_blank">ethereum.org</a>に掲載されているのでご覧ください。
+**2.2** Go to <a href="https://www.alchemy.com/faucets/ethereum-sepolia" 
+target="_blank">https://www.alchemy.com/faucets/ethereum-sepolia</a>, enter the address of your account and claim testnet ETH.
+Or check the faucets listed on <a href="https://ethereum.org/en/developers/docs/networks/#testnet-faucets" target="_blank">ethereum.org</a> for other options.
 
 ### 3. コントラクトのデプロイ
 
-**3.1**  Remix IDEの「ENVIRONMENT」の下にある「DEPLOY & RUN TRANSACTIONS」モジュールで「Injected Web3」を選択します。 アカウントを接続するように求められたら、「Confirm」してください。 次に、「Injected Web3」の下にRinkebyネットワークバッチが表示されます。
+**3.1** In the "DEPLOY & RUN TRANSACTIONS" module of the Remix IDE under "ENVIRONMENT" **select** "Injected Provide-Metamask" (or whatever wallet you are using). アカウントを接続するように求められたら、「Confirm」してください。 Then in the wallet, connect to the Sepolia network.  You may need to turn on a switch to view test networks. Once connected, there will be a "badge" with Sepolia and its network ID under "Injected Provider".
 
 **3.2** トークンコントラクトをデプロイし、MetaMaskでトランザクションを「Confirm」してください。
 
