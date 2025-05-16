@@ -12,15 +12,15 @@
 
 为了在测试网上进行交易，我们需要以太坊测试代币。
 
-**2.1** 将您的Metamask从“Ethereum Mainnetwork”切换到“Rinkeby Test Network”。
+**2.1** Switch your Metamask from "Ethereum Mainnetwork" to "Sepolia Test Network".
 
-**2.2** 前往<a href="https://faucet.paradigm.xyz/" 
-target="_blank">https://faucet.paradigm.xyz/</a>，输入您账户地址，并领取testnet ETH。
-您也可以使用其他ropsten水龙头，如<a href="https://faucet.paradigm.xyz/" target="_blank">https://faucet.paradigm.xyz/</a> 或 <a href="https://app.mycrypto.com/faucet" target="_blank">https://app.mycrypto.com/faucet</a> 。 查看 <a href="https://ethereum.org/en/developers/docs/networks/#testnet-faucets" target="_blank">ethereum.org</a> 上列出的水龙头以了解更多信息。
+**2.2** Go to <a href="https://www.alchemy.com/faucets/ethereum-sepolia" 
+target="_blank">https://www.alchemy.com/faucets/ethereum-sepolia</a>, enter the address of your account and claim testnet ETH.
+Or check the faucets listed on <a href="https://ethereum.org/en/developers/docs/networks/#testnet-faucets" target="_blank">ethereum.org</a> for other options.
 
 ### 3. 合约部署
 
-**3.1** 在Remix IDE 的“DEPLOY＆RUN TRANSACTIONS”模块下，在“ENVIRONMENT”下选择“Injected Web3”。然后它应该要求您连接您的账户，请确认。然后你应该在“Injected Web3”下看到Rinkeby网络标志。 然后它应该要求您连接您的账户，请确认。 然后你应该在“Injected Web3”下看到Rinkeby网络标志。
+**3.1** In the "DEPLOY & RUN TRANSACTIONS" module of the Remix IDE under "ENVIRONMENT" **select** "Injected Provide-Metamask" (or whatever wallet you are using). 然后它应该要求您连接您的账户，请确认。 Then in the wallet, connect to the Sepolia network.  You may need to turn on a switch to view test networks. Once connected, there will be a "badge" with Sepolia and its network ID under "Injected Provider".
 
 **3.2** 部署您的代币合约并在Metamask中确认交易。
 
