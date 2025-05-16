@@ -10,14 +10,14 @@ In this section, we will use Metamask (an Ethereum wallet) to deploy our contrac
 ### 2. Get testnet token for Rinkeby
 In order to make transactions on the testnet, we need Ethereum testnet tokens.
 
-**2.1** Switch your Metamask from "Ethereum Mainnetwork" to "Rinkeby Test Network".
+**2.1** Switch your Metamask from "Ethereum Mainnetwork" to "Sepolia Test Network".
 
-**2.2** Go to <a href="https://faucet.paradigm.xyz/" 
-target="_blank">https://faucet.paradigm.xyz/</a>, enter the address of your account and claim testnet ETH.
-You could also use other ropsten faucets like <a href="https://faucet.paradigm.xyz/" target="_blank">https://faucet.paradigm.xyz/</a> or <a href="https://app.mycrypto.com/faucet" target="_blank">https://app.mycrypto.com/faucet</a>. Have a look at the faucets listed on <a href="https://ethereum.org/en/developers/docs/networks/#testnet-faucets" target="_blank">ethereum.org</a> to learn more.
+**2.2** Go to <a href="https://www.alchemy.com/faucets/ethereum-sepolia" 
+target="_blank">https://www.alchemy.com/faucets/ethereum-sepolia</a>, enter the address of your account and claim testnet ETH.
+Or check the faucets listed on <a href="https://ethereum.org/en/developers/docs/networks/#testnet-faucets" target="_blank">ethereum.org</a> for other options.
 
 ### 3. Contract Deployment
-**3.1** In the "DEPLOY & RUN TRANSACTIONS" module of the Remix IDE under "ENVIRONMENT" select "Injected Web3". It should then ask you to connect your account, which you should confirm. Then you should see the Rinkeby network badge under "Injected Web3".
+**3.1** In the "DEPLOY & RUN TRANSACTIONS" module of the Remix IDE under "ENVIRONMENT" **select** "Injected Provide-Metamask" (or whatever wallet you are using). It should then ask you to connect your account, which you should confirm. Then in the wallet, connect to the Sepolia network.  You may need to turn on a switch to view test networks. Once connected, there will be a "badge" with Sepolia and its network ID under "Injected Provider".
 
 **3.2** Deploy your token contract and confirm the transaction in Metamask.
 
