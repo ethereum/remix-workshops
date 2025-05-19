@@ -1,4 +1,4 @@
-In this section, we will use Metamask (an Ethereum wallet) to deploy our contract to the Rinkeby testnet of the Ethereum blockchain, mint an NFT, and look at it on the NFT marketplace OpenSea.
+In this section, we will use Metamask (an Ethereum wallet) to deploy our contract to the Sepolia testnet of the Ethereum blockchain, mint an NFT, and look at it on the NFT marketplace OpenSea.
 
 ### 1. Install Metamask
 
@@ -8,7 +8,7 @@ In this section, we will use Metamask (an Ethereum wallet) to deploy our contrac
 
 **1.3** Create a wallet as described.
 
-### 2. Get testnet token for Rinkeby
+### 2. Get testnet token for Sepolia
 
 In order to make transactions on the testnet, we need Ethereum testnet tokens.
 
