@@ -1,4 +1,4 @@
-在本节中，我们将使用以太坊钱包Metamask来部署我们的合约到以太坊区块链上的Rinkeby测试网络，铸造一个NFT，并在NFT市场OpenSea上查看它。
+In this section, we will use Metamask (an Ethereum wallet) to deploy our contract to the Sepolia testnet of the Ethereum blockchain, mint an NFT, and look at it on the NFT marketplace OpenSea.
 
 ### 1. 安装Metamask
 
@@ -8,7 +8,7 @@
 
 **1.3** 按照说明创建一个钱包。
 
-### 2. 获取Rinkeby测试网的测试代币
+### 2. Get testnet token for Sepolia
 
 为了在测试网上进行交易，我们需要以太坊测试代币。
 
