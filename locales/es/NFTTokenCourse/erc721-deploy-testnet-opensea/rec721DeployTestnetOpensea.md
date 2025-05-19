@@ -1,4 +1,4 @@
-En esta sección, usaremos Metamask (una cartera de Ethereum) para implementar nuestro contrato en la red de pruebas Rinkeby de la cadena de bloques de Ethereum, acuñar un NFT y verlo en el mercado NFT OpenSea.
+In this section, we will use Metamask (an Ethereum wallet) to deploy our contract to the Sepolia testnet of the Ethereum blockchain, mint an NFT, and look at it on the NFT marketplace OpenSea.
 
 ### 1. Instalar Metamask
 
@@ -8,7 +8,7 @@ En esta sección, usaremos Metamask (una cartera de Ethereum) para implementar n
 
 **1.3** Crea una cartera como se describe.
 
-### 2. Obtener token de red de prueba para Rinkeby
+### 2. Get testnet token for Sepolia
 
 Para realizar transacciones en la testnet, necesitamos tokens de Ethereum testnet.
 
