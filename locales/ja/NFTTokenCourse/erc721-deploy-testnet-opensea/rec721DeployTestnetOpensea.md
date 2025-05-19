@@ -1,4 +1,4 @@
-このセクションでは、MetaMask(イーサリアムウォレット)を使用してコントラクトをイーサリアムブロックチェーンのテストネットであるRinkebyにデプロイします。そしてNFTをミントして、NFTマーケットプレースであるOpenSeaで確認します。
+In this section, we will use Metamask (an Ethereum wallet) to deploy our contract to the Sepolia testnet of the Ethereum blockchain, mint an NFT, and look at it on the NFT marketplace OpenSea.
 
 ### 1. MetaMaskのインストール
 
@@ -8,7 +8,7 @@
 
 **1.3** 説明に従ってウォレットを作成してください。
 
-### 2. Rinkeby用のテストネットトークンの取得
+### 2. Get testnet token for Sepolia
 
 テストネットでトランザクションを作成するには、イーサリアムのテストネットトークンが必要になります。
 
