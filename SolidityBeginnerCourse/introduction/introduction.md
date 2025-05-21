@@ -4,7 +4,7 @@ In this first section, we will give you a short preview of the concepts we will 
 
 This contract is a counter contract that has the functionality to increase, decrease, and return the state of a counter variable.
 
-If we look at the top of the contract, we can see some information about the contract like the license (line 1), the Solidity version (line 2), as well as the keyword `contract` and it's name, `Counter` (line 4). We will cover these concepts in the next section about the **Basic Syntax**.
+If we look at the top of the contract, we can see some information about the contract like the license (line 1), the Solidity version (line 2), as well as the keyword `contract` and its name, `Counter` (line 4). We will cover these concepts in the next section about the **Basic Syntax**.
 
 With `uint public count` (line 5) we declare a state variable of the type `uint` with the visibility `public`. We will cover these concepts in our sections about **Variables**, **Primitive Data Types**, and **Visibility**.  
 
