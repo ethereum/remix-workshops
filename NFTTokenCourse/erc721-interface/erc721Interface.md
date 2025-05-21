@@ -26,7 +26,7 @@ The function `safeTransferFrom` (line 137) is almost identical to the function `
 A smart contract must implement the ERC721TokenReceiver Interface if it is to receive a transfer. This will ensure that the contract can handle ERC721 token transfers and prevent the tokens from being locked in a contract that can’t.
 
 ### transferFrom
-The function `transferFrom` (line 55) transfers the ownership of a token with the id `tokenId` from the account with the address `from` to the account with the address `to`.
+The function `transferFrom` (line 75) transfers the ownership of a token with the id `tokenId` from the account with the address `from` to the account with the address `to`.
 
 **It is recommended to use safeTransferFrom instead of transferFrom whenever possible.**
 The `transferFrom` function is not secure because it doesn’t check if the smart contract that is the recipient of the transfer has implemented the ERC721TokenReceiver interface and is capable of handling ERC721 tokens.
