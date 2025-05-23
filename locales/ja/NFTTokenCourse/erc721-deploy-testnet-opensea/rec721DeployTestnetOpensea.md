@@ -1,4 +1,4 @@
-In this section, we will use Metamask (an Ethereum wallet) to deploy our contract to the Sepolia testnet of the Ethereum blockchain, mint an NFT, and look at it on the NFT marketplace OpenSea.
+このセクションでは、MetaMask(イーサリアムウォレット)を使用してコントラクトをイーサリアムブロックチェーンのテストネットであるSepoliaにデプロイします。そしてNFTをミントして、NFTマーケットプレースであるOpenSeaで確認します。
 
 ### 1. MetaMaskのインストール
 
@@ -8,14 +8,14 @@ In this section, we will use Metamask (an Ethereum wallet) to deploy our contrac
 
 **1.3** 説明に従ってウォレットを作成してください。
 
-### 2. Get testnet token for Sepolia
+### 2. Sepolia用のテストネットトークンの取得
 
 テストネットでトランザクションを作成するには、イーサリアムのテストネットトークンが必要になります。
 
-**2.1** Switch your Metamask from "Ethereum Mainnetwork" to "Sepolia Test Network".
+**2.1** 「Ethereum Mainnetwork」から「Sepolia Test Network」に変更します。
 
-**2.2** Go to <a href="https://www.alchemy.com/faucets/ethereum-sepolia" 
-target="_blank">https://www.alchemy.com/faucets/ethereum-sepolia</a>, enter the address of your account and claim testnet ETH.
+**2.2** <a href="https://www.alchemy.com/faucets/ethereum-sepolia" 
+target="_blank">https://www.alchemy.com/faucets/ethereum-sepolia/</a>に移動して、あなたのアカウントのアドレスを入力して、テストネット用のETHを請求してください。
 Or check the faucets listed on <a href="https://ethereum.org/en/developers/docs/networks/#testnet-faucets" target="_blank">ethereum.org</a> for other options.
 
 ### 3. コントラクトのデプロイ
