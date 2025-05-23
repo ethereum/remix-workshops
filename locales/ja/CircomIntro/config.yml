@@ -1,0 +1,29 @@
+id: circomの紹介
+name: Circomの紹介
+summary: Circomを使った演算回路の作成を紹介します。
+level: 1
+tags:
+  - Circom
+  - Remix-IDE
+steps:
+  - 
+    name: はじめに
+    path: ステップ1
+  - 
+    name: Circuit-Compilerのインストール
+    path: ステップ2
+  - 
+    name: はじめてのCircom回路の作成
+    path: ステップ3
+  - 
+    name: プラグインを使った回路のコンパイル
+    path: ステップ4
+  - 
+    name: 信頼されたセットアップの実行
+    path: ステップ5
+  - 
+    name: ウィットネスの計算
+    path: ステップ6
+  - 
+    name: 証明の生成
+    path: ステップ7

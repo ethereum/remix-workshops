@@ -1,0 +1,25 @@
+---
+id: uniswapSwapCourse
+name: Uniswapスワップコース
+summary: Uniswap V3のスワップコントラクトのSolidityコードを解説します。これは、p2p学習プラットフォームhttps://dacade.orgによって開発されました。
+level: 2
+tags:
+  - Solidity
+  - トークン
+  - Uniswap
+steps:
+  - 
+    name: 1. はじめに
+    path: 1-introduction-to-uniswap
+  - 
+    name: 2. ルーター、インターフェース、構造体
+    path: 2-router-interfaces-and-structs
+  - 
+    name: 3. シングルホップスワップ
+    path: 3-single-hop-swaps
+  - 
+    name: 4. マルチホップスワップ
+    path: 4-multi-hop-swaps
+  - 
+    name: 5. ERC20とWETHインターフェース
+    path: 5-erc20-weth-interfaces

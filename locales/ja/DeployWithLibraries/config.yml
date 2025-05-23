@@ -1,0 +1,8 @@
+---
+id: deploylibraries
+name: ライブラリとデプロイ
+summary: コントラクトにライブラリを書き、デプロイ、リンクする
+level: 3
+tags:
+  - Remix
+  - Solidity

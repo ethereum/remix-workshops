@@ -1,0 +1,7 @@
+---
+id: recorder
+name: Recorder
+summary: アクションのセットを保存して、再生します。
+level: 2
+tags:
+  - Remix

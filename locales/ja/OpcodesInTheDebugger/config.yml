@@ -1,0 +1,10 @@
+---
+id: opcodesdebug
+name: デバッカ内のオペコード
+summary: デバッカを使用して、CODECOPYが何をするのかを確認します。また、EVMがCODECOPYをコントラクト作成中にどのように使用するのかを確認します。
+level: 3
+tags:
+  - Remix
+  - デバック
+  - EVM
+  - オペコード

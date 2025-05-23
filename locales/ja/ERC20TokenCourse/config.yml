@@ -1,0 +1,28 @@
+---
+id: tokenCourse
+name: Solidity ERC20トークンコース
+summary: ERC20トークンの作成方法を学び理解します。p2p学習プラットフォームhttps://dacade.orgによって開発されました。
+level: 1
+tags:
+  - Solidity
+  - トークン
+  - ERC20
+steps:
+  - 
+    name: 1. はじめに
+    path: はじめに
+  - 
+    name: 2. インターフェース
+    path: erc20-interface
+  - 
+    name: 3. トークンの作成
+    path: erc20-token-creation
+  - 
+    name: 4. インタラクション
+    path: erc20-interaction
+  - 
+    name: 5. テストネットへのデプロイ
+    path: erc20-testnet-deployment
+  - 
+    name: 6. エクステンション
+    path: erc20-extensions

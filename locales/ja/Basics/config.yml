@@ -1,0 +1,26 @@
+---
+id: 基本
+name: Remixの基本
+summary: Remixの一般的なワークフロー
+level: 1
+tags:
+  - Remix
+steps:
+  - 
+    name: "インターフェースの紹介\n"
+    path: interface_introduction
+  - 
+    name: ワークスペースの紹介
+    path: ワークスペース
+  - 
+    name: Loading & Compiling
+    path: load_and_compile
+  - 
+    name: Remix VMへのデプロイ
+    path: deploy_to_the_remixvm
+  - 
+    name: 関数とのやり取り
+    path: やり取り
+  - 
+    name: 公開ネットワークへのデプロイ
+    path: deploy_injected
