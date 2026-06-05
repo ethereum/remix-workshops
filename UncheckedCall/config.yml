@@ -2,6 +2,7 @@ id: unchecked-low-level-calls
 name: "Unchecked Low-Level Calls"
 summary: Discover the risks of unchecked low-level calls that fail silently. Learn why you must always check return values from call, delegatecall, and send operations.
 level: 2
+priority: 35
 tags:
 - Solidity
 - Security

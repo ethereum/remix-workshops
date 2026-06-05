@@ -3,7 +3,7 @@ id: oracle-manipulation
 name: Oracle Manipulation
 summary: Study oracle manipulation attacks that exploit on-chain price feed vulnerabilities. Learn how attackers inflate spot prices to mint trillions of tokens with minimal capital, and discover secure oracle integration patterns.
 level: 2
-priority: 30
+priority: 60
 tags:
   - Solidity
   - Security

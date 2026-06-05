@@ -2,7 +2,7 @@ id: selector-clash
 name: Selector Clash
 summary: Understand selector clash attacks that exploit function signature collisions. Learn how this vulnerability contributed to major cross-chain bridge hacks and how to protect against it.
 level: 2
-priority: 49
+priority: 50
 tags:
 - Solidity
 - Security

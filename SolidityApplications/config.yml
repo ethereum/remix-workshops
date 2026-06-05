@@ -2,7 +2,7 @@ id: solidity-basics-part3
 name: "Applications and Standards in Solidity by WTF Academy"
 summary: "Build real-world Solidity applications: ERC20, ERC721, ERC1155 tokens, NFT auctions, Merkle trees, digital signatures, WETH, payment splitting, token vesting, timelocks, proxy patterns, upgradeable contracts, multisig wallets, ERC4626 vaults, EIP712 signatures, and ERC20 Permit."
 level: 2
-priority: 3
+priority: 25
 tags:
   - Solidity
   - Applications

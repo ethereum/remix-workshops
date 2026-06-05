@@ -2,6 +2,7 @@ id: denial-of-service
 name: Denial of Service (DoS)
 summary: Learn about Denial of Service vulnerabilities that can freeze or break smart contract functionality. Understand common DoS patterns and design strategies to build resilient contracts.
 level: 2
+priority: 45
 tags:
 - Solidity
 - Security

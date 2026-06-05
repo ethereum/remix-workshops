@@ -2,6 +2,7 @@ id: block-timestamp-manipulation
 name: Block Timestamp Manipulation
 summary: Explore how miners can manipulate block timestamps and exploit time-dependent contracts. Learn safe practices for using block.timestamp in your smart contracts.
 level: 2
+priority: 40
 tags:
   - Solidity
   - Security
