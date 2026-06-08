@@ -8,15 +8,15 @@ The **default_workspace** has three Solidity (.sol) files in the contracts folde
 
 ![](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/interface_introduction/images/select-box.png)
 
-But Workspaces are not only for templates. When cloning a repo into Remix, the files will be put into a Workspace. 
+But Workspaces are not only for templates. When cloning a repo into Remix, the files will be put into a Workspace.
 
 Let's create a new Workspace
 
-1. At the top of the File Explorer, click the hamburger icon (the 3 horizontal lines). Read through the commands and tools in this menu. 
+1. At the top of the File Explorer, click the hamburger icon (the 3 horizontal lines). Read through the commands and tools in this menu.
 
 2. Select **+ Create** (the first choice).
 
-3. In the modal the comes up, choose one of the templates. 
+3. In the modal the comes up, choose one of the templates.
 
 ![hamburger](https://raw.githubusercontent.com/ethereum/remix-workshops/master/Basics/workspaces/images/popup.png)
 
