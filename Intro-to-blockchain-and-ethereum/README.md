@@ -1,0 +1,1 @@
+This section is a primer of Web3 concepts you will encounter. It covers what a blockchain is, a primer on the EVM, Ethereum accounts, transactions, gas, etc.

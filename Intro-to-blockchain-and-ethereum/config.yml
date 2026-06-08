@@ -1,0 +1,12 @@
+---
+id: intro-blockchain
+name: An introduction to the Blockchain and Ethereum
+summary: Understand the blockchain and how it works from the Ethereum perspective
+level: 1
+tags:
+  - Blockchain
+steps:
+  - name: Introduction to the Blockchain (for Developers)
+    path: intro-to-blockchain
+  - name: Introduction to the Ethereum Virtual Machine (EVM)
+    path: intro-to-evm
