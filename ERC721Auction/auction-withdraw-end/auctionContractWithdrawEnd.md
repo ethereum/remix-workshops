@@ -16,7 +16,7 @@ We check if anybody participated in the auction and bid on the NFT (line 88).
 
 If there was a bid, we transfer the NFT from the contract to the highest bidder (line 89) and transfer the ETH that was sent from the highest bidder to the contract, now to the address of the auctioneer, the seller of the NFT (line 90).
 
-If nobody bids on the NFT, we send the NFT back to the auctioneer (line 92).
+If nobody bids on the NFT, we send the NFT back to the seller (line 92).
 
 Finally, we emit the `End` event (line 95).
 
