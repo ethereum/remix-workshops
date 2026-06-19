@@ -25,7 +25,7 @@ An example of `send()` can be seen in the `SendEther` contract (line 41).
 * Forwards the maximum amount of gas, but this is adjustable
 
 An example of `call()` can be seen in the `SendEther` contract (line 48).
-`Call()` is currently recommended if you are transfering Ether.
+`Call()` is currently recommended if you are transferring Ether.
 
 The reason `transfer()` and `send()` were introduced was to guard against *reentry attacks* by limiting the forwarded gas to 2300, which would be insufficient to make a reentrant call that can modify storage.
 
