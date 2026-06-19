@@ -12,6 +12,6 @@ contract MyTest {
   function checkFunction() public {
     Assert.equal(foo.count(), 0, "Count should be initially 0.");
     foo.loop();
-    Assert.equal(foo.count(), 9, "Count should be 9 after executing the loop funcion.");
+    Assert.equal(foo.count(), 9, "Count should be 9 after executing the loop function.");
   }
 }
